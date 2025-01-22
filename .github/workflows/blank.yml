@@ -30,7 +30,7 @@ jobs:
 
     - uses: actions-mn/setup@main
     
-    - name: Create Ontology Documentation 🔧
+    - name: Run Metanorma 🔧
       run: |
          metanorma site generate --agree-to-terms -o site
 

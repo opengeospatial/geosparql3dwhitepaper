@@ -8,9 +8,9 @@
 :external-id: http://www.opengis.net/doc/WP/geosparql3d
 :comment: ### Internal reference number; mandatory
 :docnumber: YY-999
-:received-date: 0000-00-00
-:issued-date: 0000-00-00
-:published-date: 0000-00-00
+:received-date: 
+:issued-date: 
+:published-date: 
 :fullname: Editor One
 :fullname_2: Editor Two
 :role: editor

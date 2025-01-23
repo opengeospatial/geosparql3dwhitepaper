@@ -39,6 +39,12 @@ include::sections/02-preamble.adoc[]
 
 include::sections/03-introduction.adoc[]
 
+include::sections/04-benefits.adoc[]
+
+include::sections/05-curcapabilities.adoc[]
+
+include::sections/06-geosparql3D.adoc[]
+
 :sectnums!:
 
 //use annexes as needed

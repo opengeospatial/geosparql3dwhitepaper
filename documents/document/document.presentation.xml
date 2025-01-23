@@ -204,12 +204,12 @@ sourcecode .nt {
 <boilerplate><copyright-statement>
 
 <clause id="_copyright_notice" obligation="normative">
-<title id="_809e7944-e164-4f8f-a2ee-894022ee42e6">Copyright notice</title><fmt-title depth="1"><semx element="title" source="_809e7944-e164-4f8f-a2ee-894022ee42e6">Copyright notice</semx></fmt-title>
+<title id="_34fcdf25-e41e-4cef-88a9-cdcd1d5fda45">Copyright notice</title><fmt-title depth="1"><semx element="title" source="_34fcdf25-e41e-4cef-88a9-cdcd1d5fda45">Copyright notice</semx></fmt-title>
 <p id="_09cc624e-08fe-4298-0e48-fd64aab88de3" align="center">Copyright © 2025 Open Geospatial Consortium<br/> To obtain additional rights of use, visit<link target="https://www.ogc.org/legal"/></p>
 </clause>
 
 <clause id="_note" obligation="normative">
-<title id="_966126b3-305a-4a1a-8b15-4017b703cd52">Note</title><fmt-title depth="1"><semx element="title" source="_966126b3-305a-4a1a-8b15-4017b703cd52">Note</semx></fmt-title>
+<title id="_d6c9ea8e-0d3a-40d0-8ef3-2f733fdb521f">Note</title><fmt-title depth="1"><semx element="title" source="_d6c9ea8e-0d3a-40d0-8ef3-2f733fdb521f">Note</semx></fmt-title>
 <p id="_11e88dba-9912-1a89-a82d-7291bf232191" align="left">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
 
 <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" align="left">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
@@ -219,7 +219,7 @@ sourcecode .nt {
 <license-statement>
 
 <clause id="_license_agreement" obligation="normative">
-<title id="_6d9e4e19-a99a-4328-a0de-3c89e65f828a">License Agreement</title><fmt-title depth="1"><semx element="title" source="_6d9e4e19-a99a-4328-a0de-3c89e65f828a">License Agreement</semx></fmt-title>
+<title id="_6b39826b-d27e-4aac-8bc7-35c918463cfa">License Agreement</title><fmt-title depth="1"><semx element="title" source="_6b39826b-d27e-4aac-8bc7-35c918463cfa">License Agreement</semx></fmt-title>
 <p id="_f5fe34fd-12e2-2bb7-8cd6-9d4cffa96538">Use of this document is subject to the license agreement at <link target="https://www.ogc.org/license"/></p>
 </clause>
 </license-statement>
@@ -227,7 +227,7 @@ sourcecode .nt {
 <legal-statement>
 
 <clause id="_notice" obligation="normative">
-<title id="_f141e997-f91f-4a7d-9871-64ef1350808e">Notice</title><fmt-title depth="1"><semx element="title" source="_f141e997-f91f-4a7d-9871-64ef1350808e">Notice</semx></fmt-title>
+<title id="_121c67ca-199a-4118-b83e-d86b0c7cbc9f">Notice</title><fmt-title depth="1"><semx element="title" source="_121c67ca-199a-4118-b83e-d86b0c7cbc9f">Notice</semx></fmt-title>
 <p id="_d83c129b-65cf-e09d-d350-52b12201b907">This document is not an OGC Standard. This document is an OGC White Paper and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
 
 <p id="_653943e2-d0e0-309a-93be-17f6f0e94af3">Further, an OGC White Paper should not be referenced as required or mandatory technology in procurements.</p>
@@ -237,26 +237,26 @@ sourcecode .nt {
 <feedback-statement>
 
 </feedback-statement>
-</boilerplate><preface><clause type="toc" id="_4a194970-c9dc-4259-bb19-4f0a5caeac28" displayorder="1"><fmt-title depth="1">Contents</fmt-title></clause>
-<clause id="_11e37044-8bfc-429a-beb4-2429ef03bed2" type="keywords" displayorder="2">
-<title id="_84c6391b-6b3e-471d-8749-db1bd32ecb69">Keywords</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_11e37044-8bfc-429a-beb4-2429ef03bed2">I</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_84c6391b-6b3e-471d-8749-db1bd32ecb69">Keywords</semx></fmt-title><fmt-xref-label><semx element="title" source="_11e37044-8bfc-429a-beb4-2429ef03bed2">Keywords</semx></fmt-xref-label>
+</boilerplate><preface><clause type="toc" id="_004ccaae-50ad-4c41-8e3c-9354c5439764" displayorder="1"><fmt-title depth="1">Contents</fmt-title></clause>
+<clause id="_4f50c1b3-7f6b-4d5b-92e6-47e10b6af018" type="keywords" displayorder="2">
+<title id="_4ab19304-04a5-425c-8a3f-968af6249192">Keywords</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_4f50c1b3-7f6b-4d5b-92e6-47e10b6af018">I</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_4ab19304-04a5-425c-8a3f-968af6249192">Keywords</semx></fmt-title><fmt-xref-label><semx element="title" source="_4f50c1b3-7f6b-4d5b-92e6-47e10b6af018">Keywords</semx></fmt-xref-label>
 <p>The following are keywords to be used by search engines and document catalogues.</p>
 <p>OGC, GeoSPARQL, 3D</p></clause>
 <foreword id="_preface" obligation="informative" displayorder="3">
-<title id="_e21263af-2cf7-4f0d-9a75-b19c1923e09e">Preface</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_preface">II</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_e21263af-2cf7-4f0d-9a75-b19c1923e09e">Preface</semx></fmt-title><fmt-xref-label><semx element="title" source="_preface">Preface</semx></fmt-xref-label>
+<title id="_6243cca8-e902-4c40-82c2-91b4dc708f95">Preface</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_preface">II</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_6243cca8-e902-4c40-82c2-91b4dc708f95">Preface</semx></fmt-title><fmt-xref-label><semx element="title" source="_preface">Preface</semx></fmt-xref-label>
 <p id="_0a02ca0c-0bd0-9643-3798-458feb9c9242">To come…​</p>
 </foreword><clause id="_security_considerations" type="security" obligation="informative" displayorder="4">
-<title id="_0cfbef6c-b67e-4c52-ba0b-7f2acada66e7">Security Considerations</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_security_considerations">III</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_0cfbef6c-b67e-4c52-ba0b-7f2acada66e7">Security Considerations</semx></fmt-title><fmt-xref-label><semx element="title" source="_security_considerations">Security Considerations</semx></fmt-xref-label>
+<title id="_2d543f57-f46f-49e1-9fd2-4c5182cda155">Security Considerations</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_security_considerations">III</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_2d543f57-f46f-49e1-9fd2-4c5182cda155">Security Considerations</semx></fmt-title><fmt-xref-label><semx element="title" source="_security_considerations">Security Considerations</semx></fmt-xref-label>
 <p id="_4096c033-8924-9adc-7868-ff79b5d0a485">The following security considerations apply…​</p>
-</clause><clause id="_624f5d9b-7ada-43fe-b52f-3292889d1143" type="submitting_orgs" displayorder="5">
-<title id="_8ea1e703-b256-4846-a9af-94b0dcac622d">Submitting Organizations</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_624f5d9b-7ada-43fe-b52f-3292889d1143">IV</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_8ea1e703-b256-4846-a9af-94b0dcac622d">Submitting Organizations</semx></fmt-title><fmt-xref-label><semx element="title" source="_624f5d9b-7ada-43fe-b52f-3292889d1143">Submitting Organizations</semx></fmt-xref-label>
+</clause><clause id="_606a37e8-9760-42e0-a3d3-136695c9a81d" type="submitting_orgs" displayorder="5">
+<title id="_9b005a10-9bfc-41d4-92b5-cde790b83526">Submitting Organizations</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_606a37e8-9760-42e0-a3d3-136695c9a81d">IV</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_9b005a10-9bfc-41d4-92b5-cde790b83526">Submitting Organizations</semx></fmt-title><fmt-xref-label><semx element="title" source="_606a37e8-9760-42e0-a3d3-136695c9a81d">Submitting Organizations</semx></fmt-xref-label>
 <p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p>
  <ul><li>Organization one</li>
 <li>Organization two</li>
 <li>Organization three</li></ul>
  </clause>
 <submitters id="_submitters" displayorder="6">
-<title id="_6d0a05f2-9bed-4da2-8d30-25e6b597f891">Submitters</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_submitters">V</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_6d0a05f2-9bed-4da2-8d30-25e6b597f891">Submitters</semx></fmt-title><fmt-xref-label><semx element="title" source="_submitters">Submitters</semx></fmt-xref-label>
+<title id="_311e6608-436a-4008-b346-901e83a2cb06">Submitters</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_submitters">V</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_311e6608-436a-4008-b346-901e83a2cb06">Submitters</semx></fmt-title><fmt-xref-label><semx element="title" source="_submitters">Submitters</semx></fmt-xref-label>
 <table id="_c57b3179-3e90-e3ae-b535-2e2a1f410e72" unnumbered="true"><thead><tr><th valign="middle" align="left">Name</th>
 <th valign="middle" align="left">Affiliation</th>
 <th valign="middle" align="left">OGC member</th>
@@ -267,13 +267,13 @@ sourcecode .nt {
 </tr></tbody>
 </table>
 </submitters></preface><sections><clause id="_abstract" obligation="normative" displayorder="11">
-<title id="_9697a130-c4cb-4501-a057-f635de0d52d8">Abstract</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_abstract">5</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_9697a130-c4cb-4501-a057-f635de0d52d8">Abstract</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_abstract">5</semx></fmt-xref-label>
+<title id="_d9fdf8f2-9719-43bb-8c2d-776732639067">Abstract</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_abstract">5</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d9fdf8f2-9719-43bb-8c2d-776732639067">Abstract</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_abstract">5</semx></fmt-xref-label>
 <p id="_e3eeb02a-ea2c-01c7-ef19-9c3b6ec303e8">To come…​</p>
 </clause>
 
 
 <clause id="_keywords" obligation="normative" displayorder="12">
-<title id="_4957887e-d62f-4910-bd4c-186bed907f2e">Keywords</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_keywords">6</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_4957887e-d62f-4910-bd4c-186bed907f2e">Keywords</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_keywords">6</semx></fmt-xref-label>
+<title id="_37215605-56d1-4cdf-9c94-a5ea243b937f">Keywords</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_keywords">6</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_37215605-56d1-4cdf-9c94-a5ea243b937f">Keywords</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_keywords">6</semx></fmt-xref-label>
 <p id="_d8a5fdcc-e91a-08fc-b700-7f2222f64bc8">To come…​</p>
 </clause>
 
@@ -281,42 +281,42 @@ sourcecode .nt {
 
 
 <clause id="_scope" type="scope" obligation="normative" displayorder="7">
-<title id="_d0da8755-e07b-4ee9-aa6b-13ae0161b364">Scope</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_scope">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d0da8755-e07b-4ee9-aa6b-13ae0161b364">Scope</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_scope">1</semx></fmt-xref-label>
+<title id="_44f72646-7623-40f3-b0b6-a611776409ae">Scope</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_scope">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_44f72646-7623-40f3-b0b6-a611776409ae">Scope</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_scope">1</semx></fmt-xref-label>
 </clause>
 
 <clause id="_conformance" type="conformance" obligation="normative" displayorder="8">
-<title id="_14359383-fb9e-4a82-b345-1239b5e6d5cb">Conformance</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_conformance">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_14359383-fb9e-4a82-b345-1239b5e6d5cb">Conformance</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_conformance">2</semx></fmt-xref-label>
+<title id="_f8746c87-ce68-4dea-bcaf-f7640aba3064">Conformance</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_conformance">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_f8746c87-ce68-4dea-bcaf-f7640aba3064">Conformance</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_conformance">2</semx></fmt-xref-label>
 </clause>
 
 
 
 <terms id="_terms_and_definitions" obligation="normative" displayorder="10">
-<title id="_d7b4201d-a00a-44e9-b8c9-91efaed81955">Terms and definitions</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_terms_and_definitions">4</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d7b4201d-a00a-44e9-b8c9-91efaed81955">Terms and definitions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_terms_and_definitions">4</semx></fmt-xref-label><p id="_4311f999-5926-535e-0e11-4d86eb6f4c0b">No terms and definitions are listed in this document.</p>
+<title id="_132bdc29-4463-44c8-ba43-0b5bf9374470">Terms and definitions</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_terms_and_definitions">4</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_132bdc29-4463-44c8-ba43-0b5bf9374470">Terms and definitions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_terms_and_definitions">4</semx></fmt-xref-label><p id="_4311f999-5926-535e-0e11-4d86eb6f4c0b">No terms and definitions are listed in this document.</p>
 
 </terms>
 
 <clause id="_conventions" obligation="normative" displayorder="13">
-<title id="_28819f07-ab55-4e4a-8548-7f49355f49fd">Conventions</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_conventions">7</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_28819f07-ab55-4e4a-8548-7f49355f49fd">Conventions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_conventions">7</semx></fmt-xref-label>
+<title id="_7dd8be4e-8feb-47e8-9f0f-60afd08e51ba">Conventions</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_conventions">7</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_7dd8be4e-8feb-47e8-9f0f-60afd08e51ba">Conventions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_conventions">7</semx></fmt-xref-label>
 </clause>
 
 <clause id="_introduction" obligation="normative" displayorder="14">
-<title id="_76febadb-9236-42cf-b038-57fc89a6456e">Introduction</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_introduction">8</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_76febadb-9236-42cf-b038-57fc89a6456e">Introduction</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_introduction">8</semx></fmt-xref-label>
+<title id="_6ae18522-a6e8-4a42-b283-8c82bdeba618">Introduction</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_introduction">8</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_6ae18522-a6e8-4a42-b283-8c82bdeba618">Introduction</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_introduction">8</semx></fmt-xref-label>
 </clause>
 
 <clause id="_annex_n_n" obligation="normative" displayorder="15">
-<title id="_7cd7dc95-ea0f-49b3-b466-e794728c77dd">Annex N: N</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_annex_n_n">9</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_7cd7dc95-ea0f-49b3-b466-e794728c77dd">Annex N: N</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_annex_n_n">9</semx></fmt-xref-label>
+<title id="_d460a774-b26c-4058-8b95-59853c2cc1df">Annex N: N</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_annex_n_n">9</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d460a774-b26c-4058-8b95-59853c2cc1df">Annex N: N</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_annex_n_n">9</semx></fmt-xref-label>
 </clause>
 
 <clause id="_annex_o_history" obligation="normative" displayorder="16">
-<title id="_ab914624-e54a-4d2b-bbeb-57404a09152b">Annex O: History</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_annex_o_history">10</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_ab914624-e54a-4d2b-bbeb-57404a09152b">Annex O: History</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_annex_o_history">10</semx></fmt-xref-label>
+<title id="_053985bb-6d06-4d58-a0c5-c29b44a36a06">Annex O: History</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_annex_o_history">10</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_053985bb-6d06-4d58-a0c5-c29b44a36a06">Annex O: History</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_annex_o_history">10</semx></fmt-xref-label>
 </clause>
 
 
 <references id="_normative_references" normative="true" obligation="informative" displayorder="9">
-<title id="_a9389e4f-4d4f-4963-8c84-ec05d933ffc7">Normative references</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_normative_references">3</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_a9389e4f-4d4f-4963-8c84-ec05d933ffc7">Normative references</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_normative_references">3</semx></fmt-xref-label><p id="_a6710f40-5cbe-2ae3-8231-ad9faf61ae73">There are no normative references in this document.</p>
+<title id="_54e37d56-efe6-4791-bd03-9d9b2e5bad6e">Normative references</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_normative_references">3</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_54e37d56-efe6-4791-bd03-9d9b2e5bad6e">Normative references</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_normative_references">3</semx></fmt-xref-label><p id="_a6710f40-5cbe-2ae3-8231-ad9faf61ae73">There are no normative references in this document.</p>
 
 </references></sections><bibliography><references id="_bibliography" normative="false" obligation="informative" displayorder="17">
-<title id="_f7078a17-3b81-4024-b2c3-84780f517578">Bibliography</title><fmt-title depth="1"><semx element="title" source="_f7078a17-3b81-4024-b2c3-84780f517578">Bibliography</semx></fmt-title>
+<title id="_903bfa39-af04-4bec-bbba-c19390aab752">Bibliography</title><fmt-title depth="1"><semx element="title" source="_903bfa39-af04-4bec-bbba-c19390aab752">Bibliography</semx></fmt-title>
 <dl id="_26eeb3d5-f3ac-8462-37a9-defa2b5dcbcc"><dt id="RDF">RDF</dt>
 <dd><p id="_016dde65-9ce7-9c41-cd92-71152e53a2e8">World Wide Web Consortium, <em>RDF 1.1 Concepts and Abstract Syntax</em>, W3C Recommendation (25 February 2014). <link target="https://www.w3.org/TR/rdf11-concepts/"/></p>
 </dd>

@@ -1,0 +1,51 @@
+= GeoSPARQL 3d White Paper
+:doctype: white-paper
+:language: en
+:status: swg-draft
+:committee: technical
+:workgroup: Geosemantics DWG
+:draft: 1.0
+:external-id: http://www.opengis.net/doc/WP/geosparql3d
+:comment: ### Internal reference number; mandatory
+:docnumber: YY-999
+:received-date: 0000-00-00
+:issued-date: 0000-00-00
+:published-date: 0000-00-00
+:fullname: Editor One
+:fullname_2: Editor Two
+:role: editor
+:keywords: OGC, GeoSPARQL, 3D
+:submitting-organizations: Organization one; Organization two; Organization three
+:mn-document-class: ogc
+:mn-output-extensions: html,pdf
+:local-cache-only:
+:pdf-uri: ./document.pdf
+:edition: 1.0
+:toc:
+:toc-placement: left
+:toclevels: 4
+:numbered:
+:sectanchors:
+
+:sectnums!:
+
+include::sections/01-front_material.adoc[]
+
+include::sections/02-preamble.adoc[]
+
+:sectnums:
+
+include::sections/03-introduction.adoc[]
+
+:sectnums!:
+
+//use annexes as needed
+include::sections/97-annex-n.adoc[]
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+include::sections/98-annex-history.adoc[]
+
+include::sections/99-annex-bibliography.adoc[]

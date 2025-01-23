@@ -2,7 +2,7 @@
 metanorma:
   source:
     files:
-      - document.adoc
+      - document/document.adoc
       
   collection:
     organization: "OGC: The Open Geospatial Consortium"

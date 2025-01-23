@@ -1,11 +1,9 @@
 <relaton-collection xmlns="https://open.ribose.com/relaton-xml"><title>OGC deliverable samples in Metanorma</title><contributor><role type='author'/><organization><name>OGC: The Open Geospatial Consortium</name></organization></contributor><relation type='partOf'><bibdata type="standard" schema-version="v1.2.9">
-  <title format="text/plain" language="en">White paper for OGC (add title text)</title>
-  <uri type="xml">documents/document.xml</uri>
-  <uri type="pdf">documents/document.pdf</uri>
-  <uri type="doc">documents/document.doc</uri>
-  <uri type="html">documents/document.html</uri>
-  <uri type="rxl">documents/document.rxl</uri>
-  <docidentifier type="ogc-external">http://www.opengis.net/doc/WP/bigdata</docidentifier>
+  <title format="text/plain" language="en">GeoSPARQL 3d White Paper</title>
+  <uri type="pdf">documents/document/document.pdf</uri>
+  <uri type="html">documents/document/document.html</uri>
+  <uri type="rxl">documents/document/document.rxl</uri>
+  <docidentifier type="ogc-external">http://www.opengis.net/doc/WP/geosparql3d</docidentifier>
   <docidentifier type="ogc-internal" primary="true">YY-999</docidentifier>
   <docnumber>YY-999</docnumber>
   <date type="published">
@@ -60,11 +58,10 @@
   </contributor>
   <edition>1.0</edition>
   <version>
-    <draft>3.0</draft>
+    <draft>1.0</draft>
   </version>
   <language>en</language>
   <script>Latn</script>
-  <abstract>&lt;p&gt;&lt;Insert Abstract Text here&gt;&lt;/p&gt;</abstract>
   <status>
     <stage>swg-draft</stage>
   </status>
@@ -77,11 +74,9 @@
       </organization>
     </owner>
   </copyright>
-  <keyword>ogcdoc</keyword>
-  <keyword>OGC document</keyword>
-  <keyword>API</keyword>
-  <keyword>openapi</keyword>
-  <keyword>html</keyword>
+  <keyword>OGC</keyword>
+  <keyword>GeoSPARQL</keyword>
+  <keyword>3D</keyword>
   <ext>
     <doctype>white-paper</doctype>
   </ext>

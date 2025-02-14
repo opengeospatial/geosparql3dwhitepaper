@@ -8,6 +8,25 @@ According to the standard document, "The OGC GeoSPARQL standard supports represe
 
 ==== Requirements addressed
 
-GeoSPARQL addresses the following requirements with regards to 3D.
+In order to define which capabilities GeoSPARQL needs to adopt for full 3D compatibility, we first take a look at GeoSPARQL 1.1 current capabilities with regards to 3D.
+
+===== Literals
+
+A first requirement for 3D support is the ability to save 3D data in a knowledge graph.
+GeoSPARQL 1.1 defines a variety of String literal formats, which are investigated for the storage of 3D data.
+
+[cols="3,3,3,3"] 
+|=== 
+|Literal Type | Z-Coordinate Supported | 2.5D | 3D 
+|WKT Literal  | Yes | Yes | Yes
+|GML Literal  |  |  | 
+|KML Literal  |  |  |
+|GeoJSON Literal  |  |  |
+|DGGS Literal  |  |  | 
+|=== 
+
+===== Query functions with 3D support
+
+
 
 ==== Adoption of GeoSPARQL 1.1

@@ -26,7 +26,15 @@ GeoSPARQL 1.1 defines a variety of String literal formats, which are investigate
 |=== 
 
 ===== Query functions with 3D support
+GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. 
+However, there are functions which may take into acconut the Z coordinate, if it is available.
 
+[cols="3,3,3,3"] 
+|=== 
+|GeoSPARQL function | Z-Coordinate Supported | 2.5D | 3D 
+|geof:minZ  | Yes | Yes | No
+|geof:maxZ  |  |  |  
+|=== 
 
 
 ==== Adoption of GeoSPARQL 1.1

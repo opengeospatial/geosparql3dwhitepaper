@@ -140,5 +140,24 @@ Semantic improvement
 GeoSPARQL 3D should provide the opportunity to extrude 2D geometries to 3D geometries and vice versa.
 
 
+==== Extension {counter:ext}: Geometry Attributes
+
+===== GitHub Issue URI
+
+- https://github.com/opengeospatial/ogc-geosparql/issues/568
+- https://github.com/opengeospatial/ogc-geosparql/issues/550
+- https://github.com/opengeospatial/ogc-geosparql/issues/549
+- https://github.com/opengeospatial/ogc-geosparql/issues/548
+- https://github.com/opengeospatial/ogc-geosparql/issues/558
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL 3D should provide functions and properties that describe essential properties of a 3D Geometry such as its minimum and maximum height, width and depth and its CompactnessRatio.
+
+
 
 

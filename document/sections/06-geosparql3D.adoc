@@ -98,6 +98,7 @@ Similar operations are needed for the relative positioning of 3D objects in GeoS
 
 https://github.com/opengeospatial/ogc-geosparql/issues/590
 https://github.com/opengeospatial/ogc-geosparql/issues/574
+https://github.com/opengeospatial/ogc-geosparql/issues/571
 
 ===== Category
 

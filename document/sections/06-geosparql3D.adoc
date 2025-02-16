@@ -27,7 +27,6 @@ Some common formats which could be considered for inclusion are:
 - Wavefront OBJ Format (OBJ)
 - GLTF Format (GLTF)
 
-
 ==== Extension 2: Relations of 3D geometries
 
 ===== GitHub Issue URI
@@ -42,3 +41,18 @@ Semantic improvement
 
 GeoSPARQL should include ways to represent relations between 3D geometries and relations between 3D geometries and geometries of lower dimensions.
 The relations should be expressable in property relations and should be queryable using SPARQL extension functions.
+
+==== Extension 3: Appearance of 3D geometries
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/592
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL should include ways to represent materials and textures of 3D geometries, so that geometries can be styled accordingly.
+

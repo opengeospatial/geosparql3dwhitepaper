@@ -28,7 +28,7 @@ Some common formats which could be considered for inclusion are:
 - GLTF Format (GLTF)
 
 
-==== Extension 2: Relations between 3D geometries
+==== Extension 2: Relations of 3D geometries
 
 ===== GitHub Issue URI
 

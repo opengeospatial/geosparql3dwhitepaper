@@ -76,6 +76,22 @@ Semantic improvement
 GeoSPARQL should include ways to define multi-component 3D geometries, whereas each component expresses its own semantics.
 For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph.
 
+==== Extension {counter:ext}: Positioning of 3D geometries
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/591
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL should include ways to position 3D geometries in a 3D space.
+Commonly 3D geometries are rotated, translated and scaled using commonly defined operators in computer graphics.
+Similar operations are needed for the relative positioning of 3D objects in GeoSPARQL, as properties and potentially as functions. 
+
 ==== Extension {counter:ext}: Alignments of GeoSPARQL 3D
 
 ===== GitHub Issue URI

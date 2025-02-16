@@ -25,6 +25,9 @@ GeoSPARQL 1.1 defines a variety of String literal formats, which are investigate
 |DGGS Literal  |  |  | 
 |=== 
 
+GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support.
+There are currently almost 300 coordinate reference systems in the database epsg.io (https://epsg.io/?q=%20kind%3AGEOG3DCRS) which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
+
 ===== Query functions with 3D support
 GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. 
 However, there are functions which may take into acconut the Z coordinate, if they are available.
@@ -36,6 +39,6 @@ However, there are functions which may take into acconut the Z coordinate, if th
 |geof:minZ  | Yes | Yes | Yes
 |geof:maxZ  | Yes | Yes | Yes 
 |=== 
-
+These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.
 
 ==== Adoption of GeoSPARQL 1.1

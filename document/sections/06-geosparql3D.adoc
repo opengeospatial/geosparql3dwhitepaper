@@ -91,3 +91,18 @@ Semantic improvement
 GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains.
 Especially alignments to https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary as a link between these different standards.
 
+==== Extension {counter:ext}: Alignments of Engineering CRS to Geospatial CRS
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/586
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL 3D should provide the opportunity to align a local coordinate system in which most 3D geometries are defined with a coordinate reference.
+While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging https://github.com/opengeospatial/ontology-crs[Ontology CRS] developments of OGC and provide necessary functions or properties to create the link. 
+

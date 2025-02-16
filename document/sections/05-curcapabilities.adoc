@@ -28,6 +28,8 @@ In particular, the properties are:
 - geo:hasVolume
 - geo:hasMetricVolume
 
+Further 3D-related metadata properties such as projection matrices are not part of the current GeoSPARQL 1.1 standard.
+
 ===== Geometry Relations
 
 Relations between geometries have been defined using three different sets of rules:
@@ -36,6 +38,7 @@ Relations between geometries have been defined using three different sets of rul
 - Egenhofer Relations
 - Region Connection Calculus RCC8
 
+All geometry relations are only defined for 2D geometries and do not take into account the third dimension.
 
 ===== Literals
 

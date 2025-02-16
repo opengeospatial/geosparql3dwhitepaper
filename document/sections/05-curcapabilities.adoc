@@ -30,7 +30,7 @@ There are currently almost 300 coordinate reference systems in the database epsg
 
 ===== Query functions with 3D support
 GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. 
-However, there are functions which may take into acconut the Z coordinate, if they are available.
+However, there are functions which may take into account the Z coordinate, if they are available.
 
 [cols="3,3,3,3"] 
 |=== 

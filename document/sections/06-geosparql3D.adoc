@@ -81,6 +81,7 @@ For example, parts of a building could have different semantics according to the
 ===== GitHub Issue URI
 
 https://github.com/opengeospatial/ogc-geosparql/issues/590
+https://github.com/opengeospatial/ogc-geosparql/issues/574
 
 ===== Category
 

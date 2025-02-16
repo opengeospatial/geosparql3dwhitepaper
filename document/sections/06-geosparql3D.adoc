@@ -28,3 +28,17 @@ Some common formats which could be considered for inclusion are:
 - GLTF Format (GLTF)
 
 
+==== Extension 2: Relations between 3D geometries
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/416
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL should include ways to represent relations between 3D geometries and relations between 3D geometries and geometries of lower dimensions.
+The relations should be expressable in property relations and should be queryable using SPARQL extension functions.

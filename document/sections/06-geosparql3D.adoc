@@ -55,4 +55,8 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL should include ways to represent materials and textures of 3D geometries, so that geometries can be styled accordingly.
+Materials include:
+- Colors of surfaces with light diffusion parameters
+- Images as textures, which are associated with surfaces of the 3D object
+
 

@@ -10,6 +10,33 @@ According to the standard document, "The OGC GeoSPARQL standard supports represe
 
 In order to define which capabilities GeoSPARQL needs to adopt for full 3D compatibility, we first take a look at GeoSPARQL 1.1 current capabilities with regards to 3D.
 
+===== Vocabulary
+
+GeoSPARQL 1.1 defines a class Geometry as a subclass of SpatialObject.
+An instance of Geometry is not restricted to two dimensions. A more finegranular classification of Geometries can be done using the Simple Features Vocabulary, a vocabulary extending the class geo:Geometry with further geometry types.
+The Simple Features vocabulary allows for the definition of 3D variants of:
+
+- (Multi)Points
+- (Multi)LineStrings
+- (Multi)Polygons
+
+but does not include commons 3D primitives, such as cubes or Mesh surfaces which are integral parts of 3D representations.
+
+Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts.
+In particular, the properties are:
+
+- geo:hasVolume
+- geo:hasMetricVolume
+
+===== Geometry Relations
+
+Relations between geometries have been defined using three different sets of rules:
+
+- Simple Features Relations
+- Egenhofer Relations
+- Region Connection Calculus RCC8
+
+
 ===== Literals
 
 A first requirement for 3D support is the ability to save 3D data in a knowledge graph.

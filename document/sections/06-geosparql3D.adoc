@@ -5,4 +5,26 @@ This feedback helps to identify some of the barriers to use, and to outline requ
 
 === Proposed extensions for GeoSPARQL 3D
 
-==== Extension 1: 
+==== Extension 1: 3D representations
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/583
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL should include ways to represent 3D data in a knowledge graph.
+
+3D data should be included in common 3D formats and 3D data should be includable as a text literal and a file representation.
+
+Some common formats which could be considered for inclusion are:
+
+- Polygon File Format (PLY)
+- Wavefront OBJ Format (OBJ)
+- GLTF Format (GLTF)
+
+

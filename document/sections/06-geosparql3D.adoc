@@ -23,9 +23,10 @@ GeoSPARQL should include ways to represent 3D data in a knowledge graph.
 
 Some common formats which could be considered for inclusion are:
 
-- Polygon File Format (PLY)
-- Wavefront OBJ Format (OBJ)
-- GLTF Format (GLTF)
+- https://paulbourke.net/dataformats/ply/[Polygon File Format (PLY)]
+- https://www.loc.gov/preservation/digital/formats/fdd/fdd000507.shtml[Wavefront OBJ Format (OBJ)]
+- https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html[GLTF Format (GLTF)]
+- https://www.web3d.org[X3D Format]
 
 ==== Extension {counter:ext}: Relations of 3D geometries
 

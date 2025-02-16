@@ -88,5 +88,5 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains.
-Especially alignments to https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary
+Especially alignments to https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary as a link between these different standards.
 

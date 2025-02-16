@@ -19,14 +19,14 @@ GeoSPARQL 1.1 defines a variety of String literal formats, which are investigate
 |=== 
 |Literal Type | Z-Coordinate Supported | 2.5D | 3D 
 |WKT Literal  | Yes | Yes | Yes
-|GML Literal  |  |  | 
-|KML Literal  |  |  |
-|GeoJSON Literal  |  |  |
+|GML Literal  | Yes | Yes | Only with extension Schema
+|KML Literal  | Yes | Yes | As import from COLLADA
+|GeoJSON Literal  | Yes | Yes | Yes
 |DGGS Literal  |  |  | 
 |=== 
 
 GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support.
-There are currently almost 300 coordinate reference systems in the database epsg.io (https://epsg.io/?q=%20kind%3AGEOG3DCRS) which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
+There are currently almost 300 coordinate reference systems in the database https://epsg.io/?q=%20kind%3AGEOG3DCRS[epsg.io] which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
 
 ===== Query functions with 3D support
 GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. 

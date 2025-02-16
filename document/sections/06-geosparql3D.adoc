@@ -5,7 +5,7 @@ This feedback helps to identify some of the barriers to use, and to outline requ
 
 === Proposed extensions for GeoSPARQL 3D
 
-==== Extension 1: 3D representations
+==== Extension {counter:ext}: 3D representations
 
 ===== GitHub Issue URI
 
@@ -27,7 +27,7 @@ Some common formats which could be considered for inclusion are:
 - Wavefront OBJ Format (OBJ)
 - GLTF Format (GLTF)
 
-==== Extension 2: Relations of 3D geometries
+==== Extension {counter:ext}: Relations of 3D geometries
 
 ===== GitHub Issue URI
 
@@ -42,7 +42,7 @@ Semantic improvement
 GeoSPARQL should include ways to represent relations between 3D geometries and relations between 3D geometries and geometries of lower dimensions.
 The relations should be expressable in property relations and should be queryable using SPARQL extension functions.
 
-==== Extension 3: Appearance of 3D geometries
+==== Extension {counter:ext}: Appearance of 3D geometries
 
 ===== GitHub Issue URI
 
@@ -60,4 +60,33 @@ Materials include:
 - Colors of surfaces with light diffusion parameters
 - Images as textures, which are associated with surfaces of the 3D object
 
+==== Extension {counter:ext}: Multi-component 3D geometries
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/591
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL should include ways to define multi-component 3D geometries, whereas each component expresses its own semantics.
+For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph.
+
+==== Extension {counter:ext}: Alignments of GeoSPARQL 3D
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/590
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains.
+Especially alignements to ifcOWL and the X3D vocabulary would benefit the
 

@@ -12,21 +12,25 @@ In order to define which capabilities GeoSPARQL needs to adopt for full 3D compa
 
 ===== Vocabulary
 
-GeoSPARQL 1.1 defines a class Geometry as a subclass of SpatialObject.
-An instance of Geometry is not restricted to two dimensions. A more finegranular classification of Geometries can be done using the Simple Features Vocabulary, a vocabulary extending the class geo:Geometry with further geometry types.
+GeoSPARQL 1.1 defines a class `Geometry` as a subclass of `SpatialObject`.
+
+An instance of `Geometry` is not restricted to two dimensions. 
+
+A fine-grained classification of `Geometry` can use the Simple Features Vocabulary (TODO: add link) which extends the class `Geometry` with further types, such as _Point_, _Polygon_ etc.
+
 The Simple Features vocabulary allows for the definition of 3D variants of:
 
 - (Multi)Points
 - (Multi)LineStrings
 - (Multi)Polygons
 
-but does not include commons 3D primitives, such as cubes or Mesh surfaces which are integral parts of 3D representations.
+It does not include commons 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations.
 
 Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts.
 In particular, the properties are:
 
-- geo:hasVolume
-- geo:hasMetricVolume
+- `geo:hasVolume`
+- `geo:hasMetricVolume`
 
 Further 3D-related metadata properties such as projection matrices are not part of the current GeoSPARQL 1.1 standard.
 
@@ -59,6 +63,7 @@ GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems w
 There are currently almost 300 coordinate reference systems in the database https://epsg.io/?q=%20kind%3AGEOG3DCRS[epsg.io] which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
 
 ===== Query functions with 3D support
+
 GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. 
 However, there are functions which may take into account the Z coordinate, if they are available.
 
@@ -69,6 +74,7 @@ However, there are functions which may take into account the Z coordinate, if th
 |geof:minZ  | Yes | Yes | Yes
 |geof:maxZ  | Yes | Yes | Yes 
 |=== 
+
 These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.
 
 ==== Adoption of GeoSPARQL 1.1

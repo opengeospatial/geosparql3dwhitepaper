@@ -8,6 +8,73 @@ According to the standard document, "The OGC GeoSPARQL standard supports represe
 
 ==== Requirements addressed
 
-GeoSPARQL addresses the following requirements with regards to 3D.
+In order to define which capabilities GeoSPARQL needs to adopt for full 3D compatibility, we first take a look at GeoSPARQL 1.1 current capabilities with regards to 3D.
+
+===== Vocabulary
+
+GeoSPARQL 1.1 defines a class `Geometry` as a subclass of `SpatialObject`.
+
+An instance of `Geometry` is not restricted to two dimensions. 
+
+A fine-grained classification of `Geometry` can use the Simple Features Vocabulary (TODO: add link) which extends the class `Geometry` with further types, such as _Point_, _Polygon_ etc.
+
+The Simple Features vocabulary allows for the definition of 3D variants of:
+
+- (Multi)Points
+- (Multi)LineStrings
+- (Multi)Polygons
+
+It does not include commons 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations.
+
+Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts.
+In particular, the properties are:
+
+- `geo:hasVolume`
+- `geo:hasMetricVolume`
+
+Further 3D-related metadata properties such as projection matrices are not part of the current GeoSPARQL 1.1 standard.
+
+===== Geometry Relations
+
+Relations between geometries have been defined using three different sets of rules:
+
+- Simple Features Relations
+- Egenhofer Relations
+- Region Connection Calculus RCC8
+
+All geometry relations are only defined for 2D geometries and do not take into account the third dimension.
+
+===== Literals
+
+A first requirement for 3D support is the ability to save 3D data in a knowledge graph.
+GeoSPARQL 1.1 defines a variety of String literal formats, which are investigated for the storage of 3D data.
+
+[cols="3,3,3,3"] 
+|=== 
+|Literal Type | Z-Coordinate Supported | 2.5D | 3D 
+|WKT Literal  | Yes | Yes | Yes
+|GML Literal  | Yes | Yes | Only with extension Schema
+|KML Literal  | Yes | Yes | As import from COLLADA
+|GeoJSON Literal  | Yes | Yes | Yes
+|DGGS Literal  |  |  | 
+|=== 
+
+GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support.
+There are currently almost 300 coordinate reference systems in the database https://epsg.io/?q=%20kind%3AGEOG3DCRS[epsg.io] which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
+
+===== Query functions with 3D support
+
+GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. 
+However, there are functions which may take into account the Z coordinate, if they are available.
+
+[cols="3,3,3,3"] 
+|=== 
+|GeoSPARQL function | Z-Coordinate Supported | 2.5D | 3D 
+|geof:is3D  | Yes | Yes | Yes
+|geof:minZ  | Yes | Yes | Yes
+|geof:maxZ  | Yes | Yes | Yes 
+|=== 
+
+These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.
 
 ==== Adoption of GeoSPARQL 1.1

@@ -3,6 +3,28 @@
 This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. 
 This feedback helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.
 
+=== Feedback from Industries
+
+GeoSPARQL lacks some of the 3D functions that are common in popular geospatial databases. Some of those functions are required for professionals working in industries such as Architecture Engineering Construction and Operations (AECO) to complete their work tasks on a daily basis.
+
 === Proposed extensions for GeoSPARQL 3D
 
-==== Extension 1: 
+==== Extension {counter:ext}: Non-topological Query Functions - 3D Extension
+
+===== GitHub Issue URI
+
+- https://github.com/opengeospatial/ogc-geosparql/issues/556
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL 3D should provide the opportunity to execute non-topological query functions on 2D and 3D geometries commonly used in geospatial databases. Proposed extensions include following functions:
+
+- geometry extrusion to the specified line segment
+- geometry extrusion to the specified height
+- spatiotemporal geometry extrusion to the specified line segment with specific start and end time
+
+

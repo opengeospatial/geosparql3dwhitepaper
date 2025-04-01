@@ -1,1 +1,12 @@
 == Introduction
+GeoSPARQL is an open standard that enables storage and exchange of spatial data on the Web, based on the Resource Description Framework (RDF). Although it is not clearly demarcated, the current version of GeoSPARQL (1.1) is mainly geared towards spatial things having zero to two dimensions. In other words, things that can be displayed on a flat surface. However, for three-dimentional spatial objects, both supply and demand are increasing.
+
+A next version of GeoSPARQL is intended to have extended capabilities for working in three-dimensional space. Not only would that make GeoSPARQL more useful for 3D geospatial data, it would also help in industries and knowledge domains that are not mainly focused on geospatial data, like Building Information Modeling (BIM) and Computer Graphics (CG). This paper describes which 3D extensions to GeoSPARQL are most desirable, and how they could be achieved.
+
+The paper consists of three main parts. The first explains the need for additional 3D capabilities in GeoSPARQL. It lists expected benefits, and describes how users and implementers of GeoSPARQL can reap those benefits. The second part describes current capabilities of GeoSPARQL. In its current state, GeoSPARQL does allow modelling three-dimensional objects, but there are limitations to that. The last section describes requirements for extended 3D capabilities in GeoSPARQL. This is based on a market consultation, which resulted in a collection of use cases for additional 3D capabilities. By analysing those use cases, as well as current developments within and outside the OGC, insight in the most needed extensions to GeoSPARQL can be obtained. Requirements are then weighed against feasibility; some extensions are easier to achieve than others.
+
+This paper should be interesting for the following audiences:
+
+* Current and prospective users of GeoSPARQL;
+* Current and prospective implementers of GeoSPARQL;
+* Members of related OGC working groups. 

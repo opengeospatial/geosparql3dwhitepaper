@@ -199,10 +199,39 @@ For the purposes of this document, the terms and definitions given in % and the 
 <semantic__title>Requirements for GeoSPARQL 3D</semantic__title>
 <semantic__p id="semantic___4744e5d2-89a2-9206-cd6e-d9e7ddf361e6">This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. This feedback helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.</semantic__p>
 
+<semantic__clause id="semantic___feedback_from_industries" obligation="normative">
+<semantic__title>Feedback from Industries</semantic__title>
+<semantic__p id="semantic___0f60fbb5-817d-3144-9cab-3b206c2d1ba6">GeoSPARQL lacks some of the 3D functions that are common in popular geospatial databases. Some of those functions are required for professionals working in industries such as Architecture Engineering Construction and Operations (AECO) to complete their work tasks on a daily basis.</semantic__p>
+</semantic__clause>
+
 <semantic__clause id="semantic___proposed_extensions_for_geosparql_3d" obligation="normative">
 <semantic__title>Proposed extensions for GeoSPARQL 3D</semantic__title>
-<semantic__clause id="semantic___extension_1" obligation="normative">
-<semantic__title>Extension 1:</semantic__title>
+<semantic__clause id="semantic___extension_1_non_topological_query_functions_3d_extension" obligation="normative">
+<semantic__title>Extension 1: Non-topological Query Functions — 3D Extension</semantic__title>
+<semantic__clause id="semantic___github_issue_uri" obligation="normative">
+<semantic__title>GitHub Issue URI</semantic__title>
+<semantic__ul id="semantic___c1f05165-3e83-3fc1-54e5-4c037c233dc1"><semantic__li><semantic__p id="semantic___f8e21b25-3839-ac90-9681-ad7e43a0a24f"><semantic__link target="https://github.com/opengeospatial/ogc-geosparql/issues/556"/></semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__clause>
+
+<semantic__clause id="semantic___category" obligation="normative">
+<semantic__title>Category</semantic__title>
+<semantic__p id="semantic___16809652-7b52-800e-0b33-f3c456039049">Semantic improvement</semantic__p>
+</semantic__clause>
+
+<semantic__clause id="semantic___description" obligation="normative">
+<semantic__title>Description</semantic__title>
+<semantic__p id="semantic___3debf93d-94a1-b893-b3df-a0988060fcdb">GeoSPARQL 3D should provide the opportunity to execute non-topological query functions on 2D and 3D geometries commonly used in geospatial databases. Proposed extensions include following functions:</semantic__p>
+
+<semantic__ul id="semantic___a4211e25-5d3b-bcd3-1e5b-de17d584415a"><semantic__li><semantic__p id="semantic___06a6012c-efd9-c4c9-4f66-bbce01c0bfae">geometry extrusion to the specified line segment</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___79e2306f-f367-9c9a-4d18-fbc4a4cc64f2">geometry extrusion to the specified height</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___924e748c-830e-bdd3-ea65-b816a236919f">spatiotemporal geometry extrusion to the specified line segment with specific start and end time</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__clause>
 </semantic__clause>
 </semantic__clause>
 </semantic__clause>
@@ -271,12 +300,12 @@ sourcecode .nt {
 <boilerplate><copyright-statement>
 
 <clause id="_copyright_notice" obligation="normative">
-<title id="_ea5ccd1a-af51-48d3-a626-9d2c14543ae3">Copyright notice</title><fmt-title depth="1"><semx element="title" source="_ea5ccd1a-af51-48d3-a626-9d2c14543ae3">Copyright notice</semx></fmt-title>
+<title id="_d6e68ad8-27f9-470d-a338-4adb9904cf41">Copyright notice</title><fmt-title depth="1"><semx element="title" source="_d6e68ad8-27f9-470d-a338-4adb9904cf41">Copyright notice</semx></fmt-title>
 <p id="_09cc624e-08fe-4298-0e48-fd64aab88de3" align="center">Copyright © 2025 Open Geospatial Consortium<br/> To obtain additional rights of use, visit<link target="https://www.ogc.org/legal"/></p>
 </clause>
 
 <clause id="_note" obligation="normative">
-<title id="_bdfa7e94-d564-458a-b1da-2d6b5546f73c">Note</title><fmt-title depth="1"><semx element="title" source="_bdfa7e94-d564-458a-b1da-2d6b5546f73c">Note</semx></fmt-title>
+<title id="_04c726c1-ea51-4a96-ba0a-82bbfd430201">Note</title><fmt-title depth="1"><semx element="title" source="_04c726c1-ea51-4a96-ba0a-82bbfd430201">Note</semx></fmt-title>
 <p id="_11e88dba-9912-1a89-a82d-7291bf232191" align="left">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
 
 <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" align="left">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
@@ -286,7 +315,7 @@ sourcecode .nt {
 <license-statement>
 
 <clause id="_license_agreement" obligation="normative">
-<title id="_ec9b0437-2a72-4092-9f3b-9701cca3aa45">License Agreement</title><fmt-title depth="1"><semx element="title" source="_ec9b0437-2a72-4092-9f3b-9701cca3aa45">License Agreement</semx></fmt-title>
+<title id="_43a50e0a-0b84-470f-9972-6f66574c8e3d">License Agreement</title><fmt-title depth="1"><semx element="title" source="_43a50e0a-0b84-470f-9972-6f66574c8e3d">License Agreement</semx></fmt-title>
 <p id="_f5fe34fd-12e2-2bb7-8cd6-9d4cffa96538">Use of this document is subject to the license agreement at <link target="https://www.ogc.org/license"/></p>
 </clause>
 </license-statement>
@@ -294,7 +323,7 @@ sourcecode .nt {
 <legal-statement>
 
 <clause id="_notice" obligation="normative">
-<title id="_9e7195d1-04be-44e8-9a4b-556fa90707cd">Notice</title><fmt-title depth="1"><semx element="title" source="_9e7195d1-04be-44e8-9a4b-556fa90707cd">Notice</semx></fmt-title>
+<title id="_c1d7780e-5b69-4a42-8f88-1ef51983b676">Notice</title><fmt-title depth="1"><semx element="title" source="_c1d7780e-5b69-4a42-8f88-1ef51983b676">Notice</semx></fmt-title>
 <p id="_d83c129b-65cf-e09d-d350-52b12201b907">This document is not an OGC Standard. This document is an OGC White Paper and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
 
 <p id="_653943e2-d0e0-309a-93be-17f6f0e94af3">Further, an OGC White Paper should not be referenced as required or mandatory technology in procurements.</p>
@@ -304,26 +333,26 @@ sourcecode .nt {
 <feedback-statement>
 
 </feedback-statement>
-</boilerplate><preface><clause type="toc" id="_4c3fd08e-3339-4f88-a9dd-77363cdbb8c3" displayorder="1"><fmt-title depth="1">Contents</fmt-title></clause>
-<clause id="_da0982c1-0ce0-4005-8564-72f60fbcaa45" type="keywords" displayorder="2">
-<title id="_c273e2ce-96d4-42e5-b34b-8684ce1414cc">Keywords</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_da0982c1-0ce0-4005-8564-72f60fbcaa45">I</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_c273e2ce-96d4-42e5-b34b-8684ce1414cc">Keywords</semx></fmt-title><fmt-xref-label><semx element="title" source="_da0982c1-0ce0-4005-8564-72f60fbcaa45">Keywords</semx></fmt-xref-label>
+</boilerplate><preface><clause type="toc" id="_803c095d-e9be-4efd-8a87-b044e9d7c46d" displayorder="1"><fmt-title depth="1">Contents</fmt-title></clause>
+<clause id="_6306e22e-5d5f-42fe-8cc1-4793860bba8c" type="keywords" displayorder="2">
+<title id="_4ab994c2-01c4-4e0d-b769-0829053a37f1">Keywords</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_6306e22e-5d5f-42fe-8cc1-4793860bba8c">I</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_4ab994c2-01c4-4e0d-b769-0829053a37f1">Keywords</semx></fmt-title><fmt-xref-label><semx element="title" source="_6306e22e-5d5f-42fe-8cc1-4793860bba8c">Keywords</semx></fmt-xref-label>
 <p>The following are keywords to be used by search engines and document catalogues.</p>
 <p>OGC, GeoSPARQL, 3D</p></clause>
 <foreword id="_preface" obligation="informative" displayorder="3">
-<title id="_f5d2656f-2aba-45fd-967a-e30188a736c9">Preface</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_preface">II</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_f5d2656f-2aba-45fd-967a-e30188a736c9">Preface</semx></fmt-title><fmt-xref-label><semx element="title" source="_preface">Preface</semx></fmt-xref-label>
+<title id="_20eeb165-b72e-4707-8eac-66a5a953f89a">Preface</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_preface">II</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_20eeb165-b72e-4707-8eac-66a5a953f89a">Preface</semx></fmt-title><fmt-xref-label><semx element="title" source="_preface">Preface</semx></fmt-xref-label>
 <p id="_0a02ca0c-0bd0-9643-3798-458feb9c9242">To come…​</p>
 </foreword><clause id="_security_considerations" type="security" obligation="informative" displayorder="4">
-<title id="_2e68ff6f-3190-4f21-8b8f-4cc4b89f6617">Security Considerations</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_security_considerations">III</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_2e68ff6f-3190-4f21-8b8f-4cc4b89f6617">Security Considerations</semx></fmt-title><fmt-xref-label><semx element="title" source="_security_considerations">Security Considerations</semx></fmt-xref-label>
+<title id="_642387ae-07aa-4959-a12c-d5e120d7a92c">Security Considerations</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_security_considerations">III</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_642387ae-07aa-4959-a12c-d5e120d7a92c">Security Considerations</semx></fmt-title><fmt-xref-label><semx element="title" source="_security_considerations">Security Considerations</semx></fmt-xref-label>
 <p id="_4096c033-8924-9adc-7868-ff79b5d0a485">The following security considerations apply…​</p>
-</clause><clause id="_7fe0b6fa-f54b-4ee2-8853-a3be8ddafb2f" type="submitting_orgs" displayorder="5">
-<title id="_74933fe7-b7c6-4d73-89a8-4304ce1cd6ce">Submitting Organizations</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_7fe0b6fa-f54b-4ee2-8853-a3be8ddafb2f">IV</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_74933fe7-b7c6-4d73-89a8-4304ce1cd6ce">Submitting Organizations</semx></fmt-title><fmt-xref-label><semx element="title" source="_7fe0b6fa-f54b-4ee2-8853-a3be8ddafb2f">Submitting Organizations</semx></fmt-xref-label>
+</clause><clause id="_a977bd35-664e-4dd0-8c21-0ad7fd80fe09" type="submitting_orgs" displayorder="5">
+<title id="_d3696687-29d1-4501-a95e-19cbd195ed83">Submitting Organizations</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_a977bd35-664e-4dd0-8c21-0ad7fd80fe09">IV</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d3696687-29d1-4501-a95e-19cbd195ed83">Submitting Organizations</semx></fmt-title><fmt-xref-label><semx element="title" source="_a977bd35-664e-4dd0-8c21-0ad7fd80fe09">Submitting Organizations</semx></fmt-xref-label>
 <p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p>
  <ul><li>Organization one</li>
 <li>Organization two</li>
 <li>Organization three</li></ul>
  </clause>
 <submitters id="_submitters" displayorder="6">
-<title id="_a6878597-f84e-4c4b-820f-170a7f7df24b">Submitters</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_submitters">V</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_a6878597-f84e-4c4b-820f-170a7f7df24b">Submitters</semx></fmt-title><fmt-xref-label><semx element="title" source="_submitters">Submitters</semx></fmt-xref-label>
+<title id="_b2f61436-a2b4-4f26-8eb2-59af3d303bd7">Submitters</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_submitters">V</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_b2f61436-a2b4-4f26-8eb2-59af3d303bd7">Submitters</semx></fmt-title><fmt-xref-label><semx element="title" source="_submitters">Submitters</semx></fmt-xref-label>
 <table id="_c57b3179-3e90-e3ae-b535-2e2a1f410e72" unnumbered="true"><thead><tr><th valign="middle" align="left">Name</th>
 <th valign="middle" align="left">Affiliation</th>
 <th valign="middle" align="left">OGC member</th>
@@ -334,13 +363,13 @@ sourcecode .nt {
 </tr></tbody>
 </table>
 </submitters></preface><sections><clause id="_abstract" obligation="normative" displayorder="11">
-<title id="_5fe2ad7e-1200-47ea-8e34-e01830b9e2e5">Abstract</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_abstract">5</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_5fe2ad7e-1200-47ea-8e34-e01830b9e2e5">Abstract</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_abstract">5</semx></fmt-xref-label>
+<title id="_980f6c13-cb7d-4c82-96b5-1066f89868fd">Abstract</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_abstract">5</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_980f6c13-cb7d-4c82-96b5-1066f89868fd">Abstract</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_abstract">5</semx></fmt-xref-label>
 <p id="_e3eeb02a-ea2c-01c7-ef19-9c3b6ec303e8">To come…​</p>
 </clause>
 
 
 <clause id="_keywords" obligation="normative" displayorder="12">
-<title id="_27e1b3cf-1f0b-44f5-b730-619f27ec38ae">Keywords</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_keywords">6</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_27e1b3cf-1f0b-44f5-b730-619f27ec38ae">Keywords</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_keywords">6</semx></fmt-xref-label>
+<title id="_98a43d77-c8f3-48a7-8f18-01aa3fc3e1ec">Keywords</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_keywords">6</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_98a43d77-c8f3-48a7-8f18-01aa3fc3e1ec">Keywords</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_keywords">6</semx></fmt-xref-label>
 <p id="_d8a5fdcc-e91a-08fc-b700-7f2222f64bc8">To come…​</p>
 </clause>
 
@@ -348,26 +377,26 @@ sourcecode .nt {
 
 
 <clause id="_scope" type="scope" obligation="normative" displayorder="7">
-<title id="_850ebe83-5e88-49a6-8144-01b5862bcd96">Scope</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_scope">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_850ebe83-5e88-49a6-8144-01b5862bcd96">Scope</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_scope">1</semx></fmt-xref-label>
+<title id="_c28dd5c3-0b3b-4ac1-9571-6da53dfa051f">Scope</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_scope">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_c28dd5c3-0b3b-4ac1-9571-6da53dfa051f">Scope</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_scope">1</semx></fmt-xref-label>
 </clause>
 
 <clause id="_conformance" type="conformance" obligation="normative" displayorder="8">
-<title id="_4e7f04dc-f3e6-4eba-90f3-b39b986b2326">Conformance</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_conformance">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_4e7f04dc-f3e6-4eba-90f3-b39b986b2326">Conformance</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_conformance">2</semx></fmt-xref-label>
+<title id="_d933c3cc-5b35-4a19-a974-3d3b48292021">Conformance</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_conformance">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d933c3cc-5b35-4a19-a974-3d3b48292021">Conformance</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_conformance">2</semx></fmt-xref-label>
 </clause>
 
 
 
 <terms id="_terms_and_definitions" obligation="normative" displayorder="10">
-<title id="_df192b4e-8a25-4f11-aee4-2bc24d44bdc7">Terms and definitions</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_terms_and_definitions">4</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_df192b4e-8a25-4f11-aee4-2bc24d44bdc7">Terms and definitions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_terms_and_definitions">4</semx></fmt-xref-label><p id="_4311f999-5926-535e-0e11-4d86eb6f4c0b">No terms and definitions are listed in this document.</p>
+<title id="_42f4c98a-e08f-4e72-ae9c-a16c99f6ca15">Terms and definitions</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_terms_and_definitions">4</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_42f4c98a-e08f-4e72-ae9c-a16c99f6ca15">Terms and definitions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_terms_and_definitions">4</semx></fmt-xref-label><p id="_4311f999-5926-535e-0e11-4d86eb6f4c0b">No terms and definitions are listed in this document.</p>
 
 </terms>
 
 <clause id="_conventions" obligation="normative" displayorder="13">
-<title id="_b85e3fb7-f65e-4c78-b142-80aa04776701">Conventions</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_conventions">7</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_b85e3fb7-f65e-4c78-b142-80aa04776701">Conventions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_conventions">7</semx></fmt-xref-label>
+<title id="_93b70124-02b8-43a6-b82d-d75fdd5ddba5">Conventions</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_conventions">7</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_93b70124-02b8-43a6-b82d-d75fdd5ddba5">Conventions</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_conventions">7</semx></fmt-xref-label>
 </clause>
 
 <clause id="_introduction" obligation="normative" displayorder="14">
-<title id="_b9fc91bf-4580-4243-91fa-89c7c6c80b54">Introduction</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_introduction">8</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_b9fc91bf-4580-4243-91fa-89c7c6c80b54">Introduction</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_introduction">8</semx></fmt-xref-label>
+<title id="_e53891b7-2794-4955-b48c-5fc84cce8808">Introduction</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_introduction">8</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_e53891b7-2794-4955-b48c-5fc84cce8808">Introduction</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_introduction">8</semx></fmt-xref-label>
 <p id="_5db824f3-b99d-179f-56c5-f1a7bb9e9814">GeoSPARQL is an open standard that enables storage and exchange of spatial data on the Web, based on the Resource Description Framework (RDF). Although not specifically bound, the current version of GeoSPARQL (1.1) is mainly geared towards spatial objects having zero to two dimensions. In other words, things that can be displayed on a flat surface. However, for three-dimentional spatial objects both supply and demand are increasing.</p>
 
 <p id="_55190044-3774-a6bc-509d-1bcb51137b4b">A future version of GeoSPARQL is expected to have extended capabilities supporting three-dimensional space. Not only would that make GeoSPARQL more useful for 3D geospatial data, it would also help in industries and knowledge domains that are not mainly focused on geospatial data, like Building Information Modelling (BIM) and Computer Graphics (CG). This paper describes which extensions to GeoSPARQL for 3D are most desirable, and how they could be achieved.</p>
@@ -386,71 +415,100 @@ sourcecode .nt {
 </clause>
 
 <clause id="_beneficiaries_and_benefits" obligation="normative" displayorder="15">
-<title id="_435b3583-f37a-4a1f-9d67-765455895fc7">Beneficiaries and benefits</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_435b3583-f37a-4a1f-9d67-765455895fc7">Beneficiaries and benefits</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx></fmt-xref-label>
+<title id="_d578dec1-5c5a-4960-9265-6a80f4349847">Beneficiaries and benefits</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d578dec1-5c5a-4960-9265-6a80f4349847">Beneficiaries and benefits</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx></fmt-xref-label>
 <p id="_b6403716-7557-f803-f818-eed1d25840e1">This section describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.</p>
 
 <clause id="_beneficiaries" obligation="normative">
-<title id="_711fcb08-9da1-40a0-aa93-fc7dbe4095f3">Beneficiaries</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiaries">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_711fcb08-9da1-40a0-aa93-fc7dbe4095f3">Beneficiaries</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiaries">1</semx></fmt-xref-label>
+<title id="_cf1dedcd-0bb3-4205-9cf4-ba8d1b8de7e7">Beneficiaries</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiaries">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_cf1dedcd-0bb3-4205-9cf4-ba8d1b8de7e7">Beneficiaries</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiaries">1</semx></fmt-xref-label>
 <clause id="_beneficiary_1_someone_who_benefits" obligation="normative">
-<title id="_5deeb394-8251-4db7-abd0-98395327a251">Beneficiary 1: Someone who benefits</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiaries">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiary_1_someone_who_benefits">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_5deeb394-8251-4db7-abd0-98395327a251">Beneficiary 1: Someone who benefits</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiaries">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiary_1_someone_who_benefits">1</semx></fmt-xref-label>
+<title id="_28ab391b-7cfa-4b51-90c3-eaf828c4cbf6">Beneficiary 1: Someone who benefits</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiaries">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiary_1_someone_who_benefits">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_28ab391b-7cfa-4b51-90c3-eaf828c4cbf6">Beneficiary 1: Someone who benefits</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiaries">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_beneficiary_1_someone_who_benefits">1</semx></fmt-xref-label>
 </clause>
 </clause>
 
 <clause id="_benefits" obligation="normative">
-<title id="_a49c7779-dc6e-4dc3-b380-c7ccefdde324">Benefits</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefits">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_a49c7779-dc6e-4dc3-b380-c7ccefdde324">Benefits</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefits">2</semx></fmt-xref-label>
+<title id="_fede7db8-6892-481e-9df3-bb68bf2ec8e4">Benefits</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefits">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_fede7db8-6892-481e-9df3-bb68bf2ec8e4">Benefits</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefits">2</semx></fmt-xref-label>
 <p id="_565faa2f-f765-e1e2-86ee-92fb4dc8ec64">The benefits of semantic and graph technologies are outlined below.</p>
 
 <clause id="_benefit_b1_my_benefit" obligation="normative">
-<title id="_16d4f9a2-6996-4705-8391-c159fc94663c">Benefit B1: My benefit</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefits">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefit_b1_my_benefit">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_16d4f9a2-6996-4705-8391-c159fc94663c">Benefit B1: My benefit</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefits">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefit_b1_my_benefit">1</semx></fmt-xref-label>
+<title id="_29481586-985c-4051-b60c-80d81fcff719">Benefit B1: My benefit</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefits">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefit_b1_my_benefit">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_29481586-985c-4051-b60c-80d81fcff719">Benefit B1: My benefit</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_beneficiaries_and_benefits">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefits">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_benefit_b1_my_benefit">1</semx></fmt-xref-label>
 </clause>
 </clause>
 </clause>
 
 <clause id="_current_capabilities" obligation="normative" displayorder="16">
-<title id="_a72fc1cb-b185-4984-85a5-fa259c0ef45f">Current capabilities</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_a72fc1cb-b185-4984-85a5-fa259c0ef45f">Current capabilities</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_current_capabilities">10</semx></fmt-xref-label>
+<title id="_0c4ea593-3bc2-4597-adb9-89614b9d6b34">Current capabilities</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_0c4ea593-3bc2-4597-adb9-89614b9d6b34">Current capabilities</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_current_capabilities">10</semx></fmt-xref-label>
 <clause id="_geosparql" obligation="normative">
-<title id="_c86fe986-2db1-4585-8cc4-738aa5a40b14">GeoSPARQL</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_c86fe986-2db1-4585-8cc4-738aa5a40b14">GeoSPARQL</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx></fmt-xref-label>
+<title id="_38dbc984-7fe6-4109-b614-029fe9ef6431">GeoSPARQL</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_38dbc984-7fe6-4109-b614-029fe9ef6431">GeoSPARQL</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx></fmt-xref-label>
 <p id="_6b6cc7f3-c950-083b-ab76-9a751cf86f79">GeoSPARQL is the most common geospatial extension of SPARQL. It was accepted as an OGC standard in 2012 and revised as GeoSPARQL 1.1 in 2024.</p>
 
 <p id="_1f12acf8-4eb3-a24b-bb82-7a53205a85b1">According to the standard document, “The OGC GeoSPARQL standard supports representing and querying geospatial data on the Semantic Web. GeoSPARQL defines a vocabulary for representing geospatial data in RDF, and it defines an extension to the SPARQL query language for processing geospatial data”.</p>
 
 <clause id="_requirements_addressed" obligation="normative">
-<title id="_f6a07529-5f6f-4792-9e13-85a79378747b">Requirements addressed</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_requirements_addressed">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_f6a07529-5f6f-4792-9e13-85a79378747b">Requirements addressed</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_requirements_addressed">1</semx></fmt-xref-label>
+<title id="_6c074a20-d023-4944-b89c-4fdc7c8a6b86">Requirements addressed</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_requirements_addressed">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_6c074a20-d023-4944-b89c-4fdc7c8a6b86">Requirements addressed</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_requirements_addressed">1</semx></fmt-xref-label>
 <p id="_80881d64-cbae-9080-11f4-5cf6c9332828">GeoSPARQL addresses the following requirements with regards to 3D.</p>
 </clause>
 
 <clause id="_adoption_of_geosparql_1_1" obligation="normative">
-<title id="_46be27c7-d252-4590-8e49-14828b18d853">Adoption of GeoSPARQL 1.1</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_adoption_of_geosparql_1_1">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_46be27c7-d252-4590-8e49-14828b18d853">Adoption of GeoSPARQL 1.1</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_adoption_of_geosparql_1_1">2</semx></fmt-xref-label>
+<title id="_5c7d825c-a7ce-46cb-babc-742dceaece58">Adoption of GeoSPARQL 1.1</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_adoption_of_geosparql_1_1">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_5c7d825c-a7ce-46cb-babc-742dceaece58">Adoption of GeoSPARQL 1.1</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_current_capabilities">10</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_geosparql">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_adoption_of_geosparql_1_1">2</semx></fmt-xref-label>
 </clause>
 </clause>
 </clause>
 
 <clause id="_requirements_for_geosparql_3d" obligation="normative" displayorder="17">
-<title id="_caddfe87-74ef-4364-beed-cc43ede3c07e">Requirements for GeoSPARQL 3D</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_caddfe87-74ef-4364-beed-cc43ede3c07e">Requirements for GeoSPARQL 3D</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx></fmt-xref-label>
+<title id="_baa2c60d-22e0-4d1b-92e6-ac6f92f929c2">Requirements for GeoSPARQL 3D</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_baa2c60d-22e0-4d1b-92e6-ac6f92f929c2">Requirements for GeoSPARQL 3D</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx></fmt-xref-label>
 <p id="_4744e5d2-89a2-9206-cd6e-d9e7ddf361e6">This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. This feedback helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.</p>
 
+<clause id="_feedback_from_industries" obligation="normative">
+<title id="_f0a83efc-4600-43e4-9f88-f007f30e0818">Feedback from Industries</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_feedback_from_industries">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_f0a83efc-4600-43e4-9f88-f007f30e0818">Feedback from Industries</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_feedback_from_industries">1</semx></fmt-xref-label>
+<p id="_0f60fbb5-817d-3144-9cab-3b206c2d1ba6">GeoSPARQL lacks some of the 3D functions that are common in popular geospatial databases. Some of those functions are required for professionals working in industries such as Architecture Engineering Construction and Operations (AECO) to complete their work tasks on a daily basis.</p>
+</clause>
+
 <clause id="_proposed_extensions_for_geosparql_3d" obligation="normative">
-<title id="_df7e7064-de3f-4aa1-bf3b-3cbd8373fe04">Proposed extensions for GeoSPARQL 3D</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_df7e7064-de3f-4aa1-bf3b-3cbd8373fe04">Proposed extensions for GeoSPARQL 3D</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">1</semx></fmt-xref-label>
-<clause id="_extension_1" obligation="normative">
-<title id="_32d5430e-e00d-4b6c-9f94-095a1a8f0275">Extension 1:</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_32d5430e-e00d-4b6c-9f94-095a1a8f0275">Extension 1:</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1">1</semx></fmt-xref-label>
+<title id="_847b0149-e419-47a8-bba4-787bb3907ee3">Proposed extensions for GeoSPARQL 3D</title><fmt-title depth="2"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_847b0149-e419-47a8-bba4-787bb3907ee3">Proposed extensions for GeoSPARQL 3D</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx></fmt-xref-label>
+<clause id="_extension_1_non_topological_query_functions_3d_extension" obligation="normative">
+<title id="_16b60344-5865-4b40-8d20-8f36f60ecd25">Extension 1: Non-topological Query Functions — 3D Extension</title><fmt-title depth="3"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1_non_topological_query_functions_3d_extension">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_16b60344-5865-4b40-8d20-8f36f60ecd25">Extension 1: Non-topological Query Functions — 3D Extension</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1_non_topological_query_functions_3d_extension">1</semx></fmt-xref-label>
+<clause id="_github_issue_uri" obligation="normative">
+<title id="_7f5da0b2-499d-499c-b1dc-246d552da6e0">GitHub Issue URI</title><fmt-title depth="4"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1_non_topological_query_functions_3d_extension">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_github_issue_uri">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_7f5da0b2-499d-499c-b1dc-246d552da6e0">GitHub Issue URI</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1_non_topological_query_functions_3d_extension">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_github_issue_uri">1</semx></fmt-xref-label>
+<ul id="_c1f05165-3e83-3fc1-54e5-4c037c233dc1"><li><p id="_f8e21b25-3839-ac90-9681-ad7e43a0a24f"><link target="https://github.com/opengeospatial/ogc-geosparql/issues/556"/></p>
+</li>
+</ul>
+</clause>
+
+<clause id="_category" obligation="normative">
+<title id="_6cbd6cd4-2489-411b-b6c9-94cec30ec24f">Category</title><fmt-title depth="4"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1_non_topological_query_functions_3d_extension">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_category">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_6cbd6cd4-2489-411b-b6c9-94cec30ec24f">Category</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1_non_topological_query_functions_3d_extension">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_category">2</semx></fmt-xref-label>
+<p id="_16809652-7b52-800e-0b33-f3c456039049">Semantic improvement</p>
+</clause>
+
+<clause id="_description" obligation="normative">
+<title id="_1bab5cd9-41cc-463d-9a1c-fb53725dd51a">Description</title><fmt-title depth="4"><span class="fmt-caption-label"><semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1_non_topological_query_functions_3d_extension">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_description">3</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_1bab5cd9-41cc-463d-9a1c-fb53725dd51a">Description</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_requirements_for_geosparql_3d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_proposed_extensions_for_geosparql_3d">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_extension_1_non_topological_query_functions_3d_extension">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_description">3</semx></fmt-xref-label>
+<p id="_3debf93d-94a1-b893-b3df-a0988060fcdb">GeoSPARQL 3D should provide the opportunity to execute non-topological query functions on 2D and 3D geometries commonly used in geospatial databases. Proposed extensions include following functions:</p>
+
+<ul id="_a4211e25-5d3b-bcd3-1e5b-de17d584415a"><li><p id="_06a6012c-efd9-c4c9-4f66-bbce01c0bfae">geometry extrusion to the specified line segment</p>
+</li>
+<li><p id="_79e2306f-f367-9c9a-4d18-fbc4a4cc64f2">geometry extrusion to the specified height</p>
+</li>
+<li><p id="_924e748c-830e-bdd3-ea65-b816a236919f">spatiotemporal geometry extrusion to the specified line segment with specific start and end time</p>
+</li>
+</ul>
+</clause>
 </clause>
 </clause>
 </clause>
 
 <clause id="_annex_n_n" obligation="normative" displayorder="18">
-<title id="_33b79e65-dabb-4ff1-897b-3eb2d101c87a">Annex N: N</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_annex_n_n">12</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_33b79e65-dabb-4ff1-897b-3eb2d101c87a">Annex N: N</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_annex_n_n">12</semx></fmt-xref-label>
+<title id="_6ec65985-f4ca-4b92-8faa-8f26fb7e1903">Annex N: N</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_annex_n_n">12</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_6ec65985-f4ca-4b92-8faa-8f26fb7e1903">Annex N: N</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_annex_n_n">12</semx></fmt-xref-label>
 </clause>
 
 <clause id="_annex_o_history" obligation="normative" displayorder="19">
-<title id="_26b619c2-9dbc-4db6-9c33-305bf32d7968">Annex O: History</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_annex_o_history">13</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_26b619c2-9dbc-4db6-9c33-305bf32d7968">Annex O: History</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_annex_o_history">13</semx></fmt-xref-label>
+<title id="_2e6f4725-4dce-422f-897e-30d1efc2dbfe">Annex O: History</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_annex_o_history">13</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_2e6f4725-4dce-422f-897e-30d1efc2dbfe">Annex O: History</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_annex_o_history">13</semx></fmt-xref-label>
 </clause>
 
 
 <references id="_normative_references" normative="true" obligation="informative" displayorder="9">
-<title id="_ff0c3a15-d93c-43a3-b6ff-3c257df1462d">Normative references</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_normative_references">3</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_ff0c3a15-d93c-43a3-b6ff-3c257df1462d">Normative references</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_normative_references">3</semx></fmt-xref-label><p id="_a6710f40-5cbe-2ae3-8231-ad9faf61ae73">There are no normative references in this document.</p>
+<title id="_9cee3a5e-1f54-489b-adbb-b7ab5e769dec">Normative references</title><fmt-title depth="1"><span class="fmt-caption-label"><semx element="autonum" source="_normative_references">3</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_9cee3a5e-1f54-489b-adbb-b7ab5e769dec">Normative references</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_normative_references">3</semx></fmt-xref-label><p id="_a6710f40-5cbe-2ae3-8231-ad9faf61ae73">There are no normative references in this document.</p>
 
 </references></sections><bibliography><references id="_bibliography" normative="false" obligation="informative" displayorder="20">
-<title id="_8a2fa4b1-8541-4bde-bf14-ef4bcb678209">Bibliography</title><fmt-title depth="1"><semx element="title" source="_8a2fa4b1-8541-4bde-bf14-ef4bcb678209">Bibliography</semx></fmt-title>
+<title id="_8fb62f8b-46c1-4cf4-9434-8217b25f55bb">Bibliography</title><fmt-title depth="1"><semx element="title" source="_8fb62f8b-46c1-4cf4-9434-8217b25f55bb">Bibliography</semx></fmt-title>
 <dl id="_26eeb3d5-f3ac-8462-37a9-defa2b5dcbcc"><dt id="RDF">RDF</dt>
 <dd><p id="_016dde65-9ce7-9c41-cd92-71152e53a2e8">World Wide Web Consortium, <em>RDF 1.1 Concepts and Abstract Syntax</em>, W3C Recommendation (25 February 2014). <link target="https://www.w3.org/TR/rdf11-concepts/"/></p>
 </dd>

@@ -1548,7 +1548,7 @@ pre.sourcecode .nt {
 </div>
 
 <nav>
-  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_803c095d-e9be-4efd-8a87-b044e9d7c46d"></a><a class="header" href="#_803c095d-e9be-4efd-8a87-b044e9d7c46d">Contents</a></h1><ul><li class="h1"><a href="#_6306e22e-5d5f-42fe-8cc1-4793860bba8c">      
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_1fd819ec-f9d8-43ab-9015-0a5d6742c51f"></a><a class="header" href="#_1fd819ec-f9d8-43ab-9015-0a5d6742c51f">Contents</a></h1><ul><li class="h1"><a href="#_ee05786d-e74a-439b-ba9b-844ba586defa">      
   
   I.  Keywords
 </a></li>
@@ -1560,7 +1560,7 @@ pre.sourcecode .nt {
   
   III.  Security Considerations
 </a></li>
-<li class="h1"><a href="#_a977bd35-664e-4dd0-8c21-0ad7fd80fe09">      
+<li class="h1"><a href="#_c7c88529-4b66-4fe3-b566-a6bd13d16a34">      
   
   IV.  Submitting Organizations
 </a></li>
@@ -1580,7 +1580,7 @@ pre.sourcecode .nt {
   
   2.  Conformance
 </a></li>
-<li class="h1"><a href="#_1b2dae9d-4dff-4cab-930e-7ea883f4293f">      3.  Normative references</a></li>
+<li class="h1"><a href="#_3b29d76c-ea2b-40fd-87b6-9d8e4e5d45e9">      3.  Normative references</a></li>
 <li class="h1"><a href="#_terms_and_definitions">      
   
   4.  Terms and definitions
@@ -1633,6 +1633,22 @@ pre.sourcecode .nt {
   
   10.1.1.  Requirements addressed
 </a></li>
+<li class="h4"><a href="#_vocabulary">      
+  
+  10.1.1.1.  Vocabulary
+</a></li>
+<li class="h4"><a href="#_geometry_relations">      
+  
+  10.1.1.2.  Geometry Relations
+</a></li>
+<li class="h4"><a href="#_literals">      
+  
+  10.1.1.3.  Literals
+</a></li>
+<li class="h4"><a href="#_query_functions_with_3d_support">      
+  
+  10.1.1.4.  Query functions with 3D support
+</a></li>
 <li class="h3"><a href="#_adoption_of_geosparql_1_1">      
   
   10.1.2.  Adoption of GeoSPARQL 1.1
@@ -1673,7 +1689,7 @@ pre.sourcecode .nt {
   
   13.  Annex O: History
 </a></li>
-<li class="h1"><a href="#_f7780369-aab7-42e5-8a20-7e50e0784918">      Bibliography</a></li></ul></div>
+<li class="h1"><a href="#_09b06089-9a8a-491c-aea7-b80b6bda40a0">      Bibliography</a></li></ul></div>
 
 </nav>
 
@@ -1688,66 +1704,130 @@ pre.sourcecode .nt {
 <div class="boilerplate-feedback">
 
 </div>
-</div><br /><div class="Section3" id="_6306e22e-5d5f-42fe-8cc1-4793860bba8c"><h1 class="IntroTitle" id="_7f654e6f-3c9e-44dc-8a74-a0cbcace91ca"><a class="anchor" href="#_6306e22e-5d5f-42fe-8cc1-4793860bba8c"></a><a class="header" href="#_6306e22e-5d5f-42fe-8cc1-4793860bba8c">I.  Keywords</a></h1><p>The following are keywords to be used by search engines and document catalogues.</p><p>OGC, GeoSPARQL, 3D</p></div><br /><div id="_preface"><h1 class="ForewordTitle" id="_c28e549d-ca47-4e8a-9f70-6d14be735cbb"><a class="anchor" href="#_preface"></a><a class="header" href="#_preface">II.  Preface</a></h1><p id="_0a02ca0c-0bd0-9643-3798-458feb9c9242">To come…​</p></div><div class="Section3" id="_security_considerations"><h1 class="IntroTitle" id="_9bd8f52b-ed53-4ce5-8089-b71eb1af369c"><a class="anchor" href="#_security_considerations"></a><a class="header" href="#_security_considerations">III.  Security Considerations</a></h1><p id="_4096c033-8924-9adc-7868-ff79b5d0a485">The following security considerations apply…​</p></div><div class="Section3" id="_a977bd35-664e-4dd0-8c21-0ad7fd80fe09"><h1 class="IntroTitle" id="_f43df453-379b-4d53-a87b-f812426dac7f"><a class="anchor" href="#_a977bd35-664e-4dd0-8c21-0ad7fd80fe09"></a><a class="header" href="#_a977bd35-664e-4dd0-8c21-0ad7fd80fe09">IV.  Submitting Organizations</a></h1><p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p><div class="ul_wrap"><ul><li>Organization one</li>
+</div><br /><div class="Section3" id="_ee05786d-e74a-439b-ba9b-844ba586defa"><h1 class="IntroTitle" id="_d0a5966b-c65e-4c3a-b0c8-b77968051c51"><a class="anchor" href="#_ee05786d-e74a-439b-ba9b-844ba586defa"></a><a class="header" href="#_ee05786d-e74a-439b-ba9b-844ba586defa">I.  Keywords</a></h1><p>The following are keywords to be used by search engines and document catalogues.</p><p>OGC, GeoSPARQL, 3D</p></div><br /><div id="_preface"><h1 class="ForewordTitle" id="_b303a830-1bdf-45bc-905e-81fb3592bb56"><a class="anchor" href="#_preface"></a><a class="header" href="#_preface">II.  Preface</a></h1><p id="_0a02ca0c-0bd0-9643-3798-458feb9c9242">To come…​</p></div><div class="Section3" id="_security_considerations"><h1 class="IntroTitle" id="_c41542e0-5ed6-4f11-b949-63d2bb18eca3"><a class="anchor" href="#_security_considerations"></a><a class="header" href="#_security_considerations">III.  Security Considerations</a></h1><p id="_4096c033-8924-9adc-7868-ff79b5d0a485">The following security considerations apply…​</p></div><div class="Section3" id="_c7c88529-4b66-4fe3-b566-a6bd13d16a34"><h1 class="IntroTitle" id="_afb70d9f-21ea-469f-bbd6-7f58f2723d1f"><a class="anchor" href="#_c7c88529-4b66-4fe3-b566-a6bd13d16a34"></a><a class="header" href="#_c7c88529-4b66-4fe3-b566-a6bd13d16a34">IV.  Submitting Organizations</a></h1><p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p><div class="ul_wrap"><ul><li>Organization one</li>
 <li>Organization two</li>
-<li>Organization three</li></ul></div></div><div class="Section3" id="_submitters"><h1 class="IntroTitle" id="_35b15ea3-eca6-466b-a6c1-de1707ca2993"><a class="anchor" href="#_submitters"></a><a class="header" href="#_submitters">V.  Submitters</a></h1><h1 id="_89191f64-742c-46ba-be20-9c5552a668bf"><a class="anchor" href="#_submitters"></a><a class="header" href="#_submitters">Submitters</a></h1><table id="_c57b3179-3e90-e3ae-b535-2e2a1f410e72" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Affiliation</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">OGC member</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Nicholas J. Car</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">KurrawongAI</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table></div><div id="_scope"><h1 id="_7cddd6d2-b67d-44a0-8985-83ad2bcab437"><a class="anchor" href="#_scope"></a><a class="header" href="#_scope">1.  Scope</a></h1></div><div id="_conformance"><h1 id="_5c48874b-4100-449d-8422-b70fabe40cf9"><a class="anchor" href="#_conformance"></a><a class="header" href="#_conformance">2.  Conformance</a></h1></div><div><h1 id="_1b2dae9d-4dff-4cab-930e-7ea883f4293f">3.  Normative references</h1>
+<li>Organization three</li></ul></div></div><div class="Section3" id="_submitters"><h1 class="IntroTitle" id="_a17c0e84-5891-42e0-899c-9426bf0f74bd"><a class="anchor" href="#_submitters"></a><a class="header" href="#_submitters">V.  Submitters</a></h1><h1 id="_36123ba8-6220-44ae-87f9-b24bd35493af"><a class="anchor" href="#_submitters"></a><a class="header" href="#_submitters">Submitters</a></h1><table id="_c57b3179-3e90-e3ae-b535-2e2a1f410e72" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Affiliation</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">OGC member</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Nicholas J. Car</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">KurrawongAI</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table></div><div id="_scope"><h1 id="_cff58483-e2be-4d9d-9174-92ab746bbfea"><a class="anchor" href="#_scope"></a><a class="header" href="#_scope">1.  Scope</a></h1></div><div id="_conformance"><h1 id="_7bf4a0a0-8ba2-4c65-99e8-9ec0f26ba822"><a class="anchor" href="#_conformance"></a><a class="header" href="#_conformance">2.  Conformance</a></h1></div><div><h1 id="_3b29d76c-ea2b-40fd-87b6-9d8e4e5d45e9">3.  Normative references</h1>
 <p id="_a6710f40-5cbe-2ae3-8231-ad9faf61ae73">There are no normative references in this document.</p>
 
-</div><div id="_terms_and_definitions"><h1 id="_cc34b907-6054-45c0-834c-0d9414e87691"><a class="anchor" href="#_terms_and_definitions"></a><a class="header" href="#_terms_and_definitions">4.  Terms and definitions</a></h1>
+</div><div id="_terms_and_definitions"><h1 id="_57a3e613-e3be-4ce3-8c20-83194a730902"><a class="anchor" href="#_terms_and_definitions"></a><a class="header" href="#_terms_and_definitions">4.  Terms and definitions</a></h1>
 <p id="_4311f999-5926-535e-0e11-4d86eb6f4c0b">No terms and definitions are listed in this document.</p>
 
-</div><div id="_abstract"><h1 id="_1f37f9f3-5730-43f5-a9af-71762cd1e079"><a class="anchor" href="#_abstract"></a><a class="header" href="#_abstract">5.  Abstract</a></h1><p id="_e3eeb02a-ea2c-01c7-ef19-9c3b6ec303e8">To come…​</p></div><div id="_keywords"><h1 id="_370ea226-660d-4bff-ac1f-1a4ce67581fe"><a class="anchor" href="#_keywords"></a><a class="header" href="#_keywords">6.  Keywords</a></h1><p id="_d8a5fdcc-e91a-08fc-b700-7f2222f64bc8">To come…​</p></div><div id="_conventions"><h1 id="_08f421a4-f1a4-4681-8a15-b1fcacc90e73"><a class="anchor" href="#_conventions"></a><a class="header" href="#_conventions">7.  Conventions</a></h1></div><div id="_introduction"><h1 id="_1d5a30b1-676d-409c-9569-2f8afc7e8053"><a class="anchor" href="#_introduction"></a><a class="header" href="#_introduction">8.  Introduction</a></h1><p id="_5db824f3-b99d-179f-56c5-f1a7bb9e9814">GeoSPARQL is an open standard that enables storage and exchange of spatial data on the Web, based on the Resource Description Framework (RDF). Although not specifically bound, the current version of GeoSPARQL (1.1) is mainly geared towards spatial objects having zero to two dimensions. In other words, things that can be displayed on a flat surface. However, for three-dimentional spatial objects both supply and demand are increasing.</p><p id="_55190044-3774-a6bc-509d-1bcb51137b4b">A future version of GeoSPARQL is expected to have extended capabilities supporting three-dimensional space. Not only would that make GeoSPARQL more useful for 3D geospatial data, it would also help in industries and knowledge domains that are not mainly focused on geospatial data, like Building Information Modelling (BIM) and Computer Graphics (CG). This paper describes which extensions to GeoSPARQL for 3D are most desirable, and how they could be achieved.</p><p id="_195289bd-4ff5-65e3-369b-ebaceb3bd277">The paper consists of three main parts. The first explains the need for additional 3D capabilities in GeoSPARQL. It lists expected benefits, and describes how users and implementers of GeoSPARQL can reap them. The second part describes current capabilities of GeoSPARQL. In its current state, GeoSPARQL does allow modelling three-dimensional objects, but with relevant limitations. The last section describes requirements for extended 3D capabilities in GeoSPARQL. The latter is based on a market consultation, which resulted in a collection of use cases for additional 3D capabilities. By analysing those use cases, as well as current developments within and outside the OGC, insight in the most needed extensions to GeoSPARQL can be obtained. Requirements are then weighed against feasibility; some extensions are easier to achieve than others.</p><p id="_82f79023-4fa3-9422-dd36-351fe33cd5a6">This paper should be interesting for the following audiences:</p><div class="ul_wrap"><ul id="_c9d82898-a18e-b7b5-d8ce-74276c46b920"><li><p id="_b58d7d3a-b6e9-66ba-c853-6c4ecbd63fdf">Current and prospective users of GeoSPARQL;</p>
+</div><div id="_abstract"><h1 id="_c24cad80-9542-4a31-8b01-79ed48218897"><a class="anchor" href="#_abstract"></a><a class="header" href="#_abstract">5.  Abstract</a></h1><p id="_e3eeb02a-ea2c-01c7-ef19-9c3b6ec303e8">To come…​</p></div><div id="_keywords"><h1 id="_76300664-51a3-42f7-ae46-75c4c991d779"><a class="anchor" href="#_keywords"></a><a class="header" href="#_keywords">6.  Keywords</a></h1><p id="_d8a5fdcc-e91a-08fc-b700-7f2222f64bc8">To come…​</p></div><div id="_conventions"><h1 id="_1a04685b-739e-46c1-8111-6f175330961a"><a class="anchor" href="#_conventions"></a><a class="header" href="#_conventions">7.  Conventions</a></h1></div><div id="_introduction"><h1 id="_20edeb22-9c44-4f8b-bc4d-bab7ecd74a3e"><a class="anchor" href="#_introduction"></a><a class="header" href="#_introduction">8.  Introduction</a></h1><p id="_5db824f3-b99d-179f-56c5-f1a7bb9e9814">GeoSPARQL is an open standard that enables storage and exchange of spatial data on the Web, based on the Resource Description Framework (RDF). Although not specifically bound, the current version of GeoSPARQL (1.1) is mainly geared towards spatial objects having zero to two dimensions. In other words, things that can be displayed on a flat surface. However, for three-dimentional spatial objects both supply and demand are increasing.</p><p id="_55190044-3774-a6bc-509d-1bcb51137b4b">A future version of GeoSPARQL is expected to have extended capabilities supporting three-dimensional space. Not only would that make GeoSPARQL more useful for 3D geospatial data, it would also help in industries and knowledge domains that are not mainly focused on geospatial data, like Building Information Modelling (BIM) and Computer Graphics (CG). This paper describes which extensions to GeoSPARQL for 3D are most desirable, and how they could be achieved.</p><p id="_195289bd-4ff5-65e3-369b-ebaceb3bd277">The paper consists of three main parts. The first explains the need for additional 3D capabilities in GeoSPARQL. It lists expected benefits, and describes how users and implementers of GeoSPARQL can reap them. The second part describes current capabilities of GeoSPARQL. In its current state, GeoSPARQL does allow modelling three-dimensional objects, but with relevant limitations. The last section describes requirements for extended 3D capabilities in GeoSPARQL. The latter is based on a market consultation, which resulted in a collection of use cases for additional 3D capabilities. By analysing those use cases, as well as current developments within and outside the OGC, insight in the most needed extensions to GeoSPARQL can be obtained. Requirements are then weighed against feasibility; some extensions are easier to achieve than others.</p><p id="_82f79023-4fa3-9422-dd36-351fe33cd5a6">This paper should be interesting for the following audiences:</p><div class="ul_wrap"><ul id="_c9d82898-a18e-b7b5-d8ce-74276c46b920"><li><p id="_b58d7d3a-b6e9-66ba-c853-6c4ecbd63fdf">Current and prospective users of GeoSPARQL;</p>
 </li>
 <li><p id="_5672df20-f2e9-dc61-f7ab-3269542713f8">Current and prospective implementers of GeoSPARQL;</p>
 </li>
 <li><p id="_e32f9706-b070-7501-733e-9e94cb727853">Members of related OGC working groups.</p>
 </li>
-</ul></div></div><div id="_beneficiaries_and_benefits"><h1 id="_7b7e2441-7be0-4aac-b061-bad92cc78419"><a class="anchor" href="#_beneficiaries_and_benefits"></a><a class="header" href="#_beneficiaries_and_benefits">9.  Beneficiaries and benefits</a></h1><p id="_b6403716-7557-f803-f818-eed1d25840e1">This section describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.</p><div id="_beneficiaries"><h2 id="_d6bcd0f1-3bb6-4a69-9b52-dcf7e7d8128a"><a class="anchor" href="#_beneficiaries"></a><a class="header" href="#_beneficiaries">9.1.  Beneficiaries</a></h2>
+</ul></div></div><div id="_beneficiaries_and_benefits"><h1 id="_db105a01-4c16-4327-949b-2d024e7fa195"><a class="anchor" href="#_beneficiaries_and_benefits"></a><a class="header" href="#_beneficiaries_and_benefits">9.  Beneficiaries and benefits</a></h1><p id="_b6403716-7557-f803-f818-eed1d25840e1">This section describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.</p><div id="_beneficiaries"><h2 id="_24a8681c-f3c6-45bb-a66c-28036074744a"><a class="anchor" href="#_beneficiaries"></a><a class="header" href="#_beneficiaries">9.1.  Beneficiaries</a></h2>
 
-<div id="_beneficiary_1_someone_who_benefits"><h3 id="_d02022aa-13ef-45a6-b092-162c7c7315d2"><a class="anchor" href="#_beneficiary_1_someone_who_benefits"></a><a class="header" href="#_beneficiary_1_someone_who_benefits">9.1.1.  Beneficiary 1: Someone who benefits</a></h3>
+<div id="_beneficiary_1_someone_who_benefits"><h3 id="_a7c38f9a-a01b-444a-90a4-2d67fd4655fa"><a class="anchor" href="#_beneficiary_1_someone_who_benefits"></a><a class="header" href="#_beneficiary_1_someone_who_benefits">9.1.1.  Beneficiary 1: Someone who benefits</a></h3>
 
 </div>
-</div><div id="_benefits"><h2 id="_e09f2039-977f-4fe3-99ba-26e5acb0df4a"><a class="anchor" href="#_benefits"></a><a class="header" href="#_benefits">9.2.  Benefits</a></h2>
+</div><div id="_benefits"><h2 id="_2feb9e29-50ee-428a-9968-6000dbd313f1"><a class="anchor" href="#_benefits"></a><a class="header" href="#_benefits">9.2.  Benefits</a></h2>
 
 <p id="_565faa2f-f765-e1e2-86ee-92fb4dc8ec64">The benefits of semantic and graph technologies are outlined below.</p>
 
-<div id="_benefit_b1_my_benefit"><h3 id="_671a53b5-f9cf-4282-b088-e78344fc0ab9"><a class="anchor" href="#_benefit_b1_my_benefit"></a><a class="header" href="#_benefit_b1_my_benefit">9.2.1.  Benefit B1: My benefit</a></h3>
+<div id="_benefit_b1_my_benefit"><h3 id="_b726debe-437a-440a-81b3-c8ff1819d5ca"><a class="anchor" href="#_benefit_b1_my_benefit"></a><a class="header" href="#_benefit_b1_my_benefit">9.2.1.  Benefit B1: My benefit</a></h3>
 
 </div>
-</div></div><div id="_current_capabilities"><h1 id="_fc5e4d94-98c3-48b6-b51c-bacb36ce54f3"><a class="anchor" href="#_current_capabilities"></a><a class="header" href="#_current_capabilities">10.  Current capabilities</a></h1><div id="_geosparql"><h2 id="_1948d178-dc00-44c5-bcba-3385b6824616"><a class="anchor" href="#_geosparql"></a><a class="header" href="#_geosparql">10.1.  GeoSPARQL</a></h2>
+</div></div><div id="_current_capabilities"><h1 id="_08f640e6-0520-46df-8c70-4898d0c57f79"><a class="anchor" href="#_current_capabilities"></a><a class="header" href="#_current_capabilities">10.  Current capabilities</a></h1><div id="_geosparql"><h2 id="_310fdea1-6ddb-4bb5-bab6-82c8e94abd6b"><a class="anchor" href="#_geosparql"></a><a class="header" href="#_geosparql">10.1.  GeoSPARQL</a></h2>
 
 <p id="_6b6cc7f3-c950-083b-ab76-9a751cf86f79">GeoSPARQL is the most common geospatial extension of SPARQL. It was accepted as an OGC standard in 2012 and revised as GeoSPARQL 1.1 in 2024.</p>
 
 <p id="_1f12acf8-4eb3-a24b-bb82-7a53205a85b1">According to the standard document, “The OGC GeoSPARQL standard supports representing and querying geospatial data on the Semantic Web. GeoSPARQL defines a vocabulary for representing geospatial data in RDF, and it defines an extension to the SPARQL query language for processing geospatial data”.</p>
 
-<div id="_requirements_addressed"><h3 id="_d587bb0d-bfa0-41d2-8833-4d919bf7fec8"><a class="anchor" href="#_requirements_addressed"></a><a class="header" href="#_requirements_addressed">10.1.1.  Requirements addressed</a></h3>
+<div id="_requirements_addressed"><h3 id="_d83281b9-a02d-44e0-b706-9e74bcff64af"><a class="anchor" href="#_requirements_addressed"></a><a class="header" href="#_requirements_addressed">10.1.1.  Requirements addressed</a></h3>
 
-<p id="_80881d64-cbae-9080-11f4-5cf6c9332828">GeoSPARQL addresses the following requirements with regards to 3D.</p>
+<p id="_82cf6626-bbf9-f594-3406-7d7ffb9bd963">In order to define which capabilities GeoSPARQL needs to adopt for full 3D compatibility, we first take a look at GeoSPARQL 1.1 current capabilities with regards to 3D.</p>
+
+<div id="_vocabulary"><h4 id="_d7b6402f-0bb6-487d-84b0-6387015bf1d5"><a class="anchor" href="#_vocabulary"></a><a class="header" href="#_vocabulary">10.1.1.1.  Vocabulary</a></h4>
+
+<p id="_5cf52d26-df44-90f7-149e-9d748eae6b7c">GeoSPARQL 1.1 defines a class <tt>Geometry</tt> as a subclass of <tt>SpatialObject</tt>.</p>
+
+<p id="_43c82943-4ac0-3759-d72b-a97f33d671ce">An instance of <tt>Geometry</tt> is not restricted to two dimensions.</p>
+
+<p id="_9d5846ac-016c-5a84-1970-2be7a103753d">A fine-grained classification of <tt>Geometry</tt> can use the Simple Features Vocabulary (TODO: add link) which extends the class <tt>Geometry</tt> with further types, such as <i>Point</i>, <i>Polygon</i> etc.</p>
+
+<p id="_ec64e434-3d90-e073-e506-3a9457dd1093">The Simple Features vocabulary allows for the definition of 3D variants of:</p>
+
+<div class="ul_wrap"><ul id="_604b5004-21b4-a080-bcd6-1e3949939e46"><li><p id="_7372384b-3fb1-49bc-294c-964e43607c9b">(Multi)Points</p>
+</li>
+<li><p id="_0364dbe1-02f2-82d1-0ce7-4c885cfc151a">(Multi)LineStrings</p>
+</li>
+<li><p id="_525d519d-3bea-aff5-49ac-4b5e50024756">(Multi)Polygons</p>
+</li>
+</ul></div>
+
+<p id="_a384d1d8-baec-fe66-7b52-0aa99e6dae1c">It does not include commons 3D primitives, such as <i>Cube</i> or <i>Mesh</i> surfaces which are integral parts of 3D representations.</p>
+
+<p id="_2c249956-b329-9830-88ea-28f03a8e9968">Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts. In particular, the properties are:</p>
+
+<div class="ul_wrap"><ul id="_da0020a6-e901-8e68-bc8e-9281e98e8554"><li><p id="_6f7f74a4-9796-0501-a4c3-fa51b8003e01"><tt>geo:hasVolume</tt></p>
+</li>
+<li><p id="_39bb41bb-b559-5f4a-a391-be2dc018bfc0"><tt>geo:hasMetricVolume</tt></p>
+</li>
+</ul></div>
+
+<p id="_75b80c0e-1a29-9d46-682d-f851eb281b3e">Further 3D-related metadata properties such as projection matrices are not part of the current GeoSPARQL 1.1 standard.</p>
 </div>
 
-<div id="_adoption_of_geosparql_1_1"><h3 id="_2c1e12db-841b-422b-88c1-4f56bb836c6c"><a class="anchor" href="#_adoption_of_geosparql_1_1"></a><a class="header" href="#_adoption_of_geosparql_1_1">10.1.2.  Adoption of GeoSPARQL 1.1</a></h3>
+<div id="_geometry_relations"><h4 id="_95af8b56-2263-4287-9f61-72dd99bde802"><a class="anchor" href="#_geometry_relations"></a><a class="header" href="#_geometry_relations">10.1.1.2.  Geometry Relations</a></h4>
+
+<p id="_18280e5a-2fa4-f39b-809c-c6238cd60362">Relations between geometries have been defined using three different sets of rules:</p>
+
+<div class="ul_wrap"><ul id="_11c99b30-8170-a74b-296e-b7dd4498ec48"><li><p id="_30787c3b-6a51-5527-ac90-8af05fe78a95">Simple Features Relations</p>
+</li>
+<li><p id="_f0c60dd9-02d8-30cd-8e9d-581b91a3bea3">Egenhofer Relations</p>
+</li>
+<li><p id="_b340573d-8ce4-6289-0276-59b951b4d257">Region Connection Calculus RCC8</p>
+</li>
+</ul></div>
+
+<p id="_67b44314-ac61-d9f8-2f4c-c34c887cab56">All geometry relations are only defined for 2D geometries and do not take into account the third dimension.</p>
+</div>
+
+<div id="_literals"><h4 id="_4369bd5b-02fe-47b1-9f94-1ddaf196689d"><a class="anchor" href="#_literals"></a><a class="header" href="#_literals">10.1.1.3.  Literals</a></h4>
+
+<p id="_53b874e2-9a95-3c13-079d-2280caad0229">A first requirement for 3D support is the ability to save 3D data in a knowledge graph. GeoSPARQL 1.1 defines a variety of String literal formats, which are investigated for the storage of 3D data.</p>
+
+<p class="TableTitle" style="text-align:center;">Table 1</p><table id="_e534a4d1-8997-c896-7771-fd59c320936d" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Literal Type</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Z-Coordinate Supported</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2.5D</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">3D</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">WKT Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">GML Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Only with extension Schema</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">KML Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">As import from COLLADA</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">GeoJSON Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">DGGS Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td></tr></tbody></table>
+
+<p id="_b1ed3142-d561-5765-1b3f-6c4ce29cddbf">GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support. There are currently almost 300 coordinate reference systems in the database  <a href="https://epsg.io/?q=%20kind%3AGEOG3DCRS">epsg.io</a> which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.</p>
+</div>
+
+<div id="_query_functions_with_3d_support"><h4 id="_2e2f18c4-deb4-4ec3-9294-13c2d2968d77"><a class="anchor" href="#_query_functions_with_3d_support"></a><a class="header" href="#_query_functions_with_3d_support">10.1.1.4.  Query functions with 3D support</a></h4>
+
+<p id="_52dfc7aa-2161-b571-b81c-702c1f89ac16">GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. However, there are functions which may take into account the Z coordinate, if they are available.</p>
+
+<p class="TableTitle" style="text-align:center;">Table 2</p><table id="_f9e6e92f-6ee8-3915-43e2-f7c8588ece20" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">GeoSPARQL function</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Z-Coordinate Supported</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2.5D</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">3D</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">geof:is3D</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">geof:minZ</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">geof:maxZ</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table>
+
+<p id="_5ea32fb7-c742-bb0c-e1d7-b15f5db8fd47">These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.</p>
+</div>
+</div>
+
+<div id="_adoption_of_geosparql_1_1"><h3 id="_a10d9a73-acc0-4572-ba13-5f44d6d200eb"><a class="anchor" href="#_adoption_of_geosparql_1_1"></a><a class="header" href="#_adoption_of_geosparql_1_1">10.1.2.  Adoption of GeoSPARQL 1.1</a></h3>
 
 </div>
-</div></div><div id="_requirements_for_geosparql_3d"><h1 id="_317b399e-a8ae-48bf-803f-d8bae11064d0"><a class="anchor" href="#_requirements_for_geosparql_3d"></a><a class="header" href="#_requirements_for_geosparql_3d">11.  Requirements for GeoSPARQL 3D</a></h1><p id="_4744e5d2-89a2-9206-cd6e-d9e7ddf361e6">This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. This feedback helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.</p><div id="_feedback_from_industries"><h2 id="_7de5ea30-a427-4a79-9ede-b52688b031e1"><a class="anchor" href="#_feedback_from_industries"></a><a class="header" href="#_feedback_from_industries">11.1.  Feedback from Industries</a></h2>
+</div></div><div id="_requirements_for_geosparql_3d"><h1 id="_06613006-1148-4cc1-a546-0fd3b496cd76"><a class="anchor" href="#_requirements_for_geosparql_3d"></a><a class="header" href="#_requirements_for_geosparql_3d">11.  Requirements for GeoSPARQL 3D</a></h1><p id="_4744e5d2-89a2-9206-cd6e-d9e7ddf361e6">This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. This feedback helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.</p><div id="_feedback_from_industries"><h2 id="_be85effd-ae6d-4528-9686-e9ebd51b4715"><a class="anchor" href="#_feedback_from_industries"></a><a class="header" href="#_feedback_from_industries">11.1.  Feedback from Industries</a></h2>
 
 <p id="_0f60fbb5-817d-3144-9cab-3b206c2d1ba6">GeoSPARQL lacks some of the 3D functions that are common in popular geospatial databases. Some of those functions are required for professionals working in industries such as Architecture Engineering Construction and Operations (AECO) to complete their work tasks on a daily basis.</p>
-</div><div id="_proposed_extensions_for_geosparql_3d"><h2 id="_aa254b07-6a08-4c91-83c6-7d6de6df9dd1"><a class="anchor" href="#_proposed_extensions_for_geosparql_3d"></a><a class="header" href="#_proposed_extensions_for_geosparql_3d">11.2.  Proposed extensions for GeoSPARQL 3D</a></h2>
+</div><div id="_proposed_extensions_for_geosparql_3d"><h2 id="_b8c2b30d-2f4e-4df4-892a-3b0ba92da7e2"><a class="anchor" href="#_proposed_extensions_for_geosparql_3d"></a><a class="header" href="#_proposed_extensions_for_geosparql_3d">11.2.  Proposed extensions for GeoSPARQL 3D</a></h2>
 
-<div id="_extension_1_non_topological_query_functions_3d_extension"><h3 id="_69406d98-5e00-4434-8b11-13fd21b4cda5"><a class="anchor" href="#_extension_1_non_topological_query_functions_3d_extension"></a><a class="header" href="#_extension_1_non_topological_query_functions_3d_extension">11.2.1.  Extension 1: Non-topological Query Functions — 3D Extension</a></h3>
+<div id="_extension_1_non_topological_query_functions_3d_extension"><h3 id="_807aafdc-c90b-40d4-a7f1-923f618ee805"><a class="anchor" href="#_extension_1_non_topological_query_functions_3d_extension"></a><a class="header" href="#_extension_1_non_topological_query_functions_3d_extension">11.2.1.  Extension 1: Non-topological Query Functions — 3D Extension</a></h3>
 
-<div id="_github_issue_uri"><h4 id="_f6e485db-a3e8-4952-919a-1f766a815ee2"><a class="anchor" href="#_github_issue_uri"></a><a class="header" href="#_github_issue_uri">11.2.1.1.  GitHub Issue URI</a></h4>
+<div id="_github_issue_uri"><h4 id="_52e2635f-14be-4cd8-a099-48b8c4d8dc25"><a class="anchor" href="#_github_issue_uri"></a><a class="header" href="#_github_issue_uri">11.2.1.1.  GitHub Issue URI</a></h4>
 
 <div class="ul_wrap"><ul id="_c1f05165-3e83-3fc1-54e5-4c037c233dc1"><li><p id="_f8e21b25-3839-ac90-9681-ad7e43a0a24f"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/556">https://github.com/opengeospatial/ogc-geosparql/issues/556</a></p>
 </li>
 </ul></div>
 </div>
 
-<div id="_category"><h4 id="_98a18b42-a2df-4313-9489-941c80abf335"><a class="anchor" href="#_category"></a><a class="header" href="#_category">11.2.1.2.  Category</a></h4>
+<div id="_category"><h4 id="_7a3210c4-325a-44e9-b74e-7a75ec467e93"><a class="anchor" href="#_category"></a><a class="header" href="#_category">11.2.1.2.  Category</a></h4>
 
 <p id="_16809652-7b52-800e-0b33-f3c456039049">Semantic improvement</p>
 </div>
 
-<div id="_description"><h4 id="_9343539b-07ed-415a-8418-bceb2ea6d1c1"><a class="anchor" href="#_description"></a><a class="header" href="#_description">11.2.1.3.  Description</a></h4>
+<div id="_description"><h4 id="_0e5b27eb-bceb-4600-b836-ca9fc4879ba2"><a class="anchor" href="#_description"></a><a class="header" href="#_description">11.2.1.3.  Description</a></h4>
 
 <p id="_3debf93d-94a1-b893-b3df-a0988060fcdb">GeoSPARQL 3D should provide the opportunity to execute non-topological query functions on 2D and 3D geometries commonly used in geospatial databases. Proposed extensions include following functions:</p>
 
@@ -1760,7 +1840,7 @@ pre.sourcecode .nt {
 </ul></div>
 </div>
 </div>
-</div></div><div id="_annex_n_n"><h1 id="_1df66a96-873e-4259-a3f5-2762479caf23"><a class="anchor" href="#_annex_n_n"></a><a class="header" href="#_annex_n_n">12.  Annex N: N</a></h1></div><div id="_annex_o_history"><h1 id="_79167d08-d0e9-4bbb-94fb-519a53e48b30"><a class="anchor" href="#_annex_o_history"></a><a class="header" href="#_annex_o_history">13.  Annex O: History</a></h1></div><br /><div><h1 class="Section3" id="_f7780369-aab7-42e5-8a20-7e50e0784918">Bibliography</h1>
+</div></div><div id="_annex_n_n"><h1 id="_8bb32d0e-5325-44bd-ae65-b4df9f8f49c7"><a class="anchor" href="#_annex_n_n"></a><a class="header" href="#_annex_n_n">12.  Annex N: N</a></h1></div><div id="_annex_o_history"><h1 id="_d2fb2316-cce9-45a1-81aa-383fee589409"><a class="anchor" href="#_annex_o_history"></a><a class="header" href="#_annex_o_history">13.  Annex O: History</a></h1></div><br /><div><h1 class="Section3" id="_09b06089-9a8a-491c-aea7-b80b6bda40a0">Bibliography</h1>
 
 <div class="figdl"><dl id="_26eeb3d5-f3ac-8462-37a9-defa2b5dcbcc"><dt id="RDF"><p>RDF</p></dt><dd><p id="_016dde65-9ce7-9c41-cd92-71152e53a2e8">World Wide Web Consortium, <i>RDF 1.1 Concepts and Abstract Syntax</i>, W3C Recommendation (25 February 2014). <a href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a></p>
 </dd><dt id="TTL"><p>TTL</p></dt><dd><p id="_2663af4b-b570-e654-f912-02d744867127">World Wide Web Consortium, <i>RDF 1.1 Turtle Terse RDF Triple Language</i>, W3C Recommendation (25 February 2014). <a href="https://www.w3.org/TR/turtle">https://www.w3.org/TR/turtle</a></p>

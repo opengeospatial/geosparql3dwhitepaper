@@ -13,7 +13,7 @@ This White Paper appears online in developing form at:
 To be involved with this White Paper, please contact:
 
 * White Paper lead:
-** Rolf Jonkers - r.jonker@geonovum.nl
+** Rolf Jonker - r.jonker@geonovum.nl
 * GeoSemantics DWG Chairs:
 ** Joseph Abhayaratna - joseph.abhayaratna@geoscape.com.au
 ** Linda van den Brink - l.vandenbrink@geonovum.nl

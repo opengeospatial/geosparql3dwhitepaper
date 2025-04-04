@@ -159,3 +159,20 @@ Semantic improvement
 
 GeoSPARQL 3D should provide functions and properties that describe essential properties of a 3D Geometry such as its minimum and maximum height, width and depth and its CompactnessRatio.
 
+==== Extension {counter:ext}: Non-topological Query Functions - 3D Extension
+
+===== GitHub Issue URI
+
+- https://github.com/opengeospatial/ogc-geosparql/issues/556
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL 3D should provide the opportunity to execute non-topological query functions on 2D and 3D geometries commonly used in geospatial databases. Proposed extensions include following functions:
+
+- geometry extrusion to the specified line segment
+- geometry extrusion to the specified height
+- spatiotemporal geometry extrusion to the specified line segment with specific start and end time

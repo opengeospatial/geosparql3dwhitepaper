@@ -47,7 +47,8 @@ The relations should be expressable in property relations and should be queryabl
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/592
+- https://github.com/opengeospatial/ogc-geosparql/issues/584
+- https://github.com/opengeospatial/ogc-geosparql/issues/592
 
 ===== Category
 
@@ -81,7 +82,10 @@ For example, parts of a building could have different semantics according to the
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/591
+- https://github.com/opengeospatial/ogc-geosparql/issues/587
+- https://github.com/opengeospatial/ogc-geosparql/issues/588
+- https://github.com/opengeospatial/ogc-geosparql/issues/589
+- https://github.com/opengeospatial/ogc-geosparql/issues/591
 
 ===== Category
 

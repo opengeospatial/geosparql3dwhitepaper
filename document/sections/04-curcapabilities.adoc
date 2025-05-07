@@ -90,6 +90,7 @@ These functions check for the presence of Z coordinates or filter out maximum an
 | geof:asGML | st_asgml | st_asgml | asgml
 | geof:asKML | st_askml |  | askml
 | geof:asWKT |  | st_aswkt | aswkt
+| geof:asEWKB | st_asewkb |  | asewkb
 | geof:boundary | st_boundary | st_boundary | boundary
 | geof:boundingCircle |  | st_boundingcircle |
 | geof:buffer | st_buffer | st_buffer | buffer
@@ -112,8 +113,6 @@ These functions check for the presence of Z coordinates or filter out maximum an
 | geof:isEmpty | st_isempty | st_isempty | isempty
 | geof:isSimple | st_issimple | st_issimple | issimple
 | geof:length | st_length | st_length | length
-| geof:maxZ |  |  | maxz
-| geof:minZ |  |  | minz
 | geof:numGeometries | st_numgeometries | st_numgeometries | numgeometries
 | geof:numPoints | st_numpoints | st_numpoints | numpoints
 | geof:sfOverlaps | st_overlaps | st_overlaps | overlaps
@@ -124,6 +123,50 @@ These functions check for the presence of Z coordinates or filter out maximum an
 | geof:transform | st_transform | st_transform | transform
 | geof:union | st_union | st_union | gunion
 | geof:sfWithin | st_within | st_within | within
+| geof:endPoint | st_endpoint | st_endpoint | endpoint
+| geof:exteriorRing | st_exteriorring | st_exteriorring | exteriorring
+| geof:interiorRingN | st_interiorringn | st_interiorringn | interiorringn
+| geof:isRing | st_isring | st_isring | isring
+| geof:pointN | st_pointn | st_pointn | pointn
+| geof:startPoint | st_startpoint | st_startpoint | startpoint
+| geof:x | st_x | st_x | x
+| geof:maxX | st_xmax | st_xmax |
+| geof:minX | st_xmin | st_xmin |
+| geof:y | st_y | st_y | y
+| geof:maxY | st_ymax | st_ymax |
+| geof:minY | st_ymin | st_ymin |
+| geof:z | st_z | st_z | z
+| geof:maxZ | st_zmax | st_zmax | maxz
+| geof:minZ | st_zmin | st_zmin | minz
+| geof:m | st_m |  |
+| geof:asDGGS |  |  |
+| geof:ehContains |  |  |
+| geof:ehDisjoint |  |  |
+| geof:ehEquals |  |  |
+| geof:ehInside |  |  |
+| geof:ehMeet |  |  |
+| geof:ehOverlap |  |  |
+| geof:metricArea |  |  |
+| geof:metricBuffer |  |  |
+| geof:metricLength |  |  |
+| geof:metricPerimeter |  |  |
+| geof:rcc8dc |  |  |
+| geof:rcc8ec |  |  |
+| geof:rcc8eq |  |  |
+| geof:rcc8ntpp |  |  |
+| geof:rcc8ntppi |  |  |
+| geof:rcc8po |  |  |
+| geof:rcc8tpp |  |  |
+| geof:rcc8tppi |  |  |
+| geof:easting |  |  |
+| geof:northing |  |  |
+| geof:metricDistance |  |  |
+| geof:transformCRS84 |  |  |
+| geof:asGeocode |  |  |
+| geof:numInteriorRing |  |  |
+| geof:numPatches |  |  |
+| geof:patchN |  |  |
+| geof:isClosed |  |  |
 |  |  |  | 3ddistance
 |  | st_length3d | st_3dlength | 3dlength
 |  |  |  | 3dmaxdistance
@@ -142,8 +185,7 @@ These functions check for the presence of Z coordinates or filter out maximum an
 |  |  |  | addtemporarygeometrycolumn
 |  | st_asbinary | st_asbinary | asbinary
 |  |  |  | asencodedpolyline
-|  | st_asewkb |  | asewkb
-| geof:asEWKB | st_asewkt |  | asewkt
+|  | st_asewkt |  | asewkt
 |  |  |  | asfgf
 |  |  |  | asgpb
 |  |  |  | asin
@@ -286,7 +328,6 @@ These functions check for the presence of Z coordinates or filter out maximum an
 |  |  |  | enablepause
 |  |  |  | enabletinypoint
 |  |  |  | encodeurl
-|  | st_endpoint | st_endpoint | endpoint
 |  |  |  | ensureclosedrings
 |  |  | st_envelopesintersect | envelopesintersects
 |  |  |  | eval
@@ -298,7 +339,6 @@ These functions check for the presence of Z coordinates or filter out maximum an
 |  |  |  | exportkml
 |  |  |  | exportshp
 |  | st_extent | st_extent | extent
-|  | st_exteriorring | st_exteriorring | exteriorring
 |  |  |  | extractmultilinestring
 |  |  |  | extractmultipoint
 |  |  |  | extractmultipoint
@@ -437,7 +477,6 @@ These functions check for the presence of Z coordinates or filter out maximum an
 |  |  |  | inittopogeo
 |  |  |  | inittoponet
 |  |  |  | insertepsgsrid
-|  | st_interiorringn | st_interiorringn | interiorringn
 |  |  |  | international chain
 |  |  |  | international fathom
 |  |  |  | international foot
@@ -467,7 +506,6 @@ These functions check for the presence of Z coordinates or filter out maximum an
 |  |  |  | ispngblob
 |  |  |  | ispolygonccw
 |  |  |  | ispolygoncw
-|  | st_isring | st_isring | isring
 |  |  |  | istiffblob
 |  |  |  | istinypointblob
 |  |  |  | istinypointenabled
@@ -522,7 +560,6 @@ linestringfromwkb"
 |  |  |  | makevaliddiscarded
 |  | st_maxdistance | st_maxdistance | maxdistance
 |  |  |  | maxm
-|  |  |  | maxz
 |  |  |  | mbrcontains
 |  |  |  | mbrdisjoint
 |  |  |  | mbrequal
@@ -538,7 +575,6 @@ linestringfromwkb"
 |  |  |  | md5totalchecksum
 |  |  |  | millimeter
 |  |  |  | minm
-|  |  |  | minz
 |  |  |  | mlinefromtext
 |  |  |  | mlinefromwkb
 |  |  |  | modedgeheal
@@ -576,7 +612,6 @@ multipointfromwkb"
 |  |  |  | pi
 |  | st_pointfromtext | st_pointfromtext | pointfromtext
 |  | st_pointfromwkb | st_pointfromwkb | pointfromwkb
-|  | st_pointn | st_pointn | pointn
 |  | st_pointonsurface | st_pointonsurface | pointonsurface
 |  |  |  | polyfromtext
 |  |  |  | polyfromwkb
@@ -730,8 +765,6 @@ multipointfromwkb"
 |  | st_translate | st_translate | st_translate
 |  | st_wkbtosql |  | st_wkbtosql
 |  | st_wkttosql |  | st_wkttosql
-|  | st_startpoint | st_startpoint | startpoint
-|  |  |  | startpoint
 |  |  |  | stddev_pop
 |  |  |  | stddev_samp
 |  |  |  | storedproc_createtables
@@ -835,7 +868,6 @@ multipointfromwkb"
 |  |  |  | wms_unregistergetmap
 |  |  |  | wms_unregisterrefsys
 |  |  |  | wms_unregistersetting
-|  |  |  | x
 |  |  |  | xb_addfileid
 |  |  |  | xb_addparentid
 |  |  |  | xb_cacheflush
@@ -872,8 +904,6 @@ multipointfromwkb"
 |  |  |  | xb_setparentid
 |  |  |  | xb_storexml
 |  |  |  | xb_uncompress
-|  |  |  | y
-|  |  |  | z
 |  |  |  | zipfile_dbfn
 |  |  |  | zipfile_numdbf
 |  |  |  | zipfile_numshp
@@ -944,27 +974,18 @@ multipointfromwkb"
 |  |  | st_triangleslope |
 |  |  | st_updatez |
 |  |  | st_voronoi |
-|  |  | st_x |
-|  |  | st_xmax |
-|  |  | st_xmin |
-|  |  | st_y |
-|  |  | st_ymax |
-|  |  | st_ymin |
-|  |  | st_z |
-|  |  | st_zmax |
-|  |  | st_zmin |
 |  |  | st_zupdatelineextremities |
 |  | @ |  |
 |  | && |  |
 |  | &< |  |
-|  | &<| |  |
+|  | &<\| |  |
 |  | &> |  |
 |  | << |  |
-|  | <<| |  |
+|  | <<\| |  |
 |  | = |  |
 |  | >> |  |
-|  | |&> |  |
-|  | |>> |  |
+|  | \|&> |  |
+|  | \|>> |  |
 |  | ~ |  |
 |  | ~= |  |
 |  | box3d |  |
@@ -1005,7 +1026,6 @@ multipointfromwkb"
 |  | st_linetocurve |  |
 |  | st_locatebetweenelevations |  |
 |  | st_longestline |  |
-|  | st_m |  |
 |  | st_makebox2d |  |
 |  | st_makebox3d |  |
 |  | st_makeenvelope |  |
@@ -1023,14 +1043,5 @@ multipointfromwkb"
 |  | st_scale |  |
 |  | st_summary |  |
 |  | st_transscale |  |
-|  | st_x |  |
-|  | st_xmax |  |
-|  | st_xmin |  |
-|  | st_y |  |
-|  | st_ymax |  |
-|  | st_ymin |  |
-|  | st_z |  |
-|  | st_zmax |  |
 |  | st_zmflag |  |
-|  | st_zmin |  |
 |===

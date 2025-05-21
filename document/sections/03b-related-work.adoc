@@ -80,7 +80,7 @@ https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadat
 The CARARE metadata schema is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
 
 
-= IFC and BIM
+== IFC and BIM
 
 ==== Industry Foundation Classes (IFC) and BIM
 
@@ -130,25 +130,25 @@ The most successful use case on BIM data is **coordination and visualization** w
 - Are infra geometries (hor + ver alignment + cant, for positioning and sweeps) in scope?
 
 
-= Implementations
+== Implementations
 
-== CGAL &#8594; SFCGAL &#8594; PostGIS
+=== CGAL &#8594; SFCGAL &#8594; PostGIS
 
-== OpenCASCADE
+=== OpenCASCADE
 
-=== OpenCASCADE-inspired BRep ontology
+==== OpenCASCADE-inspired BRep ontology
 
 Perzylo, A., Somani, N., Rickert, M., & Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.
 
 https://ieeexplore.ieee.org/abstract/document/7353971
 
-=== Topologic
+==== Topologic
 
 Jabi, W., & Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.
 
 https://topologic.app/
 
-== BRep vs mesh/polyhedron
+=== BRep vs mesh/polyhedron
 
 BRep
 

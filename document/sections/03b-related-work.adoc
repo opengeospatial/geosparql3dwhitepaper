@@ -1,6 +1,7 @@
-This is still just a dump of resources. To be transformed into actual text.
 
-== CityGML
+This is still just a dump of resources. To be transformed into actual text.
+== Related Work
+=== CityGML
 
 
 https://www.mdpi.com/2220-9964/12/9/351
@@ -33,7 +34,7 @@ Semantic 3D City Database — An enabler for a dynamic geospatial knowledge grap
 Other details and history of Onto CityGML.
 
 
-== Medicine & Chemistry
+=== Medicine & Chemistry
 
 https://www.nature.com/articles/s41597-022-01562-5
 Standard metadata for 3D microscopy
@@ -53,7 +54,7 @@ A novel ontology for 3D semantics: ontology-based 3D model indexing and content-
 
 This paper presents the most comprehensive formally grounded 3D ontology to date that maps the entire XSD-based vocabulary of the industry standard X3D (ISO/IEC 19775-19777) to OWL 2, complemented by fundamental concepts and roles of the 3D modelling industry not covered by X3D.
 
-== To consider
+=== To consider
 
 https://link.springer.com/article/10.1007/s10845-023-02246-6
 Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
@@ -80,13 +81,13 @@ https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadat
 The CARARE metadata schema is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
 
 
-== IFC and BIM
+=== IFC and BIM
 
-==== Industry Foundation Classes (IFC) and BIM
+===== Industry Foundation Classes (IFC) and BIM
 
 BIM is a paradigm in which object‐model definitions - with machine‑interpretable semantics - are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC).
 
-===== Product model
+====== Product model
 
 In IFC, a construction work is decomposed into a set of products. These products can have **multiple representations**. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
 
@@ -96,7 +97,7 @@ In principle, the IFC schema has been designed in a modular fashion with indepen
 
 IFC also allows for **decomposition**, where a whole is aggregated into multiple parts for richer semantics. This allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.
 
-===== Evolving views on geometry
+====== Evolving views on geometry
 
 IFC is heavily influenced by the ISO 10303 (STEP) family of standards, but over time adopted its own geometric paradigms:
 
@@ -106,7 +107,7 @@ IFC is heavily influenced by the ISO 10303 (STEP) family of standards, but over 
 
 Especially the handling of **tolerances** means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. NB Tolerances stand in the way of using existing approaches for SFA geometry predicates such as PostGIS+SFCGAL which is based on arbitrary precision boolean logic as implemented in CGAL without tolerances.
 
-===== Use cases
+====== Use cases
 
 The most successful use case on BIM data is **coordination and visualization** where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software. 
 
@@ -118,7 +119,7 @@ The most successful use case on BIM data is **coordination and visualization** w
 
 **Simulations** on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in nieghbouring domaisn remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
 
-===== Implications and questions:
+====== Implications and questions:
 
 - Euclidean / non-euclidean; is a CRS required?
 - Separate representation+placement -> enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate in space
@@ -130,25 +131,25 @@ The most successful use case on BIM data is **coordination and visualization** w
 - Are infra geometries (hor + ver alignment + cant, for positioning and sweeps) in scope?
 
 
-== Implementations
+=== Implementations
 
-=== CGAL &#8594; SFCGAL &#8594; PostGIS
+==== CGAL &#8594; SFCGAL &#8594; PostGIS
 
-=== OpenCASCADE
+==== OpenCASCADE
 
-==== OpenCASCADE-inspired BRep ontology
+===== OpenCASCADE-inspired BRep ontology
 
 Perzylo, A., Somani, N., Rickert, M., & Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.
 
 https://ieeexplore.ieee.org/abstract/document/7353971
 
-==== Topologic
+===== Topologic
 
 Jabi, W., & Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.
 
 https://topologic.app/
 
-=== BRep vs mesh/polyhedron
+==== BRep vs mesh/polyhedron
 
 BRep
 

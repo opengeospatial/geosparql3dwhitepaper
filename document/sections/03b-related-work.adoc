@@ -1,0 +1,166 @@
+This is still just a dump of resources. To be transformed into actual text.
+
+== CityGML
+
+
+https://www.mdpi.com/2220-9964/12/9/351
+IFC-CityGML Data Integration for 3D Property Valuation
+
+This article describes what became known as Onto CityGML, so far the closest thing to GeoSPARQL3D.
+
+
+https://www.cambridge.org/core/journals/data-centric-engineering/article/semantic-3d-city-interfacesintelligent-interactions-on-dynamic-geospatial-knowledge-graphs/975E518C41DCDD8BD565012C9E2C8473
+Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs
+
+Knowledge graphs construction for 3D city data. Related the CityGML and Onto CityGML.
+
+
+https://link.springer.com/article/10.1007/s41064-020-00095-z
+CityGML 3.0: New Functions Open Up New Applications
+
+Looks like the Semantic Web is fully considered in CityGML 3.0. Possibly demanding aligments with GeoSPARQL3D. Question: what can GeoSPARQL add that is not yet in CityGML?
+
+
+https://lup.lub.lu.se/student-papers/search/publication/9169387
+Linked geodata: CityGML represented as a virtual knowledge graph
+
+More knowledge graphs constructed from CityGML.
+
+
+https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub
+Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph
+
+Other details and history of Onto CityGML.
+
+
+== Medicine & Chemistry
+
+https://www.nature.com/articles/s41597-022-01562-5
+Standard metadata for 3D microscopy
+
+The 3D Microscopy Metadata Standards (3D-MMS), developed by the BRAIN 3D Microscopy Working Group, help ensure that a 3D microscopy dataset is sufficiently described to support its’ re-use by scientists who did not generate the data. Adoption of 3D-MMS will aid investigators who want to share data, helping them to evaluate and decide which data can be combined. 
+https://doryworkspace.org/metadata
+
+
+https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083
+Ontology-Based Representation and Modelling of Synthetic 3D Content: A State-of-the-Art Review
+
+A range of approaches have been proposed to permit semantic representation and modelling of synthetic 3D content. These approaches differ in the methodologies and technologies used as well as their scope and application domains. This paper provides a review of the current state of the art in representation and modelling of 3D content based on semantic web ontologies, together with a classification, characterization and discussion of the particular approaches.
+
+
+https://www.inderscienceonline.com/doi/abs/10.1504/IJMSO.2017.087702
+A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain
+
+This paper presents the most comprehensive formally grounded 3D ontology to date that maps the entire XSD-based vocabulary of the industry standard X3D (ISO/IEC 19775-19777) to OWL 2, complemented by fundamental concepts and roles of the 3D modelling industry not covered by X3D.
+
+== To consider
+
+https://link.springer.com/article/10.1007/s10845-023-02246-6
+Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
+
+To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes & roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools. 
+
+
+STereoLithography (STL)
+http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file
+
+STL files describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations.
+
+
+Open standard for particle-mesh data (openPMD)
+https://github.com/openPMD/openPMD-standard
+
+The openPMD standard, short for open standard for particle-mesh data files is not a file format per se. It is guidance for meta data and naming schemes. openPMD provides naming and attribute conventions that allow to exchange particle and mesh based data from scientific simulations and experiments. The primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and differing algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If output from programs, devices (such as cameras), simulations or post-processed data-sets contain a minimal set of meta information as provided by openPMD, you can exchange data between those with minimal effort and you use the same tools for visualization.
+
+
+CARARE Metadata Schema
+https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadata-schema/
+
+
+The CARARE metadata schema is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
+
+
+= IFC and BIM
+
+==== Industry Foundation Classes (IFC) and BIM
+
+BIM is a paradigm in which object‐model definitions - with machine‑interpretable semantics - are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC).
+
+===== Product model
+
+In IFC, a construction work is decomposed into a set of products. These products can have **multiple representations**. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
+
+At the same time, such a product separates the **placement** (an hierarchical transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.
+
+In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, **semantics and geometry are intertwined** such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics.
+
+IFC also allows for **decomposition**, where a whole is aggregated into multiple parts for richer semantics. This allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.
+
+===== Evolving views on geometry
+
+IFC is heavily influenced by the ISO 10303 (STEP) family of standards, but over time adopted its own geometric paradigms:
+
+- Procedural geometry and boolean operations became less prominent with the adoption of ReferenceView in IFC4. Tessellated geometry definitions were added for more compact exchange.
+- **Infrastructure definitions** were added with precise mathematical transition curves and a composition of a horizontal, vertical and cant (inclination) profile.
+- IFC5 with an **explicit** (most likely triangulated) geometry schema at the core, with semantic overlays to encode the same procedural semantics as a non-mandatory or use-case specific layer. Heavily inspired by USD with layer-based composition for collaborative exchange.
+
+Especially the handling of **tolerances** means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. NB Tolerances stand in the way of using existing approaches for SFA geometry predicates such as PostGIS+SFCGAL which is based on arbitrary precision boolean logic as implemented in CGAL without tolerances.
+
+===== Use cases
+
+The most successful use case on BIM data is **coordination and visualization** where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software. 
+
+**Design to design** workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.
+
+**Long-term preservation** of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don't contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.
+
+**BIM-GIS integration** is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.
+
+**Simulations** on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in nieghbouring domaisn remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
+
+===== Implications and questions:
+
+- Euclidean / non-euclidean; is a CRS required?
+- Separate representation+placement -> enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate in space
+- Geometry as leaf-values or object-relational model : cannot encapsulate geometry into a single literal, but allows for richer semantics
+- BRep model (topology + geometry + orientation + location) vs polyhedral model (e.g halfedge) vs explicit loops of point coordinates
+- Procedural vs implicit (e.g constraints) vs explicit (polyhedra)
+- Tolerances
+- Decomposition inside or outside of the 'geometry ontology'
+- Are infra geometries (hor + ver alignment + cant, for positioning and sweeps) in scope?
+
+
+= Implementations
+
+== CGAL -> SFCGAL -> PostGIS
+
+== OpenCASCADE
+
+=== OpenCASCADE-inspired BRep ontology
+
+Perzylo, A., Somani, N., Rickert, M., & Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.
+
+https://ieeexplore.ieee.org/abstract/document/7353971
+
+=== Topologic
+
+Jabi, W., & Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.
+
+https://topologic.app/
+
+== BRep vs mesh/polyhedron
+
+BRep
+
+- Curved surfaces
+- Topology: connected components as shells, solids with inner voids, etc.
+- Clean APIs due to inheritance: e.g `fn extrude(Topo) -> Topo`, for vertex -> edge; edge -> face; face -> solid; solid -> solid
+- Extra indirections: edge -> vertex[] -> point
+- Depending on implementation can be inefficient, e.g outer wire of face not explicitly marked need to be checked wrt infinite point
+- Data integrity and validation a bit harder
+
+Mesh/polyhedron
+
+- Potentially fewer indirections
+- Triangle meshes robust and well understood
+- Many different data models though, e.g half-edge (only manifold), indexed faceset (no adjacency info), winged/quad/radial edge

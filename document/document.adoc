@@ -39,6 +39,8 @@ include::sections/02-preamble.adoc[]
 
 include::sections/03-introduction.adoc[]
 
+include::sections/03b-related-work.adoc[]
+
 include::sections/04-curcapabilities.adoc[]
 
 include::sections/05-geosparql3D.adoc[]

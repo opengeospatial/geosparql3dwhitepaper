@@ -8,12 +8,15 @@ This is still just a dump of resources. To be transformed into actual text.
 
 https://www.mdpi.com/2220-9964/12/9/351
 IFC-CityGML Data Integration for 3D Property Valuation
+<<ijgi12090351>>
 
 This article describes what became known as Onto CityGML, so far the closest thing to GeoSPARQL3D.
 
 
 https://www.cambridge.org/core/journals/data-centric-engineering/article/semantic-3d-city-interfacesintelligent-interactions-on-dynamic-geospatial-knowledge-graphs/975E518C41DCDD8BD565012C9E2C8473
 Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs
+<<chadzynski2023semantic>>
+
 
 Knowledge graphs construction for 3D city data. Related the CityGML and Onto CityGML.
 
@@ -21,17 +24,23 @@ Knowledge graphs construction for 3D city data. Related the CityGML and Onto Cit
 https://link.springer.com/article/10.1007/s41064-020-00095-z
 CityGML 3.0: New Functions Open Up New Applications
 
+<<kutzner2020citygml30>>
+
 Looks like the Semantic Web is fully considered in CityGML 3.0. Possibly demanding aligments with GeoSPARQL3D. Question: what can GeoSPARQL add that is not yet in CityGML?
 
 
 https://lup.lub.lu.se/student-papers/search/publication/9169387
 Linked geodata: CityGML represented as a virtual knowledge graph
 
+<<hansson2024citygml>>
+
 More knowledge graphs constructed from CityGML.
 
 
 https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub
 Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph
+
+<<CHADZYNSKI2021100106>>
 
 Other details and history of Onto CityGML.
 
@@ -41,12 +50,15 @@ Other details and history of Onto CityGML.
 https://www.nature.com/articles/s41597-022-01562-5
 Standard metadata for 3D microscopy
 
+<<ropelewski_standard_2022>>
+
 The 3D Microscopy Metadata Standards (3D-MMS), developed by the BRAIN 3D Microscopy Working Group, help ensure that a 3D microscopy dataset is sufficiently described to support its’ re-use by scientists who did not generate the data. Adoption of 3D-MMS will aid investigators who want to share data, helping them to evaluate and decide which data can be combined. 
 https://doryworkspace.org/metadata
 
 
 https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083
 Ontology-Based Representation and Modelling of Synthetic 3D Content: A State-of-the-Art Review
+<<flotynski2017ontology>>
 
 A range of approaches have been proposed to permit semantic representation and modelling of synthetic 3D content. These approaches differ in the methodologies and technologies used as well as their scope and application domains. This paper provides a review of the current state of the art in representation and modelling of 3D content based on semantic web ontologies, together with a classification, characterization and discussion of the particular approaches.
 
@@ -54,10 +66,13 @@ A range of approaches have been proposed to permit semantic representation and m
 https://www.inderscienceonline.com/doi/abs/10.1504/IJMSO.2017.087702
 A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain
 
+<<sikos2017novel>>
+
 This paper presents the most comprehensive formally grounded 3D ontology to date that maps the entire XSD-based vocabulary of the industry standard X3D (ISO/IEC 19775-19777) to OWL 2, complemented by fundamental concepts and roles of the 3D modelling industry not covered by X3D.
 
 === To consider
 
+<<yuchen2025ontology>>
 https://link.springer.com/article/10.1007/s10845-023-02246-6
 Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
 
@@ -144,6 +159,8 @@ The most successful use case on BIM data is **coordination and visualization** w
 Perzylo, A., Somani, N., Rickert, M., & Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.
 
 https://ieeexplore.ieee.org/abstract/document/7353971
+
+<<perzylo2015ontology>>
 
 ===== Topologic
 

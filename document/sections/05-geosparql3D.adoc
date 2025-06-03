@@ -33,6 +33,8 @@ Some common formats which could be considered for inclusion are:
 ===== GitHub Issue URI
 
 https://github.com/opengeospatial/ogc-geosparql/issues/416
+https://github.com/opengeospatial/ogc-geosparql/issues/578
+https://github.com/opengeospatial/ogc-geosparql/issues/577
 
 ===== Category
 
@@ -82,6 +84,10 @@ For example, parts of a building could have different semantics according to the
 ===== GitHub Issue URI
 
 https://github.com/opengeospatial/ogc-geosparql/issues/591
+https://github.com/opengeospatial/ogc-geosparql/issues/559
+https://github.com/opengeospatial/ogc-geosparql/issues/560
+https://github.com/opengeospatial/ogc-geosparql/issues/576
+https://github.com/opengeospatial/ogc-geosparql/issues/604
 
 ===== Category
 
@@ -91,7 +97,7 @@ Semantic improvement
 
 GeoSPARQL should include ways to position 3D geometries in a 3D space.
 Commonly 3D geometries are rotated, translated and scaled using commonly defined operators in computer graphics.
-Similar operations are needed for the relative positioning of 3D objects in GeoSPARQL, as properties and potentially as functions. 
+Similar operations are needed for the relative positioning of 3D objects in GeoSPARQL, as properties and potentially as functions. One type of functions, particularly useful in urban planning scenarios, is to change Z coordinates of a 3D geometry. Such operations allow for adjustments to models produced without accounting for elevation as well as better reuse of 3D models where only elevations are different. Flip X, Y coordinates function allows to reposition geometries in another dimension. More general transformations by matrix are also introduced.
 
 ==== Extension {counter:ext}: Alignments of GeoSPARQL 3D
 

@@ -1,4 +1,5 @@
 import bibtexparser
+from bibtexparser.bparser import BibTexParser
 
 with open("document/bibliography.bib", 'r') as file:
     bibcontent = file.read()

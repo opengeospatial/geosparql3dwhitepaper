@@ -10,6 +10,8 @@ for entry in bibtexlib.entries:
     founddoi=False
     thedoi=None
     for field in entry.fields:
+        print(field)
+        print(field.key)
         if field.key=="doi" or field.key=="DOI":
             thedoi=field.value
             foundoi=True

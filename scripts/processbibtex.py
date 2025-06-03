@@ -9,6 +9,7 @@ bibtexlib=parser.parse_string(bibcontent)
 bibstring=""
 for entry in bibtexlib.entries:
     print(entry.fields)
+    print(entry)
     if "doi" in entry.fields:
         bibstring+="* [[["+entry.key+", doi:"+entry.fields["doi"]+"]]]\n\n"
     elif "DOI" in entry.fields:

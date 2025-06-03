@@ -112,6 +112,24 @@ https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadat
 
 The CARARE metadata schema is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
 
+=== Cultural Heritage
+
+In the research domain of cultural heritage, 3D models of either cultural heritage artifacts (possibly georeferenced), 3D models of archaeological sites or simply 3D models of ancient buildings are becoming increasinly common.
+
+===== Use Cases
+
+Use Cases in the Cultural Heritage domain include but are not limited to the following main interests:
+
+**Visualization:** The visualization of 3D models for the presentation of such 3D models in for example a museum context. 3D models may be styled with a particular set of textures or modeled with a specific set of colours to highlight certain important aspects. The visualization of 3D models is currently standardized in the IIIF 3D working group, which targets to create viewing parameter descriptions that 3D viewers may implement, similar to the specifications of IIIF 2D for images.
+
+**Object Annotation:** 3D models are seen as the subject of a research question in absence of the original artifact for political, practical or other restrictive reasons. Out of all known methods of the representation of cultural heritage artifacts, 3D models provide the most detail when being delivered as a digital artifact and are therefore very often preferred in a research context.
+Researchers mark noteworthy aspects of the cultural artifact as 3D annotations which may include surface descriptions, volumes of the 3D model or 3D models which are created and placed adjacent to the to-be-annotated 3D model.
+
+**Relation of Objects:** Objects of a specific collections always exist in a spatio-temporal context. It is important to relate these representations via meaningful relations, so that relevant objects of a collection can be retrieved more easily
+
+**AI Applications in Cultural Heritage:**
+
+**Knowledge Graphs as Metadata descriptions:** With the advent of more 3D models being published, the relevance of their creation parameters, their contents and their object metadata increases for the usecases of filtering them and also for the possibly automated selection of suitable cultureal heritage metadata for e.g. machine learning classifications. Currently, many metadata standards fulfil parts of the description chain and a unified vocabulary to described data types seems to be missing.
 
 === IFC and BIM
 

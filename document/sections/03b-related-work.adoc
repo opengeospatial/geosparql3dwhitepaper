@@ -8,6 +8,7 @@ This is still just a dump of resources. To be transformed into actual text.
 
 https://www.mdpi.com/2220-9964/12/9/351
 IFC-CityGML Data Integration for 3D Property Valuation
+
 <<ijgi12090351>>
 
 This article describes what became known as Onto CityGML, so far the closest thing to GeoSPARQL3D.
@@ -15,6 +16,7 @@ This article describes what became known as Onto CityGML, so far the closest thi
 
 https://www.cambridge.org/core/journals/data-centric-engineering/article/semantic-3d-city-interfacesintelligent-interactions-on-dynamic-geospatial-knowledge-graphs/975E518C41DCDD8BD565012C9E2C8473
 Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs
+
 <<chadzynski2023semantic>>
 
 
@@ -58,6 +60,7 @@ https://doryworkspace.org/metadata
 
 https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083
 Ontology-Based Representation and Modelling of Synthetic 3D Content: A State-of-the-Art Review
+
 <<flotynski2017ontology>>
 
 A range of approaches have been proposed to permit semantic representation and modelling of synthetic 3D content. These approaches differ in the methodologies and technologies used as well as their scope and application domains. This paper provides a review of the current state of the art in representation and modelling of 3D content based on semantic web ontologies, together with a classification, characterization and discussion of the particular approaches.
@@ -72,9 +75,10 @@ This paper presents the most comprehensive formally grounded 3D ontology to date
 
 === To consider
 
-<<yuchen2025ontology>>
 https://link.springer.com/article/10.1007/s10845-023-02246-6
 Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
+
+<<yuchen2025ontology>>
 
 To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes & roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools. 
 
@@ -167,6 +171,8 @@ https://ieeexplore.ieee.org/abstract/document/7353971
 Jabi, W., & Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.
 
 https://topologic.app/
+
+<<jabi2021topologic>>
 
 ==== BRep vs mesh/polyhedron
 

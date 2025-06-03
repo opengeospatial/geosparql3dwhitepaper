@@ -14,6 +14,7 @@ for entry in bibtexlib.entries:
         print(field.key)
         if field.key=="doi" or field.key=="DOI":
             thedoi=field.value
+            print("THEDOI: "+str(thedoi))
             foundoi=True
     if founddoi:
         bibstring+="* [[["+entry.key+", doi:"+thedoi+"]]]\n\n"

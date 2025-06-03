@@ -123,11 +123,11 @@ Use Cases in the Cultural Heritage domain include but are not limited to the fol
 **Visualization:** The visualization of 3D models for the presentation of such 3D models in for example a museum context. 3D models may be styled with a particular set of textures or modeled with a specific set of colours to highlight certain important aspects. The visualization of 3D models is currently standardized in the IIIF 3D working group <<Haynes2023iiif3d>>, which targets to create viewing parameter descriptions that 3D viewers may implement, similar to the specifications of IIIF 2D for images.
 
 **Object Annotation:** 3D models are seen as the subject of a research question in absence of the original artifact for political, practical or other restrictive reasons. Out of all known methods of the representation of cultural heritage artifacts, 3D models provide the most detail when being delivered as a digital artifact and are therefore very often preferred in a research context.
-Researchers mark noteworthy aspects of the cultural artifact as 3D annotations which may include surface descriptions, volumes of the 3D model or 3D models which are created and placed adjacent to the to-be-annotated 3D model <<mara2024annotation>>.
+Researchers mark noteworthy aspects of the cultural artifact as 3D annotations <<bestpractices3d>> which may include surface descriptions, volumes of the 3D model or 3D models which are created and placed adjacent to the to-be-annotated 3D model <<mara2024annotation>>.
 
 **Relation of Objects:** Objects of a specific collections always exist in a spatio-temporal context. It is important to relate these representations via meaningful relations, so that relevant objects of a collection can be retrieved more easily
 
-**AI Applications in Cultural Heritage:**
+**AI Applications in Cultural Heritage:** Usage for annotated areas on 3D models or their derivations for machine learning classifications <<Stotzner_2023_ICCV>> <<10.2312:gch.20231157>>
 
 **Knowledge Graphs as Metadata descriptions:** With the advent of more 3D models being published, the relevance of their creation parameters <<homburgheritagescience2021>>, their contents and their object metadata increases for the usecases of filtering them and also for the possibly automated selection of suitable cultural heritage metadata for e.g. machine learning classifications. Currently, many metadata standards fulfil parts of the description chain and a unified vocabulary to described data types seems to be missing.
 
@@ -141,7 +141,11 @@ Cuneiform tablets from ancient Iran provide an interesting research area, since 
 The creation of 3D models of cuneiform tablets provides the best accessibility to the specificities of the original artifact in its absence and 3D scans have been used by computer scientists as the basis for certain machine learning application tasks, even though to this day only as a provision for 2D renderings of their surfaces.
 Interests of the research community include the description of interesting features such as cuneiform signs on cuneiform tablet surfaces and their connection to other text contents or other cuneiform artifacts.
 
-To describe cuneifo
+To describe 3D meshes, several vocabularies have been developed in the context of the cuneiform studies project:
+
+* https://situx.github.io/mesh-sparql/[MeshSPARQL]: A vocabulary to describe essential mesh elements
+* https://www.gigamesh.eu/ont/[Gigamesh Metadata Vocabulary]: A vocabulary which describes metadata of a 3D model. The metadata can be generated using the Gigamesh Software Framework
+* https://mainzed.pages.gitlab.rlp.net/homepages/mainzedmetadata/[3DCAP Vocabularies]: An ontology model to describe the creation of a 3D model. It has been applied to different scanning softwares
 
 === IFC and BIM
 

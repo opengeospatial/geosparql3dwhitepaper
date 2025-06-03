@@ -17,7 +17,8 @@ figure, figcaption, footer, header, hgroup,
 menu, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,7 +34,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -48,7 +50,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 html, body, div, span, applet, object, iframe,
 p, blockquote,
@@ -63,90 +66,115 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-family: "Overpass",sans-serif; }
+  font-family: "Overpass",sans-serif;
+}
 
 code, pre, tt, kbd, samp {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 code *, pre *, tt *, kbd *, samp * {
   font-family: "Space Mono",monospace !important;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 p code, dt code, li code, label code, legend code, caption code, th code, td code,
 p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
 p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
 p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 sub, sup {
-  font-size: 0.75em; }
+  font-size: 0.75em;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Overpass",sans-serif; }
+  font-family: "Overpass",sans-serif;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Overpass",sans-serif; }
+  font-family: "Overpass",sans-serif;
+}
 
 blockquote, q {
-  quotes: none; }
-  blockquote::before, blockquote::after, q::before, q::after {
-    content: '';
-    content: none; }
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
 
 .h2Annex {
-  font-family: "Overpass",sans-serif; }
+  font-family: "Overpass",sans-serif;
+}
 
 dl {
   display: grid;
-  grid-template-columns: max-content auto; }
-  dl dt p, dl dd p {
-    margin-top: 0; }
-  dl dt {
-    grid-column-start: 1; }
-  dl dd {
-    grid-column-start: 2; }
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
 
 b, strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 div.document-stage-band, div.document-type-band {
-  background-color: #333333; }
+  background-color: #333333;
+}
 
 a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef + a.TableFootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef, span.TableFootnoteRef,
 a.FootnoteRef, span.FootnoteRef {
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .addition {
-  color: blue; }
+  color: blue;
+}
 
 .deletion {
   color: red;
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 ruby {
   ruby-position: over;
-  -webkit-ruby-position: before; }
+  -webkit-ruby-position: before;
+}
 
 ruby ruby {
   ruby-position: under;
-  -webkit-ruby-position: after; }
+  -webkit-ruby-position: after;
+}
 
 /* code highlighting with line numbers */
 table.rouge-line-table td.rouge-gutter {
@@ -154,13 +182,15 @@ table.rouge-line-table td.rouge-gutter {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  padding-right: 1em; }
+  padding-right: 1em;
+}
 
 table.rouge-line-table td.rouge-code {
   -moz-user-select: all;
   -ms-user-select: all;
   -webkit-user-select: all;
-  user-select: all; }
+  user-select: all;
+}
 
 table.rouge-line-table,
 table.rouge-line-table th,
@@ -169,27 +199,32 @@ table.rouge-line-table td {
   border: none;
   margin: 0;
   padding: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 table.rouge-line-table pre {
   margin: 0;
   padding: 0;
   overflow-x: visible;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 /* header § links */
 a.header {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a.header:hover {
   color: #a53221 !important;
   background: inherit;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 a.header:visited {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a.anchor {
   position: absolute;
@@ -200,18 +235,21 @@ a.anchor {
   text-decoration: none !important;
   visibility: hidden;
   text-align: center;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 a.anchor::before {
-  content: "\00A7";
-  font-size: .85em;
+  content: "§";
+  font-size: 0.85em;
   display: block;
-  padding-top: .1em; }
+  padding-top: 0.1em;
+}
 
 a.anchor:hover {
   color: #a53221;
   background: inherit;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 h1 > a.anchor:hover,
 h2 > a.anchor:hover,
@@ -227,13 +265,15 @@ h4:hover > a.anchor,
 h5:hover > a.anchor,
 h6:hover > a.anchor,
 .inline-header:hover > a.anchor {
-  visibility: visible; }
+  visibility: visible;
+}
 
 /* collapsible snippets: collapsible before hidable */
 .hidable {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out; }
+  transition: max-height 0.2s ease-out;
+}
 
 .collapsible {
   background-color: #777;
@@ -245,386 +285,386 @@ h6:hover > a.anchor,
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px; }
+  font-size: 15px;
+}
 
 .active, .collapsible:hover {
-  background-color: #555; }
+  background-color: #555;
+}
 
 .collapsible:after {
-  content: '\25bc';
+  content: "▼";
   color: white;
   font-weight: bold;
   float: right;
   margin-left: 12px;
-  margin-right: 12px; }
+  margin-right: 12px;
+}
 
 .active:after {
-  content: "\25b2"; }
+  content: "▲";
+}
 
 /* collapsible: */
 .collapsible + .hidable {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .collapsible:not(.active) + .hidable {
   overflow: hidden;
-  padding: 0; }
+  padding: 0;
+}
+
+svg {
+  width: 100%;
+  overflow: visible;
+}
 
 #standard-band {
-  background-color: #3D9970; }
+  background-color: #0AC442;
+}
 
 #standard {
-  border-bottom: solid 3px #3D9970; }
+  border-bottom: solid 3px #0AC442;
+}
 
-#draft-standard-band {
-  background-color: #3D9970; }
+#directive-band {
+  background-color: #540D6E;
+}
 
-#draft-standard {
-  border-bottom: solid 3px #3D9970; }
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
 
-#abstract-specification-topic-band {
-  background-color: #3D9970; }
+#guide-band {
+  background-color: #D183C9;
+}
 
-#abstract-specification-topic {
-  border-bottom: solid 3px #3D9970; }
+#guide {
+  border-bottom: solid 3px #D183C9;
+}
 
-#reference-model-band {
-  background-color: #3D9970; }
+#specification-band {
+  background-color: #65AFFF;
+}
 
-#reference-model {
-  border-bottom: solid 3px #3D9970; }
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
 
-#best-practice-band {
-  background-color: #39CCCC; }
+#report-band {
+  background-color: #3A405A;
+}
 
-#best-practice {
-  border-bottom: solid 3px #39CCCC; }
+#report {
+  border-bottom: solid 3px #3A405A;
+}
 
-#discussion-paper-band {
-  background-color: #39CCCC; }
+#amendment-band {
+  background-color: #F26430;
+}
 
-#discussion-paper {
-  border-bottom: solid 3px #39CCCC; }
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
 
-#white-paper-band {
-  background-color: #39CCCC; }
+#corrigendum-band {
+  background-color: #C84630;
+}
 
-#white-paper {
-  border-bottom: solid 3px #39CCCC; }
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
 
-#technical-paper-band {
-  background-color: #39CCCC; }
+#administrative-band {
+  background-color: #BFAE48;
+}
 
-#technical-paper {
-  border-bottom: solid 3px #39CCCC; }
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
 
-#engineering-report-band {
-  background-color: #39CCCC; }
+#advisory-band {
+  background-color: #BD9391;
+}
 
-#engineering-report {
-  border-bottom: solid 3px #39CCCC; }
-
-#release-notes-band {
-  background-color: #FFDC00; }
-
-#release-notes {
-  border-bottom: solid 3px #FFDC00; }
-
-#user-guide-band {
-  background-color: #FFDC00; }
-
-#user-guide {
-  border-bottom: solid 3px #FFDC00; }
-
-#community-practice-band {
-  background-color: #FF851B; }
-
-#community-practice {
-  border-bottom: solid 3px #FF851B; }
-
-#community-standard-band {
-  background-color: #FF851B; }
-
-#community-standard {
-  border-bottom: solid 3px #FF851B; }
-
-#other-band {
-  background-color: #0074D9; }
-
-#other {
-  border-bottom: solid 3px #0074D9; }
-
-#policy-band {
-  background-color: #0074D9; }
-
-#policy {
-  border-bottom: solid 3px #0074D9; }
-
-#change-request-supporting-document-band {
-  background-color: #0074D9; }
-
-#change-request-supporting-document {
-  border-bottom: solid 3px #0074D9; }
-
-#test-suite-band {
-  background-color: #001F3F; }
-
-#test-suite {
-  border-bottom: solid 3px #001F3F; }
-
-#candidate-band {
-  background-color: #8B9EB7; }
-
-#candidate {
-  border-bottom: solid 3px #8B9EB7; }
-
-#working-draft-band {
-  background-color: #8B9EB7; }
-
-#working-draft {
-  border-bottom: solid 3px #8B9EB7; }
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
 
 #proposal-band {
-  background-color: #8B9EB7; }
+  background-color: #39A0ED;
+}
 
 #proposal {
-  border-bottom: solid 3px #8B9EB7; }
+  border-bottom: solid 3px #39A0ED;
+}
 
-#oab-review-band {
-  background-color: #8B9EB7; }
+#working-draft-band {
+  background-color: #2D7393;
+}
 
-#oab-review {
-  border-bottom: solid 3px #8B9EB7; }
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
 
 #committee-draft-band {
-  background-color: #8B9EB7; }
+  background-color: #2A6B7C;
+}
 
 #committee-draft {
-  border-bottom: solid 3px #8B9EB7; }
+  border-bottom: solid 3px #2A6B7C;
+}
 
-#swg-draft-band {
-  background-color: #8B9EB7; }
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
 
-#swg-draft {
-  border-bottom: solid 3px #8B9EB7; }
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
 
-#public-rfc-band {
-  background-color: #48a0e7; }
+#final-draft-band {
+  background-color: #53C170;
+}
 
-#public-rfc {
-  border-bottom: solid 3px #48a0e7; }
-
-#tc-vote-band {
-  background-color: #fd06fd; }
-
-#tc-vote {
-  border-bottom: solid 3px #fd06fd; }
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
 
 #published-band {
-  background-color: #9abd48; }
+  background-color: #069E2D;
+}
 
 #published {
-  border-bottom: solid 3px #9abd48; }
+  border-bottom: solid 3px #069E2D;
+}
 
-#deprecated-band {
-  background-color: #7e0d13; }
+#withdrawn-band {
+  background-color: #004E64;
+}
 
-#deprecated {
-  border-bottom: solid 3px #7e0d13; }
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
 
-#retired-band {
-  background-color: #7e0d13; }
+#cancelled-band {
+  background-color: #2E382E;
+}
 
-#retired {
-  border-bottom: solid 3px #7e0d13; }
-
-#legacy-band {
-  background-color: #7e0d13; }
-
-#legacy {
-  border-bottom: solid 3px #7e0d13; }
-
-#rescinded-band {
-  background-color: #7e0d13; }
-
-#rescinded {
-  border-bottom: solid 3px #7e0d13; }
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
 
 .coverpage-maturity, .coverpage-stage {
   font-family: "Overpass",sans-serif;
   font-weight: 400;
   font-size: 1.3em;
   margin: 0 0 2em 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .icon-svg {
   width: 100%;
-  color: #5ecf86; }
+  color: #5ecf86;
+}
 
 .wrapper-top {
-  background: #00335b;
-  background: linear-gradient(130deg, #00335b 45%, #f1f8ff 100%);
+  background: rgb(0, 51, 91);
+  background: linear-gradient(130deg, rgb(0, 51, 91) 45%, rgb(241, 248, 255) 100%);
   color: #ffffff;
   padding: 5em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .wrapper-top-bottom {
   width: 0;
   height: 0;
   border-top: 100px solid #00335b;
   border-right: 100px solid transparent;
-  position: absolute; }
+  position: absolute;
+}
 
 .document-type-band {
-  top: 260px; }
+  top: 260px;
+}
 
 .document-stage-band > :first-child {
-  height: 240px; }
+  height: 240px;
+}
 
 .coverpage-metadata {
   margin-top: 35px;
   padding-top: 15px;
   margin-right: 25px;
-  border-top: solid 1px white; }
+  border-top: solid 1px white;
+}
 
 .coverpage-metadata,
 .coverpage-alt-formats {
   font-size: 12px;
   font-family: "Overpass",sans-serif;
   margin-left: 1em;
-  text-align: left; }
-  .coverpage-metadata span,
-  .coverpage-alt-formats span {
-    display: block;
-    text-align: left; }
-    .coverpage-metadata span a,
-    .coverpage-alt-formats span a {
-      color: white; }
-      .coverpage-metadata span a:hover,
-      .coverpage-alt-formats span a:hover {
-        text-decoration: underline;
-        background: none;
-        box-shadow: none !important;
-        font-weight: 400; }
-  .coverpage-metadata .value,
-  .coverpage-alt-formats .value {
-    font-size: 15px;
-    margin-bottom: 15px; }
-  .coverpage-metadata .label,
-  .coverpage-alt-formats .label {
-    font-size: 12px;
-    padding: 0; }
+  text-align: left;
+}
+.coverpage-metadata span,
+.coverpage-alt-formats span {
+  display: block;
+  text-align: left;
+}
+.coverpage-metadata span a,
+.coverpage-alt-formats span a {
+  color: white;
+}
+.coverpage-metadata span a:hover,
+.coverpage-alt-formats span a:hover {
+  text-decoration: underline;
+  background: none;
+  box-shadow: none !important;
+  font-weight: 400;
+}
+.coverpage-metadata .value,
+.coverpage-alt-formats .value {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.coverpage-metadata .label,
+.coverpage-alt-formats .label {
+  font-size: 12px;
+  padding: 0;
+}
 
 .coverpage-alt-formats span {
   display: inline;
-  text-align: left; }
-  .coverpage-alt-formats span a {
-    padding-right: 5px; }
+  text-align: left;
+}
+.coverpage-alt-formats span a {
+  padding-right: 5px;
+}
 
 .coverpage-title {
   padding-bottom: 0.5em;
   font-family: "Overpass",sans-serif;
   font-weight: 100;
   padding-left: 1em;
-  padding-right: 1em; }
-  .coverpage-title span {
-    font-family: "Overpass",sans-serif;
-    font-size: 1.8em;
-    line-height: 1; }
+  padding-right: 1em;
+}
+.coverpage-title span {
+  font-family: "Overpass",sans-serif;
+  font-size: 1.8em;
+  line-height: 1;
+}
 
 .docstage-box table {
-  width: auto; }
-
+  width: auto;
+}
 .docstage-box th {
-  background-color: #93c0d6; }
-
+  background-color: #93c0d6;
+}
 .docstage-box td {
   vertical-align: top;
   background-color: #daeef3;
   padding: 0.5em;
-  border: 0; }
-
+  border: 0;
+}
 .docstage-box th:first-child {
-  border-radius: 1em 0 0 0; }
-
+  border-radius: 1em 0 0 0;
+}
 .docstage-box th:last-child {
-  border-radius: 0 1em 0 0; }
-
+  border-radius: 0 1em 0 0;
+}
 .docstage-box tr:first-child {
-  border-radius: 0 0 0 1em; }
-
+  border-radius: 0 0 0 1em;
+}
 .docstage-box tr:last-child {
-  border-radius: 0 1em 0 0; }
-
+  border-radius: 0 1em 0 0;
+}
 .docstage-box tr:last-child > td:first-child {
-  border-radius: 0 0 0 1em; }
-
+  border-radius: 0 0 0 1em;
+}
 .docstage-box tr:last-child > td:last-child {
-  border-radius: 0 0 1em 0; }
+  border-radius: 0 0 1em 0;
+}
 
 .WordSection11 {
-  padding: 0 2em 0 3em; }
+  padding: 0 2em 0 3em;
+}
 
 .info-section {
-  padding: 0 2em 0 5em; }
+  padding: 0 2em 0 5em;
+}
 
 .prefatory-section {
-  padding: 0 3em 0 6em; }
+  padding: 0 3em 0 6em;
+}
 
 .zzSTDTitle1, .MsoCommentText {
-  display: none; }
+  display: none;
+}
 
 .coverpage {
   text-align: center;
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+}
 
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: "Overpass",sans-serif;
   text-transform: none;
   font-weight: 300;
-  margin-left: 1em; }
+  margin-left: 1em;
+}
 
 .coverpage-logo img {
   width: 500px;
-  height: auto; }
+  height: auto;
+}
 
 .coverpage-tc-name {
   font-size: 1.2em;
   line-height: 1.2em;
-  margin: 0.25em 0; }
+  margin: 0.25em 0;
+}
 
 .copyright {
   padding: 1em;
   font-size: 0.9em;
-  text-align: left; }
+  text-align: left;
+}
 
 /* Document Identity */
 .coverpage-doc-identity {
   font-size: 2em;
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .coverpage-title .title-second {
-  display: none; }
+  display: none;
+}
 
 .coverpage-stage-block {
   font-family: "Overpass",sans-serif;
   font-weight: 600;
   font-size: 1.25em;
   margin: 2em 0em 2em 0em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .authors {
-  margin-top: 2em; }
-  .authors span {
-    display: block;
-    line-height: 2; }
-  .authors span.roletag {
-    display: inline-block;
-    font-size: 12px;
-    color: #00335b;
-    background-color: white;
-    padding: 2px 5px;
-    margin-left: 7px;
-    border-radius: 5px; }
+  margin-top: 2em;
+}
+.authors span {
+  display: block;
+  line-height: 2;
+}
+.authors span.roletag {
+  display: inline-block;
+  font-size: 12px;
+  color: #00335b;
+  background-color: white;
+  padding: 2px 5px;
+  margin-left: 7px;
+  border-radius: 5px;
+}
 
 /* Draft Warning */
 .coverpage-warning {
@@ -633,37 +673,46 @@ h6:hover > a.anchor,
   margin: 1em 2em;
   color: #2e81c2;
   padding: 2em 1em 1em 1em;
-  border-radius: 25px; }
-  .coverpage-warning h1 {
-    font-family: "Overpass",sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 1.2em; }
+  border-radius: 25px;
+}
+.coverpage-warning h1 {
+  font-family: "Overpass",sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
 
 @media print {
   .document-info, .copyright {
-    page-break-before: always; }
+    page-break-before: always;
+  }
   .coverpage {
-    height: 23cm; }
+    height: 23cm;
+  }
   .info-section {
-    display: none; }
+    display: none;
+  }
   .wrapper-top {
     top: 0;
     padding-top: 4cm;
-    padding-bottom: 4cm; }
+    padding-bottom: 4cm;
+  }
   .wrapper-top-bottom {
     margin-top: -5px;
-    display: none; } }
-
+    display: none;
+  }
+}
 /* For Requirement Test anchors */
 p.RecommendationTitle:hover > a.anchor,
 p.RecommendationTitle > a.anchor:hover,
 p.RecommendationTestTitle:hover > a.anchor,
 p.RecommendationTestTitle > a.anchor:hover {
-  visibility: visible; }
+  visibility: visible;
+}
 
 table a.anchor {
-  margin-left: -2em; }
+  margin-left: -2em;
+}
 
 body {
   margin-left: auto;
@@ -673,82 +722,100 @@ body {
   font-weight: 300;
   line-height: 1.5;
   color: #00335b;
-  background-color: #f6f8fa; }
-  body main {
-    margin: 0 3em 0 6em; }
-  @media screen and (min-width: 768px) {
-    body {
-      padding-left: 360px; } }
-  @media print {
-    body {
-      padding-left: 0; } }
+  background-color: #f6f8fa;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-left: 360px;
+  }
+}
+@media print {
+  body {
+    padding-left: 0;
+  }
+}
+
 dl {
-  grid-template-columns: minmax(0, 1fr) 93%; }
-  dl pre {
-    overflow-x: scroll; }
+  grid-template-columns: minmax(0, 1fr) 93%;
+}
+dl pre {
+  overflow-x: scroll;
+}
 
 #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
   margin: 0;
   padding: 0;
-  list-style: none; }
-  #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
-    padding: 5px 10px; }
-  #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
-    color: #00335b;
-    text-decoration: none;
-    display: block; }
-    #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-      box-shadow: none;
-      color: white; }
-
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #00335b;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
 #toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
-  padding-left: 30px; }
-
+  padding-left: 30px;
+}
 #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
-  padding-left: 50px; }
-
+  padding-left: 50px;
+}
 #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
-  padding-left: 70px; }
-
+  padding-left: 70px;
+}
 #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
-  padding-left: 90px; }
-
+  padding-left: 90px;
+}
 #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
-  padding-left: 110px; }
-
+  padding-left: 110px;
+}
 #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
   background: #00335b;
-  box-shadow: inset -5px 0px 10px -5px #00335b !important; }
-  #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-    color: white; }
-
+  box-shadow: inset -5px 0px 10px -5px #00335b !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+}
 @media print {
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
     background: white;
-    box-shadow: none !important; }
+    box-shadow: none !important;
+  }
   #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-    color: #00335b; }
+    color: #00335b;
+  }
   #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-    color: black; } }
-
+    color: black;
+  }
+}
 #toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
-  font-size: 14px; }
-
+  font-size: 14px;
+}
 #toc li::before, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li::before {
   content: " ";
-  display: none; }
-
+  display: none;
+}
 #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-  font-weight: 600; }
-
+  font-weight: 600;
+}
 #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
   background: none;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -760,8 +827,9 @@ dl {
     font-size: 0.9em;
     overflow: auto;
     padding: 0 0 0 30px;
-    background-color: #f1f8ff; } }
-
+    background-color: #f1f8ff;
+  }
+}
 @media print {
   nav {
     position: relative;
@@ -770,11 +838,14 @@ dl {
     overflow: auto;
     padding: 0;
     margin-right: 0;
-    background-color: white; } }
-
+    background-color: white;
+  }
+}
 @media screen and (min-width: 768px) {
   nav {
-    margin-right: 30px; } }
+    margin-right: 30px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -784,62 +855,78 @@ dl {
     background-color: #00335b;
     color: white !important;
     cursor: pointer;
-    z-index: 100; }
-    #toggle span {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%); } }
-
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 768px) {
   #toggle {
-    display: none; } }
-
+    display: none;
+  }
+}
 @media print {
   #toggle {
-    display: none; } }
+    display: none;
+  }
+}
 
 .rule {
   width: 100%;
   height: 1px;
   background-color: #00335b;
-  margin: 2em 0; }
-  @media screen and (min-width: 768px) {
-    .rule.toc {
-      display: none; } }
+  margin: 2em 0;
+}
+@media screen and (min-width: 768px) {
+  .rule.toc {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   h1.toc-contents {
-    margin-top: 1em; }
+    margin-top: 1em;
+  }
   ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
     padding: 0;
-    margin: 0; } }
-
+    margin: 0;
+  }
+}
 #toc-list ul {
-  margin-bottom: 0.25em; }
-
+  margin-bottom: 0.25em;
+}
 #toc-list li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 .figure {
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  .figure .FigureTitle, .figure .figure-title {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
-  .figure > img, .figure > svg {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
-    height: auto; }
+  overflow: auto;
+}
+.figure .FigureTitle, .figure .figure-title {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+.figure > img, .figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 table div.figure {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 .document-stage-band {
   left: 0;
@@ -848,110 +935,133 @@ table div.figure {
   position: fixed;
   display: block;
   z-index: 101;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-  .document-stage-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 300;
-    height: 160px;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-stage-band {
-      display: none; } }
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
+.document-stage-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 300;
+  height: 160px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
 .document-type-band {
   left: 0;
   top: 180px;
   height: 100%;
   position: fixed;
   display: block;
-  z-index: 102; }
-  .document-type-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-type-band {
-      display: none; } }
-  .document-type-band .document-type {
-    top: 20px; }
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
 
 #governance-band p.document-type {
   font-weight: 400;
-  height: 230px !important; }
+  height: 230px !important;
+}
 
 #standard-band p {
-  height: 135px; }
+  height: 135px;
+}
 
 #proposal-band p {
-  height: 150px; }
+  height: 150px;
+}
 
 #standard-band,
 #published-band {
-  color: #7ba812; }
+  color: rgb(123, 168, 18);
+}
 
 #standard,
 #published {
-  color: #9ABD48; }
+  color: #9ABD48;
+}
 
 p {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #00335b;
   font-weight: 400;
   margin-top: 1.6em;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.3em;
+}
 
 h1, .h1 {
   font-size: 1.8em;
   text-transform: uppercase;
-  margin-top: 2em; }
-  h1 #content, .h1 #content {
-    margin-top: 2em; }
+  margin-top: 2em;
+}
+h1 #content, .h1 #content {
+  margin-top: 2em;
+}
 
 h2, .h2 {
   margin-top: 1.3em;
   font-size: 1.7em;
-  font-weight: 300; }
-  h2 p, .h2 p {
-    display: inline; }
+  font-weight: 300;
+}
+h2 p, .h2 p {
+  display: inline;
+}
 
 h3, .h3 {
   margin-top: 1.3em;
   font-size: 1.5em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 h4, .h4 {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+}
 
 .contact-info {
   padding: 2em;
@@ -960,49 +1070,63 @@ h4, .h4 {
   text-align: left;
   border: #00335b solid 2px;
   color: #00335b !important;
-  border-radius: 25px; }
-  .contact-info a:hover {
-    text-decoration: underline;
-    background: none;
-    box-shadow: 0 0 0 0; }
-  .contact-info a, .contact-info a:hover {
-    color: #00335b; }
-  .contact-info p, .contact-info a {
-    font-family: "Space Mono",monospace;
-    font-variant-ligatures: none;
-    font-weight: 400; }
-  .contact-info #boilerplate-name {
-    font-weight: 700;
-    font-size: 1.2em;
-    margin-bottom: 0; }
-  .contact-info #boilerplate-address {
-    font-size: 1em;
-    line-height: 1.3em;
-    margin-top: 0; }
+  border-radius: 25px;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+  background: none;
+  box-shadow: 0 0 0 0;
+}
+.contact-info a, .contact-info a:hover {
+  color: #00335b;
+}
+.contact-info p, .contact-info a {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  font-weight: 400;
+}
+.contact-info #boilerplate-name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+.contact-info #boilerplate-address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0;
+}
 
 ul, ol {
-  margin-left: 1.2em; }
+  margin-left: 1.2em;
+}
 
 ul > li {
-  list-style: none; }
-  ul > li::before {
-    content: "\2014";
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em; }
-  ul > li p:first-child {
-    display: inline; }
-  ul > li:first-child {
-    margin-top: 1em; }
+  list-style: none;
+}
+ul > li::before {
+  content: "—";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul > li p:first-child {
+  display: inline;
+}
+ul > li:first-child {
+  margin-top: 1em;
+}
 
 ul ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 ol ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 span.keyword {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 /* Tables */
 table {
@@ -1012,25 +1136,33 @@ table {
   margin-left: auto;
   margin-right: auto;
   padding-right: 2em;
-  /*color: #010d16;*/ }
-  table, table th, table td {
-    border: 1px solid black;
-    font-size: 0.95em; }
-  table th, table td {
-    padding: 1em; }
-  table td.header {
-    font-weight: 400; }
-  table thead tr th {
-    background-color: #5d99d6; }
-  table td, table th {
-    padding: 1em; }
-  table td.header {
-    font-weight: 400; }
+  /*color: #010d16;*/
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
+table thead tr th {
+  background-color: #5d99d6;
+}
+table td, table th {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
 
 .docstage-box table,
 .docstage-box table th,
 .docstage-box table td {
-  border: none; }
+  border: none;
+}
 
 table.modspec {
   width: 100%;
@@ -1039,91 +1171,115 @@ table.modspec {
   margin-left: auto;
   margin-right: auto;
   padding-right: 2em;
-  color: #010d16; }
-  table.modspec, table.modspec th, table.modspec td {
-    border: none !important;
-    font-size: 0.95em; }
-  table.modspec th, table.modspec td {
-    padding: 1em; }
-  table.modspec td.header {
-    font-weight: 400; }
-  table.modspec tr:nth-child(even) {
-    background: #ffffff; }
-  table.modspec tr:nth-child(odd) {
-    background: #ffffff; }
-  table.modspec thead tr th {
-    background-color: #5d99d6; }
-  table.modspec td, table.modspec th {
-    padding: 1em; }
-  table.modspec td.header {
-    font-weight: 400; }
+  color: #010d16;
+}
+table.modspec, table.modspec th, table.modspec td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table.modspec th, table.modspec td {
+  padding: 1em;
+}
+table.modspec td.header {
+  font-weight: 400;
+}
+table.modspec tr:nth-child(even) {
+  background: #ffffff;
+}
+table.modspec tr:nth-child(odd) {
+  background: #ffffff;
+}
+table.modspec thead tr th {
+  background-color: #5d99d6;
+}
+table.modspec td, table.modspec th {
+  padding: 1em;
+}
+table.modspec td.header {
+  font-weight: 400;
+}
 
 td > p:first-child, th > p:first-child {
-  margin-top: 0em; }
+  margin-top: 0em;
+}
 
 td > p:last-child, th > p:last-child {
-  margin-bottom: 0em; }
+  margin-bottom: 0em;
+}
 
 p.TableTitle {
   text-align: center;
   margin-top: 2.5em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 /* Terms */
 .TermNum {
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 .TermNum, .Terms, .AltTerms {
   color: #00335b;
-  font-family: "Overpass",sans-serif; }
+  font-family: "Overpass",sans-serif;
+}
 
 h2.TermNum {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 p.AltTerms {
   font-size: 24px;
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 span.AdmittedLabel, span.DeprecatedLabel {
   color: #00335b;
   background-color: #CFE2F3;
   font-size: 70%;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 /* Links, selection */
 a, a:visited {
   text-decoration: none;
-  color: #2e81c2; }
+  color: #2e81c2;
+}
 
 a:hover {
   color: #00335b;
   background: #39CCCC;
-  box-shadow: 3px 0 0 #39CCCC, -3px 0 0 #39CCCC; }
+  box-shadow: 3px 0 0 #39CCCC, -3px 0 0 #39CCCC;
+}
 
 *::selection {
   background: #39CCCC;
-  color: #00335b; }
+  color: #00335b;
+}
 
 *::-moz-selection {
   background: #39CCCC;
-  color: #00335b; }
+  color: #00335b;
+}
 
 /* Bibliograhy */
 p.Biblio, p.NormRef {
   margin-top: 1em;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 /* Blocks */
 .SourceTitle, .FigureTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .ListTitle {
   font-weight: 700;
   font-size: 1em;
   text-align: center;
-  text-align: left; }
+  text-align: left;
+}
 
 pre, .sourcecode {
   font-family: "Space Mono",monospace;
@@ -1136,55 +1292,67 @@ pre, .sourcecode {
   overflow-y: auto;
   overflow-x: scroll;
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 .Admonition {
   padding: 1em 1.2em 1.2em 1.2em;
   margin: 1em 0 1em 0;
   background-color: #fcad88;
   border-top: 10px solid #eb5a06;
-  color: #290404; }
-  .Admonition .AdmonitionTitle {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
-  .Admonition.Important {
-    background-color: #f58cff;
-    color: #5d1364;
-    border-top: 10px solid #9503a8; }
-  .Admonition.Warning {
-    background-color: #ff989d;
-    color: #270204;
-    border-top: 10px solid #e4010c; }
-  .Admonition p, .Admonition.Important p, .Admonition.Warning p {
-    margin: 0; }
+  color: #290404;
+}
+.Admonition .AdmonitionTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+.Admonition.Important {
+  background-color: #f58cff;
+  color: #5d1364;
+  border-top: 10px solid #9503a8;
+}
+.Admonition.Warning {
+  background-color: #ff989d;
+  color: #270204;
+  border-top: 10px solid #e4010c;
+}
+.Admonition p, .Admonition.Important p, .Admonition.Warning p {
+  margin: 0;
+}
 
 .figure, pre, .pseudocode, .sourcecode {
   background-color: #e1eef1;
   color: #424242;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .Note {
   background-color: #fff8bb;
   color: #7d760b;
   padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Note p {
-    margin: 0; }
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
 
 .example {
   background-color: #e1eef1;
   color: #424242;
   padding: 1.2em;
   margin: 2em 0 1em 0;
-  padding-left: 2em; }
-  .example .example-title {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-left: -1.5em; }
-  .example pre, .example .pseudocode {
-    background: none; }
+  padding-left: 2em;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: -1.5em;
+}
+.example pre, .example .pseudocode {
+  background: none;
+}
 
 .Quote {
   background-color: #e1eef1;
@@ -1193,33 +1361,39 @@ pre, .sourcecode {
   padding: 1.5em;
   margin-top: 2em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 .formula {
   background-color: #f6f6f6;
   padding: 1.5em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+}
 
 .recommend .RecommendationTitle, .recommendtest .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .require .RecommendationTitle, .requiretest .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .permission .RecommendationTitle, .permissiontest .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .RecommendationTestTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
 .recommend {
@@ -1252,21 +1426,25 @@ pre, .sourcecode {
 .recommend .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .require .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .permission .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle {
   font-weight: normal;
-  text-align: left; }
+  text-align: left;
+}
 
 #myBtn {
   font-family: "Space Mono",monospace;
@@ -1284,58 +1462,77 @@ tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTit
   color: white;
   cursor: pointer;
   padding: 10px 15px 10px 15px;
-  border-radius: 4px; }
-  #myBtn:hover {
-    opacity: 1; }
-  @media print {
-    #myBtn {
-      display: none; } }
+  border-radius: 4px;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+
 a.anchorjs-link:hover {
   background: none;
   color: #2e81c2;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 @page {
-  margin: 2cm 1cm; }
-
+  margin: 2cm 1cm;
+}
 @media print {
   h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     page-break-after: avoid;
-    margin-top: 1.2em; }
+    margin-top: 1.2em;
+  }
   h1, .h1 {
     font-size: 1.5em;
-    line-height: 1.5; }
-    h1.content, .h1.content {
-      margin-top: 2em;
-      line-height: 2.5em; }
+    line-height: 1.5;
+  }
+  h1.content, .h1.content {
+    margin-top: 2em;
+    line-height: 2.5em;
+  }
   h2, .h2 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+  }
   h3, .h3 {
-    font-size: 1em; }
+    font-size: 1em;
+  }
   .prefatory-section {
-    page-break-before: always; }
+    page-break-before: always;
+  }
   .note, .pseudocode {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   .Note {
     background-color: #fff495;
     color: #47430c;
     padding: 5px;
-    margin: 2em 0 1em 0; }
-    .Note p {
-      padding: 0 5px 0 5px; }
+    margin: 2em 0 1em 0;
+  }
+  .Note p {
+    padding: 0 5px 0 5px;
+  }
   nav {
-    line-height: 1; } }
-
+    line-height: 1;
+  }
+}
 /* Footnotes */
 a.footnote-number {
   vertical-align: super;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .footnote {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 
-span.hi {
-  background-color: yellow; }
+span.fmt-hi {
+  background-color: yellow;
+}
 
 -->
 </style><style><!--pre.sourcecode table td { padding: 5px; }
@@ -1492,11 +1689,11 @@ pre.sourcecode .nt {
   <div class="coverpage-warning">
     <div class="boilerplate-legal">
 
-<div id="_notice"><h1 class="IntroTitle"><a class="anchor" href="#_notice"></a><a class="header" href="#_notice">Notice</a></h1>
+<div id="_e39017f7-4dc7-ba86-6df9-c8eed35e683a"><h1 class="IntroTitle"><a class="anchor" href="#_e39017f7-4dc7-ba86-6df9-c8eed35e683a"></a><a class="header" href="#_e39017f7-4dc7-ba86-6df9-c8eed35e683a">Notice</a></h1>
 
-<p id="_d83c129b-65cf-e09d-d350-52b12201b907">This document is not an OGC Standard. This document is an OGC White Paper and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+<p id="_f9d99e96-3709-2d37-b00b-1c335bdff49c">This document is not an OGC Standard. This document is an OGC White Paper and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
 
-<p id="_653943e2-d0e0-309a-93be-17f6f0e94af3">Further, an OGC White Paper should not be referenced as required or mandatory technology in procurements.</p>
+<p id="_392c1a42-1206-8da2-50d9-9699ad3baa4c">Further, an OGC White Paper should not be referenced as required or mandatory technology in procurements.</p>
 </div>
 </div>
  </div>
@@ -1517,16 +1714,16 @@ pre.sourcecode .nt {
 <div class="copyright">
   <div class="boilerplate-copyright">
 
-<div id="_copyright_notice"><h1 class="IntroTitle"><a class="anchor" href="#_copyright_notice"></a><a class="header" href="#_copyright_notice">Copyright notice</a></h1>
+<div id="_fd0161fc-f62b-a79d-3423-d7bbbd97e7a6"><h1 class="IntroTitle"><a class="anchor" href="#_fd0161fc-f62b-a79d-3423-d7bbbd97e7a6"></a><a class="header" href="#_fd0161fc-f62b-a79d-3423-d7bbbd97e7a6">Copyright notice</a></h1>
 
-<p id="_09cc624e-08fe-4298-0e48-fd64aab88de3" style="text-align:center;">Copyright © 2025 Open Geospatial Consortium<br /> To obtain additional rights of use, visit<a href="https://www.ogc.org/legal">https://www.ogc.org/legal</a></p>
+<p id="_13df91f9-0943-ac24-39c3-d06302298765" style="text-align:center;">Copyright © 2025 Open Geospatial Consortium<br /> To obtain additional rights of use, visit<a href="https://www.ogc.org/legal">https://www.ogc.org/legal</a></p>
 </div>
 
-<div id="_note"><h1 class="IntroTitle"><a class="anchor" href="#_note"></a><a class="header" href="#_note">Note</a></h1>
+<div id="_6908548e-204b-56e7-9062-6924cccf2315"><h1 class="IntroTitle"><a class="anchor" href="#_6908548e-204b-56e7-9062-6924cccf2315"></a><a class="header" href="#_6908548e-204b-56e7-9062-6924cccf2315">Note</a></h1>
 
-<p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
 
-<p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
 </div>
 </div>
 </div>
@@ -1537,9 +1734,9 @@ pre.sourcecode .nt {
 </div><br /><div class="prefatory-section"><div class="license">
   <div class="boilerplate-license">
 
-<div id="_license_agreement"><h1 class="IntroTitle"><a class="anchor" href="#_license_agreement"></a><a class="header" href="#_license_agreement">License Agreement</a></h1>
+<div id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7"><h1 class="IntroTitle"><a class="anchor" href="#_45f6bdf5-80f3-f775-9740-2adafc90b1f7"></a><a class="header" href="#_45f6bdf5-80f3-f775-9740-2adafc90b1f7">License Agreement</a></h1>
 
-<p id="_f5fe34fd-12e2-2bb7-8cd6-9d4cffa96538">Use of this document is subject to the license agreement at <a href="https://www.ogc.org/license">https://www.ogc.org/license</a></p>
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <a href="https://www.ogc.org/license">https://www.ogc.org/license</a></p>
 </div>
 </div>
 
@@ -1548,352 +1745,348 @@ pre.sourcecode .nt {
 </div>
 
 <nav>
-  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_66960199-3495-475c-ad85-53aebf75d17c"></a><a class="header" href="#_66960199-3495-475c-ad85-53aebf75d17c">Contents</a></h1><ul><li class="h1"><a href="#_25f890b0-780c-4a29-a710-f0f07f41ad8a">      
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_8e208012-c279-485b-9105-886fec9f9519"></a><a class="header" href="#_8e208012-c279-485b-9105-886fec9f9519">Contents</a></h1><ul><li class="h1"><a href="#_1c633044-95e1-4668-832e-05e245d5f753">      
   
   I.  Keywords
 </a></li>
-<li class="h1"><a href="#_preface">      
+<li class="h1"><a href="#_81d4b368-fe93-2d41-7b63-e7348c33790b">      
   
   II.  Preface
 </a></li>
-<li class="h1"><a href="#_security_considerations">      
+<li class="h1"><a href="#_7bb8e245-66d0-4723-cf93-84b9d5570afd">      
   
   III.  Security Considerations
 </a></li>
-<li class="h1"><a href="#_a372bfb1-3ecb-4c0a-bf08-23dba257c7b4">      
+<li class="h1"><a href="#_7cfce42e-fda3-461c-826f-52729e4e8755">      
   
   IV.  Submitting Organizations
 </a></li>
-<li class="h1"><a href="#_submitters">      
+<li class="h1"><a href="#_d9262262-9092-fb15-4731-765978153207">      
   
   V.  Submitters
 </a></li>
-<li class="h1"><a href="#_submitters">      
-  
-  Submitters
-</a></li>
-<li class="h1"><a href="#_scope">      
+<li class="h1"><a href="#_fa849d44-43bb-b5a3-8019-6b1bd92cd93b">      
   
   1.  Scope
 </a></li>
-<li class="h1"><a href="#_conformance">      
+<li class="h1"><a href="#_bbb2b383-ac7b-5a4e-f87d-55bf1295ac74">      
   
   2.  Conformance
 </a></li>
-<li class="h1"><a href="#_fe104966-a8f3-4b77-9ecb-cecb316425d5">      3.  Normative references</a></li>
-<li class="h1"><a href="#_terms_and_definitions">      
+<li class="h1"><a href="#_4a4ac260-b92b-45af-9470-73f47d99d9dd">      3.  Normative references</a></li>
+<li class="h1"><a href="#_8f8a9298-7cda-eab4-412a-3d3689cc4c45">      
   
   4.  Terms and definitions
 </a></li>
-<li class="h1"><a href="#_abstract">      
+<li class="h1"><a href="#_1d11b918-faca-56a2-11d1-76de59cc376f">      
   
   5.  Abstract
 </a></li>
-<li class="h1"><a href="#_keywords">      
+<li class="h1"><a href="#_855f791b-a154-6274-dfb5-712850970bae">      
   
   6.  Keywords
 </a></li>
-<li class="h1"><a href="#_conventions">      
+<li class="h1"><a href="#_4d614372-1386-03af-817c-e44de72ab38d">      
   
   7.  Conventions
 </a></li>
-<li class="h1"><a href="#_introduction">      
+<li class="h1"><a href="#_8bebf00f-8cb0-63a5-64ca-01eec2974999">      
   
   8.  Introduction
 </a></li>
-<li class="h1"><a href="#_related_work">      
+<li class="h1"><a href="#_3ff92604-3890-d63a-95a6-fd5e9b5fcab4">      
   
   9.  Related Work
 </a></li>
-<li class="h2"><a href="#_citygml">      
+<li class="h2"><a href="#_078b5471-4078-4956-58c0-dbc783c69b99">      
   
   9.1.  CityGML
 </a></li>
-<li class="h2"><a href="#_medicine_chemistry">      
+<li class="h2"><a href="#_79560215-aaf6-bebb-f06d-9f74522752db">      
   
   9.2.  Medicine &#x26; Chemistry
 </a></li>
-<li class="h2"><a href="#_to_consider">      
+<li class="h2"><a href="#_9a364958-9ede-f0ed-67fc-50a2f1b0270f">      
   
   9.3.  To consider
 </a></li>
-<li class="h2"><a href="#_ifc_and_bim">      
+<li class="h2"><a href="#_fa7e3243-7cb5-ac8d-2d86-9a518d996b46">      
   
   9.4.  IFC and BIM
 </a></li>
-<li class="h3"><a href="#_industry_foundation_classes_ifc_and_bim">      
+<li class="h3"><a href="#_107e5d64-9401-eff1-7e3e-0603bb7c8f88">      
   
   9.4.1.  Industry Foundation Classes (IFC) and BIM
 </a></li>
-<li class="h4"><a href="#_product_model">      
+<li class="h4"><a href="#_f327ee6c-1974-4cef-896e-3ec5c767cbba">      
   
   9.4.1.1.  Product model
 </a></li>
-<li class="h4"><a href="#_evolving_views_on_geometry">      
+<li class="h4"><a href="#_d56f81af-6b60-af15-fb41-4f207440c05a">      
   
   9.4.1.2.  Evolving views on geometry
 </a></li>
-<li class="h4"><a href="#_use_cases">      
+<li class="h4"><a href="#_b6d1044b-0933-f538-2cbb-0c24bcdb3be7">      
   
   9.4.1.3.  Use cases
 </a></li>
-<li class="h4"><a href="#_implications_and_questions">      
+<li class="h4"><a href="#_fb085122-e27d-a64b-d931-27ba7d6861dc">      
   
   9.4.1.4.  Implications and questions:
 </a></li>
-<li class="h2"><a href="#_implementations">      
+<li class="h2"><a href="#_377a7a26-83ff-2154-1220-242c506fa344">      
   
   9.5.  Implementations
 </a></li>
-<li class="h3"><a href="#_cgal_sfcgal_postgis">      
+<li class="h3"><a href="#_207de038-3bbd-8ce2-bdeb-42365c0c7db5">      
   
   9.5.1.  CGAL → SFCGAL → PostGIS
 </a></li>
-<li class="h3"><a href="#_opencascade">      
+<li class="h3"><a href="#_0536e9a8-984e-b5b0-723f-ba13c3bd1f94">      
   
   9.5.2.  OpenCASCADE
 </a></li>
-<li class="h4"><a href="#_opencascade_inspired_brep_ontology">      
+<li class="h4"><a href="#_5a44254c-56e2-76a3-1352-a28f3296657c">      
   
   9.5.2.1.  OpenCASCADE-inspired BRep ontology
 </a></li>
-<li class="h4"><a href="#_topologic">      
+<li class="h4"><a href="#_b0152ac3-de72-d28f-5427-e68eecdc3a15">      
   
   9.5.2.2.  Topologic
 </a></li>
-<li class="h3"><a href="#_brep_vs_meshpolyhedron">      
+<li class="h3"><a href="#_95bce19c-42bf-62a8-a5af-172e0a88183a">      
   
   9.5.3.  BRep vs mesh/polyhedron
 </a></li>
-<li class="h1"><a href="#_current_capabilities">      
+<li class="h1"><a href="#_7f03987d-7a6f-f7be-6964-b2cbb5c30c6e">      
   
   10.  Current capabilities
 </a></li>
-<li class="h2"><a href="#_geosparql">      
+<li class="h2"><a href="#_c1930834-dae7-9b87-e21f-09a65c9a50b2">      
   
   10.1.  GeoSPARQL
 </a></li>
-<li class="h3"><a href="#_requirements_addressed">      
+<li class="h3"><a href="#_4c342da3-9637-c55f-2d42-d9a1b58ec9f3">      
   
   10.1.1.  Requirements addressed
 </a></li>
-<li class="h4"><a href="#_vocabulary">      
+<li class="h4"><a href="#_ce429838-d50d-de3f-107b-5ef3d108f609">      
   
   10.1.1.1.  Vocabulary
 </a></li>
-<li class="h4"><a href="#_geometry_relations">      
+<li class="h4"><a href="#_df1f665f-4e28-f491-e8fd-70cd8a27b104">      
   
   10.1.1.2.  Geometry Relations
 </a></li>
-<li class="h4"><a href="#_literals">      
+<li class="h4"><a href="#_25afc9db-389f-b661-dd54-43fb7874b33f">      
   
   10.1.1.3.  Literals
 </a></li>
-<li class="h4"><a href="#_query_functions_with_3d_support">      
+<li class="h4"><a href="#_389de52f-9752-917c-227b-7adaa7f568cb">      
   
   10.1.1.4.  Query functions with 3D support
 </a></li>
-<li class="h3"><a href="#_adoption_of_geosparql_1_1">      
+<li class="h3"><a href="#_20110503-4f84-42d0-8644-414ea048b851">      
   
   10.1.2.  Adoption of GeoSPARQL 1.1
 </a></li>
-<li class="h1"><a href="#_requirements_for_geosparql_3d">      
+<li class="h1"><a href="#_a7f74372-86cb-d8e7-c66e-e0792580b512">      
   
   11.  Requirements for GeoSPARQL 3D
 </a></li>
-<li class="h2"><a href="#_proposed_extensions_for_geosparql_3d">      
+<li class="h2"><a href="#_f49cad72-1351-454c-3c59-0389a895eb94">      
   
   11.1.  Proposed extensions for GeoSPARQL 3D
 </a></li>
-<li class="h3"><a href="#_extension_1_3d_representations">      
+<li class="h3"><a href="#_3790e838-ca1e-f7fa-35b5-eafbcb6387d1">      
   
   11.1.1.  Extension 1: 3D representations
 </a></li>
-<li class="h4"><a href="#_github_issue_uri">      
+<li class="h4"><a href="#_fbd4b855-4b3d-d112-a2c4-3350e842c380">      
   
   11.1.1.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category">      
+<li class="h4"><a href="#_e81810d3-eb3e-09fc-50e3-24ae000dc254">      
   
   11.1.1.2.  Category
 </a></li>
-<li class="h4"><a href="#_description">      
+<li class="h4"><a href="#_22e71aa4-e5eb-ca20-6323-fd0d785f7f05">      
   
   11.1.1.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_2_relations_of_3d_geometries">      
+<li class="h3"><a href="#_6e8390ed-4c7f-7402-ba52-41430c48f6e4">      
   
   11.1.2.  Extension 2: Relations of 3D geometries
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_2">      
+<li class="h4"><a href="#_8edb7c7e-1ca3-46dd-b319-157e7ccce585">      
   
   11.1.2.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_2">      
+<li class="h4"><a href="#_fbc24805-09d3-3757-e6c6-64dfa5e4a1ee">      
   
   11.1.2.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_2">      
+<li class="h4"><a href="#_3795b994-9296-61ca-331f-82fd8d95992c">      
   
   11.1.2.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_3_appearance_of_3d_geometries">      
+<li class="h3"><a href="#_3d40a0e4-40c4-8681-0995-a5c24576bc89">      
   
   11.1.3.  Extension 3: Appearance of 3D geometries
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_3">      
+<li class="h4"><a href="#_e15008d3-ef23-4410-b67c-f6f274fe2d0a">      
   
   11.1.3.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_3">      
+<li class="h4"><a href="#_e3e42566-a4d7-7aeb-6449-f34b92ecf500">      
   
   11.1.3.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_3">      
+<li class="h4"><a href="#_fc0207ba-0e4c-d612-7768-9a1bc5179279">      
   
   11.1.3.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_4_multi_component_3d_geometries">      
+<li class="h3"><a href="#_33c86ef5-b244-c2c7-0c1d-47e5d8a77c5e">      
   
   11.1.4.  Extension 4: Multi-component 3D geometries
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_4">      
+<li class="h4"><a href="#_9990188e-e864-062b-c6fb-6ebd5de50afd">      
   
   11.1.4.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_4">      
+<li class="h4"><a href="#_a9330441-e793-be75-f41f-00e130c690fd">      
   
   11.1.4.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_4">      
+<li class="h4"><a href="#_251edc8c-251b-8e32-122f-b51690b6419a">      
   
   11.1.4.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_5_positioning_of_3d_geometries">      
+<li class="h3"><a href="#_59a3f4a6-6ded-5394-22de-a95bf2488336">      
   
   11.1.5.  Extension 5: Positioning of 3D geometries
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_5">      
+<li class="h4"><a href="#_018d6667-0d65-d929-82a6-0586d5327275">      
   
   11.1.5.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_5">      
+<li class="h4"><a href="#_fe8bed78-7619-2238-ed8a-4ef17f9dd93b">      
   
   11.1.5.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_5">      
+<li class="h4"><a href="#_6761542a-975b-25f9-32b2-e0bc716564b6">      
   
   11.1.5.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_6_alignments_of_geosparql_3d">      
+<li class="h3"><a href="#_30d28f80-25b4-fdaf-418f-e72bb326fd16">      
   
   11.1.6.  Extension 6: Alignments of GeoSPARQL 3D
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_6">      
+<li class="h4"><a href="#_5f8893d7-6d1f-e837-d27a-665e97fbae0a">      
   
   11.1.6.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_6">      
+<li class="h4"><a href="#_4719d8b6-5e6a-3ca7-74bd-354e713aa84a">      
   
   11.1.6.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_6">      
+<li class="h4"><a href="#_9f0eb56f-2c1e-0adf-25b7-923547b216a7">      
   
   11.1.6.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_7_alignments_of_engineering_crs_to_geospatial_crs">      
+<li class="h3"><a href="#_babe8802-6bfa-0741-6c27-2c17f32803bc">      
   
   11.1.7.  Extension 7: Alignments of Engineering CRS to Geospatial CRS
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_7">      
+<li class="h4"><a href="#_75ce44ff-a4fe-81f6-5273-83093a373cd4">      
   
   11.1.7.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_7">      
+<li class="h4"><a href="#_3eb70d80-57ca-83bd-84d8-1c51c927c7bf">      
   
   11.1.7.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_7">      
+<li class="h4"><a href="#_25fc07b1-57fe-7534-9964-d537d829236b">      
   
   11.1.7.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_8_geometry_extrusion">      
+<li class="h3"><a href="#_8d849249-5f0b-a0b0-820b-53207678704b">      
   
   11.1.8.  Extension 8: Geometry Extrusion
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_8">      
+<li class="h4"><a href="#_cfd96b93-76e2-4550-5d82-d8060e4ecdfe">      
   
   11.1.8.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_8">      
+<li class="h4"><a href="#_1a4a866e-800f-447a-0b51-9c46fa305a1d">      
   
   11.1.8.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_8">      
+<li class="h4"><a href="#_0d8ae8b6-f76a-9055-a76c-f204eb7c6cd1">      
   
   11.1.8.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_9_geometry_attributes">      
+<li class="h3"><a href="#_2aa051e4-3b60-5710-4f19-d0996c84bd62">      
   
   11.1.9.  Extension 9: Geometry Attributes
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_9">      
+<li class="h4"><a href="#_5b281c11-f34a-4ed9-0164-f877ac4a4704">      
   
   11.1.9.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_9">      
+<li class="h4"><a href="#_79fc8058-f6ba-c85e-3cd8-a970882cb156">      
   
   11.1.9.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_9">      
+<li class="h4"><a href="#_6a084882-4b1e-fdfc-5bf0-95a30b0d423f">      
   
   11.1.9.3.  Description
 </a></li>
-<li class="h3"><a href="#_extension_10_non_topological_query_functions_3d_extension">      
+<li class="h3"><a href="#_50a73197-0f24-b56a-5b9b-74a77891f306">      
   
   11.1.10.  Extension 10: Non-topological Query Functions — 3D Extension
 </a></li>
-<li class="h4"><a href="#_github_issue_uri_10">      
+<li class="h4"><a href="#_3335a8f8-fa6e-67b9-8eac-7d8056c8d71d">      
   
   11.1.10.1.  GitHub Issue URI
 </a></li>
-<li class="h4"><a href="#_category_10">      
+<li class="h4"><a href="#_29c902c6-53ee-1faf-90fc-1d8abb2ef2b6">      
   
   11.1.10.2.  Category
 </a></li>
-<li class="h4"><a href="#_description_10">      
+<li class="h4"><a href="#_b2fbee14-fa37-c82b-ff38-a8c76055a162">      
   
   11.1.10.3.  Description
 </a></li>
-<li class="h1"><a href="#_beneficiaries_and_benefits">      
+<li class="h1"><a href="#_1e1b8299-5246-dcff-2ffc-6f52f6ec404c">      
   
   12.  Beneficiaries and benefits
 </a></li>
-<li class="h2"><a href="#_beneficiaries">      
+<li class="h2"><a href="#_190740d7-df33-ee14-dd9b-9f61d2b8c50d">      
   
   12.1.  Beneficiaries
 </a></li>
-<li class="h3"><a href="#_beneficiary_1_someone_who_benefits">      
+<li class="h3"><a href="#_eb214f04-4adb-40be-5ca0-a733f12f153f">      
   
   12.1.1.  Beneficiary 1: Someone who benefits
 </a></li>
-<li class="h2"><a href="#_benefits">      
+<li class="h2"><a href="#_c200232f-c525-d4df-9577-fe7fd353d57c">      
   
   12.2.  Benefits
 </a></li>
-<li class="h3"><a href="#_benefit_b1_my_benefit">      
+<li class="h3"><a href="#_b1c3f7e9-cf24-d69b-3be1-768535ca6b38">      
   
   12.2.1.  Benefit B1: My benefit
 </a></li>
-<li class="h1"><a href="#_annex_n_n">      
+<li class="h1"><a href="#_9ed901d8-1145-76eb-7b18-98b224af53d1">      
   
   13.  Annex N: N
 </a></li>
-<li class="h1"><a href="#_annex_o_history">      
+<li class="h1"><a href="#_33c03c24-6f5c-8844-93c1-14f0118d1379">      
   
   14.  Annex O: History
 </a></li>
-<li class="h1"><a href="#_25618eba-09b1-49c3-8765-b4980ca7a224">      Bibliography</a></li></ul></div>
+<li class="h1"><a href="#_981ebfec-fd08-4061-8fb7-c0e71a9d262b">      Bibliography</a></li></ul></div>
 
 </nav>
 
@@ -1908,533 +2101,544 @@ pre.sourcecode .nt {
 <div class="boilerplate-feedback">
 
 </div>
-</div><br /><div class="Section3" id="_25f890b0-780c-4a29-a710-f0f07f41ad8a"><h1 class="IntroTitle" id="_a485a31a-dbdc-4b0e-81f9-35d3b81de054"><a class="anchor" href="#_25f890b0-780c-4a29-a710-f0f07f41ad8a"></a><a class="header" href="#_25f890b0-780c-4a29-a710-f0f07f41ad8a">I.  Keywords</a></h1><p>The following are keywords to be used by search engines and document catalogues.</p><p>OGC, GeoSPARQL, 3D</p></div><br /><div id="_preface"><h1 class="ForewordTitle" id="_d278db4b-8624-4449-99dc-fb8f8e120429"><a class="anchor" href="#_preface"></a><a class="header" href="#_preface">II.  Preface</a></h1><p id="_0a02ca0c-0bd0-9643-3798-458feb9c9242">To come…​</p></div><div class="Section3" id="_security_considerations"><h1 class="IntroTitle" id="_22bd7f07-daa4-46ce-886c-74bf34fe8762"><a class="anchor" href="#_security_considerations"></a><a class="header" href="#_security_considerations">III.  Security Considerations</a></h1><p id="_4096c033-8924-9adc-7868-ff79b5d0a485">The following security considerations apply…​</p></div><div class="Section3" id="_a372bfb1-3ecb-4c0a-bf08-23dba257c7b4"><h1 class="IntroTitle" id="_dbc292b1-a441-4be1-86a8-32c2275ed415"><a class="anchor" href="#_a372bfb1-3ecb-4c0a-bf08-23dba257c7b4"></a><a class="header" href="#_a372bfb1-3ecb-4c0a-bf08-23dba257c7b4">IV.  Submitting Organizations</a></h1><p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p><div class="ul_wrap"><ul><li>Organization one</li>
+</div><br /><div class="Section3" id="_1c633044-95e1-4668-832e-05e245d5f753"><h1 class="IntroTitle" id="_4e8dc0a2-3c0a-49b0-9c9e-962b5f8e10d9"><a class="anchor" href="#_1c633044-95e1-4668-832e-05e245d5f753"></a><a class="header" href="#_1c633044-95e1-4668-832e-05e245d5f753">I.  Keywords</a></h1><p>The following are keywords to be used by search engines and document catalogues.</p><p>OGC, GeoSPARQL, 3D</p></div><br /><div id="_81d4b368-fe93-2d41-7b63-e7348c33790b"><h1 class="ForewordTitle" id="_b931e7ed-d848-4757-a743-7be6feeb7ede"><a class="anchor" href="#_81d4b368-fe93-2d41-7b63-e7348c33790b"></a><a class="header" href="#_81d4b368-fe93-2d41-7b63-e7348c33790b">II.  Preface</a></h1><p id="_3b1ba4e7-14a7-ea1a-5d2c-5354d93d1e58">To come…​</p></div><div class="Section3" id="_7bb8e245-66d0-4723-cf93-84b9d5570afd"><h1 class="IntroTitle" id="_5e2f7905-ea52-4ffc-9372-218b897587c0"><a class="anchor" href="#_7bb8e245-66d0-4723-cf93-84b9d5570afd"></a><a class="header" href="#_7bb8e245-66d0-4723-cf93-84b9d5570afd">III.  Security Considerations</a></h1><p id="_985daea9-a3b1-6f5d-374d-cdf891858ed1">The following security considerations apply…​</p></div><div class="Section3" id="_7cfce42e-fda3-461c-826f-52729e4e8755"><h1 class="IntroTitle" id="_54f813de-33f9-4fe7-b444-85c3dfdc35f7"><a class="anchor" href="#_7cfce42e-fda3-461c-826f-52729e4e8755"></a><a class="header" href="#_7cfce42e-fda3-461c-826f-52729e4e8755">IV.  Submitting Organizations</a></h1><p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p><div class="ul_wrap"><ul><li>Organization one</li>
 <li>Organization two</li>
-<li>Organization three</li></ul></div></div><div class="Section3" id="_submitters"><h1 class="IntroTitle" id="_390b8581-d49e-4bad-a782-f9a6157d688c"><a class="anchor" href="#_submitters"></a><a class="header" href="#_submitters">V.  Submitters</a></h1><h1 id="_0527fce6-dd58-49f8-ba4a-ebe8064865b7"><a class="anchor" href="#_submitters"></a><a class="header" href="#_submitters">Submitters</a></h1><table id="_c57b3179-3e90-e3ae-b535-2e2a1f410e72" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Affiliation</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">OGC member</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Nicholas J. Car</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">KurrawongAI</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table></div><div id="_scope"><h1 id="_9350ddea-acff-4c23-9f22-7825c645597e"><a class="anchor" href="#_scope"></a><a class="header" href="#_scope">1.  Scope</a></h1></div><div id="_conformance"><h1 id="_460f699c-e114-46cb-b34d-78d94eb5fa7f"><a class="anchor" href="#_conformance"></a><a class="header" href="#_conformance">2.  Conformance</a></h1></div><div><h1 id="_fe104966-a8f3-4b77-9ecb-cecb316425d5">3.  Normative references</h1>
-<p id="_a6710f40-5cbe-2ae3-8231-ad9faf61ae73">There are no normative references in this document.</p>
+<li>Organization three</li></ul></div></div><div class="Section3" id="_d9262262-9092-fb15-4731-765978153207"><h1 class="IntroTitle" id="_02bb25b5-a232-404e-8f62-e4bf32d2c7ce"><a class="anchor" href="#_d9262262-9092-fb15-4731-765978153207"></a><a class="header" href="#_d9262262-9092-fb15-4731-765978153207">V.  Submitters</a></h1><table id="_ba76c075-eb83-88fc-5ac8-42c994129920" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Affiliation</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">OGC member</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Nicholas J. Car</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">KurrawongAI</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table></div><div id="_fa849d44-43bb-b5a3-8019-6b1bd92cd93b"><h1 id="_39735b15-2de5-457d-a4d9-ce78c9d2c0f9"><a class="anchor" href="#_fa849d44-43bb-b5a3-8019-6b1bd92cd93b"></a><a class="header" href="#_fa849d44-43bb-b5a3-8019-6b1bd92cd93b">1.  Scope</a></h1></div><div id="_bbb2b383-ac7b-5a4e-f87d-55bf1295ac74"><h1 id="_b29be853-37ad-490b-9ebc-f24fe7b14fb8"><a class="anchor" href="#_bbb2b383-ac7b-5a4e-f87d-55bf1295ac74"></a><a class="header" href="#_bbb2b383-ac7b-5a4e-f87d-55bf1295ac74">2.  Conformance</a></h1></div><div><h1 id="_4a4ac260-b92b-45af-9470-73f47d99d9dd">3.  Normative references</h1>
+<p id="_1e0e85f2-a241-464a-90af-046b5883d60f">There are no normative references in this document.</p>
 
-</div><div id="_terms_and_definitions"><h1 id="_1f0f5186-575e-4f99-92dc-1e0b524ccb0a"><a class="anchor" href="#_terms_and_definitions"></a><a class="header" href="#_terms_and_definitions">4.  Terms and definitions</a></h1>
-<p id="_4311f999-5926-535e-0e11-4d86eb6f4c0b">No terms and definitions are listed in this document.</p>
+</div><div id="_8f8a9298-7cda-eab4-412a-3d3689cc4c45"><h1 id="_2e91fe00-36d1-4e86-80c7-ffefc7a7fd3d"><a class="anchor" href="#_8f8a9298-7cda-eab4-412a-3d3689cc4c45"></a><a class="header" href="#_8f8a9298-7cda-eab4-412a-3d3689cc4c45">4.  Terms and definitions</a></h1>
+<p id="_e5876e78-fa42-efa9-f5ba-a93535689e8d">No terms and definitions are listed in this document.</p>
 
-</div><div id="_abstract"><h1 id="_3c35f907-287b-486c-b5a0-13c8bc027cac"><a class="anchor" href="#_abstract"></a><a class="header" href="#_abstract">5.  Abstract</a></h1><p id="_e3eeb02a-ea2c-01c7-ef19-9c3b6ec303e8">To come…​</p></div><div id="_keywords"><h1 id="_c9c25e89-c4c6-4842-b749-dce88a8947fe"><a class="anchor" href="#_keywords"></a><a class="header" href="#_keywords">6.  Keywords</a></h1><p id="_d8a5fdcc-e91a-08fc-b700-7f2222f64bc8">To come…​</p></div><div id="_conventions"><h1 id="_d44b2707-28a5-4903-9a2e-a1558fdde074"><a class="anchor" href="#_conventions"></a><a class="header" href="#_conventions">7.  Conventions</a></h1></div><div id="_introduction"><h1 id="_a62c4d36-2e42-4ee7-9e15-3dd62eabcfaa"><a class="anchor" href="#_introduction"></a><a class="header" href="#_introduction">8.  Introduction</a></h1><p id="_0d797901-ff07-e867-dddd-07101ed3b80e">GeoSPARQL is an open standard that enables storage and exchange of spatial data on the Web, based on the Resource Description Framework (RDF). Although not specifically bound, the current version of GeoSPARQL (1.1) is mainly geared towards spatial objects having zero to two dimensions. In other words, things that can be displayed on a flat surface. However, for three-dimensional spatial objects both supply and demand are increasing.</p><p id="_05d90df6-0395-e509-e18b-24101c7561ba">A future version of GeoSPARQL is expected to have extended capabilities supporting three-dimensional space. Not only would that make GeoSPARQL more useful for 3D geospatial data, it would also help in industries and knowledge domains that are not mainly focused on geospatial data, like Building Information Modelling (BIM) and Computer Graphics (CG). This paper describes which extensions to GeoSPARQL for 3D are possible, which are most desirable, and how they could be achieved.</p><p id="_e67f4a4d-b53c-b096-7b43-457b65249a99">The paper consists of three main parts. The first section describes current capabilities of GeoSPARQL: in its current state, GeoSPARQL does allow modelling three-dimensional objects, but with relevant limitations. The second section describes requirements for extended 3D capabilities in GeoSPARQL. This is based on a market consultation, which resulted in a collection of use cases for additional 3D capabilities. By analysing those use cases, as well as current developments within and outside the OGC, insight in the most needed extensions to GeoSPARQL can be obtained. Requirements are then weighed against feasibility; some extensions are easier to achieve than others. The third and final section describes the expected benefits for additional 3D capabilities in GeoSPARQL for different domains and different roles.</p><p id="_82f79023-4fa3-9422-dd36-351fe33cd5a6">This paper should be interesting for the following audiences:</p><div class="ul_wrap"><ul id="_c9d82898-a18e-b7b5-d8ce-74276c46b920"><li><p id="_b58d7d3a-b6e9-66ba-c853-6c4ecbd63fdf">Current and prospective users of GeoSPARQL;</p>
+</div><div id="_1d11b918-faca-56a2-11d1-76de59cc376f"><h1 id="_c918b3c7-66b4-44ff-ab29-eb1f7bbba687"><a class="anchor" href="#_1d11b918-faca-56a2-11d1-76de59cc376f"></a><a class="header" href="#_1d11b918-faca-56a2-11d1-76de59cc376f">5.  Abstract</a></h1><p id="_da170b78-2fa3-d904-2a34-d6809db7e46f">To come…​</p></div><div id="_855f791b-a154-6274-dfb5-712850970bae"><h1 id="_dec9412a-5ce0-43a4-bf18-f83e45efdb5b"><a class="anchor" href="#_855f791b-a154-6274-dfb5-712850970bae"></a><a class="header" href="#_855f791b-a154-6274-dfb5-712850970bae">6.  Keywords</a></h1><p id="_83e4c76d-d3c6-15ed-8bd9-f2b58911ffa9">To come…​</p></div><div id="_4d614372-1386-03af-817c-e44de72ab38d"><h1 id="_36f51ae2-4824-411c-ac93-bee8d084010a"><a class="anchor" href="#_4d614372-1386-03af-817c-e44de72ab38d"></a><a class="header" href="#_4d614372-1386-03af-817c-e44de72ab38d">7.  Conventions</a></h1></div><div id="_8bebf00f-8cb0-63a5-64ca-01eec2974999"><h1 id="_298cfdf1-4660-4d7c-b026-ab739a218d64"><a class="anchor" href="#_8bebf00f-8cb0-63a5-64ca-01eec2974999"></a><a class="header" href="#_8bebf00f-8cb0-63a5-64ca-01eec2974999">8.  Introduction</a></h1><p id="_9ae8b61b-669f-bcdd-24b8-8fe38c2daf3b">OGC <a href="https://www.ogc.org/standards/geosparql/">GeoSPARQL</a> is an open standard that enables storage and exchange of spatial data on the Web, based on the Resource Description Framework (RDF). In 2020 the OGC white paper <a href="https://docs.ogc.org/wp/19-078r1/19-078r1.html">Benefits of Representing Spatial Data Using Semantic and Graph Technologies</a> was published. It explained the benefits of GeoSPARQL and described the ways in which GeoSPARQL version 1.0 could be improved. In the meantime, version 1.1 GeoSPARQL has been published, having many improvements described in the white paper. Currently, version 1.3 is in development. This next version will have an emphasis on improved 3D capabilities.</p><p id="_6ac8c5b6-0c2f-1ebd-ec11-2521d35c0743">Although not specifically bound, GeoSPARQL 1.1 is mainly geared towards spatial objects having zero to two dimensions. In other words, things that can be displayed on a flat surface. However, for three-dimensional spatial objects both supply and demand are increasing.</p><p id="_db54f53b-186a-0494-ee5a-313103869a95">GeoSPARQL 1.3 is expected to have extended capabilities supporting three-dimensional space. Not only would that make GeoSPARQL more useful for 3D geospatial data, it would also help in industries and knowledge domains that are not mainly focused on geospatial data, like Building Information Modelling (BIM) and Computer Graphics (CG). This paper describes which extensions to GeoSPARQL for 3D are possible, which are most desirable, and how they could be achieved.</p><p id="_92366a06-f349-346d-19a1-32e5ce3fda4c">This paper consists of three main parts. The first section describes current capabilities of GeoSPARQL: in its current state, GeoSPARQL does allow modelling three-dimensional objects, but with relevant limitations. The second section describes requirements for extended 3D capabilities in GeoSPARQL. This is based on a market consultation, which resulted in a collection of use cases for additional 3D capabilities. By analysing those use cases, as well as current developments within and outside the OGC, insight in the most needed extensions to GeoSPARQL can be obtained. Requirements are then weighed against feasibility; some extensions are easier to achieve than others. The third and final section describes the expected benefits for additional 3D capabilities in GeoSPARQL for different domains and different roles.</p><p id="_8e5131ce-7d1c-74eb-432d-ec1ea810c41b">This paper should be interesting for the following audiences:</p><div class="ul_wrap"><ul id="_344c3699-eb75-8e23-6cae-9bce4bac6659"><li><p id="_f5a2218f-26d7-0e8c-1da0-d360e1f035c2">Current and prospective users of GeoSPARQL;</p>
 </li>
-<li><p id="_5672df20-f2e9-dc61-f7ab-3269542713f8">Current and prospective implementers of GeoSPARQL;</p>
+<li><p id="_be32395d-6f7e-e0e9-6182-808547d07fb1">Current and prospective implementers of GeoSPARQL;</p>
 </li>
-<li><p id="_e32f9706-b070-7501-733e-9e94cb727853">Members of related OGC working groups.</p>
+<li><p id="_dbdc8a76-460a-4155-a82d-4d1bb68d0fa8">Members of related OGC working groups.</p>
 </li>
-</ul></div></div><div id="_related_work"><h1 id="_b4cf2228-854f-41d9-b453-92747f41b832"><a class="anchor" href="#_related_work"></a><a class="header" href="#_related_work">9.  Related Work</a></h1><p id="_aca01f4d-ffcb-6090-d566-1c7d009eb3b4">This is still just a dump of resources. To be transformed into actual text.</p><div id="_citygml"><h2 id="_f641afa0-3158-4bdf-823b-9e234ffe36dd"><a class="anchor" href="#_citygml"></a><a class="header" href="#_citygml">9.1.  CityGML</a></h2>
+</ul></div><p id="_9c710180-37a1-c008-5e09-ecc4858be10f">A deep understanding of the Semantic Web and graph technologies is not required for readers of this white paper, but some interest in those topics is assumed, as well as familiarity with the aformentioned white paper <a href="https://docs.ogc.org/wp/19-078r1/19-078r1.html">Benefits of Representing Spatial Data Using Semantic and Graph Technologies</a>. This paper focuses on specifically on 3D capabilities of GeoSPARQL, not its general benefits.</p></div><div id="_3ff92604-3890-d63a-95a6-fd5e9b5fcab4"><h1 id="_c3a0262c-3db5-4314-8136-9451f6f073db"><a class="anchor" href="#_3ff92604-3890-d63a-95a6-fd5e9b5fcab4"></a><a class="header" href="#_3ff92604-3890-d63a-95a6-fd5e9b5fcab4">9.  Related Work</a></h1><p id="_bcdfdf3a-d536-3751-a752-a28984ff71ce">This is still just a dump of resources. To be transformed into actual text.</p><div id="_078b5471-4078-4956-58c0-dbc783c69b99"><h2 id="_86743009-56fe-436a-89bd-a2d9b7573e7b"><a class="anchor" href="#_078b5471-4078-4956-58c0-dbc783c69b99"></a><a class="header" href="#_078b5471-4078-4956-58c0-dbc783c69b99">9.1.  CityGML</a></h2>
 
-<p id="_044385ed-8f03-56d8-7f3d-dbf040d7b2b7"><a href="https://www.mdpi.com/2220-9964/12/9/351">https://www.mdpi.com/2220-9964/12/9/351</a> IFC-CityGML Data Integration for 3D Property Valuation</p>
+<p id="_bd3fbae9-1711-1d25-e78f-59be56687930"><a href="https://www.mdpi.com/2220-9964/12/9/351">https://www.mdpi.com/2220-9964/12/9/351</a> IFC-CityGML Data Integration for 3D Property Valuation</p>
 
-<p id="_cb74e46c-34d1-bcd9-83e4-06b37e0cb4a0">This article describes what became known as Onto CityGML, so far the closest thing to GeoSPARQL3D.</p>
+<p id="_879b0ee7-ae57-8e33-b9fe-774978ddc346">This article describes what became known as Onto CityGML, so far the closest thing to GeoSPARQL3D.</p>
 
-<p id="_4ea1251c-50ae-a16d-c3c8-7b08c875a20a"><a href="https://www.cambridge.org/core/journals/data-centric-engineering/article/semantic-3d-city-interfacesintelligent-interactions-on-dynamic-geospatial-knowledge-graphs/975E518C41DCDD8BD565012C9E2C8473">https://www.cambridge.org/core/journals/data-centric-engineering/article/semantic-3d-city-interfacesintelligent-interactions-on-dynamic-geospatial-knowledge-graphs/975E518C41DCDD8BD565012C9E2C8473</a> Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs</p>
+<p id="_42277e5d-f3cf-4b27-e540-cf1a004a5f5c"><a href="https://www.cambridge.org/core/journals/data-centric-engineering/article/semantic-3d-city-interfacesintelligent-interactions-on-dynamic-geospatial-knowledge-graphs/975E518C41DCDD8BD565012C9E2C8473">https://www.cambridge.org/core/journals/data-centric-engineering/article/semantic-3d-city-interfacesintelligent-interactions-on-dynamic-geospatial-knowledge-graphs/975E518C41DCDD8BD565012C9E2C8473</a> Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs</p>
 
-<p id="_27f9d342-daa8-6b09-55bd-f0a757cecc18">Knowledge graphs construction for 3D city data. Related the CityGML and Onto CityGML.</p>
+<p id="_e9e2a9c1-8ccc-4d55-0b5e-a09a4575c28e">Knowledge graphs construction for 3D city data. Related the CityGML and Onto CityGML.</p>
 
-<p id="_8b1128a9-ab4b-2f15-5999-6bbe25f3e652"><a href="https://link.springer.com/article/10.1007/s41064-020-00095-z">https://link.springer.com/article/10.1007/s41064-020-00095-z</a> CityGML 3.0: New Functions Open Up New Applications</p>
+<p id="_8c598ed8-8526-77dc-0d78-b826a108f370"><a href="https://link.springer.com/article/10.1007/s41064-020-00095-z">https://link.springer.com/article/10.1007/s41064-020-00095-z</a> CityGML 3.0: New Functions Open Up New Applications</p>
 
-<p id="_545ca091-474a-d480-90e2-9c8482d000ea">Looks like the Semantic Web is fully considered in CityGML 3.0. Possibly demanding aligments with GeoSPARQL3D. Question: what can GeoSPARQL add that is not yet in CityGML?</p>
+<p id="_ef939712-ddc3-c76d-d50b-c0c2aabaea68">Looks like the Semantic Web is fully considered in CityGML 3.0. Possibly demanding aligments with GeoSPARQL3D. Question: what can GeoSPARQL add that is not yet in CityGML?</p>
 
-<p id="_14b9aa72-44fd-a2f1-8565-066d9ed79b9e"><a href="https://lup.lub.lu.se/student-papers/search/publication/9169387">https://lup.lub.lu.se/student-papers/search/publication/9169387</a> Linked geodata: CityGML represented as a virtual knowledge graph</p>
+<p id="_c5d56c44-188f-921d-510c-4aed235ca78d"><a href="https://lup.lub.lu.se/student-papers/search/publication/9169387">https://lup.lub.lu.se/student-papers/search/publication/9169387</a> Linked geodata: CityGML represented as a virtual knowledge graph</p>
 
-<p id="_d6a60067-f2cc-fa45-818b-8dabe4d81da9">More knowledge graphs constructed from CityGML.</p>
+<p id="_89bca936-45f2-dad3-a146-f124adb68659">More knowledge graphs constructed from CityGML.</p>
 
-<p id="_3dea95b6-b118-b600-11a3-b63138523b5a"><a href="https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub">https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub</a> Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph</p>
+<p id="_bcca1961-94bc-0644-d154-1fb5ce712301"><a href="https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub">https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub</a> Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph</p>
 
-<p id="_a2de49d1-a67c-6c4f-befa-d47c69d2dd68">Other details and history of Onto CityGML.</p>
-</div><div id="_medicine_chemistry"><h2 id="_e5bbbd8f-6181-47e8-847b-adef26e7470d"><a class="anchor" href="#_medicine_chemistry"></a><a class="header" href="#_medicine_chemistry">9.2.  Medicine &#x26; Chemistry</a></h2>
+<p id="_4bf88ee3-4f63-41ff-33e3-8df4ed9e3c82">Other details and history of Onto CityGML.</p>
+</div><div id="_79560215-aaf6-bebb-f06d-9f74522752db"><h2 id="_6ce1701c-6323-4d44-bc00-2c8a28a36c7f"><a class="anchor" href="#_79560215-aaf6-bebb-f06d-9f74522752db"></a><a class="header" href="#_79560215-aaf6-bebb-f06d-9f74522752db">9.2.  Medicine &#x26; Chemistry</a></h2>
 
-<p id="_51747f8f-b348-9122-9016-983ad6047d00"><a href="https://www.nature.com/articles/s41597-022-01562-5">https://www.nature.com/articles/s41597-022-01562-5</a> Standard metadata for 3D microscopy</p>
+<p id="_e44da440-762c-15b0-ae28-82e8742b3f10"><a href="https://www.nature.com/articles/s41597-022-01562-5">https://www.nature.com/articles/s41597-022-01562-5</a> Standard metadata for 3D microscopy</p>
 
-<p id="_ece3de0e-ef2a-66ef-de8e-5c9ed5cdcf7c">The 3D Microscopy Metadata Standards (3D-MMS), developed by the BRAIN 3D Microscopy Working Group, help ensure that a 3D microscopy dataset is sufficiently described to support its’ re-use by scientists who did not generate the data. Adoption of 3D-MMS will aid investigators who want to share data, helping them to evaluate and decide which data can be combined.<a href="https://doryworkspace.org/metadata">https://doryworkspace.org/metadata</a></p>
+<p id="_0f54f81a-ab36-e962-7380-a0d16ba69f92">The 3D Microscopy Metadata Standards (3D-MMS), developed by the BRAIN 3D Microscopy Working Group, help ensure that a 3D microscopy dataset is sufficiently described to support its’ re-use by scientists who did not generate the data. Adoption of 3D-MMS will aid investigators who want to share data, helping them to evaluate and decide which data can be combined.<a href="https://doryworkspace.org/metadata">https://doryworkspace.org/metadata</a></p>
 
-<p id="_45333a1b-b3b2-09a8-d072-d21b9d71b711"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083">https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083</a> Ontology-Based Representation and Modelling of Synthetic 3D Content: A State-of-the-Art Review</p>
+<p id="_66ea00d4-884b-1962-68e7-6dad1dd4f0d6"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083">https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083</a> Ontology-Based Representation and Modelling of Synthetic 3D Content: A State-of-the-Art Review</p>
 
-<p id="_53b4cbb9-ad3f-3b3f-9c7f-754794dbea77">A range of approaches have been proposed to permit semantic representation and modelling of synthetic 3D content. These approaches differ in the methodologies and technologies used as well as their scope and application domains. This paper provides a review of the current state of the art in representation and modelling of 3D content based on semantic web ontologies, together with a classification, characterization and discussion of the particular approaches.</p>
+<p id="_20456eba-2b4d-16c0-1975-0858c558e24d">A range of approaches have been proposed to permit semantic representation and modelling of synthetic 3D content. These approaches differ in the methodologies and technologies used as well as their scope and application domains. This paper provides a review of the current state of the art in representation and modelling of 3D content based on semantic web ontologies, together with a classification, characterization and discussion of the particular approaches.</p>
 
-<p id="_1ef48152-9a94-5370-1833-c3f43ec1efe0"><a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJMSO.2017.087702">https://www.inderscienceonline.com/doi/abs/10.1504/IJMSO.2017.087702</a> A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain</p>
+<p id="_b36fd3b6-3477-500a-f30f-44cac886be93"><a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJMSO.2017.087702">https://www.inderscienceonline.com/doi/abs/10.1504/IJMSO.2017.087702</a> A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain</p>
 
-<p id="_50bab880-5789-c3fc-341b-b77657203373">This paper presents the most comprehensive formally grounded 3D ontology to date that maps the entire XSD-based vocabulary of the industry standard X3D (ISO/IEC 19775-19777) to OWL 2, complemented by fundamental concepts and roles of the 3D modelling industry not covered by X3D.</p>
-</div><div id="_to_consider"><h2 id="_d6d30d58-ab50-44c9-81ba-ad6c8a7cb13a"><a class="anchor" href="#_to_consider"></a><a class="header" href="#_to_consider">9.3.  To consider</a></h2>
+<p id="_acfc1096-3f5b-9544-d329-0be3540664ae">This paper presents the most comprehensive formally grounded 3D ontology to date that maps the entire XSD-based vocabulary of the industry standard X3D (ISO/IEC 19775-19777) to OWL 2, complemented by fundamental concepts and roles of the 3D modelling industry not covered by X3D.</p>
+</div><div id="_9a364958-9ede-f0ed-67fc-50a2f1b0270f"><h2 id="_a88ff89f-f392-4204-bd5d-5630d3e03cef"><a class="anchor" href="#_9a364958-9ede-f0ed-67fc-50a2f1b0270f"></a><a class="header" href="#_9a364958-9ede-f0ed-67fc-50a2f1b0270f">9.3.  To consider</a></h2>
 
-<p id="_98404857-cc79-3cf5-8c70-80659ee1ad8f"><a href="https://link.springer.com/article/10.1007/s10845-023-02246-6">https://link.springer.com/article/10.1007/s10845-023-02246-6</a> Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking</p>
+<p id="_d52df3c2-ab36-b1ee-d491-ef7e22df8be8"><a href="https://link.springer.com/article/10.1007/s10845-023-02246-6">https://link.springer.com/article/10.1007/s10845-023-02246-6</a> Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking</p>
 
-<p id="_b4fd5ecc-9016-316f-5f60-4e4dec1e0323">To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes &#x26; roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools.</p>
+<p id="_b7524e81-9d5e-b27c-356b-f19abcf53bd0">To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes &#x26; roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools.</p>
 
-<p id="_9d301f4a-17c8-087d-506a-76091189abba">STereoLithography (STL)<a href="http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file">http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file</a></p>
+<p id="_a32737cb-a57a-20d7-875f-667cfc60ab66">STereoLithography (STL)<a href="http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file">http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file</a></p>
 
-<p id="_bc998ef5-ff2f-d251-b94f-a44ec8cfc0b4">STL files describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations.</p>
+<p id="_415b872a-c3cc-9f22-b62f-b67e76e50cbc">STL files describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations.</p>
 
-<p id="_765f6542-4d6b-7d58-61cf-99a7a53fc01c">Open standard for particle-mesh data (openPMD)<a href="https://github.com/openPMD/openPMD-standard">https://github.com/openPMD/openPMD-standard</a></p>
+<p id="_f44728ab-8b7b-3bf2-9341-6ed5567d2022">Open standard for particle-mesh data (openPMD)<a href="https://github.com/openPMD/openPMD-standard">https://github.com/openPMD/openPMD-standard</a></p>
 
-<p id="_d300e964-dad3-050b-72b8-d71aff9f9bb6">The openPMD standard, short for open standard for particle-mesh data files is not a file format per se. It is guidance for meta data and naming schemes. openPMD provides naming and attribute conventions that allow to exchange particle and mesh based data from scientific simulations and experiments. The primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and differing algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If output from programs, devices (such as cameras), simulations or post-processed data-sets contain a minimal set of meta information as provided by openPMD, you can exchange data between those with minimal effort and you use the same tools for visualization.</p>
+<p id="_a96049b3-0575-cc7a-f216-276f7ee94ea5">The openPMD standard, short for open standard for particle-mesh data files is not a file format per se. It is guidance for meta data and naming schemes. openPMD provides naming and attribute conventions that allow to exchange particle and mesh based data from scientific simulations and experiments. The primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and differing algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If output from programs, devices (such as cameras), simulations or post-processed data-sets contain a minimal set of meta information as provided by openPMD, you can exchange data between those with minimal effort and you use the same tools for visualization.</p>
 
-<p id="_91d9f4b1-a2ed-1cbe-c755-350a2c2ce328">CARARE Metadata Schema<a href="https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadata-schema/">https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadata-schema/</a></p>
+<p id="_36d814a1-5817-a8c0-8f64-5574ecab8f6b">CARARE Metadata Schema<a href="https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadata-schema/">https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadata-schema/</a></p>
 
-<p id="_1ba1f613-7c8f-c3a5-4acf-4d2f616c11d5">The CARARE metadata schema is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.</p>
-</div><div id="_ifc_and_bim"><h2 id="_ce3eb512-dccf-41f8-8fde-89b5be40ea0d"><a class="anchor" href="#_ifc_and_bim"></a><a class="header" href="#_ifc_and_bim">9.4.  IFC and BIM</a></h2>
+<p id="_3c16923a-34d3-ca9e-a401-fc3423e89a21">The CARARE metadata schema is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.</p>
+</div><div id="_fa7e3243-7cb5-ac8d-2d86-9a518d996b46"><h2 id="_0b07a13d-bccc-4ac2-a0e5-f178c64e2938"><a class="anchor" href="#_fa7e3243-7cb5-ac8d-2d86-9a518d996b46"></a><a class="header" href="#_fa7e3243-7cb5-ac8d-2d86-9a518d996b46">9.4.  IFC and BIM</a></h2>
 
-<div id="_industry_foundation_classes_ifc_and_bim"><h3 id="_a17f411a-6a9c-48f3-82d6-f75a3c69ada3"><a class="anchor" href="#_industry_foundation_classes_ifc_and_bim"></a><a class="header" href="#_industry_foundation_classes_ifc_and_bim">9.4.1.  Industry Foundation Classes (IFC) and BIM</a></h3>
+<div id="_107e5d64-9401-eff1-7e3e-0603bb7c8f88"><h3 id="_86ae6538-8cd3-4f3e-b216-64c497d1c6ee"><a class="anchor" href="#_107e5d64-9401-eff1-7e3e-0603bb7c8f88"></a><a class="header" href="#_107e5d64-9401-eff1-7e3e-0603bb7c8f88">9.4.1.  Industry Foundation Classes (IFC) and BIM</a></h3>
 
-<p id="_1d411be3-a7e3-d7cd-4654-2bc583ab201c">BIM is a paradigm in which object‐model definitions — with machine‑interpretable semantics — are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC).</p>
+<p id="_c4e31016-e864-729b-48ee-402fbda6d8c1">BIM is a paradigm in which object‐model definitions — with machine‑interpretable semantics — are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC).</p>
 
-<div id="_product_model"><h4 id="_ddbbd6b9-411a-48ff-a989-2c9a8a9e229c"><a class="anchor" href="#_product_model"></a><a class="header" href="#_product_model">9.4.1.1.  Product model</a></h4>
+<div id="_f327ee6c-1974-4cef-896e-3ec5c767cbba"><h4 id="_43a21067-99e3-471a-bfa1-20c7764d249e"><a class="anchor" href="#_f327ee6c-1974-4cef-896e-3ec5c767cbba"></a><a class="header" href="#_f327ee6c-1974-4cef-896e-3ec5c767cbba">9.4.1.1.  Product model</a></h4>
 
-<p id="_c81a96ce-1270-1e6a-a2f5-0ff2a6e301d8">In IFC, a construction work is decomposed into a set of products. These products can have <b>multiple representations</b>. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.</p>
+<p id="_012ab58a-003d-b353-2755-f7078d64c1fd">In IFC, a construction work is decomposed into a set of products. These products can have <b>multiple representations</b>. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.</p>
 
-<p id="_20b9999b-668a-04d4-9762-99954f0cb664">At the same time, such a product separates the <b>placement</b> (an hierarchical transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.</p>
+<p id="_033beca8-787d-1f21-cf32-42f1df81073e">At the same time, such a product separates the <b>placement</b> (an hierarchical transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.</p>
 
-<p id="_b6f1470f-56db-1293-649b-a07682caab21">In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, <b>semantics and geometry are intertwined</b> such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics.</p>
+<p id="_0f06388d-f03e-bc1c-4d0d-6fe7f2abeecf">In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, <b>semantics and geometry are intertwined</b> such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics.</p>
 
-<p id="_61256c2b-ea3c-654d-687b-5ebc17581e71">IFC also allows for <b>decomposition</b>, where a whole is aggregated into multiple parts for richer semantics. This allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.</p>
+<p id="_7f57c5a6-ed41-4652-9f3c-6b908789e684">IFC also allows for <b>decomposition</b>, where a whole is aggregated into multiple parts for richer semantics. This allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.</p>
 </div>
 
-<div id="_evolving_views_on_geometry"><h4 id="_b61d28dc-ddd6-444a-af0c-db0e154bde66"><a class="anchor" href="#_evolving_views_on_geometry"></a><a class="header" href="#_evolving_views_on_geometry">9.4.1.2.  Evolving views on geometry</a></h4>
+<div id="_d56f81af-6b60-af15-fb41-4f207440c05a"><h4 id="_30036a71-37a5-40a7-b8cb-9731ee91be9a"><a class="anchor" href="#_d56f81af-6b60-af15-fb41-4f207440c05a"></a><a class="header" href="#_d56f81af-6b60-af15-fb41-4f207440c05a">9.4.1.2.  Evolving views on geometry</a></h4>
 
-<p id="_74187d88-645c-3cef-60b5-15fc751c562c">IFC is heavily influenced by the ISO 10303 (STEP) family of standards, but over time adopted its own geometric paradigms:</p>
+<p id="_0cb2110f-1a4e-ce3b-e738-ba553720efaf">IFC is heavily influenced by the ISO 10303 (STEP) family of standards, but over time adopted its own geometric paradigms:</p>
 
-<div class="ul_wrap"><ul id="_ed9ad695-6c06-36e1-c5bd-d4304cc11509"><li><p id="_9c965994-89b2-e847-fc0d-e6ccd5f82ccd">Procedural geometry and boolean operations became less prominent with the adoption of ReferenceView in IFC4. Tessellated geometry definitions were added for more compact exchange.</p>
+<div class="ul_wrap"><ul id="_4a6dc573-e988-5ca9-5bbd-4f30aa78521f"><li><p id="_6159fd27-8f55-7490-fea5-cea24f34c4ff">Procedural geometry and boolean operations became less prominent with the adoption of ReferenceView in IFC4. Tessellated geometry definitions were added for more compact exchange.</p>
 </li>
-<li><p id="_19f7140f-7db8-a048-1722-134847da4206"><b>Infrastructure definitions</b> were added with precise mathematical transition curves and a composition of a horizontal, vertical and cant (inclination) profile.</p>
+<li><p id="_aaad479d-af48-3b23-3a8a-b813ee3e8938"><b>Infrastructure definitions</b> were added with precise mathematical transition curves and a composition of a horizontal, vertical and cant (inclination) profile.</p>
 </li>
-<li><p id="_39d70b21-bc0f-968d-a8bc-3eda27b4a831">IFC5 with an <b>explicit</b> (most likely triangulated) geometry schema at the core, with semantic overlays to encode the same procedural semantics as a non-mandatory or use-case specific layer. Heavily inspired by USD with layer-based composition for collaborative exchange.</p>
+<li><p id="_1b948a88-efa9-3632-b221-46d6953c7f5a">IFC5 with an <b>explicit</b> (most likely triangulated) geometry schema at the core, with semantic overlays to encode the same procedural semantics as a non-mandatory or use-case specific layer. Heavily inspired by USD with layer-based composition for collaborative exchange.</p>
 </li>
 </ul></div>
 
-<p id="_70ecb2e2-bbde-5c2c-291c-c0db604ddefe">Especially the handling of <b>tolerances</b> means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. NB Tolerances stand in the way of using existing approaches for SFA geometry predicates such as PostGIS+SFCGAL which is based on arbitrary precision boolean logic as implemented in CGAL without tolerances.</p>
+<p id="_96f36b32-828a-2a8d-9954-7d724bbb4894">Especially the handling of <b>tolerances</b> means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. NB Tolerances stand in the way of using existing approaches for SFA geometry predicates such as PostGIS+SFCGAL which is based on arbitrary precision boolean logic as implemented in CGAL without tolerances.</p>
 </div>
 
-<div id="_use_cases"><h4 id="_9a4b7f40-8974-49d3-a558-ecb516d7b364"><a class="anchor" href="#_use_cases"></a><a class="header" href="#_use_cases">9.4.1.3.  Use cases</a></h4>
+<div id="_b6d1044b-0933-f538-2cbb-0c24bcdb3be7"><h4 id="_4430266f-74f5-4bfc-9179-402858f1bc62"><a class="anchor" href="#_b6d1044b-0933-f538-2cbb-0c24bcdb3be7"></a><a class="header" href="#_b6d1044b-0933-f538-2cbb-0c24bcdb3be7">9.4.1.3.  Use cases</a></h4>
 
-<p id="_9313ac1e-9cf2-f78d-c707-29d73c0f6f0b">The most successful use case on BIM data is <b>coordination and visualization</b> where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software.</p>
+<p id="_8955acd5-a5f5-457f-20bd-d9623da238bd">The most successful use case on BIM data is <b>coordination and visualization</b> where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software.</p>
 
-<p id="_8d3c80eb-97a4-f6a5-264c-f600c0f156b9"><b>Design to design</b> workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.</p>
+<p id="_f16715b9-0976-c4cb-b72b-4c30b40ab353"><b>Design to design</b> workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.</p>
 
-<p id="_7b9c6b56-91dd-5936-0666-86b6317743fa"><b>Long-term preservation</b> of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don’t contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.</p>
+<p id="_64fb10a9-94c8-0480-4de4-70196028d7fe"><b>Long-term preservation</b> of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don’t contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.</p>
 
-<p id="_8a5b5c45-248b-5727-d25c-95b0ee9d8979"><b>BIM-GIS integration</b> is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.</p>
+<p id="_6cadcae5-3b9d-00e1-ad80-a77a292fa42c"><b>BIM-GIS integration</b> is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.</p>
 
-<p id="_d79890c3-18b9-9c58-079a-0673b2c9c808"><b>Simulations</b> on IFC building models are often challenging because the ‘bag of individual elements’ does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in nieghbouring domaisn remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.</p>
+<p id="_f13ad13b-1b21-a249-c550-76f1244d62bc"><b>Simulations</b> on IFC building models are often challenging because the ‘bag of individual elements’ does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in nieghbouring domaisn remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.</p>
 </div>
 
-<div id="_implications_and_questions"><h4 id="_9509c437-9bc0-403b-86b2-cd61d0918646"><a class="anchor" href="#_implications_and_questions"></a><a class="header" href="#_implications_and_questions">9.4.1.4.  Implications and questions:</a></h4>
+<div id="_fb085122-e27d-a64b-d931-27ba7d6861dc"><h4 id="_ac0e7f9b-9961-45f2-bc81-7c1875b86feb"><a class="anchor" href="#_fb085122-e27d-a64b-d931-27ba7d6861dc"></a><a class="header" href="#_fb085122-e27d-a64b-d931-27ba7d6861dc">9.4.1.4.  Implications and questions:</a></h4>
 
-<div class="ul_wrap"><ul id="_bd0bd4d5-a952-873f-b545-640ea4ab8f3e"><li><p id="_3e92e3c2-9de8-80e4-5ffe-95ce0069dc9f">Euclidean / non-euclidean; is a CRS required?</p>
+<div class="ul_wrap"><ul id="_f8066762-ddd3-6df6-63c8-8004b341007b"><li><p id="_4d73df50-3664-63e9-4a2f-f1c371c8eed7">Euclidean / non-euclidean; is a CRS required?</p>
 </li>
-<li><p id="_23509b50-f805-0fcd-a383-67d8e1ee61fa">Separate representation+placement → enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate in space</p>
+<li><p id="_c776971f-11d0-95cf-a46f-b785c1529fa7">Separate representation+placement → enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate in space</p>
 </li>
-<li><p id="_c83d84ad-6cfb-5c50-6863-1dce06907e98">Geometry as leaf-values or object-relational model : cannot encapsulate geometry into a single literal, but allows for richer semantics</p>
+<li><p id="_6709dcaf-1867-dfd6-bfa9-062fe5d9dc55">Geometry as leaf-values or object-relational model : cannot encapsulate geometry into a single literal, but allows for richer semantics</p>
 </li>
-<li><p id="_d0a9d6a8-0c02-968f-68cb-5f9203707326">BRep model (topology + geometry + orientation + location) vs polyhedral model (e.g halfedge) vs explicit loops of point coordinates</p>
+<li><p id="_46ff1a01-f21e-61bc-04cc-3a2a6593fedb">BRep model (topology + geometry + orientation + location) vs polyhedral model (e.g halfedge) vs explicit loops of point coordinates</p>
 </li>
-<li><p id="_ef76dda6-83d9-c7d5-529f-91f5571cfcff">Procedural vs implicit (e.g constraints) vs explicit (polyhedra)</p>
+<li><p id="_6f9ad480-6705-f340-827a-93f1f9f41750">Procedural vs implicit (e.g constraints) vs explicit (polyhedra)</p>
 </li>
-<li><p id="_3aad9a7f-1349-73ea-5bb6-28344bae8621">Tolerances</p>
+<li><p id="_3251c427-f12c-48b4-cd35-58c03ac86acb">Tolerances</p>
 </li>
-<li><p id="_f90eb9e8-57e9-cd77-4937-ac13d747183b">Decomposition inside or outside of the ‘geometry ontology’</p>
+<li><p id="_7dda3a6b-f4d1-a5da-d083-de0c54911940">Decomposition inside or outside of the ‘geometry ontology’</p>
 </li>
-<li><p id="_ae240f14-8d4f-9a27-064f-6cf4d7289071">Are infra geometries (hor + ver alignment + cant, for positioning and sweeps) in scope?</p>
-</li>
-</ul></div>
-</div>
-</div>
-</div><div id="_implementations"><h2 id="_ce4042f6-b8e1-457d-9cf1-29a8535facc6"><a class="anchor" href="#_implementations"></a><a class="header" href="#_implementations">9.5.  Implementations</a></h2>
-
-<div id="_cgal_sfcgal_postgis"><h3 id="_06b6e341-d55a-4d46-9af7-a8ef1b0bb9de"><a class="anchor" href="#_cgal_sfcgal_postgis"></a><a class="header" href="#_cgal_sfcgal_postgis">9.5.1.  CGAL → SFCGAL → PostGIS</a></h3>
-
-</div>
-
-<div id="_opencascade"><h3 id="_51426dbb-3aed-4369-9491-ea61e70088b2"><a class="anchor" href="#_opencascade"></a><a class="header" href="#_opencascade">9.5.2.  OpenCASCADE</a></h3>
-
-<div id="_opencascade_inspired_brep_ontology"><h4 id="_fc41f18a-d6c6-46db-93d0-f0fdc22ee292"><a class="anchor" href="#_opencascade_inspired_brep_ontology"></a><a class="header" href="#_opencascade_inspired_brep_ontology">9.5.2.1.  OpenCASCADE-inspired BRep ontology</a></h4>
-
-<p id="_4dc23251-cb33-204b-1daf-48450343bdd2">Perzylo, A., Somani, N., Rickert, M., &#x26; Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.</p>
-
-<p id="_f446a6a5-bfec-e00c-5e8a-4541cf306a31"><a href="https://ieeexplore.ieee.org/abstract/document/7353971">https://ieeexplore.ieee.org/abstract/document/7353971</a></p>
-</div>
-
-<div id="_topologic"><h4 id="_ef78353d-a075-477b-af76-2a02cb41d6e2"><a class="anchor" href="#_topologic"></a><a class="header" href="#_topologic">9.5.2.2.  Topologic</a></h4>
-
-<p id="_246760dd-78fd-e6f0-278b-b383353c78ff">Jabi, W., &#x26; Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.</p>
-
-<p id="_c9a96f4f-ef09-8b75-03ed-b2c9aad8b87a"><a href="https://topologic.app/">https://topologic.app/</a></p>
-</div>
-</div>
-
-<div id="_brep_vs_meshpolyhedron"><h3 id="_d6e71e90-691c-45db-8432-a095df57dbe6"><a class="anchor" href="#_brep_vs_meshpolyhedron"></a><a class="header" href="#_brep_vs_meshpolyhedron">9.5.3.  BRep vs mesh/polyhedron</a></h3>
-
-<p id="_b0bb0a33-b8b3-a78d-f686-ff4b93ba8c67">BRep</p>
-
-<div class="ul_wrap"><ul id="_45ecb7d8-1fba-37b6-8153-98b772aefa33"><li><p id="_81f94897-e210-5a23-e4d6-89a33d28f61c">Curved surfaces</p>
-</li>
-<li><p id="_14a40e97-18c7-b32f-06ec-0e80989a05cd">Topology: connected components as shells, solids with inner voids, etc.</p>
-</li>
-<li><p id="_fe0002ec-4109-403b-3b01-2ac97f908121">Clean APIs due to inheritance: e.g <tt>fn extrude(Topo) → Topo</tt>, for vertex → edge; edge → face; face → solid; solid → solid</p>
-</li>
-<li><p id="_edc31007-3e00-2dbb-ae89-920ed550648e">Extra indirections: edge → vertex[] → point</p>
-</li>
-<li><p id="_69dbe69b-06b1-ca31-4977-b1f1c1052974">Depending on implementation can be inefficient, e.g outer wire of face not explicitly marked need to be checked wrt infinite point</p>
-</li>
-<li><p id="_a6d43964-8da8-ff3a-7351-78ab1eaae1c0">Data integrity and validation a bit harder</p>
-</li>
-</ul></div>
-
-<p id="_94d9efb6-ddaf-0271-b959-4260df1e73f0">Mesh/polyhedron</p>
-
-<div class="ul_wrap"><ul id="_a80cff15-9ed4-f1d8-01e1-061c4f57e848"><li><p id="_a01f2cc8-8de7-48e6-17fb-a66b77ac0b1c">Potentially fewer indirections</p>
-</li>
-<li><p id="_36ec124c-7174-d337-296a-12db438f5d8f">Triangle meshes robust and well understood</p>
-</li>
-<li><p id="_8da9d8d6-97c7-634d-ad31-3edf4b0d8aa6">Many different data models though, e.g half-edge (only manifold), indexed faceset (no adjacency info), winged/quad/radial edge</p>
-</li>
-</ul></div>
-</div>
-</div></div><div id="_current_capabilities"><h1 id="_b7c04cb8-5df0-4ece-9b79-37f042e54c0b"><a class="anchor" href="#_current_capabilities"></a><a class="header" href="#_current_capabilities">10.  Current capabilities</a></h1><div id="_geosparql"><h2 id="_fcd376f3-fa23-4016-9475-7b1e4661422d"><a class="anchor" href="#_geosparql"></a><a class="header" href="#_geosparql">10.1.  GeoSPARQL</a></h2>
-
-<p id="_6b6cc7f3-c950-083b-ab76-9a751cf86f79">GeoSPARQL is the most common geospatial extension of SPARQL. It was accepted as an OGC standard in 2012 and revised as GeoSPARQL 1.1 in 2024.</p>
-
-<p id="_1f12acf8-4eb3-a24b-bb82-7a53205a85b1">According to the standard document, “The OGC GeoSPARQL standard supports representing and querying geospatial data on the Semantic Web. GeoSPARQL defines a vocabulary for representing geospatial data in RDF, and it defines an extension to the SPARQL query language for processing geospatial data”.</p>
-
-<div id="_requirements_addressed"><h3 id="_79cabb4d-05a0-47cd-9515-fcb1b242bac9"><a class="anchor" href="#_requirements_addressed"></a><a class="header" href="#_requirements_addressed">10.1.1.  Requirements addressed</a></h3>
-
-<p id="_82cf6626-bbf9-f594-3406-7d7ffb9bd963">In order to define which capabilities GeoSPARQL needs to adopt for full 3D compatibility, we first take a look at GeoSPARQL 1.1 current capabilities with regards to 3D.</p>
-
-<div id="_vocabulary"><h4 id="_81e8f49a-840b-4c52-8d0e-8cb20b80f4fb"><a class="anchor" href="#_vocabulary"></a><a class="header" href="#_vocabulary">10.1.1.1.  Vocabulary</a></h4>
-
-<p id="_5cf52d26-df44-90f7-149e-9d748eae6b7c">GeoSPARQL 1.1 defines a class <tt>Geometry</tt> as a subclass of <tt>SpatialObject</tt>.</p>
-
-<p id="_43c82943-4ac0-3759-d72b-a97f33d671ce">An instance of <tt>Geometry</tt> is not restricted to two dimensions.</p>
-
-<p id="_9d5846ac-016c-5a84-1970-2be7a103753d">A fine-grained classification of <tt>Geometry</tt> can use the Simple Features Vocabulary (TODO: add link) which extends the class <tt>Geometry</tt> with further types, such as <i>Point</i>, <i>Polygon</i> etc.</p>
-
-<p id="_ec64e434-3d90-e073-e506-3a9457dd1093">The Simple Features vocabulary allows for the definition of 3D variants of:</p>
-
-<div class="ul_wrap"><ul id="_604b5004-21b4-a080-bcd6-1e3949939e46"><li><p id="_7372384b-3fb1-49bc-294c-964e43607c9b">(Multi)Points</p>
-</li>
-<li><p id="_0364dbe1-02f2-82d1-0ce7-4c885cfc151a">(Multi)LineStrings</p>
-</li>
-<li><p id="_525d519d-3bea-aff5-49ac-4b5e50024756">(Multi)Polygons</p>
-</li>
-</ul></div>
-
-<p id="_a384d1d8-baec-fe66-7b52-0aa99e6dae1c">It does not include commons 3D primitives, such as <i>Cube</i> or <i>Mesh</i> surfaces which are integral parts of 3D representations.</p>
-
-<p id="_2c249956-b329-9830-88ea-28f03a8e9968">Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts. In particular, the properties are:</p>
-
-<div class="ul_wrap"><ul id="_da0020a6-e901-8e68-bc8e-9281e98e8554"><li><p id="_6f7f74a4-9796-0501-a4c3-fa51b8003e01"><tt>geo:hasVolume</tt></p>
-</li>
-<li><p id="_39bb41bb-b559-5f4a-a391-be2dc018bfc0"><tt>geo:hasMetricVolume</tt></p>
-</li>
-</ul></div>
-
-<p id="_75b80c0e-1a29-9d46-682d-f851eb281b3e">Further 3D-related metadata properties such as projection matrices are not part of the current GeoSPARQL 1.1 standard.</p>
-</div>
-
-<div id="_geometry_relations"><h4 id="_bccf3abd-b56b-49b6-9498-9b2398b2869d"><a class="anchor" href="#_geometry_relations"></a><a class="header" href="#_geometry_relations">10.1.1.2.  Geometry Relations</a></h4>
-
-<p id="_18280e5a-2fa4-f39b-809c-c6238cd60362">Relations between geometries have been defined using three different sets of rules:</p>
-
-<div class="ul_wrap"><ul id="_11c99b30-8170-a74b-296e-b7dd4498ec48"><li><p id="_30787c3b-6a51-5527-ac90-8af05fe78a95">Simple Features Relations</p>
-</li>
-<li><p id="_f0c60dd9-02d8-30cd-8e9d-581b91a3bea3">Egenhofer Relations</p>
-</li>
-<li><p id="_b340573d-8ce4-6289-0276-59b951b4d257">Region Connection Calculus RCC8</p>
-</li>
-</ul></div>
-
-<p id="_67b44314-ac61-d9f8-2f4c-c34c887cab56">All geometry relations are only defined for 2D geometries and do not take into account the third dimension.</p>
-</div>
-
-<div id="_literals"><h4 id="_96264acc-02dc-48a8-ad37-4889ceeee2f3"><a class="anchor" href="#_literals"></a><a class="header" href="#_literals">10.1.1.3.  Literals</a></h4>
-
-<p id="_53b874e2-9a95-3c13-079d-2280caad0229">A first requirement for 3D support is the ability to save 3D data in a knowledge graph. GeoSPARQL 1.1 defines a variety of String literal formats, which are investigated for the storage of 3D data.</p>
-
-<p class="TableTitle" style="text-align:center;">Table 1</p><table id="_e534a4d1-8997-c896-7771-fd59c320936d" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Literal Type</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Z-Coordinate Supported</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2.5D</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">3D</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">WKT Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">GML Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Only with extension Schema</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">KML Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">As import from COLLADA</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">GeoJSON Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">DGGS Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td></tr></tbody></table>
-
-<p id="_b1ed3142-d561-5765-1b3f-6c4ce29cddbf">GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support. There are currently almost 300 coordinate reference systems in the database  <a href="https://epsg.io/?q=%20kind%3AGEOG3DCRS">epsg.io</a> which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.</p>
-</div>
-
-<div id="_query_functions_with_3d_support"><h4 id="_92e11e0f-e9f6-4b49-91c0-024f2142f7a9"><a class="anchor" href="#_query_functions_with_3d_support"></a><a class="header" href="#_query_functions_with_3d_support">10.1.1.4.  Query functions with 3D support</a></h4>
-
-<p id="_52dfc7aa-2161-b571-b81c-702c1f89ac16">GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. However, there are functions which may take into account the Z coordinate, if they are available.</p>
-
-<p class="TableTitle" style="text-align:center;">Table 2</p><table id="_f9e6e92f-6ee8-3915-43e2-f7c8588ece20" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">GeoSPARQL function</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Z-Coordinate Supported</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2.5D</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">3D</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">geof:is3D</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">geof:minZ</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">geof:maxZ</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table>
-
-<p id="_5ea32fb7-c742-bb0c-e1d7-b15f5db8fd47">These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.</p>
-</div>
-</div>
-
-<div id="_adoption_of_geosparql_1_1"><h3 id="_e69cc36b-6700-43b0-b65d-52e600d00b09"><a class="anchor" href="#_adoption_of_geosparql_1_1"></a><a class="header" href="#_adoption_of_geosparql_1_1">10.1.2.  Adoption of GeoSPARQL 1.1</a></h3>
-
-</div>
-</div></div><div id="_requirements_for_geosparql_3d"><h1 id="_4487874c-20d6-4ada-93af-d5effb4be448"><a class="anchor" href="#_requirements_for_geosparql_3d"></a><a class="header" href="#_requirements_for_geosparql_3d">11.  Requirements for GeoSPARQL 3D</a></h1><p id="_9cfcc9a7-4fd5-de1f-b9cc-e63e415ce6d2">This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. It helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.</p><div id="_proposed_extensions_for_geosparql_3d"><h2 id="_a0cb40a3-2b40-4b73-8d81-33e73d7782c2"><a class="anchor" href="#_proposed_extensions_for_geosparql_3d"></a><a class="header" href="#_proposed_extensions_for_geosparql_3d">11.1.  Proposed extensions for GeoSPARQL 3D</a></h2>
-
-<div id="_extension_1_3d_representations"><h3 id="_fe1072a9-f558-4d6f-97a1-6455945d0713"><a class="anchor" href="#_extension_1_3d_representations"></a><a class="header" href="#_extension_1_3d_representations">11.1.1.  Extension 1: 3D representations</a></h3>
-
-<div id="_github_issue_uri"><h4 id="_d4fdf5f1-39ab-47c8-aba7-1b3f080f5c35"><a class="anchor" href="#_github_issue_uri"></a><a class="header" href="#_github_issue_uri">11.1.1.1.  GitHub Issue URI</a></h4>
-
-<p id="_c29d9e0e-00c6-beb0-209e-9554f3aa6e93"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/583">https://github.com/opengeospatial/ogc-geosparql/issues/583</a></p>
-</div>
-
-<div id="_category"><h4 id="_79850653-4938-42f6-b179-aa917216954b"><a class="anchor" href="#_category"></a><a class="header" href="#_category">11.1.1.2.  Category</a></h4>
-
-<p id="_6ccbb0c5-59b2-91a6-fd5d-6cfac46a7270">Semantic improvement</p>
-</div>
-
-<div id="_description"><h4 id="_7d021e05-1c29-4923-a7a4-b5669676c4c7"><a class="anchor" href="#_description"></a><a class="header" href="#_description">11.1.1.3.  Description</a></h4>
-
-<p id="_c544f919-8c44-27a1-4a53-8768c9868a33">GeoSPARQL should include ways to represent 3D data in a knowledge graph.</p>
-
-<p id="_2921e471-eed7-c002-5686-73139808ca86">3D data should be included in common 3D formats and 3D data should be includable as a text literal and a file representation.</p>
-
-<p id="_3f9562c8-2989-1fba-423f-4bb61b83ad70">Some common formats which could be considered for inclusion are:</p>
-
-<div class="ul_wrap"><ul id="_1f1ec01c-684b-31c8-c22f-26cdff31a465"><li><p id="_11373557-1f69-23b8-b5ba-b9e4707ef1a9"><a href="https://paulbourke.net/dataformats/ply/">Polygon File Format (PLY)</a></p>
-</li>
-<li><p id="_eceb50c4-ea84-3de7-fdbb-7814ba9840c4"><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000507.shtml">Wavefront OBJ Format (OBJ)</a></p>
-</li>
-<li><p id="_959cd190-3231-7126-8f8c-87720faec6d6"><a href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html">GLTF Format (GLTF)</a></p>
-</li>
-<li><p id="_18fb1576-b7fc-e2ed-4448-864f21551d62"><a href="https://www.web3d.org">X3D Format</a></p>
+<li><p id="_fddb5bb3-6325-20e8-02d1-6484f5ae095d">Are infra geometries (hor + ver alignment + cant, for positioning and sweeps) in scope?</p>
 </li>
 </ul></div>
 </div>
 </div>
+</div><div id="_377a7a26-83ff-2154-1220-242c506fa344"><h2 id="_e16d04ed-5e11-456b-a040-a7b6b4f08d2a"><a class="anchor" href="#_377a7a26-83ff-2154-1220-242c506fa344"></a><a class="header" href="#_377a7a26-83ff-2154-1220-242c506fa344">9.5.  Implementations</a></h2>
 
-<div id="_extension_2_relations_of_3d_geometries"><h3 id="_3cec3dd1-7489-44c9-820d-50a0b1673c54"><a class="anchor" href="#_extension_2_relations_of_3d_geometries"></a><a class="header" href="#_extension_2_relations_of_3d_geometries">11.1.2.  Extension 2: Relations of 3D geometries</a></h3>
+<div id="_207de038-3bbd-8ce2-bdeb-42365c0c7db5"><h3 id="_56cebc96-7936-402f-857c-74252f132a01"><a class="anchor" href="#_207de038-3bbd-8ce2-bdeb-42365c0c7db5"></a><a class="header" href="#_207de038-3bbd-8ce2-bdeb-42365c0c7db5">9.5.1.  CGAL → SFCGAL → PostGIS</a></h3>
 
-<div id="_github_issue_uri_2"><h4 id="_253b9b38-af49-48ae-9c54-d04f45a7650d"><a class="anchor" href="#_github_issue_uri_2"></a><a class="header" href="#_github_issue_uri_2">11.1.2.1.  GitHub Issue URI</a></h4>
-
-<p id="_4f3787f5-26bd-707c-9fc8-97febb3c7578"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/416">https://github.com/opengeospatial/ogc-geosparql/issues/416</a></p>
 </div>
 
-<div id="_category_2"><h4 id="_b5686cbd-934b-400b-97eb-11226838b44b"><a class="anchor" href="#_category_2"></a><a class="header" href="#_category_2">11.1.2.2.  Category</a></h4>
+<div id="_0536e9a8-984e-b5b0-723f-ba13c3bd1f94"><h3 id="_b20391f1-9ec8-4fbb-b0a9-0e3c18447c13"><a class="anchor" href="#_0536e9a8-984e-b5b0-723f-ba13c3bd1f94"></a><a class="header" href="#_0536e9a8-984e-b5b0-723f-ba13c3bd1f94">9.5.2.  OpenCASCADE</a></h3>
 
-<p id="_a088107d-12c6-1dff-fe3b-ed338cda71e7">Semantic improvement</p>
+<div id="_5a44254c-56e2-76a3-1352-a28f3296657c"><h4 id="_69c4a80d-88d1-4ba1-82ca-d7ea6bda430b"><a class="anchor" href="#_5a44254c-56e2-76a3-1352-a28f3296657c"></a><a class="header" href="#_5a44254c-56e2-76a3-1352-a28f3296657c">9.5.2.1.  OpenCASCADE-inspired BRep ontology</a></h4>
+
+<p id="_6b51059d-543e-d916-9932-d97df23432d7">Perzylo, A., Somani, N., Rickert, M., &#x26; Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.</p>
+
+<p id="_184b463e-cdb5-9ec7-3afb-2af74d1b0753"><a href="https://ieeexplore.ieee.org/abstract/document/7353971">https://ieeexplore.ieee.org/abstract/document/7353971</a></p>
 </div>
 
-<div id="_description_2"><h4 id="_39e6fac8-5953-4610-a177-8646fb1620fa"><a class="anchor" href="#_description_2"></a><a class="header" href="#_description_2">11.1.2.3.  Description</a></h4>
+<div id="_b0152ac3-de72-d28f-5427-e68eecdc3a15"><h4 id="_a8d063c4-0b83-42f5-9b42-3ce3016da2d1"><a class="anchor" href="#_b0152ac3-de72-d28f-5427-e68eecdc3a15"></a><a class="header" href="#_b0152ac3-de72-d28f-5427-e68eecdc3a15">9.5.2.2.  Topologic</a></h4>
 
-<p id="_3adb25d2-93ca-ef5e-5f61-48de0a31e012">GeoSPARQL should include ways to represent relations between 3D geometries and relations between 3D geometries and geometries of lower dimensions. The relations should be expressable in property relations and should be queryable using SPARQL extension functions.</p>
+<p id="_a64aebb0-db16-0539-56cc-64a8ac416e20">Jabi, W., &#x26; Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.</p>
+
+<p id="_830ef445-b5a2-da38-4e48-616c08c6e619"><a href="https://topologic.app/">https://topologic.app/</a></p>
 </div>
 </div>
 
-<div id="_extension_3_appearance_of_3d_geometries"><h3 id="_323efe8c-faf0-476d-89dc-1b8d2b564d26"><a class="anchor" href="#_extension_3_appearance_of_3d_geometries"></a><a class="header" href="#_extension_3_appearance_of_3d_geometries">11.1.3.  Extension 3: Appearance of 3D geometries</a></h3>
+<div id="_95bce19c-42bf-62a8-a5af-172e0a88183a"><h3 id="_c16d612c-b731-4c3d-9826-48caa7ddb8d0"><a class="anchor" href="#_95bce19c-42bf-62a8-a5af-172e0a88183a"></a><a class="header" href="#_95bce19c-42bf-62a8-a5af-172e0a88183a">9.5.3.  BRep vs mesh/polyhedron</a></h3>
 
-<div id="_github_issue_uri_3"><h4 id="_573e14d3-8833-474b-8fc6-b2089d884e96"><a class="anchor" href="#_github_issue_uri_3"></a><a class="header" href="#_github_issue_uri_3">11.1.3.1.  GitHub Issue URI</a></h4>
+<p id="_e0342805-b682-e66c-853f-970ae4cfef26">BRep</p>
 
-<div class="ul_wrap"><ul id="_4a143f85-b826-decd-f359-0b4e9dae4d21"><li><p id="_f85419e5-18f6-22df-362b-868b06bbb6db"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/584">https://github.com/opengeospatial/ogc-geosparql/issues/584</a></p>
+<div class="ul_wrap"><ul id="_92cc3231-d4f6-f697-2715-f10f911ea2f7"><li><p id="_84ee0362-2ae3-c83c-4437-bf6f48f82867">Curved surfaces</p>
 </li>
-<li><p id="_ceb6293e-6299-c8ef-6071-bfcd7fcf90df"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/592">https://github.com/opengeospatial/ogc-geosparql/issues/592</a></p>
+<li><p id="_fbd689b9-cbe7-dbe9-e106-07935d477a5a">Topology: connected components as shells, solids with inner voids, etc.</p>
+</li>
+<li><p id="_8b4493d3-4158-5e1e-242e-f01b1e8dc536">Clean APIs due to inheritance: e.g <tt>fn extrude(Topo) → Topo</tt>, for vertex → edge; edge → face; face → solid; solid → solid</p>
+</li>
+<li><p id="_cf22b257-c066-7866-b446-ad5ade6f80d6">Extra indirections: edge → vertex[] → point</p>
+</li>
+<li><p id="_6b1321de-b0a2-e26d-e063-d727bdba9626">Depending on implementation can be inefficient, e.g outer wire of face not explicitly marked need to be checked wrt infinite point</p>
+</li>
+<li><p id="_c3b38925-158f-a22b-06bf-423b751b0d39">Data integrity and validation a bit harder</p>
+</li>
+</ul></div>
+
+<p id="_5e7b9c3b-18fa-ff5c-503f-f89d7202740a">Mesh/polyhedron</p>
+
+<div class="ul_wrap"><ul id="_a1779c67-dde4-3019-e4ef-31c01e1a3d4f"><li><p id="_bda29c16-7512-abb4-72b6-1b7f22c20548">Potentially fewer indirections</p>
+</li>
+<li><p id="_1e8832bc-0f6e-6547-21d6-1b1dde8be287">Triangle meshes robust and well understood</p>
+</li>
+<li><p id="_8e1ee643-1f3a-4321-3ce9-0c8e8981140e">Many different data models though, e.g half-edge (only manifold), indexed faceset (no adjacency info), winged/quad/radial edge</p>
 </li>
 </ul></div>
 </div>
+</div></div><div id="_7f03987d-7a6f-f7be-6964-b2cbb5c30c6e"><h1 id="_0055fbbb-8f6c-42a3-aa44-d72b52070562"><a class="anchor" href="#_7f03987d-7a6f-f7be-6964-b2cbb5c30c6e"></a><a class="header" href="#_7f03987d-7a6f-f7be-6964-b2cbb5c30c6e">10.  Current capabilities</a></h1><div id="_c1930834-dae7-9b87-e21f-09a65c9a50b2"><h2 id="_a46a019e-c604-4b8a-8317-010461d9efd1"><a class="anchor" href="#_c1930834-dae7-9b87-e21f-09a65c9a50b2"></a><a class="header" href="#_c1930834-dae7-9b87-e21f-09a65c9a50b2">10.1.  GeoSPARQL</a></h2>
 
-<div id="_category_3"><h4 id="_accc15c7-a313-4e9a-b269-3c0e69f7f256"><a class="anchor" href="#_category_3"></a><a class="header" href="#_category_3">11.1.3.2.  Category</a></h4>
+<p id="_5717229f-5d4d-784d-912d-3662168a9af5">GeoSPARQL is the most common geospatial extension of SPARQL. It was accepted as an OGC standard in 2012 and revised as GeoSPARQL 1.1 in 2024.</p>
 
-<p id="_c02d2d1e-dfd1-b368-2224-b6649ab5d94f">Semantic improvement</p>
+<p id="_c5c4ed3d-e3a9-cc4d-7947-de19a5849ff1">According to the standard document, “The OGC GeoSPARQL standard supports representing and querying geospatial data on the Semantic Web. GeoSPARQL defines a vocabulary for representing geospatial data in RDF, and it defines an extension to the SPARQL query language for processing geospatial data”.</p>
+
+<div id="_4c342da3-9637-c55f-2d42-d9a1b58ec9f3"><h3 id="_fdf3a08f-34ee-4547-b0e0-190752e50fd1"><a class="anchor" href="#_4c342da3-9637-c55f-2d42-d9a1b58ec9f3"></a><a class="header" href="#_4c342da3-9637-c55f-2d42-d9a1b58ec9f3">10.1.1.  Requirements addressed</a></h3>
+
+<p id="_71a4af7d-5759-dff5-c17b-6cdbfcc3fc28">In order to define which capabilities GeoSPARQL needs to adopt for full 3D compatibility, we first take a look at GeoSPARQL 1.1 current capabilities with regards to 3D.</p>
+
+<div id="_ce429838-d50d-de3f-107b-5ef3d108f609"><h4 id="_00bdd3a9-a7f6-40a7-a938-b670c2939d7f"><a class="anchor" href="#_ce429838-d50d-de3f-107b-5ef3d108f609"></a><a class="header" href="#_ce429838-d50d-de3f-107b-5ef3d108f609">10.1.1.1.  Vocabulary</a></h4>
+
+<p id="_2bc8b803-4306-e18f-6868-0c84943caae7">GeoSPARQL 1.1 defines a class <tt>Geometry</tt> as a subclass of <tt>SpatialObject</tt>.</p>
+
+<p id="_e3573c79-97c1-80e3-7e69-cdf370d02e70">An instance of <tt>Geometry</tt> is not restricted to two dimensions.</p>
+
+<p id="_90c671b0-9fda-3b43-88d4-72d1d265bb28">A fine-grained classification of <tt>Geometry</tt> can use the Simple Features Vocabulary (TODO: add link) which extends the class <tt>Geometry</tt> with further types, such as <i>Point</i>, <i>Polygon</i> etc.</p>
+
+<p id="_ee87bd83-6ec6-cd7a-6719-1d48aa8edfb7">The Simple Features vocabulary allows for the definition of 3D variants of:</p>
+
+<div class="ul_wrap"><ul id="_fbb4c52d-0342-b948-2db3-f1dce0d57323"><li><p id="_1ed00e14-1538-d26b-ed24-2ef8a73c2a0a">(Multi)Points</p>
+</li>
+<li><p id="_a79477de-b34f-f546-954d-e88dd69bfb56">(Multi)LineStrings</p>
+</li>
+<li><p id="_0c50a2b1-7454-8ac8-7d6c-746f575de13b">(Multi)Polygons</p>
+</li>
+</ul></div>
+
+<p id="_97e01f2c-e5e0-d183-2224-43f5d1f05d21">It does not include commons 3D primitives, such as <i>Cube</i> or <i>Mesh</i> surfaces which are integral parts of 3D representations.</p>
+
+<p id="_8e0c6af1-765c-c5a7-151b-6574719012a2">Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts. In particular, the properties are:</p>
+
+<div class="ul_wrap"><ul id="_2f97a11f-20cf-a550-72bb-bd68c6d2a75d"><li><p id="_7ac0fcbd-5e8b-7e27-7ce8-28e0cc6ab810"><tt>geo:hasVolume</tt></p>
+</li>
+<li><p id="_665ff43b-304c-4a6e-3319-7e1d59b45090"><tt>geo:hasMetricVolume</tt></p>
+</li>
+</ul></div>
+
+<p id="_803f9efb-1eac-4898-a9f8-b91cdae174cf">Further 3D-related metadata properties such as projection matrices are not part of the current GeoSPARQL 1.1 standard.</p>
 </div>
 
-<div id="_description_3"><h4 id="_2457bf66-fffe-4649-8ffd-0f2cf3717246"><a class="anchor" href="#_description_3"></a><a class="header" href="#_description_3">11.1.3.3.  Description</a></h4>
+<div id="_df1f665f-4e28-f491-e8fd-70cd8a27b104"><h4 id="_3ffa268b-8445-4599-81f1-f0177c3d70fe"><a class="anchor" href="#_df1f665f-4e28-f491-e8fd-70cd8a27b104"></a><a class="header" href="#_df1f665f-4e28-f491-e8fd-70cd8a27b104">10.1.1.2.  Geometry Relations</a></h4>
 
-<p id="_e06ccb52-0c18-38ce-2287-44fa1a7de01c">GeoSPARQL should include ways to represent materials and textures of 3D geometries, so that geometries can be styled accordingly.</p>
+<p id="_32e84d2f-2f83-ad74-e740-53e3ad7182c1">Relations between geometries have been defined using three different sets of rules:</p>
 
-<p id="_886212c1-ed31-ffda-d62e-fc112ecbf7d0">Materials include:</p>
-
-<div class="ul_wrap"><ul id="_c6d1fc35-5192-edb6-01fc-8a68088e7c81"><li><p id="_ab2960dd-2f23-1f54-b9a0-b74039169527">Colors of surfaces with light diffusion parameters</p>
+<div class="ul_wrap"><ul id="_77c37774-ddfb-2fab-0c5d-79e9db9957d7"><li><p id="_27626557-1e01-a221-02c3-f0d8b6fe6fd4">Simple Features Relations</p>
 </li>
-<li><p id="_b8e4b317-574e-8385-8ea8-b093777fe174">Images as textures, which are associated with surfaces of the 3D object</p>
+<li><p id="_00899b31-dc79-217b-496a-9cb075f7780a">Egenhofer Relations</p>
+</li>
+<li><p id="_73d352f1-719a-ebb5-25b0-03a852c9b2b6">Region Connection Calculus RCC8</p>
+</li>
+</ul></div>
+
+<p id="_3e33c917-2d29-a932-61ff-96ffd5962cc5">All geometry relations are only defined for 2D geometries and do not take into account the third dimension.</p>
+</div>
+
+<div id="_25afc9db-389f-b661-dd54-43fb7874b33f"><h4 id="_6033b5bf-45e5-4942-a688-7323e8febfc9"><a class="anchor" href="#_25afc9db-389f-b661-dd54-43fb7874b33f"></a><a class="header" href="#_25afc9db-389f-b661-dd54-43fb7874b33f">10.1.1.3.  Literals</a></h4>
+
+<p id="_fa2ad6ea-6fd4-0a7a-bd11-22dc0dacb5a2">A first requirement for 3D support is the ability to save 3D data in a knowledge graph. GeoSPARQL 1.1 defines a variety of String literal formats, which are investigated for the storage of 3D data.</p>
+
+<p class="TableTitle" style="text-align:center;">Table 1</p><table id="_df47aa0a-bb19-ec21-77c7-0b9a3dd1dc9b" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Literal Type</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Z-Coordinate Supported</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2.5D</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">3D</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">WKT Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">GML Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Only with extension Schema</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">KML Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">As import from COLLADA</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">GeoJSON Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">DGGS Literal</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td></tr></tbody></table>
+
+<p id="_e5bdbd44-7aac-3ee8-dc94-ac0bbb5ab231">GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support. There are currently almost 300 coordinate reference systems in the database  <a href="https://epsg.io/?q=%20kind%3AGEOG3DCRS">epsg.io</a> which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.</p>
+</div>
+
+<div id="_389de52f-9752-917c-227b-7adaa7f568cb"><h4 id="_a3a99e7b-dac6-41a0-b65c-798ca11ec3b8"><a class="anchor" href="#_389de52f-9752-917c-227b-7adaa7f568cb"></a><a class="header" href="#_389de52f-9752-917c-227b-7adaa7f568cb">10.1.1.4.  Query functions with 3D support</a></h4>
+
+<p id="_27ad3dcf-59a6-5b23-9404-e9189a165593">GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. However, there are functions which may take into account the Z coordinate, if they are available.</p>
+
+<p class="TableTitle" style="text-align:center;">Table 2</p><table id="_319ff3be-0ec7-3f2d-5765-d58291ab13b6" class="MsoISOTable" style="border-width:1px;border-spacing:0;table-layout:fixed;"><colgroup><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /><col style="width: 25%;" /></colgroup><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">GeoSPARQL function</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Z-Coordinate Supported</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2.5D</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">3D</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">geof:is3D</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">geof:minZ</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">geof:maxZ</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table>
+
+<p id="_a7b2d7cc-60da-3942-2041-c93f5bd00efe">These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.</p>
+</div>
+</div>
+
+<div id="_20110503-4f84-42d0-8644-414ea048b851"><h3 id="_cfbafbbb-7ee7-46b3-add5-b0bd4ffdc473"><a class="anchor" href="#_20110503-4f84-42d0-8644-414ea048b851"></a><a class="header" href="#_20110503-4f84-42d0-8644-414ea048b851">10.1.2.  Adoption of GeoSPARQL 1.1</a></h3>
+
+</div>
+</div></div><div id="_a7f74372-86cb-d8e7-c66e-e0792580b512"><h1 id="_351fc84e-1b72-4703-a690-223a80173730"><a class="anchor" href="#_a7f74372-86cb-d8e7-c66e-e0792580b512"></a><a class="header" href="#_a7f74372-86cb-d8e7-c66e-e0792580b512">11.  Requirements for GeoSPARQL 3D</a></h1><p id="_99854d15-1388-b398-1b99-0cc6eba5df00">This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. It helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.</p><div id="_f49cad72-1351-454c-3c59-0389a895eb94"><h2 id="_7887885e-8857-478e-8fb4-92c920dfed86"><a class="anchor" href="#_f49cad72-1351-454c-3c59-0389a895eb94"></a><a class="header" href="#_f49cad72-1351-454c-3c59-0389a895eb94">11.1.  Proposed extensions for GeoSPARQL 3D</a></h2>
+
+<div id="_3790e838-ca1e-f7fa-35b5-eafbcb6387d1"><h3 id="_ec054426-4026-4402-9c9a-c3871e49fbba"><a class="anchor" href="#_3790e838-ca1e-f7fa-35b5-eafbcb6387d1"></a><a class="header" href="#_3790e838-ca1e-f7fa-35b5-eafbcb6387d1">11.1.1.  Extension 1: 3D representations</a></h3>
+
+<div id="_fbd4b855-4b3d-d112-a2c4-3350e842c380"><h4 id="_54112bcd-37bb-4b96-85ad-bb0dc480841f"><a class="anchor" href="#_fbd4b855-4b3d-d112-a2c4-3350e842c380"></a><a class="header" href="#_fbd4b855-4b3d-d112-a2c4-3350e842c380">11.1.1.1.  GitHub Issue URI</a></h4>
+
+<p id="_ef8b4ed3-a92a-ca85-8aba-7eb212113f5c"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/583">https://github.com/opengeospatial/ogc-geosparql/issues/583</a></p>
+</div>
+
+<div id="_e81810d3-eb3e-09fc-50e3-24ae000dc254"><h4 id="_48b390f9-1c86-427e-b7d9-88ba3d074921"><a class="anchor" href="#_e81810d3-eb3e-09fc-50e3-24ae000dc254"></a><a class="header" href="#_e81810d3-eb3e-09fc-50e3-24ae000dc254">11.1.1.2.  Category</a></h4>
+
+<p id="_db37521a-9dce-3dce-4cdf-fc90cbfac28c">Semantic improvement</p>
+</div>
+
+<div id="_22e71aa4-e5eb-ca20-6323-fd0d785f7f05"><h4 id="_e497001b-33fb-4069-be9b-1334d192f653"><a class="anchor" href="#_22e71aa4-e5eb-ca20-6323-fd0d785f7f05"></a><a class="header" href="#_22e71aa4-e5eb-ca20-6323-fd0d785f7f05">11.1.1.3.  Description</a></h4>
+
+<p id="_5f737d9e-b748-4896-669f-37c22e5868fd">GeoSPARQL should include ways to represent 3D data in a knowledge graph.</p>
+
+<p id="_0f866922-9019-dca4-48bd-dc1192c78c51">3D data should be included in common 3D formats and 3D data should be includable as a text literal and a file representation.</p>
+
+<p id="_80a9cfc2-5e88-1f15-77f9-c20902abb490">Some common formats which could be considered for inclusion are:</p>
+
+<div class="ul_wrap"><ul id="_19c20f6a-9b6f-f64a-fa35-acb43692729e"><li><p id="_3feb8050-1fad-28dc-58f4-84958da8cf73"><a href="https://paulbourke.net/dataformats/ply/">Polygon File Format (PLY)</a></p>
+</li>
+<li><p id="_53b02a02-da5a-986c-0b8c-8aa799a1083c"><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000507.shtml">Wavefront OBJ Format (OBJ)</a></p>
+</li>
+<li><p id="_7fc8c27d-9c7e-1702-030d-35b7754abea7"><a href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html">GLTF Format (GLTF)</a></p>
+</li>
+<li><p id="_69a5dda4-cfa9-ff33-4ae2-43861dcd6ca5"><a href="https://www.web3d.org">X3D Format</a></p>
 </li>
 </ul></div>
 </div>
 </div>
 
-<div id="_extension_4_multi_component_3d_geometries"><h3 id="_3c242d5a-5b6a-46b1-a2dc-6c6b9e968dc6"><a class="anchor" href="#_extension_4_multi_component_3d_geometries"></a><a class="header" href="#_extension_4_multi_component_3d_geometries">11.1.4.  Extension 4: Multi-component 3D geometries</a></h3>
+<div id="_6e8390ed-4c7f-7402-ba52-41430c48f6e4"><h3 id="_d101ddab-fa7f-4068-b2b4-67e648f922da"><a class="anchor" href="#_6e8390ed-4c7f-7402-ba52-41430c48f6e4"></a><a class="header" href="#_6e8390ed-4c7f-7402-ba52-41430c48f6e4">11.1.2.  Extension 2: Relations of 3D geometries</a></h3>
 
-<div id="_github_issue_uri_4"><h4 id="_be35989d-53fc-4440-9fe2-76728d72a0f3"><a class="anchor" href="#_github_issue_uri_4"></a><a class="header" href="#_github_issue_uri_4">11.1.4.1.  GitHub Issue URI</a></h4>
+<div id="_8edb7c7e-1ca3-46dd-b319-157e7ccce585"><h4 id="_73c3958d-baf5-4b19-812d-8791ea310393"><a class="anchor" href="#_8edb7c7e-1ca3-46dd-b319-157e7ccce585"></a><a class="header" href="#_8edb7c7e-1ca3-46dd-b319-157e7ccce585">11.1.2.1.  GitHub Issue URI</a></h4>
 
-<p id="_bc2fdee8-ba9b-1d61-0b1f-26502fd4066d"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/591">https://github.com/opengeospatial/ogc-geosparql/issues/591</a></p>
+<p id="_ad9e9512-86f6-02dd-61ff-2d1d2d421382"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/416">https://github.com/opengeospatial/ogc-geosparql/issues/416</a></p>
 </div>
 
-<div id="_category_4"><h4 id="_2a775f95-02cd-4b47-9a76-523cbe203683"><a class="anchor" href="#_category_4"></a><a class="header" href="#_category_4">11.1.4.2.  Category</a></h4>
+<div id="_fbc24805-09d3-3757-e6c6-64dfa5e4a1ee"><h4 id="_f1ba4355-d37b-4b35-8da1-b07fe9c7824a"><a class="anchor" href="#_fbc24805-09d3-3757-e6c6-64dfa5e4a1ee"></a><a class="header" href="#_fbc24805-09d3-3757-e6c6-64dfa5e4a1ee">11.1.2.2.  Category</a></h4>
 
-<p id="_02c6534a-04e6-6a51-39ca-c8fee87e143b">Semantic improvement</p>
+<p id="_5ef6a8e5-96bb-45ba-cd39-f32df7a1ce3c">Semantic improvement</p>
 </div>
 
-<div id="_description_4"><h4 id="_8c3e9aa6-c492-4a0b-86ff-4ae627c29a33"><a class="anchor" href="#_description_4"></a><a class="header" href="#_description_4">11.1.4.3.  Description</a></h4>
+<div id="_3795b994-9296-61ca-331f-82fd8d95992c"><h4 id="_42afbebf-1012-4841-90b9-fa61906ce0ad"><a class="anchor" href="#_3795b994-9296-61ca-331f-82fd8d95992c"></a><a class="header" href="#_3795b994-9296-61ca-331f-82fd8d95992c">11.1.2.3.  Description</a></h4>
 
-<p id="_294760ca-3aec-f01d-27c9-12b718320b3e">GeoSPARQL should include ways to define multi-component 3D geometries, whereas each component expresses its own semantics. For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph.</p>
+<p id="_8cd751b8-e177-11a1-16a9-e369a2e26be0">GeoSPARQL should include ways to represent relations between 3D geometries and relations between 3D geometries and geometries of lower dimensions. The relations should be expressable in property relations and should be queryable using SPARQL extension functions.</p>
 </div>
 </div>
 
-<div id="_extension_5_positioning_of_3d_geometries"><h3 id="_3f5a805f-45fb-493f-9138-d9cd40baefe8"><a class="anchor" href="#_extension_5_positioning_of_3d_geometries"></a><a class="header" href="#_extension_5_positioning_of_3d_geometries">11.1.5.  Extension 5: Positioning of 3D geometries</a></h3>
+<div id="_3d40a0e4-40c4-8681-0995-a5c24576bc89"><h3 id="_9643fdea-3632-45a7-b7bb-07ba1f9caaa5"><a class="anchor" href="#_3d40a0e4-40c4-8681-0995-a5c24576bc89"></a><a class="header" href="#_3d40a0e4-40c4-8681-0995-a5c24576bc89">11.1.3.  Extension 3: Appearance of 3D geometries</a></h3>
 
-<div id="_github_issue_uri_5"><h4 id="_368c027a-0e58-4150-9468-2d4ef90c536f"><a class="anchor" href="#_github_issue_uri_5"></a><a class="header" href="#_github_issue_uri_5">11.1.5.1.  GitHub Issue URI</a></h4>
+<div id="_e15008d3-ef23-4410-b67c-f6f274fe2d0a"><h4 id="_0993b314-ce90-47a8-a07e-417729c47a26"><a class="anchor" href="#_e15008d3-ef23-4410-b67c-f6f274fe2d0a"></a><a class="header" href="#_e15008d3-ef23-4410-b67c-f6f274fe2d0a">11.1.3.1.  GitHub Issue URI</a></h4>
 
-<div class="ul_wrap"><ul id="_aee86eaa-3df9-ef87-8c47-d17336f10dce"><li><p id="_47df0af4-239e-a561-481b-df3b4d21a9a5"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/587">https://github.com/opengeospatial/ogc-geosparql/issues/587</a></p>
+<div class="ul_wrap"><ul id="_a5928482-6079-0c46-d26c-070c10158253"><li><p id="_29ef2e46-948f-c6a5-b28b-a791e53b6660"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/584">https://github.com/opengeospatial/ogc-geosparql/issues/584</a></p>
 </li>
-<li><p id="_d2843a5b-9227-6b30-47f5-164bca977fc8"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/588">https://github.com/opengeospatial/ogc-geosparql/issues/588</a></p>
-</li>
-<li><p id="_6fa16e63-92df-b097-c328-905c559e6604"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/589">https://github.com/opengeospatial/ogc-geosparql/issues/589</a></p>
-</li>
-<li><p id="_1ba85f41-9f32-5366-cf8b-5cb4091ada17"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/591">https://github.com/opengeospatial/ogc-geosparql/issues/591</a></p>
+<li><p id="_94ee6b0c-0a57-6891-1238-77cac7a0515b"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/592">https://github.com/opengeospatial/ogc-geosparql/issues/592</a></p>
 </li>
 </ul></div>
 </div>
 
-<div id="_category_5"><h4 id="_915abf5a-16aa-4031-93ee-c102a73fdee4"><a class="anchor" href="#_category_5"></a><a class="header" href="#_category_5">11.1.5.2.  Category</a></h4>
+<div id="_e3e42566-a4d7-7aeb-6449-f34b92ecf500"><h4 id="_004d384b-8474-4b41-b5e3-d71650f1bbb6"><a class="anchor" href="#_e3e42566-a4d7-7aeb-6449-f34b92ecf500"></a><a class="header" href="#_e3e42566-a4d7-7aeb-6449-f34b92ecf500">11.1.3.2.  Category</a></h4>
 
-<p id="_b5ed6360-d349-e8aa-2ebe-5db8fa99d23e">Semantic improvement</p>
+<p id="_cb82b87c-3fae-8bca-f5bc-800fe758a2b1">Semantic improvement</p>
 </div>
 
-<div id="_description_5"><h4 id="_c941ee4b-ca9b-4039-bbe9-06779781ea44"><a class="anchor" href="#_description_5"></a><a class="header" href="#_description_5">11.1.5.3.  Description</a></h4>
+<div id="_fc0207ba-0e4c-d612-7768-9a1bc5179279"><h4 id="_b9208b2f-23a0-40db-9111-92633577b8cd"><a class="anchor" href="#_fc0207ba-0e4c-d612-7768-9a1bc5179279"></a><a class="header" href="#_fc0207ba-0e4c-d612-7768-9a1bc5179279">11.1.3.3.  Description</a></h4>
 
-<p id="_ecd59bca-aafa-8411-84b8-30ae08cd46b5">GeoSPARQL should include ways to position 3D geometries in a 3D space. Commonly 3D geometries are rotated, translated and scaled using commonly defined operators in computer graphics. Similar operations are needed for the relative positioning of 3D objects in GeoSPARQL, as properties and potentially as functions.</p>
-</div>
-</div>
+<p id="_59976075-7b10-61c6-ef23-0a72b9d27f34">GeoSPARQL should include ways to represent materials and textures of 3D geometries, so that geometries can be styled accordingly.</p>
 
-<div id="_extension_6_alignments_of_geosparql_3d"><h3 id="_bfbee833-9432-4458-90bf-bf69ae4192ba"><a class="anchor" href="#_extension_6_alignments_of_geosparql_3d"></a><a class="header" href="#_extension_6_alignments_of_geosparql_3d">11.1.6.  Extension 6: Alignments of GeoSPARQL 3D</a></h3>
+<p id="_bc504e62-653c-cbfc-4beb-78b2afdeba2a">Materials include:</p>
 
-<div id="_github_issue_uri_6"><h4 id="_0366a233-78c3-4d96-bd9f-66ca7e1e9f0f"><a class="anchor" href="#_github_issue_uri_6"></a><a class="header" href="#_github_issue_uri_6">11.1.6.1.  GitHub Issue URI</a></h4>
-
-<div class="ul_wrap"><ul id="_bc0e6c55-b1b9-23bc-5e17-f03b3bd4684c"><li><p id="_ea9ff25b-977c-1aaa-af87-cd9d174e03bd"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/590">https://github.com/opengeospatial/ogc-geosparql/issues/590</a></p>
+<div class="ul_wrap"><ul id="_34d810de-2d43-c813-d88a-ab43f1260219"><li><p id="_29c6c4cf-ca54-0d36-51ca-73a7edfcb58c">Colors of surfaces with light diffusion parameters</p>
 </li>
-<li><p id="_58822e85-1789-f897-f944-b25210f7ec8a"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/574">https://github.com/opengeospatial/ogc-geosparql/issues/574</a></p>
-</li>
-<li><p id="_35e34e7f-77a2-aa3a-1310-a15a563ebf65"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/571">https://github.com/opengeospatial/ogc-geosparql/issues/571</a></p>
-</li>
-</ul></div>
-</div>
-
-<div id="_category_6"><h4 id="_35d0a5b5-dcb4-4511-8579-c30b85c0a4d5"><a class="anchor" href="#_category_6"></a><a class="header" href="#_category_6">11.1.6.2.  Category</a></h4>
-
-<p id="_e68b9d29-5751-7e8e-0973-f8b34f7a5ca3">Semantic improvement</p>
-</div>
-
-<div id="_description_6"><h4 id="_ea2f2278-6ef0-4339-ab94-f6551b04091d"><a class="anchor" href="#_description_6"></a><a class="header" href="#_description_6">11.1.6.3.  Description</a></h4>
-
-<p id="_fbf36c75-ee93-8faa-10bb-db81d067db93">GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains. Especially alignments to  <a href="https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/">ifcOWL</a> and the <a href="https://www.web3d.org/x3d/content/semantics/semantics.html">X3D vocabulary</a> would position the GeoSPARQL vocabulary as a link between these different standards.</p>
-</div>
-</div>
-
-<div id="_extension_7_alignments_of_engineering_crs_to_geospatial_crs"><h3 id="_8bbc8e27-fe80-429a-9694-44183bb9cd9c"><a class="anchor" href="#_extension_7_alignments_of_engineering_crs_to_geospatial_crs"></a><a class="header" href="#_extension_7_alignments_of_engineering_crs_to_geospatial_crs">11.1.7.  Extension 7: Alignments of Engineering CRS to Geospatial CRS</a></h3>
-
-<div id="_github_issue_uri_7"><h4 id="_f6fc32d1-606e-4a74-8416-57bb66d55701"><a class="anchor" href="#_github_issue_uri_7"></a><a class="header" href="#_github_issue_uri_7">11.1.7.1.  GitHub Issue URI</a></h4>
-
-<p id="_782cfaca-efd0-7b10-08cc-383aec38cd4d"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/586">https://github.com/opengeospatial/ogc-geosparql/issues/586</a></p>
-</div>
-
-<div id="_category_7"><h4 id="_c5f97f1b-10ce-41b0-aa3f-5572ad56a645"><a class="anchor" href="#_category_7"></a><a class="header" href="#_category_7">11.1.7.2.  Category</a></h4>
-
-<p id="_6568d39e-1f9d-37f7-094a-1336b28bf739">Semantic improvement</p>
-</div>
-
-<div id="_description_7"><h4 id="_e30a6a42-5763-4254-b6e9-b8e39dab4265"><a class="anchor" href="#_description_7"></a><a class="header" href="#_description_7">11.1.7.3.  Description</a></h4>
-
-<p id="_04fedbd2-d4e9-c6a9-1c3f-d274aaee1b40">GeoSPARQL 3D should provide the opportunity to align a local coordinate system in which most 3D geometries are defined with a coordinate reference. While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging  <a href="https://github.com/opengeospatial/ontology-crs">Ontology CRS</a> developments of OGC and provide necessary functions or properties to create the link.</p>
-</div>
-</div>
-
-<div id="_extension_8_geometry_extrusion"><h3 id="_39cdfd47-e03b-4509-9899-34919673c76d"><a class="anchor" href="#_extension_8_geometry_extrusion"></a><a class="header" href="#_extension_8_geometry_extrusion">11.1.8.  Extension 8: Geometry Extrusion</a></h3>
-
-<div id="_github_issue_uri_8"><h4 id="_b5e4f61a-ad36-441f-ad61-f031726aa475"><a class="anchor" href="#_github_issue_uri_8"></a><a class="header" href="#_github_issue_uri_8">11.1.8.1.  GitHub Issue URI</a></h4>
-
-<div class="ul_wrap"><ul id="_2bd7e1cc-d0a9-8cd4-9643-6e0814f06434"><li><p id="_97aa4f34-80b1-dcbe-592c-71c8e01b9f09"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/556">https://github.com/opengeospatial/ogc-geosparql/issues/556</a></p>
-</li>
-<li><p id="_cc18b4ce-5545-8a8b-e512-7e5298af0ff6"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/547">https://github.com/opengeospatial/ogc-geosparql/issues/547</a></p>
-</li>
-</ul></div>
-</div>
-
-<div id="_category_8"><h4 id="_43aa805e-2c02-40f5-9eff-2690b6e2a8d3"><a class="anchor" href="#_category_8"></a><a class="header" href="#_category_8">11.1.8.2.  Category</a></h4>
-
-<p id="_b15c85d0-bac5-0783-a472-b24f577bf88d">Semantic improvement</p>
-</div>
-
-<div id="_description_8"><h4 id="_79a131fd-29aa-4a41-8969-1fdf4ca60639"><a class="anchor" href="#_description_8"></a><a class="header" href="#_description_8">11.1.8.3.  Description</a></h4>
-
-<p id="_dd0d15df-86c3-35e5-67d2-743a3994200e">GeoSPARQL 3D should provide the opportunity to extrude 2D geometries to 3D geometries and vice versa.</p>
-</div>
-</div>
-
-<div id="_extension_9_geometry_attributes"><h3 id="_512fbbd5-4fbd-4c25-ad27-4f03ca6149a6"><a class="anchor" href="#_extension_9_geometry_attributes"></a><a class="header" href="#_extension_9_geometry_attributes">11.1.9.  Extension 9: Geometry Attributes</a></h3>
-
-<div id="_github_issue_uri_9"><h4 id="_b27d94ec-5a44-46c1-92d6-d36b696b2fea"><a class="anchor" href="#_github_issue_uri_9"></a><a class="header" href="#_github_issue_uri_9">11.1.9.1.  GitHub Issue URI</a></h4>
-
-<div class="ul_wrap"><ul id="_0e1e0de6-4b8f-3ef7-ed65-835f5b1de9a5"><li><p id="_90a9f2b4-68ee-8925-ee3a-ec3a55678bca"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/568">https://github.com/opengeospatial/ogc-geosparql/issues/568</a></p>
-</li>
-<li><p id="_5bd4ff4a-42ef-27b6-5855-1fd97ecf2899"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/550">https://github.com/opengeospatial/ogc-geosparql/issues/550</a></p>
-</li>
-<li><p id="_ce80d67a-c980-6ce5-7250-61102c1f6443"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/549">https://github.com/opengeospatial/ogc-geosparql/issues/549</a></p>
-</li>
-<li><p id="_60a18c5c-e111-9aa8-42e0-cf66c33844c0"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/548">https://github.com/opengeospatial/ogc-geosparql/issues/548</a></p>
-</li>
-<li><p id="_91ec4784-6975-ddc3-f1c9-d7483cc7b18e"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/558">https://github.com/opengeospatial/ogc-geosparql/issues/558</a></p>
-</li>
-</ul></div>
-</div>
-
-<div id="_category_9"><h4 id="_0994deeb-02a9-4e19-9e23-85fa68506da4"><a class="anchor" href="#_category_9"></a><a class="header" href="#_category_9">11.1.9.2.  Category</a></h4>
-
-<p id="_2d1865de-203d-d505-8bea-05f5865d03f0">Semantic improvement</p>
-</div>
-
-<div id="_description_9"><h4 id="_717f5a58-8723-41cd-953b-75781e9b670d"><a class="anchor" href="#_description_9"></a><a class="header" href="#_description_9">11.1.9.3.  Description</a></h4>
-
-<p id="_118af00e-027c-6b04-90fb-46056653e4a2">GeoSPARQL 3D should provide functions and properties that describe essential properties of a 3D Geometry such as its minimum and maximum height, width and depth and its CompactnessRatio.</p>
-</div>
-</div>
-
-<div id="_extension_10_non_topological_query_functions_3d_extension"><h3 id="_d986063f-a117-4686-9985-34b27831f36e"><a class="anchor" href="#_extension_10_non_topological_query_functions_3d_extension"></a><a class="header" href="#_extension_10_non_topological_query_functions_3d_extension">11.1.10.  Extension 10: Non-topological Query Functions — 3D Extension</a></h3>
-
-<div id="_github_issue_uri_10"><h4 id="_96db7058-9e0b-4356-beae-d4df71d8dd46"><a class="anchor" href="#_github_issue_uri_10"></a><a class="header" href="#_github_issue_uri_10">11.1.10.1.  GitHub Issue URI</a></h4>
-
-<div class="ul_wrap"><ul id="_2f1b9dc5-097a-d39b-01e4-e41b1c04b339"><li><p id="_d3db2ae9-d7ef-77ec-f3cb-f73bee60a3a0"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/556">https://github.com/opengeospatial/ogc-geosparql/issues/556</a></p>
-</li>
-</ul></div>
-</div>
-
-<div id="_category_10"><h4 id="_cefe25c8-d6f2-4674-8fb8-0d061156a4c1"><a class="anchor" href="#_category_10"></a><a class="header" href="#_category_10">11.1.10.2.  Category</a></h4>
-
-<p id="_f2f6ba32-90d6-0629-857b-c34b16095a13">Semantic improvement</p>
-</div>
-
-<div id="_description_10"><h4 id="_c9d41527-8669-4f73-80df-e40ee011df23"><a class="anchor" href="#_description_10"></a><a class="header" href="#_description_10">11.1.10.3.  Description</a></h4>
-
-<p id="_6ac7b9a7-f660-8e34-6b01-6d06cf8b2aa7">GeoSPARQL 3D should provide the opportunity to execute non-topological query functions on 2D and 3D geometries commonly used in geospatial databases. Proposed extensions include following functions:</p>
-
-<div class="ul_wrap"><ul id="_42900343-eac2-8526-cf2d-a39ccd68dd52"><li><p id="_a43b917a-2cfb-d3f4-2959-b0edebe2dd74">geometry extrusion to the specified line segment</p>
-</li>
-<li><p id="_04aaa406-756d-031f-bf98-7df1a51f4742">geometry extrusion to the specified height</p>
-</li>
-<li><p id="_8f2933f4-78ef-f1e3-1cdd-874e460418e9">spatiotemporal geometry extrusion to the specified line segment with specific start and end time</p>
+<li><p id="_a64924da-2f6c-fa8a-9db2-ba4ef5ab8bb5">Images as textures, which are associated with surfaces of the 3D object</p>
 </li>
 </ul></div>
 </div>
 </div>
-</div></div><div id="_beneficiaries_and_benefits"><h1 id="_68ef6092-680f-45fb-b190-791aac5bade9"><a class="anchor" href="#_beneficiaries_and_benefits"></a><a class="header" href="#_beneficiaries_and_benefits">12.  Beneficiaries and benefits</a></h1><p id="_7da8a28b-7616-17f9-4e12-c903d87b9408">This section describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.</p><div id="_beneficiaries"><h2 id="_72ff7faa-b4bd-4635-a392-ebea8c01c66e"><a class="anchor" href="#_beneficiaries"></a><a class="header" href="#_beneficiaries">12.1.  Beneficiaries</a></h2>
 
-<div id="_beneficiary_1_someone_who_benefits"><h3 id="_0b8a960e-180c-4f78-bd79-9506f05bd01c"><a class="anchor" href="#_beneficiary_1_someone_who_benefits"></a><a class="header" href="#_beneficiary_1_someone_who_benefits">12.1.1.  Beneficiary 1: Someone who benefits</a></h3>
+<div id="_33c86ef5-b244-c2c7-0c1d-47e5d8a77c5e"><h3 id="_f819eea5-2e15-49d6-9c69-3d48572943ba"><a class="anchor" href="#_33c86ef5-b244-c2c7-0c1d-47e5d8a77c5e"></a><a class="header" href="#_33c86ef5-b244-c2c7-0c1d-47e5d8a77c5e">11.1.4.  Extension 4: Multi-component 3D geometries</a></h3>
+
+<div id="_9990188e-e864-062b-c6fb-6ebd5de50afd"><h4 id="_9322b554-d848-416c-89f7-26d95171aaa5"><a class="anchor" href="#_9990188e-e864-062b-c6fb-6ebd5de50afd"></a><a class="header" href="#_9990188e-e864-062b-c6fb-6ebd5de50afd">11.1.4.1.  GitHub Issue URI</a></h4>
+
+<p id="_9b5bb9f0-5029-f4a2-8145-26bee99d9b91"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/591">https://github.com/opengeospatial/ogc-geosparql/issues/591</a></p>
+</div>
+
+<div id="_a9330441-e793-be75-f41f-00e130c690fd"><h4 id="_b532d850-6f92-411f-8688-ee1867ac381c"><a class="anchor" href="#_a9330441-e793-be75-f41f-00e130c690fd"></a><a class="header" href="#_a9330441-e793-be75-f41f-00e130c690fd">11.1.4.2.  Category</a></h4>
+
+<p id="_b3fda897-4820-c52b-3a5e-77d23145de30">Semantic improvement</p>
+</div>
+
+<div id="_251edc8c-251b-8e32-122f-b51690b6419a"><h4 id="_2955eeb4-edc5-457e-a036-ee944cea27b4"><a class="anchor" href="#_251edc8c-251b-8e32-122f-b51690b6419a"></a><a class="header" href="#_251edc8c-251b-8e32-122f-b51690b6419a">11.1.4.3.  Description</a></h4>
+
+<p id="_0daf9ba6-c7c6-160f-34fa-130c1dfafb4a">GeoSPARQL should include ways to define multi-component 3D geometries, whereas each component expresses its own semantics. For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph.</p>
+</div>
+</div>
+
+<div id="_59a3f4a6-6ded-5394-22de-a95bf2488336"><h3 id="_8edd596a-3561-48e6-a177-d0e2f1e983f8"><a class="anchor" href="#_59a3f4a6-6ded-5394-22de-a95bf2488336"></a><a class="header" href="#_59a3f4a6-6ded-5394-22de-a95bf2488336">11.1.5.  Extension 5: Positioning of 3D geometries</a></h3>
+
+<div id="_018d6667-0d65-d929-82a6-0586d5327275"><h4 id="_5ee7a5aa-fa38-4965-b581-15e6b6e58af2"><a class="anchor" href="#_018d6667-0d65-d929-82a6-0586d5327275"></a><a class="header" href="#_018d6667-0d65-d929-82a6-0586d5327275">11.1.5.1.  GitHub Issue URI</a></h4>
+
+<div class="ul_wrap"><ul id="_a0642c43-6eb3-5016-d66f-6496a5712f02"><li><p id="_72d5e7ce-68d7-cefc-84a0-f6e336c66ba2"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/587">https://github.com/opengeospatial/ogc-geosparql/issues/587</a></p>
+</li>
+<li><p id="_070cafc0-2dab-c60d-01c6-a41dfea8e5a4"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/588">https://github.com/opengeospatial/ogc-geosparql/issues/588</a></p>
+</li>
+<li><p id="_87ed9751-e550-c920-a279-f4ef58867808"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/589">https://github.com/opengeospatial/ogc-geosparql/issues/589</a></p>
+</li>
+<li><p id="_3c977272-1e9a-8f32-5525-5dcdf09c2d75"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/591">https://github.com/opengeospatial/ogc-geosparql/issues/591</a></p>
+</li>
+</ul></div>
+</div>
+
+<div id="_fe8bed78-7619-2238-ed8a-4ef17f9dd93b"><h4 id="_c3049c3c-8dc4-4ee0-83c0-d3402495d885"><a class="anchor" href="#_fe8bed78-7619-2238-ed8a-4ef17f9dd93b"></a><a class="header" href="#_fe8bed78-7619-2238-ed8a-4ef17f9dd93b">11.1.5.2.  Category</a></h4>
+
+<p id="_88fe09de-4e01-8e44-1dd3-b639ef4c7e8a">Semantic improvement</p>
+</div>
+
+<div id="_6761542a-975b-25f9-32b2-e0bc716564b6"><h4 id="_61b28c12-3a72-472f-98fe-e0c3bb22aa7b"><a class="anchor" href="#_6761542a-975b-25f9-32b2-e0bc716564b6"></a><a class="header" href="#_6761542a-975b-25f9-32b2-e0bc716564b6">11.1.5.3.  Description</a></h4>
+
+<p id="_3a3ed12d-e2dc-c3d1-32a0-3559dd9be7de">GeoSPARQL should include ways to position 3D geometries in a 3D space. Commonly 3D geometries are rotated, translated and scaled using commonly defined operators in computer graphics. Similar operations are needed for the relative positioning of 3D objects in GeoSPARQL, as properties and potentially as functions.</p>
+</div>
+</div>
+
+<div id="_30d28f80-25b4-fdaf-418f-e72bb326fd16"><h3 id="_b5646909-abab-41df-971b-067fba150879"><a class="anchor" href="#_30d28f80-25b4-fdaf-418f-e72bb326fd16"></a><a class="header" href="#_30d28f80-25b4-fdaf-418f-e72bb326fd16">11.1.6.  Extension 6: Alignments of GeoSPARQL 3D</a></h3>
+
+<div id="_5f8893d7-6d1f-e837-d27a-665e97fbae0a"><h4 id="_9371bd28-efba-42bd-adeb-5a0f25be8eca"><a class="anchor" href="#_5f8893d7-6d1f-e837-d27a-665e97fbae0a"></a><a class="header" href="#_5f8893d7-6d1f-e837-d27a-665e97fbae0a">11.1.6.1.  GitHub Issue URI</a></h4>
+
+<div class="ul_wrap"><ul id="_4a1e7761-d91d-ce3a-88e6-ca93063d8072"><li><p id="_63611b53-2982-ef84-7f51-37a838ee0fcd"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/590">https://github.com/opengeospatial/ogc-geosparql/issues/590</a></p>
+</li>
+<li><p id="_3e507bf3-17c5-de7c-a741-bd891949a7a9"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/574">https://github.com/opengeospatial/ogc-geosparql/issues/574</a></p>
+</li>
+<li><p id="_4f9c7f73-5d94-ff9e-49bb-75acbf3cd748"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/571">https://github.com/opengeospatial/ogc-geosparql/issues/571</a></p>
+</li>
+</ul></div>
+</div>
+
+<div id="_4719d8b6-5e6a-3ca7-74bd-354e713aa84a"><h4 id="_292c8d39-e5f2-4037-ad59-7471d55fb81d"><a class="anchor" href="#_4719d8b6-5e6a-3ca7-74bd-354e713aa84a"></a><a class="header" href="#_4719d8b6-5e6a-3ca7-74bd-354e713aa84a">11.1.6.2.  Category</a></h4>
+
+<p id="_bed48a34-1e3f-16d0-c767-9d682c1cf16c">Semantic improvement</p>
+</div>
+
+<div id="_9f0eb56f-2c1e-0adf-25b7-923547b216a7"><h4 id="_b135595a-0fa5-4862-9c7e-9d1f0c136995"><a class="anchor" href="#_9f0eb56f-2c1e-0adf-25b7-923547b216a7"></a><a class="header" href="#_9f0eb56f-2c1e-0adf-25b7-923547b216a7">11.1.6.3.  Description</a></h4>
+
+<p id="_24a07278-abd6-3213-d001-2018488f8242">GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains. Especially alignments to  <a href="https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/">ifcOWL</a> and the <a href="https://www.web3d.org/x3d/content/semantics/semantics.html">X3D vocabulary</a> would position the GeoSPARQL vocabulary as a link between these different standards.</p>
+</div>
+</div>
+
+<div id="_babe8802-6bfa-0741-6c27-2c17f32803bc"><h3 id="_8046ebb5-0de5-4923-b5f1-d7337f1fcf53"><a class="anchor" href="#_babe8802-6bfa-0741-6c27-2c17f32803bc"></a><a class="header" href="#_babe8802-6bfa-0741-6c27-2c17f32803bc">11.1.7.  Extension 7: Alignments of Engineering CRS to Geospatial CRS</a></h3>
+
+<div id="_75ce44ff-a4fe-81f6-5273-83093a373cd4"><h4 id="_e11c96a7-8208-4045-a399-00735ec56f8c"><a class="anchor" href="#_75ce44ff-a4fe-81f6-5273-83093a373cd4"></a><a class="header" href="#_75ce44ff-a4fe-81f6-5273-83093a373cd4">11.1.7.1.  GitHub Issue URI</a></h4>
+
+<p id="_6440d159-e44b-fb6c-31c6-a9b39dd9f34b"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/586">https://github.com/opengeospatial/ogc-geosparql/issues/586</a></p>
+</div>
+
+<div id="_3eb70d80-57ca-83bd-84d8-1c51c927c7bf"><h4 id="_c500072e-296a-4c59-892f-8d2b6bfff824"><a class="anchor" href="#_3eb70d80-57ca-83bd-84d8-1c51c927c7bf"></a><a class="header" href="#_3eb70d80-57ca-83bd-84d8-1c51c927c7bf">11.1.7.2.  Category</a></h4>
+
+<p id="_6252d2ae-77dc-8d88-d202-66dc83317a85">Semantic improvement</p>
+</div>
+
+<div id="_25fc07b1-57fe-7534-9964-d537d829236b"><h4 id="_963db3c5-fa11-4ec5-a3dd-b5cd35076676"><a class="anchor" href="#_25fc07b1-57fe-7534-9964-d537d829236b"></a><a class="header" href="#_25fc07b1-57fe-7534-9964-d537d829236b">11.1.7.3.  Description</a></h4>
+
+<p id="_cecf4542-292e-f76d-d091-1c0a3894d7ec">GeoSPARQL 3D should provide the opportunity to align a local coordinate system in which most 3D geometries are defined with a coordinate reference. While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging  <a href="https://github.com/opengeospatial/ontology-crs">Ontology CRS</a> developments of OGC and provide necessary functions or properties to create the link.</p>
+</div>
+</div>
+
+<div id="_8d849249-5f0b-a0b0-820b-53207678704b"><h3 id="_71899c41-6be0-442c-9428-76b47bb74635"><a class="anchor" href="#_8d849249-5f0b-a0b0-820b-53207678704b"></a><a class="header" href="#_8d849249-5f0b-a0b0-820b-53207678704b">11.1.8.  Extension 8: Geometry Extrusion</a></h3>
+
+<div id="_cfd96b93-76e2-4550-5d82-d8060e4ecdfe"><h4 id="_30cf2fdc-f86d-4d6f-9372-d4840f75fea7"><a class="anchor" href="#_cfd96b93-76e2-4550-5d82-d8060e4ecdfe"></a><a class="header" href="#_cfd96b93-76e2-4550-5d82-d8060e4ecdfe">11.1.8.1.  GitHub Issue URI</a></h4>
+
+<div class="ul_wrap"><ul id="_ed284c10-e985-c5f5-522d-6c9e0a36e9d2"><li><p id="_4026a507-7f94-d044-b007-db21f02f1d8c"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/556">https://github.com/opengeospatial/ogc-geosparql/issues/556</a></p>
+</li>
+<li><p id="_3b9644d6-e9b5-8177-32f6-52a0ae50346f"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/547">https://github.com/opengeospatial/ogc-geosparql/issues/547</a></p>
+</li>
+</ul></div>
+</div>
+
+<div id="_1a4a866e-800f-447a-0b51-9c46fa305a1d"><h4 id="_59754aaa-15e9-44ee-8f67-49a3f907b62f"><a class="anchor" href="#_1a4a866e-800f-447a-0b51-9c46fa305a1d"></a><a class="header" href="#_1a4a866e-800f-447a-0b51-9c46fa305a1d">11.1.8.2.  Category</a></h4>
+
+<p id="_7922aba5-b376-3b40-2a76-6379eeb0040e">Semantic improvement</p>
+</div>
+
+<div id="_0d8ae8b6-f76a-9055-a76c-f204eb7c6cd1"><h4 id="_660bc6fb-20ee-44f7-ba88-3a2d8027a05b"><a class="anchor" href="#_0d8ae8b6-f76a-9055-a76c-f204eb7c6cd1"></a><a class="header" href="#_0d8ae8b6-f76a-9055-a76c-f204eb7c6cd1">11.1.8.3.  Description</a></h4>
+
+<p id="_4fbd4424-4c1f-8d52-8dff-8c2927d1ca7d">GeoSPARQL 3D should provide the opportunity to extrude 2D geometries to 3D geometries and vice versa.</p>
+</div>
+</div>
+
+<div id="_2aa051e4-3b60-5710-4f19-d0996c84bd62"><h3 id="_dfef41b5-6e50-4d33-85d0-fe90d3f3fd8c"><a class="anchor" href="#_2aa051e4-3b60-5710-4f19-d0996c84bd62"></a><a class="header" href="#_2aa051e4-3b60-5710-4f19-d0996c84bd62">11.1.9.  Extension 9: Geometry Attributes</a></h3>
+
+<div id="_5b281c11-f34a-4ed9-0164-f877ac4a4704"><h4 id="_da0224ba-6bd9-4faf-b3c2-52c0eed1281f"><a class="anchor" href="#_5b281c11-f34a-4ed9-0164-f877ac4a4704"></a><a class="header" href="#_5b281c11-f34a-4ed9-0164-f877ac4a4704">11.1.9.1.  GitHub Issue URI</a></h4>
+
+<div class="ul_wrap"><ul id="_108cc439-0771-ce90-bb8e-3d233e969a40"><li><p id="_03c1ba88-4c20-5570-7291-c02751893816"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/568">https://github.com/opengeospatial/ogc-geosparql/issues/568</a></p>
+</li>
+<li><p id="_4510a1cd-f48f-494d-ddfd-90e18478d1d5"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/550">https://github.com/opengeospatial/ogc-geosparql/issues/550</a></p>
+</li>
+<li><p id="_332adfe3-a7e7-17aa-27ca-c68227423bc2"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/549">https://github.com/opengeospatial/ogc-geosparql/issues/549</a></p>
+</li>
+<li><p id="_202638ee-bbc0-2006-7cc2-16480cce0d2a"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/548">https://github.com/opengeospatial/ogc-geosparql/issues/548</a></p>
+</li>
+<li><p id="_e44db8f3-7cc5-05af-c234-46724a8f7f79"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/558">https://github.com/opengeospatial/ogc-geosparql/issues/558</a></p>
+</li>
+</ul></div>
+</div>
+
+<div id="_79fc8058-f6ba-c85e-3cd8-a970882cb156"><h4 id="_8a5ad19a-b6f4-4860-9a19-c83e492b77f0"><a class="anchor" href="#_79fc8058-f6ba-c85e-3cd8-a970882cb156"></a><a class="header" href="#_79fc8058-f6ba-c85e-3cd8-a970882cb156">11.1.9.2.  Category</a></h4>
+
+<p id="_39c830e7-0d07-7516-48c2-9bf3d32c04df">Semantic improvement</p>
+</div>
+
+<div id="_6a084882-4b1e-fdfc-5bf0-95a30b0d423f"><h4 id="_7cb8ffc8-e1ff-4923-808e-f24c451e09b6"><a class="anchor" href="#_6a084882-4b1e-fdfc-5bf0-95a30b0d423f"></a><a class="header" href="#_6a084882-4b1e-fdfc-5bf0-95a30b0d423f">11.1.9.3.  Description</a></h4>
+
+<p id="_62c90709-dfb4-1983-1a4c-43d17ea401d8">GeoSPARQL 3D should provide functions and properties that describe essential properties of a 3D Geometry such as its minimum and maximum height, width and depth and its CompactnessRatio.</p>
+</div>
+</div>
+
+<div id="_50a73197-0f24-b56a-5b9b-74a77891f306"><h3 id="_d5697630-222c-4582-a8f9-53617ba0f16a"><a class="anchor" href="#_50a73197-0f24-b56a-5b9b-74a77891f306"></a><a class="header" href="#_50a73197-0f24-b56a-5b9b-74a77891f306">11.1.10.  Extension 10: Non-topological Query Functions — 3D Extension</a></h3>
+
+<div id="_3335a8f8-fa6e-67b9-8eac-7d8056c8d71d"><h4 id="_68287e76-bcbc-4487-b631-78c7d88af72d"><a class="anchor" href="#_3335a8f8-fa6e-67b9-8eac-7d8056c8d71d"></a><a class="header" href="#_3335a8f8-fa6e-67b9-8eac-7d8056c8d71d">11.1.10.1.  GitHub Issue URI</a></h4>
+
+<div class="ul_wrap"><ul id="_3398c72a-f917-81ab-201b-efaff0620425"><li><p id="_442cfdfa-6f7e-4dad-c438-ca8f41cb1090"><a href="https://github.com/opengeospatial/ogc-geosparql/issues/556">https://github.com/opengeospatial/ogc-geosparql/issues/556</a></p>
+</li>
+</ul></div>
+</div>
+
+<div id="_29c902c6-53ee-1faf-90fc-1d8abb2ef2b6"><h4 id="_a3d173a5-44e2-4050-896e-0e0cf57d6373"><a class="anchor" href="#_29c902c6-53ee-1faf-90fc-1d8abb2ef2b6"></a><a class="header" href="#_29c902c6-53ee-1faf-90fc-1d8abb2ef2b6">11.1.10.2.  Category</a></h4>
+
+<p id="_63916dda-f68f-fa0e-1ec2-ff20e8a6d7df">Semantic improvement</p>
+</div>
+
+<div id="_b2fbee14-fa37-c82b-ff38-a8c76055a162"><h4 id="_7bb90c17-1350-448a-b8c0-49dc7046c5a5"><a class="anchor" href="#_b2fbee14-fa37-c82b-ff38-a8c76055a162"></a><a class="header" href="#_b2fbee14-fa37-c82b-ff38-a8c76055a162">11.1.10.3.  Description</a></h4>
+
+<p id="_af7a6715-0863-dc22-25dd-6258bfb93c4a">GeoSPARQL 3D should provide the opportunity to execute non-topological query functions on 2D and 3D geometries commonly used in geospatial databases. Proposed extensions include following functions:</p>
+
+<div class="ul_wrap"><ul id="_cf0a2a84-ce90-cf33-017c-89ff0baafed7"><li><p id="_1fb2c2b9-4ee3-cc6e-235e-949b032d65b2">geometry extrusion to the specified line segment</p>
+</li>
+<li><p id="_0704cfbe-b43f-03e4-17db-95102e23d572">geometry extrusion to the specified height</p>
+</li>
+<li><p id="_61030c4d-4acd-9764-c76b-451ae775932d">spatiotemporal geometry extrusion to the specified line segment with specific start and end time</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div></div><div id="_1e1b8299-5246-dcff-2ffc-6f52f6ec404c"><h1 id="_75dabadb-9a7c-47cc-91fd-ffa55428a1c3"><a class="anchor" href="#_1e1b8299-5246-dcff-2ffc-6f52f6ec404c"></a><a class="header" href="#_1e1b8299-5246-dcff-2ffc-6f52f6ec404c">12.  Beneficiaries and benefits</a></h1><p id="_7557722e-51a8-2e6a-83a6-dcfbeb7205b9">This section describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.</p><div id="_190740d7-df33-ee14-dd9b-9f61d2b8c50d"><h2 id="_0a84089f-e94d-435f-b654-018129461e73"><a class="anchor" href="#_190740d7-df33-ee14-dd9b-9f61d2b8c50d"></a><a class="header" href="#_190740d7-df33-ee14-dd9b-9f61d2b8c50d">12.1.  Beneficiaries</a></h2>
+
+<div id="_eb214f04-4adb-40be-5ca0-a733f12f153f"><h3 id="_98dabfda-30ef-423f-8b0a-1ad6c55f891b"><a class="anchor" href="#_eb214f04-4adb-40be-5ca0-a733f12f153f"></a><a class="header" href="#_eb214f04-4adb-40be-5ca0-a733f12f153f">12.1.1.  Beneficiary 1: Someone who benefits</a></h3>
 
 </div>
-</div><div id="_benefits"><h2 id="_8c38391a-6efa-4f02-9788-dd09cdd4526b"><a class="anchor" href="#_benefits"></a><a class="header" href="#_benefits">12.2.  Benefits</a></h2>
+</div><div id="_c200232f-c525-d4df-9577-fe7fd353d57c"><h2 id="_e4cac9b1-f396-480a-ac3a-9e98beb00253"><a class="anchor" href="#_c200232f-c525-d4df-9577-fe7fd353d57c"></a><a class="header" href="#_c200232f-c525-d4df-9577-fe7fd353d57c">12.2.  Benefits</a></h2>
 
-<p id="_d1439dcb-c327-eb21-d95a-6918d1902e12">The benefits of semantic and graph technologies are outlined below.</p>
+<p id="_f470ad7e-09d4-96fa-4713-2b8bb616f9ff">The benefits of semantic and graph technologies are outlined below.</p>
 
-<div id="_benefit_b1_my_benefit"><h3 id="_461fd4c9-075b-4e64-a9f7-c3d70784785f"><a class="anchor" href="#_benefit_b1_my_benefit"></a><a class="header" href="#_benefit_b1_my_benefit">12.2.1.  Benefit B1: My benefit</a></h3>
+<div id="_b1c3f7e9-cf24-d69b-3be1-768535ca6b38"><h3 id="_f13fc072-e3e2-4149-a74c-d5054c7435d9"><a class="anchor" href="#_b1c3f7e9-cf24-d69b-3be1-768535ca6b38"></a><a class="header" href="#_b1c3f7e9-cf24-d69b-3be1-768535ca6b38">12.2.1.  Benefit B1: My benefit</a></h3>
 
 </div>
-</div></div><div id="_annex_n_n"><h1 id="_0cc191b9-5e63-4d5a-a494-e5d295b3a658"><a class="anchor" href="#_annex_n_n"></a><a class="header" href="#_annex_n_n">13.  Annex N: N</a></h1></div><div id="_annex_o_history"><h1 id="_34da7bc9-4fff-4ef3-bbad-4160a44255dd"><a class="anchor" href="#_annex_o_history"></a><a class="header" href="#_annex_o_history">14.  Annex O: History</a></h1></div><br /><div><h1 class="Section3" id="_25618eba-09b1-49c3-8765-b4980ca7a224">Bibliography</h1>
+</div></div><div id="_9ed901d8-1145-76eb-7b18-98b224af53d1"><h1 id="_6224e323-5e98-4b54-908d-3f62d30aad98"><a class="anchor" href="#_9ed901d8-1145-76eb-7b18-98b224af53d1"></a><a class="header" href="#_9ed901d8-1145-76eb-7b18-98b224af53d1">13.  Annex N: N</a></h1></div><div id="_33c03c24-6f5c-8844-93c1-14f0118d1379"><h1 id="_e3eb283d-419e-4bab-9761-4f4969231d4b"><a class="anchor" href="#_33c03c24-6f5c-8844-93c1-14f0118d1379"></a><a class="header" href="#_33c03c24-6f5c-8844-93c1-14f0118d1379">14.  Annex O: History</a></h1></div><br /><div><h1 class="Section3" id="_981ebfec-fd08-4061-8fb7-c0e71a9d262b">Bibliography</h1>
 
-<div class="figdl"><dl id="_26eeb3d5-f3ac-8462-37a9-defa2b5dcbcc"><dt id="RDF"><p>RDF</p></dt><dd><p id="_016dde65-9ce7-9c41-cd92-71152e53a2e8">World Wide Web Consortium, <i>RDF 1.1 Concepts and Abstract Syntax</i>, W3C Recommendation (25 February 2014). <a href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a></p>
-</dd><dt id="TTL"><p>TTL</p></dt><dd><p id="_2663af4b-b570-e654-f912-02d744867127">World Wide Web Consortium, <i>RDF 1.1 Turtle Terse RDF Triple Language</i>, W3C Recommendation (25 February 2014). <a href="https://www.w3.org/TR/turtle">https://www.w3.org/TR/turtle</a></p>
+<div class="figdl"><dl id="_41d303ad-578d-d19d-0dee-5c970d3b81e8"><dt id="RDF"><p>RDF</p></dt><dd><p id="_5a4e1538-fb1c-d0f4-f91b-b58f3e0e5f81">World Wide Web Consortium, <i>RDF 1.1 Concepts and Abstract Syntax</i>, W3C Recommendation (25 February 2014). <a href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a></p>
+</dd><dt id="TTL"><p>TTL</p></dt><dd><p id="_c1801b80-e159-1b74-e40b-931a26e725dd">World Wide Web Consortium, <i>RDF 1.1 Turtle Terse RDF Triple Language</i>, W3C Recommendation (25 February 2014). <a href="https://www.w3.org/TR/turtle">https://www.w3.org/TR/turtle</a></p>
 </dd></dl></div>
 </div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { preferredFont: "STIX" },
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
- });
+  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
   <script>
@@ -2445,21 +2649,34 @@ pre.sourcecode .nt {
   </script>
 
   <script>
-  //TOC toggle animation
-$('#toggle').on('click', function(){
-    if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
-            $('nav').hide();
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
         });
-        $('body').animate({ 'padding-left': '30px' }, 'slow');
-    }
-    else {
-        $('nav').show();
-        $('nav').animate({ 'left': '0px' }, 'slow');
-        $('body').animate({ 'padding-left': '360px' }, 'slow');
-    }
-});
-</script>
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
 
 <script>
     // Scroll to top button

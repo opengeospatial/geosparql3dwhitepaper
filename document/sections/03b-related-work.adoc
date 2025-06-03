@@ -131,6 +131,16 @@ Researchers mark noteworthy aspects of the cultural artifact as 3D annotations w
 
 **Knowledge Graphs as Metadata descriptions:** With the advent of more 3D models being published, the relevance of their creation parameters, their contents and their object metadata increases for the usecases of filtering them and also for the possibly automated selection of suitable cultureal heritage metadata for e.g. machine learning classifications. Currently, many metadata standards fulfil parts of the description chain and a unified vocabulary to described data types seems to be missing.
 
+===== Research applications making use of 3D models in Cultural Heritage
+
+This section discusses research projects with 3D contents based on the technologies they use as elaborated in the previous section.
+
+====== 3D models of cuneiform tablets
+
+Cuneiform tablets from ancient Iran provide an interesting research area, since they combine a 3D artifact with textual imprints that are of interest for a variety of reserach communities including Assyriologsts, Digital Humanists, Computational Linguists and last but not least Computer Scientists.
+The creation of 3D models of cuneiform tablets provides the best accessibility to the specificities of the original artifact in its absence and 3D scans have been used by computer scientists as the basis for certain machine learning application tasks, even though to this day only as a provision for 2D renderings of their surfaces.
+Interests of the research community include the description of interesting features such as cuneiform signs on cuneiform tablet surfaces and their connection to other text contents
+
 === IFC and BIM
 
 ===== Industry Foundation Classes (IFC) and BIM

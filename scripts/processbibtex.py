@@ -1,5 +1,8 @@
 import bibtexparser
-bibtexlib=bibtexparser.parse_file("../document/bibliography.bib")
+
+with open("../document/bibliography.bib", 'r') as file:
+    bibcontent = file.read()
+bibtexlib=bibtexparser.parse_string(bibcontent)
 bibstring=""
 for entry in bibtexlib.entries:
     bibstring+="* [[["+entry.key+", local-file("+entry.key+")]]]\n\n"

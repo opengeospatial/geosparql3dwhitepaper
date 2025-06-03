@@ -8,6 +8,7 @@
 :external-id: http://www.opengis.net/doc/WP/geosparql3d
 :comment: ### Internal reference number; mandatory
 :docnumber: YY-999
+:relaton-data-source: bibliography.bib
 :received-date: 2029-03-30
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
 :issued-date: 2029-03-30

@@ -2,6 +2,8 @@
 [[Bibliography]]
 == Bibliography
 
+* [[[el2023ifc,el2023ifc]]], _El Yamani S, Hajji R, Billen R. IFC-CityGML Data Integration for 3D Property Valuation_ ISPRS International Journal of Geo-Information. 2023; 12(9):351, https://doi.org/10.3390/ijgi12090351 2023 .
+
 * [[[RDF,RDF]]], _World Wide Web Consortium: RDF 1.1 Concepts and Abstract Syntax, W3C Recommendation_, https://www.w3.org/TR/rdf11-concepts/ (25 February 2014). 
 
 * [[[TTL,TTL]]], _World Wide Web Consortium: RDF 1.1 Turtle Terse RDF Triple Language, W3C Recommendation_, https://www.w3.org/TR/turtle (25 February 2014). 

@@ -5,6 +5,7 @@ with open("document/bibliography.bib", 'r') as file:
 bibtexlib=bibtexparser.parse_string(bibcontent)
 bibstring=""
 for entry in bibtexlib.entries:
+    print(entry.fields)
     if "doi" in entry.fields:
         bibstring+="* [[["+entry.key+", doi:"+entry.fields["doi"]+"]]]\n\n"
     elif "DOI" in entry.fields:

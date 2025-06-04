@@ -106,13 +106,20 @@ The CARARE metadata schema is a harvesting schema intended for delivering metada
 
 ===== Industry Foundation Classes (IFC) and BIM
 
-BIM is a paradigm in which object‐model definitions - with machine‑interpretable semantics - are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC).
+BIM is a paradigm in which object‐model definitions - with machine‑interpretable semantics - are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC). **IFC is unique in the sense that it allows expressing both geometrical as well as non-geometrical semantics.**
+
+**Non-geometrical: taxonomy of objects (building elements, relational constructs, scheduling information) and related properties**
+
+**Geometrical: appromximately 250 constructs related to geometry; even standards with only a geometric focus such as geosparql or collada do not reach that breadth in definitions**
+
+IFC has its idiosyncrasies and challenges, but is **unrivaled in terms of market adoption in a highly fragmented industry**.
 
 ====== Product model
 
 In IFC, a construction work is decomposed into a set of products. These products can have **multiple representations**. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
 
 At the same time, such a product separates the **placement** (an hierarchical transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.
+(Identifying faces in procedural geometries is also challenging (toplogical naming problem), so using geometric semantic overlays to annotate potentially procedural geometries makes sense)
 
 In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, **semantics and geometry are intertwined** such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics.
 

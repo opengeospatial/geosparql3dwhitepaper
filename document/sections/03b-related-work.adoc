@@ -5,7 +5,7 @@ This is still just a dump of resources. To be transformed into actual text.
 
 === CityGML
 
-CityGML is an open standardized data model for the exchange of 3D models of cities and landscapes.
+CityGML <<koble2005citygml>> is an open standardized data model for the exchange of 3D models of cities and landscapes.
 Since its standardization by OGC, CityGML has seen a wide variety of proposed extensions and alignments to other data standards.
 
 ==== CityJSON and CityRDF
@@ -60,13 +60,11 @@ Other details and history of Onto CityGML.
 
 === Medicine & Chemistry
 
-https://www.nature.com/articles/s41597-022-01562-5
-Standard metadata for 3D microscopy
+The medicine and chemistry domains contain a variety of usecases for 3D applications. 
 
-<<ropelewski_standard_2022>>
-
-The 3D Microscopy Metadata Standards (3D-MMS), developed by the BRAIN 3D Microscopy Working Group, help ensure that a 3D microscopy dataset is sufficiently described to support its’ re-use by scientists who did not generate the data. Adoption of 3D-MMS will aid investigators who want to share data, helping them to evaluate and decide which data can be combined. 
-https://doryworkspace.org/metadata
+In particular, 3D metadata of microscopy is a common application field, which has yieled for instance the The https://doryworkspace.org/metadata[3D Microscopy Metadata Standards] (3D-MMS) <<ropelewski_standard_2022>> developed by the BRAIN 3D Microscopy Working Group.
+The standard helps to ensure that a 3D microscopy dataset is sufficiently described to support its re-use by other scientists not involved in data creation.
+Its adoption will therefore enable investigators willing to share their data to evaluate and decide whith data can be combined.
 
 
 https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083

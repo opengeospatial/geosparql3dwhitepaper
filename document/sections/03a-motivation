@@ -85,3 +85,4 @@
 ==== Enables extension to vocabularies from other domains
  The vocabulary can have the possiblity to extend to vocabulaires with 3D geometry or topology from other domain, for example the Building Ontology Topology (BOT), RELOC Ontology or GEOM ontology
 ==== Facilitates better interoperability between knowledge domains with spatial components (geography, aerospace, architecture, product design, (bio)chemistry, IoT, …)
+A unified geometric language can help by migrating ideas and methods across fields, accelerating innovation. For example a parametic design algoritm, rule, or llm making use of geometry and topology originated in aerospace, can be re-used in the architecture domain.   

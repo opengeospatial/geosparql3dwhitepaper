@@ -182,3 +182,32 @@ GeoSPARQL 3D should provide the opportunity to execute non-topological query fun
 - geometry extrusion to the specified line segment
 - geometry extrusion to the specified height
 - spatiotemporal geometry extrusion to the specified line segment with specific start and end time
+
+==== Extension {counter:ext}: Ratios Between Geometry Properties
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/551
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL 3D should provide means to assess ratios between geometry properties. Proposed function comparing percentage area ratio will be useful in AECO industry use cases such as measuring ratio of total floor area of a building to land parcel area for compliance checking. The function allows to compare ratios of 2D area with surface area of 3D geometries apart from measuring area ratios for geometries of the same dimensionality.
+
+==== Extension {counter:ext}: 3D Geometry Analysis
+
+===== GitHub Issue URI
+
+https://github.com/opengeospatial/ogc-geosparql/issues/552
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL 3D should provide functions useful for 3D geometry analysis. An example of such function is gross footprint area of 3D geometry sliced at a certain level. For instance, urban planners will be able to use this function to estimate the gross floor area of the building by slicing at the specified floor heights whenever they work with 3D models have only the building exterior, plus a specification of floor heights (but not the individual floors as distinct features).
+

@@ -17,9 +17,6 @@ The proposed CityRDF model, even though focused on CityGML and 3D building conte
 One such element is the description of the appearance of a 3D-modeled building using colors or textures, so-called surface materials.
 In addition, CityGML includes relations of 3D primitives towards each other, which could serve as an inspiration for similary-named functions or properties in the GeoSPARQL 3D ontology model.
 
-https://www.mdpi.com/2220-9964/12/9/351
-IFC-CityGML Data Integration for 3D Property Valuation
-
 <<ijgi12090351>> describes the CityGML Ontology, which is an ontology model to formalize the CityGML standard towards a representation in OWL. 
 It shows a workflow of identification, classification and selection of the relevant data points needed to describe 3D city models in OWL as derived from building and city models.
 In addition it introduces a concept of Level of Information Need which defines the granularity of the information on the various levels of the building and the types of information retrieval - direct/indirect,
@@ -40,20 +37,19 @@ A mapping from IFC to CityGML 3.0 is proposed.
 
 CityGML 3.0 therefore represents many of the elements that a GeoSPARQL 3D ontology would need to implement on a more abstract level and can give ideas about future query functions to be implemented in the GeoSPARQL query language.
 
-https://lup.lub.lu.se/student-papers/search/publication/9169387
-Linked geodata: CityGML represented as a virtual knowledge graph
+In addition, a master thesis <<hansson2024citygml>> proved the feasibility of not only converting CityGML to a knowledge graph representation, but also its application in triple stores such as Ontop or 3DCityDB. 
+The mapping of CityGML to the knowledge graph was tested using a set of SPARQL queries retrieving different components of building parts. 
+While the thesis could construct a knowledge graph representation from CityGML, it points out that the incorporation of sptaial operations is left to future work and could provide a possible field for GeoSPARQL 3D adoption.
 
-<<hansson2024citygml>>
-
-More knowledge graphs constructed from CityGML.
-
-
+Finally, <<CHADZYNSKI2021100106>> proposed OntoCityGML, an extension go the CityGML ontolog
 https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub
 Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph
 
-<<CHADZYNSKI2021100106>>
+
 
 Other details and history of Onto CityGML.
+
+CityRDF working group https://github.com/ogcincubator/cityrdf
 
 
 === Medicine & Chemistry
@@ -80,6 +76,15 @@ A novel ontology for 3D semantics: ontology-based 3D model indexing and content-
 
 This paper presents the most comprehensive formally grounded 3D ontology to date that maps the entire XSD-based vocabulary of the industry standard X3D (ISO/IEC 19775-19777) to OWL 2, complemented by fundamental concepts and roles of the 3D modelling industry not covered by X3D.
 
+
+=== 3D data formats and ontologies
+
+STereoLithography (STL)
+http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file
+
+STL files describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations.
+
+
 === To consider
 
 https://link.springer.com/article/10.1007/s10845-023-02246-6
@@ -88,13 +93,6 @@ Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
 <<yuchen2025ontology>>
 
 To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes & roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools. 
-
-
-STereoLithography (STL)
-http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file
-
-STL files describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations.
-
 
 Open standard for particle-mesh data (openPMD)
 https://github.com/openPMD/openPMD-standard

@@ -20,27 +20,25 @@ In addition, CityGML includes relations of 3D primitives towards each other, whi
 https://www.mdpi.com/2220-9964/12/9/351
 IFC-CityGML Data Integration for 3D Property Valuation
 
-<<ijgi12090351>>
-
-This article describes what became known as Onto CityGML, so far the closest thing to GeoSPARQL3D.
-
-
-https://www.cambridge.org/core/journals/data-centric-engineering/article/semantic-3d-city-interfacesintelligent-interactions-on-dynamic-geospatial-knowledge-graphs/975E518C41DCDD8BD565012C9E2C8473
-Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs
-
-<<chadzynski2023semantic>>
+<<ijgi12090351>> describes the CityGML Ontology, which is an ontology model to formalize the CityGML standard towards a representation in OWL. 
+It shows a workflow of identification, classification and selection of the relevant data points needed to describe 3D city models in OWL as derived from building and city models.
+In addition it introduces a concept of Level of Information Need which defines the granularity of the information on the various levels of the building and the types of information retrieval - direct/indirect,
+i.e. information which is commonly obtained directly from a dataset or using a calculation or reasoning approach.
+The paper exemplifies the concept in a study case for property unit cost and indoor daylight.
+The contribution outlined here became the basis of the CityGML ontology which can serve as one broad application area for GeoSPARQL 3D.
 
 
-Knowledge graphs construction for 3D city data. Related the CityGML and Onto CityGML.
+Following on this publication <<chadzynski2023semantic>> presents a system architecture and a set of interfaces that can represent city modeling approaches using dynamic geospatial knowledge graphs.
+The paper proves the viability of a transition between a SQL based system for 3D building management to a SPARQL based system using a SQL2SPARQL Transformer component.
+It therefore proves the feasibility of employing linked open data technologies for 3D building data and in particular the CityGML model in practice.
 
 
-https://link.springer.com/article/10.1007/s41064-020-00095-z
-CityGML 3.0: New Functions Open Up New Applications
+<<kutzner2020citygml30>> introduces CityGML 3.0 with a newly added Core module including a new space concept and Level Of Detail concept. 
+The given publication sets the standard for especially Level of Detail in 3D buildings and can be considered for a GeoSPARQL 3D adoption of Level of Detail concepts.
+In addition, CityGML 3.0 proposes the addition of 3D point clouds for the representation of 3D goemetires of physical spaces and space boundaries.
+A mapping from IFC to CityGML 3.0 is proposed.
 
-<<kutzner2020citygml30>>
-
-Looks like the Semantic Web is fully considered in CityGML 3.0. Possibly demanding aligments with GeoSPARQL3D. Question: what can GeoSPARQL add that is not yet in CityGML?
-
+CityGML 3.0 therefore represents many of the elements that a GeoSPARQL 3D ontology would need to implement on a more abstract level and can give ideas about future query functions to be implemented in the GeoSPARQL query language.
 
 https://lup.lub.lu.se/student-papers/search/publication/9169387
 Linked geodata: CityGML represented as a virtual knowledge graph

@@ -9,7 +9,7 @@ It helps to identify some of the barriers to use, and to outline requirements th
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/583
+- https://github.com/opengeospatial/ogc-geosparql/issues/583
 
 ===== Category
 
@@ -32,9 +32,15 @@ Some common formats which could be considered for inclusion are:
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/416
-https://github.com/opengeospatial/ogc-geosparql/issues/578
-https://github.com/opengeospatial/ogc-geosparql/issues/577
+- https://github.com/opengeospatial/ogc-geosparql/issues/416
+- https://github.com/opengeospatial/ogc-geosparql/issues/578
+- https://github.com/opengeospatial/ogc-geosparql/issues/577
+- https://github.com/opengeospatial/ogc-geosparql/issues/566
+- https://github.com/opengeospatial/ogc-geosparql/issues/567
+- https://github.com/opengeospatial/ogc-geosparql/issues/600
+- https://github.com/opengeospatial/ogc-geosparql/issues/601
+- https://github.com/opengeospatial/ogc-geosparql/issues/606
+- https://github.com/opengeospatial/ogc-geosparql/issues/581
 
 ===== Category
 
@@ -43,13 +49,15 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL should include ways to represent relations between 3D geometries and relations between 3D geometries and geometries of lower dimensions.
-The relations should be expressable in property relations and should be queryable using SPARQL extension functions.
+The relations should be expressable in property relations and should be queryable using SPARQL extension functions. Closest point and closest coordinate functions are examples of functions allowing to measure distances between 3D geometries on different planes. Shortest and longest line functions return lines corresponding to appropriate distances. Access to such functions will allow urban planners getting insight in the usage of public space to place objects at the right locations. Functions to detect and operate on shared boundaries between 3D geometries should be also included.
 
 ==== Extension {counter:ext}: Appearance of 3D geometries
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/592
+- https://github.com/opengeospatial/ogc-geosparql/issues/592
+- https://github.com/opengeospatial/ogc-geosparql/issues/584
+- https://github.com/opengeospatial/ogc-geosparql/issues/593
 
 ===== Category
 
@@ -64,11 +72,15 @@ Materials include:
 - Colors of surfaces with light diffusion parameters
 - Images as textures, which are associated with surfaces of the 3D object
 
+GeoSPARQL should also support queries of differnet levels of detail on 3D geometry sets. One dataset should allow 3D data to be viewed at the level of a country, province, city, neighborhood, street, building, or room, etc.
+
 ==== Extension {counter:ext}: Multi-component 3D geometries
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/591
+- https://github.com/opengeospatial/ogc-geosparql/issues/591
+- https://github.com/opengeospatial/ogc-geosparql/issues/597
+- https://github.com/opengeospatial/ogc-geosparql/issues/595
 
 ===== Category
 
@@ -77,17 +89,18 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL should include ways to define multi-component 3D geometries, whereas each component expresses its own semantics.
-For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph.
+For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph. GeoSPARQL should also allow to query for subsets of multic-component geometries as well as aggregation of disjoint geometries.
 
 ==== Extension {counter:ext}: Positioning of 3D geometries
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/591
-https://github.com/opengeospatial/ogc-geosparql/issues/559
-https://github.com/opengeospatial/ogc-geosparql/issues/560
-https://github.com/opengeospatial/ogc-geosparql/issues/576
-https://github.com/opengeospatial/ogc-geosparql/issues/604
+- https://github.com/opengeospatial/ogc-geosparql/issues/591
+- https://github.com/opengeospatial/ogc-geosparql/issues/559
+- https://github.com/opengeospatial/ogc-geosparql/issues/560
+- https://github.com/opengeospatial/ogc-geosparql/issues/576
+- https://github.com/opengeospatial/ogc-geosparql/issues/604
+- https://github.com/opengeospatial/ogc-geosparql/issues/587
 
 ===== Category
 
@@ -106,6 +119,7 @@ Similar operations are needed for the relative positioning of 3D objects in GeoS
 - https://github.com/opengeospatial/ogc-geosparql/issues/590
 - https://github.com/opengeospatial/ogc-geosparql/issues/574
 - https://github.com/opengeospatial/ogc-geosparql/issues/571
+- https://github.com/opengeospatial/ogc-geosparql/issues/598
 
 ===== Category
 
@@ -114,13 +128,19 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains.
-Especially alignments to https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary as a link between these different standards.
+Especially alignments to https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary as a link between these different standards. At the same time GeoSPARQL should not include advanced procedural geometric concepts from IFC.
 
 ==== Extension {counter:ext}: Alignments of Engineering CRS to Geospatial CRS
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/586
+- https://github.com/opengeospatial/ogc-geosparql/issues/586
+- https://github.com/opengeospatial/ogc-geosparql/issues/599
+- https://github.com/opengeospatial/ogc-geosparql/issues/585
+- https://github.com/opengeospatial/ogc-geosparql/issues/587
+- https://github.com/opengeospatial/ogc-geosparql/issues/588
+- https://github.com/opengeospatial/ogc-geosparql/issues/589
+- https://github.com/opengeospatial/ogc-geosparql/issues/594
 
 ===== Category
 
@@ -129,7 +149,7 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL 3D should provide the opportunity to align a local coordinate system in which most 3D geometries are defined with a coordinate reference.
-While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging https://github.com/opengeospatial/ontology-crs[Ontology CRS] developments of OGC and provide necessary functions or properties to create the link. 
+While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging https://github.com/opengeospatial/ontology-crs[Ontology CRS] developments of OGC and provide necessary functions or properties to create the link. There should be also validation function for asessing if a particular CRS could be applied to 3D geometries and a  functions for storing information about coordinate resolution per axis.
 
 ==== Extension {counter:ext}: Geometry Extrusion
 
@@ -187,7 +207,7 @@ GeoSPARQL 3D should provide the opportunity to execute non-topological query fun
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/551
+- https://github.com/opengeospatial/ogc-geosparql/issues/551
 
 ===== Category
 
@@ -201,7 +221,11 @@ GeoSPARQL 3D should provide means to assess ratios between geometry properties. 
 
 ===== GitHub Issue URI
 
-https://github.com/opengeospatial/ogc-geosparql/issues/552
+- https://github.com/opengeospatial/ogc-geosparql/issues/552
+- https://github.com/opengeospatial/ogc-geosparql/issues/579
+- https://github.com/opengeospatial/ogc-geosparql/issues/580
+- https://github.com/opengeospatial/ogc-geosparql/issues/596
+- https://github.com/opengeospatial/ogc-geosparql/issues/582
 
 ===== Category
 
@@ -209,5 +233,20 @@ Semantic improvement
 
 ===== Description
 
-GeoSPARQL 3D should provide functions useful for 3D geometry analysis. An example of such function is gross footprint area of 3D geometry sliced at a certain level. For instance, urban planners will be able to use this function to estimate the gross floor area of the building by slicing at the specified floor heights whenever they work with 3D models have only the building exterior, plus a specification of floor heights (but not the individual floors as distinct features).
+GeoSPARQL 3D should provide functions useful for 3D geometry analysis. An example of such function is gross footprint area of 3D geometry sliced at a certain level. For instance, urban planners will be able to use this function to estimate the gross floor area of the building by slicing at the specified floor heights whenever they work with 3D models have only the building exterior, plus a specification of floor heights (but not the individual floors as distinct features). There should be also support for modeling and analysis of more complex geometry aggregates (eg. volumetric survey plans and their intersecting parts).
+
+==== Extension {counter:ext}: Geometry Transformations
+
+===== GitHub Issue URI
+
+- https://github.com/opengeospatial/ogc-geosparql/issues/561
+- https://github.com/opengeospatial/ogc-geosparql/issues/602
+
+===== Category
+
+Semantic improvement
+
+===== Description
+
+GeoSPARQL 3D should provide functions useful for geometry transfomations and complex 3D geometry representations. One such example is use of triangulated irregular networks (TIN) for digital elevation models (DEMs), digital surface models (DSMs) or digital terrain models (DTMs). Turning any geometry into TIN will allow for intergating it into such models. Translation by vector function allows for geometry aligments and adjustments while preserving relations between its points.
 

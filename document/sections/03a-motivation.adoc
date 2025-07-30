@@ -1,0 +1,30 @@
+== Motivation
+
+=== Why do we want 3D semantic modeling?
+The white paper: "OGC Benefits of Representing Spatial Data Using Semantic and Graph Technologies" describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies <<Abhayaratna2020wp>>. This section describes the motivation of adding 3D functionality to the GeoSPARQL standard. 
+
+While humans can often resolve 3D spatial questions such as “Is cube A inside cylinder B?” — even when the underlying data comes from different systems like GIS and BIM — this typically relies on implicit understanding, conventions, or direct communication between the data creators. For datasets to be meaningfully aligned, the people who created them often need to clarify assumptions, data structures, coordinate systems, or modeling intentions. Without such human-to-human explanation, machines struggle to interpret spatial relationships across heterogeneous sources. A conversion process is required, in which data is made homogeneous for analysis through extraction, transformation, and loading. Based on a homogeneous dataset, conclusions can then be drawn. Performing conversions may result in geometric simplifications, which can limit or even eliminate the functionality of spatial queries <<Biljecki2019>>.
+If one desires digital, automated processing or analysis of 3D spatial questions without requiring conversion, spatial information must be structured in an explicitly machine-readable format. When this is done, initiatives based on federated systems with heterogeneous datasets can obtain computer-generated answers to spatial 3D queries. This requires semantic alignment and standardized geometry processing in machine-driven analysis. <<Göbel2024>> In other words, a common vocabulary is needed to semantically define the 3D objects and its 3D sptatial function. 
+
+Imagine a constructor who wants to use real-time sensor data at a construction site in combination with modelled 3D data and 3D base registration data. By combining this the person wants to visualize the site, perform accurate spatial checks and calculations, and automatically update machine instructions for safe, efficient and autonomous execution" 
+ 
+The system uses 3D GeoSPARQL to integrate the data of the 3D design model, the 3D base registration model and 3D real-time sensor data to: 
+- Spatially associate sensor data with objects in the design and registration model 
+- Calculate the permissible tolerances 
+- Detect the deviations 
+- Dynamic adjust the design model 
+- Instruct the machine with the changes  
+- Visualize the new situation
+
+For both humans and machines, it must be unambiguous what is meant by the queries that are needed to do the job and the resulting answers. It should not matter whether the data is provided in a 3D-GIS, 3D-BIM or 3D-CG standard vocabulary.  
+
+==== A geo-spatial 3D specification would support data consumers by:
+ - access and understanding of 3D-geometry and 3D-topology from multiple sources; 
+ - the integration of 3D-data geospatial and non-geospatial;
+ - data quality evaluation of the given 3D-data;
+ - Geometric and topological description in natural language.
+
+==== A geo-spatial 3D specification would support data providers by:
+ - Maximizing the use of 3D-geometry and 3D-topology data;
+ - Defining multiple 3D topology or geometries;
+ - Assuring the quality of 3D geospatial data.

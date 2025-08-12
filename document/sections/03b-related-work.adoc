@@ -92,7 +92,6 @@ However, STL objects could be used in local CRS contexts as well.
 
 ==== Wavefront OBJ Format (OBJ)
 
-
 The https://paulbourke.net/dataformats/obj/[OBJ format] is a file format developed by Wavefront Technologies for the Advanced 3D Visualizer animation package.
 Its roots therefore lie in the world of 3D animation.
 The format represents vertex coordinates, texture coordinates, as well as vertex normals, parameter space vertices and faces of a 3D model.
@@ -100,18 +99,25 @@ These are all elements which would need to be considered and supported in an upc
 
 ==== Polygon File Format (PLY)
 
-
 The https://paulbourke.net/dataformats/ply/[Polygon File Format] is a format which was designed to store 3D data from 3D scanning environments, which makes it especiall widespread in the Cultural Heritage application area.
 The format consists of a vertex list and a faces list with optional additiona paraemters per vertex.
 Like the OBJ format, supporting PLY would suggest to includes support for vertices and faces of a 3D model and their relationships in a knowledge graph.
 
-==== IIIF 3D
-https://iiif.io/community/groups/3d/tsg/
-
-
 ==== CARARE Metadata Schema
 
 The CARARE metadata schema <<d2013carare>> is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
+
+==== IIIF 3D
+https://iiif.io/community/groups/3d/tsg/
+
+The International Image Interoperability Framework (IIIF) standard <<snydman2015international>>
+
+==== X3D and X3D Ontology
+
+The X3D format <<feichtenhofer2020x3d>>, <<brutzman2010x3d>>, X3DOM <<behr2009x3dom>> and its Ontology version <<brutzman2020x3d>> provide a data format and a blueprint for how 3D data is handled in computer vision approaches.
+X3D is an interesting format to investigate for 3D components which need to be modeled within a GeoSPARQL 3D, is a likely candidate for a literal format and might be integrated using interlinking approaches to the already existing X3D vocabulary.
+However, since X3D was invented with computer vision approaches in mind it does not define any geospatial aspects that could be considered by a GeoSPARQL 3D implementation.
+
 
 ==== Geometry Metadata Ontology (GOM)
 

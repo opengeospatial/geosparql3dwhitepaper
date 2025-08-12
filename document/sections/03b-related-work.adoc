@@ -79,10 +79,42 @@ This paper presents the most comprehensive formally grounded 3D ontology to date
 
 === 3D data formats and ontologies
 
-STereoLithography (STL)
+==== STereoLithography (STL)
 http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file
 
-STL files describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations.
+STL files describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations and was invented by the Albert Consulting Group for 3D Systems in 1987.
+Nowadays it is mainly used for 3D prrinting purposes, which makes is a plausible candidate for support in GeoSPARQL 3D settings of movable objects such as in cultural heritage.
+Since the STL format does not contain a geospatial reference, the reference needs to be provided externally if STL files were to be used in a geospatial context.
+However, STL objects could be used in local CRS contexts as well.
+
+==== Wavefront OBJ Format (OBJ)
+
+https://paulbourke.net/dataformats/obj/
+The OBJ format is a file format developed by Wavefront Technologies for the Advanced 3D Visualizer animation package.
+Its roots therefore lie in the world of 3D animation.
+The format represents vertex coordinates, texture coordinates, as well as vertex normals, parameter space vertices and faces of a 3D model.
+These are all elements which would need to be considered and supported in an upcoming GeoSPARQL 3D release.
+
+==== Polygon File Format (PLY)
+
+https://paulbourke.net/dataformats/ply/
+The Polygon File Format is a format which was designed to store 3D data from 3D scanning environments, which makes it especiall widespread in the Cultural Heritage application area.
+The format consists of a vertex list and a faces list with optional additiona paraemters per vertex.
+Like the OBJ format, supporting PLY would suggest to includes support for vertices and faces of a 3D model and their relationships in a knowledge graph
+
+==== Geometry Metadata Ontology (GOM)
+https://www.w3id.org/gom
+
+
+
+==== Ontology for Managing Geometry (OMG)
+https://www.w3id.org/omg
+
+Many of the aforementioned 3D formats can be described by the Ontology for Managing Geometry (OMG)
+
+
+
+
 
 
 === To consider

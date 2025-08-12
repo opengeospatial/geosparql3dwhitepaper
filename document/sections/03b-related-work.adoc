@@ -115,14 +115,15 @@ https://iiif.io/community/groups/3d/tsg/
 The CARARE metadata schema <<d2013carare>> is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
 
 ==== Geometry Metadata Ontology (GOM)
-https://www.w3id.org/gom
 
+
+The https://www.w3id.org/gom[Geometry Metadata Ontolgoy (GOM)]
 
 
 ==== Ontology for Managing Geometry (OMG)
-https://www.w3id.org/omg
 
-Many of the aforementioned 3D formats can be described by the Ontology for Managing Geometry (OMG)
+
+Many of the aforementioned 3D formats can be described by the https://www.w3id.org/omg[Ontology for Managing Geometry (OMG)]
 
 
 === To consider
@@ -135,9 +136,9 @@ Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
 To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes & roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools. 
 
 Open standard for particle-mesh data (openPMD)
-https://github.com/openPMD/openPMD-standard
 
-The openPMD standard, short for open standard for particle-mesh data files is not a file format per se. It is guidance for meta data and naming schemes. openPMD provides naming and attribute conventions that allow to exchange particle and mesh based data from scientific simulations and experiments. The primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and differing algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If output from programs, devices (such as cameras), simulations or post-processed data-sets contain a minimal set of meta information as provided by openPMD, you can exchange data between those with minimal effort and you use the same tools for visualization.
+
+The https://github.com/openPMD/openPMD-standard[openPMD standard], short for open standard for particle-mesh data files is not a file format per se. It is guidance for meta data and naming schemes. openPMD provides naming and attribute conventions that allow to exchange particle and mesh based data from scientific simulations and experiments. The primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and differing algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If output from programs, devices (such as cameras), simulations or post-processed data-sets contain a minimal set of meta information as provided by openPMD, you can exchange data between those with minimal effort and you use the same tools for visualization.
 
 <<huebl_2018_1167843>>
 

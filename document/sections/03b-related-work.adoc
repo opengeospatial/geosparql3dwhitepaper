@@ -79,6 +79,10 @@ This paper presents the most comprehensive formally grounded 3D ontology to date
 
 === 3D data formats and ontologies
 
+A new GeoSPARQL standard should be compatible with existing approaches to encode 3D data.
+Semantic technologies should enable users to encode important metadata in the knowledge graph, while retaining the possibility to use already well-known 3D geometry formats either as String literals or a file references.
+<<bonduel2019including>> shows how common widespread geometry formats could be included into knowledge graphs, which could be one starting point to investigate the integration within GeoSPARQL.
+
 ==== STereoLithography (STL)
 http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file
 
@@ -103,10 +107,8 @@ The format consists of a vertex list and a faces list with optional additiona pa
 Like the OBJ format, supporting PLY would suggest to includes support for vertices and faces of a 3D model and their relationships in a knowledge graph
 
 ==== CARARE Metadata Schema
-https://pro.carare.eu/en/introduction-carare-aggregation-services/carare-metadata-schema/
 
-
-The CARARE metadata schema is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
+The CARARE metadata schema <<d2013carare>> is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
 
 ==== Geometry Metadata Ontology (GOM)
 https://www.w3id.org/gom

@@ -19,7 +19,7 @@ Semantic improvement
 
 GeoSPARQL should include ways to represent 3D data in a knowledge graph.
 
-3D data should be included in common 3D formats and 3D data should be includable as a text literal and a file representation.
+3D data should be included in common 3D formats, and it should be possible to ingest 3D data in a form of a text literal representation or a file including multiple literals.
 
 Some common formats which could be considered for inclusion are:
 
@@ -49,7 +49,7 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL should include ways to represent relations between 3D geometries and relations between 3D geometries and geometries of lower dimensions.
-The relations should be expressable in property relations and should be queryable using SPARQL extension functions. Closest point and closest coordinate functions are examples of functions allowing to measure distances between 3D geometries on different planes. Shortest and longest line functions return lines corresponding to appropriate distances. Access to such functions will allow urban planners getting insight in the usage of public space to place objects at the right locations. Functions to detect and operate on shared boundaries between 3D geometries should be also included.
+It should be possible to express the relations as property relations. It  should be also possible to query concerning the relations using SPARQL extension functions. Closest point and closest coordinate functions are examples of functions allowing to measure distances between 3D geometries on different planes. Shortest and longest line functions return lines corresponding to appropriate distances. Access to such functions will allow urban planners getting insight on the usage of public space to place objects at the right locations. Functions to detect and operate on shared boundaries between 3D geometries should be also included.
 
 ==== Extension {counter:ext}: Appearance of 3D geometries
 
@@ -72,7 +72,7 @@ Materials include:
 - Colors of surfaces with light diffusion parameters
 - Images as textures, which are associated with surfaces of the 3D object
 
-GeoSPARQL should also support queries of differnet levels of detail on 3D geometry sets. One dataset should allow 3D data to be viewed at the level of a country, province, city, neighborhood, street, building, or room, etc.
+GeoSPARQL should also support queries of different levels of detail on 3D geometry sets. One dataset should allow 3D data to be viewed at the level of a country, province, city, neighborhood, street, building, or room, etc.
 
 ==== Extension {counter:ext}: Multi-component 3D geometries
 
@@ -89,7 +89,7 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL should include ways to define multi-component 3D geometries, whereas each component expresses its own semantics.
-For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph. GeoSPARQL should also allow to query for subsets of multic-component geometries as well as aggregation of disjoint geometries.
+For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph. GeoSPARQL should also allow to query for subsets of multi-component geometries as well as aggregation of disjoint geometries.
 
 ==== Extension {counter:ext}: Positioning of 3D geometries
 
@@ -127,8 +127,8 @@ Semantic improvement
 
 ===== Description
 
-GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains.
-Especially alignments to https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary as a link between these different standards. At the same time GeoSPARQL should not include advanced procedural geometric concepts from IFC.
+GeoSPARQL 3D should be aligned with other vocabularies and standards which currently provide 3D support in different knowledge domains.
+Especially alignments with https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary as a link between these standards. At the same time GeoSPARQL should not include advanced procedural geometric concepts from IFC.
 
 ==== Extension {counter:ext}: Alignments of Engineering CRS to Geospatial CRS
 
@@ -149,22 +149,7 @@ Semantic improvement
 ===== Description
 
 GeoSPARQL 3D should provide the opportunity to align a local coordinate system in which most 3D geometries are defined with a coordinate reference.
-While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging https://github.com/opengeospatial/ontology-crs[Ontology CRS] developments of OGC and provide necessary functions or properties to create the link. There should be also validation function for asessing if a particular CRS could be applied to 3D geometries and a  functions for storing information about coordinate resolution per axis.
-
-==== Extension {counter:ext}: Geometry Extrusion
-
-===== GitHub Issue URI
-
-- https://github.com/opengeospatial/ogc-geosparql/issues/556
-- https://github.com/opengeospatial/ogc-geosparql/issues/547
-
-===== Category
-
-Semantic improvement
-
-===== Description
-
-GeoSPARQL 3D should provide the opportunity to extrude 2D geometries to 3D geometries and vice versa.
+While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging https://github.com/opengeospatial/ontology-crs[Ontology CRS] developments of OGC and provide necessary functions or properties to create the link. There should be also validation function allowing to assess if a particular CRS could be applied to 3D geometries and functions for storing information about coordinate resolution per axis.
 
 
 ==== Extension {counter:ext}: Geometry Attributes
@@ -183,7 +168,7 @@ Semantic improvement
 
 ===== Description
 
-GeoSPARQL 3D should provide functions and properties that describe essential properties of a 3D Geometry such as its minimum and maximum height, width and depth and its CompactnessRatio.
+GeoSPARQL 3D should provide functions and properties that describe essential properties of a 3D Geometry such as its minimum and maximum height, width and depth and its compactness ratio.
 
 ==== Extension {counter:ext}: Non-topological Query Functions - 3D Extension
 
@@ -233,7 +218,7 @@ Semantic improvement
 
 ===== Description
 
-GeoSPARQL 3D should provide functions useful for 3D geometry analysis. An example of such function is gross footprint area of 3D geometry sliced at a certain level. For instance, urban planners will be able to use this function to estimate the gross floor area of the building by slicing at the specified floor heights whenever they work with 3D models have only the building exterior, plus a specification of floor heights (but not the individual floors as distinct features). There should be also support for modeling and analysis of more complex geometry aggregates (eg. volumetric survey plans and their intersecting parts).
+GeoSPARQL 3D should provide functions useful for 3D geometry analysis. An example of such function is gross footprint area of 3D geometry sliced at a certain level. For instance, urban planners will be able to use this function to estimate the gross floor area of the building by slicing at the specified floor heights whenever they work with 3D models have only the building exterior, plus a specification of floor heights (but not the individual floors as distinct features). There should be also support for modeling and analysis of more complex geometry aggregates (e.g. volumetric survey plans and their intersecting parts).
 
 ==== Extension {counter:ext}: Geometry Transformations
 
@@ -241,6 +226,7 @@ GeoSPARQL 3D should provide functions useful for 3D geometry analysis. An exampl
 
 - https://github.com/opengeospatial/ogc-geosparql/issues/561
 - https://github.com/opengeospatial/ogc-geosparql/issues/602
+- https://github.com/opengeospatial/ogc-geosparql/issues/547
 
 ===== Category
 
@@ -248,5 +234,5 @@ Semantic improvement
 
 ===== Description
 
-GeoSPARQL 3D should provide functions useful for geometry transfomations and complex 3D geometry representations. One such example is use of triangulated irregular networks (TIN) for digital elevation models (DEMs), digital surface models (DSMs) or digital terrain models (DTMs). Turning any geometry into TIN will allow for intergating it into such models. Translation by vector function allows for geometry aligments and adjustments while preserving relations between its points.
+GeoSPARQL 3D should provide functions useful for geometry transformations and complex 3D geometry representations. One such example is use of triangulated irregular networks (TIN) for digital elevation models (DEMs), digital surface models (DSMs) or digital terrain models (DTMs). Turning any geometry into TIN will allow for integrating it into such models. Translation by vector function allows for geometry alignments and adjustments while preserving relations between its points.
 

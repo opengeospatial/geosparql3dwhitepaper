@@ -124,14 +124,21 @@ However, since X3D was invented with computer vision approaches in mind it does 
 ==== Geometry Metadata Ontology (GOM)
 
 
-The https://www.w3id.org/gom[Geometry Metadata Ontolgoy (GOM)]
+The https://www.w3id.org/gom[Geometry Metadata Ontology (GOM)] introduces classes for surfaces which are common in the 3D world, but uncommon for 3D geometries, for instance Meshes or NURBS surfaces.
+The ontology can serve as an inspiration for extensions in GeoSPARQL 3D and may or may not be fully or partly adopted in the process of standardization.
 
 
 ==== Ontology for Managing Geometry (OMG)
 
 
-Many of the aforementioned 3D formats can be described by the https://www.w3id.org/omg[Ontology for Managing Geometry (OMG)]
+The https://www.w3id.org/omg[Ontology for Managing Geometry (OMG)] describes states and derivation of geometries which may be useful to the description of data in GeoSPARQL 3D.
+For example. an extrusion in 3D from a 2D geometry template would have a derivation relation from the 2D geometry which one might want to see modeled in GeoSPARQL 3D.
 
+==== File Ontology for Geometry Formats (FOG)
+
+The https://w3id.org/fog#[File Ontology for Geometry Formats (FOG)] provides a bridge between ontology descriptions of geometries and data file descriptions of 3D contents.
+Since many 3D datasets are of considerable size, their inclusion into the knowledge graph as String literals might hinder the query performance of said knowledge graph.
+It therefore stands to reason whether to adopt the same or a similar method of geometry access that FOG provides for GeoSPARQL 3D.
 
 === To consider
 

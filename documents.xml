@@ -50,6 +50,21 @@
     </person>
   </contributor>
   <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+      <subdivision>
+technical
+</subdivision>
+      <subdivision>
+Geosemantics DWG
+</subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
     <role type="publisher"/>
     <organization>
       <name>Open Geospatial Consortium</name>

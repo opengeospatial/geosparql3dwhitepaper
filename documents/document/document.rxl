@@ -10,8 +10,14 @@
 <name><completename>Editor One</completename></name>
 </person></contributor><contributor><role type="editor"/><person>
 <name><completename>Editor Two</completename></name>
-</person></contributor><contributor><role type="publisher"/><organization>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Open Geospatial Consortium</name>
+<subdivision type="Committee">
+<name>technical</name>
+</subdivision><subdivision type="Workgroup">
+<name>Geosemantics DWG</name>
+</subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Open Geospatial Consortium</name>
 <abbreviation>OGC</abbreviation></organization></contributor><edition>1.0</edition><version><draft>1.0</draft></version><language>en</language><script>Latn</script><status><stage>swg-draft</stage></status><copyright><from>2025</from><owner><organization>
 <name>Open Geospatial Consortium</name>
-<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>OGC</keyword><keyword>GeoSPARQL</keyword><keyword>3D</keyword><ext><doctype>white-paper</doctype><flavor>ogc</flavor><editorialgroup><committee>technical</committee><workgroup>Geosemantics DWG</workgroup></editorialgroup></ext></bibdata>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>OGC</keyword><keyword>GeoSPARQL</keyword><keyword>3D</keyword><ext><doctype>white-paper</doctype><flavor>ogc</flavor></ext></bibdata>

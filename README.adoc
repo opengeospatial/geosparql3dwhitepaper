@@ -26,6 +26,16 @@ https://github.com/opengeospatial/geosparql3dwhitepaper/issues
 
 This White Paper is built using the https://www.metanorma.org/[Metanorma] tool using the https://github.com/metanorma/mn-templates-ogc/tree/master/white-paper[standard OGC White Paper template].
 
+== Style guidelines
+
+=== Referencing external documents
+There are different ways of referencing external documents from the white paper:
+
+* hyperlinks in the text
+* references to entries in the bibliography section
+
+Each method has its advantages: hyperlinks in the text can be followed with a single action from the reader. Following the bibliography route takes more effort. However, when the white paper is printed on paper, hyperlinks can not be resolved, so then a bibliography entry is more useful. Also, we can not guarantee that all hyperlinks will keep working in the future. A bibliography entry could provide enough information to find the external document nonetheless. So the advice is to use both methods of referencing, whenever possible.
+
 === Content
 
 This GitHub repository contains the content for an OGC White Paper.

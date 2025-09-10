@@ -36,7 +36,7 @@ There are different ways of referencing external documents from the white paper:
 
 Each method has its advantages: hyperlinks in the text can be followed with a single action from the reader. Following the bibliography route takes more effort. However, when the white paper is printed on paper, hyperlinks can not be resolved, so then a bibliography entry is more useful. Also, we can not guarantee that all hyperlinks will keep working in the future. A bibliography entry could provide enough information to find the external document nonetheless. So the advice is to use both methods of referencing, whenever possible.
 
-=== Content
+== Content
 
 This GitHub repository contains the content for an OGC White Paper.
 
@@ -46,6 +46,6 @@ This GitHub repository contains the content for an OGC White Paper.
 * `figures` - figures go here
 * `images` - Image files for graphics go here. Image files for figures go in the `figures` directory. Only place in here images not used in figures (e.g., as parts of tables, as logos, etc.)
 
-=== Building
+== Building
 
 Run `make`.

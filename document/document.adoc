@@ -17,6 +17,7 @@
 :fullname: Editor One
 :fullname_2: Editor Two
 :role: editor
+:imagesdir: figures
 :keywords: OGC, GeoSPARQL, 3D
 :submitting-organizations: Organization one; Organization two; Organization three
 :mn-document-class: ogc

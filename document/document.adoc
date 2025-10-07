@@ -1,7 +1,7 @@
 = GeoSPARQL 3d White Paper
 :doctype: technical-paper
 :language: en
-:status: swg-draft
+:status: draft
 :committee: technical
 :workgroup: Geosemantics DWG
 :draft: 1.0

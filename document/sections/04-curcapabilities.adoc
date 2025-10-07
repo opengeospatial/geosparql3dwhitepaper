@@ -44,7 +44,7 @@ The Simple Features vocabulary allows for the definition of 3D variants of:
 
 It does not include commons 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations. Nor does it include extruded geometry.  
 
-[#img_core,reftext='{figure-caption} {counter:figure-num}']
+[#img_3dinifc,reftext='{figure-caption} {counter:figure-num}']
 .Possible approaches for representing 3D objects in IFC
 image::../figures/3DinIFC_FIG01.png[align="center"]
 
@@ -62,7 +62,7 @@ The Geometry extension enables geometries to be defined within the GeoSPARQL fra
 
 These literals are investigated for the storage of 3D data.
 
-[#img_core,reftext='{figure-caption} {counter:figure-num}']
+[#img_dimensions,reftext='{figure-caption} {counter:figure-num}']
 .Difference between 2D, 2.5D and 3D geometry
 image::../figures/Dimensions_FIG02.png[align="center"]
 

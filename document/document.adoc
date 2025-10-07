@@ -22,7 +22,6 @@
 :submitting-organizations: Organization one; Organization two; Organization three
 :mn-document-class: ogc
 :mn-output-extensions: html,pdf
-:local-cache-only:
 :pdf-uri: ./document.pdf
 :edition: 1.0
 :toc:

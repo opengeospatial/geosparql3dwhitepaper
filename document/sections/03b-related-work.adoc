@@ -80,7 +80,7 @@ This paper presents the most comprehensive formally grounded 3D ontology to date
 === 3D data formats and ontologies
 
 A new GeoSPARQL standard should be compatible with existing approaches to encode 3D data.
-Semantic technologies should enable users to encode important metadata in the knowledge graph, while retaining the possibility to use already well-known 3D geometry formats either as String literals or a file references.
+Semantic technologies should enable users to encode important metadata in the knowledge graph, while retaining the possibility to use already well-known 3D geometry formats either as String literals or file references.
 <<bonduel2019including>> shows how common widespread geometry formats could be included into knowledge graphs, which could be one starting point to investigate the integration within GeoSPARQL.
 
 ==== STereoLithography (STL)

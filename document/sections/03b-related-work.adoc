@@ -100,7 +100,7 @@ These are all elements which would need to be considered and supported in an upc
 ==== Polygon File Format (PLY)
 
 The https://paulbourke.net/dataformats/ply/[Polygon File Format] is a format which was designed to store 3D data from 3D scanning environments, which makes it especially widespread in the Cultural Heritage application area.
-The format consists of a vertex list and a faces list with optional additiona paraemters per vertex.
+The format consists of a vertex list and a faces list with optional parameters per vertex.
 Like the OBJ format, supporting PLY would suggest to includes support for vertices and faces of a 3D model and their relationships in a knowledge graph.
 
 ==== CARARE Metadata Schema

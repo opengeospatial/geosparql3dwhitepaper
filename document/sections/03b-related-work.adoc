@@ -185,7 +185,7 @@ This section discusses research projects with 3D contents based on the technolog
 Cuneiform tablets from ancient Iran provide an interesting research area, since they combine a 3D artifact with textual imprints that are of interest to a variety of research communities including Assyriologsts, Digital Humanists, Computational Linguists and last but not least Computer Scientists.
 The creation of 3D models of cuneiform tablets provides the best accessibility to the specificities of the original artifact in its absence and 3D scans have been used by computer scientists as the basis for certain machine learning application tasks, even though to this day only as a provision for 2D renderings of their surfaces.
 Interests of the research community include the description of interesting features such as cuneiform signs on cuneiform tablet surfaces and their connection to other text contents or other cuneiform artifacts.
-Knowledge graphs provide machine learning approaches with unique opportunities to connect different kinds of data using a unified data format.
+Knowledge graphs provide machine learning approaches <<Stotzner_2023_ICCV>> <<stotzner2023r>> with unique opportunities to connect different kinds of data using a unified data format.
 
 To describe 3D meshes, several vocabularies have been developed in the context of the cuneiform studies project:
 

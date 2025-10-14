@@ -112,7 +112,7 @@ The CARARE metadata schema <<d2013carare>> is a harvesting schema intended for d
 
 The International Image Interoperability Framework (IIIF) standard <<snydman2015international>> is currently developing a https://iiif.io/community/groups/3d/tsg/[specification] for the standardization of 3D viewers.
 The viewer specification includes the visualization of 3D models including lighting positions, a scene graph and annotations in the form of additional 3D objects added to a 3D scene.
-A GeoSPARQL 3D standard might want to be compatible or a compatibility statement of converting 3D objects encoded in GeoSPARQL to the IIIF viewer specification might need to be implemented to comply with this specification.
+A GeoSPARQL 3D standard might need to be compatible with, or include a compatibility statement of, converting 3D objects encoded in GeoSPARQL to the IIIF viewer specification. A prototype implementation might be necessary to comply with this specification.
 
 ==== X3D and X3D Ontology
 

@@ -13,7 +13,7 @@ Since its standardization by OGC, CityGML has seen a wide variety of proposed ex
 <<ijgi12090351>> proposed the extension of the CityGML and its accompanying serialization CityJSON as an ontology model.
 Currently, the CityRDF standardization group works towards the standardization of this CityGML data model in RDF.
 
-The proposed CityRDF model, even though focused on CityGML and 3D building contents contains valuable data descriptions which could be generalized in a GeoSPARQL 3D approach.
+The proposed CityRDF model, even though focused on CityGML and 3D building contents, contains valuable data descriptions which could be generalized in a GeoSPARQL 3D approach.
 One such element is the description of the appearance of a 3D-modeled building using colors or textures, so-called surface materials.
 In addition, CityGML includes relations of 3D primitives towards each other, which could serve as an inspiration for similary-named functions or properties in the GeoSPARQL 3D ontology model.
 

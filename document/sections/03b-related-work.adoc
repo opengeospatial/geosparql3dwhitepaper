@@ -31,7 +31,7 @@ It therefore proves the feasibility of employing linked open data technologies f
 
 
 <<kutzner2020citygml30>> introduces CityGML 3.0 with a newly added Core module including a new space concept and Level Of Detail concept. 
-The given publication sets the standard for especially Level of Detail in 3D buildings and can be considered for a GeoSPARQL 3D adoption of Level of Detail concepts.
+The given publication sets the standard especially for Level of Detail in 3D buildings, which may be considered for adoption as GeoSPARQL 3D concepts too.
 In addition, CityGML 3.0 proposes the addition of 3D point clouds for the representation of 3D goemetires of physical spaces and space boundaries.
 A mapping from IFC to CityGML 3.0 is proposed.
 

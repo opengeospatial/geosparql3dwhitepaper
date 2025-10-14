@@ -56,7 +56,7 @@ CityRDF working group https://github.com/ogcincubator/cityrdf
 
 The medicine and chemistry domains contain a variety of usecases for 3D applications. 
 
-In particular, 3D metadata of microscopy is a common application field, which has yieled for instance the The https://doryworkspace.org/metadata[3D Microscopy Metadata Standards] (3D-MMS) <<ropelewski_standard_2022>> developed by the BRAIN 3D Microscopy Working Group.
+In particular, 3D metadata of microscopy is a common application field, which yielded for instance the https://doryworkspace.org/metadata[3D Microscopy Metadata Standards] (3D-MMS) <<ropelewski_standard_2022>> developed by the BRAIN 3D Microscopy Working Group.
 The standard helps to ensure that a 3D microscopy dataset is sufficiently described to support its re-use by other scientists not involved in data creation.
 Its adoption will therefore enable investigators willing to share their data to evaluate and decide whith data can be combined.
 

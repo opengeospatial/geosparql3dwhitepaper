@@ -117,7 +117,7 @@ A GeoSPARQL 3D standard might need to be compatible with, or include a compatibi
 ==== X3D and X3D Ontology
 
 The X3D format <<feichtenhofer2020x3d>>, <<brutzman2010x3d>>, X3DOM <<behr2009x3dom>> and its Ontology version <<brutzman2020x3d>> provide a data format and a blueprint for how 3D data is handled in computer vision approaches.
-X3D is an interesting format to investigate for 3D components which need to be modeled within a GeoSPARQL 3D, is a likely candidate for a literal format and might be integrated using interlinking approaches to the already existing X3D vocabulary.
+X3D is an interesting format to investigate for 3D components which need to be modeled within a GeoSPARQL 3D specification. It is a likely candidate for a literal format and might be integrated using interlinking approaches to the already existing X3D vocabulary.
 However, since X3D was invented with computer vision approaches in mind it does not define any geospatial aspects that could be considered by a GeoSPARQL 3D implementation.
 
 

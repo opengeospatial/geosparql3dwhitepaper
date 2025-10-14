@@ -86,7 +86,7 @@ Semantic technologies should enable users to encode important metadata in the kn
 ==== STereoLithography (STL)
 
 http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file[STL files] describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations and was invented by the Albert Consulting Group for 3D Systems in 1987.
-Nowadays it is mainly used for 3D prrinting purposes, which makes is a plausible candidate for support in GeoSPARQL 3D settings of movable objects such as in cultural heritage.
+Nowadays it is mainly used for 3D printing purposes, which makes is a plausible candidate for support in GeoSPARQL 3D settings of movable objects such as in cultural heritage.
 Since the STL format does not contain a geospatial reference, the reference needs to be provided externally if STL files were to be used in a geospatial context.
 However, STL objects could be used in local CRS contexts as well.
 

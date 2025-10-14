@@ -182,7 +182,7 @@ This section discusses research projects with 3D contents based on the technolog
 
 ====== 3D models of cuneiform tablets
 
-Cuneiform tablets from ancient Iran provide an interesting research area, since they combine a 3D artifact with textual imprints that are of interest for a variety of reserach communities including Assyriologsts, Digital Humanists, Computational Linguists and last but not least Computer Scientists.
+Cuneiform tablets from ancient Iran provide an interesting research area, since they combine a 3D artifact with textual imprints that are of interest to a variety of research communities including Assyriologsts, Digital Humanists, Computational Linguists and last but not least Computer Scientists.
 The creation of 3D models of cuneiform tablets provides the best accessibility to the specificities of the original artifact in its absence and 3D scans have been used by computer scientists as the basis for certain machine learning application tasks, even though to this day only as a provision for 2D renderings of their surfaces.
 Interests of the research community include the description of interesting features such as cuneiform signs on cuneiform tablet surfaces and their connection to other text contents or other cuneiform artifacts.
 

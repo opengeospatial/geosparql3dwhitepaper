@@ -5,7 +5,7 @@ This repository contains the source code for the _GeoSPARQL 3D White Paper_ bein
 The purpose of the White Paper is to establish the direction and scope of http://www.opengis.net/doc/IS/geosparql/1.1[GeoSPARQL]'s handling of 3D - ontological elements, coordinate representations, topological functions and other functions.
 
 This White Paper appears online in developing form at:
-
+ 
 *https://opengeospatial.github.io/geosparql3dwhitepaper/*
 
 == Contact

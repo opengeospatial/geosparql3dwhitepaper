@@ -4,6 +4,7 @@ This section describes the beneficiaries and benefits of representing data, incl
 
 === Semantic-functional value of 3D-GeoSPARQL
 Value for data reasoning, formal description, and semantic interoperability
+
 ==== Meaningful creation and querying of 3D geometry
 Whether manually or programmatically defining 3D geometries in BIM, GEO or CG environments, the GeoSPARQL standard could provide or connect to vocabulary to represent 3D structures. A 3D cube, for example, can be represented in multiple ways:
 

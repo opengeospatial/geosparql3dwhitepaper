@@ -3,9 +3,9 @@
 This section describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.
 
 === Semantic-functional value of 3D-GeoSPARQL
- Value for data reasoning, formal description, and semantic interoperability
+Value for data reasoning, formal description, and semantic interoperability
 ==== Meaningful creation and querying of 3D geometry
- Whether manually or programmatically defining 3D geometries in BIM, GEO or CG environments, the GeoSPARQL standard could provide or connect to vocabulary to represent 3D structures. A 3D cube, for example, can be represented in multiple ways:
+Whether manually or programmatically defining 3D geometries in BIM, GEO or CG environments, the GeoSPARQL standard could provide or connect to vocabulary to represent 3D structures. A 3D cube, for example, can be represented in multiple ways:
 
  - As a set of bounding points, lines, and faces;
  - As a base surface with an extrude function;

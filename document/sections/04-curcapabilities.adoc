@@ -107,11 +107,11 @@ image::../figures/Dimensions_FIG02.png[align="center"]
 GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support.
 There are currently almost 300 coordinate reference systems in the database https://epsg.io/?q=%20kind%3AGEOG3DCRS[epsg.io] which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
 
- GeoSPARQL allready supports linking multiple geometries (e.g., 2D and 2.5D) to a single feature. We aim to extend this with 3D geometries. 
+GeoSPARQL allready supports linking multiple geometries (e.g., 2D and 2.5D) to a single feature. We aim to extend this with 3D geometries. 
 
- For example, a tree in the real world may be represented in databases with both a 2D and a 3D geometry.
+For example, a tree in the real world may be represented in databases with both a 2D and a 3D geometry.
 
- This should not require duplication of the tree entity — there can be one tree instance with both geometries linked, avoiding redundancy in the data model.
+This should not require duplication of the tree entity — there can be one tree instance with both geometries linked, avoiding redundancy in the data model.
 
 
 ===== Query functions with 3D support

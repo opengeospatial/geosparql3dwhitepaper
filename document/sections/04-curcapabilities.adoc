@@ -10,6 +10,32 @@ According to the standard document, "The OGC GeoSPARQL standard supports represe
 
 In order to define which capabilities GeoSPARQL needs to adopt for full 3D compatibility, we first take a look at GeoSPARQL 1.1 current capabilities with regards to 3D.
 
+===== Dimensionality
+
+In this white paper, when we discuss three dimensional data, we mean three dimensional geometries; instances of the class https://docs.ogc.org/is/22-047r1/22-047r1.html#_84414e8b-8ccc-407d-85b0-f3b474bba54d[geo:Geometry]. GeoSPARQL 1.1 defines three different properties for geometry that have to do with dimensionality:
+
+1. https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geodimension[geo:dimension], or __topological dimension__: This is the number of perpendicalar directions in which a geometry extends. A point, for example, extends in no direction, so its topological dimension is 0. A line has a length, but no width or height. Its topological dimension is 1. A cube has a topological dimension of 3.
+
+2. https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geocoordinatedimension[geo:coordinateDimension]:
+In the geometric model that GeoSPARQL uses, points are the basic building blocks of geometry. A point geometry can have a different number of coordinates, depending on the space in which it is placed. A point on a flat map, or on the surface of a sphere, needs two coordinates. The __coordinate dimension__ is the number of coordinates in the points that define a Geometry. 
+
+3. https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]:
+In order to support linear referencing, geometries in GeoSPARQL can have a measure value. This is a relative position along a line or a curve, and does not extend the Geometry in space. The __spatial dimension__, therefore, can be used to denote the number of coordinates in a point, excluding the measurement value.
+
+The extended capabilities for GeoSPARQL discussed in this white paper concern the cases where the _spatial dimension_ (wich can be expressed with property https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]) of geometry has the value 3.
+
+The table below shows the values of the three dimension properties for some Geometries (expressed as Well Known Text (WKT)).
+
+|=== 
+| Geometry (WKT) | geo:dimension | geo:coordinateDimension | geo:spatialDimension 
+
+| point (4 15) | 0 | 2 | 2 
+| point Z (4 15 3) | 0 | 3 | 3 
+| linestring (4 15, 13 2) | 1 | 2 | 2
+| point M (4 15 60) | 0 | 3 | 2
+| point ZM (4 15 3 60) | 0 | 4 | 3
+|=== 
+
 ===== Vocabulary
 GeoSPARQL version 1.1 consists of a Core module, a Topology Vocabulary extension, a Geometry extension, a Geometry Topology extension, an RDFS Entailment extension, and a Query Rewrite extension.
 Each of these modules will be briefly explained below.

@@ -1,5 +1,5 @@
 = GeoSPARQL 3d White Paper
-:doctype: community-standard
+:doctype: white-paper
 :language: en
 :status: draft
 :committee: technical

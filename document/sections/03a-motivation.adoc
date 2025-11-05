@@ -15,6 +15,7 @@ The system uses 3D GeoSPARQL to integrate the data of the 3D design model, the 3
 - Dynamic adjust the design model 
 - Instruct the machine with the changes  
 - Visualize the new situation
+- test
 
 For both humans and machines, it must be unambiguous what is meant by the queries that are needed to do the job and the resulting answers. It should not matter whether the data is provided in a 3D-GIS, 3D-BIM or 3D-CG standard vocabulary.  
 

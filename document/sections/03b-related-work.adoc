@@ -1,0 +1,283 @@
+
+== Related Work
+
+This is still just a dump of resources. To be transformed into actual text.
+
+=== CityGML
+
+CityGML <<koble2005citygml>> is an open standardized data model for the exchange of 3D models of cities and landscapes.
+Since its standardization by OGC, CityGML has seen a wide variety of proposed extensions and alignments to other data standards.
+
+==== CityJSON and CityRDF
+
+<<ijgi12090351>> proposed the extension of the CityGML and its accompanying serialization CityJSON as an ontology model.
+Currently, the CityRDF standardization group works towards the standardization of this CityGML data model in RDF.
+
+The proposed CityRDF model, even though focused on CityGML and 3D building contents, contains valuable data descriptions which could be generalized in a GeoSPARQL 3D approach.
+One such element is the description of the appearance of a 3D-modeled building using colors or textures, so-called surface materials.
+In addition, CityGML includes relations of 3D primitives between each other, which could serve as an inspiration for similary-named functions or properties in the GeoSPARQL 3D ontology model.
+
+<<ijgi12090351>> describes the CityGML Ontology, which is an ontology model to formalize the CityGML standard towards a representation in OWL. 
+It shows a workflow of identification, classification and selection of the relevant data points needed to describe 3D city models in OWL as derived from building and city models.
+In addition, it introduces the concept of Level of Information Need, defining the granularity of the information on the various levels of the building and the types of information retrieval - direct/indirect,
+i.e. information which is commonly obtained directly from a dataset or using a calculation or reasoning approach.
+The paper exemplifies the concept in a study case for property unit cost and indoor daylight.
+The contribution outlined here became the basis of the CityGML ontology which can serve as one broad application area for GeoSPARQL 3D.
+
+
+Following on this publication <<chadzynski2023semantic>> presents a system architecture and a set of interfaces that can represent city modeling approaches using dynamic geospatial knowledge graphs.
+The paper proves the viability of a transition between a SQL based system for 3D building management to a SPARQL based system using a SQL2SPARQL Transformer component.
+It therefore proves the feasibility of employing linked open data technologies for 3D building data and in particular the CityGML model in practice.
+
+
+<<kutzner2020citygml30>> introduces CityGML 3.0 with a newly added Core module including a new space concept and Level Of Detail concept. 
+The given publication sets the standard especially for Level of Detail in 3D buildings, which may be considered for adoption as GeoSPARQL 3D concepts too.
+In addition, CityGML 3.0 proposes the addition of 3D point clouds for the representation of 3D goemetires of physical spaces and space boundaries.
+A mapping from IFC to CityGML 3.0 is also proposed by these authors.
+
+CityGML 3.0 therefore represents many of the elements that a GeoSPARQL 3D ontology would need to implement on a more abstract level and can give ideas about future query functions to be implemented in the GeoSPARQL query language.
+
+In addition, a master thesis <<hansson2024citygml>> proved the feasibility of not only converting CityGML to a knowledge graph representation, but also its application in triple stores such as Ontop or 3DCityDB. 
+The mapping of CityGML to the knowledge graph was tested using a set of SPARQL queries retrieving different components of building parts. 
+While the thesis could construct a knowledge graph representation from CityGML, it points out that the incorporation of sptaial operations is left to future work and could provide a possible field for GeoSPARQL 3D adoption.
+
+Finally, <<CHADZYNSKI2021100106>> proposed OntoCityGML, an extension go the CityGML ontolog
+https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub
+Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph
+
+
+
+Other details and history of Onto CityGML.
+
+CityRDF working group https://github.com/ogcincubator/cityrdf
+
+
+=== Medicine & Chemistry
+
+The medicine and chemistry domains contain a variety of usecases for 3D applications. 
+
+In particular, 3D metadata of microscopy is a common application field, which yielded for instance the https://doryworkspace.org/metadata[3D Microscopy Metadata Standards] (3D-MMS) <<ropelewski_standard_2022>> developed by the BRAIN 3D Microscopy Working Group.
+This standard helps ensuring that a 3D microscopy dataset is sufficiently described to support its re-use by other scientists not involved in data creation.
+Its adoption will therefore enable investigators willing to share their data to evaluate and decide which data can be combined.
+
+
+https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13083
+Ontology-Based Representation and Modelling of Synthetic 3D Content: A State-of-the-Art Review
+
+<<flotynski2017ontology>>
+
+A range of approaches have been proposed to permit semantic representation and modelling of synthetic 3D content. These approaches differ in the methodologies and technologies used as well as their scope and application domains. This paper provides a review of the current state of the art in representation and modelling of 3D content based on semantic web ontologies, together with a classification, characterization and discussion of the particular approaches.
+
+
+https://www.inderscienceonline.com/doi/abs/10.1504/IJMSO.2017.087702
+A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain
+
+<<sikos2017novel>>
+
+This paper presents the most comprehensive formally grounded 3D ontology to date that maps the entire XSD-based vocabulary of the industry standard X3D (ISO/IEC 19775-19777) to OWL 2, complemented by fundamental concepts and roles of the 3D modelling industry not covered by X3D.
+
+
+=== 3D data formats and ontologies
+
+A new GeoSPARQL standard should be compatible with existing approaches to encode 3D data.
+Semantic technologies should enable users to encode important metadata in the knowledge graph, while retaining the possibility to use already well-known 3D geometry formats either as String literals or file references.
+<<bonduel2019including>> shows how common widespread geometry formats could be included into knowledge graphs, which could be one starting point to investigate the integration within GeoSPARQL.
+
+==== STereoLithography (STL)
+
+http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file[STL files] describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations and was invented by the Albert Consulting Group for 3D Systems in 1987.
+Nowadays it is mainly used for 3D printing purposes, which makes is a plausible candidate for support in GeoSPARQL 3D settings of movable objects such as in cultural heritage.
+Since the STL format does not contain a geospatial reference, the reference needs to be provided externally if STL files were to be used in a geospatial context.
+However, STL objects could be used in local CRS contexts as well.
+
+==== Wavefront OBJ Format (OBJ)
+
+The https://paulbourke.net/dataformats/obj/[OBJ format] is a file format developed by Wavefront Technologies for the Advanced 3D Visualizer animation package.
+Its roots therefore lie in the world of 3D animation.
+The format represents vertex coordinates, texture coordinates, as well as vertex normals, parameter space vertices and faces of a 3D model.
+These are all elements which would need to be considered and supported in an upcoming GeoSPARQL 3D release.
+
+==== Polygon File Format (PLY)
+
+The https://paulbourke.net/dataformats/ply/[Polygon File Format] is a format which was designed to store 3D data from 3D scanning environments, which makes it especially widespread in the Cultural Heritage application area.
+The format consists of a vertex list and a faces list with optional parameters per vertex.
+Like the OBJ format, supporting PLY would imply including support for vertices and faces of a 3D model and their relationships in a knowledge graph.
+
+==== CARARE Metadata Schema
+
+The CARARE metadata schema <<d2013carare>> is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
+
+==== IIIF 3D
+
+
+The International Image Interoperability Framework (IIIF) standard <<snydman2015international>> is currently developing a https://iiif.io/community/groups/3d/tsg/[specification] for the standardization of 3D viewers.
+The viewer specification includes the visualization of 3D models including lighting positions, a scene graph and annotations in the form of additional 3D objects added to a 3D scene.
+A GeoSPARQL 3D standard might need to be compatible with, or include a compatibility statement of, converting 3D objects encoded in GeoSPARQL to the IIIF viewer specification. A prototype implementation might be necessary to comply with this specification.
+
+==== X3D and X3D Ontology
+
+The X3D format <<feichtenhofer2020x3d>>, <<brutzman2010x3d>>, X3DOM <<behr2009x3dom>> and its Ontology version <<brutzman2020x3d>> provide a data format and a blueprint for how 3D data is handled in computer vision approaches.
+X3D is an interesting format to investigate for 3D components which need to be modeled within a GeoSPARQL 3D specification. It is a likely candidate for a literal format and might be integrated using interlinking approaches to the already existing X3D vocabulary.
+However, since X3D was invented with computer vision approaches in mind it does not define any geospatial aspects that could be considered by a GeoSPARQL 3D implementation.
+
+
+==== Geometry Metadata Ontology (GOM)
+
+
+The https://www.w3id.org/gom[Geometry Metadata Ontology (GOM)] introduces classes for surfaces which are common in the 3D world, but uncommon for 3D geometries, for instance Meshes or NURBS surfaces.
+The ontology can serve as an inspiration for extensions in GeoSPARQL 3D and may or may not be fully or partly adopted in the process of standardization.
+
+
+==== Ontology for Managing Geometry (OMG)
+
+
+The https://www.w3id.org/omg[Ontology for Managing Geometry (OMG)] describes states and derivation of geometries which may be useful to the description of data in GeoSPARQL 3D.
+For example. an extrusion in 3D from a 2D geometry template would have a derivation relation from the 2D geometry which one might want to see modeled in GeoSPARQL 3D.
+
+==== File Ontology for Geometry Formats (FOG)
+
+The https://w3id.org/fog#[File Ontology for Geometry Formats (FOG)] provides a bridge between ontology descriptions of geometries and data file descriptions of 3D contents.
+Since many 3D datasets are of considerable size, their inclusion into the knowledge graph as String literals might hinder the query performance of said knowledge graph.
+It therefore stands to reason whether to adopt the same or a similar method of geometry access that FOG provides for GeoSPARQL 3D.
+
+=== To consider
+
+https://link.springer.com/article/10.1007/s10845-023-02246-6
+Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
+
+<<yuchen2025ontology>>
+
+To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes & roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools. 
+
+Open standard for particle-mesh data (openPMD)
+
+
+The https://github.com/openPMD/openPMD-standard[openPMD standard], short for open standard for particle-mesh data files is not a file format per se. It provides guidance for meta-data and naming schemes. openPMD provides naming and attribute conventions that allow the exchange of particle and mesh based data from scientific simulations and experiments. Its primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and different algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If outputs from programs, devices (such as cameras), simulations or post-processed data-sets, contain a minimal set of meta information as provided by openPMD, data can be exchanged between those with minimal effort, with the same tools used for visualization.
+
+<<huebl_2018_1167843>>
+
+
+=== Cultural Heritage
+
+In the research domain of cultural heritage, 3D models of either cultural heritage artifacts (possibly georeferenced), 3D models of archaeological sites or simply 3D models of ancient buildings are becoming increasinly common.
+
+===== Use Cases
+
+Use Cases in the Cultural Heritage domain include, but are not limited to, the following main interests:
+
+**Visualization:** The visualization of 3D models for the presentation of such 3D models, for example in the context of a museum. 3D models may be styled with a particular set of textures or modeled with a specific set of colours to highlight certain relevant aspects. The visualization of 3D models is currently standardized by the IIIF 3D working group <<Haynes2023iiif3d>>, which aims to create viewing parameter descriptions that 3D viewers may implement, similar to the specifications of IIIF 2D for images.
+
+**Object Annotation:** 3D models are seen as the subject of a research question in absence of the original artifact for political, practical or other restrictive reasons. Out of all known methods of the representation of cultural heritage artifacts, 3D models provide the most detail when being delivered as a digital artifact and are therefore very often preferred in a research context.
+Researchers mark noteworthy aspects of the cultural artifact as 3D annotations <<bestpractices3d>> which may include surface descriptions, volumes of the 3D model or 3D models which are created and placed adjacent to the to-be-annotated 3D model <<mara2024annotation>>.
+
+**Relation of Objects:** Objects of a specific collections always exist in a spatio-temporal context. It is important to relate these representations via meaningful relations, so that relevant objects of a collection can be retrieved more easily
+
+**AI Applications in Cultural Heritage:** Usage for annotated areas on 3D models or their derivations for machine learning classifications <<Stotzner_2023_ICCV>> <<10.2312:gch.20231157>>
+
+**Knowledge Graphs as Metadata descriptions:** With the advent of more 3D models being published, the relevance of their creation parameters <<homburgheritagescience2021>>, their contents and their object metadata increases for the usecases of filtering them and also for the possibly automated selection of suitable cultural heritage metadata for e.g. machine learning classifications. Currently, many metadata standards fulfil parts of the description chain and a unified vocabulary to described data types seems to be missing.
+
+===== Research applications making use of 3D models in Cultural Heritage
+
+This section discusses research projects with 3D contents based on the technologies they use as elaborated in the previous section.
+
+====== 3D models of cuneiform tablets
+
+Cuneiform tablets from ancient Iran provide an interesting research area, since they combine a 3D artifact with textual imprints that are of interest to a variety of research communities including Assyriologsts, Digital Humanists, Computational Linguists and last but not least Computer Scientists.
+The creation of 3D models of cuneiform tablets provides the best accessibility to the specificities of the original artifact in its absence and 3D scans have been used by computer scientists as the basis for certain machine learning application tasks, even though to this day only as a provision for 2D renderings of their surfaces.
+Interests of the research community include the description of interesting features such as cuneiform signs on cuneiform tablet surfaces and their connection to other text contents or other cuneiform artifacts.
+Knowledge graphs provide machine learning approaches <<Stotzner_2023_ICCV>> <<stotzner2023r>> with unique opportunities to connect different kinds of data using a unified data format.
+
+To describe 3D meshes, several vocabularies have been developed in the context of the cuneiform studies project:
+
+* https://situx.github.io/mesh-sparql/[MeshSPARQL]: A vocabulary to describe essential mesh elements
+* https://www.gigamesh.eu/ont/[Gigamesh Metadata Vocabulary]: A vocabulary which describes metadata of a 3D model. The metadata can be generated using the Gigamesh Software Framework
+* https://mainzed.pages.gitlab.rlp.net/homepages/mainzedmetadata/[3DCAP Vocabularies]: An ontology model to describe the creation of a 3D model. It has been applied to different scanning softwares
+
+=== IFC and BIM
+
+===== Industry Foundation Classes (IFC) and BIM
+
+BIM is a paradigm in which object‐model definitions - with machine‑interpretable semantics - are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC).
+
+====== Product model
+
+In IFC, a construction work is decomposed into a set of products. These products can have **multiple representations**. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
+
+At the same time, such a product separates the **placement** (an hierarchical transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.
+
+In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, **semantics and geometry are intertwined** such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics.
+
+IFC also allows for **decomposition**, where a whole is aggregated into multiple parts for richer semantics. This allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.
+
+====== Evolving views on geometry
+
+IFC is heavily influenced by the ISO 10303 (STEP) family of standards, but over time adopted its own geometric paradigms:
+
+- Procedural geometry and boolean operations became less prominent with the adoption of ReferenceView in IFC4. Tessellated geometry definitions were added for more compact exchange.
+- **Infrastructure definitions** were added with precise mathematical transition curves and a composition of a horizontal, vertical and cant (inclination) profile.
+- IFC5 with an **explicit** (most likely triangulated) geometry schema at the core, with semantic overlays to encode the same procedural semantics as a non-mandatory or use-case specific layer. Heavily inspired by USD with layer-based composition for collaborative exchange.
+
+Especially the handling of **tolerances** means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. NB Tolerances stand in the way of using existing approaches for SFA geometry predicates such as PostGIS+SFCGAL which is based on arbitrary precision boolean logic as implemented in CGAL without tolerances.
+
+====== Use cases
+
+The most successful use case on BIM data is **coordination and visualization** where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software. 
+
+**Design to design** workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.
+
+**Long-term preservation** of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don't contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.
+
+**BIM-GIS integration** is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.
+
+**Simulations** on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in nieghbouring domaisn remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
+
+====== Implications and questions:
+
+- Euclidean / non-euclidean; is a CRS required?
+- Separate representation+placement -> enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate in space
+- Geometry as leaf-values or object-relational model : cannot encapsulate geometry into a single literal, but allows for richer semantics
+- BRep model (topology + geometry + orientation + location) vs polyhedral model (e.g halfedge) vs explicit loops of point coordinates
+- Procedural vs implicit (e.g constraints) vs explicit (polyhedra)
+- Tolerances
+- Decomposition inside or outside of the 'geometry ontology'
+- Are infra geometries (hor + ver alignment + cant, for positioning and sweeps) in scope?
+
+
+=== Implementations
+
+==== CGAL &#8594; SFCGAL &#8594; PostGIS
+
+==== OpenCASCADE
+
+===== OpenCASCADE-inspired BRep ontology
+
+Perzylo, A., Somani, N., Rickert, M., & Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.
+
+https://ieeexplore.ieee.org/abstract/document/7353971
+
+<<perzylo2015ontology>>
+
+===== Topologic
+
+Jabi, W., & Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.
+
+https://topologic.app/
+
+<<jabi2021topologic>>
+
+==== BRep vs mesh/polyhedron
+
+BRep
+
+- Curved surfaces
+- Topology: connected components as shells, solids with inner voids, etc.
+- Clean APIs due to inheritance: e.g `fn extrude(Topo) -> Topo`, for vertex -> edge; edge -> face; face -> solid; solid -> solid
+- Extra indirections: edge -> vertex[] -> point
+- Depending on implementation can be inefficient, e.g outer wire of face not explicitly marked need to be checked wrt infinite point
+- Data integrity and validation a bit harder
+
+Mesh/polyhedron
+
+- Potentially fewer indirections
+- Triangle meshes robust and well understood
+- Many different data models though, e.g half-edge (only manifold), indexed faceset (no adjacency info), winged/quad/radial edge

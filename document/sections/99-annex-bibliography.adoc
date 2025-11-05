@@ -1,5 +1,7 @@
+[bibliography]
+[[Bibliography]]
 == Bibliography
 
-[[RDF]] RDF:: World Wide Web Consortium, _RDF 1.1 Concepts and Abstract Syntax_, W3C Recommendation (25 February 2014). https://www.w3.org/TR/rdf11-concepts/
+* [[[RDF,RDF]]], _World Wide Web Consortium: RDF 1.1 Concepts and Abstract Syntax, W3C Recommendation_, https://www.w3.org/TR/rdf11-concepts/ (25 February 2014). 
 
-[[TTL]] TTL:: World Wide Web Consortium, _RDF 1.1 Turtle Terse RDF Triple Language_, W3C Recommendation (25 February 2014). https://www.w3.org/TR/turtle
+* [[[TTL,TTL]]], _World Wide Web Consortium: RDF 1.1 Turtle Terse RDF Triple Language, W3C Recommendation_, https://www.w3.org/TR/turtle (25 February 2014). 

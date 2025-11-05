@@ -2,12 +2,67 @@
 
 This section describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.
 
-=== Beneficiaries
+=== Semantic-functional value of 3D-GeoSPARQL
+Value for data reasoning, formal description, and semantic interoperability
 
-==== Beneficiary 1: Someone who benefits
+==== Meaningful creation and querying of 3D geometry
+Whether manually or programmatically defining 3D geometries in BIM, GEO or CG environments, the GeoSPARQL standard could provide or connect to vocabulary to represent 3D structures. A 3D cube, for example, can be represented in multiple ways:
 
-=== Benefits
+ - As a set of bounding points, lines, and faces;
+ - As a base surface with an extrude function;
+ - As an 3D geometric primitive (e.g., the concept of a 'cube' as a spatial figure).
 
-The benefits of semantic and graph technologies are outlined below.
+Once GeoSPARQL offers the means to define and link 3D geometries in these different ways, it will allow both humans and machines to interpret and interact with the data effectively.
 
-==== Benefit B1: My benefit
+==== Meaningful creation and querying of 3D topological relationships
+Is “3D Geometry A” inside, touching, overlapping, intersecting or above “3D Geometry B”?
+
+Being able to describe and use such topological relationships is crucial for conducting spatial analyses, formulating rules, and deriving knowledge from different heterogeneous datasets.
+
+Beyond describing topological relationships, one should be able to query them:
+
+> What is the spatial relationship between 3D Geometry A and 3D Geometry B?
+
+Such queries should return the appropriate topological result (e.g., "intersects"), which is essential for use cases like clash detection in design validation
+
+==== Derivation of geometric and topological knowledge
+From explicitly modeled geometric and topological data, one should be able to infer implicit knowledge.
+
+For instance, if 3D Geometry A is 3D inside 3D Geometry B, then we can infer that:
+
+> A does not "touch" B, and
+> A does not "overlap" with B,
+
+even if these facts are not explicitly stated.
+
+For entailment an application that is compliant with the geo-spatial 3D specification would be able to answer queries like: "Does this tree have a 3D geometry?"
+
+If the tree is defined using a MultiSolid geometry, then the answer should be "yes," even if this is not explicitly declared as such.
+
+=== Value for user experience, visualization, and application use of 3D-GeoSPARQL
+
+==== Visualization
+There is a growing need to visualize how 3D data in BIM and GIS relate to one another. Stakeholders want to see BIM and/or 3D Geo data of a newly planned structure visualized within the 3D Geo and/or BIM context of the existing digital city. A shared vocabulary that can present both domains in an integrated way supports this goal.
+
+==== Calculation and analysis
+Semantic modelled 3D-model enables powerful computation and analysis. Analytical results can be displayed in dashboards operating within the GeoBIM domain. This creates a bridge between asset management (typically GIS-oriented) and project management (typically BIM-oriented), allowing for cross-domain collaboration and decision-making.
+
+==== Spatial querying
+Spatial querying is a key function within a federated GeoBIM Network. Questions such as "What material is located in this area?" or "Where is space available for new cables and pipelines?" are examples of 3D spatial queries that can be answered when GeoSPARQL 3D is functioning effectively across systems and semantics.
+
+==== Machine control
+A shared semantic GeoBIM Network also supports machine control. The GIS domain typically describes the existing situation, while the BIM domain describes the intended or future situation. This combination can be used to automatically instruct and guide machines in the built environment.
+
+==== Modeling, simulation and planning
+A network of datasets with 3D-data should support the modeling, simulation and planning of future changes to the built environment. Users — whether human or machine — can use the network and GeoSPARQL 3D to propose and model modifications in either BIM or GIS formats. A well-functioning 3D semantic GeoBIM Network enables this kind of forward-looking spatial planning and design.
+
+=== Added value of the 3D-GeoSPARQL for Organisations
+
+==== Brings together different domains (GIS, BIM, CG)
+GeoSPARQL 3D can help in bringing together different domains that work with 3D information. 
+
+==== Enables extension to vocabularies from other domains
+The vocabulary can have the possiblity to extend to vocabulaires with 3D geometry or topology from other domains, for example the Building Ontology Topology (BOT) or RELOC Ontology. Multi-domain models with georeferenced 3D and 2D city models could be also linked by CityRDF ontology based on CityGML 3.0 standard. GeoSPARQL 3D would be important enabler for data retrieval, update and analysis for such models. In addition to ontologies, it can also establish relationships to 3D file formats from other domains, such as glTF.
+
+==== Facilitates better interoperability between knowledge domains with spatial components (geography, aerospace, architecture, product design, (bio)chemistry, IoT, …)
+A unified geometric language can help by migrating ideas and methods across fields, accelerating innovation. For example a parametic design algoritm, rule, or llm making use of geometry and topology originated in aerospace, can be re-used in the architecture domain.   

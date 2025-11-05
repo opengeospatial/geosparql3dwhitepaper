@@ -26,9 +26,11 @@ jobs:
         restore-keys: fontist-ubuntu-latest
 
     - uses: actions-mn/setup@main
-    
+
     - name: Run Metanorma 🔧
       run: |
+         pip install --pre bibtexparser
+         python scripts/processbibtex.py
          metanorma site generate --agree-to-terms -o site
 
     - name: Deploy 🚀

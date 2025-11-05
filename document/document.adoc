@@ -38,7 +38,9 @@ include::sections/02-preamble.adoc[]
 
 :sectnums:
 
-include::sections/03-introduction.adoc[]
+include::sections/03a-motivation.adoc[]
+
+include::sections/03b-related-work.adoc[]
 
 include::sections/03b-related-work.adoc[]
 

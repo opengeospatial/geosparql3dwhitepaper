@@ -1,31 +1,58 @@
 == Motivation
+The implementation of geoSPARQL has a major impact on developer efficiency in dealing with geospatial data. The opportunity to query geospatial data for geometric properties like intersections, containment, distances, and so forth, allows developers to build software that can offer geometric data handling and checking possibilities. This enables all sorts of use cases in the geospatial domain, e.g. in cadastral data handling. 
 
 === Why do we want 3D semantic modeling?
+Would it not be amazing that such functionality is also available in three dimensions? Would it not be great that developers are able to build tools that allow to check whether an object is below, above, besides, nearby or far from any other specified object in three-dimensional space? Or what the distance is between two objects, without necessarily requiring to go through complex and bespoke 3D modelling software? How openly can such relatively common 3D geometric queries be made available? 
+
+These are the key motivations behind this document, which aims to offer such 3D geometric query functionality for the geospatial (BIM and GIS) developer and end user communities.
+
 The white paper: "OGC Benefits of Representing Spatial Data Using Semantic and Graph Technologies" describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies <<Abhayaratna2020wp>>. This section describes the motivation of adding 3D functionality to the GeoSPARQL standard. 
 
-While humans can often resolve 3D spatial questions such as “Is cube A inside cylinder B?” — even when the underlying data comes from different systems like GIS and BIM — this typically relies on implicit understanding, conventions, or direct communication between the data creators. For datasets to be meaningfully aligned, the people who created them often need to clarify assumptions, data structures, coordinate systems, or modeling intentions. Without such human-to-human explanation, machines struggle to interpret spatial relationships across heterogeneous sources. A conversion process is required, in which data is made homogeneous for analysis through extraction, transformation, and loading. Based on a homogeneous dataset, conclusions can then be drawn. Performing conversions may result in geometric simplifications, which can limit or even eliminate the functionality of spatial queries <<Biljecki2019>>.
-If one desires digital, automated processing or analysis of 3D spatial questions without requiring conversion, spatial information must be structured in an explicitly machine-readable format. When this is done, initiatives based on federated systems with heterogeneous datasets can obtain computer-generated answers to spatial 3D queries. This requires semantic alignment and standardized geometry processing in machine-driven analysis. <<Göbel2024>> In other words, a common vocabulary is needed to semantically define the 3D objects and its 3D sptatial function. 
+=== Interpreting 3D spatial questions
+Humans can often resolve 3D spatial questions such as *“Is cube A inside cylinder B?”*, especially when the underlying data comes from different systems like GIS and BIM. Resolving this question typically relies on implicit understanding, conventions, human visual interpretation, and/or direct communication between the data creators. As much as humans are able to solve these 3D spatial questions rather intuitively, they are much more difficult to resolve for a machine or computer. That would nevertheless be a very strong added value and a game-changer for many tools and applications in the built environment (geospatial, infrastructure, buildings). 
 
-Imagine a constructor who wants to use real-time sensor data at a construction site in combination with modelled 3D data and 3D base registration data. By combining this the person wants to visualize the site, perform accurate spatial checks and calculations, and automatically update machine instructions for safe, efficient and autonomous execution" 
+Especially in the case where multiple data formats are available for representing such 3D spatial questions, it is very difficult for a machine to solve such questions, since the implicit understanding or formal definition of the terms in these 3D spatial questions (e.g. 'within') is not available. Too many terms and definitions exist in multiple data formats, and they are not easily interpreted or aligned.
+
+For datasets to be meaningfully aligned, the people who created them often need to clarify assumptions, data structures, coordinate systems, or modeling intentions. Without such human-to-human explanation, machines struggle to interpret spatial relationships across heterogeneous sources. An explicit representation and/or conversion process is thus required, in which 3D geometric terms, properties and relations are formally defined and made available for use in 3D spatial questions. By doing so, terms like "within", "above", "inside" become readily available and are understood by machine and human. This has been done before in the case of 2D geometry (see GeoSPARQL 1.0) and is also needed for the case of 3D geometry. 
+
+=== From conversion of 3D formats to direct querying
+==== Conversion of 3D geometry
+In previous works, it has been investigated how 3D geometry in one format can be converted into an alternative format. This would in principle enable one to transform geometry from one environment (e.g. a GIS environment) to be loaded in another environment (e.g. a BIM software tool). These are in such case point-to-point conversion processes. 
+
+Alternatively, it has also been tried to produce a uniform representation for all geometry. The STEP-based Industry Foundation Classes (IFC) is an example of such uniform language. If all geometry is converted to this homogeneous format, then one can use that language to resolve all geometric or spatial questions. One would thus enable a homogeneous dataset, and based on this homogeneous dataset, conclusions can then be drawn. 
+
+Of course, it has been indicated that both in the case of point-to-point conversions as well as conversions to a single homogeneous format, geometric simplifications occur and the result is near to never the same as the original <<Pauwels2014>>. This likely limits or may even eliminate the functionality of spatial queries <<Biljecki2019>>.
+
+==== Direct representation of 3D geometry
+If one desires digital, automated processing or analysis of 3D spatial questions without requiring conversion, spatial information must be structured in an explicitly machine-readable format. When this is done, initiatives based on federated systems with heterogeneous datasets can obtain computer-generated answers to spatial 3D queries. This requires semantic alignment and standardized geometry processing in a machine-driven analysis <<Göbel2024>>. 
+
+In the case of the current document, and general GeoSPARQL developments, the goal in this particular case is to enable the representation of 3D geometric information directly inside a Semantic Web format, particularly RDF graphs and SPARQL queries. The goal hereby is not to define complete new ontologies for representing geometry, but rather to make existing 3D geometric terms and definitions available through a common vocabulary that allows querying such data (and enable spatial questions). In other words, a common vocabulary is needed to semantically define the 3D objects and their 3D sptatial functions. 
+
+=== Example case
+Imagine a contractor who wants to use real-time sensor data at a construction site in combination with modelled 3D data and 3D base registration data. After combining the available data, the person wants to visualize the site, perform accurate spatial checks and calculations, and automatically update machine instructions for safe, efficient and autonomous execution. Particularly for the spatial checks and calculations, the contractor needs to be able to check to what extent an element is inside, above, below, around, or not near to any other element. These are simple geometric spatial questions that are to be supported through the next version of GeoSPARQL.
  
-The system uses 3D GeoSPARQL to integrate the data of the 3D design model, the 3D base registration model and 3D real-time sensor data to: 
+The data of the 3D design model, the 3D base registration model and 3D real-time sensor data can readily be combined and made available using common (Semantic) Web technologies. It is hereby assumed that a combined RDF graph is available of the different data sources, following multiple ontologies or schemas, and preferably linking to the original geometry representations, be it IFC, GML, glTF, DAE, OBJ, or other. 
+
+An common web application has access to the provided data. This web application uses 3D GeoSPARQL to: 
 - Spatially associate sensor data with objects in the design and registration model 
 - Calculate the permissible tolerances 
 - Detect the deviations 
 - Dynamic adjust the design model 
 - Instruct the machine with the changes  
 - Visualize the new situation
-- test
 
-For both humans and machines, it must be unambiguous what is meant by the queries that are needed to do the job and the resulting answers. It should not matter whether the data is provided in a 3D-GIS, 3D-BIM or 3D-CG standard vocabulary.  
+For any of the geometric operations in all these functionalities, the system needs to be able to rely on 3D GeoSPARQL to be able to process 3D geometry. For both humans and machines, it must therefore be unambiguous what is meant by the 3D GeoSPARQL queries that are needed to do the job and the resulting answers. It should not matter whether the data is provided in a 3D-GIS, 3D-BIM or 3D-CG standard vocabulary.  
+
+=== Towards a spatial 3D specification
+In the remainder of this document, the outset of a 3D (geo-)spatial specification is provided, aiming for supporting data consumers as well as providers.
 
 ==== A geo-spatial 3D specification would support data consumers by:
- - access and understanding of 3D-geometry and 3D-topology from multiple sources; 
- - the integration of 3D-data geospatial and non-geospatial;
- - data quality evaluation of the given 3D-data;
+ - access and understanding of 3D geometry and 3D topology from multiple sources; 
+ - the integration of 3D data geospatial and non-geospatial;
+ - data quality evaluation of the given 3D data;
  - Geometric and topological description in natural language.
 
 ==== A geo-spatial 3D specification would support data providers by:
- - Maximizing the use of 3D-geometry and 3D-topology data;
+ - Maximizing the use of 3D geometry and 3D topology data;
  - Defining multiple 3D topology or geometries;
  - Assuring the quality of 3D geospatial data.

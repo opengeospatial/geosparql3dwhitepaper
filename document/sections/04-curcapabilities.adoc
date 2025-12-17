@@ -162,49 +162,49 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 .Alignment: GeoSPARQL and Open Source Relational Databases with Geospatial Support
 |===
 | GeoSPARQL | PostGIS | H2GIS | Spatialite
-| http://www.opengis.net/def/function/geosparql/area[geof:area] | https://postgis.net/docs/ST_Area.html[ST_Area] | https://www.h2gis.org/docs/1.5.0/ST_Area/[ST_Area] | area
+| http://www.opengis.net/def/function/geosparql/area[geof:area] | https://postgis.net/docs/ST_Area.html[ST_Area] | https://h2gis.readthedocs.io/en/latest/ST_Area.html[ST_Area] | area
 | http://www.opengis.net/def/function/geosparql/asGeoJSON[geof:asGeoJSON] | https://postgis.net/docs/ST_AsGeoJSON.html[ST_AsGeoJSON] |  | asgeojson
-| http://www.opengis.net/def/function/geosparql/asGML[geof:asGML] | https://postgis.net/docs/ST_AsGML.html[ST_AsGML] | https://www.h2gis.org/docs/1.5.0/ST_AsGML/[ST_AsGML] | asgml
-| http://www.opengis.net/def/function/geosparql/asKML[geof:asKML] | https://postgis.net/docs/ST_AsKML.html[ST_AsKML] | https://www.h2gis.org/docs/1.5.0/ST_AsKML/[ST_AsKML] | askml
-| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | https://postgis.net/docs/ST_AsText.html[ST_AsText] | https://www.h2gis.org/docs/1.5.0/ST_AsWKT/[ST_AsWKT] | aswkt
-| http://www.opengis.net/def/function/geosparql/boundary[geof:boundary] | https://postgis.net/docs/ST_Boundary.html[ST_Boundary] | https://www.h2gis.org/docs/1.5.0/ST_Boundary/[ST_Boundary] | boundary
-| http://www.opengis.net/def/function/geosparql/boundingCircle[geof:boundingCircle] | https://postgis.net/docs/ST_MinimumBoundingCircle.html[ST_MinimumBoundingCircle] | https://www.h2gis.org/docs/1.5.0/ST_BoundingCircle/[ST_BoundingCircle] |
-| http://www.opengis.net/def/function/geosparql/buffer[geof:buffer] | https://postgis.net/docs/ST_Buffer.html[ST_Buffer] | https://www.h2gis.org/docs/1.5.0/ST_Buffer/[ST_Buffer] | buffer
-| http://www.opengis.net/def/function/geosparql/centroid[geof:centroid] | https://postgis.net/docs/ST_Centroid.html[ST_Centroid] | https://www.h2gis.org/docs/1.5.0/ST_Centroid/[ST_Centroid] | centroid
+| http://www.opengis.net/def/function/geosparql/asGML[geof:asGML] | https://postgis.net/docs/ST_AsGML.html[ST_AsGML] | https://h2gis.readthedocs.io/en/latest/ST_AsGML.html[ST_AsGML] | asgml
+| http://www.opengis.net/def/function/geosparql/asKML[geof:asKML] | https://postgis.net/docs/ST_AsKML.html[ST_AsKML] | https://h2gis.readthedocs.io/en/latest/ST_AsKML.html[ST_AsKML] | askml
+| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | https://postgis.net/docs/ST_AsText.html[ST_AsText] | https://h2gis.readthedocs.io/en/latest/ST_AsWKT.html[ST_AsWKT] | aswkt
+| http://www.opengis.net/def/function/geosparql/boundary[geof:boundary] | https://postgis.net/docs/ST_Boundary.html[ST_Boundary] | https://h2gis.readthedocs.io/en/latest/ST_Boundary.html[ST_Boundary] | boundary
+| http://www.opengis.net/def/function/geosparql/boundingCircle[geof:boundingCircle] | https://postgis.net/docs/ST_MinimumBoundingCircle.html[ST_MinimumBoundingCircle] | https://h2gis.readthedocs.io/en/latest/ST_BoundingCircle.html[ST_BoundingCircle] |
+| http://www.opengis.net/def/function/geosparql/buffer[geof:buffer] | https://postgis.net/docs/ST_Buffer.html[ST_Buffer] | https://h2gis.readthedocs.io/en/latest/ST_Buffer.html[ST_Buffer] | buffer
+| http://www.opengis.net/def/function/geosparql/centroid[geof:centroid] | https://postgis.net/docs/ST_Centroid.html[ST_Centroid] | https://h2gis.readthedocs.io/en/latest/ST_Centroid.html[ST_Centroid] | centroid
 | http://www.opengis.net/def/function/geosparql/concaveHull[geof:concaveHull] | https://postgis.net/docs/ST_ConcaveHull.html[ST_ConcaveHull] |  | concavehull
-| http://www.opengis.net/def/function/geosparql/contains[geof:contains] | https://postgis.net/docs/ST_Contains.html[ST_Contains] | https://www.h2gis.org/docs/1.5.0/ST_Contains/[ST_Contains] | contains
-| http://www.opengis.net/def/function/geosparql/convexHull[geof:convexHull] | https://postgis.net/docs/ST_ConvexHull.html[ST_ConvexHull] | https://www.h2gis.org/docs/1.5.0/ST_ConvexHull/[ST_ConvexHull] | convexhull
+| http://www.opengis.net/def/function/geosparql/contains[geof:contains] | https://postgis.net/docs/ST_Contains.html[ST_Contains] | https://h2gis.readthedocs.io/en/latest/ST_Contains.html[ST_Contains] | contains
+| http://www.opengis.net/def/function/geosparql/convexHull[geof:convexHull] | https://postgis.net/docs/ST_ConvexHull.html[ST_ConvexHull] | https://h2gis.readthedocs.io/en/latest/ST_ConvexHull.html[ST_ConvexHull] | convexhull
 | http://www.opengis.net/def/function/geosparql/coveredBy[geof:coveredBy] | https://postgis.net/docs/ST_CoveredBy.html[ST_CoveredBy] |  | coveredby
-| http://www.opengis.net/def/function/geosparql/covers[geof:covers] | https://postgis.net/docs/ST_Covers.html[ST_Covers] | https://www.h2gis.org/docs/1.5.0/ST_Covers/[ST_Covers] | covers
-| http://www.opengis.net/def/function/geosparql/crosses[geof:crosses] | https://postgis.net/docs/ST_Crosses.html[ST_Crosses] | https://www.h2gis.org/docs/1.5.0/ST_Crosses/[ST_Crosses] | crosses
-| http://www.opengis.net/def/function/geosparql/difference[geof:difference] | https://postgis.net/docs/ST_Difference.html[ST_Difference] | https://www.h2gis.org/docs/1.5.0/ST_Difference/[ST_Difference] | difference
-| http://www.opengis.net/def/function/geosparql/sfDisjoint[geof:sfDisjoint] | https://postgis.net/docs/ST_Disjoint.html[ST_Disjoint] | https://www.h2gis.org/docs/1.5.0/ST_Disjoint/[ST_Disjoint] | mbrdisjoint
-| http://www.opengis.net/def/function/geosparql/ehDisjoint[geof:ehDisjoint] | https://postgis.net/docs/ST_Disjoint.html[ST_Disjoint] | https://www.h2gis.org/docs/1.5.0/ST_Disjoint/[ST_Disjoint] | mbrdisjoint
-| http://www.opengis.net/def/function/geosparql/distance[geof:distance] | https://postgis.net/docs/ST_Distance.html[ST_Distance] | https://www.h2gis.org/docs/1.5.0/ST_Distance/[ST_Distance] | distance
-| http://www.opengis.net/def/function/geosparql/envelope[geof:envelope] | https://postgis.net/docs/ST_Envelope.html[ST_Envelope] | https://www.h2gis.org/docs/1.5.0/ST_Envelope/[ST_Envelope] | envelope
-| http://www.opengis.net/def/function/geosparql/sfEquals[geof:sfEquals] | https://postgis.net/docs/ST_Equals.html[ST_Equals] | https://www.h2gis.org/docs/1.5.0/ST_Equals/[ST_Equals] | equals
-| http://www.opengis.net/def/function/geosparql/ehEquals[geof:ehEquals] | https://postgis.net/docs/ST_Equals.html[ST_Equals] | https://www.h2gis.org/docs/1.5.0/ST_Equals/[ST_Equals] | equals
-| http://www.opengis.net/def/function/geosparql/geometryN[geof:geometryN] | https://postgis.net/docs/ST_GeometryN.html[ST_GeometryN] | https://www.h2gis.org/docs/1.5.0/ST_GeometryN/[ST_GeometryN] | geometryn
+| http://www.opengis.net/def/function/geosparql/covers[geof:covers] | https://postgis.net/docs/ST_Covers.html[ST_Covers] | https://h2gis.readthedocs.io/en/latest/ST_Covers.html[ST_Covers] | covers
+| http://www.opengis.net/def/function/geosparql/crosses[geof:crosses] | https://postgis.net/docs/ST_Crosses.html[ST_Crosses] | https://h2gis.readthedocs.io/en/latest/ST_Crosses.html[ST_Crosses] | crosses
+| http://www.opengis.net/def/function/geosparql/difference[geof:difference] | https://postgis.net/docs/ST_Difference.html[ST_Difference] | https://h2gis.readthedocs.io/en/latest/ST_Difference.html[ST_Difference] | difference
+| http://www.opengis.net/def/function/geosparql/sfDisjoint[geof:sfDisjoint] | https://postgis.net/docs/ST_Disjoint.html[ST_Disjoint] | https://h2gis.readthedocs.io/en/latest/ST_Disjoint.html[ST_Disjoint] | mbrdisjoint
+| http://www.opengis.net/def/function/geosparql/ehDisjoint[geof:ehDisjoint] | https://postgis.net/docs/ST_Disjoint.html[ST_Disjoint] | https://h2gis.readthedocs.io/en/latest/ST_Disjoint.html[ST_Disjoint] | mbrdisjoint
+| http://www.opengis.net/def/function/geosparql/distance[geof:distance] | https://postgis.net/docs/ST_Distance.html[ST_Distance] | https://h2gis.readthedocs.io/en/latest/ST_Distance.html[ST_Distance] | distance
+| http://www.opengis.net/def/function/geosparql/envelope[geof:envelope] | https://postgis.net/docs/ST_Envelope.html[ST_Envelope] | https://h2gis.readthedocs.io/en/latest/ST_Envelope.html[ST_Envelope] | envelope
+| http://www.opengis.net/def/function/geosparql/sfEquals[geof:sfEquals] | https://postgis.net/docs/ST_Equals.html[ST_Equals] | https://h2gis.readthedocs.io/en/latest/ST_Equals.html[ST_Equals] | equals
+| http://www.opengis.net/def/function/geosparql/ehEquals[geof:ehEquals] | https://postgis.net/docs/ST_Equals.html[ST_Equals] | https://h2gis.readthedocs.io/en/latest/ST_Equals.html[ST_Equals] | equals
+| http://www.opengis.net/def/function/geosparql/geometryN[geof:geometryN] | https://postgis.net/docs/ST_GeometryN.html[ST_GeometryN] | https://h2gis.readthedocs.io/en/latest/ST_GeometryN.html[ST_GeometryN] | geometryn
 | geof:getsrid | st_srid | st_srid | srid
-| http://www.opengis.net/def/function/geosparql/intersection[geof:intersection] | https://postgis.net/docs/ST_Intersection.html[ST_Intersection] | https://www.h2gis.org/docs/1.5.0/ST_Intersection/[ST_Intersection] | intersection
-| http://www.opengis.net/def/function/geosparql/sfIntersects[geof:sfIntersects] | https://postgis.net/docs/ST_Intersects.html[ST_Intersects] | https://www.h2gis.org/docs/1.5.0/ST_Intersects/[ST_Intersects] | intersects
-| http://www.opengis.net/def/function/geosparql/isEmpty[geof:isEmpty] | https://postgis.net/docs/ST_IsEmpty.html[ST_IsEmpty] | https://www.h2gis.org/docs/1.5.0/ST_IsEmpty/[ST_IsEmpty] | isempty
-| http://www.opengis.net/def/function/geosparql/isSimple[geof:isSimple] | https://postgis.net/docs/ST_IsSimple.html[ST_IsSimple] | https://www.h2gis.org/docs/1.5.0/ST_IsSimple/[ST_IsSimple] | issimple
-| http://www.opengis.net/def/function/geosparql/length[geof:length] | https://postgis.net/docs/ST_Length.html[ST_Length] | https://www.h2gis.org/docs/1.5.0/ST_Length/[ST_Length] | length
+| http://www.opengis.net/def/function/geosparql/intersection[geof:intersection] | https://postgis.net/docs/ST_Intersection.html[ST_Intersection] | https://h2gis.readthedocs.io/en/latest/ST_Intersection.html[ST_Intersection] | intersection
+| http://www.opengis.net/def/function/geosparql/sfIntersects[geof:sfIntersects] | https://postgis.net/docs/ST_Intersects.html[ST_Intersects] | https://h2gis.readthedocs.io/en/latest/ST_Intersects.html[ST_Intersects] | intersects
+| http://www.opengis.net/def/function/geosparql/isEmpty[geof:isEmpty] | https://postgis.net/docs/ST_IsEmpty.html[ST_IsEmpty] | https://h2gis.readthedocs.io/en/latest/ST_IsEmpty.html[ST_IsEmpty] | isempty
+| http://www.opengis.net/def/function/geosparql/isSimple[geof:isSimple] | https://postgis.net/docs/ST_IsSimple.html[ST_IsSimple] | https://h2gis.readthedocs.io/en/latest/ST_IsSimple.html[ST_IsSimple] | issimple
+| http://www.opengis.net/def/function/geosparql/length[geof:length] | https://postgis.net/docs/ST_Length.html[ST_Length] | https://h2gis.readthedocs.io/en/latest/ST_Length.html[ST_Length] | length
 | http://www.opengis.net/def/function/geosparql/maxZ[geof:maxZ] |  |  | maxz
 | http://www.opengis.net/def/function/geosparql/minZ[geof:minZ] |  |  | minz
-| http://www.opengis.net/def/function/geosparql/numGeometries[geof:numGeometries] | https://postgis.net/docs/ST_NumGeometries.html[ST_NumGeometries] | https://www.h2gis.org/docs/1.5.0/ST_NumGeometries/[ST_NumGeometries] | numgeometries
-| http://www.opengis.net/def/function/geosparql/numPoints[geof:numPoints] | https://postgis.net/docs/ST_NumPoints.html[ST_NumPoints] | https://www.h2gis.org/docs/1.5.0/ST_NumPoints/[ST_NumPoints] | numpoints
-| http://www.opengis.net/def/function/geosparql/ehOverlap[geof:ehOverlap] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://www.h2gis.org/docs/1.5.0/ST_Overlaps/[ST_Overlaps] | overlaps
-| http://www.opengis.net/def/function/geosparql/sfOverlaps[geof:sfOverlaps] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://www.h2gis.org/docs/1.5.0/ST_Overlaps/[ST_Overlaps] | overlaps
-| http://www.opengis.net/def/function/geosparql/perimeter[geof:perimeter] | https://postgis.net/docs/ST_Perimeter.html[ST_Perimeter] | https://www.h2gis.org/docs/1.5.0/ST_Perimeter/[ST_Perimeter] | perimeter
-| http://www.opengis.net/def/function/geosparql/relate[geof:relate] | https://postgis.net/docs/ST_Relate.html[ST_Relate] | https://www.h2gis.org/docs/1.5.0/ST_Relate/[ST_Relate] | relate
-| http://www.opengis.net/def/function/geosparql/symmetricDifference[geof:symmetricDifference] | https://postgis.net/docs/ST_SymDifference.html[ST_SymDifference] | https://www.h2gis.org/docs/1.5.0/ST_SymDifference/[ST_SymDifference] | symdifference
-| http://www.opengis.net/def/function/geosparql/sfTouches[geof:sfTouches] | https://postgis.net/docs/ST_Touches.html[ST_Touches] | https://www.h2gis.org/docs/1.5.0/ST_Touches/[ST_Touches] | touches
-| http://www.opengis.net/def/function/geosparql/transform[geof:transform] | https://postgis.net/docs/ST_Transform.html[ST_Transform] | https://www.h2gis.org/docs/1.5.0/ST_Transform/[ST_Transform] | transform
-| http://www.opengis.net/def/function/geosparql/union[geof:union] | https://postgis.net/docs/ST_Union.html[ST_Union] | https://www.h2gis.org/docs/1.5.0/ST_Union/[ST_Union] | gunion
-| http://www.opengis.net/def/function/geosparql/sfWithin[geof:sfWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://www.h2gis.org/docs/1.5.0/ST_Within/[ST_Within] | within
-| http://www.opengis.net/def/function/geosparql/ehWithin[geof:ehWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://www.h2gis.org/docs/1.5.0/ST_Within/[ST_Within] | within
+| http://www.opengis.net/def/function/geosparql/numGeometries[geof:numGeometries] | https://postgis.net/docs/ST_NumGeometries.html[ST_NumGeometries] | https://h2gis.readthedocs.io/en/latest/ST_NumGeometries.html[ST_NumGeometries] | numgeometries
+| http://www.opengis.net/def/function/geosparql/numPoints[geof:numPoints] | https://postgis.net/docs/ST_NumPoints.html[ST_NumPoints] | https://h2gis.readthedocs.io/en/latest/ST_NumPoints.html[ST_NumPoints] | numpoints
+| http://www.opengis.net/def/function/geosparql/ehOverlap[geof:ehOverlap] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://h2gis.readthedocs.io/en/latest/ST_Overlaps.html[ST_Overlaps] | overlaps
+| http://www.opengis.net/def/function/geosparql/sfOverlaps[geof:sfOverlaps] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://h2gis.readthedocs.io/en/latest/ST_Overlaps.html[ST_Overlaps] | overlaps
+| http://www.opengis.net/def/function/geosparql/perimeter[geof:perimeter] | https://postgis.net/docs/ST_Perimeter.html[ST_Perimeter] | https://h2gis.readthedocs.io/en/latest/ST_Perimeter.html[ST_Perimeter] | perimeter
+| http://www.opengis.net/def/function/geosparql/relate[geof:relate] | https://postgis.net/docs/ST_Relate.html[ST_Relate] | https://h2gis.readthedocs.io/en/latest/ST_Relate.html[ST_Relate] | relate
+| http://www.opengis.net/def/function/geosparql/symmetricDifference[geof:symmetricDifference] | https://postgis.net/docs/ST_SymDifference.html[ST_SymDifference] | https://h2gis.readthedocs.io/en/latest/ST_SymDifference.html[ST_SymDifference] | symdifference
+| http://www.opengis.net/def/function/geosparql/sfTouches[geof:sfTouches] | https://postgis.net/docs/ST_Touches.html[ST_Touches] | https://h2gis.readthedocs.io/en/latest/ST_Touches.html[ST_Touches] | touches
+| http://www.opengis.net/def/function/geosparql/transform[geof:transform] | https://postgis.net/docs/ST_Transform.html[ST_Transform] | https://h2gis.readthedocs.io/en/latest/ST_Transform.html[ST_Transform] | transform
+| http://www.opengis.net/def/function/geosparql/union[geof:union] | https://postgis.net/docs/ST_Union.html[ST_Union] | https://h2gis.readthedocs.io/en/latest/ST_Union.html[ST_Union] | gunion
+| http://www.opengis.net/def/function/geosparql/sfWithin[geof:sfWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within
+| http://www.opengis.net/def/function/geosparql/ehWithin[geof:ehWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within
 |  |  |  | 3ddistance
 |  | st_length3d | st_3dlength | 3dlength
 |  |  |  | 3dmaxdistance
@@ -215,9 +215,9 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | addisonode
 |  |  |  | addlink
 |  | https://postgis.net/docs/ST_AddMeasure.html[ST_AddMeasure] |  | addmeasure
-|  | https://postgis.net/docs/ST_AddPoint.html[ST_AddPoint] | https://www.h2gis.org/docs/1.5.0/ST_AddPoint/[ST_AddPoint] | addpoint
+|  | https://postgis.net/docs/ST_AddPoint.html[ST_AddPoint] | https://h2gis.readthedocs.io/en/latest/ST_AddPoint.html[ST_AddPoint] | addpoint
 |  |  |  | addtemporarygeometrycolumn
-|  | https://postgis.net/docs/ST_AsBinary.html[ST_AsBinary] | https://www.h2gis.org/docs/1.5.0/ST_AsBinary/[ST_AsBinary] | asbinary
+|  | https://postgis.net/docs/ST_AsBinary.html[ST_AsBinary] | https://h2gis.readthedocs.io/en/latest/ST_AsBinary.html[ST_AsBinary] | asbinary
 |  |  |  | asencodedpolyline
 |  | https://postgis.net/docs/ST_AsEWKB.html[ST_AsEWKB] |  | asewkb
 |  | https://postgis.net/docs/ST_AsEWKT.html[ST_AsEWKT] |  | asewkt
@@ -228,44 +228,22 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 | http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | st_astext | st_astext | astext
 |  |  |  | astwkb
 |  |  |  | asx3d
-|  | https://postgis.net/docs/ST_Azimuth.html[ST_Azimuth] | https://www.h2gis.org/docs/1.5.0/ST_Azimuth/[ST_Azimuth] | azimuth
+|  | https://postgis.net/docs/ST_Azimuth.html[ST_Azimuth] | https://h2gis.readthedocs.io/en/latest/ST_Azimuth.html[ST_Azimuth] | azimuth
 |  | st_bdmpolyfromtext |  | bdmpolyfromtext
 |  |  |  | bdmpolyfromwkb
 |  | st_bdpolyfromtext |  | bdpolyfromtext
 |  |  |  | bdpolyfromwkb
-|  |  |  | blobfromfile
-|  |  |  | blobtofile
 |  | st_buildarea |  | buildarea
 |  |  | st_tomultiline | casttomultilinestring
-|  | https://postgis.net/docs/ST_ClosestPoint.html[ST_ClosestPoint] | https://www.h2gis.org/docs/1.5.0/ST_ClosestPoint/[ST_ClosestPoint] | closestpoint
-|  | https://postgis.net/docs/ST_Collect.html[ST_Collect] | https://www.h2gis.org/docs/1.5.0/ST_Collect/[ST_Collect] | collect
-|  | https://postgis.net/docs/ST_CollectionExtract.html[ST_CollectionExtract] | https://www.h2gis.org/docs/1.5.0/ST_CollectionExtract/[ST_CollectionExtract] | collectionextract
+|  | https://postgis.net/docs/ST_ClosestPoint.html[ST_ClosestPoint] | https://h2gis.readthedocs.io/en/latest/ST_ClosestPoint.html[ST_ClosestPoint] | closestpoint
+|  | https://postgis.net/docs/ST_Collect.html[ST_Collect] | https://h2gis.readthedocs.io/en/latest/ST_Collect.html[ST_Collect] | collect
+|  | https://postgis.net/docs/ST_CollectionExtract.html[ST_CollectionExtract] | https://h2gis.readthedocs.io/en/latest/ST_CollectionExtract.html[ST_CollectionExtract] | collectionextract
 |  |  |  | compressgeometry
 |  |  | st_constraineddelaunay | constraineddelaunaytriangulation
 |  |  |  | coorddimension
-|  |  |  | cot
-|  |  |  | countunsafetriggers
-|  |  |  | createclonedtable
-|  |  |  | createisometadatatables
-|  |  |  | creatembrcache
-|  |  |  | createmetacatalogtables
-|  |  |  | createmissingrasterlite2columns
-|  |  |  | createmissingsystemtables
-|  |  |  | createnetwork
-|  |  |  | createrastercoveragestable
-|  |  |  | createrouting
-|  |  |  | createrouting_getlasterror
-|  |  |  | createroutingnodes
-|  |  |  | createspatialindex
-|  |  |  | createstylingtables
-|  |  |  | createtemporaryspatialindex
-|  |  |  | createtopogeo
-|  |  |  | createtopology
-|  |  |  | createtopotables
-|  |  |  | createvectorcoveragestables
 |  |  |  | curvosityindex
 |  |  |  | delaunaytriangulation
-|  | https://postgis.net/docs/ST_Dimension.html[ST_Dimension] | https://www.h2gis.org/docs/1.5.0/ST_Dimension/[ST_Dimension] | dimension
+|  | https://postgis.net/docs/ST_Dimension.html[ST_Dimension] | https://h2gis.readthedocs.io/en/latest/ST_Dimension.html[ST_Dimension] | dimension
 |  |  |  | dissolvepoints
 |  |  |  | dissolvesegments
 |  |  |  | distancewithin
@@ -273,24 +251,21 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | drapeline
 |  |  |  | drapelineexceptions
 |  |  |  | elementarygeometries
-|  | https://postgis.net/docs/ST_EndPoint.html[ST_EndPoint] | https://www.h2gis.org/docs/1.5.0/ST_EndPoint/[ST_EndPoint] | endpoint
+|  | https://postgis.net/docs/ST_EndPoint.html[ST_EndPoint] | https://h2gis.readthedocs.io/en/latest/ST_EndPoint.html[ST_EndPoint] | endpoint
 |  |  |  | ensureclosedrings
 |  |  | st_envelopesintersect | envelopesintersects
-|  | https://postgis.net/docs/ST_Expand.html[ST_Expand] | https://www.h2gis.org/docs/1.5.0/ST_Expand/[ST_Expand] | expand
+|  | https://postgis.net/docs/ST_Expand.html[ST_Expand] | https://h2gis.readthedocs.io/en/latest/ST_Expand.html[ST_Expand] | expand
 |  |  |  | exportdbf
 |  |  |  | exportdxf
 |  |  |  | exportgeojson2
 | http://www.opengis.net/def/function/geosparql/asKML[geof:asKML] |  |  | exportkml
 |  |  |  | exportshp
-|  | https://postgis.net/docs/ST_Extent.html[ST_Extent] | https://www.h2gis.org/docs/1.5.0/ST_Extent/[ST_Extent] | extent
-|  | https://postgis.net/docs/ST_ExteriorRing.html[ST_ExteriorRing] | https://www.h2gis.org/docs/1.5.0/ST_ExteriorRing/[ST_ExteriorRing] | exteriorring
+|  | https://postgis.net/docs/ST_Extent.html[ST_Extent] | https://h2gis.readthedocs.io/en/latest/ST_Extent.html[ST_Extent] | extent
+|  | https://postgis.net/docs/ST_ExteriorRing.html[ST_ExteriorRing] | https://h2gis.readthedocs.io/en/latest/ST_ExteriorRing.html[ST_ExteriorRing] | exteriorring
 |  |  |  | extractmultilinestring
 |  |  |  | extractmultipoint
 |  |  |  | extractmultipoint
 |  |  |  | extractmultipolygon
-|  |  |  | filtermbrcontains
-|  |  |  | filtermbrintersects
-|  |  |  | filtermbrwithin
 |  | https://postgis.net/docs/ST_ForceRHR.html[ST_ForceRHR] |  | forcelhr
 |  |  |  | forcepolygonccw
 |  |  |  | forcepolygoncw
@@ -315,11 +290,11 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | geomfromexifgpsblob
 |  |  |  | geomfromfgf
 |  |  |  | geomfromgeojson
-|  | st_geomfromgml | https://www.h2gis.org/docs/1.5.0/ST_GeomFromGML/[ST_GeomFromGML] | geomfromgml
+|  | st_geomfromgml | https://h2gis.readthedocs.io/en/latest/ST_GeomFromGML.html[ST_GeomFromGML] | geomfromgml
 |  |  |  | geomfromgpb
-|  | st_geomfromkml |  | geomfromkml
-|  | st_geomfromtext | https://www.h2gis.org/docs/1.5.0/ST_GeomFromText/[ST_GeomFromText] | geomfromtext
-|  | st_geomfromwkb | https://www.h2gis.org/docs/1.5.0/ST_GeomFromWKB/[ST_GeomFromWKB] | geomfromwkb
+|  | https://postgis.net/docs/ST_GeomFromKML.html[ST_GeomFromKML] |  | geomfromkml
+|  | https://postgis.net/docs/ST_GeomFromText.html[ST_GeomFromText] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromText.html[ST_GeomFromText] | geomfromtext
+|  | https://postgis.net/docs/ST_GeomFromWKB.html[ST_GeomFromWKB] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromWKB.html[ST_GeomFromWKB] | geomfromwkb
 |  |  |  | getcuttermessage
 |  |  |  | getdbobjectscope
 |  |  |  | getdecimalprecision
@@ -342,16 +317,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  | st_hausdorffdistance |  | hausdorffdistance
 |  |  |  | hexagonalgrid
 |  |  |  | hilbertcode
-|  |  |  | importdbf
-|  |  |  | importdxf
-|  |  |  | importdxffromdir
-|  |  |  | importgeojson
-|  |  |  | importshp
-|  |  |  | importzipdbf
-|  |  |  | importzipshp
-|  |  |  | initfdospatialmetadata
-|  |  |  | inittopogeo
-|  |  |  | inittoponet
 |  |  |  | insertepsgsrid
 |  | https://postgis.net/docs/ST_InteriorRingN.html[ST_InteriorRingN] | st_interiorringn | interiorringn
 |  |  |  | interpolatepoint
@@ -361,16 +326,16 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | ismeasured
 |  |  |  | ispolygonccw
 |  |  |  | ispolygoncw
-|  | https://postgis.net/docs/ST_IsRing.html[ST_IsRing] | st_isring | isring
-|  | https://postgis.net/docs/ST_IsValid.html[ST_IsValid] | st_isvalid | isvalid
-|  | https://postgis.net/docs/ST_IsValidDetail.html[ST_IsValidDetail]  | st_isvaliddetail | isvaliddetail
-|  | https://postgis.net/docs/ST_IsValidReason.html[ST_IsValidReason] | st_isvalidreason | isvalidreason
+|  | https://postgis.net/docs/ST_IsRing.html[ST_IsRing] | https://h2gis.readthedocs.io/en/latest/ST_IsRing.html[ST_IsRing] | isring
+|  | https://postgis.net/docs/ST_IsValid.html[ST_IsValid] | https://h2gis.readthedocs.io/en/latest/ST_IsValid.html[ST_IsValid] | isvalid
+|  | https://postgis.net/docs/ST_IsValidDetail.html[ST_IsValidDetail]  | https://h2gis.readthedocs.io/en/latest/ST_IsValidDetail.html[ST_IsValidDetail] | isvaliddetail
+|  | https://postgis.net/docs/ST_IsValidReason.html[ST_IsValidReason] | https://h2gis.readthedocs.io/en/latest/ST_IsValidReason.html[ST_IsValidReason] | isvalidreason
 |  |  |  | isvalidtrajectory
-|  | st_line_interpolate_point |  | line_interpolate_point
-|  | st_line_locate_point |  | line_locate_point
-|  | st_line_substring |  | line_substring
+|  | https://postgis.net/docs/ST_LineInterpolatePoint.html[ST_LineInterpolatePoint] |  | line_interpolate_point
+|  | https://postgis.net/docs/ST_LineLocatePoint.html[ST_LineLocatePoint] |  | line_locate_point
+|  | https://postgis.net/docs/ST_LineSubstring.html[ST_LineSubstring] |  | line_substring
 |  |  |  | linefromencodedpolyline
-|  | st_linefromtext | st_linefromtext | "linefromtext
+|  | https://postgis.net/docs/ST_LineFromText.html[ST_LineFromText] | st_linefromtext | "linefromtext
 linestringfromtext"
 |  |  |  | "linefromwkb
 linestringfromwkb"
@@ -440,11 +405,6 @@ multipointfromwkb"
 |  |  |  | recoverfdogeometrycolumn
 |  |  |  | recovergeometrycolumn
 |  |  |  | recoverspatialindex
-|  |  |  | recreateisometarefstriggers
-|  |  |  | recreaterastercoveragestriggers
-|  |  |  | recreatestylingtriggers
-|  |  |  | recreatetopotriggers
-|  |  |  | recreatevectorcoveragestriggers
 |  |  |  | reduceprecision
 |  |  |  | reflectcoordinates
 |  |  |  | reflectcoords
@@ -477,7 +437,7 @@ multipointfromwkb"
 |  |  |  | sharedpaths
 |  |  |  | shiftcoordinates
 |  |  |  | shiftcoords
-|  | st_shortestline | st_shortestline | shortestline
+|  | https://postgis.net/docs/ST_ShortestLine.html[ST_ShortestLine] | st_shortestline | shortestline
 |  |  |  | sign
 |  | https://postgis.net/docs/ST_Simplify.html[ST_Simplify] | st_simplify | simplify
 |  | https://postgis.net/docs/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | st_simplifypreservetopology | simplifypreservetopology
@@ -497,9 +457,9 @@ multipointfromwkb"
 |  | https://postgis.net/docs/ST_ShiftLongitude.html[ST_ShiftLongitude] |  | st_shift_longitude
 |  |  |  | st_subdivide
 |  | https://postgis.net/docs/ST_Translate.html[ST_Translate] | st_translate | st_translate
-|  | st_wkbtosql |  | st_wkbtosql
-|  | st_wkttosql |  | st_wkttosql
-|  | st_startpoint | st_startpoint | startpoint
+|  | https://postgis.net/docs/ST_WKBToSQL.html[ST_WKBToSQL] |  | st_wkbtosql
+|  | https://postgis.net/docs/ST_WKTToSQL.html[ST_WKTToSQL] |  | st_wkttosql
+|  | https://postgis.net/docs/ST_StartPoint.html[ST_StartPoint] | st_startpoint | startpoint
 |  |  |  | startpoint
 |  |  |  | swapcoordinates
 |  |  |  | swapcoords
@@ -526,7 +486,7 @@ multipointfromwkb"
 |  |  | st_delaunay |
 |  |  | st_densify |
 |  |  | st_drape |
-|  | st_dwithin | st_dwithin |
+|  | https://postgis.net/docs/ST_DWithin.html[ST_DWithin] | st_dwithin |
 |  |  | st_explode |
 |  |  | st_extrude |
 |  |  | st_flipcoordinates |
@@ -607,7 +567,7 @@ multipointfromwkb"
 |  | box3d |  |
 |  | find_srid |  |
 |  | st_accum |  |
-|  | st_affine |  |
+|  | https://postgis.net/docs/ST_Affine.html[ST_Affine] |  |
 |  | st_ashexewkb |  |
 |  | st_containsproperly |  |
 |  | st_coorddim |  |
@@ -629,7 +589,7 @@ multipointfromwkb"
 |  | st_geogfromwkb |  |
 |  | st_geographyfromtext |  |
 |  | st_geometryfromtext |  |
-|  | st_gmltosql |  |
+|  | https://postgis.net/docs/ST_GMLToSQL.html[ST_GMLToSQL] |  |
 |  | https://postgis.net/docs/ST_HasArc.html[ST_HasArc] |  |
 |  | st_length_spheroid |  |
 |  | https://postgis.net/docs/ST_Length2D.html[ST_Length2D] |  |

@@ -14,7 +14,7 @@
 :issued-date: 2029-03-30
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2029-03-30
-:fullname: Editor One
+:fullname: Rolf Jonker
 :fullname_2: Editor Two
 :role: editor
 :imagesdir: figures

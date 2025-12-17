@@ -228,27 +228,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 | http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | st_astext | st_astext | astext
 |  |  |  | astwkb
 |  |  |  | asx3d
-|  |  |  | atm_astext
-|  |  |  | atm_create
-|  |  |  | atm_createrotate
-|  |  |  | atm_createscale
-|  |  |  | atm_createtranslate
-|  |  |  | atm_createxroll
-|  |  |  | atm_determinant
-|  |  |  | atm_invert
-|  |  |  | atm_isinvertible
-|  |  |  | atm_isvalid
-|  |  |  | atm_multiply
-|  |  |  | atm_rotate
-|  |  |  | atm_scale
-|  |  |  | atm_transform
-|  |  |  | atm_translate
-|  |  |  | atm_xroll
-|  |  |  | atm_yroll
-|  |  |  | autofdostart
-|  |  |  | autofdostop
-|  |  |  | autogpkgstart
-|  |  |  | autogpkgstop
 |  | https://postgis.net/docs/ST_Azimuth.html[ST_Azimuth] | https://www.h2gis.org/docs/1.5.0/ST_Azimuth/[ST_Azimuth] | azimuth
 |  | st_bdmpolyfromtext |  | bdmpolyfromtext
 |  |  |  | bdmpolyfromwkb
@@ -257,9 +236,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | blobfromfile
 |  |  |  | blobtofile
 |  | st_buildarea |  | buildarea
-|  |  |  | buildcirclembr
-|  |  |  | buildmbr
-|  |  |  | buildmbrfilter
 |  |  | st_tomultiline | casttomultilinestring
 |  | https://postgis.net/docs/ST_ClosestPoint.html[ST_ClosestPoint] | https://www.h2gis.org/docs/1.5.0/ST_ClosestPoint/[ST_ClosestPoint] | closestpoint
 |  | https://postgis.net/docs/ST_Collect.html[ST_Collect] | https://www.h2gis.org/docs/1.5.0/ST_Collect/[ST_Collect] | collect
@@ -321,12 +297,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | frechetdistance
 |  |  |  | freexl_version
 |  |  |  | fullfilenamefrompath
-|  |  |  | garsmbr
-|  |  |  | gcp_astext
-|  |  |  | gcp_compute
-|  |  |  | gcp_isvalid
-|  |  |  | gcp_transform
-|  |  |  | gcp2atm
 |  |  |  | geodesic length
 |  |  |  | geodesicarcarea
 |  |  |  | geodesicarcheight
@@ -350,18 +320,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  | st_geomfromkml |  | geomfromkml
 |  | st_geomfromtext | https://www.h2gis.org/docs/1.5.0/ST_GeomFromText/[ST_GeomFromText] | geomfromtext
 |  | st_geomfromwkb | https://www.h2gis.org/docs/1.5.0/ST_GeomFromWKB/[ST_GeomFromWKB] | geomfromwkb
-|  |  |  | geosconcavehull
-|  |  |  | geosdensify
-|  |  |  | geoslargestemptycircle
-|  |  |  | geosmakevalid
-|  |  |  | geosmaximuminscribedcircle
-|  |  |  | geosminimumboundingcenter
-|  |  |  | geosminimumboundingcircle
-|  |  |  | geosminimumboundingradius
-|  |  |  | geosminimumclearance
-|  |  |  | geosminimumclearanceline
-|  |  |  | geosminimumrotatedrectangle
-|  |  |  | geosminimumwidth
 |  |  |  | getcuttermessage
 |  |  |  | getdbobjectscope
 |  |  |  | getdecimalprecision
@@ -445,17 +403,6 @@ linestringfromwkb"
 |  | https://postgis.net/docs/ST_MaxDistance.html[ST_MaxDistance] | st_maxdistance | maxdistance
 |  |  |  | maxm
 | http://www.opengis.net/def/function/geosparql/maxZ[geof:maxZ] |  |  | maxz
-|  |  |  | mbrcontains
-|  |  |  | mbrdisjoint
-|  |  |  | mbrequal
-|  |  |  | mbrintersects
-|  |  |  | mbrmaxx
-|  |  |  | mbrmaxy
-|  |  |  | mbrminx
-|  |  |  | mbrminy
-|  |  |  | mbroverlaps
-|  |  |  | mbrtouches
-|  |  |  | mbrwithin
 |  |  |  | minm
 |  |  |  | minz
 |  |  |  | mlinefromtext
@@ -511,23 +458,15 @@ multipointfromwkb"
 |  |  |  | removeextraspaces
 |  |  |  | removelink
 |  | https://postgis.net/docs/ST_RemovePoint.html[ST_RemovePoint] |  | removepoint
-|  |  |  | renamecolumn
-|  |  |  | renamedatalicense
-|  |  |  | renametable
 |  | https://postgis.net/docs/ST_Reverse.html[ST_Reverse] | st_reverse | reverse
 |  |  |  | ringscutatnodes
 |  |  |  | rotatecoordinates
 |  |  |  | rotatecoords
-|  |  |  | rttopo_version
 |  |  |  | sanitizegeometry
 |  |  |  | scalecoordinates
 |  |  |  | scalecoords
 |  | https://postgis.net/docs/ST_Segmentize.html[ST_Segmentize] |  | segmentize
 |  |  |  | selfintersections
-|  |  |  | sequence_currval
-|  |  |  | sequence_lastval
-|  |  |  | sequence_nextval
-|  |  |  | sequence_setval
 |  |  |  | setdatalicenseurl
 |  |  |  | setdecimalprecision
 |  |  |  | setendpoint
@@ -550,7 +489,6 @@ multipointfromwkb"
 |  |  | st_split | split
 |  |  |  | splitleft
 |  |  |  | splitright
-|  |  |  | sqrt
 |  |  |  | squaregrid
 |  |  |  | sridfromauthcrs
 |  |  |  | st_cutter
@@ -566,63 +504,14 @@ multipointfromwkb"
 |  |  |  | swapcoordinates
 |  |  |  | swapcoords
 |  |  |  | tinypointencode
-|  |  |  | togars
-|  |  |  | topogeo_addlinestring
-|  |  |  | topogeo_addlinestringnoface
-|  |  |  | topogeo_addpoint
-|  |  |  | topogeo_clone
-|  |  |  | topogeo_createtopolayer
-|  |  |  | topogeo_disambiguatesegmentedges
-|  |  |  | topogeo_exporttopolayer
-|  |  |  | topogeo_fromgeotable
-|  |  |  | topogeo_fromgeotableext
-|  |  |  | topogeo_fromgeotablenoface
-|  |  |  | topogeo_fromgeotablenofaceext
-|  |  |  | topogeo_getedgeseed
-|  |  |  | topogeo_getfaceseed
-|  |  |  | topogeo_inittopolayer
-|  |  |  | topogeo_insertfeaturefromtopolayer
-|  |  |  | topogeo_lineedgeslist
-|  |  |  | topogeo_modedgeheal
-|  |  |  | topogeo_newedgeheal
-|  |  |  | topogeo_newedgessplit
-|  |  |  | topogeo_polyfaceslist
-|  |  |  | topogeo_polygonize
-|  |  |  | topogeo_removedanglingedges
-|  |  |  | topogeo_removedanglingnodes
-|  |  |  | topogeo_removesmallfaces
-|  |  |  | topogeo_removetopolayer
-|  |  |  | topogeo_snaplinetoseed
-|  |  |  | topogeo_snappedgeotable
-|  |  |  | topogeo_snappointtoseed
-|  |  |  | topogeo_subdividelines
-|  |  |  | topogeo_togeotable
-|  |  |  | topogeo_togeotablegeneralize
-|  |  |  | topogeo_toposnap
-|  |  |  | topogeo_updateseeds
-|  |  |  | toponet_clone
-|  |  |  | toponet_disambiguatesegmentlinks
-|  |  |  | toponet_fromgeotable
-|  |  |  | toponet_getlinkseed
-|  |  |  | toponet_linelinkslist
-|  |  |  | toponet_togeotable
-|  |  |  | toponet_togeotablegeneralize
-|  |  |  | toponet_updateseeds
 |  |  |  | trajectoryinterpolatepoint
 |  |  |  | transformxy
 |  |  |  | transformxyz
 |  |  |  | triangulargrid
 |  |  |  | unaryunion
-|  |  |  | updatelayerstatistics
-|  |  |  | updatemetacatalogstatistics
 |  |  |  | updownheight
 |  |  |  | upgradegeometrytriggers
 |  |  |  | uphillheight
-|  |  |  | validatetopogeo
-|  |  |  | validlogicalnet
-|  |  |  | validspatialnet
-|  |  |  | var_pop
-|  |  |  | var_samp
 |  |  |  | voronojdiagram
 |  |  |  | x
 |  |  |  | y

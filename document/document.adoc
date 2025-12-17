@@ -34,8 +34,6 @@
 
 include::sections/01-front_material.adoc[]
 
-include::sections/02-preamble.adoc[]
-
 :sectnums:
 
 include::sections/03-introduction.adoc[]

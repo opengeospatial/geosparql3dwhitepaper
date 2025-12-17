@@ -1,6 +1,9 @@
 == Abstract
 
-To come...
+The importance of the (semantic) representation of 3D geometries has increased in recent years. 
+Different databases of different data providers, such as provides for 3D city models, include 3D data in different formats and would benefit from a common data model which could semantically align its contents.
+In addition one wants to query information not only about the 3D geometries themselves but about their semantic context and their interconnectedness.
+To that end we showcase the shortcomings of the current GeoSPARQL 1.1 standard concerning native 3D querying and 3D representation and illustrate use cases and feature requests which would enable a 3D-aware semantic web with the GeoSPARQL standard as its core.
 
 == Preface
 
@@ -8,7 +11,7 @@ To come...
 
 == Keywords
 
-To come...
+GeoSPARQL, 3D, Geospatial 3D Relations, Ontology, Vocabulary
 
 == Security Considerations
 

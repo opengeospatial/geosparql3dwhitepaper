@@ -45,8 +45,6 @@ Finally, <<CHADZYNSKI2021100106>> proposed OntoCityGML, an extension go the City
 https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub
 Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph
 
-
-
 Other details and history of Onto CityGML.
 
 CityRDF working group https://github.com/ogcincubator/cityrdf

@@ -1,5 +1,7 @@
 == Motivation
 
+This section summarizes motivations of different parties for the extension of GeoSPARQL regarding 3D capabilities. 
+
 === Why do we want 3D semantic modeling?
 The white paper: "OGC Benefits of Representing Spatial Data Using Semantic and Graph Technologies" describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies <<Abhayaratna2020wp>>. This section describes the motivation of adding 3D functionality to the GeoSPARQL standard. 
 

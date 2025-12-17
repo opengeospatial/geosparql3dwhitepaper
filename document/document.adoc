@@ -42,8 +42,6 @@ include::sections/03a-motivation.adoc[]
 
 include::sections/03b-related-work.adoc[]
 
-include::sections/03b-related-work.adoc[]
-
 include::sections/04-curcapabilities.adoc[]
 
 include::sections/05-geosparql3D.adoc[]

@@ -18,8 +18,8 @@
 :fullname_2: Editor Two
 :role: editor
 :imagesdir: figures
-:keywords: OGC, GeoSPARQL, 3D
-:submitting-organizations: Organization one; Organization two; Organization three
+:keywords: GeoSPARQL, 3D, Geospatial 3D Relations, Ontology, Vocabulary
+:submitting-organizations: Mainz University Of Applied Sciences; Kurrawong AI; Geonovum
 :mn-document-class: ogc
 :mn-output-extensions: html,pdf
 :pdf-uri: ./document.pdf

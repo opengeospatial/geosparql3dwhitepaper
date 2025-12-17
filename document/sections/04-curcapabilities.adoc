@@ -256,15 +256,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | bdpolyfromwkb
 |  |  |  | blobfromfile
 |  |  |  | blobtofile
-|  |  |  | bufferoptions_getendcapstyle
-|  |  |  | bufferoptions_getjoinstyle
-|  |  |  | bufferoptions_getmitrelimit
-|  |  |  | bufferoptions_getquadrantsegments
-|  |  |  | bufferoptions_reset
-|  |  |  | bufferoptions_setendcapstyle
-|  |  |  | bufferoptions_setjoinstyle
-|  |  |  | bufferoptions_setmitrelimit
-|  |  |  | bufferoptions_setquadrantsegments
 |  | st_buildarea |  | buildarea
 |  |  |  | buildcirclembr
 |  |  |  | buildmbr
@@ -295,27 +286,13 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | createtopogeo
 |  |  |  | createtopology
 |  |  |  | createtopotables
-|  |  |  | createuuid
 |  |  |  | createvectorcoveragestables
 |  |  |  | curvosityindex
-|  |  |  | dd to dms
-|  |  |  | decimeter
-|  |  |  | decodeurl
-|  |  |  | degrees
 |  |  |  | delaunaytriangulation
 |  | https://postgis.net/docs/ST_Dimension.html[ST_Dimension] | https://www.h2gis.org/docs/1.5.0/ST_Dimension/[ST_Dimension] | dimension
-|  |  |  | dirnamefrompath
-|  |  |  | disablegpkgamphibiousmode
-|  |  |  | disablegpkgmode
-|  |  |  | disablepause
-|  |  |  | disablespatialindex
-|  |  |  | disabletinypoint
-|  |  |  | discardfdogeometrycolumn
-|  |  |  | discardgeometrycolumn
 |  |  |  | dissolvepoints
 |  |  |  | dissolvesegments
 |  |  |  | distancewithin
-|  |  |  | dms to dd
 |  |  |  | downhillheight
 |  |  |  | drapeline
 |  |  |  | drapelineexceptions
@@ -335,8 +312,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | extractmultipoint
 |  |  |  | extractmultipoint
 |  |  |  | extractmultipolygon
-|  |  |  | fileextfrompath
-|  |  |  | filenamefrompath
 |  |  |  | filtermbrcontains
 |  |  |  | filtermbrintersects
 |  |  |  | filtermbrwithin
@@ -400,27 +375,10 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | getlasttopologyexception
 |  |  |  | getlayerextent
 |  |  |  | getlinkbypoint
-|  |  |  | getmimetype
 |  |  |  | getnetnodebypoint
 |  |  |  | getnodebypoint
 |  |  |  | getpointindex
 |  |  |  | getvirtualtableextent
-|  |  |  | gpkg_isassignable
-|  |  |  | gpkgaddgeometrycolumn
-|  |  |  | gpkgaddgeometrytriggers
-|  |  |  | gpkgaddspatialindex
-|  |  |  | gpkgaddtiletriggers
-|  |  |  | gpkgcreatebasetables
-|  |  |  | gpkgcreatetilestable
-|  |  |  | gpkgcreatetileszoomlevel
-|  |  |  | gpkggetimagetype
-|  |  |  | gpkggetnormalrow
-|  |  |  | gpkggetnormalzoom
-|  |  |  | gpkginsertepsgsrid
-|  |  |  | gpkgmakepoint
-|  |  |  | gpkgmakepointm
-|  |  |  | gpkgmakepointz
-|  |  |  | gpkgmakepointzm
 |  |  |  | great circle length
 |  |  |  | gunion
 |  | st_hausdorffdistance |  | hausdorffdistance
@@ -431,13 +389,9 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | importdxffromdir
 |  |  |  | importgeojson
 |  |  |  | importshp
-|  |  |  | importwfs
-|  |  |  | importxls
 |  |  |  | importzipdbf
 |  |  |  | importzipshp
 |  |  |  | initfdospatialmetadata
-|  |  |  | initspatialmetadata
-|  |  |  | initspatialmetadatafull
 |  |  |  | inittopogeo
 |  |  |  | inittoponet
 |  |  |  | insertepsgsrid
@@ -547,9 +501,6 @@ multipointfromwkb"
 |  |  |  | reduceprecision
 |  |  |  | reflectcoordinates
 |  |  |  | reflectcoords
-|  |  |  | registerdatalicense
-|  |  |  | registerisometadata
-|  |  |  | registervirtualgeometry
 |  |  |  | relatematch
 |  |  |  | remedgemodface
 |  |  |  | remedgenewface
@@ -565,13 +516,6 @@ multipointfromwkb"
 |  |  |  | renametable
 |  | https://postgis.net/docs/ST_Reverse.html[ST_Reverse] | st_reverse | reverse
 |  |  |  | ringscutatnodes
-|  |  |  | rl2_mapconfigurationabstractn
-|  |  |  | rl2_mapconfigurationnamen
-|  |  |  | rl2_mapconfigurationtitlen
-|  |  |  | rl2_nummapconfigurations
-|  |  |  | rl2_registermapconfiguration
-|  |  |  | rl2_reloadmapconfiguration
-|  |  |  | rl2_unregistermapconfiguration
 |  |  |  | rotatecoordinates
 |  |  |  | rotatecoords
 |  |  |  | rttopo_version
@@ -598,13 +542,9 @@ multipointfromwkb"
 |  |  |  | sign
 |  | https://postgis.net/docs/ST_Simplify.html[ST_Simplify] | st_simplify | simplify
 |  | https://postgis.net/docs/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | st_simplifypreservetopology | simplifypreservetopology
-|  |  |  | sin
-|  |  |  | singlesidedbuffer
 |  |  | st_snap | snap
 |  |  |  | snapandsplit
 |  | https://postgis.net/docs/ST_SnapToGrid.html[ST_SnapToGrid] |  | snaptogrid
-|  |  |  | spatialite_target_cpu
-|  |  |  | spatialite_version
 |  |  |  | spatnetfromgeom
 |  |  |  | spatnetfromtgeo
 |  |  | st_split | split
@@ -625,7 +565,6 @@ multipointfromwkb"
 |  |  |  | startpoint
 |  |  |  | swapcoordinates
 |  |  |  | swapcoords
-|  |  |  | tan
 |  |  |  | tinypointencode
 |  |  |  | togars
 |  |  |  | topogeo_addlinestring
@@ -674,8 +613,6 @@ multipointfromwkb"
 |  |  |  | transformxyz
 |  |  |  | triangulargrid
 |  |  |  | unaryunion
-|  |  |  | uncompressgeometry
-|  |  |  | unregisterdatalicense
 |  |  |  | updatelayerstatistics
 |  |  |  | updatemetacatalogstatistics
 |  |  |  | updownheight
@@ -688,48 +625,8 @@ multipointfromwkb"
 |  |  |  | var_samp
 |  |  |  | voronojdiagram
 |  |  |  | x
-|  |  |  | xb_addfileid
-|  |  |  | xb_addparentid
-|  |  |  | xb_cacheflush
-|  |  |  | xb_compress
-|  |  |  | xb_create
-|  |  |  | xb_getabstract
-|  |  |  | xb_getdocument
-|  |  |  | xb_getdocumentsize
-|  |  |  | xb_getencoding
-|  |  |  | xb_getfileid
-|  |  |  | xb_getgeometry
-|  |  |  | xb_getinternalschemauri
-|  |  |  | xb_getlastparseerror
-|  |  |  | xb_getlastvalidateerror
-|  |  |  | xb_getlastxpatherror
-|  |  |  | xb_getparentid
-|  |  |  | xb_getpayload
-|  |  |  | xb_getschemauri
-|  |  |  | xb_gettitle
-|  |  |  | xb_iscompressed
-|  |  |  | xb_isgpx
-|  |  |  | xb_isisometadata
-|  |  |  | xb_ismapconfig
-|  |  |  | xb_isschemavalidated
-|  |  |  | xb_issldsevectorstyle
-|  |  |  | xb_issldstyle
-|  |  |  | xb_issvg
-|  |  |  | xb_isvalid
-|  |  |  | xb_isvalidxpathexpression
-|  |  |  | xb_loadxml
-|  |  |  | xb_mlinefromgpx
-|  |  |  | xb_schemavalidate
-|  |  |  | xb_setfileid
-|  |  |  | xb_setparentid
-|  |  |  | xb_storexml
-|  |  |  | xb_uncompress
 |  |  |  | y
 |  |  |  | z
-|  |  |  | zipfile_dbfn
-|  |  |  | zipfile_numdbf
-|  |  |  | zipfile_numshp
-|  |  |  | zipfile_shpn
 |  |  | st_3darea |
 |  | st_perimeter3d | st_3dperimeter |
 |  |  | st_accum |
@@ -796,15 +693,15 @@ multipointfromwkb"
 |  |  | st_triangleslope |
 |  |  | st_updatez |
 |  |  | st_voronoi |
-|  |  | st_x |
-|  |  | st_xmax |
-|  |  | st_xmin |
-|  |  | st_y |
-|  |  | st_ymax |
-|  |  | st_ymin |
-|  |  | st_z |
-|  |  | st_zmax |
-|  |  | st_zmin |
+|  | st_x  | st_x |
+| geof:maxX | st_xmax | st_xmax |
+| geof:minX | st_xmin | st_xmin |
+|  | st_y  | st_y |
+| geof:maxY | st_ymax | st_ymax |
+| geof:minY | st_ymin | st_ymin |
+|  | st_z | st_z |
+|  | st_zmax | st_zmax |
+|  | st_zmin | st_zmin |
 |  |  | st_zupdatelineextremities |
 |  | @ |  |
 |  | && |  |
@@ -874,16 +771,7 @@ multipointfromwkb"
 |  | https://postgis.net/docs/ST_Scale.html[ST_Scale] |  |
 |  | https://postgis.net/docs/ST_Summary.html[ST_Summary] |  |
 |  | st_transscale |  |
-|  | st_x |  |
-| geof:maxX | st_xmax |  |
-| geof:minX | st_xmin |  |
-|  | st_y |  |
-| geof:maxY | st_ymax |  |
-| geof:minY | st_ymin |  |
-|  | st_z |  |
-|  | st_zmax |  |
 |  | st_zmflag |  |
-|  | st_zmin |  |
 |===
 ===== Geometry Topology Extension
 Another extension is the Geometry Topology extension. This provides query functions that return relationships between different geometries based on the topology vocabulary extension.

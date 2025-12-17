@@ -356,12 +356,12 @@ linestringfromwkb"
 |  |  | st_makeellipse | makeellipse
 |  |  |  | makeellipticarc
 |  |  |  | makeellipticsector
-|  | https://postgis.net/docs/ST_MakeLine.html[ST_MakeLine] | st_makeline | makeline
-|  | https://postgis.net/docs/ST_MakePoint.html[ST_MakePoint] | st_makepoint | makepoint
+|  | https://postgis.net/docs/ST_MakeLine.html[ST_MakeLine] | https://h2gis.readthedocs.io/en/latest/ST_MakeLine.html[ST_MakeLine] | makeline
+|  | https://postgis.net/docs/ST_MakePoint.html[ST_MakePoint] | https://h2gis.readthedocs.io/en/latest/ST_MakePoint.html[ST_MakePoint] | makepoint
 |  | https://postgis.net/docs/ST_MakePointM.html[ST_MakePointM] |  | makepointm
 |  |  |  | makepointz
 |  |  |  | makepointzm
-|  | https://postgis.net/docs/ST_MakePolygon.html[ST_MakePolygon] | st_makepolygon | makepolygon
+|  | https://postgis.net/docs/ST_MakePolygon.html[ST_MakePolygon] | https://h2gis.readthedocs.io/en/latest/ST_MakePolygon.html[ST_MakePolygon] | makepolygon
 |  |  |  | makestringlist
 |  |  | st_makevalid | makevalid
 |  |  |  | makevaliddiscarded
@@ -453,7 +453,7 @@ multipointfromwkb"
 |  |  |  | sridfromauthcrs
 |  |  |  | st_cutter
 |  |  | st_node | st_node
-|  | https://postgis.net/docs/ST_Point.html[ST_Point] | st_point | st_point
+|  | https://postgis.net/docs/ST_Point.html[ST_Point] | https://h2gis.readthedocs.io/en/latest/ST_Point.html[ST_Point] | st_point
 |  | https://postgis.net/docs/ST_ShiftLongitude.html[ST_ShiftLongitude] |  | st_shift_longitude
 |  |  |  | st_subdivide
 |  | https://postgis.net/docs/ST_Translate.html[ST_Translate] | st_translate | st_translate

@@ -239,7 +239,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  | https://postgis.net/docs/ST_Collect.html[ST_Collect] | https://h2gis.readthedocs.io/en/latest/ST_Collect.html[ST_Collect] | collect
 |  | https://postgis.net/docs/ST_CollectionExtract.html[ST_CollectionExtract] | https://h2gis.readthedocs.io/en/latest/ST_CollectionExtract.html[ST_CollectionExtract] | collectionextract
 |  |  |  | compressgeometry
-|  |  | st_constraineddelaunay | constraineddelaunaytriangulation
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ConstrainedDelaunay.html[ST_ConstrainedDelaunay] | constraineddelaunaytriangulation
 |  |  |  | coorddimension
 |  |  |  | curvosityindex
 |  |  |  | delaunaytriangulation
@@ -253,7 +253,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | elementarygeometries
 |  | https://postgis.net/docs/ST_EndPoint.html[ST_EndPoint] | https://h2gis.readthedocs.io/en/latest/ST_EndPoint.html[ST_EndPoint] | endpoint
 |  |  |  | ensureclosedrings
-|  |  | st_envelopesintersect | envelopesintersects
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_EnvelopesIntersect.html[ST_EnvelopesIntersect] | envelopesintersects
 |  | https://postgis.net/docs/ST_Expand.html[ST_Expand] | https://h2gis.readthedocs.io/en/latest/ST_Expand.html[ST_Expand] | expand
 |  |  |  | exportdbf
 |  |  |  | exportdxf
@@ -337,7 +337,7 @@ linestringfromwkb"
 |  |  |  | makecircle
 |  |  |  | makecircularsector
 |  |  |  | makecircularstripe
-|  |  | st_makeellipse | makeellipse
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeEllipse.html[ST_MakeEllipse] | makeellipse
 |  |  |  | makeellipticarc
 |  |  |  | makeellipticsector
 |  | https://postgis.net/docs/ST_MakeLine.html[ST_MakeLine] | https://h2gis.readthedocs.io/en/latest/ST_MakeLine.html[ST_MakeLine] | makeline
@@ -347,7 +347,7 @@ linestringfromwkb"
 |  |  |  | makepointzm
 |  | https://postgis.net/docs/ST_MakePolygon.html[ST_MakePolygon] | https://h2gis.readthedocs.io/en/latest/ST_MakePolygon.html[ST_MakePolygon] | makepolygon
 |  |  |  | makestringlist
-|  |  | st_makevalid | makevalid
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeValid.html[ST_MakeValid] | makevalid
 |  |  |  | makevaliddiscarded
 |  | https://postgis.net/docs/ST_MaxDistance.html[ST_MaxDistance] | st_maxdistance | maxdistance
 |  |  |  | maxm
@@ -417,17 +417,17 @@ multipointfromwkb"
 |  |  |  | sign
 |  | https://postgis.net/docs/ST_Simplify.html[ST_Simplify] | st_simplify | simplify
 |  | https://postgis.net/docs/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | st_simplifypreservetopology | simplifypreservetopology
-|  |  | st_snap | snap
+|  |  |  https://h2gis.readthedocs.io/en/latest/ST_Snap.html[ST_Snap] | snap
 |  |  |  | snapandsplit
 |  | https://postgis.net/docs/ST_SnapToGrid.html[ST_SnapToGrid] |  | snaptogrid
 |  |  |  | spatnetfromgeom
 |  |  |  | spatnetfromtgeo
-|  |  | st_split | split
+|  |  |  https://h2gis.readthedocs.io/en/latest/ST_Split.html[ST_Split] | split
 |  |  |  | splitleft
 |  |  |  | splitright
 |  |  |  | squaregrid
 |  |  |  | st_cutter
-|  |  | st_node | st_node
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Node.html[ST_Node] | st_node
 |  | https://postgis.net/docs/ST_Point.html[ST_Point] | https://h2gis.readthedocs.io/en/latest/ST_Point.html[ST_Point] | st_point
 |  | https://postgis.net/docs/ST_ShiftLongitude.html[ST_ShiftLongitude] |  | st_shift_longitude
 |  |  |  | st_subdivide

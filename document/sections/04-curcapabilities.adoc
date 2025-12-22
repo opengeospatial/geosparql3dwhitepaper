@@ -402,9 +402,6 @@ multipointfromwkb"
 |  |  |  | project
 |  |  |  | ptdistwithin
 |  |  |  | rebuildgeometrytriggers
-|  |  |  | recoverfdogeometrycolumn
-|  |  |  | recovergeometrycolumn
-|  |  |  | recoverspatialindex
 |  |  |  | reduceprecision
 |  |  |  | reflectcoordinates
 |  |  |  | reflectcoords
@@ -450,7 +447,6 @@ multipointfromwkb"
 |  |  |  | splitleft
 |  |  |  | splitright
 |  |  |  | squaregrid
-|  |  |  | sridfromauthcrs
 |  |  |  | st_cutter
 |  |  | st_node | st_node
 |  | https://postgis.net/docs/ST_Point.html[ST_Point] | https://h2gis.readthedocs.io/en/latest/ST_Point.html[ST_Point] | st_point
@@ -478,26 +474,26 @@ multipointfromwkb"
 |  |  |  | z
 |  |  | st_3darea |
 |  | st_perimeter3d | st_3dperimeter |
-|  |  | st_accum |
-|  |  | st_addz |
-|  |  | st_closestcoordinate |
-|  |  | st_compactnessratio |
-|  |  | st_coorddim |
-|  |  | st_delaunay |
-|  |  | st_densify |
-|  |  | st_drape |
-|  | https://postgis.net/docs/ST_DWithin.html[ST_DWithin] | st_dwithin |
-|  |  | st_explode |
-|  |  | st_extrude |
-|  |  | st_flipcoordinates |
-|  |  | st_force2d |
-|  |  | st_force3d |
-|  |  | st_furthestcoordinate |
-|  |  | st_geometryshadow |
-|  | https://postgis.net/docs/ST_GeometryType.html[ST_GeometryType] | st_geometrytype |
-|  |  | st_geometrytypecode |
-|  |  | st_googlemaplink |
-|  |  | st_holes |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Accum.html[ST_Accum] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_AddZ.html[ST_AddZ] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ClosestCoordinate.html[ST_ClosestCoordinate] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_CompactnessRatio.html[ST_CompactnessRatio] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_CoordDim.html[ST_CoordDim] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Delaunay.html[ST_Delaunay] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Densify.html[ST_Densify] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Drape.html[ST_Drape] |
+|  | https://postgis.net/docs/ST_DWithin.html[ST_DWithin] | https://h2gis.readthedocs.io/en/latest/ST_DWithin.html[ST_DWithin] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Explode.html[ST_Explode] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Extrude.html[ST_Extrude] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_FlipCoordinates.html[ST_FlipCoordinates] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Force2D.html[ST_Force2D] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Force3D.html[ST_Force3D] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_FurthestCoordinate.html[ST_FurthestCoordinate] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_GeometryShadow.html[ST_GeometryShadow] |
+|  | https://postgis.net/docs/ST_GeometryType.html[ST_GeometryType] | https://h2gis.readthedocs.io/en/latest/ST_GeometryType.html[ST_GeometryType] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_GeometryTypeCode.html[ST_GeometryTypeCode] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_GoogleMapLink.html[ST_GoogleMapLink] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Holes.html[ST_Holes] |
 |  |  | st_interpolate3dline |
 |  |  | st_isovist |
 |  |  | st_isrectangle |

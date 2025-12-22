@@ -494,49 +494,49 @@ multipointfromwkb"
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_GeometryTypeCode.html[ST_GeometryTypeCode] |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_GoogleMapLink.html[ST_GoogleMapLink] |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_Holes.html[ST_Holes] |
-|  |  | st_interpolate3dline |
-|  |  | st_isovist |
-|  |  | st_isrectangle |
-|  |  | st_linefromwkb |
-|  |  | st_lineintersector |
-|  |  | st_locatealong |
-|  |  | st_longestline |
-|  |  | st_makeenvelope |
-|  |  | st_makegrid |
-|  |  | st_makegridpoints |
-|  |  | st_minimumrectangle |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Interpolate3DLine.html[ST_Interpolate3DLine] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ISOVist.html[ST_ISOVist] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_IsRectangle.html[ST_IsRectangle] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_LineFromWKB.html[ST_LineFromWKB] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_LineIntersector.html[ST_LineIntersector] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_LocateAlong.html[ST_LocateAlong] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_LongestLine.html[ST_LongestLine] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeEnvelope.html[ST_MakeEnvelope] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeGrid.html[ST_MakeGrid] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeGridPoints.html[ST_MakeGridPoints] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MinimumRectangle.html[ST_MinimumRectangle] |
 |  | https://postgis.net/docs/ST_MLineFromText.html[ST_MLineFromText] | st_mlinefromtext |
 |  | https://postgis.net/docs/ST_MPolyFromText.html[ST_MPolyFromText] | st_mpolyfromtext |
-|  |  | st_multiplyz |
-|  |  | st_normalize |
-|  |  | st_octogonalenvelope |
-|  |  | st_orderingequals |
-|  | https://postgis.net/docs/ST_PolygonFromText.html[ST_PolygonFromText] | st_polyfromtext |
-|  |  | st_polyfromwkb |
-|  |  | st_precisionreducer |
-|  |  | st_projectpoint |
-|  |  | st_removeduplicatedcoordinates |
-|  |  | st_removeholes |
-|  |  | st_removepoints |
-|  |  | st_removerepeatedpoints |
-|  |  | st_reverse3dline |
-|  |  | st_ringbuffer |
-|  |  | st_ringsidebuffer |
-|  | https://postgis.net/docs/ST_Rotate.html[ST_Rotate] | st_rotate |
-|  |  | st_scale |
-|  |  | st_sidebuffer |
-|  |  | st_split |
-|  |  | st_sunposition |
-|  |  | st_svf |
-|  |  | st_tessellate |
-|  |  | st_tomultipoint |
-|  |  | st_tomultisegments |
-|  |  | st_triangleaspect |
-|  |  | st_trianglecontouring |
-|  |  | st_triangledirection |
-|  |  | st_triangleslope |
-|  |  | st_updatez |
-|  |  | st_voronoi |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MultiplyZ.html[ST_MultiplyZ] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Normalize.html[ST_Normalize] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_OctogonalEnvelope.html[ST_OctogonalEnvelope] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_OrderingEquals.html[ST_OrderingEquals] |
+|  | https://postgis.net/docs/ST_PolygonFromText.html[ST_PolygonFromText] | https://h2gis.readthedocs.io/en/latest/ST_PolyFromText.html[ST_PolyFromText] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_PolyFromWKB.html[ST_PolyFromWKB] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_PrecisionReducer.html[ST_PrecisionReducer] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ProjectPoint.html[ST_ProjectPoint] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RemoveDuplicatedCoordinates.html[ST_RemoveDuplicatedCoordinates] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RemoveHoles.html[ST_RemoveHoles] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RemovePoints.html[ST_RemovePoints] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RemoveRepeatedPoints.html[ST_RemoveRepeatedPoints] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Reverse3DLine.html[ST_Reverse3DLine] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RingBuffer.html[ST_RingBuffer] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RingSideBuffer.html[ST_RingSideBuffer] |
+|  | https://postgis.net/docs/ST_Rotate.html[ST_Rotate] | https://h2gis.readthedocs.io/en/latest/ST_Rotate.html[ST_Rotate] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Scale.html[ST_Scale] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_SideBuffer.html[ST_SideBuffer] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Split.html[ST_Split] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_SunPosition.html[ST_SunPosition] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_SVF.html[ST_SVF] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Tesselate.html[ST_Tesselate] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ToMultiPoint.html[ST_ToMultiPoint] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ToMultiSegments.html[ST_ToMultiSegments] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleAspect.html[ST_TriangleAspect] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleContouring.html[ST_TriangleContouring] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleDirection.html[ST_TriangleDirection] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleSlope.html[ST_TriangleSlope] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_UpdateZ.html[ST_UpdateZ] |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Voronoi.html[ST_Voronoi] |
 |  | st_x  | st_x |
 | geof:maxX | st_xmax | st_xmax |
 | geof:minX | st_xmin | st_xmin |

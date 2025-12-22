@@ -270,8 +270,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | forcepolygonccw
 |  |  |  | forcepolygoncw
 |  |  |  | frechetdistance
-|  |  |  | freexl_version
-|  |  |  | fullfilenamefrompath
 |  |  |  | geodesic length
 |  |  |  | geodesicarcarea
 |  |  |  | geodesicarcheight
@@ -295,23 +293,9 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  | https://postgis.net/docs/ST_GeomFromKML.html[ST_GeomFromKML] |  | geomfromkml
 |  | https://postgis.net/docs/ST_GeomFromText.html[ST_GeomFromText] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromText.html[ST_GeomFromText] | geomfromtext
 |  | https://postgis.net/docs/ST_GeomFromWKB.html[ST_GeomFromWKB] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromWKB.html[ST_GeomFromWKB] | geomfromwkb
-|  |  |  | getcuttermessage
-|  |  |  | getdbobjectscope
-|  |  |  | getdecimalprecision
 |  |  |  | getfacebypoint
 |  |  |  | getfaceedges
 |  |  |  | getfacegeometry
-|  |  |  | getgpkgamphibiousmode
-|  |  |  | getgpkgmode
-|  |  |  | getisometadataid
-|  |  |  | getlastnetworkexception
-|  |  |  | getlasttopologyexception
-|  |  |  | getlayerextent
-|  |  |  | getlinkbypoint
-|  |  |  | getnetnodebypoint
-|  |  |  | getnodebypoint
-|  |  |  | getpointindex
-|  |  |  | getvirtualtableextent
 |  |  |  | great circle length
 |  |  |  | gunion
 |  | st_hausdorffdistance |  | hausdorffdistance
@@ -408,11 +392,6 @@ multipointfromwkb"
 |  |  |  | relatematch
 |  |  |  | remedgemodface
 |  |  |  | remedgenewface
-|  |  |  | remisoedge
-|  |  |  | remisonetnode
-|  |  |  | remisonode
-|  |  |  | removeduplicaterows
-|  |  |  | removeextraspaces
 |  |  |  | removelink
 |  | https://postgis.net/docs/ST_RemovePoint.html[ST_RemovePoint] |  | removepoint
 |  | https://postgis.net/docs/ST_Reverse.html[ST_Reverse] | st_reverse | reverse

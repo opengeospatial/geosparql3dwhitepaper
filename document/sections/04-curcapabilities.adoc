@@ -368,33 +368,30 @@ multipointfromwkb"
 |  |  |  | multipolygonfromtext
 |  |  |  | multipolygonfromwkb
 |  | https://postgis.net/docs/ST_NDims.html[ST_NDims] |  | ndims
-|  | https://postgis.net/docs/ST_NPoints.html[ST_NPoints] | st_npoints | npoints
+|  | https://postgis.net/docs/ST_NPoints.html[ST_NPoints] | https://h2gis.readthedocs.io/en/latest/ST_NPoints.html[ST_NPoints] | npoints
 |  | https://postgis.net/docs/ST_NRings.html[ST_NRings] |  | nrings
-|  | https://postgis.net/docs/ST_NumInteriorRing.html[ST_NumInteriorRing] | st_numinteriorring | numinteriorring
-|  | https://postgis.net/docs/ST_NumInteriorRings.html[ST_NumInteriorRings] | st_numinteriorrings | numinteriorrings
+|  | https://postgis.net/docs/ST_NumInteriorRing.html[ST_NumInteriorRing] | https://h2gis.readthedocs.io/en/latest/ST_NumInteriorRing.html[ST_NumInteriorRing] | numinteriorring
+|  | https://postgis.net/docs/ST_NumInteriorRings.html[ST_NumInteriorRings] | https://h2gis.readthedocs.io/en/latest/ST_NumInteriorRings.html[ST_NumInteriorRings] | numinteriorrings
 |  |  |  | offestcurve
 |  |  |  | orientedenvelope
-|  | https://postgis.net/docs/ST_PointFromText.html[ST_PointFromText] | st_pointfromtext | pointfromtext
-|  | https://postgis.net/docs/ST_PointFromWKB.html[ST_PointFromWKB] | st_pointfromwkb | pointfromwkb
-|  | https://postgis.net/docs/ST_PointN.html[ST_PointN] | st_pointn | pointn
-|  | https://postgis.net/docs/ST_PointOnSurface.html[ST_PointOnSurface] | st_pointonsurface | pointonsurface
+|  | https://postgis.net/docs/ST_PointFromText.html[ST_PointFromText] | https://h2gis.readthedocs.io/en/latest/ST_PointFromText.html[ST_PointFromText] | pointfromtext
+|  | https://postgis.net/docs/ST_PointFromWKB.html[ST_PointFromWKB] | https://h2gis.readthedocs.io/en/latest/ST_PointFromWKB.html[ST_PointFromWKB] | pointfromwkb
+|  | https://postgis.net/docs/ST_PointN.html[ST_PointN] | https://h2gis.readthedocs.io/en/latest/ST_PointN.html[ST_PointN] | pointn
+|  | https://postgis.net/docs/ST_PointOnSurface.html[ST_PointOnSurface] | https://h2gis.readthedocs.io/en/latest/ST_PointOnSurface.html[ST_PointOnSurface] | pointonsurface
 |  |  |  | polyfromtext
 |  |  |  | polyfromwkb
 |  |  |  | polygonfromtext
 |  |  |  | polygonfromwkb
-|  | https://postgis.net/docs/ST_Polygonize.html[ST_Polygonize] | st_polygonize | polygonize
+|  | https://postgis.net/docs/ST_Polygonize.html[ST_Polygonize] | https://h2gis.readthedocs.io/en/latest/ST_Polygonize.html[ST_Polygonize] | polygonize
 |  |  |  | project
 |  |  |  | ptdistwithin
-|  |  |  | rebuildgeometrytriggers
 |  |  |  | reduceprecision
 |  |  |  | reflectcoordinates
 |  |  |  | reflectcoords
 |  |  |  | relatematch
-|  |  |  | remedgemodface
-|  |  |  | remedgenewface
 |  |  |  | removelink
 |  | https://postgis.net/docs/ST_RemovePoint.html[ST_RemovePoint] |  | removepoint
-|  | https://postgis.net/docs/ST_Reverse.html[ST_Reverse] | st_reverse | reverse
+|  | https://postgis.net/docs/ST_Reverse.html[ST_Reverse] | https://h2gis.readthedocs.io/en/latest/ST_Reverse.html[ST_Reverse] | reverse
 |  |  |  | ringscutatnodes
 |  |  |  | rotatecoordinates
 |  |  |  | rotatecoords
@@ -420,8 +417,6 @@ multipointfromwkb"
 |  |  |  https://h2gis.readthedocs.io/en/latest/ST_Snap.html[ST_Snap] | snap
 |  |  |  | snapandsplit
 |  | https://postgis.net/docs/ST_SnapToGrid.html[ST_SnapToGrid] |  | snaptogrid
-|  |  |  | spatnetfromgeom
-|  |  |  | spatnetfromtgeo
 |  |  |  https://h2gis.readthedocs.io/en/latest/ST_Split.html[ST_Split] | split
 |  |  |  | splitleft
 |  |  |  | splitright
@@ -431,7 +426,7 @@ multipointfromwkb"
 |  | https://postgis.net/docs/ST_Point.html[ST_Point] | https://h2gis.readthedocs.io/en/latest/ST_Point.html[ST_Point] | st_point
 |  | https://postgis.net/docs/ST_ShiftLongitude.html[ST_ShiftLongitude] |  | st_shift_longitude
 |  |  |  | st_subdivide
-|  | https://postgis.net/docs/ST_Translate.html[ST_Translate] | st_translate | st_translate
+|  | https://postgis.net/docs/ST_Translate.html[ST_Translate] | https://h2gis.readthedocs.io/en/latest/ST_Translate.html[ST_Translate] | st_translate
 |  | https://postgis.net/docs/ST_WKBToSQL.html[ST_WKBToSQL] |  | st_wkbtosql
 |  | https://postgis.net/docs/ST_WKTToSQL.html[ST_WKTToSQL] |  | st_wkttosql
 |  | https://postgis.net/docs/ST_StartPoint.html[ST_StartPoint] | st_startpoint | startpoint
@@ -448,9 +443,6 @@ multipointfromwkb"
 |  |  |  | upgradegeometrytriggers
 |  |  |  | uphillheight
 |  |  |  | voronojdiagram
-|  |  |  | x
-|  |  |  | y
-|  |  |  | z
 |  |  | st_3darea |
 |  | st_perimeter3d | st_3dperimeter |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_Accum.html[ST_Accum] |
@@ -516,13 +508,13 @@ multipointfromwkb"
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleSlope.html[ST_TriangleSlope] |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_UpdateZ.html[ST_UpdateZ] |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_Voronoi.html[ST_Voronoi] |
-|  | st_x  | https://h2gis.readthedocs.io/en/latest/ST_X.html[ST_X] |
+|  | https://postgis.net/docs/ST_X.html[ST_X] | https://h2gis.readthedocs.io/en/latest/ST_X.html[ST_X] | x
 | geof:maxX | https://postgis.net/docs/ST_XMax.html[ST_XMax] | https://h2gis.readthedocs.io/en/latest/ST_XMax.html[ST_XMax] |
 | geof:minX | https://postgis.net/docs/ST_XMin.html[ST_XMin] | https://h2gis.readthedocs.io/en/latest/ST_XMin.html[ST_XMin] |
-|  | https://postgis.net/docs/ST_Y.html[ST_Y]  |  https://h2gis.readthedocs.io/en/latest/ST_Y.html[ST_Y] |
+|  | https://postgis.net/docs/ST_Y.html[ST_Y]  |  https://h2gis.readthedocs.io/en/latest/ST_Y.html[ST_Y] | y 
 | geof:maxY | https://postgis.net/docs/ST_YMax.html[ST_YMax] | https://h2gis.readthedocs.io/en/latest/ST_YMax.html[ST_YMax] |
 | geof:minY | https://postgis.net/docs/ST_YMin.html[ST_YMin] | https://h2gis.readthedocs.io/en/latest/ST_YMin.html[ST_YMin] |
-|  | https://postgis.net/docs/ST_Z.html[ST_Z] | https://h2gis.readthedocs.io/en/latest/ST_Z.html[ST_Z] |
+|  | https://postgis.net/docs/ST_Z.html[ST_Z] | https://h2gis.readthedocs.io/en/latest/ST_Z.html[ST_Z] | z
 |  | https://postgis.net/docs/ST_ZMax.html[ST_ZMax] | https://h2gis.readthedocs.io/en/latest/ST_ZMax.html[ST_ZMax] |
 |  | https://postgis.net/docs/ST_ZMin.html[ST_ZMin] | https://h2gis.readthedocs.io/en/latest/ST_ZMin.html[ST_ZMin] |
 |  |  | st_zupdatelineextremities |
@@ -541,7 +533,7 @@ multipointfromwkb"
 |  | ~= |  |
 |  | box3d |  |
 |  | find_srid |  |
-|  | st_accum |  |
+|  | st_accum | https://h2gis.readthedocs.io/en/latest/ST_Accum.html[ST_Accum] |
 |  | https://postgis.net/docs/ST_Affine.html[ST_Affine] |  |
 |  | st_ashexewkb |  |
 |  | st_containsproperly |  |

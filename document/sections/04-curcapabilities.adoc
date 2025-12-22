@@ -161,7 +161,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 
 .Alignment: GeoSPARQL and Open Source Relational Databases with Geospatial Support
 |===
-| GeoSPARQL | PostGIS | H2GIS | Spatialite
+| GeoSPARQL | PostGIS | H2GIS | Spatialite | Category | 3D-relevant
 | http://www.opengis.net/def/function/geosparql/area[geof:area] | https://postgis.net/docs/ST_Area.html[ST_Area] | https://h2gis.readthedocs.io/en/latest/ST_Area.html[ST_Area] | area
 | http://www.opengis.net/def/function/geosparql/asGeoJSON[geof:asGeoJSON] | https://postgis.net/docs/ST_AsGeoJSON.html[ST_AsGeoJSON] |  | asgeojson
 | http://www.opengis.net/def/function/geosparql/asGML[geof:asGML] | https://postgis.net/docs/ST_AsGML.html[ST_AsGML] | https://h2gis.readthedocs.io/en/latest/ST_AsGML.html[ST_AsGML] | asgml
@@ -223,7 +223,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  | https://postgis.net/docs/ST_AsEWKT.html[ST_AsEWKT] |  | asewkt
 |  |  |  | asfgf
 |  |  |  | asgpb
-|  |  |  | asin
 |  | https://postgis.net/docs/ST_AsSVG.html[ST_AsSVG] |  | assvg
 | http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | st_astext | st_astext | astext
 |  |  |  | astwkb

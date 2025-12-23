@@ -506,28 +506,14 @@ multipointfromwkb"
 |  | https://postgis.net/docs/ST_Y.html[ST_Y]  |  https://h2gis.readthedocs.io/en/latest/ST_Y.html[ST_Y] | y 
 |  | https://postgis.net/docs/ST_Z.html[ST_Z] | https://h2gis.readthedocs.io/en/latest/ST_Z.html[ST_Z] | z
 |  |  | st_zupdatelineextremities |
-|  | @ |  |
-|  | && |  |
-|  | &< |  |
-|  | &<| |  |
-|  | &> |  |
-|  | << |  |
-|  | <<| |  |
-|  | = |  |
-|  | >> |  |
-|  | |&> |  |
-|  | |>> |  |
-|  | ~ |  |
-|  | ~= |  |
 |  | box3d |  |
-|  | find_srid |  |
 |  | st_accum | https://h2gis.readthedocs.io/en/latest/ST_Accum.html[ST_Accum] |
 |  | https://postgis.net/docs/ST_Affine.html[ST_Affine] |  |
 |  | st_ashexewkb |  |
-|  | st_containsproperly |  |
+|  | https://postgis.net/docs/ST_ContainsProperly.html[ST_ContainsProperly] |  |
 |  | https://postgis.net/docs/ST_CoordDim.html[ST_CoordDim] |  |
 |  | https://postgis.net/docs/ST_CurveToLine.html[ST_CurveToLine] |  |
-|  | st_dfullywithin |  |
+|  | https://postgis.net/docs/ST_DFullyWithin.html[ST_DFullyWithin] |  |
 |  | https://postgis.net/docs/ST_DistanceSphere.html[ST_DistanceSphere] |  |
 |  | https://postgis.net/docs/ST_Distance_Spheroid.html[ST_Distance_Spheroid] |  |
 |  | https://postgis.net/docs/ST_Dump.html[ST_Dump] |  |

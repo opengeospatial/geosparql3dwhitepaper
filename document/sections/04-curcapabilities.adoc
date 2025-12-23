@@ -209,28 +209,24 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 | http://www.opengis.net/def/function/geosparql/union[geof:union] | https://postgis.net/docs/ST_Union.html[ST_Union] | https://h2gis.readthedocs.io/en/latest/ST_Union.html[ST_Union] | gunion |  |
 | http://www.opengis.net/def/function/geosparql/sfWithin[geof:sfWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within |  |
 | http://www.opengis.net/def/function/geosparql/ehWithin[geof:ehWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within |  |
-|  |  |  | 3ddistance
-|  | st_length3d | st_3dlength | 3dlength
-|  |  |  | 3dmaxdistance
-|  |  |  | addedgemodface
-|  |  |  | addedgenewfaces
-|  |  |  | addisoedge
-|  |  |  | addisonetnode
-|  |  |  | addisonode
-|  |  |  | addlink
-|  | https://postgis.net/docs/ST_AddMeasure.html[ST_AddMeasure] |  | addmeasure
-|  | https://postgis.net/docs/ST_AddPoint.html[ST_AddPoint] | https://h2gis.readthedocs.io/en/latest/ST_AddPoint.html[ST_AddPoint] | addpoint
-|  |  |  | addtemporarygeometrycolumn
-|  | https://postgis.net/docs/ST_AsBinary.html[ST_AsBinary] | https://h2gis.readthedocs.io/en/latest/ST_AsBinary.html[ST_AsBinary] | asbinary
-|  |  |  | asencodedpolyline
-|  | https://postgis.net/docs/ST_AsEWKB.html[ST_AsEWKB] |  | asewkb
-|  | https://postgis.net/docs/ST_AsEWKT.html[ST_AsEWKT] |  | asewkt
-|  |  |  | asfgf
-|  |  |  | asgpb
-|  | https://postgis.net/docs/ST_AsSVG.html[ST_AsSVG] |  | assvg
-| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | st_astext | st_astext | astext
-|  |  |  | astwkb
-|  |  |  | asx3d
+|  |  |  | 3ddistance |  |
+|  | st_length3d | st_3dlength | 3dlength |  |
+|  |  |  | 3dmaxdistance |  |
+|  |  |  | addedgemodface |  |
+|  |  |  | addedgenewfaces |  |
+|  | https://postgis.net/docs/ST_AddMeasure.html[ST_AddMeasure] |  | addmeasure |  |
+|  | https://postgis.net/docs/ST_AddPoint.html[ST_AddPoint] | https://h2gis.readthedocs.io/en/latest/ST_AddPoint.html[ST_AddPoint] | addpoint |  |
+|  |  |  | addtemporarygeometrycolumn |  |
+|  | https://postgis.net/docs/ST_AsBinary.html[ST_AsBinary] | https://h2gis.readthedocs.io/en/latest/ST_AsBinary.html[ST_AsBinary] | asbinary |  |
+|  |  |  | asencodedpolyline |  |
+|  | https://postgis.net/docs/ST_AsEWKB.html[ST_AsEWKB] |  | asewkb |  |
+|  | https://postgis.net/docs/ST_AsEWKT.html[ST_AsEWKT] |  | asewkt |  |
+|  |  |  | asfgf |  |
+|  |  |  | asgpb |  |
+|  | https://postgis.net/docs/ST_AsSVG.html[ST_AsSVG] |  | assvg |  |
+| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | st_astext | st_astext | astext |  |
+|  |  |  | astwkb |  |
+|  |  |  | asx3d |  |
 |  | https://postgis.net/docs/ST_Azimuth.html[ST_Azimuth] | https://h2gis.readthedocs.io/en/latest/ST_Azimuth.html[ST_Azimuth] | azimuth
 |  | st_bdmpolyfromtext |  | bdmpolyfromtext
 |  |  |  | bdmpolyfromwkb
@@ -354,7 +350,6 @@ linestringfromwkb"
 |  |  |  | makevaliddiscarded
 |  | https://postgis.net/docs/ST_MaxDistance.html[ST_MaxDistance] | st_maxdistance | maxdistance
 |  |  |  | maxm
-| http://www.opengis.net/def/function/geosparql/maxZ[geof:maxZ] |  |  | maxz
 |  |  |  | minm
 |  |  |  | minz
 |  |  |  | mlinefromtext
@@ -392,7 +387,6 @@ multipointfromwkb"
 |  |  |  | reflectcoordinates
 |  |  |  | reflectcoords
 |  |  |  | relatematch
-|  |  |  | removelink
 |  | https://postgis.net/docs/ST_RemovePoint.html[ST_RemovePoint] |  | removepoint
 |  | https://postgis.net/docs/ST_Reverse.html[ST_Reverse] | https://h2gis.readthedocs.io/en/latest/ST_Reverse.html[ST_Reverse] | reverse
 |  |  |  | ringscutatnodes
@@ -414,7 +408,6 @@ multipointfromwkb"
 |  |  |  | shiftcoordinates
 |  |  |  | shiftcoords
 |  | https://postgis.net/docs/ST_ShortestLine.html[ST_ShortestLine] | st_shortestline | shortestline
-|  |  |  | sign
 |  | https://postgis.net/docs/ST_Simplify.html[ST_Simplify] | st_simplify | simplify
 |  | https://postgis.net/docs/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | st_simplifypreservetopology | simplifypreservetopology
 |  |  |  https://h2gis.readthedocs.io/en/latest/ST_Snap.html[ST_Snap] | snap
@@ -436,14 +429,12 @@ multipointfromwkb"
 |  |  |  | startpoint
 |  |  |  | swapcoordinates
 |  |  |  | swapcoords
-|  |  |  | tinypointencode
 |  |  |  | trajectoryinterpolatepoint
 |  |  |  | transformxy
 |  |  |  | transformxyz
 |  |  |  | triangulargrid
 |  |  |  | unaryunion
 |  |  |  | updownheight
-|  |  |  | upgradegeometrytriggers
 |  |  |  | uphillheight
 |  |  |  | voronojdiagram
 |  |  | st_3darea |
@@ -512,8 +503,6 @@ multipointfromwkb"
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_UpdateZ.html[ST_UpdateZ] |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_Voronoi.html[ST_Voronoi] |
 |  | https://postgis.net/docs/ST_X.html[ST_X] | https://h2gis.readthedocs.io/en/latest/ST_X.html[ST_X] | x
-| geof:maxX | https://postgis.net/docs/ST_XMax.html[ST_XMax] | https://h2gis.readthedocs.io/en/latest/ST_XMax.html[ST_XMax] |
-| geof:minX | https://postgis.net/docs/ST_XMin.html[ST_XMin] | https://h2gis.readthedocs.io/en/latest/ST_XMin.html[ST_XMin] |
 |  | https://postgis.net/docs/ST_Y.html[ST_Y]  |  https://h2gis.readthedocs.io/en/latest/ST_Y.html[ST_Y] | y 
 |  | https://postgis.net/docs/ST_Z.html[ST_Z] | https://h2gis.readthedocs.io/en/latest/ST_Z.html[ST_Z] | z
 |  |  | st_zupdatelineextremities |
@@ -540,7 +529,7 @@ multipointfromwkb"
 |  | https://postgis.net/docs/ST_CurveToLine.html[ST_CurveToLine] |  |
 |  | st_dfullywithin |  |
 |  | https://postgis.net/docs/ST_DistanceSphere.html[ST_DistanceSphere] |  |
-|  | st_distance_spheroid |  |
+|  | https://postgis.net/docs/ST_Distance_Spheroid.html[ST_Distance_Spheroid] |  |
 |  | https://postgis.net/docs/ST_Dump.html[ST_Dump] |  |
 |  | https://postgis.net/docs/ST_DumpRings.html[ST_DumpRings] |  |
 |  | https://h2gis.readthedocs.io/en/latest/ST_EstimatedExtent.html[ST_EstimatedExtent] |  |
@@ -551,9 +540,9 @@ multipointfromwkb"
 |  | https://postgis.net/docs/ST_Force3DZ.html[ST_Force3DZ] |  |
 |  | https://postgis.net/docs/ST_Force4D.html[ST_Force4D] |  |
 |  | https://postgis.net/docs/ST_ForceCollection.html[ST_ForceCollection] |  |
-|  | st_geogfromtext |  |
-|  | st_geogfromwkb |  |
-|  | st_geographyfromtext |  |
+|  | https://postgis.net/docs/ST_GeogFromText.html[ST_GeogFromText] |  |
+|  | https://postgis.net/docs/ST_GeogFromWKB.html[ST_GeogFromWKB] |  |
+|  | https://postgis.net/docs/ST_GeographyFromText.html[ST_GeographyFromText] |  |
 |  | https://postgis.net/docs/ST_GeometryFromText.html[ST_GeometryFromText] |  |
 |  | https://postgis.net/docs/ST_GMLToSQL.html[ST_GMLToSQL] |  |
 |  | https://postgis.net/docs/ST_HasArc.html[ST_HasArc] |  |
@@ -566,13 +555,13 @@ multipointfromwkb"
 |  | https://postgis.net/docs/ST_LineFromWKB.html[ST_LineFromWKB] |  |
 |  | https://postgis.net/docs/ST_LinestringFromWKB.html[ST_LinestringFromWKB] |  |
 |  | https://postgis.net/docs/ST_LineToCurve.html[ST_LineToCurve] |  |
-|  | st_locatebetweenelevations |  |
+|  | https://postgis.net/docs/ST_LocateBetweenElevations.html[ST_LocateBetweenElevations] |  |
 |  | https://postgis.net/docs/ST_LongestLine.html[ST_LongestLine] |  |
 |  | https://postgis.net/docs/ST_M.html[ST_M] |  |
 |  | https://postgis.net/docs/ST_MakeBox2D.html[ST_MakeBox2D] |  |
 |  | st_makebox3d |  |
 |  | https://postgis.net/docs/ST_MakeEnvelope.html[ST_MakeEnvelope] |  |
-|  | st_mem_size |  |
+|  | https://postgis.net/docs/ST_MemSize.html[ST_MemSize] |  |
 |  | https://postgis.net/docs/ST_MemUnion.html[ST_MemUnion] |  |
 |  | https://postgis.net/docs/ST_Multi.html[ST_Multi] |  |
 |  | https://postgis.net/docs/ST_OrderingEquals.html[ST_OrderingEquals] |  |
@@ -584,7 +573,7 @@ multipointfromwkb"
 |  | https://postgis.net/docs/ST_RotateZ.html[ST_RotateZ] |  |
 |  | https://postgis.net/docs/ST_Scale.html[ST_Scale] |  |
 |  | https://postgis.net/docs/ST_Summary.html[ST_Summary] |  |
-|  | st_transscale |  |
+|  | https://postgis.net/docs/ST_TransScale.html[ST_TransScale] |  |
 |  | st_zmflag |  |
 |===
 ===== Geometry Topology Extension

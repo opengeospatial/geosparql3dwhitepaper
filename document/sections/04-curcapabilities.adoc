@@ -163,7 +163,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |===
 | GeoSPARQL | PostGIS | H2GIS | Spatialite | Category | 3D-relevant
 | http://www.opengis.net/def/function/geosparql/area[geof:area] | https://postgis.net/docs/ST_Area.html[ST_Area] | https://h2gis.readthedocs.io/en/latest/ST_Area.html[ST_Area] | area |  |
-| http://www.opengis.net/def/function/geosparql/asGeoJSON[geof:asGeoJSON] | https://postgis.net/docs/ST_AsGeoJSON.html[ST_AsGeoJSON] |  | asgeojson |  |
+| http://www.opengis.net/def/function/geosparql/asGeoJSON[geof:asGeoJSON] | https://postgis.net/docs/ST_AsGeoJSON.html[ST_AsGeoJSON] |  | asgeojson | Geometry Conversion | Yes
 | http://www.opengis.net/def/function/geosparql/asGML[geof:asGML] | https://postgis.net/docs/ST_AsGML.html[ST_AsGML] | https://h2gis.readthedocs.io/en/latest/ST_AsGML.html[ST_AsGML] | asgml |  |
 | http://www.opengis.net/def/function/geosparql/asKML[geof:asKML] | https://postgis.net/docs/ST_AsKML.html[ST_AsKML] | https://h2gis.readthedocs.io/en/latest/ST_AsKML.html[ST_AsKML] | askml |  |
 | http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | https://postgis.net/docs/ST_AsText.html[ST_AsText] | https://h2gis.readthedocs.io/en/latest/ST_AsWKT.html[ST_AsWKT] | aswkt |  |

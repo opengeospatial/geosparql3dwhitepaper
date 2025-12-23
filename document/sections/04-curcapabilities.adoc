@@ -538,9 +538,22 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 ===== Geometry Topology Extension
 Another extension is the Geometry Topology extension. This provides query functions that return relationships between different geometries based on the topology vocabulary extension.
 
+The Geometry Topology Extension describes three sets of geometry relation functions, akin to the properties which were previously defined in the Topology Vocabulary extension.
+
+The Simple Features relations, the Egenhofer relations and the RCC8 relations as query functions are merely defined on 2D relations and warrant an examination concerning their suitability and upgradability to 3D.
+
+It might be desirable to even use different sets of relations which will be available in GeoSPARQL 3D, which are better suited for the specific needs for 3D geometries.
+
 ===== RDFS Entailment Extension
 The RDFS Entailment extension provides rules for reasoning over geometries. Based on specific statements, additional information can be inferred.
 This kind of logical inference can also be applied to geometry. GeoSPARQL includes logic for reasoning over simple features geometries.
 
+===== Geometry Class Hierarchy
+
+As described in the Geometry Extension part, the Geometry class hierarchy will need to be extended to include 3D primitives and 3D specific types so that reasoners may take advantage of 3D types in reasoning tasks.
+This may need to be done for 3D serializations that are not equal to WKT and GML, since only for these two serializations, the RDFS Entailment was defined in GeoSPARQL 1.1.
+
 ===== Query Rewrite Extension
 GeoSPARQL allows queries such as whether “Feature A” is located within “Feature B” using its vocabulary. The Query Rewrite extension specifies a RIF rule that enables query rewriting. However, this extension does not support the rewriting of 3D queries.
+
+3D compatibility of the Query Rewrite extension would depend similarly on the 3D relations defined, since the Query Rewrite Extension would merely apply the graph patterns defined in the other extensions.

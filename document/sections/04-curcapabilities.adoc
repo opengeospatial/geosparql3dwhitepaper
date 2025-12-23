@@ -185,26 +185,30 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 | http://www.opengis.net/def/function/geosparql/sfEquals[geof:sfEquals] | https://postgis.net/docs/ST_Equals.html[ST_Equals] | https://h2gis.readthedocs.io/en/latest/ST_Equals.html[ST_Equals] | equals |  |
 | http://www.opengis.net/def/function/geosparql/ehEquals[geof:ehEquals] | https://postgis.net/docs/ST_Equals.html[ST_Equals] | https://h2gis.readthedocs.io/en/latest/ST_Equals.html[ST_Equals] | equals |  |
 | http://www.opengis.net/def/function/geosparql/geometryN[geof:geometryN] | https://postgis.net/docs/ST_GeometryN.html[ST_GeometryN] | https://h2gis.readthedocs.io/en/latest/ST_GeometryN.html[ST_GeometryN] | geometryn |  |
-| geof:getsrid | st_srid | st_srid | srid
-| http://www.opengis.net/def/function/geosparql/intersection[geof:intersection] | https://postgis.net/docs/ST_Intersection.html[ST_Intersection] | https://h2gis.readthedocs.io/en/latest/ST_Intersection.html[ST_Intersection] | intersection
-| http://www.opengis.net/def/function/geosparql/sfIntersects[geof:sfIntersects] | https://postgis.net/docs/ST_Intersects.html[ST_Intersects] | https://h2gis.readthedocs.io/en/latest/ST_Intersects.html[ST_Intersects] | intersects
-| http://www.opengis.net/def/function/geosparql/isEmpty[geof:isEmpty] | https://postgis.net/docs/ST_IsEmpty.html[ST_IsEmpty] | https://h2gis.readthedocs.io/en/latest/ST_IsEmpty.html[ST_IsEmpty] | isempty
-| http://www.opengis.net/def/function/geosparql/isSimple[geof:isSimple] | https://postgis.net/docs/ST_IsSimple.html[ST_IsSimple] | https://h2gis.readthedocs.io/en/latest/ST_IsSimple.html[ST_IsSimple] | issimple
-| http://www.opengis.net/def/function/geosparql/length[geof:length] | https://postgis.net/docs/ST_Length.html[ST_Length] | https://h2gis.readthedocs.io/en/latest/ST_Length.html[ST_Length] | length
-| http://www.opengis.net/def/function/geosparql/maxZ[geof:maxZ] |  |  | maxz
-| http://www.opengis.net/def/function/geosparql/minZ[geof:minZ] |  |  | minz
-| http://www.opengis.net/def/function/geosparql/numGeometries[geof:numGeometries] | https://postgis.net/docs/ST_NumGeometries.html[ST_NumGeometries] | https://h2gis.readthedocs.io/en/latest/ST_NumGeometries.html[ST_NumGeometries] | numgeometries
-| http://www.opengis.net/def/function/geosparql/numPoints[geof:numPoints] | https://postgis.net/docs/ST_NumPoints.html[ST_NumPoints] | https://h2gis.readthedocs.io/en/latest/ST_NumPoints.html[ST_NumPoints] | numpoints
-| http://www.opengis.net/def/function/geosparql/ehOverlap[geof:ehOverlap] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://h2gis.readthedocs.io/en/latest/ST_Overlaps.html[ST_Overlaps] | overlaps
-| http://www.opengis.net/def/function/geosparql/sfOverlaps[geof:sfOverlaps] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://h2gis.readthedocs.io/en/latest/ST_Overlaps.html[ST_Overlaps] | overlaps
-| http://www.opengis.net/def/function/geosparql/perimeter[geof:perimeter] | https://postgis.net/docs/ST_Perimeter.html[ST_Perimeter] | https://h2gis.readthedocs.io/en/latest/ST_Perimeter.html[ST_Perimeter] | perimeter
-| http://www.opengis.net/def/function/geosparql/relate[geof:relate] | https://postgis.net/docs/ST_Relate.html[ST_Relate] | https://h2gis.readthedocs.io/en/latest/ST_Relate.html[ST_Relate] | relate
-| http://www.opengis.net/def/function/geosparql/symmetricDifference[geof:symmetricDifference] | https://postgis.net/docs/ST_SymDifference.html[ST_SymDifference] | https://h2gis.readthedocs.io/en/latest/ST_SymDifference.html[ST_SymDifference] | symdifference
-| http://www.opengis.net/def/function/geosparql/sfTouches[geof:sfTouches] | https://postgis.net/docs/ST_Touches.html[ST_Touches] | https://h2gis.readthedocs.io/en/latest/ST_Touches.html[ST_Touches] | touches
-| http://www.opengis.net/def/function/geosparql/transform[geof:transform] | https://postgis.net/docs/ST_Transform.html[ST_Transform] | https://h2gis.readthedocs.io/en/latest/ST_Transform.html[ST_Transform] | transform
-| http://www.opengis.net/def/function/geosparql/union[geof:union] | https://postgis.net/docs/ST_Union.html[ST_Union] | https://h2gis.readthedocs.io/en/latest/ST_Union.html[ST_Union] | gunion
-| http://www.opengis.net/def/function/geosparql/sfWithin[geof:sfWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within
-| http://www.opengis.net/def/function/geosparql/ehWithin[geof:ehWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within
+| geof:getsrid | st_srid | st_srid | srid  |  |
+| http://www.opengis.net/def/function/geosparql/intersection[geof:intersection] | https://postgis.net/docs/ST_Intersection.html[ST_Intersection] | https://h2gis.readthedocs.io/en/latest/ST_Intersection.html[ST_Intersection] | intersection  |  |
+| http://www.opengis.net/def/function/geosparql/sfIntersects[geof:sfIntersects] | https://postgis.net/docs/ST_Intersects.html[ST_Intersects] | https://h2gis.readthedocs.io/en/latest/ST_Intersects.html[ST_Intersects] | intersects  |  |
+| http://www.opengis.net/def/function/geosparql/isEmpty[geof:isEmpty] | https://postgis.net/docs/ST_IsEmpty.html[ST_IsEmpty] | https://h2gis.readthedocs.io/en/latest/ST_IsEmpty.html[ST_IsEmpty] | isempty  |  |
+| http://www.opengis.net/def/function/geosparql/isSimple[geof:isSimple] | https://postgis.net/docs/ST_IsSimple.html[ST_IsSimple] | https://h2gis.readthedocs.io/en/latest/ST_IsSimple.html[ST_IsSimple] | issimple  |  |
+| http://www.opengis.net/def/function/geosparql/length[geof:length] | https://postgis.net/docs/ST_Length.html[ST_Length] | https://h2gis.readthedocs.io/en/latest/ST_Length.html[ST_Length] | length  |  |
+| http://www.opengis.net/def/function/geosparql/maxX[geof:maxX] | https://postgis.net/docs/ST_XMax.html[ST_XMax] | https://h2gis.readthedocs.io/en/latest/ST_XMax.html[ST_XMax] |  maxX  |  |
+| http://www.opengis.net/def/function/geosparql/maxY[geof:maxY] | https://postgis.net/docs/ST_YMax.html[ST_YMax] | https://h2gis.readthedocs.io/en/latest/ST_YMax.html[ST_YMax] | maxy  |  |
+| http://www.opengis.net/def/function/geosparql/maxZ[geof:maxZ] | https://postgis.net/docs/ST_ZMax.html[ST_ZMax] | https://h2gis.readthedocs.io/en/latest/ST_ZMax.html[ST_ZMax] | maxz  |  |
+| http://www.opengis.net/def/function/geosparql/minX[geof:minX] | https://postgis.net/docs/ST_XMin.html[ST_XMin] | https://h2gis.readthedocs.io/en/latest/ST_XMin.html[ST_XMin] | minx  |  |
+| http://www.opengis.net/def/function/geosparql/minY[geof:minY] | https://postgis.net/docs/ST_YMin.html[ST_YMin] | https://h2gis.readthedocs.io/en/latest/ST_YMin.html[ST_YMin] | miny  |  |
+| http://www.opengis.net/def/function/geosparql/minZ[geof:minZ] | https://postgis.net/docs/ST_ZMin.html[ST_ZMin] | https://h2gis.readthedocs.io/en/latest/ST_ZMin.html[ST_ZMin]  | minz  |  |
+| http://www.opengis.net/def/function/geosparql/numGeometries[geof:numGeometries] | https://postgis.net/docs/ST_NumGeometries.html[ST_NumGeometries] | https://h2gis.readthedocs.io/en/latest/ST_NumGeometries.html[ST_NumGeometries] | numgeometries |  |
+| http://www.opengis.net/def/function/geosparql/numPoints[geof:numPoints] | https://postgis.net/docs/ST_NumPoints.html[ST_NumPoints] | https://h2gis.readthedocs.io/en/latest/ST_NumPoints.html[ST_NumPoints] | numpoints |  |
+| http://www.opengis.net/def/function/geosparql/ehOverlap[geof:ehOverlap] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://h2gis.readthedocs.io/en/latest/ST_Overlaps.html[ST_Overlaps] | overlaps |  |
+| http://www.opengis.net/def/function/geosparql/sfOverlaps[geof:sfOverlaps] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://h2gis.readthedocs.io/en/latest/ST_Overlaps.html[ST_Overlaps] | overlaps |  |
+| http://www.opengis.net/def/function/geosparql/perimeter[geof:perimeter] | https://postgis.net/docs/ST_Perimeter.html[ST_Perimeter] | https://h2gis.readthedocs.io/en/latest/ST_Perimeter.html[ST_Perimeter] | perimeter |  |
+| http://www.opengis.net/def/function/geosparql/relate[geof:relate] | https://postgis.net/docs/ST_Relate.html[ST_Relate] | https://h2gis.readthedocs.io/en/latest/ST_Relate.html[ST_Relate] | relate |  |
+| http://www.opengis.net/def/function/geosparql/symmetricDifference[geof:symmetricDifference] | https://postgis.net/docs/ST_SymDifference.html[ST_SymDifference] | https://h2gis.readthedocs.io/en/latest/ST_SymDifference.html[ST_SymDifference] | symdifference |  |
+| http://www.opengis.net/def/function/geosparql/sfTouches[geof:sfTouches] | https://postgis.net/docs/ST_Touches.html[ST_Touches] | https://h2gis.readthedocs.io/en/latest/ST_Touches.html[ST_Touches] | touches |  |
+| http://www.opengis.net/def/function/geosparql/transform[geof:transform] | https://postgis.net/docs/ST_Transform.html[ST_Transform] | https://h2gis.readthedocs.io/en/latest/ST_Transform.html[ST_Transform] | transform |  |
+| http://www.opengis.net/def/function/geosparql/union[geof:union] | https://postgis.net/docs/ST_Union.html[ST_Union] | https://h2gis.readthedocs.io/en/latest/ST_Union.html[ST_Union] | gunion |  |
+| http://www.opengis.net/def/function/geosparql/sfWithin[geof:sfWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within |  |
+| http://www.opengis.net/def/function/geosparql/ehWithin[geof:ehWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within |  |
 |  |  |  | 3ddistance
 |  | st_length3d | st_3dlength | 3dlength
 |  |  |  | 3dmaxdistance
@@ -511,11 +515,7 @@ multipointfromwkb"
 | geof:maxX | https://postgis.net/docs/ST_XMax.html[ST_XMax] | https://h2gis.readthedocs.io/en/latest/ST_XMax.html[ST_XMax] |
 | geof:minX | https://postgis.net/docs/ST_XMin.html[ST_XMin] | https://h2gis.readthedocs.io/en/latest/ST_XMin.html[ST_XMin] |
 |  | https://postgis.net/docs/ST_Y.html[ST_Y]  |  https://h2gis.readthedocs.io/en/latest/ST_Y.html[ST_Y] | y 
-| geof:maxY | https://postgis.net/docs/ST_YMax.html[ST_YMax] | https://h2gis.readthedocs.io/en/latest/ST_YMax.html[ST_YMax] |
-| geof:minY | https://postgis.net/docs/ST_YMin.html[ST_YMin] | https://h2gis.readthedocs.io/en/latest/ST_YMin.html[ST_YMin] |
 |  | https://postgis.net/docs/ST_Z.html[ST_Z] | https://h2gis.readthedocs.io/en/latest/ST_Z.html[ST_Z] | z
-|  | https://postgis.net/docs/ST_ZMax.html[ST_ZMax] | https://h2gis.readthedocs.io/en/latest/ST_ZMax.html[ST_ZMax] |
-|  | https://postgis.net/docs/ST_ZMin.html[ST_ZMin] | https://h2gis.readthedocs.io/en/latest/ST_ZMin.html[ST_ZMin] |
 |  |  | st_zupdatelineextremities |
 |  | @ |  |
 |  | && |  |

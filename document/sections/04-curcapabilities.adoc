@@ -276,11 +276,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | geodesiccentralangle  |  |
 |  |  |  | geodesicchordlength  |  | 
 |  | https://postgis.net/docs/ST_GeoHash.html[ST_GeoHash] |  | geohash |  |
-|  |  |  | geomcollfromtext  |  |
-|  |  |  | geomcollfromwkb  |  |
-|  |  |  | geometrycollectionfromtext  |  |
-|  |  |  | geometrycollectionfromwkb |  |
-|  |  |  | geometrypointencode  |  |
 |  | geometrytype |  | geometrytype  |  |
 |  | https://postgis.net/docs/ST_GeomFromEWKB.html[ST_GeomFromEWKB] |  | geomfromewkb  |  |
 |  | st_geomfromewkt |  | geomfromewkt  |  |
@@ -324,8 +319,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | linescutatnodes  |  |
 |  |  |  | linesfromrings  |  |
 |  |  |  | linestringavgsegmentlength  |  |
-|  |  |  | linestringfromtext  |  |
-|  |  |  | linestringfromwkb  |  |
 |  |  |  | linestringminsegmentlength  |  |
 |  | st_locate_along_measure |  | locatealongmeasure  |  |
 |  | st_locate_between_measures |  | locatebetweenmeasures  |  |
@@ -379,7 +372,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | scalecoords |  |
 |  | https://postgis.net/docs/ST_Segmentize.html[ST_Segmentize] |  | segmentize  |  |
 |  |  |  | selfintersections  |  |
-|  |  |  | setdatalicenseurl  |  |
 |  |  |  | setdecimalprecision  |  |
 |  |  |  | setendpoint  |  |
 |  |  |  | setmultiplepoints  |  |
@@ -418,7 +410,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | unaryunion |  |
 |  |  |  | updownheight |  |
 |  |  |  | uphillheight |  |
-|  |  |  | voronojdiagram |  |
 |  |  | st_3darea | |  |
 |  | st_perimeter3d | https://https://h2gis.readthedocs.io/en/latest/ST_3DPerimeter.html[ST_3DPerimeter] | |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_Accum.html[ST_Accum] | |  |

@@ -442,8 +442,8 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeGrid.html[ST_MakeGrid] | |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeGridPoints.html[ST_MakeGridPoints] | |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_MinimumRectangle.html[ST_MinimumRectangle] | |  |
-|  | https://postgis.net/docs/ST_MLineFromText.html[ST_MLineFromText] | st_mlinefromtext | |  |
-|  | https://postgis.net/docs/ST_MPolyFromText.html[ST_MPolyFromText] | st_mpolyfromtext | |  |
+|  | https://postgis.net/docs/ST_MLineFromText.html[ST_MLineFromText] | https://h2gis.readthedocs.io/en/latest/ST_MLineFromText.html[ST_MLineFromText] | |  |
+|  | https://postgis.net/docs/ST_MPolyFromText.html[ST_MPolyFromText] | https://h2gis.readthedocs.io/en/latest/ST_MPolyFromText.html[ST_MPolyFromText] | |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_MultiplyZ.html[ST_MultiplyZ] | |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_Normalize.html[ST_Normalize] | |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_OctogonalEnvelope.html[ST_OctogonalEnvelope] | |  |

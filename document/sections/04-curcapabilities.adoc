@@ -266,8 +266,8 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | extractmultipoint  |  |
 |  |  |  | extractmultipolygon  |  |
 |  | https://postgis.net/docs/ST_ForceRHR.html[ST_ForceRHR] |  | forcelhr  |  |
-|  |  |  | forcepolygonccw  |  |
-|  |  |  | forcepolygoncw  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ForcePolygonCCW.html[ST_ForcePolygonCCW] | forcepolygonccw  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ForcePolygonCW.html[ST_ForcePolygonCW] | forcepolygoncw  |  |
 |  |  |  | frechetdistance |  |
 |  |  |  | geodesic length  |  |
 |  |  |  | geodesicarcarea  |  |

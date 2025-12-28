@@ -322,7 +322,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | linestringminsegmentlength  |  |
 |  | st_locate_along_measure |  | locatealongmeasure  |  |
 |  | st_locate_between_measures |  | locatebetweenmeasures  |  |
-|  | https://postgis.net/docs/ST_M.html[ST_M] |  | m  |  |
+|  | https://postgis.net/docs/ST_M.html[ST_M] | https://h2gis.readthedocs.io/en/latest/ST_M.html[ST_M] | m  |  |
 |  |  |  | makearc  |  |
 |  |  |  | makecircle  |  |
 |  |  |  | makecircularsector  |  |

@@ -339,10 +339,10 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | makestringlist  |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeValid.html[ST_MakeValid] | makevalid  |  |
 |  |  |  | makevaliddiscarded  |  |
-|  | https://postgis.net/docs/ST_MaxDistance.html[ST_MaxDistance] | st_maxdistance | maxdistance  |  |
+|  | https://postgis.net/docs/ST_MaxDistance.html[ST_MaxDistance] | https://h2gis.readthedocs.io/en/latest/ST_MaxDistance.html[ST_MaxDistance] | maxdistance  |  |
 |  |  |  | maxm  |  |
 |  |  |  | minm  |  |
-|  | https://postgis.net/docs/ST_MPointFromText.html[ST_MPointFromText] | st_mpointfromtext | "mpointfromtext multipointfromtext"  |  |
+|  | https://postgis.net/docs/ST_MPointFromText.html[ST_MPointFromText] | https://h2gis.readthedocs.io/en/latest/ST_MPointFromText.html[ST_MPointFromText] | "mpointfromtext multipointfromtext"  |  |
 |  |  |  | "mpointfromwkb multipointfromwkb"  |  |
 |  | https://postgis.net/docs/ST_NDims.html[ST_NDims] |  | ndims  |  |
 |  | https://postgis.net/docs/ST_NPoints.html[ST_NPoints] | https://h2gis.readthedocs.io/en/latest/ST_NPoints.html[ST_NPoints] | npoints  |  |
@@ -381,8 +381,8 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | sharedpaths  |  |
 |  |  |  | shiftcoordinates  |  |
 |  |  |  | shiftcoords  |  |
-|  | https://postgis.net/docs/ST_ShortestLine.html[ST_ShortestLine] | st_shortestline | shortestline  |  |
-|  | https://postgis.net/docs/ST_Simplify.html[ST_Simplify] | st_simplify | simplify  |  |
+|  | https://postgis.net/docs/ST_ShortestLine.html[ST_ShortestLine] | https://h2gis.readthedocs.io/en/latest/ST_ShortestLine.html[ST_ShortestLine] | shortestline  |  |
+|  | https://postgis.net/docs/ST_Simplify.html[ST_Simplify] | https://h2gis.readthedocs.io/en/latest/ST_Simplify.html[ST_Simplify] | simplify  |  |
 |  | https://postgis.net/docs/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | st_simplifypreservetopology | simplifypreservetopology  |  |
 |  |  |  https://h2gis.readthedocs.io/en/latest/ST_Snap.html[ST_Snap] | snap |  |
 |  |  |  | snapandsplit |  |
@@ -392,15 +392,14 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | splitright |  |
 |  |  |  | squaregrid |  |
 |  |  |  | st_cutter |  |
-|  |  | https://h2gis.readthedocs.io/en/latest/ST_Node.html[ST_Node] | st_node |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Node.html[ST_Node] | https://h2gis.readthedocs.io/en/latest/ST_Node.html[ST_Node] |  |
 |  | https://postgis.net/docs/ST_Point.html[ST_Point] | https://h2gis.readthedocs.io/en/latest/ST_Point.html[ST_Point] | st_point |  |
 |  | https://postgis.net/docs/ST_ShiftLongitude.html[ST_ShiftLongitude] |  | st_shift_longitude |  |
 |  |  |  | st_subdivide |  |
 |  | https://postgis.net/docs/ST_Translate.html[ST_Translate] | https://h2gis.readthedocs.io/en/latest/ST_Translate.html[ST_Translate] | st_translate |  |
 |  | https://postgis.net/docs/ST_WKBToSQL.html[ST_WKBToSQL] |  | st_wkbtosql |  |
 |  | https://postgis.net/docs/ST_WKTToSQL.html[ST_WKTToSQL] |  | st_wkttosql |  |
-|  | https://postgis.net/docs/ST_StartPoint.html[ST_StartPoint] | st_startpoint | startpoint |  |
-|  |  |  | startpoint |  |
+|  | https://postgis.net/docs/ST_StartPoint.html[ST_StartPoint] | https://h2gis.readthedocs.io/en/latest/ST_StartPoint.html[ST_StartPoint] | startpoint |  |
 |  |  |  | swapcoordinates |  |
 |  |  |  | swapcoords |  |
 |  |  |  | trajectoryinterpolatepoint |  |

@@ -224,7 +224,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | asfgf |  |
 |  |  |  | asgpb |  |
 |  | https://postgis.net/docs/ST_AsSVG.html[ST_AsSVG] |  | assvg |  |
-| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | st_astext | st_astext | astext |  |
+| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | https://postgis.net/docs/ST_AsText.html[ST_AsText] | https://h2gis.readthedocs.io/en/latest/ST_AsText.html[ST_AsText] | astext |  |
 |  |  |  | astwkb |  |
 |  |  |  | asx3d |  |
 |  | https://postgis.net/docs/ST_Azimuth.html[ST_Azimuth] | https://h2gis.readthedocs.io/en/latest/ST_Azimuth.html[ST_Azimuth] | azimuth  |  |
@@ -232,7 +232,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | bdmpolyfromwkb  |  |
 |  | st_bdpolyfromtext |  | bdpolyfromtext  |  |
 |  |  |  | bdpolyfromwkb  |  |
-|  | st_buildarea |  | buildarea  |  |
+|  | https://postgis.net/docs/ST_BuildArea.html[ST_BuildArea] |  | buildarea  |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_ToMultiLine.html[ST_ToMultiLine] | casttomultilinestring  |  |
 |  | https://postgis.net/docs/ST_ClosestPoint.html[ST_ClosestPoint] | https://h2gis.readthedocs.io/en/latest/ST_ClosestPoint.html[ST_ClosestPoint] | closestpoint  |  |
 |  | https://postgis.net/docs/ST_Collect.html[ST_Collect] | https://h2gis.readthedocs.io/en/latest/ST_Collect.html[ST_Collect] | collect  |  |
@@ -383,7 +383,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | shiftcoords  |  |
 |  | https://postgis.net/docs/ST_ShortestLine.html[ST_ShortestLine] | https://h2gis.readthedocs.io/en/latest/ST_ShortestLine.html[ST_ShortestLine] | shortestline  |  |
 |  | https://postgis.net/docs/ST_Simplify.html[ST_Simplify] | https://h2gis.readthedocs.io/en/latest/ST_Simplify.html[ST_Simplify] | simplify  |  |
-|  | https://postgis.net/docs/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | st_simplifypreservetopology | simplifypreservetopology  |  |
+|  | https://postgis.net/docs/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | https://h2gis.readthedocs.io/en/latest/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | simplifypreservetopology  |  |
 |  |  |  https://h2gis.readthedocs.io/en/latest/ST_Snap.html[ST_Snap] | snap |  |
 |  |  |  | snapandsplit |  |
 |  | https://postgis.net/docs/ST_SnapToGrid.html[ST_SnapToGrid] |  | snaptogrid |  |

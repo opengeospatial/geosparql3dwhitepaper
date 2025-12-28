@@ -233,7 +233,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  | st_bdpolyfromtext |  | bdpolyfromtext  |  |
 |  |  |  | bdpolyfromwkb  |  |
 |  | st_buildarea |  | buildarea  |  |
-|  |  | st_tomultiline | casttomultilinestring  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ToMultiLine.html[ST_ToMultiLine] | casttomultilinestring  |  |
 |  | https://postgis.net/docs/ST_ClosestPoint.html[ST_ClosestPoint] | https://h2gis.readthedocs.io/en/latest/ST_ClosestPoint.html[ST_ClosestPoint] | closestpoint  |  |
 |  | https://postgis.net/docs/ST_Collect.html[ST_Collect] | https://h2gis.readthedocs.io/en/latest/ST_Collect.html[ST_Collect] | collect  |  |
 |  | https://postgis.net/docs/ST_CollectionExtract.html[ST_CollectionExtract] | https://h2gis.readthedocs.io/en/latest/ST_CollectionExtract.html[ST_CollectionExtract] | collectionextract  |  |
@@ -296,11 +296,11 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | hexagonalgrid  |  |
 |  |  |  | hilbertcode  |  |
 |  |  |  | insertepsgsrid  |  |
-|  | https://postgis.net/docs/ST_InteriorRingN.html[ST_InteriorRingN] | st_interiorringn | interiorringn  |  |
+|  | https://postgis.net/docs/ST_InteriorRingN.html[ST_InteriorRingN] | https://h2gis.readthedocs.io/en/latest/ST_InteriorRingN.html[ST_InteriorRingN] | interiorringn  |  |
 |  |  |  | interpolatepoint  |  |
 |  |  |  | invalidatelayerstatistics  |  |
-| http://www.opengis.net/def/function/geosparql/is3D[geof:is3D] |  | st_is3d | is3d  |  |
-|  | https://postgis.net/docs/ST_IsClosed.html[ST_IsClosed] | st_isclosed | isclosed  |  |
+| http://www.opengis.net/def/function/geosparql/is3D[geof:is3D] |  | https://h2gis.readthedocs.io/en/latest/ST_Is3D.html[ST_Is3D] | is3d  |  |
+|  | https://postgis.net/docs/ST_IsClosed.html[ST_IsClosed] | https://h2gis.readthedocs.io/en/latest/ST_IsClosed.html[ST_IsClosed] | isclosed  |  |
 |  |  |  | ismeasured  |  |
 |  |  |  | ispolygonccw  |  |
 |  |  |  | ispolygoncw |  |
@@ -313,9 +313,9 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  | https://postgis.net/docs/ST_LineLocatePoint.html[ST_LineLocatePoint] |  | line_locate_point  |  |
 |  | https://postgis.net/docs/ST_LineSubstring.html[ST_LineSubstring] |  | line_substring  |  |
 |  |  |  | linefromencodedpolyline  |  |
-|  | https://postgis.net/docs/ST_LineFromText.html[ST_LineFromText] | st_linefromtext | "linefromtext linestringfromtext"  |  |
+|  | https://postgis.net/docs/ST_LineFromText.html[ST_LineFromText] | https://h2gis.readthedocs.io/en/latest/ST_LineFromText.html[ST_LineFromText] | "linefromtext linestringfromtext"  |  |
 |  |  |  | "linefromwkb linestringfromwkb"  |  |
-|  | https://postgis.net/docs/ST_LineMerge.html[ST_LineMerge] | st_linemerge | linemerge  |  |
+|  | https://postgis.net/docs/ST_LineMerge.html[ST_LineMerge] | https://h2gis.readthedocs.io/en/latest/ST_LineMerge.html[ST_LineMerge] | linemerge  |  |
 |  |  |  | linescutatnodes  |  |
 |  |  |  | linesfromrings  |  |
 |  |  |  | linestringavgsegmentlength  |  |

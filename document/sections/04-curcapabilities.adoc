@@ -269,12 +269,6 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_ForcePolygonCCW.html[ST_ForcePolygonCCW] | forcepolygonccw  |  |
 |  |  | https://h2gis.readthedocs.io/en/latest/ST_ForcePolygonCW.html[ST_ForcePolygonCW] | forcepolygoncw  |  |
 |  |  |  | frechetdistance |  |
-|  |  |  | geodesic length  |  |
-|  |  |  | geodesicarcarea  |  |
-|  |  |  | geodesicarcheight  |  |
-|  |  |  | geodesicarclength  |  |
-|  |  |  | geodesiccentralangle  |  |
-|  |  |  | geodesicchordlength  |  | 
 |  | https://postgis.net/docs/ST_GeoHash.html[ST_GeoHash] |  | geohash |  |
 |  | geometrytype |  | geometrytype  |  |
 |  | https://postgis.net/docs/ST_GeomFromEWKB.html[ST_GeomFromEWKB] |  | geomfromewkb  |  |
@@ -282,7 +276,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  |  |  | geomfromexifgpsblob |  |
 |  |  |  | geomfromfgf  |  |
 |  |  |  | geomfromgeojson |  |
-|  | st_geomfromgml | https://h2gis.readthedocs.io/en/latest/ST_GeomFromGML.html[ST_GeomFromGML] | geomfromgml  |  |
+|  | https://postgis.net/docs/ST_GeomFromGML.html[ST_GeomFromGML] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromGML.html[ST_GeomFromGML] | geomfromgml  |  |
 |  |  |  | geomfromgpb  |  |
 |  | https://postgis.net/docs/ST_GeomFromKML.html[ST_GeomFromKML] |  | geomfromkml  |  |
 |  | https://postgis.net/docs/ST_GeomFromText.html[ST_GeomFromText] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromText.html[ST_GeomFromText] | geomfromtext  |  |
@@ -308,7 +302,7 @@ GeoSPARQL 1.1 is currently implemented in the following implementations:
 |  | https://postgis.net/docs/ST_IsValid.html[ST_IsValid] | https://h2gis.readthedocs.io/en/latest/ST_IsValid.html[ST_IsValid] | isvalid  |  |
 |  | https://postgis.net/docs/ST_IsValidDetail.html[ST_IsValidDetail]  | https://h2gis.readthedocs.io/en/latest/ST_IsValidDetail.html[ST_IsValidDetail] | isvaliddetail  |  |
 |  | https://postgis.net/docs/ST_IsValidReason.html[ST_IsValidReason] | https://h2gis.readthedocs.io/en/latest/ST_IsValidReason.html[ST_IsValidReason] | isvalidreason  |  |
-|  |  |  | isvalidtrajectory  |  |
+|  | https://postgis.net/docs/ST_IsValidTrajectory.html[ST_IsValidTrajectory] |  | isvalidtrajectory  |  |
 |  | https://postgis.net/docs/ST_LineInterpolatePoint.html[ST_LineInterpolatePoint] |  | line_interpolate_point  |  |
 |  | https://postgis.net/docs/ST_LineLocatePoint.html[ST_LineLocatePoint] |  | line_locate_point  |  |
 |  | https://postgis.net/docs/ST_LineSubstring.html[ST_LineSubstring] |  | line_substring  |  |

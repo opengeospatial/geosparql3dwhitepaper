@@ -1,4 +1,4 @@
-= GeoSPARQL 3d White Paper
+= GeoSPARQL 3D White Paper
 :doctype: white-paper
 :language: en
 :status: draft
@@ -14,12 +14,12 @@
 :issued-date: 2029-03-30
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2029-03-30
-:fullname: Editor One
+:fullname: Rolf Jonker
 :fullname_2: Editor Two
 :role: editor
 :imagesdir: figures
-:keywords: OGC, GeoSPARQL, 3D
-:submitting-organizations: Organization one; Organization two; Organization three
+:keywords: GeoSPARQL, 3D, Geospatial 3D Relations, Ontology, Vocabulary
+:submitting-organizations: Mainz University Of Applied Sciences; Kurrawong AI; Geonovum
 :mn-document-class: ogc
 :mn-output-extensions: html,pdf
 :pdf-uri: ./document.pdf
@@ -33,8 +33,6 @@
 :sectnums!:
 
 include::sections/01-front_material.adoc[]
-
-include::sections/02-preamble.adoc[]
 
 :sectnums:
 

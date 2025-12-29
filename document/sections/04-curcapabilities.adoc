@@ -9,6 +9,7 @@ According to the standard document, "The OGC GeoSPARQL standard supports represe
 ==== Requirements addressed
 
 In order to define which capabilities GeoSPARQL needs to adopt for full 3D compatibility, we first take a look at GeoSPARQL 1.1 current capabilities with regards to 3D.
+We derived possible needs for 3D compatibilities in the following sections.
 
 ===== Dimensionality
 
@@ -43,7 +44,7 @@ Each of these modules will be briefly explained below.
 ===== Core Module
 GeoSPARQL version 1.1 includes a CORE module. This defines the basic classes, relationships, and literals. These classes are suitable for both 2D and 3D.
 
-====== Topology Vocabulary Extension
+===== Topology Vocabulary Extension
 This extension provides standard definitions for spatial relationships that can exist between one spatial object and another. 
 
 Relations between geometries have been defined using three different sets of rules:
@@ -52,27 +53,39 @@ Relations between geometries have been defined using three different sets of rul
 - Egenhofer Relations
 - Region Connection Calculus RCC8
 
-These topological definitions specify topological relations in a 2D-context.
+These topological definitions specify topological relations in a 2D-context but have no capabilities for 3D representation.
 
-====== Geometry Extension
-GeoSPARQL 1.1 geometry module defines a class `Geometry` as a subclass of `SpatialObject`.
+===== Geometry Extension
 
-An instance of `Geometry` is not restricted to two dimensions.  
+The Geometry extension of GeoSPARQL 1.1 defines a vocabulary for the representation of Geometries and their most common properties. 
+We examine the resuability of the class hierarchy and their properties for the use case of 3D geometries.
+
+====== Geometry Extension Typology
+
+In particular, it defines a class `Geometry` as a subclass of `SpatialObject`.
+
+An instance of `Geometry` is in general not restricted to two dimensions.  
 
 A fine-grained classification of `Geometry` can use the https://opengeospatial.github.io/ogc-geosparql/geosparql11/sf_geometries.ttl[Simple Feature Vocabulary] which extends the class `Geometry` with further types, such as _Point_, _Polygon_ etc.
 
-The Simple Features vocabulary allows for the definition of 3D variants of:
+The Simple Features vocabulary also  does not restrict the definition of 3D variants of e.g.:
 
 - (Multi)Points
 - (Multi)LineStrings
 - (Multi)Polygons
-- Polyhedralsurface
+- Polyhedralsurfaces
 
-It does not include commons 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations. Nor does it include extruded geometry.  
+In this sense, the GeoSPARQL geometry class hierarchy is already prepared for the inclusion of 3D geometries, even though some 3D geometry types have not been defined in teh Geometry class hierarchy provided by GeoSPARQL 1.1.
+
+Examples of missing geometry types include common 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations, nor does it include extruded geometry types.
 
 [#img_3dinifc,reftext='{figure-caption} {counter:figure-num}']
 .Possible approaches for representing 3D objects in IFC
 image::../figures/3DinIFC_FIG01.png[align="center"]
+
+In addition, while boundary representations are supported in principle, their relation to aggregations of boundary surfaces is unsufficiently supported. Boundary surface aggregations may only be treated as GeometryCollections.
+
+====== Geometry Metadata
 
 Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts.
 In particular, the properties are:
@@ -80,11 +93,13 @@ In particular, the properties are:
 - `geo:hasVolume`
 - `geo:hasMetricVolume`
 
-Further 3D-related metadata properties such as projection matrices are not part of the current GeoSPARQL 1.1 standard.
+While these properties may describe features of a 3D solid, specific parameters of 3D models such as projection matrices, the material of a 3D model and its reflectivity which are commonplace in 3D rendering applications cannot be represented in GeoSPARQL 1.1.
 
-A first requirement for 3D support is the ability to save 3D data in a knowledge graph.
+====== Serializations
 
-The Geometry extension enables geometries to be defined within the GeoSPARQL framework. Supported geometry formats include RDF literals in WKT, GML, GeoJSON, and KML.
+A further requirement for 3D support is the ability to save 3D data in a knowledge graph.
+
+The Geometry extension enables geometries to be defined within the GeoSPARQL framework. Supported geometry formats include RDF literals in WKT, GML, GeoJSON, KML and DGGS.
 
 These literals are investigated for the storage of 3D data.
 
@@ -103,11 +118,16 @@ image::../figures/Dimensions_FIG02.png[align="center"]
 |DGGS Literal  |  |  | 
 |=== 
 
+The comparison of capabilities shows limited support for 3D of some of GeoSPARQL 1.1 literal formats.
+While these existing capabilities are an important information, one might also take into account the option to not save the 3D model in the knowledge graph directly for performance reasons.
+GeoSPARQL 1.1 currently does not allow geometries to be defined as a external resource, so the need may arise to find a solution in GeoSPARQL 3D.
+
+====== Coordinate reference systems
 
 GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support.
 There are currently almost 300 coordinate reference systems in the database https://epsg.io/?q=%20kind%3AGEOG3DCRS[epsg.io] which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
 
-GeoSPARQL allready supports linking multiple geometries (e.g., 2D and 2.5D) to a single feature. We aim to extend this with 3D geometries. 
+GeoSPARQL already supports linking multiple geometries (e.g., 2D and 2.5D) to a single feature. We aim to extend this with 3D geometries. 
 
 For example, a tree in the real world may be represented in databases with both a 2D and a 3D geometry.
 
@@ -128,980 +148,405 @@ However, there are functions which may take into account the Z coordinate, if th
 |=== 
 
 These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.
+Other query functions such as geof:intersection may exhibit an undefined und hence unwanted behavior when executed with 3D geometries, i.e. ignore the Z coordinate, reduce the 3D geometry to a (faulty) 2D geometry among others.
+The behavior currently depends on the specific implementation and has not been spelled out in the GeoSPARQL 1.1 specification.
 
 ==== Adoption of GeoSPARQL 1.1
+
+GeoSPARQL 1.1 is currently implemented in the following implementations:
+
+
 
 ===== GeoSPARQL Aligments
 
 .Alignment: GeoSPARQL and Open Source Relational Databases with Geospatial Support
 |===
-| GeoSPARQL | PostGIS | H2GIS | Spatialite
-| geof:area | st_area | st_area | area
-| geof:asGeoJSON | st_asgeojson |  | asgeojson
-| geof:asGML | st_asgml | st_asgml | asgml
-| geof:asKML | st_askml |  | askml
-| geof:asWKT |  | st_aswkt | aswkt
-| geof:asEWKB | st_asewkb |  | asewkb
-| geof:boundary | st_boundary | st_boundary | boundary
-| geof:boundingCircle |  | st_boundingcircle |
-| geof:buffer | st_buffer | st_buffer | buffer
-| geof:centroid | st_centroid | st_centroid | centroid
-| geof:concaveHull |  |  | concavehull
-| geof:sfContains | st_contains | st_contains | contains
-| geof:convexHull | st_convexhull | st_convexhull | convexhull
-| geof:ehCoveredBy | st_coveredby |  | coveredby
-| geof:ehCovers | st_covers | st_covers | covers
-| geof:sfCrosses | st_crosses | st_crosses | crosses
-| geof:difference | st_difference | st_difference | difference
-| geof:sfDisjoint | st_disjoint | st_disjoint | mbrdisjoint
-| geof:distance | st_distance | st_distance | distance
-| geof:envelope | st_envelope | st_envelope | envelope
-| geof:sfEquals | st_equals | st_equals | equals
-| geof:geometryN | st_geometryn | st_geometryn | geometryn
-| geof:getSRID | st_srid | st_srid | srid
-| geof:intersection | st_intersection | st_intersection | intersection
-| geof:sfIntersects | st_intersects | st_intersects | intersects
-| geof:isEmpty | st_isempty | st_isempty | isempty
-| geof:isSimple | st_issimple | st_issimple | issimple
-| geof:length | st_length | st_length | length
-| geof:numGeometries | st_numgeometries | st_numgeometries | numgeometries
-| geof:numPoints | st_numpoints | st_numpoints | numpoints
-| geof:sfOverlaps | st_overlaps | st_overlaps | overlaps
-| geof:perimeter | st_perimeter | st_perimeter | perimeter
-| geof:relate | st_relate | st_relate | relate
-| geof:symDifference | st_symdifference | st_symdifference | symdifference
-| geof:sfTouches | st_touches | st_touches | touches
-| geof:transform | st_transform | st_transform | transform
-| geof:union | st_union | st_union | gunion
-| geof:sfWithin | st_within | st_within | within
-| geof:endPoint | st_endpoint | st_endpoint | endpoint
-| geof:exteriorRing | st_exteriorring | st_exteriorring | exteriorring
-| geof:interiorRingN | st_interiorringn | st_interiorringn | interiorringn
-| geof:isRing | st_isring | st_isring | isring
-| geof:pointN | st_pointn | st_pointn | pointn
-| geof:startPoint | st_startpoint | st_startpoint | startpoint
-| geof:x | st_x | st_x | x
-| geof:maxX | st_xmax | st_xmax |
-| geof:minX | st_xmin | st_xmin |
-| geof:y | st_y | st_y | y
-| geof:maxY | st_ymax | st_ymax |
-| geof:minY | st_ymin | st_ymin |
-| geof:z | st_z | st_z | z
-| geof:maxZ | st_zmax | st_zmax | maxz
-| geof:minZ | st_zmin | st_zmin | minz
-| geof:m | st_m |  |
-| geof:asDGGS |  |  |
-| geof:ehContains |  |  |
-| geof:ehDisjoint |  |  |
-| geof:ehEquals |  |  |
-| geof:ehInside |  |  |
-| geof:ehMeet |  |  |
-| geof:ehOverlap |  |  |
-| geof:metricArea |  |  |
-| geof:metricBuffer |  |  |
-| geof:metricLength |  |  |
-| geof:metricPerimeter |  |  |
-| geof:rcc8dc |  |  |
-| geof:rcc8ec |  |  |
-| geof:rcc8eq |  |  |
-| geof:rcc8ntpp |  |  |
-| geof:rcc8ntppi |  |  |
-| geof:rcc8po |  |  |
-| geof:rcc8tpp |  |  |
-| geof:rcc8tppi |  |  |
-| geof:easting |  |  |
-| geof:northing |  |  |
-| geof:metricDistance |  |  |
-| geof:transformCRS84 |  |  |
-| geof:asGeocode |  |  |
-| geof:numInteriorRing |  |  |
-| geof:numPatches |  |  |
-| geof:patchN |  |  |
-| geof:isClosed |  |  |
-|  |  |  | 3ddistance
-|  | st_length3d | st_3dlength | 3dlength
-|  |  |  | 3dmaxdistance
-|  |  |  | abs
-|  |  |  | acos
-|  |  |  | addedgemodface
-|  |  |  | addedgenewfaces
-|  |  |  | addfdogeometrycolumn
-|  |  |  | addgeometrycolumn
-|  |  |  | addisoedge
-|  |  |  | addisonetnode
-|  |  |  | addisonode
-|  |  |  | addlink
-|  | st_addmeasure |  | addmeasure
-|  | st_addpoint | st_addpoint | addpoint
-|  |  |  | addtemporarygeometrycolumn
-|  | st_asbinary | st_asbinary | asbinary
-|  |  |  | asencodedpolyline
-|  | st_asewkt |  | asewkt
-|  |  |  | asfgf
-|  |  |  | asgpb
-|  |  |  | asin
-|  | st_assvg |  | assvg
-|  | st_astext | st_astext | astext
-|  |  |  | astwkb
-|  |  |  | asx3d
-|  |  |  | atan
-|  |  |  | atan2
-|  |  |  | atm_astext
-|  |  |  | atm_create
-|  |  |  | atm_createrotate
-|  |  |  | atm_createscale
-|  |  |  | atm_createtranslate
-|  |  |  | atm_createxroll
-|  |  |  | atm_determinant
-|  |  |  | atm_invert
-|  |  |  | atm_isinvertible
-|  |  |  | atm_isvalid
-|  |  |  | atm_multiply
-|  |  |  | atm_rotate
-|  |  |  | atm_scale
-|  |  |  | atm_transform
-|  |  |  | atm_translate
-|  |  |  | atm_xroll
-|  |  |  | atm_yroll
-|  |  |  | autofdostart
-|  |  |  | autofdostop
-|  |  |  | autogpkgstart
-|  |  |  | autogpkgstop
-|  | st_azimuth | st_azimuth | azimuth
-|  | st_bdmpolyfromtext |  | bdmpolyfromtext
-|  |  |  | bdmpolyfromwkb
-|  | st_bdpolyfromtext |  | bdpolyfromtext
-|  |  |  | bdpolyfromwkb
-|  |  |  | blobfromfile
-|  |  |  | blobtofile
-|  |  |  | bufferoptions_getendcapstyle
-|  |  |  | bufferoptions_getjoinstyle
-|  |  |  | bufferoptions_getmitrelimit
-|  |  |  | bufferoptions_getquadrantsegments
-|  |  |  | bufferoptions_reset
-|  |  |  | bufferoptions_setendcapstyle
-|  |  |  | bufferoptions_setjoinstyle
-|  |  |  | bufferoptions_setmitrelimit
-|  |  |  | bufferoptions_setquadrantsegments
-|  | st_buildarea |  | buildarea
-|  |  |  | buildcirclembr
-|  |  |  | buildmbr
-|  |  |  | buildmbrfilter
-|  |  |  | castautomagic
-|  |  |  | casttoblob
-|  |  |  | casttodouble
-|  |  |  | casttogeometycollection
-|  |  |  | casttointeger
-|  |  |  | casttolinestring
-|  |  |  | casttomulti
-|  |  | st_tomultiline | casttomultilinestring
-|  |  |  | casttomultipoint
-|  |  |  | casttomultipolygon
-|  |  |  | casttopoint
-|  |  |  | casttopolygon
-|  |  |  | casttosingle
-|  |  |  | casttotext
-|  |  |  | casttoxy
-|  |  |  | casttoxym
-|  |  |  | casttoxyz
-|  |  |  | casttoxyzm
-|  |  |  | ceil
-|  |  |  | ceiling
-|  |  |  | centimeter
-|  |  |  | changeedgegeom
-|  |  |  | changelinkgeom
-|  |  |  | check_strict_sql_quoting
-|  |  |  | checkduplicaterows
-|  |  |  | checkgeopackagemetadata
-|  |  |  | checkshadowedrowid
-|  |  |  | checkspatialindex
-|  |  |  | checkspatialmetadata
-|  |  |  | checkwithoutrowid
-|  |  |  | circularity
-|  |  |  | clonetable
-|  | st_closestpoint | st_closestpoint | closestpoint
-|  | st_collect | st_collect | collect
-|  | st_collectionextract | st_collectionextract | collectionextract
-|  |  |  | compressgeometry
-|  |  | st_constraineddelaunay | constraineddelaunaytriangulation
-|  |  |  | coorddimension
-|  |  |  | cos
-|  |  |  | cot
-|  |  |  | countunsafetriggers
-|  |  |  | createclonedtable
-|  |  |  | createisometadatatables
-|  |  |  | creatembrcache
-|  |  |  | createmetacatalogtables
-|  |  |  | createmissingrasterlite2columns
-|  |  |  | createmissingsystemtables
-|  |  |  | createnetwork
-|  |  |  | createrastercoveragestable
-|  |  |  | createrouting
-|  |  |  | createrouting_getlasterror
-|  |  |  | createroutingnodes
-|  |  |  | createspatialindex
-|  |  |  | createstylingtables
-|  |  |  | createtemporaryspatialindex
-|  |  |  | createtopogeo
-|  |  |  | createtopology
-|  |  |  | createtopotables
-|  |  |  | createuuid
-|  |  |  | createvectorcoveragestables
-|  |  |  | curvosityindex
-|  |  |  | dd to dms
-|  |  |  | decimeter
-|  |  |  | decodeurl
-|  |  |  | degrees
-|  |  |  | delaunaytriangulation
-|  | st_dimension | st_dimension | dimension
-|  |  |  | dirnamefrompath
-|  |  |  | disablegpkgamphibiousmode
-|  |  |  | disablegpkgmode
-|  |  |  | disablepause
-|  |  |  | disablespatialindex
-|  |  |  | disabletinypoint
-|  |  |  | discardfdogeometrycolumn
-|  |  |  | discardgeometrycolumn
-|  |  |  | dissolvepoints
-|  |  |  | dissolvesegments
-|  |  |  | distancewithin
-|  |  |  | dms to dd
-|  |  |  | downhillheight
-|  |  |  | drapeline
-|  |  |  | drapelineexceptions
-|  |  |  | dropnetwork
-|  |  |  | droptable
-|  |  |  | droptopology
-|  |  |  | dropvirtualgeometry
-|  |  |  | elementarygeometries
-|  |  |  | enablegpkgamphibiousmode
-|  |  |  | enablegpkgmode
-|  |  |  | enablepause
-|  |  |  | enabletinypoint
-|  |  |  | encodeurl
-|  |  |  | ensureclosedrings
-|  |  | st_envelopesintersect | envelopesintersects
-|  |  |  | eval
-|  |  |  | exp
-|  | st_expand | st_expand | expand
-|  |  |  | exportdbf
-|  |  |  | exportdxf
-|  |  |  | exportgeojson2
-|  |  |  | exportkml
-|  |  |  | exportshp
-|  | st_extent | st_extent | extent
-|  |  |  | extractmultilinestring
-|  |  |  | extractmultipoint
-|  |  |  | extractmultipoint
-|  |  |  | extractmultipolygon
-|  |  |  | fileextfrompath
-|  |  |  | filenamefrompath
-|  |  |  | filtermbrcontains
-|  |  |  | filtermbrintersects
-|  |  |  | filtermbrwithin
-|  |  |  | floor
-|  |  |  | forceasnull
-|  | st_forcerhr |  | forcelhr
-|  |  |  | forcepolygonccw
-|  |  |  | forcepolygoncw
-|  |  |  | frechetdistance
-|  |  |  | freexl_version
-|  |  |  | fullfilenamefrompath
-|  |  |  | garsmbr
-|  |  |  | gcp_astext
-|  |  |  | gcp_compute
-|  |  |  | gcp_isvalid
-|  |  |  | gcp_transform
-|  |  |  | gcp2atm
-|  |  |  | geodesic length
-|  |  |  | geodesicarcarea
-|  |  |  | geodesicarcheight
-|  |  |  | geodesicarclength
-|  |  |  | geodesiccentralangle
-|  |  |  | geodesicchordlength
-|  | st_geohash |  | geohash
-|  |  |  | geomcollfromtext
-|  |  |  | geomcollfromwkb
-|  |  |  | geometrycollectionfromtext
-|  |  |  | geometrycollectionfromwkb
-|  |  |  | geometrypointencode
-|  | geometrytype |  | geometrytype
-|  | st_geomfromewkb |  | geomfromewkb
-|  | st_geomfromewkt |  | geomfromewkt
-|  |  |  | geomfromexifgpsblob
-|  |  |  | geomfromfgf
-|  |  |  | geomfromgeojson
-|  | st_geomfromgml | st_geomfromgml | geomfromgml
-|  |  |  | geomfromgpb
-|  | st_geomfromkml |  | geomfromkml
-|  | st_geomfromtext | st_geomfromtext | geomfromtext
-|  | st_geomfromwkb | st_geomfromwkb | geomfromwkb
-|  |  |  | geos_version
-|  |  |  | geosconcavehull
-|  |  |  | geosdensify
-|  |  |  | geoslargestemptycircle
-|  |  |  | geosmakevalid
-|  |  |  | geosmaximuminscribedcircle
-|  |  |  | geosminimumboundingcenter
-|  |  |  | geosminimumboundingcircle
-|  |  |  | geosminimumboundingradius
-|  |  |  | geosminimumclearance
-|  |  |  | geosminimumclearanceline
-|  |  |  | geosminimumrotatedrectangle
-|  |  |  | geosminimumwidth
-|  |  |  | getcuttermessage
-|  |  |  | getdbobjectscope
-|  |  |  | getdecimalprecision
-|  |  |  | getfacebypoint
-|  |  |  | getfaceedges
-|  |  |  | getfacegeometry
-|  |  |  | getgpkgamphibiousmode
-|  |  |  | getgpkgmode
-|  |  |  | getisometadataid
-|  |  |  | getlastnetworkexception
-|  |  |  | getlasttopologyexception
-|  |  |  | getlayerextent
-|  |  |  | getlinkbypoint
-|  |  |  | getmimetype
-|  |  |  | getnetnodebypoint
-|  |  |  | getnodebypoint
-|  |  |  | getpointindex
-|  |  |  | getvirtualtableextent
-|  |  |  | gpkg_isassignable
-|  |  |  | gpkgaddgeometrycolumn
-|  |  |  | gpkgaddgeometrytriggers
-|  |  |  | gpkgaddspatialindex
-|  |  |  | gpkgaddtiletriggers
-|  |  |  | gpkgcreatebasetables
-|  |  |  | gpkgcreatetilestable
-|  |  |  | gpkgcreatetileszoomlevel
-|  |  |  | gpkggetimagetype
-|  |  |  | gpkggetnormalrow
-|  |  |  | gpkggetnormalzoom
-|  |  |  | gpkginsertepsgsrid
-|  |  |  | gpkgmakepoint
-|  |  |  | gpkgmakepointm
-|  |  |  | gpkgmakepointz
-|  |  |  | gpkgmakepointzm
-|  |  |  | great circle length
-|  |  |  | gunion
-|  |  |  | hasepsg
-|  |  |  | hasfreexl
-|  |  |  | hasgcp
-|  |  |  | hasgeocallbacks
-|  |  |  | hasgeopackage
-|  |  |  | hasgeos
-|  |  |  | hasgeos3100
-|  |  |  | hasgeos3110
-|  |  |  | hasgeosadvanced
-|  |  |  | hasgeosonlyreentrant
-|  |  |  | hasgeosreentrant
-|  |  |  | hasgeostrunk
-|  |  |  | hasiconv
-|  |  |  | hasknn
-|  |  |  | haslibxml2
-|  |  |  | hasmathsql
-|  |  |  | hasminizip
-|  |  |  | hasproj
-|  |  |  | hasproj6
-|  |  |  | hasrouting
-|  |  |  | hasrttopo
-|  |  |  | hastopology
-|  | st_hausdorffdistance |  | hausdorffdistance
-|  |  |  | hexagonalgrid
-|  |  |  | hilbertcode
-|  |  |  | importdbf
-|  |  |  | importdxf
-|  |  |  | importdxffromdir
-|  |  |  | importgeojson
-|  |  |  | importshp
-|  |  |  | importwfs
-|  |  |  | importxls
-|  |  |  | importzipdbf
-|  |  |  | importzipshp
-|  |  |  | indian chain
-|  |  |  | indian foot
-|  |  |  | indian yard
-|  |  |  | initfdospatialmetadata
-|  |  |  | initspatialmetadata
-|  |  |  | initspatialmetadatafull
-|  |  |  | inittopogeo
-|  |  |  | inittoponet
-|  |  |  | insertepsgsrid
-|  |  |  | international chain
-|  |  |  | international fathom
-|  |  |  | international foot
-|  |  |  | international inch
-|  |  |  | international link
-|  |  |  | international nautical mile
-|  |  |  | international statute mile
-|  |  |  | international yard
-|  |  |  | interpolatepoint
-|  |  |  | invalidatelayerstatistics
-|  |  | st_is3d | is3d
-|  | st_isclosed | st_isclosed | isclosed
-|  |  |  | iscompressedgeometryblob
-|  |  |  | isdecimalnumber
-|  |  |  | isexifblob
-|  |  |  | isexifgpsblob
-|  |  |  | isgeometryblob
-|  |  |  | isgifblob
-|  |  |  | isinteger
-|  |  |  | isjp2blob
-|  |  |  | isjpegblob
-|  |  |  | islowascii
-|  |  |  | ismeasured
-|  |  |  | isnumber
-|  |  |  | ispauseenabled
-|  |  |  | ispdfblob
-|  |  |  | ispngblob
-|  |  |  | ispolygonccw
-|  |  |  | ispolygoncw
-|  |  |  | istiffblob
-|  |  |  | istinypointblob
-|  |  |  | istinypointenabled
-|  | st_isvalid | st_isvalid | isvalid
-|  |  | st_isvaliddetail | isvaliddetail
-|  |  |  | isvalidgpb
-|  | st_isvalidreason | st_isvalidreason | isvalidreason
-|  |  |  | isvalidtrajectory
-|  |  |  | iswebpblob
-|  |  |  | iszipblob
-|  |  |  | kilometer
-|  |  |  | libxml2_version
-|  |  |  | line_interpolate_equidistant_points
-|  | st_line_interpolate_point |  | line_interpolate_point
-|  | st_line_locate_point |  | line_locate_point
-|  | st_line_substring |  | line_substring
-|  |  |  | linefromencodedpolyline
-|  | st_linefromtext | st_linefromtext | "linefromtext
-linestringfromtext"
-|  |  |  | "linefromwkb
-linestringfromwkb"
-|  | st_linemerge | st_linemerge | linemerge
-|  |  |  | linescutatnodes
-|  |  |  | linesfromrings
-|  |  |  | linestringavgsegmentlength
-|  |  |  | linestringfromtext
-|  |  |  | linestringfromwkb
-|  |  |  | linestringminsegmentlength
-|  |  |  | ln
-|  | st_locate_along_measure |  | locatealongmeasure
-|  | st_locate_between_measures |  | locatebetweenmeasures
-|  |  |  | log
-|  |  |  | log10
-|  |  |  | log2
-|  |  |  | loginetfromtgeo
-|  |  |  | m
-|  |  |  | makearc
-|  |  |  | makecircle
-|  |  |  | makecircularsector
-|  |  |  | makecircularstripe
-|  |  | st_makeellipse | makeellipse
-|  |  |  | makeellipticarc
-|  |  |  | makeellipticsector
-|  | st_makeline | st_makeline | makeline
-|  | st_makepoint | st_makepoint | makepoint
-|  | st_makepointm |  | makepointm
-|  |  |  | makepointz
-|  |  |  | makepointzm
-|  | st_makepolygon | st_makepolygon | makepolygon
-|  |  |  | makestringlist
-|  |  | st_makevalid | makevalid
-|  |  |  | makevaliddiscarded
-|  | st_maxdistance | st_maxdistance | maxdistance
-|  |  |  | maxm
-|  |  |  | mbrcontains
-|  |  |  | mbrdisjoint
-|  |  |  | mbrequal
-|  |  |  | mbrintersects
-|  |  |  | mbrmaxx
-|  |  |  | mbrmaxy
-|  |  |  | mbrminx
-|  |  |  | mbrminy
-|  |  |  | mbroverlaps
-|  |  |  | mbrtouches
-|  |  |  | mbrwithin
-|  |  |  | md5checksum
-|  |  |  | md5totalchecksum
-|  |  |  | millimeter
-|  |  |  | minm
-|  |  |  | mlinefromtext
-|  |  |  | mlinefromwkb
-|  |  |  | modedgeheal
-|  |  |  | modedgesplit
-|  |  |  | modgeolinksplit
-|  |  |  | modlinkheal
-|  |  |  | modloglinksplit
-|  |  |  | moveisonetnode
-|  |  |  | moveisonode
-|  |  |  | mpointfromtext
-|  | st_mpointfromtext | st_mpointfromtext | "mpointfromtext
-multipointfromtext"
-|  |  |  | "mpointfromwkb
-multipointfromwkb"
-|  |  |  | mpolyfromtext
-|  |  |  | mpolyfromwkb
-|  |  |  | multilinestringfromtext
-|  |  |  | multilinestringfromwkb
-|  |  |  | multipolygonfromtext
-|  |  |  | multipolygonfromwkb
-|  | st_ndims |  | ndims
-|  |  |  | newedgeheal
-|  |  |  | newedgessplit
-|  |  |  | newgeolinksplit
-|  |  |  | newlinkheal
-|  |  |  | newloglinksplit
-|  |  |  | normalizelonlat
-|  | st_npoints | st_npoints | npoints
-|  | st_nrings |  | nrings
-|  | st_numinteriorring | st_numinteriorring | numinteriorring
-|  | st_numinteriorrings | st_numinteriorrings | numinteriorrings
-|  |  |  | offestcurve
-|  |  |  | orientedenvelope
-|  |  |  | pause
-|  |  |  | pi
-|  | st_pointfromtext | st_pointfromtext | pointfromtext
-|  | st_pointfromwkb | st_pointfromwkb | pointfromwkb
-|  | st_pointonsurface | st_pointonsurface | pointonsurface
-|  |  |  | polyfromtext
-|  |  |  | polyfromwkb
-|  |  |  | polygonfromtext
-|  |  |  | polygonfromwkb
-|  | st_polygonize | st_polygonize | polygonize
-|  |  |  | postgresql_getlasterror
-|  |  |  | postgresql_resetlasterror
-|  |  |  | postgresql_setlasterror
-|  |  |  | pow
-|  |  |  | power
-|  |  |  | proj_asprojstring
-|  |  |  | proj_aswkt
-|  |  |  | proj_getdatabasepath
-|  |  |  | proj_guesssridfromshp
-|  |  |  | proj_guesssridfromwkt
-|  |  |  | proj_guesssridfromzipshp
-|  |  |  | proj_setdatabasepath
-|  |  |  | proj_version
-|  |  |  | project
-|  |  |  | ptdistwithin
-|  |  |  | radians
-|  |  |  | rebuildgeometrytriggers
-|  |  |  | recoverfdogeometrycolumn
-|  |  |  | recovergeometrycolumn
-|  |  |  | recoverspatialindex
-|  |  |  | recreateisometarefstriggers
-|  |  |  | recreaterastercoveragestriggers
-|  |  |  | recreatestylingtriggers
-|  |  |  | recreatetopotriggers
-|  |  |  | recreatevectorcoveragestriggers
-|  |  |  | reduceprecision
-|  |  |  | reflectcoordinates
-|  |  |  | reflectcoords
-|  |  |  | registerdatalicense
-|  |  |  | registerisometadata
-|  |  |  | registervirtualgeometry
-|  |  |  | relatematch
-|  |  |  | remedgemodface
-|  |  |  | remedgenewface
-|  |  |  | remisoedge
-|  |  |  | remisonetnode
-|  |  |  | remisonode
-|  |  |  | removeduplicaterows
-|  |  |  | removeextraspaces
-|  |  |  | removelink
-|  | st_removepoint |  | removepoint
-|  |  |  | renamecolumn
-|  |  |  | renamedatalicense
-|  |  |  | renametable
-|  | st_reverse | st_reverse | reverse
-|  |  |  | ringscutatnodes
-|  |  |  | rl2_mapconfigurationabstractn
-|  |  |  | rl2_mapconfigurationnamen
-|  |  |  | rl2_mapconfigurationtitlen
-|  |  |  | rl2_nummapconfigurations
-|  |  |  | rl2_registermapconfiguration
-|  |  |  | rl2_reloadmapconfiguration
-|  |  |  | rl2_unregistermapconfiguration
-|  |  |  | rotatecoordinates
-|  |  |  | rotatecoords
-|  |  |  | rttopo_version
-|  |  |  | sanitizegeometry
-|  |  |  | scalecoordinates
-|  |  |  | scalecoords
-|  |  |  | se_autoregisterstandardbrushes
-|  |  |  | se_registerexternalgraphic
-|  |  |  | se_registerrastercoveragekeyword
-|  |  |  | se_registerrastercoveragesrid
-|  |  |  | se_registerrasterstyle
-|  |  |  | se_registerrasterstyledlayer
-|  |  |  | se_registerspatialviewcoverage
-|  |  |  | se_registertopogeocoverage
-|  |  |  | se_registertoponetcoverage
-|  |  |  | se_registervectorcoverage
-|  |  |  | se_registervectorcoveragekeyword
-|  |  |  | se_registervectorcoveragesrid
-|  |  |  | se_registervectorstyle
-|  |  |  | se_registervectorstyledlayer
-|  |  |  | se_registervirtualtablecoverage
-|  |  |  | se_reloadvectorstyle
-|  |  |  | se_setvectorcoveragecopyright
-|  |  |  | se_setvectorcoverageinfos
-|  |  |  | se_setvectorcoveragevisibilityrange
-|  |  |  | se_unregisterexternalgraphic
-|  |  |  | se_unregisterrastercoveragekeyword
-|  |  |  | se_unregisterrastercoveragesrid
-|  |  |  | se_unregisterrasterstyle
-|  |  |  | se_unregisterrasterstyledlayer
-|  |  |  | se_unregistervectorcoverage
-|  |  |  | se_unregistervectorcoveragekeyword
-|  |  |  | se_unregistervectorcoveragesrid
-|  |  |  | se_unregistervectorstyle
-|  |  |  | se_unregistervectorstyledlayer
-|  |  |  | se_updatevectorcoverageextent
-|  | st_segmentize |  | segmentize
-|  |  |  | selfintersections
-|  |  |  | sequence_currval
-|  |  |  | sequence_lastval
-|  |  |  | sequence_nextval
-|  |  |  | sequence_setval
-|  |  |  | setdatalicenseurl
-|  |  |  | setdecimalprecision
-|  |  |  | setendpoint
-|  |  |  | setmultiplepoints
-|  | st_setpoint |  | setpoint
-|  | st_setsrid | st_setsrid | setsrid
-|  |  |  | setstartpoint
-|  |  |  | sharedpaths
-|  |  |  | shiftcoordinates
-|  |  |  | shiftcoords
-|  | st_shortestline | st_shortestline | shortestline
-|  |  |  | sign
-|  | st_simplify | st_simplify | simplify
-|  | st_simplifypreservetopology | st_simplifypreservetopology | simplifypreservetopology
-|  |  |  | sin
-|  |  |  | singlesidedbuffer
-|  |  | st_snap | snap
-|  |  |  | snapandsplit
-|  | st_snaptogrid |  | snaptogrid
-|  |  |  | spatialite_target_cpu
-|  |  |  | spatialite_version
-|  |  |  | spatnetfromgeom
-|  |  |  | spatnetfromtgeo
-|  |  | st_split | split
-|  |  |  | splitleft
-|  |  |  | splitright
-|  |  |  | sqlproc_allvariables
-|  |  |  | sqlproc_cookedsql
-|  |  |  | sqlproc_execute
-|  |  |  | sqlproc_executeloop
-|  |  |  | sqlproc_fromfile
-|  |  |  | sqlproc_fromtext
-|  |  |  | sqlproc_getlasterror
-|  |  |  | sqlproc_getlogfile
-|  |  |  | sqlproc_isvalid
-|  |  |  | sqlproc_numvariables
-|  |  |  | sqlproc_rawsql
-|  |  |  | sqlproc_return
-|  |  |  | sqlproc_setlogfile
-|  |  |  | sqlproc_variablen
-|  |  |  | sqlproc_varvalue
-|  |  |  | sqrt
-|  |  |  | squaregrid
-|  |  |  | sridfromauthcrs
-|  |  |  | st_cutter
-|  |  | st_node | st_node
-|  | st_point | st_point | st_point
-|  | st_shift_longitude |  | st_shift_longitude
-|  |  |  | st_subdivide
-|  | st_translate | st_translate | st_translate
-|  | st_wkbtosql |  | st_wkbtosql
-|  | st_wkttosql |  | st_wkttosql
-|  |  |  | stddev_pop
-|  |  |  | stddev_samp
-|  |  |  | storedproc_createtables
-|  |  |  | storedproc_delete
-|  |  |  | storedproc_execute
-|  |  |  | storedproc_executeloop
-|  |  |  | storedproc_get
-|  |  |  | storedproc_register
-|  |  |  | storedproc_updatesqlbody
-|  |  |  | storedproc_updatetitle
-|  |  |  | storedvar_delete
-|  |  |  | storedvar_get
-|  |  |  | storedvar_getvalue
-|  |  |  | storedvar_register
-|  |  |  | storedvar_updatetitle
-|  |  |  | storedvar_updatevalue
-|  |  |  | swapcoordinates
-|  |  |  | swapcoords
-|  |  |  | tan
-|  |  |  | tinypointencode
-|  |  |  | togars
-|  |  |  | topogeo_addlinestring
-|  |  |  | topogeo_addlinestringnoface
-|  |  |  | topogeo_addpoint
-|  |  |  | topogeo_clone
-|  |  |  | topogeo_createtopolayer
-|  |  |  | topogeo_disambiguatesegmentedges
-|  |  |  | topogeo_exporttopolayer
-|  |  |  | topogeo_fromgeotable
-|  |  |  | topogeo_fromgeotableext
-|  |  |  | topogeo_fromgeotablenoface
-|  |  |  | topogeo_fromgeotablenofaceext
-|  |  |  | topogeo_getedgeseed
-|  |  |  | topogeo_getfaceseed
-|  |  |  | topogeo_inittopolayer
-|  |  |  | topogeo_insertfeaturefromtopolayer
-|  |  |  | topogeo_lineedgeslist
-|  |  |  | topogeo_modedgeheal
-|  |  |  | topogeo_newedgeheal
-|  |  |  | topogeo_newedgessplit
-|  |  |  | topogeo_polyfaceslist
-|  |  |  | topogeo_polygonize
-|  |  |  | topogeo_removedanglingedges
-|  |  |  | topogeo_removedanglingnodes
-|  |  |  | topogeo_removesmallfaces
-|  |  |  | topogeo_removetopolayer
-|  |  |  | topogeo_snaplinetoseed
-|  |  |  | topogeo_snappedgeotable
-|  |  |  | topogeo_snappointtoseed
-|  |  |  | topogeo_subdividelines
-|  |  |  | topogeo_togeotable
-|  |  |  | topogeo_togeotablegeneralize
-|  |  |  | topogeo_toposnap
-|  |  |  | topogeo_updateseeds
-|  |  |  | toponet_clone
-|  |  |  | toponet_disambiguatesegmentlinks
-|  |  |  | toponet_fromgeotable
-|  |  |  | toponet_getlinkseed
-|  |  |  | toponet_linelinkslist
-|  |  |  | toponet_togeotable
-|  |  |  | toponet_togeotablegeneralize
-|  |  |  | toponet_updateseeds
-|  |  |  | trajectoryinterpolatepoint
-|  |  |  | transformxy
-|  |  |  | transformxyz
-|  |  |  | triangulargrid
-|  |  |  | u.s. chain
-|  |  |  | u.s. foot
-|  |  |  | u.s. inch
-|  |  |  | u.s. statute mile
-|  |  |  | u.s. yard
-|  |  |  | unaryunion
-|  |  |  | uncompressgeometry
-|  |  |  | unregisterdatalicense
-|  |  |  | updatelayerstatistics
-|  |  |  | updatemetacatalogstatistics
-|  |  |  | updownheight
-|  |  |  | upgradegeometrytriggers
-|  |  |  | uphillheight
-|  |  |  | validatetopogeo
-|  |  |  | validlogicalnet
-|  |  |  | validspatialnet
-|  |  |  | var_pop
-|  |  |  | var_samp
-|  |  |  | voronojdiagram
-|  |  |  | wms_createtables
-|  |  |  | wms_defaultrefsys
-|  |  |  | wms_defaultsetting
-|  |  |  | wms_getfeatureinforequesturl
-|  |  |  | wms_getmaprequesturl
-|  |  |  | wms_registergetcapabilities
-|  |  |  | wms_registergetmap
-|  |  |  | wms_registerrefsys
-|  |  |  | wms_registersetting
-|  |  |  | wms_registerstyle
-|  |  |  | wms_setgetcapabilitiesinfos
-|  |  |  | wms_setgetmapcopyright
-|  |  |  | wms_setgetmapinfos
-|  |  |  | wms_setgetmapoptions
-|  |  |  | wms_unregistergetcapabilities
-|  |  |  | wms_unregistergetmap
-|  |  |  | wms_unregisterrefsys
-|  |  |  | wms_unregistersetting
-|  |  |  | xb_addfileid
-|  |  |  | xb_addparentid
-|  |  |  | xb_cacheflush
-|  |  |  | xb_compress
-|  |  |  | xb_create
-|  |  |  | xb_getabstract
-|  |  |  | xb_getdocument
-|  |  |  | xb_getdocumentsize
-|  |  |  | xb_getencoding
-|  |  |  | xb_getfileid
-|  |  |  | xb_getgeometry
-|  |  |  | xb_getinternalschemauri
-|  |  |  | xb_getlastparseerror
-|  |  |  | xb_getlastvalidateerror
-|  |  |  | xb_getlastxpatherror
-|  |  |  | xb_getparentid
-|  |  |  | xb_getpayload
-|  |  |  | xb_getschemauri
-|  |  |  | xb_gettitle
-|  |  |  | xb_iscompressed
-|  |  |  | xb_isgpx
-|  |  |  | xb_isisometadata
-|  |  |  | xb_ismapconfig
-|  |  |  | xb_isschemavalidated
-|  |  |  | xb_issldsevectorstyle
-|  |  |  | xb_issldstyle
-|  |  |  | xb_issvg
-|  |  |  | xb_isvalid
-|  |  |  | xb_isvalidxpathexpression
-|  |  |  | xb_loadxml
-|  |  |  | xb_mlinefromgpx
-|  |  |  | xb_schemavalidate
-|  |  |  | xb_setfileid
-|  |  |  | xb_setparentid
-|  |  |  | xb_storexml
-|  |  |  | xb_uncompress
-|  |  |  | zipfile_dbfn
-|  |  |  | zipfile_numdbf
-|  |  |  | zipfile_numshp
-|  |  |  | zipfile_shpn
-|  |  | st_3darea |
-|  | st_perimeter3d | st_3dperimeter |
-|  |  | st_accum |
-|  |  | st_addz |
-|  |  | st_closestcoordinate |
-|  |  | st_compactnessratio |
-|  |  | st_coorddim |
-|  |  | st_delaunay |
-|  |  | st_densify |
-|  |  | st_drape |
-|  | st_dwithin | st_dwithin |
-|  |  | st_explode |
-|  |  | st_extrude |
-|  |  | st_flipcoordinates |
-|  |  | st_force2d |
-|  |  | st_force3d |
-|  |  | st_furthestcoordinate |
-|  |  | st_geometryshadow |
-|  | st_geometrytype | st_geometrytype |
-|  |  | st_geometrytypecode |
-|  |  | st_googlemaplink |
-|  |  | st_holes |
-|  |  | st_interpolate3dline |
-|  |  | st_isovist |
-|  |  | st_isrectangle |
-|  |  | st_linefromwkb |
-|  |  | st_lineintersector |
-|  |  | st_locatealong |
-|  |  | st_longestline |
-|  |  | st_makeenvelope |
-|  |  | st_makegrid |
-|  |  | st_makegridpoints |
-|  |  | st_minimumrectangle |
-|  | st_mlinefromtext | st_mlinefromtext |
-|  | st_mpolyfromtext | st_mpolyfromtext |
-|  |  | st_multiplyz |
-|  |  | st_normalize |
-|  |  | st_octogonalenvelope |
-|  |  | st_orderingequals |
-|  |  | st_osmmaplink |
-|  | st_polygonfromtext | st_polyfromtext |
-|  |  | st_polyfromwkb |
-|  |  | st_precisionreducer |
-|  |  | st_projectpoint |
-|  |  | st_removeduplicatedcoordinates |
-|  |  | st_removeholes |
-|  |  | st_removepoints |
-|  |  | st_removerepeatedpoints |
-|  |  | st_reverse3dline |
-|  |  | st_ringbuffer |
-|  |  | st_ringsidebuffer |
-|  | st_rotate | st_rotate |
-|  |  | st_scale |
-|  |  | st_sidebuffer |
-|  |  | st_split |
-|  |  | st_sunposition |
-|  |  | st_svf |
-|  |  | st_tessellate |
-|  |  | st_tomultipoint |
-|  |  | st_tomultisegments |
-|  |  | st_triangleaspect |
-|  |  | st_trianglecontouring |
-|  |  | st_triangledirection |
-|  |  | st_triangleslope |
-|  |  | st_updatez |
-|  |  | st_voronoi |
-|  |  | st_zupdatelineextremities |
-|  | @ |  |
-|  | && |  |
-|  | &< |  |
-|  | &<\| |  |
-|  | &> |  |
-|  | << |  |
-|  | <<\| |  |
-|  | = |  |
-|  | >> |  |
-|  | \|&> |  |
-|  | \|>> |  |
-|  | ~ |  |
-|  | ~= |  |
-|  | box3d |  |
-|  | find_srid |  |
-|  | st_accum |  |
-|  | st_affine |  |
-|  | st_ashexewkb |  |
-|  | st_containsproperly |  |
-|  | st_coorddim |  |
-|  | st_curvetoline |  |
-|  | st_dfullywithin |  |
-|  | st_distance_sphere |  |
-|  | st_distance_spheroid |  |
-|  | st_dump |  |
-|  | st_dumprings |  |
-|  | st_estimated_extent |  |
-|  | st_extent3d |  |
-|  | st_force_2d |  |
-|  | st_force_3d |  |
-|  | st_force_3dm |  |
-|  | st_force_3dz |  |
-|  | st_force_4d |  |
-|  | st_force_collection |  |
-|  | st_geogfromtext |  |
-|  | st_geogfromwkb |  |
-|  | st_geographyfromtext |  |
-|  | st_geometryfromtext |  |
-|  | st_gmltosql |  |
-|  | st_hasarc |  |
-|  | st_length_spheroid |  |
-|  | st_length2d |  |
-|  | st_length2d_spheroid |  |
-|  | st_length3d_spheroid |  |
-|  | st_linecrossingdirection |  |
-|  | st_linefrommultipoint |  |
-|  | st_linefromwkb |  |
-|  | st_linestringfromwkb |  |
-|  | st_linetocurve |  |
-|  | st_locatebetweenelevations |  |
-|  | st_longestline |  |
-|  | st_makebox2d |  |
-|  | st_makebox3d |  |
-|  | st_makeenvelope |  |
-|  | st_mem_size |  |
-|  | st_memunion |  |
-|  | st_minimumboundingcircle |  |
-|  | st_multi |  |
-|  | st_orderingequals |  |
-|  | st_perimeter2d |  |
-|  | st_point_inside_circle |  |
-|  | st_polygon |  |
-|  | st_rotatex |  |
-|  | st_rotatey |  |
-|  | st_rotatez |  |
-|  | st_scale |  |
-|  | st_summary |  |
-|  | st_transscale |  |
-|  | st_zmflag |  |
+| GeoSPARQL | PostGIS | H2GIS | Spatialite | Category | 3D-relevant
+| http://www.opengis.net/def/function/geosparql/area[geof:area] | https://postgis.net/docs/ST_Area.html[ST_Area] | https://h2gis.readthedocs.io/en/latest/ST_Area.html[ST_Area] | area |  |
+| http://www.opengis.net/def/function/geosparql/asGeoJSON[geof:asGeoJSON] | https://postgis.net/docs/ST_AsGeoJSON.html[ST_AsGeoJSON] |  | asgeojson | Geometry Conversion | Yes
+| http://www.opengis.net/def/function/geosparql/asGML[geof:asGML] | https://postgis.net/docs/ST_AsGML.html[ST_AsGML] | https://h2gis.readthedocs.io/en/latest/ST_AsGML.html[ST_AsGML] | asgml |  |
+| http://www.opengis.net/def/function/geosparql/asKML[geof:asKML] | https://postgis.net/docs/ST_AsKML.html[ST_AsKML] | https://h2gis.readthedocs.io/en/latest/ST_AsKML.html[ST_AsKML] | askml |  |
+| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | https://postgis.net/docs/ST_AsText.html[ST_AsText] | https://h2gis.readthedocs.io/en/latest/ST_AsWKT.html[ST_AsWKT] | aswkt |  |
+| http://www.opengis.net/def/function/geosparql/boundary[geof:boundary] | https://postgis.net/docs/ST_Boundary.html[ST_Boundary] | https://h2gis.readthedocs.io/en/latest/ST_Boundary.html[ST_Boundary] | boundary |  |
+| http://www.opengis.net/def/function/geosparql/boundingCircle[geof:boundingCircle] | https://postgis.net/docs/ST_MinimumBoundingCircle.html[ST_MinimumBoundingCircle] | https://h2gis.readthedocs.io/en/latest/ST_BoundingCircle.html[ST_BoundingCircle] | |  |
+| http://www.opengis.net/def/function/geosparql/buffer[geof:buffer] | https://postgis.net/docs/ST_Buffer.html[ST_Buffer] | https://h2gis.readthedocs.io/en/latest/ST_Buffer.html[ST_Buffer] | buffer |  |
+| http://www.opengis.net/def/function/geosparql/centroid[geof:centroid] | https://postgis.net/docs/ST_Centroid.html[ST_Centroid] | https://h2gis.readthedocs.io/en/latest/ST_Centroid.html[ST_Centroid] | centroid |  |
+| http://www.opengis.net/def/function/geosparql/concaveHull[geof:concaveHull] | https://postgis.net/docs/ST_ConcaveHull.html[ST_ConcaveHull] |  | concavehull |  |
+| http://www.opengis.net/def/function/geosparql/contains[geof:contains] | https://postgis.net/docs/ST_Contains.html[ST_Contains] | https://h2gis.readthedocs.io/en/latest/ST_Contains.html[ST_Contains] | contains |  |
+| http://www.opengis.net/def/function/geosparql/convexHull[geof:convexHull] | https://postgis.net/docs/ST_ConvexHull.html[ST_ConvexHull] | https://h2gis.readthedocs.io/en/latest/ST_ConvexHull.html[ST_ConvexHull] | convexhull |  |
+| http://www.opengis.net/def/function/geosparql/coveredBy[geof:coveredBy] | https://postgis.net/docs/ST_CoveredBy.html[ST_CoveredBy] |  | coveredby |  |
+| http://www.opengis.net/def/function/geosparql/covers[geof:covers] | https://postgis.net/docs/ST_Covers.html[ST_Covers] | https://h2gis.readthedocs.io/en/latest/ST_Covers.html[ST_Covers] | covers |  |
+| http://www.opengis.net/def/function/geosparql/crosses[geof:crosses] | https://postgis.net/docs/ST_Crosses.html[ST_Crosses] | https://h2gis.readthedocs.io/en/latest/ST_Crosses.html[ST_Crosses] | crosses |  |
+| http://www.opengis.net/def/function/geosparql/difference[geof:difference] | https://postgis.net/docs/ST_Difference.html[ST_Difference] | https://h2gis.readthedocs.io/en/latest/ST_Difference.html[ST_Difference] | difference |  |
+| http://www.opengis.net/def/function/geosparql/sfDisjoint[geof:sfDisjoint] | https://postgis.net/docs/ST_Disjoint.html[ST_Disjoint] | https://h2gis.readthedocs.io/en/latest/ST_Disjoint.html[ST_Disjoint] | mbrdisjoint |  |
+| http://www.opengis.net/def/function/geosparql/ehDisjoint[geof:ehDisjoint] | https://postgis.net/docs/ST_Disjoint.html[ST_Disjoint] | https://h2gis.readthedocs.io/en/latest/ST_Disjoint.html[ST_Disjoint] | mbrdisjoint |  |
+| http://www.opengis.net/def/function/geosparql/distance[geof:distance] | https://postgis.net/docs/ST_Distance.html[ST_Distance] | https://h2gis.readthedocs.io/en/latest/ST_Distance.html[ST_Distance] | distance |  |
+| http://www.opengis.net/def/function/geosparql/envelope[geof:envelope] | https://postgis.net/docs/ST_Envelope.html[ST_Envelope] | https://h2gis.readthedocs.io/en/latest/ST_Envelope.html[ST_Envelope] | envelope |  |
+| http://www.opengis.net/def/function/geosparql/sfEquals[geof:sfEquals] | https://postgis.net/docs/ST_Equals.html[ST_Equals] | https://h2gis.readthedocs.io/en/latest/ST_Equals.html[ST_Equals] | equals |  |
+| http://www.opengis.net/def/function/geosparql/ehEquals[geof:ehEquals] | https://postgis.net/docs/ST_Equals.html[ST_Equals] | https://h2gis.readthedocs.io/en/latest/ST_Equals.html[ST_Equals] | equals |  |
+| http://www.opengis.net/def/function/geosparql/geometryN[geof:geometryN] | https://postgis.net/docs/ST_GeometryN.html[ST_GeometryN] | https://h2gis.readthedocs.io/en/latest/ST_GeometryN.html[ST_GeometryN] | geometryn |  |
+| geof:getsrid | st_srid | st_srid | srid  |  |
+| http://www.opengis.net/def/function/geosparql/intersection[geof:intersection] | https://postgis.net/docs/ST_Intersection.html[ST_Intersection] | https://h2gis.readthedocs.io/en/latest/ST_Intersection.html[ST_Intersection] | intersection  |  |
+| http://www.opengis.net/def/function/geosparql/sfIntersects[geof:sfIntersects] | https://postgis.net/docs/ST_Intersects.html[ST_Intersects] | https://h2gis.readthedocs.io/en/latest/ST_Intersects.html[ST_Intersects] | intersects  |  |
+| http://www.opengis.net/def/function/geosparql/isEmpty[geof:isEmpty] | https://postgis.net/docs/ST_IsEmpty.html[ST_IsEmpty] | https://h2gis.readthedocs.io/en/latest/ST_IsEmpty.html[ST_IsEmpty] | isempty  |  |
+| http://www.opengis.net/def/function/geosparql/isSimple[geof:isSimple] | https://postgis.net/docs/ST_IsSimple.html[ST_IsSimple] | https://h2gis.readthedocs.io/en/latest/ST_IsSimple.html[ST_IsSimple] | issimple  |  |
+| http://www.opengis.net/def/function/geosparql/length[geof:length] | https://postgis.net/docs/ST_Length.html[ST_Length] | https://h2gis.readthedocs.io/en/latest/ST_Length.html[ST_Length] | length  |  |
+| http://www.opengis.net/def/function/geosparql/maxX[geof:maxX] | https://postgis.net/docs/ST_XMax.html[ST_XMax] | https://h2gis.readthedocs.io/en/latest/ST_XMax.html[ST_XMax] |  maxX  |  |
+| http://www.opengis.net/def/function/geosparql/maxY[geof:maxY] | https://postgis.net/docs/ST_YMax.html[ST_YMax] | https://h2gis.readthedocs.io/en/latest/ST_YMax.html[ST_YMax] | maxy  |  |
+| http://www.opengis.net/def/function/geosparql/maxZ[geof:maxZ] | https://postgis.net/docs/ST_ZMax.html[ST_ZMax] | https://h2gis.readthedocs.io/en/latest/ST_ZMax.html[ST_ZMax] | maxz  |  |
+| http://www.opengis.net/def/function/geosparql/minX[geof:minX] | https://postgis.net/docs/ST_XMin.html[ST_XMin] | https://h2gis.readthedocs.io/en/latest/ST_XMin.html[ST_XMin] | minx  |  |
+| http://www.opengis.net/def/function/geosparql/minY[geof:minY] | https://postgis.net/docs/ST_YMin.html[ST_YMin] | https://h2gis.readthedocs.io/en/latest/ST_YMin.html[ST_YMin] | miny  |  |
+| http://www.opengis.net/def/function/geosparql/minZ[geof:minZ] | https://postgis.net/docs/ST_ZMin.html[ST_ZMin] | https://h2gis.readthedocs.io/en/latest/ST_ZMin.html[ST_ZMin]  | minz  |  |
+| http://www.opengis.net/def/function/geosparql/numGeometries[geof:numGeometries] | https://postgis.net/docs/ST_NumGeometries.html[ST_NumGeometries] | https://h2gis.readthedocs.io/en/latest/ST_NumGeometries.html[ST_NumGeometries] | numgeometries |  |
+| http://www.opengis.net/def/function/geosparql/numPoints[geof:numPoints] | https://postgis.net/docs/ST_NumPoints.html[ST_NumPoints] | https://h2gis.readthedocs.io/en/latest/ST_NumPoints.html[ST_NumPoints] | numpoints |  |
+| http://www.opengis.net/def/function/geosparql/ehOverlap[geof:ehOverlap] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://h2gis.readthedocs.io/en/latest/ST_Overlaps.html[ST_Overlaps] | overlaps |  |
+| http://www.opengis.net/def/function/geosparql/sfOverlaps[geof:sfOverlaps] | https://postgis.net/docs/ST_Overlaps.html[ST_Overlaps] | https://h2gis.readthedocs.io/en/latest/ST_Overlaps.html[ST_Overlaps] | overlaps |  |
+| http://www.opengis.net/def/function/geosparql/perimeter[geof:perimeter] | https://postgis.net/docs/ST_Perimeter.html[ST_Perimeter] | https://h2gis.readthedocs.io/en/latest/ST_Perimeter.html[ST_Perimeter] | perimeter |  |
+| http://www.opengis.net/def/function/geosparql/relate[geof:relate] | https://postgis.net/docs/ST_Relate.html[ST_Relate] | https://h2gis.readthedocs.io/en/latest/ST_Relate.html[ST_Relate] | relate |  |
+| http://www.opengis.net/def/function/geosparql/symmetricDifference[geof:symmetricDifference] | https://postgis.net/docs/ST_SymDifference.html[ST_SymDifference] | https://h2gis.readthedocs.io/en/latest/ST_SymDifference.html[ST_SymDifference] | symdifference |  |
+| http://www.opengis.net/def/function/geosparql/sfTouches[geof:sfTouches] | https://postgis.net/docs/ST_Touches.html[ST_Touches] | https://h2gis.readthedocs.io/en/latest/ST_Touches.html[ST_Touches] | touches |  |
+| http://www.opengis.net/def/function/geosparql/transform[geof:transform] | https://postgis.net/docs/ST_Transform.html[ST_Transform] | https://h2gis.readthedocs.io/en/latest/ST_Transform.html[ST_Transform] | transform |  |
+| http://www.opengis.net/def/function/geosparql/union[geof:union] | https://postgis.net/docs/ST_Union.html[ST_Union] | https://h2gis.readthedocs.io/en/latest/ST_Union.html[ST_Union] | gunion |  |
+| http://www.opengis.net/def/function/geosparql/sfWithin[geof:sfWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within |  |
+| http://www.opengis.net/def/function/geosparql/ehWithin[geof:ehWithin] | https://postgis.net/docs/ST_Within.html[ST_Within] | https://h2gis.readthedocs.io/en/latest/ST_Within.html[ST_Within] | within |  |
+|  |  |  | 3ddistance |  |
+|  | st_length3d | st_3dlength | 3dlength |  |
+|  |  |  | 3dmaxdistance |  |
+|  |  |  | addedgemodface |  |
+|  |  |  | addedgenewfaces |  |
+|  | https://postgis.net/docs/ST_AddMeasure.html[ST_AddMeasure] |  | addmeasure |  |
+|  | https://postgis.net/docs/ST_AddPoint.html[ST_AddPoint] | https://h2gis.readthedocs.io/en/latest/ST_AddPoint.html[ST_AddPoint] | addpoint |  |
+|  |  |  | addtemporarygeometrycolumn |  |
+|  | https://postgis.net/docs/ST_AsBinary.html[ST_AsBinary] | https://h2gis.readthedocs.io/en/latest/ST_AsBinary.html[ST_AsBinary] | asbinary |  |
+|  |  |  | asencodedpolyline |  |
+|  | https://postgis.net/docs/ST_AsEWKB.html[ST_AsEWKB] |  | asewkb |  |
+|  | https://postgis.net/docs/ST_AsEWKT.html[ST_AsEWKT] |  | asewkt |  |
+|  |  |  | asfgf |  |
+|  |  |  | asgpb |  |
+|  | https://postgis.net/docs/ST_AsSVG.html[ST_AsSVG] |  | assvg |  |
+| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] | https://postgis.net/docs/ST_AsText.html[ST_AsText] | https://h2gis.readthedocs.io/en/latest/ST_AsText.html[ST_AsText] | astext |  |
+|  |  |  | astwkb |  |
+|  |  |  | asx3d |  |
+|  | https://postgis.net/docs/ST_Azimuth.html[ST_Azimuth] | https://h2gis.readthedocs.io/en/latest/ST_Azimuth.html[ST_Azimuth] | azimuth  |  |
+|  | st_bdmpolyfromtext |  | bdmpolyfromtext  |  |
+|  |  |  | bdmpolyfromwkb  |  |
+|  | st_bdpolyfromtext |  | bdpolyfromtext  |  |
+|  |  |  | bdpolyfromwkb  |  |
+|  | https://postgis.net/docs/ST_BuildArea.html[ST_BuildArea] |  | buildarea  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ToMultiLine.html[ST_ToMultiLine] | casttomultilinestring  |  |
+|  | https://postgis.net/docs/ST_ClosestPoint.html[ST_ClosestPoint] | https://h2gis.readthedocs.io/en/latest/ST_ClosestPoint.html[ST_ClosestPoint] | closestpoint  |  |
+|  | https://postgis.net/docs/ST_Collect.html[ST_Collect] | https://h2gis.readthedocs.io/en/latest/ST_Collect.html[ST_Collect] | collect  |  |
+|  | https://postgis.net/docs/ST_CollectionExtract.html[ST_CollectionExtract] | https://h2gis.readthedocs.io/en/latest/ST_CollectionExtract.html[ST_CollectionExtract] | collectionextract  |  |
+|  |  |  | compressgeometry  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ConstrainedDelaunay.html[ST_ConstrainedDelaunay] | constraineddelaunaytriangulation  |  |
+|  |  |  | coorddimension  |  |
+|  |  |  | curvosityindex  |  |
+|  |  |  | delaunaytriangulation  |  |
+|  | https://postgis.net/docs/ST_Dimension.html[ST_Dimension] | https://h2gis.readthedocs.io/en/latest/ST_Dimension.html[ST_Dimension] | dimension  |  |
+|  |  |  | dissolvepoints  |  |
+|  |  |  | dissolvesegments  |  |
+|  |  |  | distancewithin  |  |
+|  |  |  | downhillheight  |  |
+|  |  |  | drapeline  |  |
+|  |  |  | drapelineexceptions  |  |
+|  |  |  | elementarygeometries  |  |
+|  | https://postgis.net/docs/ST_EndPoint.html[ST_EndPoint] | https://h2gis.readthedocs.io/en/latest/ST_EndPoint.html[ST_EndPoint] | endpoint  |  |
+|  |  |  | ensureclosedrings  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_EnvelopesIntersect.html[ST_EnvelopesIntersect] | envelopesintersects  |  |
+|  | https://postgis.net/docs/ST_Expand.html[ST_Expand] | https://h2gis.readthedocs.io/en/latest/ST_Expand.html[ST_Expand] | expand  |  |
+|  |  |  | exportdbf |  |
+|  |  |  | exportdxf  |  |
+|  |  |  | exportgeojson2  |  |
+| http://www.opengis.net/def/function/geosparql/asKML[geof:asKML] |  |  | exportkml  |  |
+|  |  |  | exportshp  |  |
+|  | https://postgis.net/docs/ST_Extent.html[ST_Extent] | https://h2gis.readthedocs.io/en/latest/ST_Extent.html[ST_Extent] | extent  |  |
+|  | https://postgis.net/docs/ST_ExteriorRing.html[ST_ExteriorRing] | https://h2gis.readthedocs.io/en/latest/ST_ExteriorRing.html[ST_ExteriorRing] | exteriorring  |  |
+|  |  |  | extractmultilinestring  |  |
+|  |  |  | extractmultipoint  |  |
+|  |  |  | extractmultipoint  |  |
+|  |  |  | extractmultipolygon  |  |
+|  | https://postgis.net/docs/ST_ForceRHR.html[ST_ForceRHR] |  | forcelhr  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ForcePolygonCCW.html[ST_ForcePolygonCCW] | forcepolygonccw  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ForcePolygonCW.html[ST_ForcePolygonCW] | forcepolygoncw  |  |
+|  |  |  | frechetdistance |  |
+|  | https://postgis.net/docs/ST_GeoHash.html[ST_GeoHash] |  | geohash |  |
+|  | geometrytype |  | geometrytype  |  |
+|  | https://postgis.net/docs/ST_GeomFromEWKB.html[ST_GeomFromEWKB] |  | geomfromewkb  |  |
+|  | st_geomfromewkt |  | geomfromewkt  |  |
+|  |  |  | geomfromexifgpsblob |  |
+|  |  |  | geomfromfgf  |  |
+|  |  |  | geomfromgeojson |  |
+|  | https://postgis.net/docs/ST_GeomFromGML.html[ST_GeomFromGML] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromGML.html[ST_GeomFromGML] | geomfromgml  |  |
+|  |  |  | geomfromgpb  |  |
+|  | https://postgis.net/docs/ST_GeomFromKML.html[ST_GeomFromKML] |  | geomfromkml  |  |
+|  | https://postgis.net/docs/ST_GeomFromText.html[ST_GeomFromText] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromText.html[ST_GeomFromText] | geomfromtext  |  |
+|  | https://postgis.net/docs/ST_GeomFromWKB.html[ST_GeomFromWKB] | https://h2gis.readthedocs.io/en/latest/ST_GeomFromWKB.html[ST_GeomFromWKB] | geomfromwkb  |  |
+|  |  |  | getfacebypoint  |  |
+|  |  |  | getfaceedges  |  |
+|  |  |  | getfacegeometry  |  |
+|  |  |  | great circle length  |  |
+|  |  |  | gunion  |  |
+|  | st_hausdorffdistance |  | hausdorffdistance  |  |
+|  |  |  | hexagonalgrid  |  |
+|  |  |  | hilbertcode  |  |
+|  |  |  | insertepsgsrid  |  |
+|  | https://postgis.net/docs/ST_InteriorRingN.html[ST_InteriorRingN] | https://h2gis.readthedocs.io/en/latest/ST_InteriorRingN.html[ST_InteriorRingN] | interiorringn  |  |
+|  |  |  | interpolatepoint  |  |
+|  |  |  | invalidatelayerstatistics  |  |
+| http://www.opengis.net/def/function/geosparql/is3D[geof:is3D] |  | https://h2gis.readthedocs.io/en/latest/ST_Is3D.html[ST_Is3D] | is3d  |  |
+|  | https://postgis.net/docs/ST_IsClosed.html[ST_IsClosed] | https://h2gis.readthedocs.io/en/latest/ST_IsClosed.html[ST_IsClosed] | isclosed  |  |
+|  |  |  | ismeasured  |  |
+|  |  |  | ispolygonccw  |  |
+|  |  |  | ispolygoncw |  |
+|  | https://postgis.net/docs/ST_IsRing.html[ST_IsRing] | https://h2gis.readthedocs.io/en/latest/ST_IsRing.html[ST_IsRing] | isring  |  |
+|  | https://postgis.net/docs/ST_IsValid.html[ST_IsValid] | https://h2gis.readthedocs.io/en/latest/ST_IsValid.html[ST_IsValid] | isvalid  |  |
+|  | https://postgis.net/docs/ST_IsValidDetail.html[ST_IsValidDetail]  | https://h2gis.readthedocs.io/en/latest/ST_IsValidDetail.html[ST_IsValidDetail] | isvaliddetail  |  |
+|  | https://postgis.net/docs/ST_IsValidReason.html[ST_IsValidReason] | https://h2gis.readthedocs.io/en/latest/ST_IsValidReason.html[ST_IsValidReason] | isvalidreason  |  |
+|  | https://postgis.net/docs/ST_IsValidTrajectory.html[ST_IsValidTrajectory] |  | isvalidtrajectory  |  |
+|  | https://postgis.net/docs/ST_LineInterpolatePoint.html[ST_LineInterpolatePoint] |  | line_interpolate_point  |  |
+|  | https://postgis.net/docs/ST_LineLocatePoint.html[ST_LineLocatePoint] |  | line_locate_point  |  |
+|  | https://postgis.net/docs/ST_LineSubstring.html[ST_LineSubstring] |  | line_substring  |  |
+|  |  |  | linefromencodedpolyline  |  |
+|  | https://postgis.net/docs/ST_LineFromText.html[ST_LineFromText] | https://h2gis.readthedocs.io/en/latest/ST_LineFromText.html[ST_LineFromText] | "linefromtext linestringfromtext"  |  |
+|  |  |  | "linefromwkb linestringfromwkb"  |  |
+|  | https://postgis.net/docs/ST_LineMerge.html[ST_LineMerge] | https://h2gis.readthedocs.io/en/latest/ST_LineMerge.html[ST_LineMerge] | linemerge  |  |
+|  |  |  | linescutatnodes  |  |
+|  |  |  | linesfromrings  |  |
+|  |  |  | linestringavgsegmentlength  |  |
+|  |  |  | linestringminsegmentlength  |  |
+|  | st_locate_along_measure |  | locatealongmeasure  |  |
+|  | st_locate_between_measures |  | locatebetweenmeasures  |  |
+|  | https://postgis.net/docs/ST_M.html[ST_M] | https://h2gis.readthedocs.io/en/latest/ST_M.html[ST_M] | m  |  |
+|  |  |  | makearc  |  |
+|  |  |  | makecircle  |  |
+|  |  |  | makecircularsector  |  |
+|  |  |  | makecircularstripe  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeEllipse.html[ST_MakeEllipse] | makeellipse  |  |
+|  |  |  | makeellipticarc  |  |
+|  |  |  | makeellipticsector  |  |
+|  | https://postgis.net/docs/ST_MakeLine.html[ST_MakeLine] | https://h2gis.readthedocs.io/en/latest/ST_MakeLine.html[ST_MakeLine] | makeline  |  |
+|  | https://postgis.net/docs/ST_MakePoint.html[ST_MakePoint] | https://h2gis.readthedocs.io/en/latest/ST_MakePoint.html[ST_MakePoint] | makepoint  |  |
+|  | https://postgis.net/docs/ST_MakePointM.html[ST_MakePointM] |  | makepointm  |  |
+|  |  |  | makepointz  |  |
+|  |  |  | makepointzm  |  |
+|  | https://postgis.net/docs/ST_MakePolygon.html[ST_MakePolygon] | https://h2gis.readthedocs.io/en/latest/ST_MakePolygon.html[ST_MakePolygon] | makepolygon  |  |
+|  |  |  | makestringlist  |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeValid.html[ST_MakeValid] | makevalid  |  |
+|  |  |  | makevaliddiscarded  |  |
+|  | https://postgis.net/docs/ST_MaxDistance.html[ST_MaxDistance] | https://h2gis.readthedocs.io/en/latest/ST_MaxDistance.html[ST_MaxDistance] | maxdistance  |  |
+|  |  |  | maxm  |  |
+|  |  |  | minm  |  |
+|  | https://postgis.net/docs/ST_MPointFromText.html[ST_MPointFromText] | https://h2gis.readthedocs.io/en/latest/ST_MPointFromText.html[ST_MPointFromText] | "mpointfromtext multipointfromtext"  |  |
+|  |  |  | "mpointfromwkb multipointfromwkb"  |  |
+|  | https://postgis.net/docs/ST_NDims.html[ST_NDims] |  | ndims  |  |
+|  | https://postgis.net/docs/ST_NPoints.html[ST_NPoints] | https://h2gis.readthedocs.io/en/latest/ST_NPoints.html[ST_NPoints] | npoints  |  |
+|  | https://postgis.net/docs/ST_NRings.html[ST_NRings] |  | nrings  |  |
+|  | https://postgis.net/docs/ST_NumInteriorRing.html[ST_NumInteriorRing] | https://h2gis.readthedocs.io/en/latest/ST_NumInteriorRing.html[ST_NumInteriorRing] | numinteriorring  |  |
+|  | https://postgis.net/docs/ST_NumInteriorRings.html[ST_NumInteriorRings] | https://h2gis.readthedocs.io/en/latest/ST_NumInteriorRings.html[ST_NumInteriorRings] | numinteriorrings  |  |
+|  |  |  | offestcurve  |  |
+|  |  |  | orientedenvelope  |  |
+|  | https://postgis.net/docs/ST_PointFromText.html[ST_PointFromText] | https://h2gis.readthedocs.io/en/latest/ST_PointFromText.html[ST_PointFromText] | pointfromtext  |  |
+|  | https://postgis.net/docs/ST_PointFromWKB.html[ST_PointFromWKB] | https://h2gis.readthedocs.io/en/latest/ST_PointFromWKB.html[ST_PointFromWKB] | pointfromwkb  |  |
+|  | https://postgis.net/docs/ST_PointN.html[ST_PointN] | https://h2gis.readthedocs.io/en/latest/ST_PointN.html[ST_PointN] | pointn  |  |
+|  | https://postgis.net/docs/ST_PointOnSurface.html[ST_PointOnSurface] | https://h2gis.readthedocs.io/en/latest/ST_PointOnSurface.html[ST_PointOnSurface] | pointonsurface  |  |
+|  | https://postgis.net/docs/ST_Polygonize.html[ST_Polygonize] | https://h2gis.readthedocs.io/en/latest/ST_Polygonize.html[ST_Polygonize] | polygonize  |  |
+|  |  |  | project  |  |
+|  |  |  | ptdistwithin  |  |
+|  |  |  | reduceprecision  |  |
+|  |  |  | reflectcoordinates  |  |
+|  |  |  | reflectcoords  |  |
+|  |  |  | relatematch  |  |
+|  | https://postgis.net/docs/ST_RemovePoint.html[ST_RemovePoint] |  | removepoint  |  |
+|  | https://postgis.net/docs/ST_Reverse.html[ST_Reverse] | https://h2gis.readthedocs.io/en/latest/ST_Reverse.html[ST_Reverse] | reverse  |  |
+|  |  |  | ringscutatnodes  |  |
+|  |  |  | rotatecoordinates  |  |
+|  |  |  | rotatecoords  |  |
+|  |  |  | sanitizegeometry |  |
+|  |  |  | scalecoordinates  |  |
+|  |  |  | scalecoords |  |
+|  | https://postgis.net/docs/ST_Segmentize.html[ST_Segmentize] |  | segmentize  |  |
+|  |  |  | selfintersections  |  |
+|  |  |  | setdecimalprecision  |  |
+|  |  |  | setendpoint  |  |
+|  |  |  | setmultiplepoints  |  |
+|  | https://postgis.net/docs/ST_SetPoint.html[ST_SetPoint] |  | setpoint  |  |
+|  | st_setsrid | st_setsrid | setsrid  |  |
+|  |  |  | setstartpoint  |  |
+|  |  |  | sharedpaths  |  |
+|  |  |  | shiftcoordinates  |  |
+|  |  |  | shiftcoords  |  |
+|  | https://postgis.net/docs/ST_ShortestLine.html[ST_ShortestLine] | https://h2gis.readthedocs.io/en/latest/ST_ShortestLine.html[ST_ShortestLine] | shortestline  |  |
+|  | https://postgis.net/docs/ST_Simplify.html[ST_Simplify] | https://h2gis.readthedocs.io/en/latest/ST_Simplify.html[ST_Simplify] | simplify  |  |
+|  | https://postgis.net/docs/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | https://h2gis.readthedocs.io/en/latest/ST_SimplifyPreserveTopology.html[ST_SimplifyPreserveTopology] | simplifypreservetopology  |  |
+|  |  |  https://h2gis.readthedocs.io/en/latest/ST_Snap.html[ST_Snap] | snap |  |
+|  |  |  | snapandsplit |  |
+|  | https://postgis.net/docs/ST_SnapToGrid.html[ST_SnapToGrid] |  | snaptogrid |  |
+|  |  |  https://h2gis.readthedocs.io/en/latest/ST_Split.html[ST_Split] | split |  |
+|  |  |  | splitleft |  |
+|  |  |  | splitright |  |
+|  |  |  | squaregrid |  |
+|  |  |  | st_cutter |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Node.html[ST_Node] | https://h2gis.readthedocs.io/en/latest/ST_Node.html[ST_Node] |  |
+|  | https://postgis.net/docs/ST_Point.html[ST_Point] | https://h2gis.readthedocs.io/en/latest/ST_Point.html[ST_Point] | st_point |  |
+|  | https://postgis.net/docs/ST_ShiftLongitude.html[ST_ShiftLongitude] |  | st_shift_longitude |  |
+|  |  |  | st_subdivide |  |
+|  | https://postgis.net/docs/ST_Translate.html[ST_Translate] | https://h2gis.readthedocs.io/en/latest/ST_Translate.html[ST_Translate] | st_translate |  |
+|  | https://postgis.net/docs/ST_WKBToSQL.html[ST_WKBToSQL] |  | st_wkbtosql |  |
+|  | https://postgis.net/docs/ST_WKTToSQL.html[ST_WKTToSQL] |  | st_wkttosql |  |
+|  | https://postgis.net/docs/ST_StartPoint.html[ST_StartPoint] | https://h2gis.readthedocs.io/en/latest/ST_StartPoint.html[ST_StartPoint] | startpoint |  |
+|  |  |  | swapcoordinates |  |
+|  |  |  | swapcoords |  |
+|  |  |  | trajectoryinterpolatepoint |  |
+|  |  |  | transformxy |  |
+|  |  |  | transformxyz |  |
+|  |  |  | triangulargrid |  |
+|  |  |  | unaryunion |  |
+|  |  |  | updownheight |  |
+|  |  |  | uphillheight |  |
+|  |  | st_3darea | |  |
+|  | st_perimeter3d | https://https://h2gis.readthedocs.io/en/latest/ST_3DPerimeter.html[ST_3DPerimeter] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Accum.html[ST_Accum] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_AddZ.html[ST_AddZ] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ClosestCoordinate.html[ST_ClosestCoordinate] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_CompactnessRatio.html[ST_CompactnessRatio] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_CoordDim.html[ST_CoordDim] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Delaunay.html[ST_Delaunay] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Densify.html[ST_Densify] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Drape.html[ST_Drape] | |  |
+|  | https://postgis.net/docs/ST_DWithin.html[ST_DWithin] | https://h2gis.readthedocs.io/en/latest/ST_DWithin.html[ST_DWithin] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Explode.html[ST_Explode] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Extrude.html[ST_Extrude] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_FlipCoordinates.html[ST_FlipCoordinates] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Force2D.html[ST_Force2D] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Force3D.html[ST_Force3D] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_FurthestCoordinate.html[ST_FurthestCoordinate] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_GeometryShadow.html[ST_GeometryShadow] | |  |
+|  | https://postgis.net/docs/ST_GeometryType.html[ST_GeometryType] | https://h2gis.readthedocs.io/en/latest/ST_GeometryType.html[ST_GeometryType] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_GeometryTypeCode.html[ST_GeometryTypeCode] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_GoogleMapLink.html[ST_GoogleMapLink] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Holes.html[ST_Holes] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Interpolate3DLine.html[ST_Interpolate3DLine] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ISOVist.html[ST_ISOVist] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_IsRectangle.html[ST_IsRectangle] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_LineFromWKB.html[ST_LineFromWKB] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_LineIntersector.html[ST_LineIntersector] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_LocateAlong.html[ST_LocateAlong] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_LongestLine.html[ST_LongestLine] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeEnvelope.html[ST_MakeEnvelope] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeGrid.html[ST_MakeGrid] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MakeGridPoints.html[ST_MakeGridPoints] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MinimumRectangle.html[ST_MinimumRectangle] | |  |
+|  | https://postgis.net/docs/ST_MLineFromText.html[ST_MLineFromText] | https://h2gis.readthedocs.io/en/latest/ST_MLineFromText.html[ST_MLineFromText] | |  |
+|  | https://postgis.net/docs/ST_MPolyFromText.html[ST_MPolyFromText] | https://h2gis.readthedocs.io/en/latest/ST_MPolyFromText.html[ST_MPolyFromText] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_MultiplyZ.html[ST_MultiplyZ] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Normalize.html[ST_Normalize] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_OctogonalEnvelope.html[ST_OctogonalEnvelope] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_OrderingEquals.html[ST_OrderingEquals] | |  |
+|  | https://postgis.net/docs/ST_PolygonFromText.html[ST_PolygonFromText] | https://h2gis.readthedocs.io/en/latest/ST_PolyFromText.html[ST_PolyFromText] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_PolyFromWKB.html[ST_PolyFromWKB] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_PrecisionReducer.html[ST_PrecisionReducer] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ProjectPoint.html[ST_ProjectPoint] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RemoveDuplicatedCoordinates.html[ST_RemoveDuplicatedCoordinates] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RemoveHoles.html[ST_RemoveHoles] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RemovePoints.html[ST_RemovePoints] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RemoveRepeatedPoints.html[ST_RemoveRepeatedPoints] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Reverse3DLine.html[ST_Reverse3DLine] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RingBuffer.html[ST_RingBuffer] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_RingSideBuffer.html[ST_RingSideBuffer] | |  |
+|  | https://postgis.net/docs/ST_Rotate.html[ST_Rotate] | https://h2gis.readthedocs.io/en/latest/ST_Rotate.html[ST_Rotate] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Scale.html[ST_Scale] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_SideBuffer.html[ST_SideBuffer] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Split.html[ST_Split] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_SunPosition.html[ST_SunPosition] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_SVF.html[ST_SVF] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Tesselate.html[ST_Tesselate] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ToMultiPoint.html[ST_ToMultiPoint] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_ToMultiSegments.html[ST_ToMultiSegments] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleAspect.html[ST_TriangleAspect] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleContouring.html[ST_TriangleContouring] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleDirection.html[ST_TriangleDirection] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_TriangleSlope.html[ST_TriangleSlope] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_UpdateZ.html[ST_UpdateZ] | |  |
+|  |  | https://h2gis.readthedocs.io/en/latest/ST_Voronoi.html[ST_Voronoi] | |  |
+|  | https://postgis.net/docs/ST_X.html[ST_X] | https://h2gis.readthedocs.io/en/latest/ST_X.html[ST_X] | x |  |
+|  | https://postgis.net/docs/ST_Y.html[ST_Y]  |  https://h2gis.readthedocs.io/en/latest/ST_Y.html[ST_Y] | y  |  |
+|  | https://postgis.net/docs/ST_Z.html[ST_Z] | https://h2gis.readthedocs.io/en/latest/ST_Z.html[ST_Z] | z |  |
+|  |  | st_zupdatelineextremities | |  |
+|  | box3d |  | |  |
+|  | st_accum | https://h2gis.readthedocs.io/en/latest/ST_Accum.html[ST_Accum] | |  |
+|  | https://postgis.net/docs/ST_Affine.html[ST_Affine] |  | |  |
+|  | st_ashexewkb |  | |  |
+|  | https://postgis.net/docs/ST_ContainsProperly.html[ST_ContainsProperly] |  | |  |
+|  | https://postgis.net/docs/ST_CoordDim.html[ST_CoordDim] |  | |  |
+|  | https://postgis.net/docs/ST_CurveToLine.html[ST_CurveToLine] |  | |  |
+|  | https://postgis.net/docs/ST_DFullyWithin.html[ST_DFullyWithin] |  | |  |
+|  | https://postgis.net/docs/ST_DistanceSphere.html[ST_DistanceSphere] |  | |  |
+|  | https://postgis.net/docs/ST_Distance_Spheroid.html[ST_Distance_Spheroid] |  | |  |
+|  | https://postgis.net/docs/ST_Dump.html[ST_Dump] |  | |  |
+|  | https://postgis.net/docs/ST_DumpRings.html[ST_DumpRings] |  | |  |
+|  | https://h2gis.readthedocs.io/en/latest/ST_EstimatedExtent.html[ST_EstimatedExtent] |  | |  |
+|  | st_extent3d |  | |  |
+|  | https://postgis.net/docs/ST_Force2D.html[ST_Force2D] |  | |  |
+|  | https://postgis.net/docs/ST_Force3D.html[ST_Force3D] |  | |  |
+|  | https://postgis.net/docs/ST_Force3DM.html[ST_Force3DM] |  | |  |
+|  | https://postgis.net/docs/ST_Force3DZ.html[ST_Force3DZ] |  | |  |
+|  | https://postgis.net/docs/ST_Force4D.html[ST_Force4D] |  | |  |
+|  | https://postgis.net/docs/ST_ForceCollection.html[ST_ForceCollection] |  | |  |
+|  | https://postgis.net/docs/ST_GeogFromText.html[ST_GeogFromText] |  | |  |
+|  | https://postgis.net/docs/ST_GeogFromWKB.html[ST_GeogFromWKB] |  | |  |
+|  | https://postgis.net/docs/ST_GeographyFromText.html[ST_GeographyFromText] |  | |  |
+|  | https://postgis.net/docs/ST_GeometryFromText.html[ST_GeometryFromText] |  | |  |
+|  | https://postgis.net/docs/ST_GMLToSQL.html[ST_GMLToSQL] |  | |  |
+|  | https://postgis.net/docs/ST_HasArc.html[ST_HasArc] |  | |  |
+|  | https://postgis.net/docs/ST_Length_Spheroid.html[ST_Length_Spheroid] |  | |  |
+|  | https://postgis.net/docs/ST_Length2D.html[ST_Length2D] |  | |  |
+|  | st_length2d_spheroid |  | |  |
+|  | st_length3d_spheroid |  | |  |
+|  | https://postgis.net/docs/ST_LineCrossingDirection.html[ST_LineCrossingDirection] |  | |  |
+|  | https://postgis.net/docs/ST_LineFromMultiPoint.html[ST_LineFromMultiPoint] |  | |  |
+|  | https://postgis.net/docs/ST_LineFromWKB.html[ST_LineFromWKB] |  | |  |
+|  | https://postgis.net/docs/ST_LinestringFromWKB.html[ST_LinestringFromWKB] |  | |  |
+|  | https://postgis.net/docs/ST_LineToCurve.html[ST_LineToCurve] |  | |  |
+|  | https://postgis.net/docs/ST_LocateBetweenElevations.html[ST_LocateBetweenElevations] |  | |  |
+|  | https://postgis.net/docs/ST_LongestLine.html[ST_LongestLine] |  | |  |
+|  | https://postgis.net/docs/ST_M.html[ST_M] |  | |  |
+|  | https://postgis.net/docs/ST_MakeBox2D.html[ST_MakeBox2D] |  | |  |
+|  | st_makebox3d |  | |  |
+|  | https://postgis.net/docs/ST_MakeEnvelope.html[ST_MakeEnvelope] |  | |  |
+|  | https://postgis.net/docs/ST_MemSize.html[ST_MemSize] |  | |  |
+|  | https://postgis.net/docs/ST_MemUnion.html[ST_MemUnion] |  | |  |
+|  | https://postgis.net/docs/ST_Multi.html[ST_Multi] |  | |  |
+|  | https://postgis.net/docs/ST_OrderingEquals.html[ST_OrderingEquals] |  | |  |
+|  | https://postgis.net/docs/ST_Perimeter2D.html[ST_Perimeter2D] |  | |  |
+|  | https://postgis.net/docs/ST_PointInsideCircle.html[ST_PointInsideCircle] |  | |  |
+|  | https://postgis.net/docs/ST_Polygon.html[ST_Polygon] |  | |  |
+|  | https://postgis.net/docs/ST_RotateX.html[ST_RotateX] |  | |  |
+|  | https://postgis.net/docs/ST_RotateY.html[ST_RotateY] |  | |  |
+|  | https://postgis.net/docs/ST_RotateZ.html[ST_RotateZ] |  | |  |
+|  | https://postgis.net/docs/ST_Scale.html[ST_Scale] |  | |  |
+|  | https://postgis.net/docs/ST_Summary.html[ST_Summary] |  | |  |
+|  | https://postgis.net/docs/ST_TransScale.html[ST_TransScale] |  | |  |
+|  | st_zmflag |  | |  |
 |===
 ===== Geometry Topology Extension
 Another extension is the Geometry Topology extension. This provides query functions that return relationships between different geometries based on the topology vocabulary extension.
+
+The Geometry Topology Extension describes three sets of geometry relation functions, akin to the properties which were previously defined in the Topology Vocabulary extension.
+
+The Simple Features relations, the Egenhofer relations and the RCC8 relations as query functions are merely defined on 2D relations and warrant an examination concerning their suitability and upgradability to 3D.
+
+It might be desirable to even use different sets of relations which will be available in GeoSPARQL 3D, which are better suited for the specific needs for 3D geometries.
 
 ===== RDFS Entailment Extension
 The RDFS Entailment extension provides rules for reasoning over geometries. Based on specific statements, additional information can be inferred.
 This kind of logical inference can also be applied to geometry. GeoSPARQL includes logic for reasoning over simple features geometries.
 
+===== Geometry Class Hierarchy
+
+As described in the Geometry Extension part, the Geometry class hierarchy will need to be extended to include 3D primitives and 3D specific types so that reasoners may take advantage of 3D types in reasoning tasks.
+This may need to be done for 3D serializations that are not equal to WKT and GML, since only for these two serializations, the RDFS Entailment was defined in GeoSPARQL 1.1.
+
 ===== Query Rewrite Extension
 GeoSPARQL allows queries such as whether “Feature A” is located within “Feature B” using its vocabulary. The Query Rewrite extension specifies a RIF rule that enables query rewriting. However, this extension does not support the rewriting of 3D queries.
+
+3D compatibility of the Query Rewrite extension would depend similarly on the 3D relations defined, since the Query Rewrite Extension would merely apply the graph patterns defined in the other extensions.

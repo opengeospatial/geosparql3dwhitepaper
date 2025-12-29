@@ -1,23 +1,59 @@
-== Abstract
-
-To come...
-
-== Preface
-
-To come...
-
+////
 == Keywords
 
-To come...
+Keywords inserted here automatically by Metanorma
+////
+
+
+[abstract]
+== Abstract
+
+The importance of the (semantic) representation of 3D geometries has increased in recent years. 
+Different databases of different data providers, such as provides for 3D city models, include 3D data in different formats and would benefit from a common data model which could semantically align its contents.
+In addition one wants to query information not only about the 3D geometries themselves but about their semantic context and their interconnectedness.
+To that end we showcase the shortcomings of the current GeoSPARQL 1.1 standard concerning native 3D querying and 3D representation and illustrate use cases and feature requests which would enable a 3D-aware semantic web with the GeoSPARQL standard as its core.
+
+
+.Preface
+
+[NOTE]
+====
+Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.
+
+There are two ways to specify the Preface: "simple clause" or "full clasuse"
+
+If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the `.Preface` label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.
+
+If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title "Preface", i.e. `== Preface`. (Simple preface content can also be encoded like full preface.) 
+
+====
+
 
 == Security Considerations
 
-The following security considerations apply...
+No security considerations have been made for this Whitepaper.
 
+[.preface]
 == Submitters
+All questions regarding this submission should be directed to the editor or the submitters:
 
 |===
 |Name |Affiliation |OGC member
 
 |Nicholas J. Car | KurrawongAI | Yes
 |===
+
+[.preface]
+== Contributors
+
+//This clause is optional.
+
+Additional contributors to this Standard include the following:
+
+Individual name(s), Organization
+
+[NOTE]
+====
+If you need to place any further sections in the preface area
+use the `[.preface]` attribute.
+====

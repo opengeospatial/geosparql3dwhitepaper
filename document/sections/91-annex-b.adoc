@@ -1,0 +1,584 @@
+== Annex B: Allignment of Geometry
+
+Overview of ISO 19107 GML IFC STEP OpenCascade WKT X3D Geometries
+
+Dit overzicht van geometriën laat zien welke geometrieen dicht bij elkaar zitten. Het is geen 10% match
+
+
+Points:
+|===
+| ISO 19107 | GML      | IFC | STEP | OpenCascade | WKT 
+|||link:https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcCartesianPoint.htm[IfcCartesianPoint] |  link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cartesian_point[cartesian_point] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___cartesian_point.html[Geom2d_CartesianPoint] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___cartesian_point.html[Geom_CartesianPoint] |
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_Point[GM_Point]| link:https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd[gml:Point] |     | | link:https://dev.opencascade.org/doc/refman/html/class_geom2d___point.html[Geom2d_Point] + 
+link:https://dev.opencascade.org/doc/refman/html/class_geom___point.html[Geom_Point]| link:https://www.ogc.org/standards/sfa/[POINT (x y (z)(m))] 
+
+|        |  |   | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cylindrical_point[cylindrical_point] | | 
+
+|        |  |   | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.spherical_point[spherical_point] | | 
+
+|        |  |   | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.polar_point[polar_point] | | 
+
+|||link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointByDistanceExpression.htm[IfcPointByDistanceExpression] ||  |
+
+|||link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointOnCurve.htm[IfcPointOnCurve] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.point_on_curve[point_on_curve] | |
+
+|||link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointOnSurface.htm[IfcPointOnSurface] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.point_on_surface[point_on_surface] ||
+
+|||| https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.point_in_volum[point_in_volume]||
+
+|||| https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.point_replica[point_replica]||
+
+|||| link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.degenerate_pcurve[degenerate_pcurve] ||
+
+|||| link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.evaluated_degenerate_pcurv[evaluated_degenerate_pcurve] ||
+
+|===
+
+Lines and Curves:
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|link:http://www.opengis.net/def/geometry/iso-19107/2003/gm_curve[GM_Curve] | link:https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd[gml:Curve] |  |  | |
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_OrientableCurve[GM_OrientableCurve]| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:OrientableCurve] |  |  || 
+
+|GM_Arc| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Arc] |  |  | |link:https://www.ogc.org/standards/sfa/[CIRCULARSTRING(x y (z)(m))]
+
+|GM_ArcByBulge| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:ArcByBulge] |  |  | |
+
+|GM_ArcString|link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:ArcString]  |  |  | |
+
+|GM_ArcStringByBulge| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:ArcStringByBulge] |  |  | |
+
+|| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:CircleByCenterPoint] |  |  | |
+
+|| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:CubicSpline] |  |  | |
+
+|| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Knot] |  |  | |
+
+|| gml:AffinePlacement |  |  | |
+
+|| gml:AbstractSurface |  |  | |
+
+|| link:https://schemas.opengis.net/gml/3.2.1/geometryBasic2d.xsd[gml:Polygon] |  |  | |link:https://www.ogc.org/standards/sfa[POLYGON(x y (z)(m))]
+
+|GM_Polygon| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Polygonpatch] |  |  | |
+
+| link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_Ring[GM_Ring] | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Ring] |  |  |  |
+
+| | gml:AbstractRing|  |  | |
+
+| | link:https://schemas.opengis.net/gml/3.2.1/geometryBasic2d.xsd[gml:LinearRing] |  |  | |
+
+| | gml:Surface|  |  | |
+
+| | gml:Patches|  |  ||
+
+| | gml:AbstractRing|  |  | | 
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_OrientableSurface[GM_OrientableSurface] | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:OrientableSurface] |  |  ||
+
+||link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Bspline] | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineCurveWithKnots.htm[IfcBSplineCurveWithKnots]  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_curve_with_knots[B_spline_curve_with_knots] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___b_spline_curve.html[Geom2d_BSplineCurve] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___b_spline_curve.html[Geom_BSplineCurve] |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRationalBSplineCurveWithKnots.htm[IfcRationalBSplineCurveWithKnots]  | ||
+
+|GM_Bezier| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Bezier]|  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bezier_curve[bezier_curve] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___bezier_curve.html[Geom2D_BezierCurve] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___bezier_curve.html[Geom_BezierCurve] |
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_b_spline_curve[rational_b_spline_curve] ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.local_b_spline[local_b_spline] ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uniform_curve[uniform_curve] ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.quasi_uniform_curve[quasi_uniform_curve] ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.locally_refined_spline_curve[locally_refined_spline_curve]  ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_locally_refined_spline_curve[rational_locally_refined_spline_curve]  ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.trimmed_curve[trimmed_curve]   |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___trimmed_curve.html[Geom2d_TrimmedCurve] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___trimmed_curve.html[Geom_TrimmedCurve] |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurveOnSurface.htm[IfcCompositeCurveOnSurface]  | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundaryCurve.htm[IfcBoundaryCurve] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.boundary_curve[boundary_curve]||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOuterBoundaryCurve.htm[IfcOuterBoundaryCurve] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.outer_boundary_curve[outer_boundary_curve] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGradientCurve.htm[IfcGradientCurve]  | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegmentedReferenceCurve.htm[IfcSegmentedReferenceCurve]  | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm[IfcIndexedPolyCurve]  | ||
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_LineString[GM_LineString] | gml:LineStringSegment | | ||LINESTRING(x y (z)(m)) 
+
+||link:https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd[gml:LineString] | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm[IfcPolyline]  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.polyline[polyline] |link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___wire.html[TopoDS_Wire] |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm[IfcTrimmedCurve]  | ||
+
+|GM_Circle|link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Circle] | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm[IfcCircle] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.circle[circle] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___circle.html[Geom2d_Circle] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___circle.html[Geom_Circle] |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipse.htm[IfcElipse] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.elipse[elipse] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___ellipse.html[Geom2d_Ellipse] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___ellipse.html[Geom_Ellipse] |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm[IfcLine]  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.line[line] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___line.html[Geom2d_Line] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___line.html[Geom_Line] |
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.hyperbola[hyperbola] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___hyperbola.html[Geom2d_Hyperbola] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___hyperbola.html[Geom_Hyperbola] |
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.parabola[parabola] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___parabola.html[Geom2d_Parabola] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___parabola.html[Geom_Parabola] |
+
+|| gml:OffsetCurve | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOffsetCurve2D.htm[IfcOffsetCurve2D] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.offset_curve_2d[offset_curve_2d] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___offset_curve.html[Geom2d_OffsetCurve] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___offset_curve.html[Geom_OffsetCurve] |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOffsetCurve3D.htm[IfcOffsetCurve3D] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.offset_curve_3d[offset_curve_3d] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOffsetCurveByDistances.htm[IfcOffsetCurveByDistances] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPcurve.htm[IfcPcurve] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.pcurve[pcurve]  ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bounded_pcurve[bounded_pcurve]  ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolynomialCurve.htm[IfcPolynomialCurve] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClothoid.htm[IfcClothoid] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.clothoid[clothoid] ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.circular_involute[circular_involute] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCosineSpiral.htm[IfcCosineSpiral] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSecondOrderPolynomialSpiral.htm[IfcSecondOrderPolynomialSpiral] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcThirdOrderPolynomialSpiral.htm[IfcThirdOrderPolynomialSpiral] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSeventhOrderPolynomialSpiral.htm[IfcSeventhOrderPolynomialSpiral] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSineSpiral.htm[IfcSineSpiral] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceCurve.htm[IfcSurfaceCurve] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_curve[surface_curve] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIntersectionCurve.htm[ifcIntersectionCurve] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.intersection_curve[intersection_curve] ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.seam_curve[seam_curve] ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bounded_surface_curve[bounded_surface_curve] ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.composite_curve_on_surface[composite_curve_on_surface] ||
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.curve_replica[curve_replica] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSeamCurve.htm[IfcSeamCurve] | |||
+
+|| | |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___vector_with_magnitude.html[Geom2d_VectorWithMagnitude] +
+link:https://dev.opencascade.org/doc/refman/html/class_geom___vector_with_magnitude.html[Geom_VectorWithMagnitude]  ||
+
+|| | | |link:https://dev.opencascade.org/doc/refman/html/class_shape_extend___complex_curve.html[shapeExtend_ComplexCurve] |
+
+|===
+
+Surface:
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT | X3D
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_Surfac[GM_Surface] | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Surface] |  |  |||
+
+|GM_PolyhedralSurface | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:PolyhedralSurface] |  |  |||
+
+|GM_TriangulatedSurface | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:TriangulatedSurface] |  link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm[IfcTriangulatedFaceSet]  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.triangulated_face[triangulated_face] |||
+
+|GM_Tin | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Tin] |  |  |||
+
+|GM_SurfacePatch | gml:AbstractSurfacePatch|  |  |||
+
+| | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Triangle] |  |  |||
+
+| | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Rectangle] |  |  |||
+
+|GM_PointGrid| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:PointGrid] |  |  |||
+
+|GM_ParametricCurveSurface| gml:AbstractParametricCurveSurface|  |  |||
+
+|GM_GriddedSurface| gml:AbstractGriddedSurface|  |  |||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlane.htm[IfcPlane] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.plane[plane] |link:https://dev.opencascade.org/doc/refman/html/class_geom___plane.html[Geom_Plane] ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm[IfcCylindricalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cylindrical_surface[cylindrical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___cylindrical_surface.html[Geom_CylindricalSurface] ||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.conical_surface[conical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___conical_surface.html[Geom_ConicalSurface] ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSphericalSurface.htm[IfcSphericalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.spherical_surface[spherical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___spherical_surface.html[Geom_SphericalSurface] ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcToroidalSurface.htm[IfcToroidalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.toroidal_surface[toroidal_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___toroidal_surface.html[Geom_ToroidalSurface] ||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.degenerate_toroidal_surface[degenerate_toroidal_surface] |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.dupin_cyclide_surface[dupin_cyclide_surface] |||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm[IfcBSplineSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_surface[b_spline_surface]  |link:https://dev.opencascade.org/doc/refman/html/class_geom___b_spline_surface.html[Geom_BSplineSurface] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurfaceWithKnots.htm[IfcBSplineSurfaceWithKnots] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_surface_with_knots[b_spline_surface_with_knots]  |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uniform_surface[uniform_surface] |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uasi_uniform_surface[uasi_uniform_surface] |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bezier_surface[bezier_surface]  |link:https://dev.opencascade.org/doc/refman/html/class_geom___bezier_surface.html[Geom_BezierSurface] ||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_b_spline_surface[rational_b_spline_surface]  |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.locally_refined_spline_surface[locally_refined_spline_surface]   |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_locally_refined_spline_surface[rational_locally_refined_spline_surface]  |||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedPlane.htm[IfcCurveBoundedPlane] +
+link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedSurface.htm[IfcCurveBoundedSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.curve_bounded_surface[curve_bounded_surface]  |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_patch[surface_patch] |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.offset_surface[offset_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___offset_surface.html[Geom_OffsetSurface] ||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.oriented_surface[oriented_surface] |||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_replica[surface_replica] |||
+
+|| | ||link:https://dev.opencascade.org/doc/refman/html/class_geom___surface.html[Geom_Surface] ||
+
+|| | ||link:https://dev.opencascade.org/doc/refman/html/class_geom___osculating_surface.html[Geom_OsculatingSurface] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangularTrimmedSurface.htm[IfcRectangularTrimmedSurface] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rectangular_trimmed_surface[rectangular_trimmed_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___rectangular_trimmed_surface.html[Geom_RectangularTrimmedSurface] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSurface.htm[IfcSectionedSurface] | |||
+|===
+
+Primitives:
+
+A primitive (like a block or ellipsoid) can be defined with just a few parameters. It is more efficient than describing the same shape with triangles (mesh) or surfaces (B-rep). It keeps files smaller and mathematically exact.  
+
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+| |  |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBlock.htm[IfcBlock] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.block[block] | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_box.html[(BRepPrimAPI_MakeBox)] |
+
+||  | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangularPyramid.htm[IfcRectangularPyramid] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.rectangular_pyramid[rectangular_pyramid] ||
+
+|GM_Cone| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Cone] | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRightCircularCone.htm[IfcRightCircularCone] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.right_circular_cone[right_circular_cone] +
+link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.eccentric_cone[eccentric_cone] | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_cone.html[(BRepPrimAPI_MakeCone)]  |
+
+|GM_Cylinder| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Cylinder] | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRightCircularCylinder.htm[IfcRightCircularCylinder] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.right_circular_cylinder[right_circular_cylinder] | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_cylinder.html[(BRepPrimAPI_MakeCylinder)] |
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.ellipsoid[ellipsoid] |  |
+
+|| |  | | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+ link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_half_space.html[(BRepPrimAPI_MakeHalfSpace)] |
+
+|| |  | | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_prism.html[(BRepPrimAPI_MakePrism)] |
+
+|| |  | | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_revol.html[(BRepPrimAPI_MakeRevol)] |
+
+|| |  | | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+ https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_revolution.html[(BRepPrimAPI_MakeRevolution)] |
+
+|GM_Sphere| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Sphere] | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSphere.htm[IfcSphere] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.sphere[sphere] | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+ link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_sphere.html[(BRepPrimAPI_MakeSphere)] |
+
+ || |  | | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+ link:https://dev.opencascade.org/doc/refman/html/class_b_rep_offset_a_p_i___make_pipe.html[(BRepPrimAPI_MakePipe)] |
+
+  || |  | | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+ link:https://dev.opencascade.org/doc/refman/html/class_b_rep_offset_a_p_i___make_pipe_shell.html[(BRepPrimAPI_MakePipeShell)] |
+
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.torus[torus] | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+ link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_torus.html[(BRepPrimAPI_MakeTorus)] |
+
+|| |  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.right_angular_wedge[right_angular_wedge] | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
+ link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_wedge.html[(BRepPrimAPI_MakeWedge)] |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.tetrahedron[tetrahedron] |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.convex_hexahedron[convex_hexahedron] |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.faceted_primitive[faceted_primitive] |  |
+
+|===
+
+
+Boolean Geometry:
+Defined constructively, not by its boundary. Boolean geometry is the representation of 3D shapes by combining or subtracting simpler solids using Boolean operations like union, intersection, and difference.
+
+|===
+| ISO 19107 | GML | IFC| STEP | OpenCascade | WKT 
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgSolid.htm[IfcCsgSolid] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.csg_solid[Csg_solid] ||
+||  | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanResult.htm[IfcBooleanResult]| link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.boolean_result[boolean_result] |link:https://dev.opencascade.org/doc/refman/html/class_b_rep_algo_a_p_i___boolean_operation.html[BRepAlgoAPI_BooleanOperation]|
+|===
+
+
+Solid/Shell:
+A solid is a topological object that encloses a region of space and a shell is a set of connected surfaces that form a boundary. A Solid is a closed shell. 
+
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|| gml:AbstractSolid |  |  | |
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_Solid[GM_Solid] | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Solid] |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrep.htm[IfcFacetedBrep] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.manifold_solid_brep[manifold_solid_brep]  | TopoDS_Solid(TopoDS_Face)|
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrepWithVoids.htm[IfcFacetedBrepWithVoids] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrep.htm[IfcAdvancedBrep] |link:https://steptools.com/stds/stp_aim/html/t_advanced_brep_shape_representation.html[advanced_brep_shape_representation] ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrepWithVoids.htm[IfcAdvancedBrepWithVoids] | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSolidHorizontal.htm[IfcSectionedSolidHorizontal] | ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFixedReferenceSweptAreaSolid.htm[IfcFixedReferenceSweptAreaSolid] | ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirectrixDerivedReferenceSweptAreaSolid.htm[IfcDirectrixDerivedReferenceSweptAreaSolid] | ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm[IfcExtrudedAreaSolid] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.extruded_area_solid[extruded_area_solid] ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm[IfcExtrudedAreaSolidTapered] | ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRevolvedAreaSolid.htm[IfcRevolvedAreaSolid] | ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRevolvedAreaSolidTapered.htm[IfcRevolvedAreaSolidTapered] | ||
+
+
+|http://www.opengis.net/def/geometry/ISO-19107/2003/GM_Shell[GM_Shell] | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Shell] |  |  | |
+
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.solid_replica[solid_replica]   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.brep_2d[brep_2d]  |  |
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm[IfcSectionedSpine]  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.sectioned_spine[sectioned_spine]  |  |
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoxedHalfSpace.htm[IfcBoxedHalfSpace]  |  link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.boxed_half_space[boxed_half_space]  |  |
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolygonalBoundedHalfSpace.htm[IfcPolygonalBoundedHalfSpace]  |    |  |
+
+|| ||link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.tessellated_solid[tesselated_solid]     |  |
+
+|===
+
+
+Swept Surface:  
+
+A swept surface is a type of surface in geometric modeling created by moving a profile (curve) along a trajectory (path).
+
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceCurveSweptAreaSolid.htm[IfcSurfaceCurveSweptAreaSolid] | ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptDiskSolid.htm[IfcSweptDiskSolid] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.swept_disk_solid[swept_disk_solid]  ||
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptDiskSolidPolygonal.htm[IfcSweptDiskSolidPolygonal] | ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.swept_face_solid[swept_face_solid]   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.swept_area_solid[swept_area_solid]   |  |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceOfLinearExtrusion.htm[IfcSurfaceOfLinearExtrusion] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_of_linear_extrusion[surface_of_linear_extrusion] |link:https://dev.opencascade.org/doc/refman/html/class_geom___surface_of_linear_extrusion.html[Geom_SurfaceOfLinearExtrusion] |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceOfRevolution.htm[IfcSurfaceOfRevolution] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_of_revolution[surface_of_revolution] |link:https://dev.opencascade.org/doc/refman/html/class_geom___surface_of_revolution.html[Geom_SurfaceOfRevolution] |
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm[IfcSweptSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_curve_swept_surface[surface_curve_swept_surface] ||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.fixed_reference_swept_surface[fixed_reference_swept_surface]  ||
+
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.revolved_face_solid[revolved_face_solid]  ||
+
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.extruded_face_solid[extruded_face_solid]  ||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.surface_curve_swept_face_solid[surface_curve_swept_area_solid]  ||
+
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.swept_disk_solid[swept_disk_solid]  ||
+
+|===
+
+Volume:  
+
+Volume geometry is a way of representing a 3D object by directly defining the entire region of space it occupies, rather than just its boundary.
+
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT | X3D
+|| ||link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.block_volume[block_volume]
+  |   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.pyramid_volume[pyramid_volume]  |   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.eccentric_conical_volume[eccentric_conical_volume]  |   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.spherical_volume[spherical_volume]   |   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.ellipsoid_volume[ellipsoid_volume] |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cylindrical_volume[cylindrical_volume]   |   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.wedge_volume[wedge_volume]  |   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.tetrahedron_volume[tetrahedron_volume]   |   |  |
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.hexahedron_volume[hexadron_volume] |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.toroidal_volume[toroidal_volume] |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bezier_volume[bezier_volume] |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uniform_volume[uniform_volume] |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.quasi_uniform_volume[quasi_uniform_volume]   |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_b_spline_volume[rational_b_spline_volume]  |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.trimmed_volume[trimmed_volume]  |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.locally_refined_spline_volume[locally_refined_spline_volume]  |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_locally_refined_spline_volume[rational_locally_refined_spline_volume]  |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_volume[b_spline_volume] |  ||
+
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_volume_with_knots[b_spline_volume_with_knots] |  ||
+
+|===
+
+Axis/Placement: 
+
+Used to define orientation or alignment of objects, where to be placed and in what direction to extrude. 
+
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|||link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis1Placement.htm[IfcAxis1Placement] | axis1_placement  |link:https://dev.opencascade.org/doc/refman/html/class_geom___axis1_placement.html[Geom_Axis1Placement]|
+
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm[IfcAxis2Placement2D] + 
+link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm[IfcAxis2Placement3D]| link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.axis2_placement_2d[axis2_placement_2d] + 
+link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.axis2_placement_3d[axis2_placement_3d] |link:https://dev.opencascade.org/doc/refman/html/class_geom___axis2_placement.html[Geom_Axis2Placement]|
+|===
+
+Grids:
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|| gml:RectifiedGrid|   |||
+|| link:https://schemas.opengis.net/gml/3.2.1/coverage.xsd[gml:RectifiedGridCoverage] |   |||
+|| link:https://schemas.opengis.net/gml/3.2.1/coverage.xsd[gml:GridCoverage] |   ||||
+|===
+
+
+Operators:
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cartesian_transformation_operator[cartesian_transformation_operator]||
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator3D.htm[IfcCartesianTransformationOperator3D]|link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cartesian_transformation_operator_3d[cartesian_transformation_operator_3d] ||
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator2D.htm[IfcCartesianTransformationOperator2D] +
+link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator2DnonUniform.htm[IfcCartesianTransformationOperator2DnonUniform]|cartesian_transformation_operator_2d|gp_Trsf2d|
+|===
+
+Geometric complex/ composites:
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|GM_Complex| gml:GeometricComplex |  |  | |
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_CompositePoint[GM_CompositePoint]|  |  | ||
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_CompositeCurve[GM_CompositeCurve] | link:https://schemas.opengis.net/gml/3.2.1/geometryComplexes.xsd[gml:CompositeCurve] | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm[IfcCompositeCurve] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.composite_curve[composite_curv] |link:https://dev.opencascade.org/doc/refman/html/class_i_g_e_s_geom___composite_curve.html[composite_curve]  |COMPOUNDCURVE(x y (z)(m))
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_CompositeSurface[GM_CompositeSurface]| link:https://schemas.opengis.net/gml/3.2.1/geometryComplexes.xsd[gml:CompositeSurface] |  ||  | 
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_CompositeSolid[GM_CompositeSolid]| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:CompositeSolid] |  ||  | 
+
+|| | | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.composite_curve_segment[composite_curve_segment] ||
+|| | | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.reparametrised_composite_curve_segment[reparametrised_composite_curve_segment] ||
+
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rectangular_composite_surface[rectangular_composite_surface]  ||
+
+
+|===
+
+Geometric Agggregates:
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_MultiPoint[GM_MultiPoint]| link:https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd[gml:MultiPoint] |  ||  |MULTIPOINT
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_MultiCurve[GM_MultiCurve]| link:https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd[gml:MultiCurve] |  |  || MULTILINESTRING
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_MultiSurface[GM_MultiSurface]| link:https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd[gml:MultiSurface] |  | | | MULTIPOLYGON
+
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_MultiSolid[GM_MultiSolid]| link:https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd[gml:MultiSolid] |  |  | |
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList2D.htm[IfcCartesianPointList2D]  | ||
+
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm[IfcCartesianPointList3D]  | ||
+
+|===
+
+
+Interface Query:
+
+|===
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|boundary:Geometry|  |  |  | |
+|convexHull:Geometry|  |  |  | |
+|distance|  | | | gp_Circ::Distance() +
+gp_Circ2d::Distance() +
+gp_Lin::Distance(const gp_Pnt &theP) const +
+gp_Lin::Distance(const gp_Lin &theOther) const +
+gp_Lin2d::Distance(const gp_Pnt2d &theP) const +
+gp_Lin2d::Distance(const gp_Lin2d &theOther) +
+gp_Pln::Distance +
+gp_Circ::Distance() +
+etc
+ | 
+|buffer|  |  |  | |
+|intersection|  |||BRepClass_Intersector  |  
+|difference|  |  |  | |
+|symDifference|  |  |  | |
+|union|  |  |  | |
+|contains|   |  || BRepClass3d_SolidClassifier | 
+|crosses  |  |  | ||
+|disjoint  |  |  | ||
+|equals|  |  |  | |
+|intersects|  |  |  | |
+|overlaps |  |  | ||
+|touches|  |  | ||
+|within|  |  | ||
+|withinDistance|  |  | ||
+|relate|  |  | ||
+|3Dboundary:Geometry|  |  |  | |
+|3DconvexHull:Geometry|  |  |  | |
+|3Ddistance|  |  |  | |
+|3Dbuffer|  |  |  | |
+|3Dintersection|  ||| BRepClass3d_Intersector3d |  
+|3Ddifference|  |  |  | |
+|3DsymDifference|  |  |  | |
+|3Dunion|  |  |  | |
+|3Dcontains|   |  |  | |
+|3Dcrosses  |  |  | ||
+|3Ddisjoint  |  |  | ||
+|3Dequals|  |  |  | |
+|3Dintersects|  |  |  | |
+|3Doverlaps |  |  | ||
+|3Dtouches|  |  | ||
+|3Dwithin|  |  | ||
+|3DwithinDistance|  |  | ||
+|3Drelate|  |  | ||
+|===
+
+
+https://dev.opencascade.org/doc/refman/html/
+https://old.opencascade.com/doc/occt-7.5.0/overview/html/index.html
+https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationItem.htm
+
+https://www.web3d.org/documents/specifications/19775-1/V4.0/index.html

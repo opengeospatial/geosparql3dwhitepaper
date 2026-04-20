@@ -1,7 +1,76 @@
 
 == Related Work
 
-This is still just a dump of resources. To be transformed into actual text.
+A substantial body of work shows that **there is no single universal 3D web ontology**, but several reusable, often domain‑ or format‑specific vocabularies to describe geometry, topology, scenes, and domain semantics.
+
+=== Generic representation of 3D objects
+
+
+- **X3D Ontology / Semantic Web3D**  
+  Maps the full X3D standard (X3DUOM) into OWL 2, providing classes and properties for nodes, geometry, appearance, animation, and scene graph structure, enabling query and reasoning over X3D scenes <<FlotynskiWalczak2017>> <<georgieva2023transforming>> <<Sikos2017>> <<BrutzmanFlotynski2020>> <<flotynski2020recent>> <<8975906>>.  
+
+- **RDF/RML pipelines for 3D**  
+  Approaches that transform X3D (and other formats) to RDF using RML or XSLT, reusing the X3D Ontology as the target schema <<georgieva2023transforming>> <<BrutzmanFlotynski2020>>.  
+
+- **VRML / Java3D spatial ontologies**  
+  Application ontologies abstracting VRML & Java3D node types plus a separate spatial ontology for topological, directional and metric relations [7].  
+
+==== Core 3D shape/geometry ontologies
+
+- **Common Shape Ontology** – represents manifold/non‑manifold shapes, point sets, hierarchical model groups, positions, orientations, keyframe animation <<FlotynskiWalczak2017>>.  
+- **BREP/CSG‑oriented ontologies & OntoSTEP** – OWL encodings of STEP AP203/AP214/AP242 and BREP/CSG concepts for CAD models [8].  
+- Other proposals link geometric models to spatial properties or count non‑manifold features <<FlotynskiWalczak2017>> [8].  
+
+=== Domain‑specific 3D ontologies
+
+| Domain | Example ontologies / vocabularies | Citations |
+|--------|-----------------------------------|-----------|
+| Buildings / AEC | **BOT (Building Topology Ontology)** for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies [9]. |
+| Cultural heritage | Building-conservation ontology for 3D annotations [10]; CIDOC CRM–based models for 3D CH objects and provenance [11] [12] [13]. |
+| Robotics / manufacturing | **ENVON** integrates contextual, topologic, geometric info for 3D environments; BFO‑based 3D shape ontology; BREP/CSG distinctions [8]. |
+| Grottoes & heritage | **ChgOnto** for grotto components, spatial relations, with GeoSPARQL + CIDOC CRM [14]. |
+
+**Figure 1:** Representative groups of 3D-related web ontologies
+
+=== How these are typically used
+
+- Built on **RDF/OWL** with RDFS/OWL vocabularies for 3D content and domain classes <<FlotynskiWalczak2017>> [15] [16].  
+- Often separate **geometry/topology**, **scene graph**, and **domain** ontologies combined at query time (e.g., BOT + geometry + SOSA/SSN or SAREF in buildings) [8] [9].  
+
+## Conclusion
+
+Multiple web ontologies exist for 3D—most prominently the **X3D Ontology/Semantic Web3D**, **Common Shape Ontology**, **OntoSTEP/BREP–CSG ontologies**, and domain ontologies such as **BOT** and cultural‑heritage models. They are generally combined rather than replaced by a single universal 3D ontology.
+ 
+ 
+## References
+ 
+ 
+ 
+ 
+ 
+ 
+`7.` Pacheco, E., Sosa, M., Ruiz, M., & Diaz-Velarde, M. Creating an Ontology to Represent Qualitatively a Scene in a Virtual Reality Environment. *Res. Comput. Sci..* 2018; 147. https://doi.org/10.13053/rcs-147-10-4
+ 
+`8.` Zhao, Y., Sarkar, A., Elmhadhbi, L., Karray, M., Fillatreau, P., & Archimède, B. An ontology of 3D environment where a simulated manipulation task takes place (ENVON). *Semantic Web.* 2023; 15. https://doi.org/10.3233/sw-233460
+ 
+`9.` Rasmussen, M., Lefrançois, M., Schneider, G., & Pauwels, P. BOT: The building topology ontology of the W3C linked building data group. *Semantic Web.* 2020; 12. https://doi.org/10.3233/sw-200385
+ 
+`10.` Messaoudi, T., Véron, P., Halin, G., & Luca, L. An ontological model for the reality-based 3D annotation of heritage building conservation state. *Journal of Cultural Heritage.* 2017; 29. https://doi.org/10.1016/j.culher.2017.05.017
+ 
+`11.` Walczak, K., & Flotyński, J. Inference-based creation of synthetic 3D content with ontologies. *Multimedia Tools and Applications.* 2018; 78. https://doi.org/10.1007/s11042-018-6788-5
+ 
+`12.` Amico, N., & Felicetti, A. Ontological Entities for Planning and Describing Cultural Heritage 3D Models Creation. *ArXiv.* 2021; abs/2106.07277. 
+ 
+`13.` Гончар, А., Довгий, С., & Попова, М. Онтологічний підхід до консолідації 3D-моделей об’єктів історико-культурної спадщини та ГІС. *.* 2021 https://doi.org/10.32620/reks.2021.1.07
+ 
+`14.` Yang, S., & Hou, M. Knowledge graph representation method for semantic 3D modeling of Chinese grottoes. *Heritage Science.* 2023; 11. https://doi.org/10.1186/s40494-023-01084-2
+ 
+`15.` Pittarello, F., & De Faveri, A. Semantic description of 3D environments: a proposal based on web standards. *.* 2006 https://doi.org/10.1145/1122591.1122603
+ 
+`16.` Walczak, K., & Flotyński, J. Inference-based creation of synthetic 3D content with ontologies. *Multimedia Tools and Applications.* 2018; 78. https://doi.org/10.1007/s11042-018-6788-5
+ 
+
+
 
 === CityGML
 

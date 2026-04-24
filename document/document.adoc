@@ -55,7 +55,7 @@ include::sections/06-benefits.adoc[]
 //use annexes as needed
 include::sections/90-annex-a.adoc[]
 
-include::sections/90-annex-b.adoc[]
+include::sections/91-annex-b.adoc[]
 
 ////
 Revision History should be the last annex before the Bibliography

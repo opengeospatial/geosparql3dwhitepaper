@@ -695,18 +695,6 @@ multipointfromwkb"
 |  |  |  | minm
 |  | link:https://postgis.net/docs/ST_NDims.html[st_ndims] |  | ndims
 |  |  |  | selfintersections
-|  |  |  | topogeo_getedgeseed
-|  |  |  | topogeo_getfaceseed
-|  |  |  | topogeo_lineedgeslist
-|  |  |  | topogeo_polyfaceslist
-|  |  |  | toponet_getlinkseed
-|  |  |  | toponet_linelinkslist
-|  |  |  | xb_getabstract
-|  |  |  | xb_getdocument
-|  |  |  | xb_getdocumentsize
-|  |  |  | xb_getencoding
-|  |  |  | xb_getfileid
-|  |  |  | xb_getinternalschemauri
 |  |  | st_compactnessratio |
 |  | st_geometrytype | st_geometrytype |
 |  |  | st_geometrytypecode |

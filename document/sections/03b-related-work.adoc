@@ -8,20 +8,21 @@ This section starts by providing a brief overview of these tow flavours of ontol
 
 === Generic representation of 3D objects
 
+==== X3D Ontology
+
+Extensible 3D (X3D) Graphics is an open standard to declaratively representing interactive 3D computer graphics for publishing, viewing, printing and archiving 3D models on the Web. X3D was eventually approved by ISO (ISO/IEC 19775-19777) and become ancomputer graphics industry standard. It was first proposed in 1997 and has since been subject to various updates. More recently it has been developed towards the Semantic Web, in order to gain interoperability and enable intelligent 3D operations and reasoning. Development has been hosted by the Web3D Consortium. 
+
+Currently in its version 4, the X3D Ontology maps the full X3D standard (X3DUOM) into OWL 2, providing classes and properties for nodes, geometry, appearance, animation, and scene graph structure, enabling query and reasoning over X3D scenes <<FlotynskiWalczak2017>> <<georgieva2023transforming>> <<Sikos2017>> <<BrutzmanFlotynski2020>> <<flotynski2020recent>> <<8975906>>.  X3D is regarded as a comprehensive and formally grounded 3D ontology, adding fundamental concepts and roles of the 3D modelling industry not originally covered by X3D.
+
+The X3D Ontology has also been used to transform non-semantic 3D file formats into RDF with languages such as RML or XSLT <<georgieva2023transforming>> <<BrutzmanFlotynski2020>>.
 
 
-- **X3D Ontology / Semantic Web3D**  
-  Maps the full X3D standard (X3DUOM) into OWL 2, providing classes and properties for nodes, geometry, appearance, animation, and scene graph structure, enabling query and reasoning over X3D scenes <<FlotynskiWalczak2017>> <<georgieva2023transforming>> <<Sikos2017>> <<BrutzmanFlotynski2020>> <<flotynski2020recent>> <<8975906>>.  This paper presents the most comprehensive formally grounded 3D ontology to date that maps the entire XSD-based vocabulary of the industry standard X3D (ISO/IEC 19775-19777) to OWL 2, complemented by fundamental concepts and roles of the 3D modelling industry not covered by X3D.
+==== Core 3D shape/geometry ontologies
 
-
-
-- **RDF/RML pipelines for 3D**  
-  Approaches that transform X3D (and other formats) to RDF using RML or XSLT, reusing the X3D Ontology as the target schema <<georgieva2023transforming>> <<BrutzmanFlotynski2020>>.  
 
 - **VRML / Java3D spatial ontologies**  
   Application ontologies abstracting VRML & Java3D node types plus a separate spatial ontology for topological, directional and metric relations <<pacheco2018creating>>.  
 
-==== Core 3D shape/geometry ontologies
 
 - **Common Shape Ontology** – represents manifold/non‑manifold shapes, point sets, hierarchical model groups, positions, orientations, keyframe animation <<FlotynskiWalczak2017>>.  
 

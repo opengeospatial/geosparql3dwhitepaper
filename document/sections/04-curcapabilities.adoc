@@ -89,18 +89,18 @@ The Geometry extension enables geometries to be defined within the GeoSPARQL fra
 These literals are investigated for the storage of 3D data.
 
 [#img_dimensions,reftext='{figure-caption} {counter:figure-num}']
-.Difference between 2D, 2.5D and 3D geometry
-image::../figures/Dimensions_FIG02.png[align="center"]
+.Difference between 2D, 2D with height attribute 2.5D and 3D geometry
+image::../figures/2d-2d--2andahalfd-3d-difference.png[align="center"]
 
 
-[cols="3,3,3,3"] 
+[cols="3,3,3,3,3"] 
 |=== 
-|Literal Type | Z-Coordinate Supported | 2.5D | 3D 
-|WKT Literal  | Yes | Yes | Yes
-|GML Literal  | Yes | Yes | Only with extension Schema
-|KML Literal  | Yes | Yes | As import from COLLADA
-|GeoJSON Literal  | Yes | Yes | Yes
-|DGGS Literal  |  |  | 
+|Literal Type | Z-Coordinate Supported |Z-Coordinate Supported + height attribute | 2.5D | 3D 
+|WKT Literal  | Yes | Yes | Yes | Yes
+|GML Literal  | Yes | Yes | Yes | Only with extension Schema
+|KML Literal  | Yes | Yes | Yes | As import from COLLADA
+|GeoJSON Literal  | Yes | Yes | Yes | Yes
+|DGGS Literal  |  |  | |
 |=== 
 
 

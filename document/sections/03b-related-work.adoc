@@ -140,6 +140,10 @@ The https://w3id.org/fog#[File Ontology for Geometry Formats (FOG)] provides a b
 Since many 3D datasets are of considerable size, their inclusion into the knowledge graph as String literals might hinder the query performance of said knowledge graph.
 It therefore stands to reason whether to adopt the same or a similar method of geometry access that FOG provides for GeoSPARQL 3D.
 
+==== Linked Building Server 
+Over the last years, Building Information Modelling (BIM) has been increasingly adopted in building projects for its benefits to collaboration and associated risk mitigation. Recent work is trying to make this data available over the web (web-based BIM applications). Most notable in making building data web-ready is the linked building data (LBD) initiative. This group has worked on a number of vocabularies and ontologies, thereby starting from a linked data approach (RDF graphs), aiming at representing building data on the web. https://github.com/LBDserver[Linked Building Data Server]
+
+
 === To consider
 
 https://link.springer.com/article/10.1007/s10845-023-02246-6

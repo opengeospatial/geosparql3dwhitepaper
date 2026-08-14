@@ -1,0 +1,366 @@
+
+== Annex C: Overview of IFC Geometry
+[#AnnexCOverviewOfIFCGeometry]
+
+[cols="1,2,1,3,3",options="header"]
+|===
+| Level
+| Concept
+| Prevalence
+| Notes
+| Related terms from ISO / OGC (SFA, GeoSPARQL, GML, ...)
+
+| Relational
+| Space boundaries (connection geometry)
+| 12.6% (1676)
+| `IfcRelSpaceBoundary`: Surfaces representing adjacencies between spaces and building elements primarily intended for thermal simulation.
+| `geof:sfTouches`
+
+| Relational
+| Interferences
+| 1.4% (3)
+| `IfcRelInterferesElements`: Primarily intended for modelling clash detection outcomes and over- and underpasses in infrastructure models. Likely has seen little use in practice. 
+| `ST_Intersects`
+
+| Relational
+| Metric constraints
+| 0%
+| `IfcMetric`: distances, parametric expressions between properties and geometry; supported in the schema (has limitations on indexing into unordered aggregates) and rarely used in practice.
+| `ST_Distance` `owl:sameAs` `rdfs:seeAlso`
+
+| Relational
+| Clearance geometry
+| 0%
+| `IfcShapeRepresentation[RepresentationIdentifier='Clearance']`: Dedicated shapes encoding minimum clearances (e.g., around equipment, maintenance envelopes, door swings); a separate representation with its own context
+|
+
+| Product
+| Relative positioning
+| 97.6% (1298)
+| `IfcLocalPlacement` provides hierarchical local coordinate systems for products. Informal proposition are in place to define a placement hierarchy that follows the project decomposition structure
+| gml:AffineCS
+
+| Product
+| Linear positioning
+| 4.8% (527)
+| `IfcLinearPlacement` provides linear positioning that derives an orientation and positioning frame from a length measure along an (IfcAlignment) curve
+| ISO 19148:2021
+
+| Product
+| Grid placement
+| 0%
+| `IfcGridPlacement` provides placement by means of the computed intersection between two grid axes with underlying curve geometry
+| 
+
+| Product
+| Openings
+| 49.1% (168)
+| `IfcRelVoidsElements` + `IfcOpeningElement`/`IfcVoidingFeature` models a subtractive boolean operation applied to host elements (walls, slabs, etc.); in principle extensible to other feature kinds such as `IfcProjectionElement`. In IFC2X3 CoordinationView these were to be processed by the importer. In IFC4 ReferenceView, in principle, these are precomputed at export time.
+| `ST_Difference`
+
+| Product
+| Material association
+| 71% (324)
+| `IfcRelAssociatesMaterial`, layered / list / constituent / profile-based Links product geometry to material models: layered elements, material lists, constituents, profile-based materials. Especially layered materials (IfcMaterialLayerSet[Usage]) have geometric implications because it semantically slices the geometry by means of planes defined from offsets along a reference curve (for vertical elements) or along the extrusion direction.
+|
+
+| Product
+| Parametric geometry as geometry-related semantics via property sets (e.g. `Pset_MechanicalFastenerBolt`, `IfcWindowLiningProperties`, `Pset_ProvisionForVoid`, most quantities `Qto_*`)
+| 29% (73)
+| Semantic parameters that can be used to drive or reconstruct geometry when explicit representations are absent.
+| 
+
+| Product
+| Product-level composite curves defining the 'business-logic' of parametric alignment segment nesting within a curve
+| 4.2% (504)
+| Decomposition of IfcAlignment into IfcAlignmentSegment with parametric geometry (typically redundant with item-level curves).
+| OGC LandInfra/InfraGML alignment model
+
+| Product
+| Aggregation of product into assemblies: composition (`IfcElementAssembly`) / nesting (ports, alignment segments)
+| 96.9% (29)
+| Product-level aggregation (e.g., ports, sub-elements, segments)
+| 
+
+| Item
+| Basic 0D/1D/2D items: points, curves, faces (IfcCartesianPoint, IfcPolyline, IfcCompositeCurve, IfcFace)
+| 99.2% (34194)
+| Simple representations or underlying points, polylines, composite curves (including circular/arc segments), and faces used in higher-level geometry.
+| SFA: Point, LineString, MultiLineString, Polygon; GML: gml:Point, gml:Curve, gml:LineString
+
+| Item
+| Profiles: parametric (e.g I shape) / arbitrary / derived / composite (IfcProfileDef, IfcArbitraryProfileDef, IfcDerivedProfileDef, IfcCompositeProfileDef) [Note: not strictly an independent IfcRepresentationItem]
+| 76.9% (763)
+| Cross-section definitions used by sweeps and structural members; parametric catalog profiles and arbitrary section shapes.
+|
+
+| Item
+| Annotation geometry: text literals, hatches and fills
+| 11.6% (101)
+| `IfcTextLiteral`, `IfcFillAreaStyle` etc. 2D annotation geometry, symbolization and fills; mostly for documentation, not primary 3D model.
+|
+
+| Item
+| Explicit (BRep) representations of 3D *faceted* solids and surfaces
+| 43.9% (876)
+| `IfcFacetedBrep`
+| SFA: PolyhedralSurface
+
+| Item
+| Explicit (BRep) representations of 3D *curved* solids and surfaces
+| 6.5% (112)
+| Advanced BRep: with (e.g) NURBS faces (IfcAdvancedFace)
+| 
+
+| Item
+| Explicit mesh/polyhedron representations (called tessellation)
+| 12.6% (163)
+| `IfcTessellatedFaceSet` `IfcTriangulatedFaceSet` `IfcPolygonalFaceSet` Indexed face sets representing triangulated or polygonal surfaces/solids; compact storage via point lists and indices.
+| SFA: PolyhedralSurface gml:TriangulatedSurface
+
+| Item
+| TIN / surface models
+| 2% (1)
+| `IfcTriangulatedIrregularNetwork` Specialized tessellated representation for terrain and horizontal surfaces (single f(X,Y)->Z for any X,Y); typical for infrastructure and terrain models.
+| gml:Tin
+
+| Item
+| Swept / procedural solids: extrusion, revolution, sweeps along curve (disk, arbitrary, fixed reference), sectioned solids and surfaces
+| 75.5% (703)
+| 3D solids defined by sweeping profiles along vectors or curves: straight/linear extrusions, revolutions, sweeps along curves (swept disk, arbitrary orientation, fixed reference), tapered forms, sectioned solids/surfaces. Note that this is a fairly large category with many items and combinatorial possibilities lumped into one.
+|
+
+| Item
+| Axis geometry
+| 47.6% (321)
+| Bounded curve geometries as (often) a secondary representation describing the longitudinal direction of a solid or element. Material layer sets are defined relative to this axis.
+|
+
+| Item
+| Boolean operations (CSG trees)
+| 30.6% (122)
+| Solids defined as binary trees combining operands via union, intersection, difference; often nested and require recursive traversal.
+| SFA: ST_Union, ST_Intersection, ST_Difference
+
+| Item
+| CSG primitives
+| 1.7% (8)
+| `IfcCsgPrimitive3D` Are only part of the CSG expressions, but include things like cylinder and sphere which are 'harder' to produce otherwise (as revolutions)
+|
+
+| Item
+| Surface-only geometry for connection / space boundaries and advanced face surfaces (extrusion, revolution, bounded, NURBS)
+| 31.8% (1521)
+| Surfaces used without explicit solid closure, e.g. for space boundaries or analytical/architectural surfaces.
+| gml:Surface
+
+| Item
+| Styling by item as a whole (IfcStyledItem, IfcSurfaceStyle, IfcCurveStyle)
+| 68.3% (1458)
+| Assignment of colors, line styles to geometric items or tessellated faces as a whole
+|
+
+| Item
+| Granular styling by sub-item (IfcSurfaceStyle, IfcIndexedColourMap)
+| -
+| E.g the application of a different color to a face within a shell, or per-face colors in tesselations using IfcIndexedColourMap, or retaining distinct surface styles after applying boolean operations
+| 
+
+| Item
+| Styling by item: Textures
+| 0.8% (2)
+| `IfcSurfaceStyleWithTextures` and three subtypes of `IfcSurfaceTexture` for a specialization of the above with texture as a binary blob, a compressed inline literal or an external URI reference. The complexity of supporting textures is mostly related to handling and defining texture coordinates (UV) on the procedural geometries (such as sweeps and booleans). Most likely `IfcReparametrisedCompositeCurveSegment` is also intended for supporting textures so that the U space of the profile prior to extrusion can be controlled.
+|
+
+| Item
+| Mapped items / reusable definitions
+| 46.3	1247
+| `IfcMappedItem` and type object occurrences: Instancing and transformations: one definition, multiple placed occurrences with transforms. In IFC2X3 it was not allowed to re-use the full representation as a whole, later in IFC4 that is possible.
+|
+
+| Item
+| (Non-)uniform scaling and mirroring
+| -
+| `IfcMappedItem` is also the only mechanism in IFC that supports scaling and mirroring.
+|
+
+| Item
+| Composite representations (IfcGeometricSet, IfcCompositeProfileDef, multiple shape representation items)
+| 51.4% (231)
+| Sets of curves, surfaces, and points combined into a single representation; multi-rep shape representations for one object.
+| gml:MultiCurve, gml:MultiSurface, gml:CompositeCurve, gml:CompositeSurface
+
+| Item
+| Topological representations for analytical structures
+| 0.3% (760)
+| `IfcEdge` `IfcVertex` `IfcFace` `IfcTopologyRepresentation` Explicit topology (vertices, edges, faces) as top-level items; often used in structural/analytical models.
+|
+
+| Item
+| Point clouds and coverages
+| 0.2% (1)
+| `IfcShapeRepresentation` + `IfcCartesianPointList3D`
+|
+
+| Context
+| Representation context (IfcGeometricRepresentationContext): identifier, target scale, clearance geometries, subcontexts
+| -
+| Defines modeling context: dimensionality, precision, world coordinate system, true north, representation identifiers; may host clearance contexts.
+|
+
+| Context
+| Tolerance and precision settings
+| -
+| `IfcGeometricRepresentationContext.Precision` Model-level precision and tolerances that influence how geometry is interpreted and when elements are considered coincident. Only linear tolerance, no angular setting and no local (e.g per-vertex) possibilities.
+|
+
+| Georeferencing
+| Local engineering CRS (IfcGeometricRepresentationContext.WorldCoordinateSystem, true north)
+| -
+| Defines the local engineering coordinate system
+|
+
+| Georeferencing
+| Map/projection-based georeferencing incl. vertical reference
+| 12.4% (2)
+| `IfcMapConversion`, `IfcProjectedCRS` Conversion from local model coordinates to a map/projected CRS; explicit link to EPSG or other CRS identifiers; since IFC4/IFC4x3.
+| ISO 19111 referencing by coordinates and transformations; SFA: SRID on geometries.
+
+| Georeferencing
+| Postal address
+| 38.6% (3)
+| `IfcPostalAddress`, `Pset_Address`
+|
+
+| Georeferencing
+| IfcSite reference coordinates
+| -
+| `IfcSite` has DMS reference coords for latitude and longitude
+|
+
+|===
+
+=== Methodology for testing prevalence.
+
+Testing the prevalence of entities in existing sample models is often criticized because it is hard to find a body of representative IFC models (every tool and vendor cater to their own niche) and prevalence does not equate value. Lastly, per definition, an approach like this is backwards looking and not forward looking. At the same time, the investigation into 3D GeoSPARQL is explicitly use-case driven.
+
+A random sample of 1_000 files (dataset 1) is taken from a collection of models for which it is allowed to publish in aggregate form. For novel concepts such as (IfcLinearPlacement, IfcRelInterferes, IfcAlignmentSegment, ...) a 500 file sample of IFC4.3 files is selected (dataset 2; because the amount of models for older schema versions is larger). It is possible that there are invalid or partial files in this sample, there is no verdict on quality, correctness or applicability of these files. Example files from the specification can have a distorting impact on the sample, also there is no filtering for (near-) duplicates. Some values such as IfcSite.RefLatitude -Longitude are well known to contain placeholder values on older exports such as based on the headquarters of the software vendor.
+
+For performance reasons we don't use an IFC parser for testing the prevalence of entities. Therefore, in theory it is possible that we match fragments of comments or human readable text in the model, but this is given the patterns highly unlikely. We use ripgrep `rg` to query the model as text files on disk. Due to the text-based parsing we cannot fully asses the context in which entities are used - in particular entities like IfcRelAggregates are discussed here in an building-element context, but are also found in the spatial structure and therefore the prevalence is reported higher.
+
+[cols="3,1,1,1",options="header"]
+|===
+| Query string
+| Dataset index
+| % of models
+| avg nr instances when used
+
+| IFCRELAGGREGATES
+| 1
+| 96.9
+| 29
+| IFCCARTESIANPOINT
+| 1
+| 99.2
+| 34194
+| PROFILEDEF
+| 1
+| 76.9
+| 763
+| IFCANNOTATIONFILLAREA\|IFCANNOTATIONSURFACE\|IFCDRAUGHTINGCALLOUT\|IFCFILLAREASTYLEHATCHING\|IFCTEXTLITERAL
+| 1
+| 11.6
+| 101
+| IFCFACETEDBREP
+| 1
+| 43.9
+| 876
+| IFCADVANCEDBREP
+| 1
+| 6.5
+| 112
+| IFCTESSELLATEDFACESET\|IFCTRIANGULATEDFACESET\|IFCPOLYGONALFACESET
+| 1
+| 12.6
+| 163
+| IFCTRIANGULATEDIRREGULARNETWORK
+| 2
+| 2
+| 1
+| IFCEXTRUDEDAREASOLID\|IFCREVOLVEDAREASOLID\|IFCFIXEDREFERENCESWEPTAREASOLID\|IFCSURFACECURVESWEPTAREASOLID\|IFCDIRECTRIXDERIVEDREFERENCESWEPTAREASOLID
+| 1
+| 75.5
+| 703
+| IFCSHAPEREPRESENTATION.*'Axis
+| 1
+| 47.6
+| 321
+| IFCBOOLEANRESULT\|IFCBOOLEANCLIPPINGRESULT
+| 1
+| 30.6
+| 122
+| IFCBLOCK\|IFCRECTANGULARPYRAMID\|IFCRIGHTCIRCULARCONE\|IFCRIGHTCIRCULARCYLINDER\|IFCSPHERE
+| 1
+| 1.7
+| 8
+| IFCCURVEBOUNDEDPLANE\|IFCCURVEBOUNDEDSURFACE\|IFCBSPLINESURFACE\|IFCCYLINDRICALSURFACE\|IFCPLANE\(\|IFCSPHERICALSURFACE\|IFCTOROIDALSURFACE\|IFCSURFACEOFLINEAREXTRUSION\|IFCSURFACEOFREVOLUTION
+| 1
+| 31.8
+| 1521
+| IFCSTYLEDITEM\|IFCSURFACESTYLE\|IFCCURVESTYLE
+| 1
+| 68.3
+| 1458
+| -
+| 
+| 
+| 
+| IFCBLOBTEXTURE\|IFCIMAGETEXTURE\|IFCPIXELTEXTURE
+| 1
+| 0.8
+| 2
+| IFCMAPPEDITEM
+| 1
+| 46.3
+| 1247
+| -
+| 
+| 
+| 
+| IFCGEOMETRICSET\|IFCCOMPOSITEPROFILEDEF\|IFCGEOMETRICCURVESET\|IFCSHAPEREPRESENTATION\(.*\(.*,
+| 1
+| 51.4
+| 231
+| IFCTOPOLOGYREPRESENTATION
+| 1
+| 0.3
+| 760
+| IFCSHAPEREPRESENTATION.*'Point
+| 1
+| 0.2
+| 1
+| -
+| 
+| 
+| 
+| -
+| 
+| 
+| 
+| -
+| 
+| 
+| 
+| IFCPROJECTEDCRS\|IFCGEOGRAPHICCRS\|IFCMAPCONVERSION\|IFCRIGIDOPERATION
+| 2
+| 12.4
+| 2
+| IFCPOSTALADDRESS\|Pset_Address
+| 1
+| 38.6
+| 3
+| -
+| 
+| 
+|
+|===

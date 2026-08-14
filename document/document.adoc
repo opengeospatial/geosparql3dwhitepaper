@@ -57,6 +57,8 @@ include::sections/90-annex-a.adoc[]
 
 include::sections/91-annex-b.adoc[]
 
+include::sections/92-annex-c.adoc[]
+
 ////
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex

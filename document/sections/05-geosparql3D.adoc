@@ -18,7 +18,7 @@ Semantic improvement
 
 ====== Description
 
-GeoSPARQL primarily focuses on spatial representation and querying rather than visualization, formats such as glTF and 3D Tiles could provide a complementary representation and delivery mechanism for the resulting 3D data. GeoSPARQL should include ways to represent 3D data in a knowledge graph. 3D data should be included in common 3D formats and 3D data should be includable as a text literal and a file representation.
+GeoSPARQL primarily focuses on spatial representation and querying rather than visualization, formats such as glTF and 3D Tiles could provide a complementary representation and delivery mechanism for the resulting 3D data. GeoSPARQL should include ways to represent 3D data in a knowledge graph. 3D data should be included in common 3D formats and 3D data should be includable as a text literal and a file representation. Where 3D data is intended for web-based visualization, formats should preferably be selected that are well supported by commonly used JavaScript and web-mapping libraries. This would facilitate the visualization and delivery of 3D knowledge-graph data on the web and help establish a practical bridge between BIM and GIS, enabling 3D information originating from BIM to be queried, linked, and visualized together with geospatial data.
 
 Some common formats which could be considered for inclusion are:
 
@@ -119,22 +119,6 @@ ontext explicit and help prevent misinterpretation of the query results.
 
 ===== Extension {counter:ext}: Directional relations of 3D geometries
 
-Topological relations describe the relationships between objects independently of perspective. 
-Relative directional relations, on the other hand, describe relationships between objects that depend on a reference frame or viewpoint. 
-In 2D, relations such as left of, above, and beside are often sufficient. In 3D, additional relations become relevant, such as above/below and in front of/behind
-
-Relative directional relations can also provide context in 2D, 
-but many spatial situations can already be described using topology (e.g., inside, touching, overlapping). 
-In 3D environments, however, directional relations become more important because height and depth introduce 
-additional dimensions that cannot be distinguished by topology alone.
-
-For example, describing that a "damage location is underneath a bridge deck" requires both a topological relation (e.g., a 3D contains relation) 
-and a relative directional relation (e.g., below).
-
-This combination of relative location and topological relations has been described by Anne Göbels and Jakob Beetz in the Reloc ontology. https://annegoebels.github.io/reloc/[Reloc ontology].
-
-This ontology brings natural language closer to the 3D model by formalizing descriptions of relative directions and topological relationships.
-
 ====== GitHub Issue URI
 
 none
@@ -145,9 +129,24 @@ Semantic improvement
 
 ====== Description
 
-GeoSPARQL should be able to define or function directional relations as above, on the right of, front, etc.
+Topological relations describe the relationships between objects independently of perspective. 
+Relative directional relations, on the other hand, describe relationships between objects that depend on a reference frame or viewpoint. 
+Directional relationships distinguishes different perspectives 
+- viewer-centered, deictic perspective (1 constellation, 2 observers results in 2 spatial relationships)
+- object-centered, intrisic perspective (object orientation as reference frame)
+- extrinsic, external perspective (universal reference systems like gravity vector, coordinate systems, axes, linear reference elements)
 
+In 2D, relations such as left of, above, and beside are often sufficient. In 3D, additional relations become relevant, such as above/below and in front of/behind.
 
+Relative directional relations can also provide context in 2D, but many spatial situations can already be described using topology (e.g., inside, touching, overlapping). 
+In 3D environments, however, directional relations become more important because height and depth introduce additional dimensions that cannot be distinguished by topology alone.
+
+For example, describing that a "damage location is underneath a bridge deck" requires both a topological relation (e.g., a 3D contains relation) 
+and a relative directional relation (e.g., below).
+
+This combination of relative location and topological relations has been described by Anne Göbels and Jakob Beetz in the Reloc ontology. https://annegoebels.github.io/reloc/[Reloc ontology].
+
+This ontology brings natural language closer to the 3D model by formalizing descriptions of relative directions and topological relationships.
 
 
 ==== Proposed extensions for GeoSPARQL 3D
@@ -164,7 +163,8 @@ Semantic improvement
 
 ====== Description
 
-GeoSPARQL should be able to query for the shortest route through a 3D space made up of smaller, connected 3D spaces when topological relations are not available.
+GeoSPARQL should be able to query for the shortest route through a 3D space made up of smaller, connected 3D spaces when topological relations are not available. 
+By enabling this, GeoSPARQL can describe spatial data and where features are located, while also supporting analysis/description of how things can move between them. By deriving connections between 3D objects(spaces) using their geometry and openings, GeoSPARQL could support shortest-path and accessibility analysis without requiring all topological relationships to be explicitly modelled. This could be useful for applications such as emergency evacuation, indoor navigation, fire compartmentation and safety analysis, accessibility assessment, and analysing potential pathways for smoke or fire spread.
 
 
 ===== Extension {counter:ext}: Appearance of 3D geometries
@@ -187,6 +187,8 @@ Materials include:
 - Colors of surfaces with light diffusion parameters
 - Images as textures, which are associated with surfaces of the 3D object
 
+The main purpose is not to make GeoSPARQL a visualisation format, but to allow existing rich 3D formats to retain their textures, colours and materials while their geometries can still be queried and analysed spatially. Visualisation is then one possible application of this information. This could also enable queries based on material or texture information, allowing users to combine spatial and material information. For example, a user could query: “Find all features within this area that contain lead.” Visualisation is then one possible application of this information, while material-based spatial analysis provides additional possibilities for applications such as building safety, renovation, and environmental risk assessment.
+
 ===== Extension {counter:ext}: Multi-component 3D geometries
 
 ====== GitHub Issue URI
@@ -201,6 +203,8 @@ Semantic improvement
 
 GeoSPARQL should include ways to define multi-component 3D geometries, whereas each component expresses its own semantics.
 For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph.
+
+Existing standards such as IFC, CityGML, SML already provide mechanisms for decomposing 3D objects into 3D parts. GeoSPARQL could build on these existing relationships, allowing the geometries of individual components to be queried and analysed together with their semantics. This would enable queries that combine spatial and semantic information, for example, identifying all building components within a specific area that are made of lead, or finding all walls that are part of a particular building and intersect a given spatial region.
 
 ===== Extension {counter:ext}: Positioning of 3D geometries
 

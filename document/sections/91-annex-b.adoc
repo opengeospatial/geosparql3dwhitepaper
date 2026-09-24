@@ -185,75 +185,75 @@ link:https://dev.opencascade.org/doc/refman/html/class_geom___vector_with_magnit
 
 Surface:
 |===
-| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT | X3D
-|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_Surfac[GM_Surface] | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Surface] |  |  |||
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
+|link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_Surfac[GM_Surface] | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Surface] |  |  ||
 
-|GM_PolyhedralSurface | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:PolyhedralSurface] |  |  |||
+|GM_PolyhedralSurface | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:PolyhedralSurface] |  |  ||
 
-|GM_TriangulatedSurface | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:TriangulatedSurface] |  link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm[IfcTriangulatedFaceSet]  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.triangulated_face[triangulated_face] |||
+|GM_TriangulatedSurface | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:TriangulatedSurface] |  link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm[IfcTriangulatedFaceSet]  | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.triangulated_face[triangulated_face] ||
 
-|GM_Tin | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Tin] |  |  |||
+|GM_Tin | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Tin] |  |  ||
 
-|GM_SurfacePatch | gml:AbstractSurfacePatch|  |  |||
+|GM_SurfacePatch | gml:AbstractSurfacePatch|  |  ||
 
-| | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Triangle] |  |  |||
+| | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Triangle] |  |  ||
 
-| | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Rectangle] |  |  |||
+| | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Rectangle] |  |  ||
 
-|GM_PointGrid| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:PointGrid] |  |  |||
+|GM_PointGrid| link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:PointGrid] |  |  ||
 
-|GM_ParametricCurveSurface| gml:AbstractParametricCurveSurface|  |  |||
+|GM_ParametricCurveSurface| gml:AbstractParametricCurveSurface|  |  ||
 
-|GM_GriddedSurface| gml:AbstractGriddedSurface|  |  |||
+|GM_GriddedSurface| gml:AbstractGriddedSurface|  |  ||
 
-|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlane.htm[IfcPlane] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.plane[plane] |link:https://dev.opencascade.org/doc/refman/html/class_geom___plane.html[Geom_Plane] ||
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlane.htm[IfcPlane] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.plane[plane] |link:https://dev.opencascade.org/doc/refman/html/class_geom___plane.html[Geom_Plane] |
 
-|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm[IfcCylindricalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cylindrical_surface[cylindrical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___cylindrical_surface.html[Geom_CylindricalSurface] ||
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm[IfcCylindricalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cylindrical_surface[cylindrical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___cylindrical_surface.html[Geom_CylindricalSurface] |
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.conical_surface[conical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___conical_surface.html[Geom_ConicalSurface] ||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.conical_surface[conical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___conical_surface.html[Geom_ConicalSurface] |
 
-|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSphericalSurface.htm[IfcSphericalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.spherical_surface[spherical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___spherical_surface.html[Geom_SphericalSurface] ||
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSphericalSurface.htm[IfcSphericalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.spherical_surface[spherical_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___spherical_surface.html[Geom_SphericalSurface] |
 
-|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcToroidalSurface.htm[IfcToroidalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.toroidal_surface[toroidal_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___toroidal_surface.html[Geom_ToroidalSurface] ||
+|| |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcToroidalSurface.htm[IfcToroidalSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.toroidal_surface[toroidal_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___toroidal_surface.html[Geom_ToroidalSurface] |
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.degenerate_toroidal_surface[degenerate_toroidal_surface] |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.degenerate_toroidal_surface[degenerate_toroidal_surface] ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.dupin_cyclide_surface[dupin_cyclide_surface] |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.dupin_cyclide_surface[dupin_cyclide_surface] ||
 
-|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm[IfcBSplineSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_surface[b_spline_surface]  |link:https://dev.opencascade.org/doc/refman/html/class_geom___b_spline_surface.html[Geom_BSplineSurface] ||
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm[IfcBSplineSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_surface[b_spline_surface]  |link:https://dev.opencascade.org/doc/refman/html/class_geom___b_spline_surface.html[Geom_BSplineSurface] |
 
-|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurfaceWithKnots.htm[IfcBSplineSurfaceWithKnots] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_surface_with_knots[b_spline_surface_with_knots]  |||
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurfaceWithKnots.htm[IfcBSplineSurfaceWithKnots] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_surface_with_knots[b_spline_surface_with_knots]  ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uniform_surface[uniform_surface] |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uniform_surface[uniform_surface] ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uasi_uniform_surface[uasi_uniform_surface] |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uasi_uniform_surface[uasi_uniform_surface] ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bezier_surface[bezier_surface]  |link:https://dev.opencascade.org/doc/refman/html/class_geom___bezier_surface.html[Geom_BezierSurface] ||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bezier_surface[bezier_surface]  |link:https://dev.opencascade.org/doc/refman/html/class_geom___bezier_surface.html[Geom_BezierSurface] |
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_b_spline_surface[rational_b_spline_surface]  |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_b_spline_surface[rational_b_spline_surface]  ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.locally_refined_spline_surface[locally_refined_spline_surface]   |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.locally_refined_spline_surface[locally_refined_spline_surface]   ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_locally_refined_spline_surface[rational_locally_refined_spline_surface]  |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_locally_refined_spline_surface[rational_locally_refined_spline_surface]  ||
 
 || | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedPlane.htm[IfcCurveBoundedPlane] +
-link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedSurface.htm[IfcCurveBoundedSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.curve_bounded_surface[curve_bounded_surface]  |||
+link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedSurface.htm[IfcCurveBoundedSurface] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.curve_bounded_surface[curve_bounded_surface]  ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_patch[surface_patch] |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_patch[surface_patch] ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.offset_surface[offset_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___offset_surface.html[Geom_OffsetSurface] ||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.offset_surface[offset_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___offset_surface.html[Geom_OffsetSurface] |
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.oriented_surface[oriented_surface] |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.oriented_surface[oriented_surface] ||
 
-|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_replica[surface_replica] |||
+|| | |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.surface_replica[surface_replica] ||
 
-|| | ||link:https://dev.opencascade.org/doc/refman/html/class_geom___surface.html[Geom_Surface] ||
+|| | ||link:https://dev.opencascade.org/doc/refman/html/class_geom___surface.html[Geom_Surface] |
 
-|| | ||link:https://dev.opencascade.org/doc/refman/html/class_geom___osculating_surface.html[Geom_OsculatingSurface] ||
+|| | ||link:https://dev.opencascade.org/doc/refman/html/class_geom___osculating_surface.html[Geom_OsculatingSurface] |
 
-|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangularTrimmedSurface.htm[IfcRectangularTrimmedSurface] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rectangular_trimmed_surface[rectangular_trimmed_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___rectangular_trimmed_surface.html[Geom_RectangularTrimmedSurface] ||
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangularTrimmedSurface.htm[IfcRectangularTrimmedSurface] | link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rectangular_trimmed_surface[rectangular_trimmed_surface] |link:https://dev.opencascade.org/doc/refman/html/class_geom___rectangular_trimmed_surface.html[Geom_RectangularTrimmedSurface] |
 
-|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSurface.htm[IfcSectionedSurface] | |||
+|| | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSurface.htm[IfcSectionedSurface] | ||
 |===
 
 Primitives:
@@ -413,46 +413,45 @@ Volume:
 Volume geometry is a way of representing a 3D object by directly defining the entire region of space it occupies, rather than just its boundary.
 
 |===
-| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT | X3D
+| ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 || ||link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.block_volume[block_volume]
-  |   |  |
+  |   |  
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.pyramid_volume[pyramid_volume]  |   |  |
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.pyramid_volume[pyramid_volume]  |   |  
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.eccentric_conical_volume[eccentric_conical_volume]  |   |  |
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.eccentric_conical_volume[eccentric_conical_volume]  |   |  
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.spherical_volume[spherical_volume]   |   |  |
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.spherical_volume[spherical_volume]   |   |  
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.ellipsoid_volume[ellipsoid_volume] |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.ellipsoid_volume[ellipsoid_volume] |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cylindrical_volume[cylindrical_volume]   |   |  |
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cylindrical_volume[cylindrical_volume]   |   |  
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.wedge_volume[wedge_volume]  |   |  |
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.wedge_volume[wedge_volume]  |   |  
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.tetrahedron_volume[tetrahedron_volume]   |   |  |
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.tetrahedron_volume[tetrahedron_volume]   |   |  
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.hexahedron_volume[hexadron_volume] |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.hexahedron_volume[hexadron_volume] |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.toroidal_volume[toroidal_volume] |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.toroidal_volume[toroidal_volume] |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bezier_volume[bezier_volume] |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.bezier_volume[bezier_volume] |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uniform_volume[uniform_volume] |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.uniform_volume[uniform_volume] |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.quasi_uniform_volume[quasi_uniform_volume]   |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.quasi_uniform_volume[quasi_uniform_volume]   |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_b_spline_volume[rational_b_spline_volume]  |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_b_spline_volume[rational_b_spline_volume]  |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.trimmed_volume[trimmed_volume]  |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.trimmed_volume[trimmed_volume]  |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.locally_refined_spline_volume[locally_refined_spline_volume]  |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.locally_refined_spline_volume[locally_refined_spline_volume]  |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_locally_refined_spline_volume[rational_locally_refined_spline_volume]  |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.rational_locally_refined_spline_volume[rational_locally_refined_spline_volume]  |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_volume[b_spline_volume] |  ||
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_volume[b_spline_volume] |  |
 
-|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_volume_with_knots[b_spline_volume_with_knots] |  ||
-
+|| |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_volume_with_knots[b_spline_volume_with_knots] |  |
 |===
 
 Axis/Placement: 

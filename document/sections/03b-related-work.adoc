@@ -258,7 +258,11 @@ The most successful use case on BIM data is **coordination and visualization** w
 
 ==== CGAL &#8594; SFCGAL &#8594; PostGIS
 
+
+
 ==== OpenCASCADE
+
+
 
 ===== OpenCASCADE-inspired BRep ontology
 

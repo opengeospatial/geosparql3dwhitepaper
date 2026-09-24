@@ -90,7 +90,7 @@ causing Query3D to return true for Disjoint and Query2D to return false.
 
 [#img_Disjoint,reftext='{figure-caption} {counter:figure-num}']
 .Disjoint with Query2D and Query3D functions
-image::../figures/Disjoint_with_Query2D_en_Query3D.png[align="center"]
+image::../figures/Disjoint_with_Query2D_and_Query3D.png[align="center"]
 
 The example assumes that both geometries are in the same dimension (2D). 
 It is also common to analyze the topological relationship between a geometries of differt dimensions 0D, 1D, 2D or 3D. 

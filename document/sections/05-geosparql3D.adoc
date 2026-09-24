@@ -28,6 +28,9 @@ Some common formats which could be considered for inclusion are:
 - https://www.web3d.org[X3D Format]
 - https://openusd.org/dev/spec.html[openUSD]
 
+[#img_LBD_Server,reftext='{figure-caption} {counter:figure-num}']
+.Linked Building Data Server using Semantic Graphs and GLTF-Models
+image::../figures/LBD_Server_GUI.png[align="center"]
 
 ===== Extension {counter:ext}: Topological relations of 3D geometries
 
@@ -63,17 +66,17 @@ in a 3D environment could be an interesting direction for future research.
 
 [#img_Topological_relations,reftext='{figure-caption} {counter:figure-num}']
 .Surface and line topological relations in 2D and 3D space
-image::../figures/Surface_and_Line_Topological_Relations_in_2D_and_3D_Space.png[align="center"]
+image::../figures/Surface_and_Line_Topological_Relations_in_2D_and_3D_Space.png[align="center", width="60%"]
 
-Disjoint (R031)
-Inside (R223)
-Touch (R287, R279)
-Covers (R439, R435)
-Crosses (R159, R243, R247, R255)
-Equal (R403, R407, R415)
-CoveredBy (R467, R471, R479)
-Contains (R179, R183, R191)
-Overlaps (R499, R503)
+Disjoint (R031) +
+Inside (R223) + 
+Touch (R287, R279) +
+Covers (R439, R435) +
+Crosses (R159, R243, R247, R255) +
+Equal (R403, R407, R415) +
+CoveredBy (R467, R471, R479) +
+Contains (R179, R183, R191) +
+Overlaps (R499, R503) +
 Nameless topological situation (R127, R375, R055, R063, R339, R095, R343, R119, R351)
 
 The semantic definition of a topological relationship, for example disjoint, is identical in both two- and three-dimensional spaces, 
@@ -90,7 +93,7 @@ causing Query3D to return true for Disjoint and Query2D to return false.
 
 [#img_Disjoint,reftext='{figure-caption} {counter:figure-num}']
 .Disjoint with Query2D and Query3D functions
-image::../figures/Disjoint_with_Query2D_and_Query3D.png[align="center"]
+image::../figures/Disjoint_with_Query2D_and_Query3D.png[align="center", width="50%"]
 
 The example assumes that both geometries are in the same dimension (2D). 
 It is also common to analyze the topological relationship between a geometries of differt dimensions 0D, 1D, 2D or 3D. 
@@ -116,12 +119,19 @@ the system should indicate that the question is not directly applicable. Instead
 or confirm the projection to be used before performing the topological evaluation. This would make the dimensional c
 ontext explicit and help prevent misinterpretation of the query results.
 
+[#img_Topological_relations_2D, reftext='{figure-caption} {counter:figure-num}']
+.2D Topological relations for 3D objects
+image::../figures/Topological_relations_2D.png[align="center", width="50%"]
+
+[#img_Topological_relations_3D, reftext='{figure-caption} {counter:figure-num}']
+.3D Topological relations for 3D objects
+image::../figures/Topological_relations_3D.png[align="center", width="50%"]
 
 ===== Extension {counter:ext}: Directional relations of 3D geometries
 
 ====== GitHub Issue URI
 
-none
+This extension is included without a corresponding GitHub issue. The motivation is instead based on the identified need to represent and query directional relationships between 3D geometries. This need is also supported by related work by Anne Göbels, Jakob Beetz, and Ina Heise, as discussed in the Related Work chapter.
 
 ====== Category
 
@@ -148,6 +158,9 @@ This combination of relative location and topological relations has been describ
 
 This ontology brings natural language closer to the 3D model by formalizing descriptions of relative directions and topological relationships.
 
+[#img_Topological_and_directional_relations_3D, reftext='{figure-caption} {counter:figure-num}']
+.3D Topological and Directional relations for 3D objects
+image::../figures/Topological_and_directional_relation_combined.png[align="center", width="50%"]
 
 ==== Proposed extensions for GeoSPARQL 3D
 
@@ -165,6 +178,15 @@ Semantic improvement
 
 GeoSPARQL should be able to query for the shortest route through a 3D space made up of smaller, connected 3D spaces when topological relations are not available. 
 By enabling this, GeoSPARQL can describe spatial data and where features are located, while also supporting analysis/description of how things can move between them. By deriving connections between 3D objects(spaces) using their geometry and openings, GeoSPARQL could support shortest-path and accessibility analysis without requiring all topological relationships to be explicitly modelled. This could be useful for applications such as emergency evacuation, indoor navigation, fire compartmentation and safety analysis, accessibility assessment, and analysing potential pathways for smoke or fire spread.
+
+Ideas: https://isprs-archives.copernicus.org/articles/XLII-4/11/2018/ USING THE COMBINED LADM-INDOORGML MODEL TO SUPPORT BUIILDING EVACUATION
+
+and: 3D pgRouting and Visualization in Cesium JS Using the Integrated Model of LADM and IndoorGML
+
+[#img_Routing_Space_door_nodes_and_edges, reftext='{figure-caption} {counter:figure-num}']
+.Space and doors nodes and connecting edges for routing. 
+image::../figures/Space-node-Door-node-and-Edge.png[align="center", width="50%"]
+
 
 
 ===== Extension {counter:ext}: Appearance of 3D geometries

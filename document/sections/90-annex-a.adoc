@@ -709,6 +709,7 @@ multipointfromwkb"
 |  | link:https://postgis.net/docs/ST_HasZ.html[st_hasZ] |  |
 |  | st_summary |  |
 |  | link:https://postgis.net/docs/ST_Zmflag.html[st_zmflag] |  |
+
 |===
 
 === Topography
@@ -731,12 +732,14 @@ multipointfromwkb"
 === Triangulation
 |===
 | GeoSPARQL | PostGIS | H2GIS | Spatialite
+
 |  |  | link:https://h2gis.readthedocs.io/en/latest/ST_ConstrainedDelaunay.html[st_constraineddelaunay] | constraineddelaunaytriangulation
 |  |  link:https://postgis.net/docs/ST_DelaunayTriangles.html[st_DelaunayTriangles] | |
 |  | link:https://postgis.net/docs/CG_ConstrainedDelaunayTriangles.html[CG_ConstrainedDelaunayTriangles]  | |
 |  |  |  | delaunaytriangulation 
 |  |  | link:https://h2gis.readthedocs.io/en/latest/ST_Delaunay.html[st_delaunay] |
 |  | link:https://postgis.net/docs/CG_3DAlphaWrapping.html[CG_AlphaWrapping] |  | 
+
 |===
 
 === Export/export

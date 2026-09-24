@@ -32,14 +32,16 @@ The X3D Ontology has also been used to transform non-semantic 3D file formats in
 
 === Domain‑specific 3D ontologies
 
-| Domain | Example ontologies / vocabularies | Citations |
-|--------|-----------------------------------|-----------|
+|===
+| Domain | Example ontologies / vocabularies | Citations 
+
 | Buildings / AEC | **BOT (Building Topology Ontology)** for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies <<flotynski2020bot>>. |
 | Cultural heritage | Building-conservation ontology for 3D annotations <<messaoudi2018heritage>>; CIDOC CRM–based models for 3D CH objects and provenance <<walczak2019inference>> <<amico2106ontological>> <<гончар2021ontological>>. |
 | Robotics / manufacturing | **ENVON** integrates contextual, topologic, geometric info for 3D environments; BFO‑based 3D shape ontology; BREP/CSG distinctions <<zhao2024envon>>. |
 | Grottoes & heritage | **ChgOnto** for grotto components, spatial relations, with GeoSPARQL + CIDOC CRM <<yang2023knowledge>>. |
-| Medicine & Chemistry | **3D Microscopy Metadata Standards (3D-MMS)** | <<ropelewski_standard_2022>> |
+| Medicine & Chemistry | **3D Microscopy Metadata Standards (3D-MMS)** | <<ropelewski_standard_2022>> 
 | Geo-spatial | **OntoCityGML** | <<CHADZYNSKI2021100106>> |
+|===
 
 **Figure 1:** Representative groups of 3D-related web ontologies
 
@@ -53,7 +55,7 @@ The X3D Ontology has also been used to transform non-semantic 3D file formats in
 
 In the research domain of cultural heritage, 3D models of either cultural heritage artifacts (possibly georeferenced), 3D models of archaeological sites or simply 3D models of ancient buildings are becoming increasinly common.
 
-===== Use Cases
+==== Use Cases
 
 Use Cases in the Cultural Heritage domain include, but are not limited to, the following main interests:
 
@@ -68,11 +70,11 @@ Researchers mark noteworthy aspects of the cultural artifact as 3D annotations <
 
 **Knowledge Graphs as Metadata descriptions:** With the advent of more 3D models being published, the relevance of their creation parameters <<homburgheritagescience2021>>, their contents and their object metadata increases for the usecases of filtering them and also for the possibly automated selection of suitable cultural heritage metadata for e.g. machine learning classifications. Currently, many metadata standards fulfil parts of the description chain and a unified vocabulary to described data types seems to be missing.
 
-===== Research applications making use of 3D models in Cultural Heritage
+==== Research applications making use of 3D models in Cultural Heritage
 
 This section discusses research projects with 3D contents based on the technologies they use as elaborated in the previous section.
 
-====== 3D models of cuneiform tablets
+===== 3D models of cuneiform tablets
 
 Cuneiform tablets from ancient Iran provide an interesting research area, since they combine a 3D artifact with textual imprints that are of interest to a variety of research communities including Assyriologsts, Digital Humanists, Computational Linguists and last but not least Computer Scientists.
 The creation of 3D models of cuneiform tablets provides the best accessibility to the specificities of the original artifact in its absence and 3D scans have been used by computer scientists as the basis for certain machine learning application tasks, even though to this day only as a provision for 2D renderings of their surfaces.
@@ -84,8 +86,6 @@ To describe 3D meshes, several vocabularies have been developed in the context o
 * https://situx.github.io/mesh-sparql/[MeshSPARQL]: A vocabulary to describe essential mesh elements
 * https://www.gigamesh.eu/ont/[Gigamesh Metadata Vocabulary]: A vocabulary which describes metadata of a 3D model. The metadata can be generated using the Gigamesh Software Framework
 * https://mainzed.pages.gitlab.rlp.net/homepages/mainzedmetadata/[3DCAP Vocabularies]: An ontology model to describe the creation of a 3D model. It has been applied to different scanning softwares
-
-
 
 === CityGML
 
@@ -128,8 +128,6 @@ While the thesis could construct a knowledge graph representation from CityGML, 
 Finally, <<CHADZYNSKI2021100106>> proposed OntoCityGML, an extension go the CityGML ontolog
 https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub
 Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph
-
-
 
 Other details and history of Onto CityGML.
 
@@ -279,10 +277,7 @@ The most successful use case on BIM data is **coordination and visualization** w
 
 ==== CGAL &#8594; SFCGAL &#8594; PostGIS
 
-
-
 ==== OpenCASCADE
-
 
 
 ===== OpenCASCADE-inspired BRep ontology

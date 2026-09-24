@@ -1,18 +1,24 @@
 == Abstract
 
-To come...
+GeoSPARQL provides a standard framework for storing, querying and representing geospatial information using RDF and SPARQL. Although GeoSPARQL 1.1 has some support for 3D geometries, its current vocabulary, geometry representations, and query functions provide limited support for 3D spatial data and functions. At the same time, the use of 3D spatial data is increasing across domains such as geospatial information, Building Information Modelling (BIM), construction, infrastructure, emergency response, cultural heritage, and computer graphics.
+
+This white paper investigates the requirements and opportunities for extending GeoSPARQL with improved 3D capabilities. It examines the current capabilities and limitations of GeoSPARQL 1.1, reviews related standards, data formats ontologies, and analyses use cases gathered from different domains. Particular attention is given to the representation and querying of 3D geometries and topology, semantic decomposition of complex 3D objects, interoperability with existing 3D standards, and functions in three-dimensional environments.
+
+The paper evaluates potential extensions according to their relevance, benefits, and technical feasibility. The objective is not to replace existing 3D modelling or geometry standards, but to investigate how GeoSPARQL can provide a common semantic and spatial query layer over heterogeneous 3D data. Such capabilities could enable machine-readable and interoperable 3D spatial analysis without requiring data from different domains to be converted into a single homogeneous representation. Potential benefits include improved integration of GIS, BIM, and other 3D data sources; spatial and semantic querying of complex 3D objects; 3D topology and connectivity analysis; route and accessibility analysis; and applications in construction, safety, emergency response, and other domains involving three-dimensional environments.
 
 == Preface
 
-To come...
+This white paper has been developed to investigate these questions and to identify potential directions for extending GeoSPARQL with improved 3D capabilities. It brings together requirements and use cases from different domains and examines existing standards, formats, ontologies, and implementations that may inform future development.
+
+The paper is intended as a basis for discussion within the OGC community and among current and prospective GeoSPARQL users and implementers. It does not propose a final specification, but instead identifies potential requirements, approaches, and areas for further investigation. The intention is to support future work towards interoperable 3D spatial querying while building on, rather than replacing, existing 3D standards and technologies.
 
 == Keywords
 
-To come...
+GeoSPARQL; 3D geospatial data; 3D BIM; semantic 3D modelling; 3D spatial querying; 3D geometry; 3D topology; RDF; SPARQL; BIM; IFC; CityGML; semantic interoperability; 3D routing;
 
 == Security Considerations
 
-The following security considerations apply...
+3D spatial data published as Linked Data may expose sensitive information about buildings, infrastructure, or access routes. Publishers should therefore consider the intended openness of the data and apply appropriate access controls where required. GeoSPARQL itself does not define access-control mechanisms.
 
 == Submitters
 
@@ -20,4 +26,12 @@ The following security considerations apply...
 |Name |Affiliation |OGC member
 
 |Nicholas J. Car | KurrawongAI | Yes
+|Homburg T. | i3mainz | Yes
+|de Sousa L. | Universidade de Lisboa | Yes
+|Knibbe F. | Triply | No
+|Chadzynski A. | Graphwise/Ontotext | No
+|Krijnen T. | AEC Geeks | No 
+|Pauwels P. |Eindhoven University of Technology | No 
+|Jonker R. | Geonovum | Yes 
+
 |===

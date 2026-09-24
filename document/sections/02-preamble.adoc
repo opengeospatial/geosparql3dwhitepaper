@@ -1,9 +1,27 @@
 == Scope
 
+This white paper addresses the potential extension of GeoSPARQL to support 3D spatial modelling, querying, and analysis. It also adresses the integration with existing 3D standards and formats, such as IFC, CityGML, and glTF; Also the benefits across domains including GIS, BIM, construction, infrastructure, emergency response, and cultural heritage are inside the scope.
+Existing 2D GeoSPARQL capabilities are considered where they are relevant to extending those capabilities to 3D, but improvements to 2D functionality in their own right are outside the scope of this paper.
+
 == Conformance
+This document is an informative OGC White Paper and does not define conformance classes or conformance requirements.
 
 == Normative References
+The following documents contain provisions that are referenced by this document and are necessary for its understanding and application:
+
+* [[[OGC-GeoSPARQL,OGC 22-047r1]]], Open Geospatial Consortium: *OGC GeoSPARQL 1.1*, 2024.
+* [[[OGC-SF,OGC 06-103r5]]], Open Geospatial Consortium: *OpenGIS Implementation Specification for Geographic information - Simple feature access - Part 1: Common architecture*.
 
 == Terms and Definitions
 
+Geodimension 
+This is the number of perpendicalar directions in which a geometry extends. A point, for example, extends in no direction, so its topological dimension is 0. A line has a length, but no width or height. Its topological dimension is 1. A cube has a topological dimension of 3.
+
+coordinatedimension
+In the geometric model that GeoSPARQL uses, points are the basic building blocks of geometry. A point geometry can have a different number of coordinates, depending on the space in which it is placed. A point on a flat map, or on the surface of a sphere, needs two coordinates. The __coordinate dimension__ is the number of coordinates in the points that define a Geometry. 
+
+spatialDimension
+In order to support linear referencing, geometries in GeoSPARQL can have a measure value. This is a relative position along a line or a curve, and does not extend the Geometry in space. The __spatial dimension__, therefore, can be used to denote the number of coordinates in a point, excluding the measurement value.
+
 == Conventions
+RDF classes, properties, and functions are represented using prefixed names. For example, geo:Geometry denotes a GeoSPARQL class, geo:hasGeometry a GeoSPARQL property, and geof:distance a GeoSPARQL function. Geometry examples are expressed using established encodings such as WKT where appropriate. 

@@ -32,6 +32,11 @@ Some common formats which could be considered for inclusion are:
 .Linked Building Data Server using Semantic Graphs and GLTF-Models
 image::../figures/LBD_Server_GUI.png[align="center"]
 
+====== Related work
+
+X3D Ontology
+
+
 ===== Extension {counter:ext}: Topological relations of 3D geometries
 
 ====== GitHub Issue URI
@@ -210,6 +215,10 @@ Materials include:
 - Images as textures, which are associated with surfaces of the 3D object
 
 The main purpose is not to make GeoSPARQL a visualisation format, but to allow existing rich 3D formats to retain their textures, colours and materials while their geometries can still be queried and analysed spatially. Visualisation is then one possible application of this information. This could also enable queries based on material or texture information, allowing users to combine spatial and material information. For example, a user could query: “Find all features within this area that contain lead.” Visualisation is then one possible application of this information, while material-based spatial analysis provides additional possibilities for applications such as building safety, renovation, and environmental risk assessment.
+
+====== Related work
+
+IIF 3D
 
 ===== Extension {counter:ext}: Multi-component 3D geometries
 

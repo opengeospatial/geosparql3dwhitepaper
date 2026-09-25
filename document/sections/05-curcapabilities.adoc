@@ -1,5 +1,7 @@
 == Current capabilities
 
+Realizing the motivation described above requires technical and semantic support for the standardized representation, integration, and querying of 3D spatial information. GeoSPARQL could provide such a foundation. First it is necessary to understand the current capabilities of the standard. This provides the basis for considering where additional capbilities or extensions may be needed. 
+
 === GeoSPARQL
 
 GeoSPARQL is the most common geospatial extension of SPARQL. It was accepted as an OGC standard in 2012 and revised as GeoSPARQL 1.1 in 2024.

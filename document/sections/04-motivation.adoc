@@ -8,23 +8,26 @@ If one desires digital, automated processing or analysis of 3D spatial questions
 
 Imagine a constructor who wants to use real-time sensor data at a construction site in combination with modelled 3D data and 3D base registration data. By combining this the person wants to visualize the site, perform accurate spatial checks and calculations, and automatically update machine instructions for safe, efficient and autonomous execution" 
  
-The system uses 3D GeoSPARQL to integrate the data of the 3D design model, the 3D base registration model and 3D real-time sensor data to: 
-- Spatially associate sensor data with objects in the design and registration model 
-- Calculate the permissible tolerances 
-- Detect the deviations 
-- Dynamic adjust the design model 
-- Instruct the machine with the changes  
-- Visualize the new situation
+The system uses 3D GeoSPARQL to integrate the data of the 3D design model, the 3D base registration model and 3D real-time sensor data to:
+ 
+- Spatially associate sensor data with objects in the design and registration model +
+- Calculate the permissible tolerances +
+- Detect the deviations +
+- Dynamic adjust the design model + 
+- Instruct the machine with the changes +  
+- Visualize the new situation +
 
 For both humans and machines, it must be unambiguous what is meant by the queries that are needed to do the job and the resulting answers. It should not matter whether the data is provided in a 3D-GIS, 3D-BIM or 3D-CG standard vocabulary.  
 
-==== A geo-spatial 3D specification would support data consumers by:
+**A geo-spatial 3D specification would support data consumers by:** 
+
  - access and understanding of 3D-geometry and 3D-topology from multiple sources; 
  - the integration of 3D-data geospatial and non-geospatial;
  - data quality evaluation of the given 3D-data;
  - Geometric and topological description in natural language.
 
-==== A geo-spatial 3D specification would support data providers by:
+**A geo-spatial 3D specification would support data providers by:**
+
  - Maximizing the use of 3D-geometry and 3D-topology data;
  - Defining multiple 3D topology or geometries;
  - Assuring the quality of 3D geospatial data.

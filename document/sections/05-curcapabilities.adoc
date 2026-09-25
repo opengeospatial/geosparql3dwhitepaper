@@ -131,15 +131,6 @@ However, there are functions which may take into account the Z coordinate, if th
 
 These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.
 
-==== Adoption of GeoSPARQL 1.1
-
-===== GeoSPARQL Aligments
-
-.Alignment: GeoSPARQL and Open Source Relational Databases with Geospatial Support
-
-See Annex A and Annex B (Text to write)
-
-
 ===== Geometry Topology Extension
 Another extension is the Geometry Topology extension. This provides query functions that return relationships between different geometries based on the topology vocabulary extension.
 
@@ -149,3 +140,11 @@ This kind of logical inference can also be applied to geometry. GeoSPARQL includ
 
 ===== Query Rewrite Extension
 GeoSPARQL allows queries such as whether “Feature A” is located within “Feature B” using its vocabulary. The Query Rewrite extension specifies a RIF rule that enables query rewriting. However, this extension does not support the rewriting of 3D queries.
+
+==== Adoption of GeoSPARQL 1.1
+
+==== GeoSPARQL Aligments
+
+.Alignment: GeoSPARQL and Open Source Relational Databases with Geospatial Support
+
+See Annex A and Annex B (Text to write)

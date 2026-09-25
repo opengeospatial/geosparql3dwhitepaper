@@ -1,6 +1,6 @@
 == Motivation
 
-=== Why do we want 3D semantic modeling?
+**Why do we want 3D semantic modeling?**
 The white paper: "OGC Benefits of Representing Spatial Data Using Semantic and Graph Technologies" describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies <<Abhayaratna2020wp>>. This section describes the motivation of adding 3D functionality to the GeoSPARQL standard. 
 
 While humans can often resolve 3D spatial questions such as “Is cube A inside cylinder B?” — even when the underlying data comes from different systems like GIS and BIM — this typically relies on implicit understanding, conventions, or direct communication between the data creators. For datasets to be meaningfully aligned, the people who created them often need to clarify assumptions, data structures, coordinate systems, or modeling intentions. Without such human-to-human explanation, machines struggle to interpret spatial relationships across heterogeneous sources. A conversion process is required, in which data is made homogeneous for analysis through extraction, transformation, and loading. Based on a homogeneous dataset, conclusions can then be drawn. Performing conversions may result in geometric simplifications, which can limit or even eliminate the functionality of spatial queries <<Biljecki2019>>.

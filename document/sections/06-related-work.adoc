@@ -71,7 +71,7 @@ X3D is an interesting format to investigate for 3D components which need to be m
 However, since X3D was invented with computer vision approaches in mind it does not define any geospatial aspects that could be considered by a GeoSPARQL 3D implementation.
 
 ==== VRML / Java3D spatial ontologies  
-  Application ontologies abstracting VRML & Java3D node types plus a separate spatial ontology for topological, directional and metric relations <<pacheco2018creating>>.
+Application ontologies abstracting VRML & Java3D node types plus a separate spatial ontology for topological, directional and metric relations <<pacheco2018creating>>.
 
 ==== Common Shape Ontology
 – represents manifold/non‑manifold shapes, point sets, hierarchical model groups, positions, orientations, keyframe animation <<FlotynskiWalczak2017>>.  
@@ -79,14 +79,14 @@ However, since X3D was invented with computer vision approaches in mind it does 
 
 === Domain‑specific 3D ontologies
 
-==== Geospatial and 3D City Models
+==== Geospatial and 3D City Model (CityGML)
 
-===== CityGML and OntoCityGML
+**CityGML and OntoCityGML**
 
 CityGML <<koble2005citygml>> is an open standardized data model for the exchange of 3D models of cities and landscapes.
 Since its standardization by OGC, CityGML has seen a wide variety of proposed extensions and alignments to other data standards.
 
-===== CityJSON and CityRDF
+**CityJSON and CityRDF**
 
 <<ijgi12090351>> proposed the extension of the CityGML and its accompanying serialization CityJSON as an ontology model.
 Currently, the CityRDF standardization group works towards the standardization of this CityGML data model in RDF.
@@ -129,9 +129,11 @@ CityRDF working group https://github.com/ogcincubator/cityrdf
 
 In the research domain of cultural heritage, 3D models of either cultural heritage artifacts (possibly georeferenced), 3D models of archaeological sites or simply 3D models of ancient buildings are becoming increasinly common.
 
-| Cultural heritage | Building-conservation ontology for 3D annotations <<messaoudi2018heritage>>; CIDOC CRM–based models for 3D CH objects and provenance <<walczak2019inference>> <<amico2106ontological>> <<гончар2021ontological>>. |
+Building-conservation ontology for 3D annotations. The conservation and restoration of historical monuments require the integration of information from many different disciplines and techniques. This study presents a pipeline that combines semantic, spatial, and morphological data into one 3D information model. The approach was tested on Saint Maurice Church in Caromb, France, allowing conservation experts to better visualize, correlate, and retrieve information about materials, damage, and other conservation observations. <<messaoudi2018heritage>>; 
 
-===== Use Cases
+CIDOC CRM–based models for 3D CH objects and provenance. This paper proposes an ontology-based approach for managing and using 3D content without requiring domain experts to have programming or 3D modelling skills. The actual 3D elements can be created by graphic designers and then linked to domain-specific concepts by developers. Ontologies and automated reasoning can subsequently determine which 3D elements are relevant based on the specified domain information, while semantic queries allow the content to be explored and analysed. The focus is therefore on connecting 3D graphics with domain knowledge rather than on creating the 3D models themselves. <<walczak2019inference>> <<amico2106ontological>> <<гончар2021ontological>>. 
+
+**Use Cases**
 
 Use Cases in the Cultural Heritage domain include, but are not limited to, the following main interests:
 
@@ -146,11 +148,12 @@ Researchers mark noteworthy aspects of the cultural artifact as 3D annotations <
 
 **Knowledge Graphs as Metadata descriptions:** With the advent of more 3D models being published, the relevance of their creation parameters <<homburgheritagescience2021>>, their contents and their object metadata increases for the usecases of filtering them and also for the possibly automated selection of suitable cultural heritage metadata for e.g. machine learning classifications. Currently, many metadata standards fulfil parts of the description chain and a unified vocabulary to described data types seems to be missing.
 
-===== Research applications making use of 3D models in Cultural Heritage
+
+Research applications making use of 3D models in Cultural Heritage
 
 This section discusses research projects with 3D contents based on the technologies they use as elaborated in the previous section.
 
-====== 3D models of cuneiform tablets
+===== 3D models of cuneiform tablets
 
 Cuneiform tablets from ancient Iran provide an interesting research area, since they combine a 3D artifact with textual imprints that are of interest to a variety of research communities including Assyriologsts, Digital Humanists, Computational Linguists and last but not least Computer Scientists.
 The creation of 3D models of cuneiform tablets provides the best accessibility to the specificities of the original artifact in its absence and 3D scans have been used by computer scientists as the basis for certain machine learning application tasks, even though to this day only as a provision for 2D renderings of their surfaces.
@@ -174,9 +177,10 @@ The viewer specification includes the visualization of 3D models including light
 A GeoSPARQL 3D standard might need to be compatible with, or include a compatibility statement of, converting 3D objects encoded in GeoSPARQL to the IIIF viewer specification. A prototype implementation might be necessary to comply with this specification.
 
 ==== ChgOnto
-Grottoes & heritage ontology  for grotto components, spatial relations, with GeoSPARQL + CIDOC CRM <<yang2023knowledge>>. 
+Grottoes & heritage ontology. This paper focuses on enhancing 3D models of Chinese grottoes by adding semantic information. It develops a knowledge graph that links 3D elements—such as caves, Buddha statues, walls, and decorations—to their properties and spatial relationships, making the 3D models more meaningful, understandable, and useful for cultural heritage documentation and analysis.for grotto components, spatial relations, with GeoSPARQL + CIDOC CRM <<yang2023knowledge>>. 
 
-
+==== OntPreHer3D
+OntPreHer3D is an extension of the CIDOC CRM ontology. It is designed to support the FAIR preservation and documentation of 3D cultural heritage models. The ontology captures relationships between 3D models, their components, and real-world counterparts, while also documenting the reasoning, uncertainties, and decisions behind hypothetical reconstructions. A case study of the Speyer Synagogue demonstrates how differences in modelling processes can affect final 3D models, highlighting the importance of detailed documentation for the long-term preservation, reproducibility, and reuse of digital cultural heritage.  https://peercommunityjournal.org/articles/10.24072/pcjournal.608/[OntPreHer3D: Ontology for Preservation of Cultural Heritage 3D Models]
 
 ==== BIM and Buildings
 
@@ -244,7 +248,7 @@ Over the last years, Building Information Modelling (BIM) has been increasingly 
 Robotics / manufacturing ontology that integrates contextual, topologic, geometric info for 3D environments; BFO‑based 3D shape ontology; BREP/CSG distinctions <<zhao2024envon>>. 
 
 
-==== Use of domain specific ontologies
+**Use of domain specific ontologies** 
 Domain-specific 3D ontologies are typically expressed using **RDF/OWL**, defining concepts and relationships that capture the semantics of a particular application domain <<FlotynskiWalczak2017>> <<pittarello2006semantic>> <<walczak2019inference>>.  
 
 Geometry, topology, scene structure, and domain semantics are often represented by separate but complementary ontologies that can be combined at query time for integrated queries, such as BOT with geometry and sensor (SOSA/SSN or SAREF) ontologies in building applications <<zhao2024envon>> <<flotynski2020bot>>.  

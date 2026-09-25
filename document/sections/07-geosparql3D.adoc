@@ -1,22 +1,20 @@
 == Requirements for GeoSPARQL 3D
 
-=== 5.1 Existing implementation of 3D geometry in GeoSPARQL
+=== Proposed extensions for GeoSPARQL 3D
 This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. 
 It helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.
 
-==== Proposed extensions for GeoSPARQL 3D
+==== Extension {counter:ext}: 3D representations
 
-===== Extension {counter:ext}: 3D representations
-
-====== GitHub Issue URI
+**GitHub Issue URI**
 
 https://github.com/opengeospatial/ogc-geosparql/issues/583
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL primarily focuses on spatial representation and querying rather than visualization, formats such as glTF and 3D Tiles could provide a complementary representation and delivery mechanism for the resulting 3D data. GeoSPARQL should include ways to represent 3D data in a knowledge graph. 3D data should be included in common 3D formats and 3D data should be includable as a text literal and a file representation. Where 3D data is intended for web-based visualization, formats should preferably be selected that are well supported by commonly used JavaScript and web-mapping libraries. This would facilitate the visualization and delivery of 3D knowledge-graph data on the web and help establish a practical bridge between BIM and GIS, enabling 3D information originating from BIM to be queried, linked, and visualized together with geospatial data.
 
@@ -32,24 +30,28 @@ Some common formats which could be considered for inclusion are:
 .Linked Building Data Server using Semantic Graphs and GLTF-Models
 image::../figures/LBD_Server_GUI.png[align="center"]
 
-====== Related work
+**Related work**
 
-X3D Ontology
+- X3D Ontology
+- GOM
+- OMG
+- FOG
+- CityRDF/OntoCityGML
+- ChgOnto
 
+==== Extension {counter:ext}: Topological relations of 3D geometries
 
-===== Extension {counter:ext}: Topological relations of 3D geometries
-
-====== GitHub Issue URI
+**GitHub Issue URI**
 
 https://github.com/opengeospatial/ogc-geosparql/issues/416
 https://github.com/opengeospatial/ogc-geosparql/issues/581 
 https://github.com/opengeospatial/ogc-geosparql/issues/595
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL should include ways to represent relations between 3D geometries and relations between 3D geometries and geometries of lower dimensions.
 The relations should be expressable in property relations and should be queryable using SPARQL extension functions.
@@ -130,19 +132,24 @@ image::../figures/Topological_relations_2D.png[align="center", width="50%"]
 
 [#img_Topological_relations_3D, reftext='{figure-caption} {counter:figure-num}']
 .3D Topological relations for 3D objects
-image::../figures/Topological_relations_3D.png[align="center", width="50%"]
+image::../figures/Topological_relations_3D.png[align="center"]
 
-===== Extension {counter:ext}: Directional relations of 3D geometries
+**Related work**
 
-====== GitHub Issue URI
+- Topological Relationships and Their Use 
+- Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System
 
-This extension is included without a corresponding GitHub issue. The motivation is instead based on the identified need to represent and query directional relationships between 3D geometries. This need is also supported by related work by Anne Göbels, Jakob Beetz, and Ina Heise, as discussed in the Related Work chapter.
+==== Extension {counter:ext}: Directional relations of 3D geometries
 
-====== Category
+**GitHub Issue URI**
+
+https://github.com/opengeospatial/ogc-geosparql/issues/684
+
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 Topological relations describe the relationships between objects independently of perspective. 
 Relative directional relations, on the other hand, describe relationships between objects that depend on a reference frame or viewpoint. 
@@ -167,19 +174,22 @@ This ontology brings natural language closer to the 3D model by formalizing desc
 .3D Topological and Directional relations for 3D objects
 image::../figures/Topological_and_directional_relation_combined.png[align="center", width="50%"]
 
-==== Proposed extensions for GeoSPARQL 3D
+**Related work**
 
-===== Extension {counter:ext}: Routing
+- Reloc Ontology 
+- SpatialOT Ontology
 
-====== GitHub Issue URI
+==== Extension {counter:ext}: Routing
+
+**GitHub Issue URI**
 
 https://github.com/opengeospatial/ogc-geosparql/issues/572
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL should be able to query for the shortest route through a 3D space made up of smaller, connected 3D spaces when topological relations are not available. 
 By enabling this, GeoSPARQL can describe spatial data and where features are located, while also supporting analysis/description of how things can move between them. By deriving connections between 3D objects(spaces) using their geometry and openings, GeoSPARQL could support shortest-path and accessibility analysis without requiring all topological relationships to be explicitly modelled. This could be useful for applications such as emergency evacuation, indoor navigation, fire compartmentation and safety analysis, accessibility assessment, and analysing potential pathways for smoke or fire spread.
@@ -192,20 +202,23 @@ and: 3D pgRouting and Visualization in Cesium JS Using the Integrated Model of L
 .Space and doors nodes and connecting edges for routing. 
 image::../figures/Space-node-Door-node-and-Edge.png[align="center", width="50%"]
 
+**Related work**
+
+No related work
 
 
-===== Extension {counter:ext}: Appearance of 3D geometries
+==== Extension {counter:ext}: Appearance of 3D geometries
 
-====== GitHub Issue URI
+**GitHub Issue URI**
 
 - https://github.com/opengeospatial/ogc-geosparql/issues/584
 - https://github.com/opengeospatial/ogc-geosparql/issues/592
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL should include ways to represent materials and textures of 3D geometries, so that geometries can be styled accordingly.
 
@@ -216,97 +229,114 @@ Materials include:
 
 The main purpose is not to make GeoSPARQL a visualisation format, but to allow existing rich 3D formats to retain their textures, colours and materials while their geometries can still be queried and analysed spatially. Visualisation is then one possible application of this information. This could also enable queries based on material or texture information, allowing users to combine spatial and material information. For example, a user could query: “Find all features within this area that contain lead.” Visualisation is then one possible application of this information, while material-based spatial analysis provides additional possibilities for applications such as building safety, renovation, and environmental risk assessment.
 
-====== Related work
+[#img_OntoPreHer3D,reftext='{figure-caption} {counter:figure-num}']
+.Diagram illustrating the use of the OntPreHer3D ontology for the hypothetical virtual 3D reconstruction process with the use of a simulation event. 
+image::../figures/OntoPreHer3D.jpeg[align="center"]
 
+*Related work**
+
+X3D
 IIF 3D
+OntoPreHer3D 
 
-===== Extension {counter:ext}: Multi-component 3D geometries
+==== Extension {counter:ext}: Multi-component 3D geometries
 
-====== GitHub Issue URI
+**Github Issue URI**
 
 https://github.com/opengeospatial/ogc-geosparql/issues/591
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL should include ways to define multi-component 3D geometries, whereas each component expresses its own semantics.
 For example, parts of a building could have different semantics according to the function of the building components and would be classified as such in an RDF graph.
 
 Existing standards such as IFC, CityGML, SML already provide mechanisms for decomposing 3D objects into 3D parts. GeoSPARQL could build on these existing relationships, allowing the geometries of individual components to be queried and analysed together with their semantics. This would enable queries that combine spatial and semantic information, for example, identifying all building components within a specific area that are made of lead, or finding all walls that are part of a particular building and intersect a given spatial region.
 
-===== Extension {counter:ext}: Positioning of 3D geometries
+[#img_LBD_Server,reftext='{figure-caption} {counter:figure-num}']
+.Model of a bridge where the bridge parts "Pier" and "Deck" contain the geometries of the bridge. 
+image::../figures/IFC_To_CityGML_Use_Case_Bridge.png[align="center"]
 
-====== GitHub Issue URI
+
+**Related work**
+
+CityRDF
+OntoCityGML
+
+
+==== Extension {counter:ext}: Positioning of 3D geometries
+
+**Github Issue URI**
 
 - https://github.com/opengeospatial/ogc-geosparql/issues/587
 - https://github.com/opengeospatial/ogc-geosparql/issues/588
 - https://github.com/opengeospatial/ogc-geosparql/issues/589
 - https://github.com/opengeospatial/ogc-geosparql/issues/591
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL should include ways to position 3D geometries in a 3D space.
 Commonly 3D geometries are rotated, translated and scaled using commonly defined operators in computer graphics.
 Similar operations are needed for the relative positioning of 3D objects in GeoSPARQL, as properties and potentially as functions. 
 
-===== Extension {counter:ext}: Alignments of GeoSPARQL 3D
+==== Extension {counter:ext}: Alignments of GeoSPARQL 3D
 
-====== GitHub Issue URI
+**Github Issue URI**
 
 - https://github.com/opengeospatial/ogc-geosparql/issues/590
 - https://github.com/opengeospatial/ogc-geosparql/issues/574
 - https://github.com/opengeospatial/ogc-geosparql/issues/571
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains.
 Especially alignments to https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary as a link between these different standards.
 
-===== Extension {counter:ext}: Alignments of Engineering CRS to Geospatial CRS
+==== Extension {counter:ext}: Alignments of Engineering CRS to Geospatial CRS
 
-====== GitHub Issue URI
+**Github Issue URI**
 
 https://github.com/opengeospatial/ogc-geosparql/issues/586
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL 3D should provide the opportunity to align a local coordinate system in which most 3D geometries are defined with a coordinate reference.
 While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging https://github.com/opengeospatial/ontology-crs[Ontology CRS] developments of OGC and provide necessary functions or properties to create the link. 
 
-===== Extension {counter:ext}: Geometry Extrusion
+==== Extension {counter:ext}: Geometry Extrusion
 
-====== GitHub Issue URI
+**Github Issue URI**
 
 - https://github.com/opengeospatial/ogc-geosparql/issues/556
 - https://github.com/opengeospatial/ogc-geosparql/issues/547
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL 3D should provide the opportunity to extrude 2D geometries to 3D geometries and vice versa.
 
 
-===== Extension {counter:ext}: Geometry Attributes
+==== Extension {counter:ext}: Geometry Attributes
 
-====== GitHub Issue URI
+**Github Issue URI**
 
 - https://github.com/opengeospatial/ogc-geosparql/issues/568
 - https://github.com/opengeospatial/ogc-geosparql/issues/550
@@ -314,25 +344,25 @@ GeoSPARQL 3D should provide the opportunity to extrude 2D geometries to 3D geome
 - https://github.com/opengeospatial/ogc-geosparql/issues/548
 - https://github.com/opengeospatial/ogc-geosparql/issues/558
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL 3D should provide functions and properties that describe essential properties of a 3D Geometry such as its minimum and maximum height, width and depth and its CompactnessRatio.
 
-===== Extension {counter:ext}: Non-topological Query Functions - 3D Extension
+==== Extension {counter:ext}: Non-topological Query Functions - 3D Extension
 
-====== GitHub Issue URI
+**Github Issue URI**
 
 - https://github.com/opengeospatial/ogc-geosparql/issues/556
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 GeoSPARQL 3D should provide the opportunity to execute non-topological query functions on 2D and 3D geometries commonly used in geospatial databases. Proposed extensions include following functions:
 
@@ -341,9 +371,9 @@ GeoSPARQL 3D should provide the opportunity to execute non-topological query fun
 - spatiotemporal geometry extrusion to the specified line segment with specific start and end time
 
 
-===== Extension {counter:ext}: 3D Geometry available in Open BIM (IFC)
+==== Extension {counter:ext}: 3D Geometry available in Open BIM (IFC)
 
-====== GitHub Issue URI
+**Github Issue URI**
 
 https://github.com/opengeospatial/ogc-geosparql/issues/8
 https://github.com/opengeospatial/ogc-geosparql/issues/574
@@ -353,11 +383,11 @@ https://github.com/opengeospatial/ogc-geosparql/issues/598
 https://github.com/opengeospatial/ogc-geosparql/issues/588
 https://github.com/opengeospatial/ogc-geosparql/issues/608
 
-====== Category
+**Category**
 
 Semantic improvement
 
-====== Description
+**Description**
 
 When using GeoSPARQL with OPEN BIM (IFC), the geometry can either be used directly from the IFC format (natively) or converted to a GeoSPARQL-compatible format. A converter can be used as an intermediate layer, but this introduces several drawbacks:
 - Additional complexity: an extra component must be maintained.

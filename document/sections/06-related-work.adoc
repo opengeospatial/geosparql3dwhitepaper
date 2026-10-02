@@ -5,7 +5,7 @@ Various vocabularies, standards, and domain-specific approaches provide concepts
 
 A substantial body of work shows that **there is no single universal 3D web ontology**, but several reusable, often domain‑ or format‑specific vocabularies to describe geometry, topology, scenes, and domain semantics. Two principal flavours of ontologies can be identified in existing literature:i) those meant for the generic representation of 3D objects and shapes, and ii) a growing body of domain-specific ontologies <<flotynski2017ontology>>.
 
-This section starts by providing a brief overview of these two flavours of ontologies. It then dives into domain-specific initiatives, considering Cultural Heritage and Geo-spatial in particular. This section closes by enumerating various encoding formats relevant for 3D.
+This section starts by providing a brief overview of these two flavours of ontologies. It then dives into domain-specific initiatives, considering Geo-spatial, Cultural Heritage and BIM. This section closes by enumerating various encoding formats relevant for 3D.
 
 
 === 3D Exchange formats 
@@ -243,6 +243,10 @@ AEC - Building domain ontology for storeys, spaces, elements + 3D mesh links; us
 
 ===== Linked Building Server 
 Over the last years, Building Information Modelling (BIM) has been increasingly adopted in building projects for its benefits to collaboration and associated risk mitigation. Recent work is trying to make this data available over the web (web-based BIM applications). Most notable in making building data web-ready is the linked building data (LBD) initiative. This group has worked on a number of vocabularies and ontologies, thereby starting from a linked data approach (RDF graphs), aiming at representing building data on the web. https://github.com/LBDserver[Linked Building Data Server]
+
+
+==== BIMSPARQL
+==== stSPARQL
 
 ==== ENVON
 Robotics / manufacturing ontology that integrates contextual, topologic, geometric info for 3D environments; BFO‑based 3D shape ontology; BREP/CSG distinctions <<zhao2024envon>>. 

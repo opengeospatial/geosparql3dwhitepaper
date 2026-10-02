@@ -142,9 +142,21 @@ This kind of logical inference can also be applied to geometry. GeoSPARQL includ
 GeoSPARQL allows queries such as whether “Feature A” is located within “Feature B” using its vocabulary. The Query Rewrite extension specifies a RIF rule that enables query rewriting. However, this extension does not support the rewriting of 3D queries.
 
 ==== Adoption of GeoSPARQL 1.1
+The article "A GeoSPARQL Compliance Benchmark", Jovanovik, Homburg and Spasić <<ijgi10070487>> describes the results of a GeoSPARQL compliance benchmark. The measure of the extent of GeoSPARQL support in GeoSPARQL-enabled RDF triplestores was done in 2021. The article concludes that the GeoSPARQL standard, almost nine years after its initial release, is often only partially supported by major triplestore vendors. This raises the question of whether adding functionality to a standard increases implementation complexity, or whether new and more powerful capabilities can instead stimulate adoption by enabling new and more valuable use cases for software developers and users.
+
+On the https://portal.ogc.org/public_ogc/compliance/implementing.php?&specid=528[OGC Implementation Database] there is no organisation compliant with the OGC GeoSPARQL standard. There are four organisations that are implementing the GeoSPARQL (v 1.0) standard. 
 
 ==== GeoSPARQL Aligments
+GeoSPARQL is aligned with a range of established ontologies and vocabularies covering different aspects of geospatial information, metadata, provenance, time, sensors, and linked data. See https://docs.ogc.org/is/22-047r1/22-047r1.html#_6f67539d-8b79-4a2b-b7b9-9b4a54e710d0[Annex E of the GeoSPARQL Standard]. Alignments with additional ontologies may be relevant for a broader 3D context. As an example, ontologies such as Reloc, BOT and ifcOWL can be interesting.
 
-.Alignment: GeoSPARQL and Open Source Relational Databases with Geospatial Support
 
-See Annex A and Annex B (Text to write)
+==== GeoSPARQL functionality and geometries comparison
+GeoSPARQL functionality can be compared with established spatial database extensions such as PostGIS H2GIS and SpatiaLite. The alligment offers a useful basis for comparing common spatial operations and capabilities with those defined by GeoSPARQL. The selection for spatial databases is not intended to be exhaustive. Other spatial databases, libraries and systems could also be included, depending on the scope of the comparison. The selected systems should therefore be regarded as representative reference implementations rather than a complete overview of available spatial technologies.
+
+The comparison with existing open-source spatial technologies is intended to identify gaps between the functionality currently provided by GeoSPARQL and the capabilities available in established spatial databases. This provides an indication of the development potential of GeoSPARQL. The comparison can therefore be used to identify potential areas for further development and to assess which capabilities could add value to future versions of the standard.
+
+When focusing specifically on 3D functionality, the largest differences in the comparison are found in geometry creation and editing, spatial measurements, and operations related to triangulation and topographic geometry. Also the topological functions shows some gaps between GeoSPARQL and the functionality in the spatial databases. These areas contain functionality available in the compared spatial technologies that is not represented in GeoSPARQL. They therefore provide the clearest areas for investigating potential further development of 3D functionality in GeoSPARQL.
+See Annex A: Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support
+
+Besides the available functions, the geometry representations used by GeoSPARQL, such as WKT and GML, can also be compared with geometry representations used in other standards and technologies, such as IFC, STEP and Open CASCADE. The comparison shows that the largest differences in 3D geometry representation occur beyond basic points, curves and surfaces. IFC, STEP and OpenCascade provide more extensive representations for solids, volumes, boolean and constructive geometry, swept and revolved geometry and 3D transformations and spatial operations. These areas therefore provide relevant starting points for investigating potential extensions of GeoSPARQL for more comprehensive 3D geometry representation and processing. See Annex B: Allignment of Geometry
+

@@ -1,4 +1,4 @@
-== Annex N: Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support .
+== Annex A: Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support .
 
 Based on: 
 
@@ -745,7 +745,7 @@ multipointfromwkb"
 
 
 
-=== Export/export
+=== Export/import
 |===
 | GeoSPARQL | PostGIS | H2GIS | Spatialite
 |  |  |  | exportdbf

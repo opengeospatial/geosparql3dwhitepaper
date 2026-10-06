@@ -1,10 +1,9 @@
 == Requirements for GeoSPARQL 3D
 
-=== Proposed extensions for GeoSPARQL 3D
 This section provides an overview of feedback received on the current version of the GeoSPARQL standard (version 1.1) regarding 3D usage. 
 It helps to identify some of the barriers to use, and to outline requirements that have not been addressed that may encourage greater uptake.
 
-==== Extension {counter:ext}: 3D representations
+=== Extension {counter:ext}: 3D representations
 
 **GitHub Issue URI**
 
@@ -39,7 +38,7 @@ image::../figures/LBD_Server_GUI.png[align="center"]
 - CityRDF/OntoCityGML
 - ChgOnto
 
-==== Extension {counter:ext}: Topological relations of 3D geometries
+=== Extension {counter:ext}: Topological relations of 3D geometries
 
 **GitHub Issue URI**
 
@@ -139,7 +138,7 @@ image::../figures/Topological_relations_3D.png[align="center"]
 - Topological Relationships and Their Use 
 - Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System
 
-==== Extension {counter:ext}: Directional relations of 3D geometries
+=== Extension {counter:ext}: Directional relations of 3D geometries
 
 **GitHub Issue URI**
 
@@ -179,7 +178,7 @@ image::../figures/Topological_and_directional_relation_combined.png[align="cente
 - Reloc Ontology 
 - SpatialOT Ontology
 
-==== Extension {counter:ext}: Routing
+=== Extension {counter:ext}: Routing
 
 **GitHub Issue URI**
 
@@ -207,7 +206,7 @@ image::../figures/Space-node-Door-node-and-Edge.png[align="center", width="50%"]
 No related work
 
 
-==== Extension {counter:ext}: Appearance of 3D geometries
+=== Extension {counter:ext}: Appearance of 3D geometries
 
 **GitHub Issue URI**
 
@@ -239,7 +238,7 @@ X3D
 IIF 3D
 OntoPreHer3D 
 
-==== Extension {counter:ext}: Multi-component 3D geometries
+=== Extension {counter:ext}: Multi-component 3D geometries
 
 **Github Issue URI**
 
@@ -267,7 +266,7 @@ CityRDF
 OntoCityGML
 
 
-==== Extension {counter:ext}: Positioning of 3D geometries
+=== Extension {counter:ext}: Positioning of 3D geometries
 
 **Github Issue URI**
 
@@ -286,7 +285,7 @@ GeoSPARQL should include ways to position 3D geometries in a 3D space.
 Commonly 3D geometries are rotated, translated and scaled using commonly defined operators in computer graphics.
 Similar operations are needed for the relative positioning of 3D objects in GeoSPARQL, as properties and potentially as functions. 
 
-==== Extension {counter:ext}: Alignments of GeoSPARQL 3D
+=== Extension {counter:ext}: Alignments of GeoSPARQL 3D
 
 **Github Issue URI**
 
@@ -303,7 +302,9 @@ Semantic improvement
 GeoSPARQL 3D should be aligned to other vocabularies and standard which currently provide 3D support in different knowledge domains.
 Especially alignments to https://technical.buildingsmart.org/standards/ifc/ifc-formats/ifcowl/[ifcOWL] and the https://www.web3d.org/x3d/content/semantics/semantics.html[X3D vocabulary] would position the GeoSPARQL vocabulary as a link between these different standards.
 
-==== Extension {counter:ext}: Alignments of Engineering CRS to Geospatial CRS
+**Related work**
+
+=== Extension {counter:ext}: Alignments of Engineering CRS to Geospatial CRS
 
 **Github Issue URI**
 
@@ -318,7 +319,7 @@ Semantic improvement
 GeoSPARQL 3D should provide the opportunity to align a local coordinate system in which most 3D geometries are defined with a coordinate reference.
 While this work might only be partially done within the scope of GeoSPARQL itself, GeoSPARQL should be aligned with the emerging https://github.com/opengeospatial/ontology-crs[Ontology CRS] developments of OGC and provide necessary functions or properties to create the link. 
 
-==== Extension {counter:ext}: Geometry Extrusion
+=== Extension {counter:ext}: Geometry Extrusion
 
 **Github Issue URI**
 
@@ -334,7 +335,7 @@ Semantic improvement
 GeoSPARQL 3D should provide the opportunity to extrude 2D geometries to 3D geometries and vice versa.
 
 
-==== Extension {counter:ext}: Geometry Attributes
+=== Extension {counter:ext}: Geometry Attributes
 
 **Github Issue URI**
 
@@ -352,7 +353,7 @@ Semantic improvement
 
 GeoSPARQL 3D should provide functions and properties that describe essential properties of a 3D Geometry such as its minimum and maximum height, width and depth and its CompactnessRatio.
 
-==== Extension {counter:ext}: Non-topological Query Functions - 3D Extension
+=== Extension {counter:ext}: Non-topological Query Functions - 3D Extension
 
 **Github Issue URI**
 
@@ -371,7 +372,7 @@ GeoSPARQL 3D should provide the opportunity to execute non-topological query fun
 - spatiotemporal geometry extrusion to the specified line segment with specific start and end time
 
 
-==== Extension {counter:ext}: 3D Geometry available in Open BIM (IFC)
+=== Extension {counter:ext}: 3D Geometry available in Open BIM (IFC)
 
 **Github Issue URI**
 
@@ -408,9 +409,53 @@ Prevalence is measured as a text-based scan through a set of 1000 files (500 for
 A questionnaire was conducted to identify which types of geometry different stakeholders would like to have available.
 
 === 5.3 Vanilla 3D geometry handling in the Semantic Web
-This section describes in what other ways 3D geometry is currently handled in the Semantic Web, for example in BOT ontology, OMG and FOG ontologies, and few more.
+Different ontologies handle geometry in the Semantic Web in different ways. This section describes how 3D geometry is handled by different ontologies, rather than by GeoSPARQL. It compares approaches such as BOT, OMG, FOG, BIMSPARQL, GEOM, OntoBREP, and OntoSTEP, highlighting how each ontology represents, links, or manages geometric information within the Semantic Web.
+
+==== BOT (Building Topology Ontology) 
+The Building Topology Ontology distinguishes zones and elements. It also has topological relations as bot:containsZone and bot:hasElement. Any bot:Zone or bot:Element can be assigned a 3D Model using some existing data format for 3D models. Two properties are defined for this. The bot:hasSimple3DModel datatype property links a bot:Zone or bot:Element to a 3D Model encoded as a literal. If the data format is textual, then the lexical form of the 3D Model literal SHOULD be encoded as a Unicode [UNICODE] string, which SHOULD be in Normal Form C [NFC]. If the data format is binary, then the lexical form of the 3D Model literal SHOULD be encoded using a base32 encoding [rfc4648]. The bot:has3DModel object property links a bot:Zone or bot:Element to some IRI that identifies a 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models.
+
+[#img_Building_Topology_Ontology_BOT_Example, reftext='{figure-caption} {counter:figure-num}']
+.Example of a graphical feedback from a request for all wall elements adjacent to a particular space using BOT terminology. The 3D model is described as an OBJ-formatted mesh.
+image::../figures/10_3233_sw-200385-fig6.jpg[align="center", width="50%"]
+source: https://journals.sagepub.com/doi/pdf/10.3233/SW-200385
+
+
+==== OMG (Ontology for Managing Geometry) 
+The Ontology for Managing Geometry (OMG) is an ontology for attaching geometry descriptions to their corresponding things (e.g. building objects). The OMG is designed to provide three levels of adding the geometry descriptions which can be used and combined flexibly. The levels are designed to enable the attachment of metadata and comprise of the following functionalities:
+
+Level 1: Direct connections between things and their geometry descriptions using either an object property for RDF-based geometry descriptions or a datatype property for non-RDF-based geometry descriptions resp. links to external files.
+Level 2: Introduction of an intermediate node between the things and their geometry descriptions. By reifying the geometry description, handling of multiple geometry descriptions of the same things is empowered, metadata (as tags) can be added and dependencies between geometries can be modelled.
+Level 3: Introduction of an intermediate node between the reified geometry and the geometry description to add geometry states. Thus, the version history of a geometry description can be described and stored.
+
+==== FOG (File Ontology for Geometry formats) 
+The File Ontology for Geometry formats (FOG) provides geometry schema specific relations between things (e.g. building objects) and their geometry descriptions. These geometry descriptions can be (1) RDF-based (e.g. using specific ontologies such as GEOM, OntoBREP, etc.), (2) RDF literals containing embedded geometry of existing geometry formats and (3) RDF literals containing a reference to an external geometry file.
+
+such as OBJ, glTF and STEP, to be embedded in RDF or referenced as external files. Thus, while GeoSPARQL primarily describes geospatial geometry, BOT, OMG and FOG provide approaches that are more focused on building and construction geometry and the use of existing geometry formats.
+
+the File Ontology for Geometry formats (FOG), a method for embedding and exchanging different 2D and 3D geometry formats within RDF graphs. FOG allows geometry data to be stored, referenced, and automatically identified, making it easier to exchange building geometry between different software and stakeholders. 
+
+==== LBD Server, IFC2LBD and IFC2LBD-NEO
+To make BIM data accessible on the web, the Linked Building Data (LBD) initiative applies Linked Data principles, using RDF, vocabularies, and ontologies to represent building information. To make this information practically accessible, a platform is needed that combines semantic building data with 3D visualisation. The LBD Server addresses this need by allowing users to upload building data, visualise its 3D geometry, and link geometric objects to their underlying semantic information. This enables users to explore both the physical and semantic aspects of a building within a web-based environment.
+
+[#img_LBD_Server_connectivity_GLTF_LD, reftext='{figure-caption} {counter:figure-num}']
+.LBD_Server_connectivity_GLTF_LD.
+image::../figures/Schema_of_connectivity_between_glTF_mesh_geometry_and_graph_data.png[align="center"]
+source: <<03e4260b3605459b8ce220cfb42a3525>>
+
+IFC2LBD makes the semantic transformation itself a central component. It converts IFC into RDF using LBD ontologies such as BOT, PRODUCT and PROPS. The result is a graph representation that can be queried and linked on the web. The original IFC-to-LBD work explicitly aimed to produce a simpler, modular representation than directly using the full ifcOWL structure. IFC2LBD-Neo takes this further by redesigning the converter as a modular, staged pipeline. It additionally uses ontologies as BEO, bSDD and OMG/FOG. The geometry is generated separately as glTF, Fragments or Parquet outputs.
+
+[#img_BIFC2LBD-NEO, reftext='{figure-caption} {counter:figure-num}']
+.IFC2LBD Pipeline.
+image::../figures/IFC2LBD-NEO.png[align="center"]
+source: https://github.com/ISBE-TUe/IFC2LBD-Neo
+
+
+[#img_File_Ontology_for_Geometry_Formats_FOG, reftext='{figure-caption} {counter:figure-num}']
+.Demo Application with use of File Ontology for Geometry Formats FOG
+image::../figures/Screenshot_of_demo_web_application_FOG.png[align="center", width="50%"]
+source: https://ec-3.org/wp-content/uploads/2025/10/EC32019_166.pdf
 
 === 5.4 Concluding overview of requirements for 3D geometry in the semantic web
-A concluding summary with a list of requirements to be taken into account for future development in different places and organisations.
+The requirements indicate that a GeoSPARQL extension for 3D should provide a common semantic and query layer for heterogeneous 3D representations. Such an extension should support the representation and semantic linking of 3D geometries, 3D topological and directional relations, spatial analysis and measurement, positioning and coordinate reference systems, visualisation, as well as routing. The standard should interoperate with established geometry formats and domain-specific models. This would allow specialised formats to retain their detailed geometric, visual, and domain-specific capabilities, while GeoSPARQL provides a common framework for representing, linking, discovering, and querying their spatial semantics in the Semantic Web. In this role, GeoSPARQL 3D would function primarily as an interoperability layer between geospatial, BIM, and other 3D domains.
 
 

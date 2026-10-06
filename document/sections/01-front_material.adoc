@@ -12,9 +12,6 @@ This white paper has been developed to investigate these questions and to identi
 
 The paper is intended as a basis for discussion within the OGC community and among current and prospective GeoSPARQL users and implementers. It does not propose a final specification, but instead identifies potential requirements, approaches, and areas for further investigation. The intention is to support future work towards interoperable 3D spatial querying while building on, rather than replacing, existing 3D standards and technologies.
 
-== Keywords
-
-GeoSPARQL; 3D geospatial data; 3D BIM; semantic 3D modelling; 3D spatial querying; 3D geometry; 3D topology; RDF; SPARQL; BIM; IFC; CityGML; semantic interoperability; 3D routing;
 
 == Security Considerations
 

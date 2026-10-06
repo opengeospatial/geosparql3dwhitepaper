@@ -18,8 +18,8 @@
 :fullname_2: Editor Two
 :role: editor
 :imagesdir: figures
-:keywords: OGC, GeoSPARQL, 3D
-:submitting-organizations: Organization one; Organization two; Organization three
+:keywords: OGC;  GeoSPARQL; 3D; 3D geospatial data; 3D BIM; semantic 3D modelling; 3D spatial querying; 3D geometry; 3D topology; RDF; SPARQL; BIM; IFC; CityGML; semantic interoperability; 3D routing;
+:submitting-organizations: 	Geonovum; KurrawongAI; i3mainz; Universidade de Lisboa; Triply; Graphwise/Ontotext; AEC Geeks; Eindhoven University of Technology
 :mn-document-class: ogc
 :mn-output-extensions: html,pdf
 :pdf-uri: ./document.pdf

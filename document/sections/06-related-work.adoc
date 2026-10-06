@@ -258,7 +258,7 @@ In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF an
 ==== OntoBREP and OntoSTEP
 OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <<ontobrep>>
 
-OntoSTEP translates STEP schemas and their instances, originally defined using EXPRESS, into OWL. This creates a semantically representation of product and CAD information. The approach enables reasoning, inference, and querying over existing CAD data and provides a way to combine information represented using different modeling languages. <<ontotstep>> 
+OntoSTEP translates STEP schemas and their instances, originally defined using EXPRESS, into OWL. This creates a semantically representation of product and CAD information. The approach enables reasoning, inference, and querying over existing CAD data and provides a way to combine information represented using different modeling languages. <<ontostep>> 
 
 OntoBREP and OntoSTEP represent approaches in which geometry are brought into the Semantic Web at a relatively deep semantic level. This results in potentially large and complex knowledge graphs.
 

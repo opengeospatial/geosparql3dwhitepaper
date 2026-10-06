@@ -1,11 +1,21 @@
 <bibdata type="standard">
 <title language="en" type="main">GeoSPARQL 3d White Paper</title>
-<uri type="pdf">./document.pdf</uri><docidentifier type="ogc-external">http://www.opengis.net/doc/WP/geosparql3d</docidentifier><docidentifier type="ogc-internal" primary="true">YY-999</docidentifier><docnumber>YY-999</docnumber><date type="published"><on>2029-03-30</on></date><date type="issued"><on>2029-03-30</on></date><date type="received"><on>2029-03-30</on></date><contributor><role type="author"/><organization>
-<name>Organization one</name>
+<uri type="pdf">./document.pdf</uri><docidentifier type="ogc-internal" primary="true">YY-999</docidentifier><docidentifier type="ogc-external">http://www.opengis.net/doc/WP/geosparql3d</docidentifier><docnumber>YY-999</docnumber><date type="published"><on>2029-03-30</on></date><date type="issued"><on>2029-03-30</on></date><date type="received"><on>2029-03-30</on></date><contributor><role type="author"/><organization>
+<name>Geonovum</name>
 </organization></contributor><contributor><role type="author"/><organization>
-<name>Organization two</name>
+<name>KurrawongAI</name>
 </organization></contributor><contributor><role type="author"/><organization>
-<name>Organization three</name>
+<name>i3mainz</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Universidade de Lisboa</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Triply</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Graphwise/Ontotext</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>AEC Geeks</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Eindhoven University of Technology</name>
 </organization></contributor><contributor><role type="editor"/><person>
 <name><completename>Editor One</completename></name>
 </person></contributor><contributor><role type="editor"/><person>
@@ -18,6 +28,6 @@
 <name>Geosemantics DWG</name>
 </subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Open Geospatial Consortium</name>
-<abbreviation>OGC</abbreviation></organization></contributor><edition>1.0</edition><version><draft>1.0</draft></version><language>en</language><script>Latn</script><status><stage>draft</stage></status><copyright><from>2026</from><owner><organization>
+<abbreviation>OGC</abbreviation></organization></contributor><edition>1.0</edition><version>1.0</version><language>en</language><script>Latn</script><status><stage>draft</stage></status><copyright><from>2026</from><owner><organization>
 <name>Open Geospatial Consortium</name>
-<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>OGC</keyword><keyword>GeoSPARQL</keyword><keyword>3D</keyword><ext><doctype>white-paper</doctype><flavor>ogc</flavor></ext></bibdata>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword><vocab>OGC;  GeoSPARQL; 3D; 3D geospatial data; 3D BIM; semantic 3D modelling; 3D spatial querying; 3D geometry; 3D topology; RDF; SPARQL; BIM; IFC; CityGML; semantic interoperability; 3D routing;</vocab></keyword><ext><doctype>white-paper</doctype><flavor>ogc</flavor><stage>draft</stage></ext></bibdata>

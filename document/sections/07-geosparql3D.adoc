@@ -255,7 +255,7 @@ For example, parts of a building could have different semantics according to the
 
 Existing standards such as IFC, CityGML, SML already provide mechanisms for decomposing 3D objects into 3D parts. GeoSPARQL could build on these existing relationships, allowing the geometries of individual components to be queried and analysed together with their semantics. This would enable queries that combine spatial and semantic information, for example, identifying all building components within a specific area that are made of lead, or finding all walls that are part of a particular building and intersect a given spatial region.
 
-[#img_LBD_Server,reftext='{figure-caption} {counter:figure-num}']
+[#img_IFC_To_CityGML_Use_case_Brdige,reftext='{figure-caption} {counter:figure-num}']
 .Model of a bridge where the bridge parts "Pier" and "Deck" contain the geometries of the bridge. 
 image::../figures/IFC_To_CityGML_Use_Case_Bridge.png[align="center"]
 

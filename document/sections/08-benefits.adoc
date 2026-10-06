@@ -1,6 +1,6 @@
 == Beneficiaries and benefits
 
-This section describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.
+This section describes the potential  beneficiaries and benefits of representing 3D spatial data using semantic and graph technologies. The requirements identified for 3D-GeoSPARQL provide a basis for achieving these benefits by supporting the representation, linking, querying, and reasoning of 3D spatial information across different domains and datasets. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.
 
 === Semantic-functional value of 3D-GeoSPARQL
 Value for data reasoning, formal description, and semantic interoperability

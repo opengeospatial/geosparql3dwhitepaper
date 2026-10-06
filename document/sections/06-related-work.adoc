@@ -244,9 +244,34 @@ AEC - Building domain ontology for storeys, spaces, elements + 3D mesh links; us
 ===== Linked Building Server 
 Over the last years, Building Information Modelling (BIM) has been increasingly adopted in building projects for its benefits to collaboration and associated risk mitigation. Recent work is trying to make this data available over the web (web-based BIM applications). Most notable in making building data web-ready is the linked building data (LBD) initiative. This group has worked on a number of vocabularies and ontologies, thereby starting from a linked data approach (RDF graphs), aiming at representing building data on the web. https://github.com/LBDserver[Linked Building Data Server]
 
-
 ==== BIMSPARQL
+This initiative proposes extending SPARQL with functions for querying IFC building data to simplify queries and derive information from 3D geometry for BIM requirement checking. The functions are represented as RDF vocabularies and implemented using a combination of declarative rules and procedural programming. Evaluation with realistic requirement-checking scenarios demonstrates that the approach supports spatial and logical reasoning and can combine building and regulatory data from multiple sources.
+<<article>>
+
+[#img_BIMSPARQL, reftext='{figure-caption} {counter:figure-num}']
+.IMSPARQL.
+image::../figures/BIMSPARQL_Geometry_Functions.png[align="center"]
+
 ==== stSPARQL
+In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF and the Query Language stSPARQL <<inbook>>, Koubarakis and Kyzirakos describe the extension of SPARQL with temporal information. These paterns can also be used for GeoSPARQL.
+
+==== OntoBREP and OntoSTEP
+OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <<ontobrep>>
+
+OntoSTEP translates STEP schemas and their instances, originally defined using EXPRESS, into OWL. This creates a semantically representation of product and CAD information. The approach enables reasoning, inference, and querying over existing CAD data and provides a way to combine information represented using different modeling languages. <<ontotstep>> 
+
+OntoBREP and OntoSTEP represent approaches in which geometry are brought into the Semantic Web at a relatively deep semantic level. This results in potentially large and complex knowledge graphs.
+
+Different approaches for representing geometry in the Semantic Web have been investigated <<c63f82e83d7249f18ab6e4b7afe049cb>> ranging from integrating geometric structures into the knowledge graph to linking semantic resources to external geometry representations or files
+
+[#img_Approaches_of_Geometry_in_Linked_Data, reftext='{figure-caption} {counter:figure-num}']
+.Approaches_of_Geometry_in_Linked_Data.
+image::../figures/Approaches_of_Geometry_in_Linked_Data.png[align="center"]
+
+
+[#img_Implementation_of_approach_1, reftext='{figure-caption} {counter:figure-num}']
+.Implementation_of_approach_1.
+image::../figures/Implementation_of_approach_1.png[align="center"]
 
 ==== ENVON
 Robotics / manufacturing ontology that integrates contextual, topologic, geometric info for 3D environments; BFO‑based 3D shape ontology; BREP/CSG distinctions <<zhao2024envon>>. 

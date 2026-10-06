@@ -434,20 +434,20 @@ such as OBJ, glTF and STEP, to be embedded in RDF or referenced as external file
 
 the File Ontology for Geometry formats (FOG), a method for embedding and exchanging different 2D and 3D geometry formats within RDF graphs. FOG allows geometry data to be stored, referenced, and automatically identified, making it easier to exchange building geometry between different software and stakeholders. 
 
+==== LBD Server, IFC2LBD and IFC2LBD-NEO
+To make BIM data accessible on the web, the Linked Building Data (LBD) initiative applies Linked Data principles, using RDF, vocabularies, and ontologies to represent building information. To make this information practically accessible, a platform is needed that combines semantic building data with 3D visualisation. The LBD Server addresses this need by allowing users to upload building data, visualise its 3D geometry, and link geometric objects to their underlying semantic information. This enables users to explore both the physical and semantic aspects of a building within a web-based environment.
 
+[#img_LBD_Server_connectivity_GLTF_LD, reftext='{figure-caption} {counter:figure-num}']
+.LBD_Server_connectivity_GLTF_LD.
+image::../figures/Schema_of_connectivity_between_glTF_mesh_geometry_and_graph_data.png[align="center"]
+source: <<03e4260b3605459b8ce220cfb42a3525>>
 
+IFC2LBD makes the semantic transformation itself a central component. It converts IFC into RDF using LBD ontologies such as BOT, PRODUCT and PROPS. The result is a graph representation that can be queried and linked on the web. The original IFC-to-LBD work explicitly aimed to produce a simpler, modular representation than directly using the full ifcOWL structure. IFC2LBD-Neo takes this further by redesigning the converter as a modular, staged pipeline. It additionally uses ontologies as BEO, bSDD and OMG/FOG. The geometry is generated separately as glTF, Fragments or Parquet outputs.
 
-==== IFC2LBD and IFC2LBD-NEO
 [#img_BIFC2LBD-NEO, reftext='{figure-caption} {counter:figure-num}']
 .IFC2LBD Pipeline.
-image::../figures/IFC2LBD-NEO.png[align="center", width="50%"]
+image::../figures/IFC2LBD-NEO.png[align="center"]
 source: https://github.com/ISBE-TUe/IFC2LBD-Neo
-and: 
-source: 
-
-IFC2LBD-NEO.png
-
-OntoBREP
 
 
 [#img_File_Ontology_for_Geometry_Formats_FOG, reftext='{figure-caption} {counter:figure-num}']
@@ -456,6 +456,6 @@ image::../figures/Screenshot_of_demo_web_application_FOG.png[align="center", wid
 source: https://ec-3.org/wp-content/uploads/2025/10/EC32019_166.pdf
 
 === 5.4 Concluding overview of requirements for 3D geometry in the semantic web
-A concluding summary with a list of requirements to be taken into account for future development in different places and organisations.
+The requirements indicate that a GeoSPARQL extension for 3D should provide a common semantic and query layer for heterogeneous 3D representations. Such an extension should support the representation and semantic linking of 3D geometries, 3D topological and directional relations, spatial analysis and measurement, positioning and coordinate reference systems, visualisation, as well as routing. The standard should interoperate with established geometry formats and domain-specific models. This would allow specialised formats to retain their detailed geometric, visual, and domain-specific capabilities, while GeoSPARQL provides a common framework for representing, linking, discovering, and querying their spatial semantics in the Semantic Web. In this role, GeoSPARQL 3D would function primarily as an interoperability layer between geospatial, BIM, and other 3D domains.
 
 

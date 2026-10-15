@@ -29,7 +29,7 @@ jobs:
 
     - name: Run Metanorma 🔧
       run: |
-         pip install --pre bibtexparser
+         pip install bibtexparser
          python scripts/processbibtex.py
          metanorma site generate --agree-to-terms -o site
 

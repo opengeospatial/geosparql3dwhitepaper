@@ -1,4 +1,4 @@
-= GeoSPARQL 3d White Paper
+= GeoSPARQL 3D White Paper
 :doctype: white-paper
 :language: en
 :status: draft

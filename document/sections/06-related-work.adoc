@@ -41,6 +41,10 @@ Like the OBJ format, supporting PLY would imply including support for vertices a
 
 === Geometry metadata and linking 
 
+The usefulness of 3D geometries in a knowledge graph will depend on the quality of the metadata which is used to describe the geometries.
+The reason is that we can expect users to select 3D geometries based on their attributes, since querying over greater 3D models is likely to be inefficient.
+Hence, we investigate already existing vocabularies for 3D geometry metadata representation.
+
 ==== Geometry Metadata Ontology (GOM)
 The https://www.w3id.org/gom[Geometry Metadata Ontology (GOM)] introduces classes for surfaces which are common in the 3D world, but uncommon for 3D geometries, for instance Meshes or NURBS surfaces.
 The ontology can serve as an inspiration for extensions in GeoSPARQL 3D and may or may not be fully or partly adopted in the process of standardization.
@@ -53,7 +57,6 @@ For example. an extrusion in 3D from a 2D geometry template would have a derivat
 The https://w3id.org/fog#[File Ontology for Geometry Formats (FOG)] provides a bridge between ontology descriptions of geometries and data file descriptions of 3D contents.
 Since many 3D datasets are of considerable size, their inclusion into the knowledge graph as String literals might hinder the query performance of said knowledge graph.
 It therefore stands to reason whether to adopt the same or a similar method of geometry access that FOG provides for GeoSPARQL 3D.
-
 
 
 === Generic 3D representation and semantic models 

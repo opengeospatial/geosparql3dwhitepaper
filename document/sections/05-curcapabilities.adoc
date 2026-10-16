@@ -63,18 +63,24 @@ An instance of `Geometry` is not restricted to two dimensions.
 
 A fine-grained classification of `Geometry` can use the https://opengeospatial.github.io/ogc-geosparql/geosparql11/sf_geometries.ttl[Simple Feature Vocabulary] which extends the class `Geometry` with further types, such as _Point_, _Polygon_ etc.
 
-The Simple Features vocabulary allows for the definition of 3D variants of:
+The Simple Features vocabulary also  does not restrict the definition of 3D variants of e.g.:
 
 - (Multi)Points
 - (Multi)LineStrings
 - (Multi)Polygons
-- Polyhedralsurface
+- Polyhedralsurfaces
 
-It does not include common 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations. Nor does it include extruded geometry.  
+In this sense, the GeoSPARQL geometry class hierarchy is already prepared for the inclusion of 3D geometries, even though some 3D geometry types have not been defined in teh Geometry class hierarchy provided by GeoSPARQL 1.1.
+
+Examples of missing geometry types include common 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations, nor does it include extruded geometry types.
 
 [#img_3dinifc,reftext='{figure-caption} {counter:figure-num}']
 .Possible approaches for representing 3D objects in IFC
 image::../figures/3DinIFC_FIG01.png[align="center"]
+
+In addition, while boundary representations are supported in principle, their relation to aggregations of boundary surfaces is unsufficiently supported. Boundary surface aggregations may only be treated as GeometryCollections.
+
+====== Geometry Metadata
 
 Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts.
 In particular, the properties are:
@@ -82,11 +88,11 @@ In particular, the properties are:
 - `geo:hasVolume`
 - `geo:hasMetricVolume`
 
-Further 3D-related metadata properties such as projection matrices are not part of the current GeoSPARQL 1.1 standard.
+While these properties may describe features of a 3D solid, specific parameters of 3D models such as projection matrices, the material of a 3D model and its reflectivity which are commonplace in 3D rendering applications cannot be represented in GeoSPARQL 1.1.
 
-A first requirement for 3D support is the ability to save 3D data in a knowledge graph.
+A further requirement for 3D support is the ability to save 3D data in a knowledge graph.
 
-The Geometry extension enables geometries to be defined within the GeoSPARQL framework. Supported geometry formats include RDF literals in WKT, GML, GeoJSON, and KML.
+The Geometry extension enables geometries to be defined within the GeoSPARQL framework. Supported geometry formats include RDF literals in WKT, GML, GeoJSON, KML and DGGS.
 
 These literals are investigated for the storage of 3D data.
 
@@ -106,6 +112,9 @@ image::../figures/2d-2d--2andahalfd-3d-difference.png[align="center"]
 |=== 
 *The support of 3D for DGGS is dependent on the DGGS grid definition being used.
 
+The comparison of capabilities shows limited support for 3D of some of GeoSPARQL 1.1 literal formats.
+While these existing capabilities are an important information, one might also take into account the option to not save the 3D model in the knowledge graph directly for performance reasons.
+GeoSPARQL 1.1 currently does not allow geometries to be defined as a external resource, so the need may arise to find a solution in GeoSPARQL 3D.
 
 GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support.
 There are currently almost 300 coordinate reference systems in the database https://epsg.io/?q=%20kind%3AGEOG3DCRS[epsg.io] which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
@@ -132,10 +141,17 @@ However, there are functions which may take into account the Z coordinate, if th
 
 These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.
 
+Other query functions such as geof:intersection may exhibit an undefined und hence unwanted behavior when executed with 3D geometries, i.e. ignore the Z coordinate, reduce the 3D geometry to a (faulty) 2D geometry among others.
+The behavior currently depends on the specific implementation and has not been spelled out in the GeoSPARQL 1.1 specification.
+
 ===== Geometry Topology Extension
 Another extension is the Geometry Topology extension. This provides query functions that return relationships between different geometries based on the topology vocabulary extension.
 
-However, the geometry topology extension does not provide functions which could describe relations between 3D geometries or 2D vs. 3D geometries.
+The Geometry Topology Extension describes three sets of geometry relation functions, akin to the properties which were previously defined in the Topology Vocabulary extension.
+
+The Simple Features relations, the Egenhofer relations and the RCC8 relations as query functions are merely defined on 2D relations and warrant an examination concerning their suitability and upgradability to 3D.
+
+It might be desirable to even use different sets of relations which will be available in GeoSPARQL 3D, which are better suited for the specific needs for 3D geometries.
 
 Hence, the extension of the Geometry Topology extension with 3D topology functionality might be needed and its compatibility with the already available 2D topological relations would need to be examined.
 
@@ -145,10 +161,15 @@ This kind of logical inference can also be applied to geometry. GeoSPARQL includ
 
 All elements of the RDFS entailment extensions do not provide 3D capabilities either.
 
+===== Geometry Class Hierarchy
+
+As described in the Geometry Extension part, the Geometry class hierarchy will need to be extended to include 3D primitives and 3D specific types so that reasoners may take advantage of 3D types in reasoning tasks.
+This may need to be done for 3D serializations that are not equal to WKT and GML, since only for these two serializations, the RDFS Entailment was defined in GeoSPARQL 1.1.
+
 ===== Query Rewrite Extension
 GeoSPARQL allows queries such as whether “Feature A” is located within “Feature B” using its vocabulary. The Query Rewrite extension specifies a RIF <<Boley:13:ROE>> rule that enables query rewriting. However, this extension does not support the rewriting of 3D queries.
 
-It would need to be examined whether 3D extensions are needed to either stay compatible with this pattern or to extend it.
+3D compatibility of the Query Rewrite extension would depend similarly on the 3D relations defined, since the Query Rewrite Extension would merely apply the graph patterns defined in the other extensions.
 
 ==== Adoption of GeoSPARQL 1.1
 The article "A GeoSPARQL Compliance Benchmark", Jovanovik, Homburg and Spasić <<ijgi10070487>> describes the results of a GeoSPARQL compliance benchmark. The measure of the extent of GeoSPARQL support in GeoSPARQL-enabled RDF triplestores was done in 2021. The article concludes that the GeoSPARQL standard, almost nine years after its initial release, is often only partially supported by major triplestore vendors. This raises the question of whether adding functionality to a standard increases implementation complexity, or whether new and more powerful capabilities can instead stimulate adoption by enabling new and more valuable use cases for software developers and users.

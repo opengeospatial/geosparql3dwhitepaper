@@ -4,7 +4,7 @@ Realizing the motivation described above requires technical and semantic support
 
 === GeoSPARQL
 
-GeoSPARQL is the most common geospatial extension of SPARQL. It was accepted as an OGC standard in 2012 and revised as GeoSPARQL 1.1 in 2024.
+GeoSPARQL is arguably the most common geospatial extension of SPARQL. It was accepted as an OGC standard in 2012 and revised as GeoSPARQL 1.1 in 2024.
 
 According to the standard document, "The OGC GeoSPARQL standard supports representing and querying geospatial data on the Semantic Web. GeoSPARQL defines a vocabulary for representing geospatial data in RDF, and it defines an extension to the SPARQL query language for processing geospatial data".
 
@@ -24,7 +24,7 @@ In the geometric model that GeoSPARQL uses, points are the basic building blocks
 3. https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]:
 In order to support linear referencing, geometries in GeoSPARQL can have a measure value. This is a relative position along a line or a curve, and does not extend the Geometry in space. The __spatial dimension__, therefore, can be used to denote the number of coordinates in a point, excluding the measurement value.
 
-The extended capabilities for GeoSPARQL discussed in this white paper concern the cases where the _spatial dimension_ (wich can be expressed with property https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]) of geometry has the value 3.
+The extended capabilities for GeoSPARQL discussed in this white paper concern the cases where the _spatial dimension_ (which can be expressed with property https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]) of geometry has the value 3.
 
 The table below shows the values of the three dimension properties for some Geometries (expressed as Well Known Text (WKT)).
 
@@ -70,7 +70,7 @@ The Simple Features vocabulary allows for the definition of 3D variants of:
 - (Multi)Polygons
 - Polyhedralsurface
 
-It does not include commons 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations. Nor does it include extruded geometry.  
+It does not include common 3D primitives, such as _Cube_ or _Mesh_ surfaces which are integral parts of 3D representations. Nor does it include extruded geometry.  
 
 [#img_3dinifc,reftext='{figure-caption} {counter:figure-num}']
 .Possible approaches for representing 3D objects in IFC
@@ -102,14 +102,15 @@ image::../figures/2d-2d--2andahalfd-3d-difference.png[align="center"]
 |GML Literal  | Yes | Yes | Yes | Only with extension Schema
 |KML Literal  | Yes | Yes | Yes | As import from COLLADA
 |GeoJSON Literal  | Yes | Yes | Yes | Yes
-|DGGS Literal  |  |  | |
+|DGGS Literal  | Yes* | Yes* | Yes | Yes
 |=== 
+*The support of 3D for DGGS is dependent on the DGGS grid definition being used.
 
 
 GeoSPARQL 1.1 also does not restrict the usage of coordinate reference systems with 3D support.
 There are currently almost 300 coordinate reference systems in the database https://epsg.io/?q=%20kind%3AGEOG3DCRS[epsg.io] which can be used to describe 3D data encoded in the GeoSPARQL graph literals listed above.
 
-GeoSPARQL allready supports linking multiple geometries (e.g., 2D and 2.5D) to a single feature. We aim to extend this with 3D geometries. 
+GeoSPARQL already supports linking multiple geometries (e.g., 2D and 2.5D) to a single feature. We aim to extend this with 3D geometries. 
 
 For example, a tree in the real world may be represented in databases with both a 2D and a 3D geometry.
 
@@ -134,12 +135,20 @@ These functions check for the presence of Z coordinates or filter out maximum an
 ===== Geometry Topology Extension
 Another extension is the Geometry Topology extension. This provides query functions that return relationships between different geometries based on the topology vocabulary extension.
 
+However, the geometry topology extension does not provide functions which could describe relations between 3D geometries or 2D vs. 3D geometries.
+
+Hence, the extension of the Geometry Topology extension with 3D topology functionality might be needed and its compatibility with the already available 2D topological relations would need to be examined.
+
 ===== RDFS Entailment Extension
 The RDFS Entailment extension provides rules for reasoning over geometries. Based on specific statements, additional information can be inferred.
 This kind of logical inference can also be applied to geometry. GeoSPARQL includes logic for reasoning over simple features geometries.
 
+All elements of the RDFS entailment extensions do not provide 3D capabilities either.
+
 ===== Query Rewrite Extension
-GeoSPARQL allows queries such as whether “Feature A” is located within “Feature B” using its vocabulary. The Query Rewrite extension specifies a RIF rule that enables query rewriting. However, this extension does not support the rewriting of 3D queries.
+GeoSPARQL allows queries such as whether “Feature A” is located within “Feature B” using its vocabulary. The Query Rewrite extension specifies a RIF <<Boley:13:ROE>> rule that enables query rewriting. However, this extension does not support the rewriting of 3D queries.
+
+It would need to be examined whether 3D extensions are needed to either stay compatible with this pattern or to extend it.
 
 ==== Adoption of GeoSPARQL 1.1
 The article "A GeoSPARQL Compliance Benchmark", Jovanovik, Homburg and Spasić <<ijgi10070487>> describes the results of a GeoSPARQL compliance benchmark. The measure of the extent of GeoSPARQL support in GeoSPARQL-enabled RDF triplestores was done in 2021. The article concludes that the GeoSPARQL standard, almost nine years after its initial release, is often only partially supported by major triplestore vendors. This raises the question of whether adding functionality to a standard increases implementation complexity, or whether new and more powerful capabilities can instead stimulate adoption by enabling new and more valuable use cases for software developers and users.
@@ -147,7 +156,7 @@ The article "A GeoSPARQL Compliance Benchmark", Jovanovik, Homburg and Spasić <
 On the https://portal.ogc.org/public_ogc/compliance/implementing.php?&specid=528[OGC Implementation Database] there is no organisation compliant with the OGC GeoSPARQL standard. There are four organisations that are implementing the GeoSPARQL (v 1.0) standard. 
 
 ==== GeoSPARQL Aligments
-GeoSPARQL is aligned with a range of established ontologies and vocabularies covering different aspects of geospatial information, metadata, provenance, time, sensors, and linked data. See https://docs.ogc.org/is/22-047r1/22-047r1.html#_6f67539d-8b79-4a2b-b7b9-9b4a54e710d0[Annex E of the GeoSPARQL Standard]. Alignments with additional ontologies may be relevant for a broader 3D context. As an example, ontologies such as Reloc, BOT and ifcOWL can be interesting.
+GeoSPARQL is aligned with a range of established ontologies and vocabularies covering different aspects of geospatial information, metadata, provenance, time, sensors, and linked data. See https://docs.ogc.org/is/22-047r1/22-047r1.html#_6f67539d-8b79-4a2b-b7b9-9b4a54e710d0[Annex E of the GeoSPARQL Standard]. Alignments with additional ontologies may be relevant for a broader 3D context. As an example, ontologies such as Reloc <<gobelsRelativeLocationOntology2024>>, BOT <<doi:10.3233/SW-200385>> and ifcOWL <<03e4260b3605459b8ce220cfb42a3525>> can be interesting.
 
 
 ==== GeoSPARQL functionality and geometries comparison

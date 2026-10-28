@@ -29,9 +29,9 @@ jobs:
 
     - name: Run Metanorma 🔧
       run: |
+         apt-get install curl -y
          pip install --pre bibtexparser
          python scripts/processbibtex.py
-         brew upgrade tamatebako/tebako/tebako
          metanorma site generate --agree-to-terms -o site
 
     - name: Deploy 🚀

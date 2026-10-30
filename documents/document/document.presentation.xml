@@ -632,7 +632,7 @@ sourcecode .nt {
 <title id="_58b128b6-fc12-73fc-034c-24aaee1fd9ce" semx-id="_ba97df29-dd76-9403-eb36-29cea9cab1cf">Related Work</title><fmt-title depth="1" id="_9630aa22-a85d-3530-8f2d-6d3a149764a2"><span class="fmt-caption-label"><semx element="autonum" source="_eaa3b626-b94c-251a-7bbd-892e4846ee09">9</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_58b128b6-fc12-73fc-034c-24aaee1fd9ce">Related Work</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_eaa3b626-b94c-251a-7bbd-892e4846ee09">9</semx></fmt-xref-label>
 <p id="_9bb9dd5d-9383-ec74-3802-8f4f7252c064" semx-id="_9bb9dd5d-9383-ec74-3802-8f4f7252c064">Various vocabularies, standards, and domain-specific approaches provide concepts for describing 3D geometries, topology, spatial relationships, and their semantics. This section reviews these related developments to understand the different ways in which 3D spatial information is currently modeled and to identify concepts and approaches that may complement or inform the further development of 3D in GeoSPARQL.</p>
 
-<p id="_c565d69c-152c-3773-4c97-68d462419111" semx-id="_c565d69c-152c-3773-4c97-68d462419111">A substantial body of work shows that <strong>there is no single universal 3D web ontology</strong>, but several reusable, often domain‑ or format‑specific vocabularies to describe geometry, topology, scenes, and domain semantics. Two principal flavours of ontologies can be identified in existing literature:i) those meant for the generic representation of 3D objects and shapes, and ii) a growing body of domain-specific ontologies <eref type="inline" bibitemid="flotynski2017ontology" citeas="flotynski2017ontology" id="_2277bbdd-eaa0-f831-b24d-eb7f18b724f6"/><semx element="eref" source="_2277bbdd-eaa0-f831-b24d-eb7f18b724f6"><fmt-xref type="inline" target="flotynski2017ontology">[31]</fmt-xref></semx>.</p>
+<p id="_c565d69c-152c-3773-4c97-68d462419111" semx-id="_c565d69c-152c-3773-4c97-68d462419111">A substantial body of work shows that <strong>there is no single universal 3D web ontology</strong>, but several reusable, often domain‑ or format‑specific vocabularies to describe geometry, topology, scenes, and domain semantics. Two principal flavours of ontologies can be identified in existing literature:i) those meant for the generic representation of 3D objects and shapes, and ii) a growing body of domain-specific ontologies <eref type="inline" bibitemid="flotynski2017ontology" citeas="DOI 10.1111/cgf.13083" id="_2277bbdd-eaa0-f831-b24d-eb7f18b724f6"/><semx element="eref" source="_2277bbdd-eaa0-f831-b24d-eb7f18b724f6"><fmt-xref type="inline" target="flotynski2017ontology">[37]</fmt-xref></semx>.</p>
 
 <p id="_520af256-24b5-b263-4665-ee3441e895eb" semx-id="_520af256-24b5-b263-4665-ee3441e895eb">This section starts by providing a brief overview of these two flavours of ontologies. It then dives into domain-specific initiatives, considering Geo-spatial, Cultural Heritage and BIM. This section closes by enumerating various encoding formats relevant for 3D.</p>
 
@@ -725,7 +725,7 @@ sourcecode .nt {
 
 <p id="_6ce20153-3716-1a70-9294-16a5ec430dd5" semx-id="_6ce20153-3716-1a70-9294-16a5ec430dd5"><eref type="inline" bibitemid="ijgi12090351" citeas="DOI 10.3390/ijgi12090351" id="_a86c830c-52ca-30ab-b96e-826abb921d63"/><semx element="eref" source="_a86c830c-52ca-30ab-b96e-826abb921d63"><fmt-xref type="inline" target="ijgi12090351">[46]</fmt-xref></semx> describes the CityGML Ontology, which is an ontology model to formalize the CityGML standard towards a representation in OWL. It shows a workflow of identification, classification and selection of the relevant data points needed to describe 3D city models in OWL as derived from building and city models. In addition, it introduces the concept of Level of Information Need, defining the granularity of the information on the various levels of the building and the types of information retrieval — direct/indirect, i.e. information which is commonly obtained directly from a dataset or using a calculation or reasoning approach. The paper exemplifies the concept in a study case for property unit cost and indoor daylight. The contribution outlined here became the basis of the CityGML ontology which can serve as one broad application area for GeoSPARQL 3D.</p>
 
-<p id="_861a961f-3e17-8bf8-7089-618e79c73378" semx-id="_861a961f-3e17-8bf8-7089-618e79c73378">Following on this publication <eref type="inline" bibitemid="chadzynski2023semantic" citeas="DOI 10.1017/dce.2023.14" id="_6ac2333b-14d9-a25c-6a45-aff07c3a4c61"/><semx element="eref" source="_6ac2333b-14d9-a25c-6a45-aff07c3a4c61"><fmt-xref type="inline" target="chadzynski2023semantic">[35]</fmt-xref></semx> presents a system architecture and a set of interfaces that can represent city modeling approaches using dynamic geospatial knowledge graphs. The paper proves the viability of a transition between a SQL based system for 3D building management to a SPARQL based system using a SQL2SPARQL Transformer component. It therefore proves the feasibility of employing linked open data technologies for 3D building data and in particular the CityGML model in practice.</p>
+<p id="_861a961f-3e17-8bf8-7089-618e79c73378" semx-id="_861a961f-3e17-8bf8-7089-618e79c73378">Following on this publication <eref type="inline" bibitemid="chadzynski2023semantic" citeas="DOI 10.1017/dce.2023.14" id="_6ac2333b-14d9-a25c-6a45-aff07c3a4c61"/><semx element="eref" source="_6ac2333b-14d9-a25c-6a45-aff07c3a4c61"><fmt-xref type="inline" target="chadzynski2023semantic">[33]</fmt-xref></semx> presents a system architecture and a set of interfaces that can represent city modeling approaches using dynamic geospatial knowledge graphs. The paper proves the viability of a transition between a SQL based system for 3D building management to a SPARQL based system using a SQL2SPARQL Transformer component. It therefore proves the feasibility of employing linked open data technologies for 3D building data and in particular the CityGML model in practice.</p>
 
 <p id="_920deb34-d394-effc-e63d-4bb02f3ed185" semx-id="_920deb34-d394-effc-e63d-4bb02f3ed185"><eref type="inline" bibitemid="kutzner2020citygml30" citeas="DOI 10.1007/s41064-020-00095-z" id="_67d5aafb-bd96-8e50-1a0c-b962284ac700"/><semx element="eref" source="_67d5aafb-bd96-8e50-1a0c-b962284ac700"><fmt-xref type="inline" target="kutzner2020citygml30">[50]</fmt-xref></semx> introduces CityGML 3.0 with a newly added Core module including a new space concept and Level Of Detail concept. The given publication sets the standard especially for Level of Detail in 3D buildings, which may be considered for adoption as GeoSPARQL 3D concepts too. In addition, CityGML 3.0 proposes the addition of 3D point clouds for the representation of 3D goemetires of physical spaces and space boundaries. A mapping from IFC to CityGML 3.0 is also proposed by these authors.</p>
 
@@ -733,7 +733,7 @@ sourcecode .nt {
 
 <p id="_c4d48ec0-b02b-15d7-9730-bf30bc8d49a2" semx-id="_c4d48ec0-b02b-15d7-9730-bf30bc8d49a2">In addition, a master thesis <eref type="inline" bibitemid="hansson2024citygml" citeas="hansson2024citygml" id="_270ddbca-018b-d854-60fc-2e721bdafb05"/><semx element="eref" source="_270ddbca-018b-d854-60fc-2e721bdafb05"><fmt-xref type="inline" target="hansson2024citygml">hansson2024citygml</fmt-xref></semx> proved the feasibility of not only converting CityGML to a knowledge graph representation, but also its application in triple stores such as Ontop or 3DCityDB. The mapping of CityGML to the knowledge graph was tested using a set of SPARQL queries retrieving different components of building parts. While the thesis could construct a knowledge graph representation from CityGML, it points out that the incorporation of sptaial operations is left to future work and could provide a possible field for GeoSPARQL 3D adoption.</p>
 
-<p id="_fd8273eb-c014-ad6d-7cc9-db3c050cef7d" semx-id="_fd8273eb-c014-ad6d-7cc9-db3c050cef7d">Finally, <eref type="inline" bibitemid="CHADZYNSKI2021100106" citeas="CHADZYNSKI2021100106" id="_1e432d7e-42ec-3e12-db03-1807d36bbfd8"/><semx element="eref" source="_1e432d7e-42ec-3e12-db03-1807d36bbfd8"><fmt-xref type="inline" target="CHADZYNSKI2021100106">[30]</fmt-xref></semx> proposed OntoCityGML, an extension go the CityGML ontolog <link target="https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub" id="_0766568d-28e0-6214-48af-d8ab39f0c549"/><semx element="link" source="_0766568d-28e0-6214-48af-d8ab39f0c549"><fmt-link target="https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub"/></semx> Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph</p>
+<p id="_fd8273eb-c014-ad6d-7cc9-db3c050cef7d" semx-id="_fd8273eb-c014-ad6d-7cc9-db3c050cef7d">Finally, <eref type="inline" bibitemid="CHADZYNSKI2021100106" citeas="DOI 10.1016/j.egyai.2021.100106" id="_1e432d7e-42ec-3e12-db03-1807d36bbfd8"/><semx element="eref" source="_1e432d7e-42ec-3e12-db03-1807d36bbfd8"><fmt-xref type="inline" target="CHADZYNSKI2021100106">[32]</fmt-xref></semx> proposed OntoCityGML, an extension go the CityGML ontolog <link target="https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub" id="_0766568d-28e0-6214-48af-d8ab39f0c549"/><semx element="link" source="_0766568d-28e0-6214-48af-d8ab39f0c549"><fmt-link target="https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub"/></semx> Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph</p>
 
 <p id="_2669fee3-da69-f119-507c-563a3575e00d" semx-id="_2669fee3-da69-f119-507c-563a3575e00d">Other details and history of Onto CityGML.</p>
 
@@ -744,7 +744,7 @@ sourcecode .nt {
 <title id="_ccf1abed-fb29-e7c5-6b02-f35168bb2721" semx-id="_ed4f2c44-2b14-e6bb-9898-32d0326cb972">Cultural Heritage</title><fmt-title depth="3" id="_41662cd1-0eab-e695-d8ca-2595d5b75d62"><span class="fmt-caption-label"><semx element="autonum" source="_eaa3b626-b94c-251a-7bbd-892e4846ee09">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b4435000-28d3-c018-e00e-1448675199e3">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_9c06f219-dd34-0a1f-302d-c843347dad77">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_ccf1abed-fb29-e7c5-6b02-f35168bb2721">Cultural Heritage</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_eaa3b626-b94c-251a-7bbd-892e4846ee09">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b4435000-28d3-c018-e00e-1448675199e3">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_9c06f219-dd34-0a1f-302d-c843347dad77">2</semx></fmt-xref-label>
 <p id="_f9c56628-565f-904a-deac-224c3ee41e3b" semx-id="_f9c56628-565f-904a-deac-224c3ee41e3b">In the research domain of cultural heritage, 3D models of either cultural heritage artifacts (possibly georeferenced), 3D models of archaeological sites or simply 3D models of ancient buildings are becoming increasinly common.</p>
 
-<p id="_75cabe6f-d280-4ee8-efbe-cca0bc9f0f44" semx-id="_75cabe6f-d280-4ee8-efbe-cca0bc9f0f44">Building-conservation ontology for 3D annotations. The conservation and restoration of historical monuments require the integration of information from many different disciplines and techniques. This study presents a pipeline that combines semantic, spatial, and morphological data into one 3D information model. The approach was tested on Saint Maurice Church in Caromb, France, allowing conservation experts to better visualize, correlate, and retrieve information about materials, damage, and other conservation observations. <eref type="inline" bibitemid="messaoudi2018heritage" citeas="messaoudi2018heritage" id="_20ff4e41-a7ef-6eb9-d9d1-1846f99ac272"/><semx element="eref" source="_20ff4e41-a7ef-6eb9-d9d1-1846f99ac272"><fmt-xref type="inline" target="messaoudi2018heritage">[33]</fmt-xref></semx>;</p>
+<p id="_75cabe6f-d280-4ee8-efbe-cca0bc9f0f44" semx-id="_75cabe6f-d280-4ee8-efbe-cca0bc9f0f44">Building-conservation ontology for 3D annotations. The conservation and restoration of historical monuments require the integration of information from many different disciplines and techniques. This study presents a pipeline that combines semantic, spatial, and morphological data into one 3D information model. The approach was tested on Saint Maurice Church in Caromb, France, allowing conservation experts to better visualize, correlate, and retrieve information about materials, damage, and other conservation observations. <eref type="inline" bibitemid="messaoudi2018heritage" citeas="DOI 10.1016/j.culher.2017.05.017" id="_20ff4e41-a7ef-6eb9-d9d1-1846f99ac272"/><semx element="eref" source="_20ff4e41-a7ef-6eb9-d9d1-1846f99ac272"><fmt-xref type="inline" target="messaoudi2018heritage">[31]</fmt-xref></semx>;</p>
 
 <p id="_8028c343-b4d7-caf2-7ce5-4b6343f363c6" semx-id="_8028c343-b4d7-caf2-7ce5-4b6343f363c6">CIDOC CRM–based models for 3D CH objects and provenance. This paper proposes an ontology-based approach for managing and using 3D content without requiring domain experts to have programming or 3D modelling skills. The actual 3D elements can be created by graphic designers and then linked to domain-specific concepts by developers. Ontologies and automated reasoning can subsequently determine which 3D elements are relevant based on the specified domain information, while semantic queries allow the content to be explored and analysed. The focus is therefore on connecting 3D graphics with domain knowledge rather than on creating the 3D models themselves. <eref type="inline" bibitemid="walczak2019inference" citeas="walczak2019inference" id="_ac105b9a-7a78-ef62-d37b-a3037486732f"/><semx element="eref" source="_ac105b9a-7a78-ef62-d37b-a3037486732f"><fmt-xref type="inline" target="walczak2019inference">walczak2019inference</fmt-xref></semx> <eref type="inline" bibitemid="amico2106ontological" citeas="amico2106ontological" id="_ca3b00fc-f154-2261-286b-5449fdf3373b"/><semx element="eref" source="_ca3b00fc-f154-2261-286b-5449fdf3373b"><fmt-xref type="inline" target="amico2106ontological">amico2106ontological</fmt-xref></semx> <eref type="inline" bibitemid="гончар2021ontological" citeas="" id="_1c968e5d-94ab-25f1-dd12-7b723246f707"/><semx element="eref" source="_1c968e5d-94ab-25f1-dd12-7b723246f707"/>.</p>
 
@@ -877,7 +877,7 @@ sourcecode .nt {
 
 <clause id="_dd34fea6-4d1d-7fa1-fc80-efec80a52167" obligation="normative" semx-id="_dd34fea6-4d1d-7fa1-fc80-efec80a52167">
 <title id="_0b6aaf09-449f-c080-df27-f157e87e4247" semx-id="_1a691d86-2add-5f12-b0b7-16605f3ecd66">BOT (Building Topology Ontology)</title><fmt-title depth="4" id="_976268f5-5a68-9cd2-6647-0ed32e5e029a"><span class="fmt-caption-label"><semx element="autonum" source="_eaa3b626-b94c-251a-7bbd-892e4846ee09">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b4435000-28d3-c018-e00e-1448675199e3">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_2aa81de5-585c-5291-f8be-6a744c8d7c32">5</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_dd34fea6-4d1d-7fa1-fc80-efec80a52167">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_0b6aaf09-449f-c080-df27-f157e87e4247">BOT (Building Topology Ontology)</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_eaa3b626-b94c-251a-7bbd-892e4846ee09">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b4435000-28d3-c018-e00e-1448675199e3">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_2aa81de5-585c-5291-f8be-6a744c8d7c32">5</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_dd34fea6-4d1d-7fa1-fc80-efec80a52167">2</semx></fmt-xref-label>
-<p id="_32874763-e384-c99d-1972-0959b43e04ec" semx-id="_32874763-e384-c99d-1972-0959b43e04ec">AEC — Building domain ontology for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies <eref type="inline" bibitemid="flotynski2020bot" citeas="DOI 10.1109/ic3d48390.2019.8975906" id="_a64ce6dd-5f8d-fcb8-3a4a-3d8a2014ff28"/><semx element="eref" source="_a64ce6dd-5f8d-fcb8-3a4a-3d8a2014ff28"><fmt-xref type="inline" target="flotynski2020bot">[36]</fmt-xref></semx>. |</p>
+<p id="_32874763-e384-c99d-1972-0959b43e04ec" semx-id="_32874763-e384-c99d-1972-0959b43e04ec">AEC — Building domain ontology for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies <eref type="inline" bibitemid="flotynski2020bot" citeas="DOI 10.1109/ic3d48390.2019.8975906" id="_a64ce6dd-5f8d-fcb8-3a4a-3d8a2014ff28"/><semx element="eref" source="_a64ce6dd-5f8d-fcb8-3a4a-3d8a2014ff28"><fmt-xref type="inline" target="flotynski2020bot">[34]</fmt-xref></semx>. |</p>
 </clause>
 
 <clause id="_f3afaa9d-156d-347d-c3a3-e939a6df4a9b" obligation="normative" semx-id="_f3afaa9d-156d-347d-c3a3-e939a6df4a9b">
@@ -902,13 +902,13 @@ sourcecode .nt {
 
 <clause id="_9d8e58d8-ccef-66bf-21b7-4e0533e9a6b3" obligation="normative" semx-id="_9d8e58d8-ccef-66bf-21b7-4e0533e9a6b3">
 <title id="_efdc0676-29a8-2897-8f87-1ca5a8faa6b9" semx-id="_0f7db0b6-83e3-15ee-63e5-d5e89150890d">OntoBREP and OntoSTEP</title><fmt-title depth="3" id="_83772f6a-a2c8-a557-d0d9-490d35f70c96"><span class="fmt-caption-label"><semx element="autonum" source="_eaa3b626-b94c-251a-7bbd-892e4846ee09">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b4435000-28d3-c018-e00e-1448675199e3">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_9d8e58d8-ccef-66bf-21b7-4e0533e9a6b3">8</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_efdc0676-29a8-2897-8f87-1ca5a8faa6b9">OntoBREP and OntoSTEP</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_eaa3b626-b94c-251a-7bbd-892e4846ee09">9</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b4435000-28d3-c018-e00e-1448675199e3">4</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_9d8e58d8-ccef-66bf-21b7-4e0533e9a6b3">8</semx></fmt-xref-label>
-<p id="_ae28848b-bb30-5bc8-0913-5199560f0fd5" semx-id="_ae28848b-bb30-5bc8-0913-5199560f0fd5">OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <eref type="inline" bibitemid="ontobrep" citeas="DOI 10.1109/iros.2015.7353971" id="_23d4d98f-92fc-45a6-1437-afd723422964"/><semx element="eref" source="_23d4d98f-92fc-45a6-1437-afd723422964"><fmt-xref type="inline" target="ontobrep">[38]</fmt-xref></semx></p>
+<p id="_ae28848b-bb30-5bc8-0913-5199560f0fd5" semx-id="_ae28848b-bb30-5bc8-0913-5199560f0fd5">OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <eref type="inline" bibitemid="ontobrep" citeas="DOI 10.1109/iros.2015.7353971" id="_23d4d98f-92fc-45a6-1437-afd723422964"/><semx element="eref" source="_23d4d98f-92fc-45a6-1437-afd723422964"><fmt-xref type="inline" target="ontobrep">[36]</fmt-xref></semx></p>
 
 <p id="_e49ff735-e3ae-2bc5-5b59-ad89e3005e3a" semx-id="_e49ff735-e3ae-2bc5-5b59-ad89e3005e3a">OntoSTEP translates STEP schemas and their instances, originally defined using EXPRESS, into OWL. This creates a semantically representation of product and CAD information. The approach enables reasoning, inference, and querying over existing CAD data and provides a way to combine information represented using different modeling languages. <eref type="inline" bibitemid="ontostep" citeas="ontostep" id="_2208935b-440b-93d0-6595-fd38ff942477"/><semx element="eref" source="_2208935b-440b-93d0-6595-fd38ff942477"><fmt-xref type="inline" target="ontostep">ontostep</fmt-xref></semx></p>
 
 <p id="_dbdbeb96-a71e-2d5e-76b5-f81a682d72b0" semx-id="_dbdbeb96-a71e-2d5e-76b5-f81a682d72b0">OntoBREP and OntoSTEP represent approaches in which geometry are brought into the Semantic Web at a relatively deep semantic level. This results in potentially large and complex knowledge graphs.</p>
 
-<p id="_8d0c0ee9-7c78-bd9e-f65a-6383bf7859db" semx-id="_8d0c0ee9-7c78-bd9e-f65a-6383bf7859db">Different approaches for representing geometry in the Semantic Web have been investigated <eref type="inline" bibitemid="c63f82e83d7249f18ab6e4b7afe049cb" citeas="DOI 10.1016/j.autcon.2020.103130" id="_2273f390-b4f7-29d0-436c-b5da277c0280"/><semx element="eref" source="_2273f390-b4f7-29d0-436c-b5da277c0280"><fmt-xref type="inline" target="c63f82e83d7249f18ab6e4b7afe049cb">[34]</fmt-xref></semx> ranging from integrating geometric structures into the knowledge graph to linking semantic resources to external geometry representations or files</p>
+<p id="_8d0c0ee9-7c78-bd9e-f65a-6383bf7859db" semx-id="_8d0c0ee9-7c78-bd9e-f65a-6383bf7859db">Different approaches for representing geometry in the Semantic Web have been investigated <eref type="inline" bibitemid="c63f82e83d7249f18ab6e4b7afe049cb" citeas="DOI 10.1016/j.autcon.2020.103130" id="_2273f390-b4f7-29d0-436c-b5da277c0280"/><semx element="eref" source="_2273f390-b4f7-29d0-436c-b5da277c0280"><fmt-xref type="inline" target="c63f82e83d7249f18ab6e4b7afe049cb">[30]</fmt-xref></semx> ranging from integrating geometric structures into the knowledge graph to linking semantic resources to external geometry representations or files</p>
 
 <figure id="img_Approaches_of_Geometry_in_Linked_Data" anchor="img_Approaches_of_Geometry_in_Linked_Data" semx-id="_50a63714-ab3f-999a-89d8-842d11eb422a" autonum="4">
 <name id="_1e5d064c-9651-f834-ae87-ebaf54aefcc9" semx-id="_80629575-9d77-53be-0995-52fb560ae8ea">Approaches_of_Geometry_in_Linked_Data.</name><fmt-name id="_4261235d-5b02-de49-faf2-95672afca5af"><span class="fmt-caption-label"><span class="fmt-element-name">Figure</span> <semx element="autonum" source="img_Approaches_of_Geometry_in_Linked_Data">4</semx></span><span class="fmt-caption-delim"> — </span><semx element="name" source="_1e5d064c-9651-f834-ae87-ebaf54aefcc9">Approaches_of_Geometry_in_Linked_Data.</semx></fmt-name><fmt-xref-label><span class="fmt-element-name">Figure</span> <semx element="autonum" source="img_Approaches_of_Geometry_in_Linked_Data">4</semx></fmt-xref-label>
@@ -925,7 +925,7 @@ sourcecode .nt {
 
 <p id="_b91f2a7d-cbd4-dd9a-b665-81ed67db20bd" semx-id="_b91f2a7d-cbd4-dd9a-b665-81ed67db20bd"><strong>Use of domain specific ontologies</strong> Domain-specific 3D ontologies are typically expressed using  <strong>RDF/OWL</strong>, defining concepts and relationships that capture the semantics of a particular application domain <xref target="FlotynskiWalczak2017" id="_838a662b-8b49-d39b-967f-5ad677d28541"/><semx element="xref" source="_838a662b-8b49-d39b-967f-5ad677d28541"><fmt-xref target="FlotynskiWalczak2017">[FlotynskiWalczak2017]</fmt-xref></semx> <eref type="inline" bibitemid="pittarello2006semantic" citeas="pittarello2006semantic" id="_2160ef50-a4a6-52f2-9363-9159db1e9ad6"/><semx element="eref" source="_2160ef50-a4a6-52f2-9363-9159db1e9ad6"><fmt-xref type="inline" target="pittarello2006semantic">pittarello2006semantic</fmt-xref></semx> <eref type="inline" bibitemid="walczak2019inference" citeas="walczak2019inference" id="_00e046d5-1187-57ae-dc3e-20cf281f860f"/><semx element="eref" source="_00e046d5-1187-57ae-dc3e-20cf281f860f"><fmt-xref type="inline" target="walczak2019inference">walczak2019inference</fmt-xref></semx>.</p>
 
-<p id="_4169559d-aed7-ec31-0d26-9a8f43502c48" semx-id="_4169559d-aed7-ec31-0d26-9a8f43502c48">Geometry, topology, scene structure, and domain semantics are often represented by separate but complementary ontologies that can be combined at query time for integrated queries, such as BOT with geometry and sensor (SOSA/SSN or SAREF) ontologies in building applications <eref type="inline" bibitemid="zhao2024envon" citeas="DOI 10.3233/sw-233460" id="_e3a70d24-bcc5-e8df-9de4-740480a9b5e1"/><semx element="eref" source="_e3a70d24-bcc5-e8df-9de4-740480a9b5e1"><fmt-xref type="inline" target="zhao2024envon">[43]</fmt-xref></semx> <eref type="inline" bibitemid="flotynski2020bot" citeas="DOI 10.1109/ic3d48390.2019.8975906" id="_f69c7715-ec58-0f45-7754-1ea0be8bdeb9"/><semx element="eref" source="_f69c7715-ec58-0f45-7754-1ea0be8bdeb9"><fmt-xref type="inline" target="flotynski2020bot">[36]</fmt-xref></semx>.</p>
+<p id="_4169559d-aed7-ec31-0d26-9a8f43502c48" semx-id="_4169559d-aed7-ec31-0d26-9a8f43502c48">Geometry, topology, scene structure, and domain semantics are often represented by separate but complementary ontologies that can be combined at query time for integrated queries, such as BOT with geometry and sensor (SOSA/SSN or SAREF) ontologies in building applications <eref type="inline" bibitemid="zhao2024envon" citeas="DOI 10.3233/sw-233460" id="_e3a70d24-bcc5-e8df-9de4-740480a9b5e1"/><semx element="eref" source="_e3a70d24-bcc5-e8df-9de4-740480a9b5e1"><fmt-xref type="inline" target="zhao2024envon">[43]</fmt-xref></semx> <eref type="inline" bibitemid="flotynski2020bot" citeas="DOI 10.1109/ic3d48390.2019.8975906" id="_f69c7715-ec58-0f45-7754-1ea0be8bdeb9"/><semx element="eref" source="_f69c7715-ec58-0f45-7754-1ea0be8bdeb9"><fmt-xref type="inline" target="flotynski2020bot">[34]</fmt-xref></semx>.</p>
 </clause>
 
 <clause id="_dae24c25-64cf-c559-a76f-62af880f1f0e" obligation="normative" semx-id="_dae24c25-64cf-c559-a76f-62af880f1f0e">
@@ -982,7 +982,7 @@ sourcecode .nt {
 
 <p id="_652a41a0-f049-2fec-811d-748a911d3374" semx-id="_652a41a0-f049-2fec-811d-748a911d3374"><link target="https://ieeexplore.ieee.org/abstract/document/7353971" id="_8c545676-8c6b-38e9-c665-d53beabdfcee"/><semx element="link" source="_8c545676-8c6b-38e9-c665-d53beabdfcee"><fmt-link target="https://ieeexplore.ieee.org/abstract/document/7353971"/></semx></p>
 
-<p id="_02488788-19f0-1344-37b7-c50b0196fe37" semx-id="_02488788-19f0-1344-37b7-c50b0196fe37"><eref type="inline" bibitemid="perzylo2015ontology" citeas="DOI 10.1109/iros.2015.7353971" id="_a08ef7cc-91f2-38fc-9a01-401c73420231"/><semx element="eref" source="_a08ef7cc-91f2-38fc-9a01-401c73420231"><fmt-xref type="inline" target="perzylo2015ontology">[37]</fmt-xref></semx></p>
+<p id="_02488788-19f0-1344-37b7-c50b0196fe37" semx-id="_02488788-19f0-1344-37b7-c50b0196fe37"><eref type="inline" bibitemid="perzylo2015ontology" citeas="DOI 10.1109/iros.2015.7353971" id="_a08ef7cc-91f2-38fc-9a01-401c73420231"/><semx element="eref" source="_a08ef7cc-91f2-38fc-9a01-401c73420231"><fmt-xref type="inline" target="perzylo2015ontology">[35]</fmt-xref></semx></p>
 </clause>
 
 <clause id="_b472cc51-6600-fc92-3a31-f9c15a682833" obligation="normative" semx-id="_b472cc51-6600-fc92-3a31-f9c15a682833">
@@ -1495,16 +1495,16 @@ sourcecode .nt {
 </clause>
 </clause>
 
-<clause id="_41ec131e-7858-562a-d2e7-8b594f2a28f4" obligation="normative" semx-id="_41ec131e-7858-562a-d2e7-8b594f2a28f4" displayorder="18">
-<title id="_0b77cecd-108f-f36f-dcd3-7d903ba307ee" semx-id="_fe323986-d144-e93e-f83a-7b109279aaeb">Beneficiaries and benefits</title><fmt-title depth="1" id="_6eee8dd7-181b-6b9a-895e-c18478690839"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_0b77cecd-108f-f36f-dcd3-7d903ba307ee">Beneficiaries and benefits</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx></fmt-xref-label>
+<clause id="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d" obligation="normative" semx-id="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d" displayorder="18">
+<title id="_0b77cecd-108f-f36f-dcd3-7d903ba307ee" semx-id="_fe323986-d144-e93e-f83a-7b109279aaeb">Beneficiaries and benefits</title><fmt-title depth="1" id="_6eee8dd7-181b-6b9a-895e-c18478690839"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_0b77cecd-108f-f36f-dcd3-7d903ba307ee">Beneficiaries and benefits</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx></fmt-xref-label>
 <p id="_9943a078-805c-c64d-7526-026f5b83d245" semx-id="_9943a078-805c-c64d-7526-026f5b83d245">This section describes the potential  beneficiaries and benefits of representing 3D spatial data using semantic and graph technologies. The requirements identified for 3D-GeoSPARQL provide a basis for achieving these benefits by supporting the representation, linking, querying, and reasoning of 3D spatial information across different domains and datasets. Furthermore, a collection of use cases demonstrate how semantic and graph technologies are used together with spatial data to tackle real world problems.</p>
 
 <clause id="_b7eaa045-7ba1-0eff-1254-2518741edc8e" obligation="normative" semx-id="_b7eaa045-7ba1-0eff-1254-2518741edc8e">
-<title id="_8b7bcebd-1b38-e9ae-a735-682cff143519" semx-id="_83f53559-2d61-2f37-1d7b-93eb356f4725">Semantic-functional value of 3D-GeoSPARQL</title><fmt-title depth="2" id="_837b2fa9-cfdd-0b22-65e2-bfd7ebc4129d"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_8b7bcebd-1b38-e9ae-a735-682cff143519">Semantic-functional value of 3D-GeoSPARQL</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx></fmt-xref-label>
+<title id="_8b7bcebd-1b38-e9ae-a735-682cff143519" semx-id="_83f53559-2d61-2f37-1d7b-93eb356f4725">Semantic-functional value of 3D-GeoSPARQL</title><fmt-title depth="2" id="_837b2fa9-cfdd-0b22-65e2-bfd7ebc4129d"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_8b7bcebd-1b38-e9ae-a735-682cff143519">Semantic-functional value of 3D-GeoSPARQL</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx></fmt-xref-label>
 <p id="_e6260ffa-279a-c553-10fb-743233899973" semx-id="_e6260ffa-279a-c553-10fb-743233899973">Value for data reasoning, formal description, and semantic interoperability</p>
 
 <clause id="_c6524c29-8299-0fd7-f09d-40b76d451cea" obligation="normative" semx-id="_c6524c29-8299-0fd7-f09d-40b76d451cea">
-<title id="_7de88f0e-0fc7-4adb-7a2d-ffd46d5ba579" semx-id="_e96e3f12-2471-3a58-fa1b-569714f04f8a">Meaningful creation and querying of 3D geometry</title><fmt-title depth="3" id="_60df8bb0-3d3d-2907-5e76-307f67de8cd7"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_c6524c29-8299-0fd7-f09d-40b76d451cea">1</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_7de88f0e-0fc7-4adb-7a2d-ffd46d5ba579">Meaningful creation and querying of 3D geometry</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_c6524c29-8299-0fd7-f09d-40b76d451cea">1</semx></fmt-xref-label>
+<title id="_7de88f0e-0fc7-4adb-7a2d-ffd46d5ba579" semx-id="_e96e3f12-2471-3a58-fa1b-569714f04f8a">Meaningful creation and querying of 3D geometry</title><fmt-title depth="3" id="_60df8bb0-3d3d-2907-5e76-307f67de8cd7"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_c6524c29-8299-0fd7-f09d-40b76d451cea">1</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_7de88f0e-0fc7-4adb-7a2d-ffd46d5ba579">Meaningful creation and querying of 3D geometry</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_c6524c29-8299-0fd7-f09d-40b76d451cea">1</semx></fmt-xref-label>
 <p id="_0df82485-0478-532a-bec0-862d88bca93a" semx-id="_0df82485-0478-532a-bec0-862d88bca93a">Whether manually or programmatically defining 3D geometries in BIM, GEO or CG environments, the GeoSPARQL standard could provide or connect to vocabulary to represent 3D structures. A 3D cube, for example, can be represented in multiple ways:</p>
 
 <ul id="_2561c73c-8a87-26af-91c6-3a8cbce20138" semx-id="_2561c73c-8a87-26af-91c6-3a8cbce20138"><li id="_9a5d10bd-8154-f643-8416-ab9d48d10dd3"><fmt-name id="_5b88ccf5-92a9-f555-12a6-2dde503bfdc2"><semx element="autonum" source="_9a5d10bd-8154-f643-8416-ab9d48d10dd3">—</semx></fmt-name><p id="_1a60f406-08f5-d475-74cd-3d4343294fd9" semx-id="_1a60f406-08f5-d475-74cd-3d4343294fd9">As a set of bounding points, lines, and faces;</p>
@@ -1519,7 +1519,7 @@ sourcecode .nt {
 </clause>
 
 <clause id="_94a418c2-918b-fb61-56ab-f6c4529140a4" obligation="normative" semx-id="_94a418c2-918b-fb61-56ab-f6c4529140a4">
-<title id="_153c3aca-1113-f73c-bd44-05c640e5d006" semx-id="_3b5ce4a3-8871-b3c8-2d2f-d384c4887697">Meaningful creation and querying of 3D topological relationships</title><fmt-title depth="3" id="_03b1c6c2-4651-1950-3c72-72b6ce3c130f"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_94a418c2-918b-fb61-56ab-f6c4529140a4">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_153c3aca-1113-f73c-bd44-05c640e5d006">Meaningful creation and querying of 3D topological relationships</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_94a418c2-918b-fb61-56ab-f6c4529140a4">2</semx></fmt-xref-label>
+<title id="_153c3aca-1113-f73c-bd44-05c640e5d006" semx-id="_3b5ce4a3-8871-b3c8-2d2f-d384c4887697">Meaningful creation and querying of 3D topological relationships</title><fmt-title depth="3" id="_03b1c6c2-4651-1950-3c72-72b6ce3c130f"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_94a418c2-918b-fb61-56ab-f6c4529140a4">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_153c3aca-1113-f73c-bd44-05c640e5d006">Meaningful creation and querying of 3D topological relationships</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_94a418c2-918b-fb61-56ab-f6c4529140a4">2</semx></fmt-xref-label>
 <p id="_20268bfd-e0a3-4a8f-74ae-5ad1f4cab989" semx-id="_20268bfd-e0a3-4a8f-74ae-5ad1f4cab989">Is “3D Geometry A” inside, touching, overlapping, intersecting or above “3D Geometry B”?</p>
 
 <p id="_f5d92c09-ea61-aa53-8739-43c819693af8" semx-id="_f5d92c09-ea61-aa53-8739-43c819693af8">Being able to describe and use such topological relationships is crucial for conducting spatial analyses, formulating rules, and deriving knowledge from different heterogeneous datasets.</p>
@@ -1533,7 +1533,7 @@ sourcecode .nt {
 </clause>
 
 <clause id="_658980a7-9fce-1c23-5d0d-bb2cebc9a2aa" obligation="normative" semx-id="_658980a7-9fce-1c23-5d0d-bb2cebc9a2aa">
-<title id="_92a705df-60ad-34c3-8cb7-4ec86c789767" semx-id="_9119bafb-c775-0412-4a38-76338745e053">Derivation of geometric and topological knowledge</title><fmt-title depth="3" id="_4aa7a102-c7ea-6cae-de59-bd4829f68e70"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_658980a7-9fce-1c23-5d0d-bb2cebc9a2aa">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_92a705df-60ad-34c3-8cb7-4ec86c789767">Derivation of geometric and topological knowledge</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_658980a7-9fce-1c23-5d0d-bb2cebc9a2aa">3</semx></fmt-xref-label>
+<title id="_92a705df-60ad-34c3-8cb7-4ec86c789767" semx-id="_9119bafb-c775-0412-4a38-76338745e053">Derivation of geometric and topological knowledge</title><fmt-title depth="3" id="_4aa7a102-c7ea-6cae-de59-bd4829f68e70"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_658980a7-9fce-1c23-5d0d-bb2cebc9a2aa">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_92a705df-60ad-34c3-8cb7-4ec86c789767">Derivation of geometric and topological knowledge</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b7eaa045-7ba1-0eff-1254-2518741edc8e">1</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_658980a7-9fce-1c23-5d0d-bb2cebc9a2aa">3</semx></fmt-xref-label>
 <p id="_c2d1c360-6a0c-a5c5-7646-25001fa6a7ec" semx-id="_c2d1c360-6a0c-a5c5-7646-25001fa6a7ec">From explicitly modeled geometric and topological data, one should be able to infer implicit knowledge.</p>
 
 <p id="_0f1e1fe2-28bb-9445-846c-7f48fe4f82a8" semx-id="_0f1e1fe2-28bb-9445-846c-7f48fe4f82a8">For instance, if 3D Geometry A is 3D inside 3D Geometry B, then we can infer that:</p>
@@ -1550,48 +1550,67 @@ sourcecode .nt {
 </clause>
 
 <clause id="_75e225c6-7ac0-3a9a-c75f-bc74af482cba" obligation="normative" semx-id="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">
-<title id="_91e24dfa-4879-5f55-b176-20f470ed6f58" semx-id="_e96c43d6-e197-44e3-5ff2-76f52cab3e8e">Value for user experience, visualization, and application use of 3D-GeoSPARQL</title><fmt-title depth="2" id="_1e2d53ba-54f2-3d51-bd29-2dbc8cafc550"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_91e24dfa-4879-5f55-b176-20f470ed6f58">Value for user experience, visualization, and application use of 3D-GeoSPARQL</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx></fmt-xref-label>
+<title id="_91e24dfa-4879-5f55-b176-20f470ed6f58" semx-id="_e96c43d6-e197-44e3-5ff2-76f52cab3e8e">Value for user experience, visualization, and application use of 3D-GeoSPARQL</title><fmt-title depth="2" id="_1e2d53ba-54f2-3d51-bd29-2dbc8cafc550"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_91e24dfa-4879-5f55-b176-20f470ed6f58">Value for user experience, visualization, and application use of 3D-GeoSPARQL</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx></fmt-xref-label>
 <clause id="_9e98a8be-2aac-27e0-2521-21a1105ed9e4" obligation="normative" semx-id="_9e98a8be-2aac-27e0-2521-21a1105ed9e4">
-<title id="_adad413e-a8ed-b0b3-82a9-ea7dba5dadd1" semx-id="_bee0ee4a-34fe-7c8e-e61b-f11e12552e28">Visualization</title><fmt-title depth="3" id="_b35815d6-43dd-6f38-bb7d-f54b82050459"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_9e98a8be-2aac-27e0-2521-21a1105ed9e4">1</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_adad413e-a8ed-b0b3-82a9-ea7dba5dadd1">Visualization</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_9e98a8be-2aac-27e0-2521-21a1105ed9e4">1</semx></fmt-xref-label>
+<title id="_adad413e-a8ed-b0b3-82a9-ea7dba5dadd1" semx-id="_bee0ee4a-34fe-7c8e-e61b-f11e12552e28">Visualization</title><fmt-title depth="3" id="_b35815d6-43dd-6f38-bb7d-f54b82050459"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_9e98a8be-2aac-27e0-2521-21a1105ed9e4">1</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_adad413e-a8ed-b0b3-82a9-ea7dba5dadd1">Visualization</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_9e98a8be-2aac-27e0-2521-21a1105ed9e4">1</semx></fmt-xref-label>
 <p id="_75a442e7-388d-8bcd-9832-a668940f909e" semx-id="_75a442e7-388d-8bcd-9832-a668940f909e">There is a growing need to visualize how 3D data in BIM and GIS relate to one another. Stakeholders want to see BIM and/or 3D Geo data of a newly planned structure visualized within the 3D Geo and/or BIM context of the existing digital city. A shared vocabulary that can present both domains in an integrated way supports this goal.</p>
 </clause>
 
 <clause id="_92fc978f-1088-0e11-7102-f195e7c713e8" obligation="normative" semx-id="_92fc978f-1088-0e11-7102-f195e7c713e8">
-<title id="_d451a171-da5c-54ed-472d-38ddacd74a64" semx-id="_bfb7e6f1-bc11-9f2f-9dcb-484740315b65">Calculation and analysis</title><fmt-title depth="3" id="_ccf7b738-b88c-0467-8c3f-711e30e5848a"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_92fc978f-1088-0e11-7102-f195e7c713e8">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d451a171-da5c-54ed-472d-38ddacd74a64">Calculation and analysis</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_92fc978f-1088-0e11-7102-f195e7c713e8">2</semx></fmt-xref-label>
+<title id="_d451a171-da5c-54ed-472d-38ddacd74a64" semx-id="_bfb7e6f1-bc11-9f2f-9dcb-484740315b65">Calculation and analysis</title><fmt-title depth="3" id="_ccf7b738-b88c-0467-8c3f-711e30e5848a"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_92fc978f-1088-0e11-7102-f195e7c713e8">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d451a171-da5c-54ed-472d-38ddacd74a64">Calculation and analysis</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_92fc978f-1088-0e11-7102-f195e7c713e8">2</semx></fmt-xref-label>
 <p id="_511d745c-79d8-7ee4-ab48-e1a8477b9f21" semx-id="_511d745c-79d8-7ee4-ab48-e1a8477b9f21">Semantic modelled 3D-model enables powerful computation and analysis. Analytical results can be displayed in dashboards operating within the GeoBIM domain. This creates a bridge between asset management (typically GIS-oriented) and project management (typically BIM-oriented), allowing for cross-domain collaboration and decision-making.</p>
 </clause>
 
 <clause id="_6b0da5b8-700e-86ee-2bdb-bfed8a04eb4d" obligation="normative" semx-id="_6b0da5b8-700e-86ee-2bdb-bfed8a04eb4d">
-<title id="_7033f1c3-e37a-32cf-96b1-144bf39afed7" semx-id="_3809eac2-55a8-6c76-7bcb-948955d60c17">Spatial querying</title><fmt-title depth="3" id="_cbb6d251-d269-cb86-ac64-99d0ed862d16"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_6b0da5b8-700e-86ee-2bdb-bfed8a04eb4d">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_7033f1c3-e37a-32cf-96b1-144bf39afed7">Spatial querying</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_6b0da5b8-700e-86ee-2bdb-bfed8a04eb4d">3</semx></fmt-xref-label>
+<title id="_7033f1c3-e37a-32cf-96b1-144bf39afed7" semx-id="_3809eac2-55a8-6c76-7bcb-948955d60c17">Spatial querying</title><fmt-title depth="3" id="_cbb6d251-d269-cb86-ac64-99d0ed862d16"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_6b0da5b8-700e-86ee-2bdb-bfed8a04eb4d">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_7033f1c3-e37a-32cf-96b1-144bf39afed7">Spatial querying</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_6b0da5b8-700e-86ee-2bdb-bfed8a04eb4d">3</semx></fmt-xref-label>
 <p id="_874d83f2-e094-4e0c-eae2-4a3e2a64f49f" semx-id="_874d83f2-e094-4e0c-eae2-4a3e2a64f49f">Spatial querying is a key function within a federated GeoBIM Network. Questions such as “What material is located in this area?” or “Where is space available for new cables and pipelines?” are examples of 3D spatial queries that can be answered when GeoSPARQL 3D is functioning effectively across systems and semantics.</p>
 </clause>
 
 <clause id="_3c48d6aa-016f-72f6-e040-92203928912f" obligation="normative" semx-id="_3c48d6aa-016f-72f6-e040-92203928912f">
-<title id="_d923f5dc-9372-50ec-77cd-f8320b24bd5f" semx-id="_ff479a24-5d78-0c2f-6e43-556b443ed566">Machine control</title><fmt-title depth="3" id="_9005edfc-a7f2-3b6d-50e6-2953bc9ca34e"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_3c48d6aa-016f-72f6-e040-92203928912f">4</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d923f5dc-9372-50ec-77cd-f8320b24bd5f">Machine control</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_3c48d6aa-016f-72f6-e040-92203928912f">4</semx></fmt-xref-label>
+<title id="_d923f5dc-9372-50ec-77cd-f8320b24bd5f" semx-id="_ff479a24-5d78-0c2f-6e43-556b443ed566">Machine control</title><fmt-title depth="3" id="_9005edfc-a7f2-3b6d-50e6-2953bc9ca34e"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_3c48d6aa-016f-72f6-e040-92203928912f">4</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d923f5dc-9372-50ec-77cd-f8320b24bd5f">Machine control</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_3c48d6aa-016f-72f6-e040-92203928912f">4</semx></fmt-xref-label>
 <p id="_f9a5af1c-5207-d220-8a22-565eccbdad18" semx-id="_f9a5af1c-5207-d220-8a22-565eccbdad18">A shared semantic GeoBIM Network also supports machine control. The GIS domain typically describes the existing situation, while the BIM domain describes the intended or future situation. This combination can be used to automatically instruct and guide machines in the built environment.</p>
 </clause>
 
 <clause id="_93fad057-5d9b-fbef-2365-ee6a93a63b62" obligation="normative" semx-id="_93fad057-5d9b-fbef-2365-ee6a93a63b62">
-<title id="_d97ad0b2-e62e-6195-a29a-2c395cb04272" semx-id="_89094c11-b6ac-bdc3-72bc-a151de587deb">Modeling, simulation and planning</title><fmt-title depth="3" id="_9a2f83ff-385c-910f-7075-13c1cdfb0692"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_93fad057-5d9b-fbef-2365-ee6a93a63b62">5</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d97ad0b2-e62e-6195-a29a-2c395cb04272">Modeling, simulation and planning</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_93fad057-5d9b-fbef-2365-ee6a93a63b62">5</semx></fmt-xref-label>
+<title id="_d97ad0b2-e62e-6195-a29a-2c395cb04272" semx-id="_89094c11-b6ac-bdc3-72bc-a151de587deb">Modeling, simulation and planning</title><fmt-title depth="3" id="_9a2f83ff-385c-910f-7075-13c1cdfb0692"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_93fad057-5d9b-fbef-2365-ee6a93a63b62">5</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d97ad0b2-e62e-6195-a29a-2c395cb04272">Modeling, simulation and planning</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_75e225c6-7ac0-3a9a-c75f-bc74af482cba">2</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_93fad057-5d9b-fbef-2365-ee6a93a63b62">5</semx></fmt-xref-label>
 <p id="_41ab9a3f-d827-3016-ba9a-b8f59943c1dc" semx-id="_41ab9a3f-d827-3016-ba9a-b8f59943c1dc">A network of datasets with 3D-data should support the modeling, simulation and planning of future changes to the built environment. Users — whether human or machine — can use the network and GeoSPARQL 3D to propose and model modifications in either BIM or GIS formats. A well-functioning 3D semantic GeoBIM Network enables this kind of forward-looking spatial planning and design.</p>
 </clause>
 </clause>
 
-<clause id="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb" obligation="normative" semx-id="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">
-<title id="_8933c99d-6f93-e4bb-c5a6-61047853ce1a" semx-id="_98d4e0a0-7d36-5f08-0c9f-55b84afe5a51">Added value of the 3D-GeoSPARQL for Organisations</title><fmt-title depth="2" id="_b79aaa59-9fa2-a374-5880-f1c759ab3ee7"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_8933c99d-6f93-e4bb-c5a6-61047853ce1a">Added value of the 3D-GeoSPARQL for Organisations</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">3</semx></fmt-xref-label>
+<clause id="_4952a975-378e-960a-21e0-13dafd01cb0e" obligation="normative" semx-id="_4952a975-378e-960a-21e0-13dafd01cb0e">
+<title id="_8933c99d-6f93-e4bb-c5a6-61047853ce1a" semx-id="_98d4e0a0-7d36-5f08-0c9f-55b84afe5a51">Added value of the 3D-GeoSPARQL for Organisations</title><fmt-title depth="2" id="_b79aaa59-9fa2-a374-5880-f1c759ab3ee7"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_8933c99d-6f93-e4bb-c5a6-61047853ce1a">Added value of the 3D-GeoSPARQL for Organisations</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx></fmt-xref-label>
 <clause id="_434a799e-0e81-697d-5aea-2fdb0b0ca5fa" obligation="normative" semx-id="_434a799e-0e81-697d-5aea-2fdb0b0ca5fa">
-<title id="_77438520-f58c-e2dd-49f8-ab516e48fdf7" semx-id="_3a748e22-cc8b-5672-0570-e625bd0944bb">Brings together different domains (GIS, BIM, CG)</title><fmt-title depth="3" id="_ba8a5bce-9ea5-2bdc-416a-a02f73da16e0"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_434a799e-0e81-697d-5aea-2fdb0b0ca5fa">1</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_77438520-f58c-e2dd-49f8-ab516e48fdf7">Brings together different domains (GIS, BIM, CG)</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_434a799e-0e81-697d-5aea-2fdb0b0ca5fa">1</semx></fmt-xref-label>
+<title id="_77438520-f58c-e2dd-49f8-ab516e48fdf7" semx-id="_3a748e22-cc8b-5672-0570-e625bd0944bb">Brings together different domains (GIS, BIM, CG)</title><fmt-title depth="3" id="_ba8a5bce-9ea5-2bdc-416a-a02f73da16e0"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_434a799e-0e81-697d-5aea-2fdb0b0ca5fa">1</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_77438520-f58c-e2dd-49f8-ab516e48fdf7">Brings together different domains (GIS, BIM, CG)</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_434a799e-0e81-697d-5aea-2fdb0b0ca5fa">1</semx></fmt-xref-label>
 <p id="_11bc074e-6d25-2aea-1e3b-7ee74d631354" semx-id="_11bc074e-6d25-2aea-1e3b-7ee74d631354">GeoSPARQL 3D can help in bringing together different domains that work with 3D information.</p>
 </clause>
 
 <clause id="_2ae6bf4c-70ed-228f-bb57-fe202acb9757" obligation="normative" semx-id="_2ae6bf4c-70ed-228f-bb57-fe202acb9757">
-<title id="_01f9ed5c-b58e-cb81-75fc-f35ae2336dce" semx-id="_78666eba-0d39-bcf7-0c1b-17a1ef956fca">Enables extension to vocabularies from other domains</title><fmt-title depth="3" id="_cb890462-0174-1471-bd83-bb8131ef8fa1"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_2ae6bf4c-70ed-228f-bb57-fe202acb9757">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_01f9ed5c-b58e-cb81-75fc-f35ae2336dce">Enables extension to vocabularies from other domains</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_2ae6bf4c-70ed-228f-bb57-fe202acb9757">2</semx></fmt-xref-label>
+<title id="_01f9ed5c-b58e-cb81-75fc-f35ae2336dce" semx-id="_78666eba-0d39-bcf7-0c1b-17a1ef956fca">Enables extension to vocabularies from other domains</title><fmt-title depth="3" id="_cb890462-0174-1471-bd83-bb8131ef8fa1"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_2ae6bf4c-70ed-228f-bb57-fe202acb9757">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_01f9ed5c-b58e-cb81-75fc-f35ae2336dce">Enables extension to vocabularies from other domains</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_2ae6bf4c-70ed-228f-bb57-fe202acb9757">2</semx></fmt-xref-label>
 <p id="_79b439aa-a86c-5faf-1fa2-a06e52d1ecc9" semx-id="_79b439aa-a86c-5faf-1fa2-a06e52d1ecc9">The vocabulary can have the possiblity to extend to vocabulaires with 3D geometry or topology from other domains, for example the Building Ontology Topology (BOT) or RELOC Ontology. Multi-domain models with georeferenced 3D and 2D city models could be also linked by CityRDF ontology based on CityGML 3.0 standard. GeoSPARQL 3D would be important enabler for data retrieval, update and analysis for such models. In addition to ontologies, it can also establish relationships to 3D file formats from other domains, such as glTF.</p>
 </clause>
 
 <clause id="_28355b5c-7086-d905-b155-69b8b63e8a31" obligation="normative" semx-id="_28355b5c-7086-d905-b155-69b8b63e8a31">
-<title id="_207978ad-65ba-49b4-e3c2-497931c4ebcc" semx-id="_981cbdf7-caae-e71b-df5f-96d99ee51e29">Facilitates better interoperability between knowledge domains with spatial components (geography, aerospace, architecture, product design, (bio)chemistry, IoT, …)</title><fmt-title depth="3" id="_0a94c318-8770-5b58-ffd1-85308f78783a"><span class="fmt-caption-label"><semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_28355b5c-7086-d905-b155-69b8b63e8a31">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_207978ad-65ba-49b4-e3c2-497931c4ebcc">Facilitates better interoperability between knowledge domains with spatial components (geography, aerospace, architecture, product design, (bio)chemistry, IoT, …)</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_41ec131e-7858-562a-d2e7-8b594f2a28f4">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_32f3e863-a03b-c2e3-00d3-5a9f4041d3bb">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_28355b5c-7086-d905-b155-69b8b63e8a31">3</semx></fmt-xref-label>
+<title id="_207978ad-65ba-49b4-e3c2-497931c4ebcc" semx-id="_981cbdf7-caae-e71b-df5f-96d99ee51e29">Facilitates better interoperability between knowledge domains with spatial components (geography, aerospace, architecture, product design, (bio)chemistry, IoT, …)</title><fmt-title depth="3" id="_0a94c318-8770-5b58-ffd1-85308f78783a"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_28355b5c-7086-d905-b155-69b8b63e8a31">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_207978ad-65ba-49b4-e3c2-497931c4ebcc">Facilitates better interoperability between knowledge domains with spatial components (geography, aerospace, architecture, product design, (bio)chemistry, IoT, …)</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_28355b5c-7086-d905-b155-69b8b63e8a31">3</semx></fmt-xref-label>
 <p id="_f2d88549-8eb3-c3c8-7cea-5225af5e23ed" semx-id="_f2d88549-8eb3-c3c8-7cea-5225af5e23ed">A unified geometric language can help by migrating ideas and methods across fields, accelerating innovation. For example a parametic design algoritm, rule, or llm making use of geometry and topology originated in aerospace, can be re-used in the architecture domain.</p>
+</clause>
+
+<clause id="_c79dcd6c-ceb7-1f21-98f4-49c6fc1dcca3" obligation="normative" semx-id="_c79dcd6c-ceb7-1f21-98f4-49c6fc1dcca3">
+<title id="_6e916239-3faf-76ca-cdf2-9f4350020bb0" semx-id="_6aaace8f-19f2-42dd-2a01-63529ed94790">Integrated spatial analysis in digital twins</title><fmt-title depth="3" id="_4f18ba26-e0a8-ce1c-3058-509eef7ab8c8"><span class="fmt-caption-label"><semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_c79dcd6c-ceb7-1f21-98f4-49c6fc1dcca3">4</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_6e916239-3faf-76ca-cdf2-9f4350020bb0">Integrated spatial analysis in digital twins</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_03358179-a6c1-a8ea-b5d0-e1eb63f1926d">11</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_4952a975-378e-960a-21e0-13dafd01cb0e">3</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_c79dcd6c-ceb7-1f21-98f4-49c6fc1dcca3">4</semx></fmt-xref-label>
+<p id="_d0aa4c72-ddb6-11f7-85f9-c2c84a33dadb" semx-id="_d0aa4c72-ddb6-11f7-85f9-c2c84a33dadb">Digital twins combine data from multiple sources, including building models, geospatial datasets, infrastructure  and regulatory information. These sources may use different data formats, data models, and vocabularies. Integrating them for spatial analysis can require dedicated software, data transformations, and application-specific connections.</p>
+
+<p id="_48f5aa94-6c19-d088-daec-7a3506cb741f" semx-id="_48f5aa94-6c19-d088-daec-7a3506cb741f">Many spatial analyses, such as construction height verification, clearance analysis, distance calculation, and clash detection, can already be performed using existing GIS, BIM, and 3D processing software. The benefits of 3D-GeoSPARQL is therefore not necessarily to introduce these analyses, but to make them accessible through a common semantic and query framework.</p>
+
+<p id="_74d39a43-b162-6e9d-9982-2bc50955e820" semx-id="_74d39a43-b162-6e9d-9982-2bc50955e820">By providing a common framework for representing and querying 3D spatial information, 3D-GeoSPARQL could enable spatial operations to be combined with semantic queries across heterogeneous datasets. For example, a building permit checking process could identify a building’s relevant components from an BIM-derived knowledge graph, retrieve the applicable spatial regulations, and evaluate the geometry of the proposed building against existing urban assets.</p>
+
+<p id="_8162cf9c-5f39-05fc-603b-0f2c7d3b9797" semx-id="_8162cf9c-5f39-05fc-603b-0f2c7d3b9797">This approach could make spatial analysis processes more reusable across datasets and applications, reduce dependence on application-specific integrations, and improve the traceability of the spatial information used in decision-making.</p>
+
+<p id="_5da0c91e-11ac-b341-e5aa-1aafe1f48f80" semx-id="_5da0c91e-11ac-b341-e5aa-1aafe1f48f80">Regulatory compliance and design validation — building height, underpasses, overhangs and distances to the waterfront.</p>
+
+<p id="_ee758e6d-7da6-8572-e8f5-37d26fbccc6f" semx-id="_ee758e6d-7da6-8572-e8f5-37d26fbccc6f">Building safety and evacuation — escape routes, compartmentalisation and accessibility of emergency exits.</p>
+
+<p id="_65219b28-e1d7-bbbb-dc31-e06d9d49032c" semx-id="_65219b28-e1d7-bbbb-dc31-e06d9d49032c">Infrastructure coordination and construction planning — cables, pipes, foundations and clashes.</p>
+
+<p id="_e51d309f-c132-ac55-ba9e-11a2b755669e" semx-id="_e51d309f-c132-ac55-ba9e-11a2b755669e">Urban planning and environmental risk assessment — flooding, clearance, shadow and spatial integration.</p>
 </clause>
 </clause>
 </clause>
@@ -3728,7 +3747,7 @@ sourcecode .nt {
 <title id="_37f6e051-1c1c-b5ce-5811-5c190dc0ef08" semx-id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><fmt-title depth="1" id="_8c5aa455-5c33-e586-5779-81ed33be8cb8"><span class="fmt-caption-label"><semx element="autonum" source="_057b622a-ec74-4196-e5c8-f76056857bb4">3</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_37f6e051-1c1c-b5ce-5811-5c190dc0ef08">Normative references</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_057b622a-ec74-4196-e5c8-f76056857bb4">3</semx></fmt-xref-label><p id="_a6fdff30-00b4-3e56-d92a-a8d15322a761" semx-id="_a6fdff30-00b4-3e56-d92a-a8d15322a761">There are no normative references in this document.</p>
 <p id="_a25044b2-1367-77dc-523b-3850f460ddec" semx-id="_a25044b2-1367-77dc-523b-3850f460ddec">The following documents contain provisions that are referenced by this document and are necessary for its understanding and application:</p>
 
-</references></sections><bibliography><references id="Bibliography" anchor="Bibliography" normative="false" obligation="informative" semx-id="_98e9ff93-d978-5cbd-d019-ad1f8173b9e0" displayorder="24">
+</references></sections><bibliography><references id="Bibliography" anchor="Bibliography" normative="false" obligation="informative" semx-id="_2ab5d4f0-701f-83b4-38e5-9853ac31b8d4" displayorder="24">
 <title id="_81b77e5f-9961-8f73-833a-7c9af3323b74" semx-id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><fmt-title depth="1" id="_e3090378-7d6b-085b-8a04-4e1f6f1363da"><semx element="title" source="_81b77e5f-9961-8f73-833a-7c9af3323b74">Bibliography</semx></fmt-title><bibitem id="Abhayaratna2020wp" type="standard" schema-version="v1.5.6" anchor="Abhayaratna2020wp" semx-id="_a7fc2afc-ead7-001d-3759-15e82187f813"><biblio-tag>[1]<tab/></biblio-tag><formattedref>Abhayaratna J, van den Brink L, Car N, Atkinson R, Homburg T, Knibbe F, McGlinn K, Wagner A, Bonduel M, Rasmussen MH, Thiery F: Abhayaratna2020wp, <em>OGC Benefits of Representing Spatial Data Using Semantic and Graph Technologies</em>. Open Geospatial Consortium (2020). <fmt-link target="http://www.opengis.net/doc/wp/using-semantic-graph">http://www.opengis.net/doc/wp/using-semantic-graph</fmt-link>.</formattedref>
   
 <title type="main">OGC Benefits of Representing Spatial Data Using Semantic and Graph Technologies</title>
@@ -5016,37 +5035,13 @@ sourcecode .nt {
   <docnumber>10.5281/zenodo.13833999</docnumber>
   <language>en</language>
   <script>Latn</script>
-</bibitem><bibitem anchor="CHADZYNSKI2021100106" id="CHADZYNSKI2021100106" semx-id="_1ec43159-50f5-51de-222a-33780caf93bd"><biblio-tag>[30]<tab/></biblio-tag>
-  <formattedref format="application/x-isodoc+xml">[NO INFORMATION AVAILABLE]</formattedref><docidentifier type="metanorma-ordinal">[30]</docidentifier>
-  <docidentifier type="DOI">DOI doi:https://doi.org/10.1016/j.egyai.2021.100106</docidentifier>
-  <docnumber>10.1016/j.egyai.2021.100106</docnumber>
-  <language>en</language>
-  <script>Latn</script>
-</bibitem><bibitem anchor="flotynski2017ontology" id="flotynski2017ontology" semx-id="_6e28e5cd-db18-bf5f-d8a4-3b61f2c010cd"><biblio-tag>[31]<tab/></biblio-tag>
-  <formattedref format="application/x-isodoc+xml">[NO INFORMATION AVAILABLE]</formattedref><docidentifier type="metanorma-ordinal">[31]</docidentifier>
-  <docidentifier type="DOI">DOI doi:https://doi.org/10.1111/cgf.13083</docidentifier>
-  <docnumber>10.1111/cgf.13083</docnumber>
-  <language>en</language>
-  <script>Latn</script>
-</bibitem><bibitem anchor="lotynskiWalczak2017" id="lotynskiWalczak2017" semx-id="_2ea09747-442f-f92b-ae12-52e5955e941d"><biblio-tag>[32]<tab/></biblio-tag>
-  <formattedref format="application/x-isodoc+xml">[NO INFORMATION AVAILABLE]</formattedref><docidentifier type="metanorma-ordinal">[32]</docidentifier>
-  <docidentifier type="DOI">DOI doi:https://doi.org/10.1111/cgf.13083</docidentifier>
-  <docnumber>10.1111/cgf.13083</docnumber>
-  <language>en</language>
-  <script>Latn</script>
-</bibitem><bibitem anchor="messaoudi2018heritage" id="messaoudi2018heritage" semx-id="_4634fa93-c5b4-6ada-03ff-ecaf4a104933"><biblio-tag>[33]<tab/></biblio-tag>
-  <formattedref format="application/x-isodoc+xml">[NO INFORMATION AVAILABLE]</formattedref><docidentifier type="metanorma-ordinal">[33]</docidentifier>
-  <docidentifier type="DOI">DOI doi:https://doi.org/10.1016/j.culher.2017.05.017</docidentifier>
-  <docnumber>10.1016/j.culher.2017.05.017</docnumber>
-  <language>en</language>
-  <script>Latn</script>
-</bibitem><bibitem id="c63f82e83d7249f18ab6e4b7afe049cb" type="article" schema-version="v1.5.6" anchor="c63f82e83d7249f18ab6e4b7afe049cb" semx-id="_f18fcdab-ec81-594c-78c1-5c47d9669318"><biblio-tag>[34]<tab/></biblio-tag><formattedref>Wagner A, Bonduel M, Pauwels P, Rüppel U: Representing construction-related geometry in a semantic web context: A review of approaches. <em>Automation in Construction</em> vol. 115, p. 103130 (2020).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="c63f82e83d7249f18ab6e4b7afe049cb" type="article" schema-version="v1.5.6" anchor="c63f82e83d7249f18ab6e4b7afe049cb" semx-id="_e74b0ec4-5d7e-0dc0-3341-56ce701fbec3"><biblio-tag>[30]<tab/></biblio-tag><formattedref>Wagner A, Bonduel M, Pauwels P, Rüppel U: Representing construction-related geometry in a semantic web context: A review of approaches. <em>Automation in Construction</em> vol. 115, p. 103130 (2020).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">Representing construction-related geometry in a semantic web context: A review of approaches</title>
 
   <uri type="DOI">https://doi.org/10.1016/j.autcon.2020.103130</uri>
-  <uri type="src">https://linkinghub.elsevier.com/retrieve/pii/S0926580519307125</uri><docidentifier type="metanorma-ordinal">[34]</docidentifier>
+  <uri type="src">https://linkinghub.elsevier.com/retrieve/pii/S0926580519307125</uri><docidentifier type="metanorma-ordinal">[30]</docidentifier>
   <docidentifier type="DOI" primary="true">DOI 10.1016/j.autcon.2020.103130</docidentifier>
   <docidentifier type="issn.print" primary="false">issn.print 0926-5805</docidentifier>
   <date type="issued">
@@ -5124,13 +5119,225 @@ sourcecode .nt {
       <referenceFrom>103130</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="chadzynski2023semantic" type="article" schema-version="v1.5.6" anchor="chadzynski2023semantic" semx-id="_5f672df3-1487-0928-4b15-c9e63f1435ce"><biblio-tag>[35]<tab/></biblio-tag><formattedref>Chadzynski A, Li S, Grišiūtė A, Chua J, Hofmeister M, Yan J, Tai HY, Lloyd E, Tsai YK, Agarwal M, Akroyd J, Herthogs P, Kraft M: Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs. <em>Data-Centric Engineering</em> vol. 4 (2023).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="messaoudi2018heritage" type="article" schema-version="v1.5.6" anchor="messaoudi2018heritage" semx-id="_6afff9ce-911e-ce42-326c-56595424b0b2"><biblio-tag>[31]<tab/></biblio-tag><formattedref>Messaoudi T, Véron P, Halin G, De Luca L: An ontological model for the reality-based 3D annotation of heritage building conservation state. <em>Journal of Cultural Heritage</em> vol. 29, pp. 100–112 (2018).</formattedref>
+  <fetched>2026-10-30</fetched>
+  
+<title script="Latn" type="main">An ontological model for the reality-based 3D annotation of heritage building conservation state</title>
+
+  <uri type="DOI">https://doi.org/10.1016/j.culher.2017.05.017</uri>
+  <uri type="src">https://linkinghub.elsevier.com/retrieve/pii/S1296207417304508</uri><docidentifier type="metanorma-ordinal">[31]</docidentifier>
+  <docidentifier type="DOI" primary="true">DOI 10.1016/j.culher.2017.05.017</docidentifier>
+  <docidentifier type="issn.print" primary="false">issn.print 1296-2074</docidentifier>
+  <date type="issued">
+    <on>2018-01</on>
+  </date>
+  <date type="published">
+    <on>2018-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Tommy</forename>          <surname language="en" script="Latn">Messaoudi</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Philippe</forename>          <surname language="en" script="Latn">Véron</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Gilles</forename>          <surname language="en" script="Latn">Halin</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Livio</forename>          <surname language="en" script="Latn">De Luca</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Elsevier BV</name>
+
+    </organization>
+  </contributor><language>en</language><script>Latn</script>
+  <series>
+    
+<title>Journal of Cultural Heritage</title>
+
+  </series>
+  <extent>
+    <locality type="volume">
+      <referenceFrom>29</referenceFrom>
+    </locality>
+    <locality type="page">
+      <referenceFrom>100</referenceFrom>
+      <referenceTo>112</referenceTo>
+    </locality>
+  </extent>
+</bibitem><bibitem id="CHADZYNSKI2021100106" type="article" schema-version="v1.5.6" anchor="CHADZYNSKI2021100106" semx-id="_f4cbbb94-986a-a51b-b2ae-dc0ee661b9af"><biblio-tag>[32]<tab/></biblio-tag><formattedref>Chadzynski A, Krdzavac N, Farazi F, Lim MQ, Li S, Grisiute A, Herthogs P, von Richthofen A, Cairns S, Kraft M: Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph. <em>Energy and AI</em> vol. 6, p. 100106 (2021).</formattedref>
+  <fetched>2026-10-30</fetched>
+  
+<title script="Latn" type="main">Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph</title>
+
+  <uri type="DOI">https://doi.org/10.1016/j.egyai.2021.100106</uri>
+  <uri type="src">https://linkinghub.elsevier.com/retrieve/pii/S2666546821000574</uri><docidentifier type="metanorma-ordinal">[32]</docidentifier>
+  <docidentifier type="DOI" primary="true">DOI 10.1016/j.egyai.2021.100106</docidentifier>
+  <docidentifier type="issn.print" primary="false">issn.print 2666-5468</docidentifier>
+  <date type="issued">
+    <on>2021-12</on>
+  </date>
+  <date type="published">
+    <on>2021-12</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Arkadiusz</forename>          <surname language="en" script="Latn">Chadzynski</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Nenad</forename>          <surname language="en" script="Latn">Krdzavac</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Feroz</forename>          <surname language="en" script="Latn">Farazi</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Mei Qi</forename>          <surname language="en" script="Latn">Lim</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Shiying</forename>          <surname language="en" script="Latn">Li</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Ayda</forename>          <surname language="en" script="Latn">Grisiute</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Pieter</forename>          <surname language="en" script="Latn">Herthogs</surname>       </name>
+
+      <identifier type="orcid" id="_ac02cad7-e7c7-122a-3c69-f5469e008621">https://orcid.org/0000-0003-2562-8374</identifier><fmt-identifier><tt><semx element="identifier" source="_ac02cad7-e7c7-122a-3c69-f5469e008621">https://orcid.org/0000-0003-2562-8374</semx></tt></fmt-identifier>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Aurel</forename>          <surname language="en" script="Latn">von Richthofen</surname>       </name>
+
+      <identifier type="orcid" id="_e445d562-f889-a57a-df91-3d394e3943da">https://orcid.org/0000-0002-8712-1301</identifier><fmt-identifier><tt><semx element="identifier" source="_e445d562-f889-a57a-df91-3d394e3943da">https://orcid.org/0000-0002-8712-1301</semx></tt></fmt-identifier>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Stephen</forename>          <surname language="en" script="Latn">Cairns</surname>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Markus</forename>          <surname language="en" script="Latn">Kraft</surname>       </name>
+
+      <identifier type="orcid" id="_79337ec6-ba71-e15d-cea1-70ef2ffd57e7">https://orcid.org/0000-0002-4293-8924</identifier><fmt-identifier><tt><semx element="identifier" source="_79337ec6-ba71-e15d-cea1-70ef2ffd57e7">https://orcid.org/0000-0002-4293-8924</semx></tt></fmt-identifier>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Elsevier BV</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="enabler"/>
+    <organization>
+      
+<name>Eidgenössische Technische Hochschule Zürich</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="enabler"/>
+    <organization>
+      
+<name>Alexander von Humboldt-Stiftung</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="enabler"/>
+    <organization>
+      
+<name>National Research Foundation Singapore</name>
+
+    </organization>
+  </contributor><language>en</language><script>Latn</script>
+  <series>
+    
+<title>Energy and AI</title>
+
+  </series>
+  <extent>
+    <locality type="volume">
+      <referenceFrom>6</referenceFrom>
+    </locality>
+    <locality type="page">
+      <referenceFrom>100106</referenceFrom>
+    </locality>
+  </extent>
+</bibitem><bibitem id="chadzynski2023semantic" type="article" schema-version="v1.5.6" anchor="chadzynski2023semantic" semx-id="_2569c341-7ca6-0f8b-88c3-61c2e89cd058"><biblio-tag>[33]<tab/></biblio-tag><formattedref>Chadzynski A, Li S, Grišiūtė A, Chua J, Hofmeister M, Yan J, Tai HY, Lloyd E, Tsai YK, Agarwal M, Akroyd J, Herthogs P, Kraft M: Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs. <em>Data-Centric Engineering</em> vol. 4 (2023).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">Semantic 3D city interfaces—Intelligent interactions on dynamic geospatial knowledge graphs</title>
 
   <uri type="DOI">https://doi.org/10.1017/dce.2023.14</uri>
-  <uri type="src">https://www.cambridge.org/core/product/identifier/S263267362300014X/type/journal_article</uri><docidentifier type="metanorma-ordinal">[35]</docidentifier>
+  <uri type="src">https://www.cambridge.org/core/product/identifier/S263267362300014X/type/journal_article</uri><docidentifier type="metanorma-ordinal">[33]</docidentifier>
   <docidentifier type="DOI" primary="true">DOI 10.1017/dce.2023.14</docidentifier>
   <docidentifier type="issn.electronic" primary="false">issn.electronic 2632-6736</docidentifier>
   <date type="issued">
@@ -5225,7 +5432,7 @@ sourcecode .nt {
       
 <name>          <forename language="en" script="Latn">Jethro</forename>          <surname language="en" script="Latn">Akroyd</surname>       </name>
 
-      <identifier type="orcid" id="_890d3c0b-2b28-1350-e464-7e6e7ff0ed6f">https://orcid.org/0000-0002-2143-8656</identifier><fmt-identifier><tt><semx element="identifier" source="_890d3c0b-2b28-1350-e464-7e6e7ff0ed6f">https://orcid.org/0000-0002-2143-8656</semx></tt></fmt-identifier>
+      <identifier type="orcid" id="_d6cc95b9-2bcc-b39e-f843-d28649bdf896">https://orcid.org/0000-0002-2143-8656</identifier><fmt-identifier><tt><semx element="identifier" source="_d6cc95b9-2bcc-b39e-f843-d28649bdf896">https://orcid.org/0000-0002-2143-8656</semx></tt></fmt-identifier>
     </person>
   </contributor>
   <contributor>
@@ -5234,7 +5441,7 @@ sourcecode .nt {
       
 <name>          <forename language="en" script="Latn">Pieter</forename>          <surname language="en" script="Latn">Herthogs</surname>       </name>
 
-      <identifier type="orcid" id="_093519ea-90a0-46cd-5d5a-00b85f7df681">https://orcid.org/0000-0003-2562-8374</identifier><fmt-identifier><tt><semx element="identifier" source="_093519ea-90a0-46cd-5d5a-00b85f7df681">https://orcid.org/0000-0003-2562-8374</semx></tt></fmt-identifier>
+      <identifier type="orcid" id="_19a471c0-d06f-0ce9-6809-9f23533c6533">https://orcid.org/0000-0003-2562-8374</identifier><fmt-identifier><tt><semx element="identifier" source="_19a471c0-d06f-0ce9-6809-9f23533c6533">https://orcid.org/0000-0003-2562-8374</semx></tt></fmt-identifier>
     </person>
   </contributor>
   <contributor>
@@ -5243,7 +5450,7 @@ sourcecode .nt {
       
 <name>          <forename language="en" script="Latn">Markus</forename>          <surname language="en" script="Latn">Kraft</surname>       </name>
 
-      <identifier type="orcid" id="_327fb44f-0522-01dd-2c3a-0a17a1a6c6a3">https://orcid.org/0000-0002-4293-8924</identifier><fmt-identifier><tt><semx element="identifier" source="_327fb44f-0522-01dd-2c3a-0a17a1a6c6a3">https://orcid.org/0000-0002-4293-8924</semx></tt></fmt-identifier>
+      <identifier type="orcid" id="_f45e1270-b8ee-8b36-a386-84d2d1043e9e">https://orcid.org/0000-0002-4293-8924</identifier><fmt-identifier><tt><semx element="identifier" source="_f45e1270-b8ee-8b36-a386-84d2d1043e9e">https://orcid.org/0000-0002-4293-8924</semx></tt></fmt-identifier>
     </person>
   </contributor>
   <contributor>
@@ -5263,7 +5470,7 @@ sourcecode .nt {
     </organization>
   </contributor><language>en</language><script>Latn</script>
   <abstract language="en" script="Latn">Abstract
-                  <p id="_d00f2ad9-d94b-bf9f-a979-c153cf924d9a" semx-id="_d00f2ad9-d94b-bf9f-a979-c153cf924d9a">This article presents a system architecture and a set of interfaces that can build scalable information systems capable of large city modeling based on dynamic geospatial knowledge graphs to avoid pitfalls of Web 2.0 applications while blending artificial and human intelligence during the knowledge enhancement processes. We designed and developed a GeoSpatial Processor, an SQL2SPARQL Transformer, and a geospatial tiles ordering tasks and integrated them into a City Export Agent to visualize and interact with city models on an augmented 3D web client. We designed a Thematic Surface Discovery Agent to automatically upgrade the model’s level of detail to interact with thematic parts of city objects by other agents. We developed a City Information Agent to help retrieve contextual information, provide data concerning city regulations, and work with a City Energy Analyst Agent that automatically estimates the energy demands for city model members. We designed a Distance Agent to track the interactions with the model members on the web, calculate distances between objects of interest, and add new knowledge to the Cities Knowledge Graph. The logical foundations and CityGML-based conceptual schema used to describe cities in terms of the OntoCityGML ontology, together with the system of intelligent autonomous agents based on the J-Park Simulator Agent Framework, make such systems capable of assessing and maintaining ground truths with certainty. This new era of GeoWeb 2.5 systems lowers the risk of deliberate misinformation within geography web systems used for modeling critical infrastructures.</p>
+                  <p id="_2510b23d-5eed-b3fd-f4b6-61d21811d382" semx-id="_2510b23d-5eed-b3fd-f4b6-61d21811d382">This article presents a system architecture and a set of interfaces that can build scalable information systems capable of large city modeling based on dynamic geospatial knowledge graphs to avoid pitfalls of Web 2.0 applications while blending artificial and human intelligence during the knowledge enhancement processes. We designed and developed a GeoSpatial Processor, an SQL2SPARQL Transformer, and a geospatial tiles ordering tasks and integrated them into a City Export Agent to visualize and interact with city models on an augmented 3D web client. We designed a Thematic Surface Discovery Agent to automatically upgrade the model’s level of detail to interact with thematic parts of city objects by other agents. We developed a City Information Agent to help retrieve contextual information, provide data concerning city regulations, and work with a City Energy Analyst Agent that automatically estimates the energy demands for city model members. We designed a Distance Agent to track the interactions with the model members on the web, calculate distances between objects of interest, and add new knowledge to the Cities Knowledge Graph. The logical foundations and CityGML-based conceptual schema used to describe cities in terms of the OntoCityGML ontology, together with the system of intelligent autonomous agents based on the J-Park Simulator Agent Framework, make such systems capable of assessing and maintaining ground truths with certainty. This new era of GeoWeb 2.5 systems lowers the risk of deliberate misinformation within geography web systems used for modeling critical infrastructures.</p>
 </abstract>
   <series>
     
@@ -5275,13 +5482,13 @@ sourcecode .nt {
       <referenceFrom>4</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="flotynski2020bot" type="inproceedings" schema-version="v1.5.6" anchor="flotynski2020bot" semx-id="_5999adcb-df8d-a8d0-037e-c65d5d4f5f3a"><biblio-tag>[36]<tab/></biblio-tag><formattedref>Flotyński J, Brutzman D, Hamza-Lup FG, Malamos A, Polys N, Sikos LF, Walczak K: The Semantic Web3d: Towards Comprehensive Representation of 3d Content on the Semantic Web. In: <em>2019 International Conference on 3D Immersion (IC3D)</em>. pp. 1–9. IEEE. (2019).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="flotynski2020bot" type="inproceedings" schema-version="v1.5.6" anchor="flotynski2020bot" semx-id="_37f0bf63-4492-a396-90fa-5228678a27ba"><biblio-tag>[34]<tab/></biblio-tag><formattedref>Flotyński J, Brutzman D, Hamza-Lup FG, Malamos A, Polys N, Sikos LF, Walczak K: The Semantic Web3d: Towards Comprehensive Representation of 3d Content on the Semantic Web. In: <em>2019 International Conference on 3D Immersion (IC3D)</em>. pp. 1–9. IEEE. (2019).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">The Semantic Web3d: Towards Comprehensive Representation of 3d Content on the Semantic Web</title>
 
   <uri type="DOI">https://doi.org/10.1109/ic3d48390.2019.8975906</uri>
-  <uri type="src">https://ieeexplore.ieee.org/document/8975906/</uri><docidentifier type="metanorma-ordinal">[36]</docidentifier>
+  <uri type="src">https://ieeexplore.ieee.org/document/8975906/</uri><docidentifier type="metanorma-ordinal">[34]</docidentifier>
   <docidentifier type="DOI" primary="true">DOI 10.1109/ic3d48390.2019.8975906</docidentifier>
   <date type="issued">
     <on>2019-12</on>
@@ -5416,13 +5623,13 @@ sourcecode .nt {
       <referenceTo>9</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="perzylo2015ontology" type="inproceedings" schema-version="v1.5.6" anchor="perzylo2015ontology" semx-id="_25334bfb-f123-cf27-7f20-5233dbca74a5"><biblio-tag>[37]<tab/></biblio-tag><formattedref>Perzylo A, Somani N, Rickert M, Knoll A: An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In: <em>2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>. pp. 4197–4203. IEEE. (2015).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="perzylo2015ontology" type="inproceedings" schema-version="v1.5.6" anchor="perzylo2015ontology" semx-id="_9b628070-b221-7207-85af-3120e9a805ce"><biblio-tag>[35]<tab/></biblio-tag><formattedref>Perzylo A, Somani N, Rickert M, Knoll A: An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In: <em>2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>. pp. 4197–4203. IEEE. (2015).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions</title>
 
   <uri type="DOI">https://doi.org/10.1109/iros.2015.7353971</uri>
-  <uri type="src">http://ieeexplore.ieee.org/document/7353971/</uri><docidentifier type="metanorma-ordinal">[37]</docidentifier>
+  <uri type="src">http://ieeexplore.ieee.org/document/7353971/</uri><docidentifier type="metanorma-ordinal">[35]</docidentifier>
   <docidentifier type="DOI" primary="true">DOI 10.1109/iros.2015.7353971</docidentifier>
   <date type="issued">
     <on>2015-09</on>
@@ -5484,13 +5691,13 @@ sourcecode .nt {
       <referenceTo>4203</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="ontobrep" type="inproceedings" schema-version="v1.5.6" anchor="ontobrep" semx-id="_e6410eab-40c1-d3b7-16f8-d3af2746e62a"><biblio-tag>[38]<tab/></biblio-tag><formattedref>Perzylo A, Somani N, Rickert M, Knoll A: An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In: <em>2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>. pp. 4197–4203. IEEE. (2015).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="ontobrep" type="inproceedings" schema-version="v1.5.6" anchor="ontobrep" semx-id="_a9f75103-0e71-18b3-7f35-dd262a877d4e"><biblio-tag>[36]<tab/></biblio-tag><formattedref>Perzylo A, Somani N, Rickert M, Knoll A: An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In: <em>2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>. pp. 4197–4203. IEEE. (2015).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions</title>
 
   <uri type="DOI">https://doi.org/10.1109/iros.2015.7353971</uri>
-  <uri type="src">http://ieeexplore.ieee.org/document/7353971/</uri><docidentifier type="metanorma-ordinal">[38]</docidentifier>
+  <uri type="src">http://ieeexplore.ieee.org/document/7353971/</uri><docidentifier type="metanorma-ordinal">[36]</docidentifier>
   <docidentifier type="DOI" primary="true">DOI 10.1109/iros.2015.7353971</docidentifier>
   <date type="issued">
     <on>2015-09</on>
@@ -5552,8 +5759,186 @@ sourcecode .nt {
       <referenceTo>4203</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="BrutzmanFlotynski2020" type="inproceedings" schema-version="v1.5.6" anchor="BrutzmanFlotynski2020" semx-id="_ca0313c6-2bd1-29d5-7d56-25a15bab0639"><biblio-tag>[39]<tab/></biblio-tag><formattedref>Brutzman D, Flotyński J: X3D Ontology for Querying 3D Models on the Semantic Web. In: <em>The 25th International Conference on 3D Web Technology</em>. pp. 1–6. ACM, New York, NY. (2020).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="flotynski2017ontology" type="article" schema-version="v1.5.6" anchor="flotynski2017ontology" semx-id="_1ea90e99-6093-f2ee-168f-bf6aaf04ba03"><biblio-tag>[37]<tab/></biblio-tag><formattedref>Flotyński J, Walczak K: Ontology‐Based Representation and Modelling of Synthetic 3D Content: A State‐of‐the‐Art Review. <em>Computer Graphics Forum</em> vol. 36 no. 8, pp. 329–353 (2017).</formattedref>
+  <fetched>2026-10-30</fetched>
+  
+<title script="Latn" type="main">Ontology‐Based Representation and Modelling of Synthetic 3D Content: A State‐of‐the‐Art Review</title>
+
+  <uri type="DOI">https://doi.org/10.1111/cgf.13083</uri>
+  <uri type="src">https://onlinelibrary.wiley.com/doi/10.1111/cgf.13083</uri><docidentifier type="metanorma-ordinal">[37]</docidentifier>
+  <docidentifier type="DOI" primary="true">DOI 10.1111/cgf.13083</docidentifier>
+  <docidentifier type="issn.print" primary="false">issn.print 0167-7055</docidentifier>
+  <docidentifier type="issn.electronic" primary="false">issn.electronic 1467-8659</docidentifier>
+  <date type="issued">
+    <on>2017-02-23</on>
+  </date>
+  <date type="published">
+    <on>2017-02-23</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Jakub</forename>          <surname language="en" script="Latn">Flotyński</surname>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Poznań University of Economics and Business Niepodległości 10, 61–875 Poznań Poland</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Krzysztof</forename>          <surname language="en" script="Latn">Walczak</surname>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Poznań University of Economics and Business Niepodległości 10, 61–875 Poznań Poland</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Wiley</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="enabler"/>
+    <organization>
+      
+<name>Narodowe Centrum Nauki</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="enabler"/>
+    <organization>
+      
+<name>Narodowe Centrum Nauki</name>
+
+    </organization>
+  </contributor><language>en</language><script>Latn</script>
+  <abstract language="en" script="Latn">Abstract<p id="_562be64c-dea0-b295-f66f-8f75b0c63347" semx-id="_562be64c-dea0-b295-f66f-8f75b0c63347">An indispensable element of any practical 3D/VR/AR application is synthetic three‐dimensional (3D) content. Such content is characterized by a variety of features—geometry, structure, space, appearance, animation and behaviour—which makes the modelling of 3D content a much more complex, difficult and time‐consuming task than in the case of other types of content. One of the promising research directions aiming at simplification of modelling 3D content is the use of the semantic web approach. The formalism provided by semantic web techniques enables declarative knowledge‐based modelling of content based on ontologies. Such modelling can be conducted at different levels of abstraction, possibly domain‐specific, with inherent separation of concerns. The use of semantic web ontologies enables content representation independent of particular presentation platforms and facilitates indexing, searching and analysing content, thus contributing to increased content re‐usability. A range of approaches have been proposed to permit semantic representation and modelling of synthetic 3D content. These approaches differ in the methodologies and technologies used as well as their scope and application domains. This paper provides a review of the current state of the art in representation and modelling of 3D content based on semantic web ontologies, together with a classification, characterization and discussion of the particular approaches.</p>
+</abstract>
+  <series>
+    
+<title>Computer Graphics Forum</title>
+
+  </series>
+  <extent>
+    <locality type="volume">
+      <referenceFrom>36</referenceFrom>
+    </locality>
+    <locality type="issue">
+      <referenceFrom>8</referenceFrom>
+    </locality>
+    <locality type="page">
+      <referenceFrom>329</referenceFrom>
+      <referenceTo>353</referenceTo>
+    </locality>
+  </extent>
+</bibitem><bibitem id="lotynskiWalczak2017" type="article" schema-version="v1.5.6" anchor="lotynskiWalczak2017" semx-id="_bebbdadc-5b44-3100-6680-4b13a548d8dc"><biblio-tag>[38]<tab/></biblio-tag><formattedref>Flotyński J, Walczak K: Ontology‐Based Representation and Modelling of Synthetic 3D Content: A State‐of‐the‐Art Review. <em>Computer Graphics Forum</em> vol. 36 no. 8, pp. 329–353 (2017).</formattedref>
+  <fetched>2026-10-30</fetched>
+  
+<title script="Latn" type="main">Ontology‐Based Representation and Modelling of Synthetic 3D Content: A State‐of‐the‐Art Review</title>
+
+  <uri type="DOI">https://doi.org/10.1111/cgf.13083</uri>
+  <uri type="src">https://onlinelibrary.wiley.com/doi/10.1111/cgf.13083</uri><docidentifier type="metanorma-ordinal">[38]</docidentifier>
+  <docidentifier type="DOI" primary="true">DOI 10.1111/cgf.13083</docidentifier>
+  <docidentifier type="issn.print" primary="false">issn.print 0167-7055</docidentifier>
+  <docidentifier type="issn.electronic" primary="false">issn.electronic 1467-8659</docidentifier>
+  <date type="issued">
+    <on>2017-02-23</on>
+  </date>
+  <date type="published">
+    <on>2017-02-23</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Jakub</forename>          <surname language="en" script="Latn">Flotyński</surname>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Poznań University of Economics and Business Niepodległości 10, 61–875 Poznań Poland</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <forename language="en" script="Latn">Krzysztof</forename>          <surname language="en" script="Latn">Walczak</surname>       </name>
+
+      <affiliation>
+        <organization>
+          
+<name>Poznań University of Economics and Business Niepodległości 10, 61–875 Poznań Poland</name>
+
+        </organization>
+      </affiliation>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Wiley</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="enabler"/>
+    <organization>
+      
+<name>Narodowe Centrum Nauki</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="enabler"/>
+    <organization>
+      
+<name>Narodowe Centrum Nauki</name>
+
+    </organization>
+  </contributor><language>en</language><script>Latn</script>
+  <abstract language="en" script="Latn">Abstract<p id="_5648c2a9-c07c-22a2-058a-881cc303551b" semx-id="_5648c2a9-c07c-22a2-058a-881cc303551b">An indispensable element of any practical 3D/VR/AR application is synthetic three‐dimensional (3D) content. Such content is characterized by a variety of features—geometry, structure, space, appearance, animation and behaviour—which makes the modelling of 3D content a much more complex, difficult and time‐consuming task than in the case of other types of content. One of the promising research directions aiming at simplification of modelling 3D content is the use of the semantic web approach. The formalism provided by semantic web techniques enables declarative knowledge‐based modelling of content based on ontologies. Such modelling can be conducted at different levels of abstraction, possibly domain‐specific, with inherent separation of concerns. The use of semantic web ontologies enables content representation independent of particular presentation platforms and facilitates indexing, searching and analysing content, thus contributing to increased content re‐usability. A range of approaches have been proposed to permit semantic representation and modelling of synthetic 3D content. These approaches differ in the methodologies and technologies used as well as their scope and application domains. This paper provides a review of the current state of the art in representation and modelling of 3D content based on semantic web ontologies, together with a classification, characterization and discussion of the particular approaches.</p>
+</abstract>
+  <series>
+    
+<title>Computer Graphics Forum</title>
+
+  </series>
+  <extent>
+    <locality type="volume">
+      <referenceFrom>36</referenceFrom>
+    </locality>
+    <locality type="issue">
+      <referenceFrom>8</referenceFrom>
+    </locality>
+    <locality type="page">
+      <referenceFrom>329</referenceFrom>
+      <referenceTo>353</referenceTo>
+    </locality>
+  </extent>
+</bibitem><bibitem id="BrutzmanFlotynski2020" type="inproceedings" schema-version="v1.5.6" anchor="BrutzmanFlotynski2020" semx-id="_98ab11ff-6f82-67b1-defc-cec04d4170cd"><biblio-tag>[39]<tab/></biblio-tag><formattedref>Brutzman D, Flotyński J: X3D Ontology for Querying 3D Models on the Semantic Web. In: <em>The 25th International Conference on 3D Web Technology</em>. pp. 1–6. ACM, New York, NY. (2020).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">X3D Ontology for Querying 3D Models on the Semantic Web</title>
 
@@ -5622,8 +6007,8 @@ sourcecode .nt {
       <referenceTo>6</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="sikos2017novel" type="article" schema-version="v1.5.6" anchor="sikos2017novel" semx-id="_98dec8c1-4b0f-914d-915f-db2cdaf83efe"><biblio-tag>[40]<tab/></biblio-tag><formattedref>Sikos LF: A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain. <em>International Journal of Metadata, Semantics and Ontologies</em> vol. 12 no. 1, p. 59 (2017).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="sikos2017novel" type="article" schema-version="v1.5.6" anchor="sikos2017novel" semx-id="_821f03cd-c9e1-c07e-9334-08affebdd659"><biblio-tag>[40]<tab/></biblio-tag><formattedref>Sikos LF: A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain. <em>International Journal of Metadata, Semantics and Ontologies</em> vol. 12 no. 1, p. 59 (2017).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain</title>
 
@@ -5670,8 +6055,8 @@ sourcecode .nt {
       <referenceFrom>59</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="Sikos2017" type="article" schema-version="v1.5.6" anchor="Sikos2017" semx-id="_82844261-1e41-4771-8ec8-4b28d89aea93"><biblio-tag>[41]<tab/></biblio-tag><formattedref>Sikos LF: A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain. <em>International Journal of Metadata, Semantics and Ontologies</em> vol. 12 no. 1, p. 59 (2017).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="Sikos2017" type="article" schema-version="v1.5.6" anchor="Sikos2017" semx-id="_876aecfc-6132-d42b-85c2-0540ce983ed9"><biblio-tag>[41]<tab/></biblio-tag><formattedref>Sikos LF: A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain. <em>International Journal of Metadata, Semantics and Ontologies</em> vol. 12 no. 1, p. 59 (2017).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">A novel ontology for 3D semantics: ontology-based 3D model indexing and content-based video retrieval applied to the medical domain</title>
 
@@ -5718,8 +6103,8 @@ sourcecode .nt {
       <referenceFrom>59</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="article" type="article" schema-version="v1.5.6" anchor="article" semx-id="_b1d2616a-bcf3-0365-8841-bb9df174e4d8"><biblio-tag>[42]<tab/></biblio-tag><formattedref>Zhang C, Beetz J, de Vries B: BimSPARQL: Domain-specific functional SPARQL extensions for querying RDF building data. <em>Semantic Web</em> vol. 9 no. 6, pp. 829–855 (2018).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="article" type="article" schema-version="v1.5.6" anchor="article" semx-id="_b963f37e-b540-37a3-fab3-482d21016df0"><biblio-tag>[42]<tab/></biblio-tag><formattedref>Zhang C, Beetz J, de Vries B: BimSPARQL: Domain-specific functional SPARQL extensions for querying RDF building data. <em>Semantic Web</em> vol. 9 no. 6, pp. 829–855 (2018).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">BimSPARQL: Domain-specific functional SPARQL extensions for querying RDF building data</title>
 
@@ -5919,8 +6304,8 @@ sourcecode .nt {
       <referenceTo>855</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="zhao2024envon" type="article" schema-version="v1.5.6" anchor="zhao2024envon" semx-id="_02c904b2-832f-933c-5393-2f76e7bca921"><biblio-tag>[43]<tab/></biblio-tag><formattedref>Zhao Y, Sarkar A, Elmhadhbi L, Karray M, Fillatreau P, Archimède B: An ontology of 3D environment where a simulated manipulation task takes place (ENVON). <em>Semantic Web</em> vol. 15 no. 2, pp. 613–640 (2024).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="zhao2024envon" type="article" schema-version="v1.5.6" anchor="zhao2024envon" semx-id="_827226c5-ef1b-e7b5-614c-48e7011e1798"><biblio-tag>[43]<tab/></biblio-tag><formattedref>Zhao Y, Sarkar A, Elmhadhbi L, Karray M, Fillatreau P, Archimède B: An ontology of 3D environment where a simulated manipulation task takes place (ENVON). <em>Semantic Web</em> vol. 15 no. 2, pp. 613–640 (2024).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">An ontology of 3D environment where a simulated manipulation task takes place (ENVON)</title>
 
@@ -6146,8 +6531,8 @@ sourcecode .nt {
       <referenceTo>640</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="ijgi10070487" type="article" schema-version="v1.5.6" anchor="ijgi10070487" semx-id="_cdd35f04-0c3e-87ef-cc29-425873de6d95"><biblio-tag>[44]<tab/></biblio-tag><formattedref>Jovanovik M, Homburg T, Spasić M: A GeoSPARQL Compliance Benchmark. <em>ISPRS International Journal of Geo-Information</em> vol. 10 no. 7, p. 487 (2021).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="ijgi10070487" type="article" schema-version="v1.5.6" anchor="ijgi10070487" semx-id="_8cf0814d-b45e-d28f-ce2c-7fcf92b5c552"><biblio-tag>[44]<tab/></biblio-tag><formattedref>Jovanovik M, Homburg T, Spasić M: A GeoSPARQL Compliance Benchmark. <em>ISPRS International Journal of Geo-Information</em> vol. 10 no. 7, p. 487 (2021).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">A GeoSPARQL Compliance Benchmark</title>
 
@@ -6259,8 +6644,8 @@ sourcecode .nt {
       <referenceFrom>487</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="ijgi11020117" type="article" schema-version="v1.5.6" anchor="ijgi11020117" semx-id="_7b531973-fa98-8fe5-8bd0-e09d2995ead9"><biblio-tag>[45]<tab/></biblio-tag><formattedref>Car NJ, Homburg T: GeoSPARQL 1.1: Motivations, Details and Applications of the Decadal Update to the Most Important Geospatial LOD Standard. <em>ISPRS International Journal of Geo-Information</em> vol. 11 no. 2, p. 117 (2022).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="ijgi11020117" type="article" schema-version="v1.5.6" anchor="ijgi11020117" semx-id="_c3fec364-01af-579a-7d46-278146aae6b2"><biblio-tag>[45]<tab/></biblio-tag><formattedref>Car NJ, Homburg T: GeoSPARQL 1.1: Motivations, Details and Applications of the Decadal Update to the Most Important Geospatial LOD Standard. <em>ISPRS International Journal of Geo-Information</em> vol. 11 no. 2, p. 117 (2022).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">GeoSPARQL 1.1: Motivations, Details and Applications of the Decadal Update to the Most Important Geospatial LOD Standard</title>
 
@@ -6349,8 +6734,8 @@ sourcecode .nt {
       <referenceFrom>117</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="ijgi12090351" type="article" schema-version="v1.5.6" anchor="ijgi12090351" semx-id="_84be7572-dd6d-600b-2178-14be0d582f12"><biblio-tag>[46]<tab/></biblio-tag><formattedref>El Yamani S, Hajji R, Billen R: IFC-CityGML Data Integration for 3D Property Valuation. <em>ISPRS International Journal of Geo-Information</em> vol. 12 no. 9, p. 351 (2023).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="ijgi12090351" type="article" schema-version="v1.5.6" anchor="ijgi12090351" semx-id="_4152c07b-50b7-0f9e-fc3b-06e2efde4977"><biblio-tag>[46]<tab/></biblio-tag><formattedref>El Yamani S, Hajji R, Billen R: IFC-CityGML Data Integration for 3D Property Valuation. <em>ISPRS International Journal of Geo-Information</em> vol. 12 no. 9, p. 351 (2023).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">IFC-CityGML Data Integration for 3D Property Valuation</title>
 
@@ -6455,8 +6840,8 @@ sourcecode .nt {
       <referenceFrom>351</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="bestpractices3d" type="article" schema-version="v1.5.6" anchor="bestpractices3d" semx-id="_7fa92779-2344-b291-7758-b6feba1f272b"><biblio-tag>[47]<tab/></biblio-tag><formattedref>Homburg T, Zwick R, Mara H, Bruhn K: Annotated 3D-Models of Cuneiform Tablets. <em>Journal of Open Archaeology Data</em> vol. 10 (2022).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="bestpractices3d" type="article" schema-version="v1.5.6" anchor="bestpractices3d" semx-id="_44f636ef-f180-2aee-0fd5-5b8c71253348"><biblio-tag>[47]<tab/></biblio-tag><formattedref>Homburg T, Zwick R, Mara H, Bruhn K: Annotated 3D-Models of Cuneiform Tablets. <em>Journal of Open Archaeology Data</em> vol. 10 (2022).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">Annotated 3D-Models of Cuneiform Tablets</title>
 
@@ -6532,8 +6917,8 @@ sourcecode .nt {
       <referenceFrom>10</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="Haynes2023iiif3d" type="inbook" schema-version="v1.5.6" anchor="Haynes2023iiif3d" semx-id="_e18a639a-27f8-d5ff-1fb3-6f1e6abaf67d"><biblio-tag>[48]<tab/></biblio-tag><formattedref>Haynes R: Evolving Standards in Digital Cultural Heritage – Developing a IIIF 3D Technical Specification. In: <em>Lecture Notes in Computer Science</em>. pp. 50–64. Springer International Publishing, Cham. (2023).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="Haynes2023iiif3d" type="inbook" schema-version="v1.5.6" anchor="Haynes2023iiif3d" semx-id="_b31c306f-34d2-9213-0a15-71e6cc86b194"><biblio-tag>[48]<tab/></biblio-tag><formattedref>Haynes R: Evolving Standards in Digital Cultural Heritage – Developing a IIIF 3D Technical Specification. In: <em>Lecture Notes in Computer Science</em>. pp. 50–64. Springer International Publishing, Cham. (2023).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">Evolving Standards in Digital Cultural Heritage – Developing a IIIF 3D Technical Specification</title>
 
@@ -6594,8 +6979,8 @@ sourcecode .nt {
       <referenceTo>64</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="inbook" type="inbook" schema-version="v1.5.6" anchor="inbook" semx-id="_7bb1b01d-9342-d7f8-c395-45f967d18ca3"><biblio-tag>[49]<tab/></biblio-tag><formattedref>Koubarakis M, Kyzirakos K: Modeling and Querying Metadata in the Semantic Sensor Web: The Model stRDF and the Query Language stSPARQL. In: <em>Lecture Notes in Computer Science</em>. pp. 425–439. Springer Berlin Heidelberg, Berlin, Heidelberg. (2010).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="inbook" type="inbook" schema-version="v1.5.6" anchor="inbook" semx-id="_d7f9a045-c95a-d4db-8e42-8f45540f7e89"><biblio-tag>[49]<tab/></biblio-tag><formattedref>Koubarakis M, Kyzirakos K: Modeling and Querying Metadata in the Semantic Sensor Web: The Model stRDF and the Query Language stSPARQL. In: <em>Lecture Notes in Computer Science</em>. pp. 425–439. Springer Berlin Heidelberg, Berlin, Heidelberg. (2010).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">Modeling and Querying Metadata in the Semantic Sensor Web: The Model stRDF and the Query Language stSPARQL</title>
 
@@ -6664,8 +7049,8 @@ sourcecode .nt {
       <referenceTo>439</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="kutzner2020citygml30" type="article" schema-version="v1.5.6" anchor="kutzner2020citygml30" semx-id="_c7b5b1c5-f2dc-6a29-0b4d-af512a7fc8b7"><biblio-tag>[50]<tab/></biblio-tag><formattedref>Kutzner T, Chaturvedi K, Kolbe TH: CityGML 3.0: New Functions Open Up New Applications. <em>PFG – Journal of Photogrammetry, Remote Sensing and Geoinformation Science</em> vol. 88 no. 1, pp. 43–61 (2020).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="kutzner2020citygml30" type="article" schema-version="v1.5.6" anchor="kutzner2020citygml30" semx-id="_ff0862f5-b0af-d3a2-2020-465065fc5fec"><biblio-tag>[50]<tab/></biblio-tag><formattedref>Kutzner T, Chaturvedi K, Kolbe TH: CityGML 3.0: New Functions Open Up New Applications. <em>PFG – Journal of Photogrammetry, Remote Sensing and Geoinformation Science</em> vol. 88 no. 1, pp. 43–61 (2020).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">CityGML 3.0: New Functions Open Up New Applications</title>
 
@@ -6734,8 +7119,8 @@ sourcecode .nt {
       <referenceTo>61</referenceTo>
     </locality>
   </extent>
-</bibitem><bibitem id="homburgheritagescience2021" type="article" schema-version="v1.5.6" anchor="homburgheritagescience2021" semx-id="_5e9535a7-6b63-cba6-9059-d841cb5c0ff8"><biblio-tag>[51]<tab/></biblio-tag><formattedref>Homburg T, Cramer A, Raddatz L, Mara H: Metadata schema and ontology for capturing and processing of 3D cultural heritage objects. <em>Heritage Science</em> vol. 9 no. 1 (2021).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="homburgheritagescience2021" type="article" schema-version="v1.5.6" anchor="homburgheritagescience2021" semx-id="_93aa3253-34ba-5c14-44e0-413717ee1b88"><biblio-tag>[51]<tab/></biblio-tag><formattedref>Homburg T, Cramer A, Raddatz L, Mara H: Metadata schema and ontology for capturing and processing of 3D cultural heritage objects. <em>Heritage Science</em> vol. 9 no. 1 (2021).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">Metadata schema and ontology for capturing and processing of 3D cultural heritage objects</title>
 
@@ -6817,8 +7202,8 @@ sourcecode .nt {
       <referenceFrom>1</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="ropelewski_standard_2022" type="article" schema-version="v1.5.6" anchor="ropelewski_standard_2022" semx-id="_317b39f9-aab7-2571-8faa-4b531a7059d6"><biblio-tag>[52]<tab/></biblio-tag><formattedref>Ropelewski AJ, Rizzo MA, Swedlow JR, Huisken J, Osten P, Khanjani N, Weiss K, Bakalov V, Engle M, Gridley L, Krzyzanowski M, Madden T, Maiese D, Mandal M, Waterfield J, Williams D, Hamilton CM, Huggins W: Standard metadata for 3D microscopy. <em>Scientific Data</em> vol. 9 no. 1 (2022).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="ropelewski_standard_2022" type="article" schema-version="v1.5.6" anchor="ropelewski_standard_2022" semx-id="_c59608e7-79aa-44a5-852f-ce948bc42a15"><biblio-tag>[52]<tab/></biblio-tag><formattedref>Ropelewski AJ, Rizzo MA, Swedlow JR, Huisken J, Osten P, Khanjani N, Weiss K, Bakalov V, Engle M, Gridley L, Krzyzanowski M, Madden T, Maiese D, Mandal M, Waterfield J, Williams D, Hamilton CM, Huggins W: Standard metadata for 3D microscopy. <em>Scientific Data</em> vol. 9 no. 1 (2022).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">Standard metadata for 3D microscopy</title>
 
@@ -7030,8 +7415,8 @@ sourcecode .nt {
       <referenceFrom>1</referenceFrom>
     </locality>
   </extent>
-</bibitem><bibitem id="yuchen2025ontology" type="article" schema-version="v1.5.6" anchor="yuchen2025ontology" semx-id="_ecedc615-17cd-4496-e053-5b9563848fea"><biblio-tag>[53]<tab/></biblio-tag><formattedref>Wang Y, Wang X, Liu A, Zhang J, Zhang J: Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking. <em>Journal of Intelligent Manufacturing</em> vol. 36 no. 1, pp. 95–145 (2023).</formattedref>
-  <fetched>2026-10-28</fetched>
+</bibitem><bibitem id="yuchen2025ontology" type="article" schema-version="v1.5.6" anchor="yuchen2025ontology" semx-id="_f695cf7a-6b1d-0abc-d250-5e0627370aea"><biblio-tag>[53]<tab/></biblio-tag><formattedref>Wang Y, Wang X, Liu A, Zhang J, Zhang J: Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking. <em>Journal of Intelligent Manufacturing</em> vol. 36 no. 1, pp. 95–145 (2023).</formattedref>
+  <fetched>2026-10-30</fetched>
   
 <title script="Latn" type="main">Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking</title>
 

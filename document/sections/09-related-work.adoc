@@ -7,7 +7,6 @@ A substantial body of work shows that **there is no single universal 3D web onto
 
 This section starts by providing a brief overview of these two flavours of ontologies. It then dives into domain-specific initiatives, considering Geo-spatial, Cultural Heritage and BIM. This section closes by enumerating various encoding formats relevant for 3D.
 
-
 === 3D Exchange formats 
 A new GeoSPARQL standard should be compatible with existing approaches to encode 3D data.
 Semantic technologies should enable users to encode important metadata in the knowledge graph, while retaining the possibility to use already well-known 3D geometry formats either as String literals or file references.
@@ -361,3 +360,58 @@ Open standard for particle-mesh data (openPMD)
 The https://github.com/openPMD/openPMD-standard[openPMD standard], short for open standard for particle-mesh data files is not a file format per se. It provides guidance for meta-data and naming schemes. openPMD provides naming and attribute conventions that allow the exchange of particle and mesh based data from scientific simulations and experiments. Its primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and different algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If outputs from programs, devices (such as cameras), simulations or post-processed data-sets, contain a minimal set of meta information as provided by openPMD, data can be exchanged between those with minimal effort, with the same tools used for visualization.
 
 <<huebl_2018_1167843>>
+
+
+=== Vanilla 3D geometry handling in the Semantic Web
+Different ontologies handle geometry in the Semantic Web in different ways. This section describes how 3D geometry is handled by different ontologies, rather than by GeoSPARQL. It compares approaches such as BOT, OMG, FOG, BIMSPARQL, GEOM, OntoBREP, and OntoSTEP, highlighting how each ontology represents, links, or manages geometric information within the Semantic Web.
+
+==== BOT (Building Topology Ontology) 
+The Building Topology Ontology distinguishes zones and elements. It also has topological relations as bot:containsZone and bot:hasElement. Any bot:Zone or bot:Element can be assigned a 3D Model using some existing data format for 3D models. Two properties are defined for this. The bot:hasSimple3DModel datatype property links a bot:Zone or bot:Element to a 3D Model encoded as a literal. If the data format is textual, then the lexical form of the 3D Model literal SHOULD be encoded as a Unicode [UNICODE] string, which SHOULD be in Normal Form C [NFC]. If the data format is binary, then the lexical form of the 3D Model literal SHOULD be encoded using a base32 encoding [rfc4648]. The bot:has3DModel object property links a bot:Zone or bot:Element to some IRI that identifies a 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models.
+
+[#img_Building_Topology_Ontology_BOT_Example, reftext='{figure-caption} {counter:figure-num}']
+.Example of a graphical feedback from a request for all wall elements adjacent to a particular space using BOT terminology. The 3D model is described as an OBJ-formatted mesh.
+image::../figures/10_3233_sw-200385-fig6.jpg[align="center", width="50%"]
+source: https://journals.sagepub.com/doi/pdf/10.3233/SW-200385
+
+
+==== OMG (Ontology for Managing Geometry) 
+The Ontology for Managing Geometry (OMG) is an ontology for attaching geometry descriptions to their corresponding things (e.g. building objects). The OMG is designed to provide three levels of adding the geometry descriptions which can be used and combined flexibly. The levels are designed to enable the attachment of metadata and comprise of the following functionalities:
+
+Level 1: Direct connections between things and their geometry descriptions using either an object property for RDF-based geometry descriptions or a datatype property for non-RDF-based geometry descriptions resp. links to external files.
+Level 2: Introduction of an intermediate node between the things and their geometry descriptions. By reifying the geometry description, handling of multiple geometry descriptions of the same things is empowered, metadata (as tags) can be added and dependencies between geometries can be modelled.
+Level 3: Introduction of an intermediate node between the reified geometry and the geometry description to add geometry states. Thus, the version history of a geometry description can be described and stored.
+
+==== FOG (File Ontology for Geometry formats) 
+The File Ontology for Geometry formats (FOG) provides geometry schema specific relations between things (e.g. building objects) and their geometry descriptions. These geometry descriptions can be (1) RDF-based (e.g. using specific ontologies such as GEOM, OntoBREP, etc.), (2) RDF literals containing embedded geometry of existing geometry formats and (3) RDF literals containing a reference to an external geometry file.
+
+such as OBJ, glTF and STEP, to be embedded in RDF or referenced as external files. Thus, while GeoSPARQL primarily describes geospatial geometry, BOT, OMG and FOG provide approaches that are more focused on building and construction geometry and the use of existing geometry formats.
+
+the File Ontology for Geometry formats (FOG), a method for embedding and exchanging different 2D and 3D geometry formats within RDF graphs. FOG allows geometry data to be stored, referenced, and automatically identified, making it easier to exchange building geometry between different software and stakeholders. 
+
+==== LBD Server, IFC2LBD and IFC2LBD-NEO
+To make BIM data accessible on the web, the Linked Building Data (LBD) initiative applies Linked Data principles, using RDF, vocabularies, and ontologies to represent building information. To make this information practically accessible, a platform is needed that combines semantic building data with 3D visualisation. The LBD Server addresses this need by allowing users to upload building data, visualise its 3D geometry, and link geometric objects to their underlying semantic information. This enables users to explore both the physical and semantic aspects of a building within a web-based environment.
+
+[#img_LBD_Server_connectivity_GLTF_LD, reftext='{figure-caption} {counter:figure-num}']
+.LBD_Server_connectivity_GLTF_LD.
+image::../figures/Schema_of_connectivity_between_glTF_mesh_geometry_and_graph_data.png[align="center"]
+source: <<03e4260b3605459b8ce220cfb42a3525>>
+
+IFC2LBD makes the semantic transformation itself a central component. It converts IFC into RDF using LBD ontologies such as BOT, PRODUCT and PROPS. The result is a graph representation that can be queried and linked on the web. The original IFC-to-LBD work explicitly aimed to produce a simpler, modular representation than directly using the full ifcOWL structure. IFC2LBD-Neo takes this further by redesigning the converter as a modular, staged pipeline. It additionally uses ontologies as BEO, bSDD and OMG/FOG. The geometry is generated separately as glTF, Fragments or Parquet outputs.
+
+[#img_BIFC2LBD-NEO, reftext='{figure-caption} {counter:figure-num}']
+.IFC2LBD Pipeline.
+image::../figures/IFC2LBD-NEO.png[align="center"]
+source: https://github.com/ISBE-TUe/IFC2LBD-Neo
+
+
+[#img_File_Ontology_for_Geometry_Formats_FOG, reftext='{figure-caption} {counter:figure-num}']
+.Demo Application with use of File Ontology for Geometry Formats FOG
+image::../figures/Screenshot_of_demo_web_application_FOG.png[align="center", width="50%"]
+source: https://ec-3.org/wp-content/uploads/2025/10/EC32019_166.pdf
+
+
+==== Routing using LADM and IndoorGML
+IndoorGML (OGC) models indoor environments as cells, such as rooms, corridors and stairwells, and derives a navigation graph in which spaces are nodes and their connections, such as doors and openings, are edges. The Land Administration Domain Model (LADM, ISO 19152) describes the rights, restrictions and responsibilities attached to spaces. The combined LADM-IndoorGML model uses these legal aspects to define which indoor spaces are accessible to which users.
+
+<<alattas2018>> applied this combined model to building evacuation. They showed that access rights depend on time (normal hours, off-hours and crisis situations) and on the type of user, such as visitors, employees or students, and that these rights determine which routes users can take to the nearest emergency exit or safe zone. 
+

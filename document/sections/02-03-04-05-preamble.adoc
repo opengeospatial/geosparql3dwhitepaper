@@ -14,13 +14,13 @@ The following documents contain provisions that are referenced by this document 
 
 == Terms and Definitions
 
-Geodimension 
+=== Geodimension 
 This is the number of perpendicalar directions in which a geometry extends. A point, for example, extends in no direction, so its topological dimension is 0. A line has a length, but no width or height. Its topological dimension is 1. A cube has a topological dimension of 3.
 
-coordinatedimension
+=== coordinatedimension
 In the geometric model that GeoSPARQL uses, points are the basic building blocks of geometry. A point geometry can have a different number of coordinates, depending on the space in which it is placed. A point on a flat map, or on the surface of a sphere, needs two coordinates. The __coordinate dimension__ is the number of coordinates in the points that define a Geometry. 
 
-spatialDimension
+=== spatialDimension
 In order to support linear referencing, geometries in GeoSPARQL can have a measure value. This is a relative position along a line or a curve, and does not extend the Geometry in space. The __spatial dimension__, therefore, can be used to denote the number of coordinates in a point, excluding the measurement value.
 
 == Conventions

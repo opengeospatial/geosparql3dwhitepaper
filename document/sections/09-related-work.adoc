@@ -7,7 +7,6 @@ A substantial body of work shows that **there is no single universal 3D web onto
 
 This section starts by providing a brief overview of these two flavours of ontologies. It then dives into domain-specific initiatives, considering Geo-spatial, Cultural Heritage and BIM. This section closes by enumerating various encoding formats relevant for 3D.
 
-
 === 3D Exchange formats 
 A new GeoSPARQL standard should be compatible with existing approaches to encode 3D data.
 Semantic technologies should enable users to encode important metadata in the knowledge graph, while retaining the possibility to use already well-known 3D geometry formats either as String literals or file references.

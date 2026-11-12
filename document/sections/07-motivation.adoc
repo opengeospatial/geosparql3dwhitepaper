@@ -1,5 +1,8 @@
 == Motivation
 
+This section highlights the main motivations for tackling 3D modeling using konwledge graphs and GeoSPARQL in particular.
+At first we would like to answere why 3D modeling is needed.
+
 **Why do we want 3D semantic modeling?**
 The white paper: "OGC Benefits of Representing Spatial Data Using Semantic and Graph Technologies" describes the beneficiaries and benefits of representing data, including geospatial data, using semantic and graph technologies <<Abhayaratna2020wp>>. This section describes the motivation of adding 3D functionality to the GeoSPARQL standard. 
 
@@ -17,7 +20,7 @@ The system uses 3D GeoSPARQL to integrate the data of the 3D design model, the 3
 - Instruct the machine with the changes +  
 - Visualize the new situation +
 
-For both humans and machines, it must be unambiguous what is meant by the queries that are needed to do the job and the resulting answers. It should not matter whether the data is provided in a 3D-GIS, 3D-BIM or 3D-CG standard vocabulary.  
+For humans, machines, as well as AI agents it must be unambiguous what is meant by the queries that are needed to do the job and the resulting answers. It should not matter whether the data is provided in a 3D-GIS, 3D-BIM or 3D-CG standard vocabulary.  
 
 **A geo-spatial 3D specification would support data consumers by:** 
 
@@ -31,3 +34,7 @@ For both humans and machines, it must be unambiguous what is meant by the querie
  - Maximizing the use of 3D-geometry and 3D-topology data;
  - Defining multiple 3D topology or geometries;
  - Assuring the quality of 3D geospatial data.
+
+**A geospatial 3D specification would support AI agents by:**
+ - Providing machine-understandable description of 3D data and topologies
+ - A unique, unambiguous and standardized semantic representation of 3D geospatial data

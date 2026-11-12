@@ -116,13 +116,8 @@ In addition, a master thesis <<hansson2024citygml>> proved the feasibility of no
 The mapping of CityGML to the knowledge graph was tested using a set of SPARQL queries retrieving different components of building parts. 
 While the thesis could construct a knowledge graph representation from CityGML, it points out that the incorporation of sptaial operations is left to future work and could provide a possible field for GeoSPARQL 3D adoption.
 
-Finally, <<CHADZYNSKI2021100106>> proposed OntoCityGML, an extension go the CityGML ontolog
-https://www.sciencedirect.com/science/article/pii/S2666546821000574?via%3Dihub
-Semantic 3D City Database — An enabler for a dynamic geospatial knowledge graph
+Finally, <<CHADZYNSKI2021100106>> proposed OntoCityGML, an extension to the CityGML ontology. It improves on the CityGML 2.0 domain model to meet testing requirements in The World Avatar Project. Whereas such extension may be too specific to be directly regarded in generic representations of 3D objects in the Semantic Web, this work is relevant in identifying possible gaps in CityGML.   
 
-Other details and history of Onto CityGML.
-
-CityRDF working group https://github.com/ogcincubator/cityrdf
 
 ==== Cultural Heritage
 

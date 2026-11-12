@@ -66,3 +66,20 @@ The vocabulary can have the possiblity to extend to vocabulaires with 3D geometr
 
 ==== Facilitates better interoperability between knowledge domains with spatial components (geography, aerospace, architecture, product design, (bio)chemistry, IoT, …)
 A unified geometric language can help by migrating ideas and methods across fields, accelerating innovation. For example a parametic design algoritm, rule, or llm making use of geometry and topology originated in aerospace, can be re-used in the architecture domain.   
+
+==== Integrated spatial analysis in digital twins
+Digital twins combine data from multiple sources, including building models, geospatial datasets, infrastructure  and regulatory information. These sources may use different data formats, data models, and vocabularies. Integrating them for spatial analysis can require dedicated software, data transformations, and application-specific connections.
+
+Many spatial analyses, such as construction height verification, clearance analysis, distance calculation, and clash detection, can already be performed using existing GIS, BIM, and 3D processing software. The benefits of 3D-GeoSPARQL is therefore not necessarily to introduce these analyses, but to make them accessible through a common semantic and query framework.
+
+By providing a common framework for representing and querying 3D spatial information, 3D-GeoSPARQL could enable spatial operations to be combined with semantic queries across heterogeneous datasets. For example, a building permit checking process could identify a building's relevant components from an BIM-derived knowledge graph, retrieve the applicable spatial regulations, and evaluate the geometry of the proposed building against existing urban assets. 
+
+This approach could make spatial analysis processes more reusable across datasets and applications, reduce dependence on application-specific integrations, and improve the traceability of the spatial information used in decision-making.
+
+Regulatory compliance and design validation — building height, underpasses, overhangs and distances to the waterfront.
+
+Building safety and evacuation — escape routes, compartmentalisation and accessibility of emergency exits.
+
+Infrastructure coordination and construction planning — cables, pipes, foundations and clashes.
+
+Urban planning and environmental risk assessment — flooding, clearance, shadow and spatial integration.

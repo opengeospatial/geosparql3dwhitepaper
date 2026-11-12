@@ -34,21 +34,21 @@
 
 include::sections/01-front_material.adoc[]
 
-include::sections/02-preamble.adoc[]
+include::sections/02-03-04-05-preamble.adoc[]
 
 :sectnums:
 
-include::sections/03-introduction.adoc[]
+include::sections/06-introduction.adoc[]
 
-include::sections/04-motivation.adoc[]
+include::sections/07-motivation.adoc[]
 
-include::sections/05-curcapabilities.adoc[]
+include::sections/08-curcapabilities.adoc[]
 
-include::sections/06-related-work.adoc[]
+include::sections/09-related-work.adoc[]
 
-include::sections/07-geosparql3D.adoc[]
+include::sections/10-requirements.adoc[]
 
-include::sections/08-benefits.adoc[]
+include::sections/11-benefits.adoc[]
 
 :sectnums!:
 

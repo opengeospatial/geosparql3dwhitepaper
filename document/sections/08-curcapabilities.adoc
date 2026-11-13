@@ -177,7 +177,7 @@ The article "A GeoSPARQL Compliance Benchmark", Jovanovik, Homburg and Spasić <
 On the https://portal.ogc.org/public_ogc/compliance/implementing.php?&specid=528[OGC Implementation Database] there is no organisation compliant with the OGC GeoSPARQL standard. There are four organisations that are implementing the GeoSPARQL (v 1.0) standard. 
 
 ==== GeoSPARQL Aligments
-GeoSPARQL is aligned with a range of established ontologies and vocabularies covering different aspects of geospatial information, metadata, provenance, time, sensors, and linked data. See https://docs.ogc.org/is/22-047r1/22-047r1.html#_6f67539d-8b79-4a2b-b7b9-9b4a54e710d0[Annex E of the GeoSPARQL Standard]. Alignments with additional ontologies may be relevant for a broader 3D context. As an example, ontologies such as Reloc <<gobelsRelativeLocationOntology2024>>, BOT <<doi:10.3233/SW-200385>> and ifcOWL <<03e4260b3605459b8ce220cfb42a3525>> can be interesting.
+GeoSPARQL is aligned with a range of established ontologies and vocabularies covering different aspects of geospatial information, metadata, provenance, time, sensors, and linked data. See https://docs.ogc.org/is/22-047r1/22-047r1.html#_6f67539d-8b79-4a2b-b7b9-9b4a54e710d0[Annex E of the GeoSPARQL Standard]. Alignments with additional ontologies may be relevant for a broader 3D context. As an example, ontologies such as Reloc <<gobelsRelativeLocationOntology2024>>, BOT <<doi_10.3233_SW-200385>> and ifcOWL <<03e4260b3605459b8ce220cfb42a3525>> can be interesting.
 
 
 ==== GeoSPARQL functionality and geometries comparison

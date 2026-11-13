@@ -1,10 +1,14 @@
-Image not found. URI: file:////home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/document//home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/_tmp_images_44a1f3e7-09c6-44b2-813e-fc4fb64f33ff/9a17ab02-78c0-4312-9775-a06613abb46a.png. (See position 1066:612)
+WARNING: font '/home/runner/snap/metanorma/296/.fontist/fonts/google/overpass/Overpass-Italic[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
+WARNING: font '/home/runner/snap/metanorma/296/.fontist/fonts/google/overpass/Overpass[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
+Image not found. URI: file:////home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/document//home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/_tmp_images_2ab3e543-2221-4cce-824e-85e4b2aea913/72f6c440-da1f-4ebe-9245-622528d5fa1f.png. (See position 1108:612)
 Please check the PDF and if necessary, report this issue at the following link: https://github.com/metanorma/mn-native-pdf/issues/new, and attach the XSL-FO file or fragment: '/home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/document.pdf.fo.xml'.
-Page 26: Unresolved ID reference "FlotynskiWalczak2017" found.
-Page 27: Unresolved ID reference "_975906" found.
+Page 22: Unresolved ID reference "Boley_13" found.
+Page 23: Unresolved ID reference "_3e4260b3605459b8ce220cfb42a3525" found.
+Page 23: Unresolved ID reference "doi_10.3233_SW-200385" found.
 Page 27: Unresolved ID reference "FlotynskiWalczak2017" found.
-Page 28: Unresolved ID reference "koble2005citygml" found.
-Page 28: Unresolved ID reference "FlotynskiWalczak2017" found.
-Page 30: Unresolved ID reference "_0.2312_gch.20231157" found.
-Page 38: Unresolved ID reference "FlotynskiWalczak2017" found.
-Page 44: Unresolved ID reference "_3e4260b3605459b8ce220cfb42a3525" found.
+Page 29: Unresolved ID reference "FlotynskiWalczak2017" found.
+Page 29: Unresolved ID reference "koble2005citygml" found.
+Page 29: Unresolved ID reference "_975906" found.
+Page 31: Unresolved ID reference "_0.2312_gch.20231157" found.
+Page 39: Unresolved ID reference "FlotynskiWalczak2017" found.
+Page 45: Unresolved ID reference "_3e4260b3605459b8ce220cfb42a3525" found.

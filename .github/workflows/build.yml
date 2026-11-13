@@ -29,7 +29,8 @@ jobs:
 
     - name: Run Metanorma 🔧
       run: |
-         apt-get install fonts-firacode
+         sudo apt-get update
+         sudo apt-get install fonts-firacode
          pip install --pre bibtexparser
          python scripts/processbibtex.py
          metanorma site generate --agree-to-terms -o site

@@ -1,55 +1,42 @@
+# This is a basic workflow to help you get started with Actions
 
 name: CI
 
-on:
-  push:
-    branches:
-      - main
+on: 
+  push: 
+      branches: 
+          - main 
 
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-permissions:
-  contents: write
-
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # This workflow contains a single job called "build"
   build:
     name: Build Metanorma Whitepaper
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - uses: actions/checkout@v1
+    
+    - uses: actions/cache@v3
+      with:
+        path: ~/.fontist
+        key: fontist-ubuntu-latest
+        restore-keys: fontist-ubuntu-latest
 
-      - name: Cache Fontist
-        uses: actions/cache@v4
-        with:
-          path: ~/.fontist
-          key: fontist-${{ runner.os }}
-          restore-keys: |
-            fontist-${{ runner.os }}
+    - uses: actions-mn/setup@main
 
-      # Install Ruby instead of using the Snap/Tebako runtime
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.4'
+    - name: Run Metanorma 🔧
+      run: |
+         pip install --pre bibtexparser
+         python scripts/processbibtex.py
+         metanorma site generate --agree-to-terms -o site
 
-      # Explicitly use RubyGems installation
-      - name: Set up Metanorma
-        uses: actions-mn/setup@v3
-        with:
-          installation-method: gem
-
-      - name: Run Metanorma 🔧
-        run: |
-          python -m pip install --pre bibtexparser
-          python scripts/processbibtex.py
-          metanorma site generate --agree-to-terms -o site
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          clean: false
-          FOLDER: site/
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      with:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         BRANCH: gh-pages
+         clean: false
+         FOLDER: site/

@@ -25,14 +25,16 @@ jobs:
         key: fontist-ubuntu-latest
         restore-keys: fontist-ubuntu-latest
 
+    - uses: fontist/setup-fontist@v2
+    - name: Install Fira Code
+      run: fontist install "Fira Code" --accept-all-licenses
+
+
     - uses: actions-mn/setup@main
 
     - name: Run Metanorma 🔧
       run: |
          sudo apt-get update
-         sudo apt-get install fonts-firacode
-         fontist update
-         fontist import-system-fonts
          pip install --pre bibtexparser
          python scripts/processbibtex.py
          metanorma site generate --agree-to-terms -o site

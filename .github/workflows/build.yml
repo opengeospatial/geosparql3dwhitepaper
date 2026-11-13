@@ -31,7 +31,6 @@ jobs:
       run: |
          sudo apt-get update
          sudo apt-get install fonts-firacode
-         fontist install 'Fira Code'
          pip install --pre bibtexparser
          python scripts/processbibtex.py
          metanorma site generate --agree-to-terms -o site

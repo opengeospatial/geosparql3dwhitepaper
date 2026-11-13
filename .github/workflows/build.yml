@@ -29,6 +29,8 @@ jobs:
         run: |
           pip install --pre bibtexparser
           python scripts/processbibtex.py
+          mkdir -p ~/snap/metanorma/current
+          cp -r ~/.fontist ~/snap/metanorma/current/.fontist
           metanorma site generate --agree-to-terms -o site
 
       - name: Deploy 🚀

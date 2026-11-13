@@ -8,7 +8,7 @@ This White Paper appears online in developing form at:
   
 *https://opengeospatial.github.io/geosparql3dwhitepaper/*
 
-== Contact
+== Contact 
 
 To be involved with this White Paper, please contact:
 

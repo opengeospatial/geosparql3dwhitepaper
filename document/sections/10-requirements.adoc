@@ -159,23 +159,27 @@ Semantic improvement
 
 **Description**
 
-Topological relations describe the relationships between objects independently of perspective. 
+Topological relations describe the relationships between objects independently of rotation, translation or change of coordinate axes.
 Relative directional relations, on the other hand, describe relationships between objects that depend on a reference frame or viewpoint. 
 Directional relationships distinguishes different perspectives
 
 - viewer-centered, deictic perspective (1 constellation, 2 observers results in 2 spatial relationships)
-- object-centered, intrisic perspective (object orientation as reference frame)
+//observer orientation as reference frame
+- object-centered, intrinsic perspective (object orientation as reference frame)
 - extrinsic, external perspective (universal reference systems like gravity vector, coordinate systems, axes, linear reference elements)
 
-In 2D, relations such as left of, above (north of), and beside are often sufficient. In 3D, additional relations become relevant, such as above (on top of)/below and in front of/behind.
+Directional spatial relations exist, as well as topological relations in 2D and 3D whereby the dimension influences the degrees of freedom but not the concept.
 
-Relative directional relations can also provide context in 2D, but many spatial situations can already be described using topology (e.g., inside, touching, overlapping). 
-In 3D environments, however, directional relations become more important because height and depth introduce additional dimensions that cannot be distinguished by topology alone.
+//In 2D, relations such as left of, above (north of), and beside are often sufficient. In 3D, additional relations become relevant, such as above (on top of)/below and in front of/behind.
+//Relative directional relations can also provide context in 2D, but many spatial situations can already be described using topology (e.g., inside, touching, overlapping).
+However, due to the additional degree of freedom in 3D environment directional relations become more important and for most use cases, topological relations alone are too imprecise. This effect is further amplified when describing spatial relationships between elements that differ greatly in size.
+//In 3D environments, however, directional relations become more important because height and depth introduce additional dimensions that cannot be distinguished by topology alone.
 
-For example, describing that a "damage location is underneath a bridge deck" requires both a topological relation (e.g., a 3D contains relation) 
-and a relative directional relation (e.g., below).
+An example of a spatial relation in a 3D environment including big size differences exists between components and its damages such as investigated by Anne Göbels and Jakob Beetz.
+The presented Reloc ontology https://annegoebels.github.io/reloc/[Reloc ontology] decomposes the spatial relations into a topological and directional component and ultimatively
+describes spatial relations such as a "damage location underneath a bridge deck" as a combination of the topological adjacent and the relative directional under relation.
 
-This combination of relative location and topological relations has been described by Anne Göbels and Jakob Beetz in the Reloc ontology. https://annegoebels.github.io/reloc/[Reloc ontology].
+//This combination of relative location and topological relations has been described by Anne Göbels and Jakob Beetz in the Reloc ontology. https://annegoebels.github.io/reloc/[Reloc ontology].
 
 This ontology brings natural language closer to the 3D model by formalizing descriptions of relative directions and topological relationships.
 

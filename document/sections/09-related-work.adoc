@@ -191,6 +191,7 @@ OntPreHer3D is an extension of the CIDOC CRM ontology <<doerr2007cidoc>>. It is 
 
 ===== Industry Foundation Classes (IFC)
 
+// in most literature they speak about ifc carrying gemoetric and semantic information and consider classification, properties and relationships (every kind of relationships such as aggregation, inheritance, topology) as semantics. referring to scheduling here is not wrong but a bit weirdly specific given, that there are much more possibilities
 BIM is a paradigm in which object‐model definitions - with machine‑interpretable semantics - are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC) <<van2021future>>. **IFC is unique in the sense that it allows expressing both geometrical as well as non-geometrical semantics.**
 
 **Non-geometrical: taxonomy of objects (building elements, relational constructs, scheduling information) and related properties**
@@ -198,9 +199,10 @@ BIM is a paradigm in which object‐model definitions - with machine‑interpret
 **Geometrical: appromximately 250 constructs related to geometry; even standards with only a geometric focus such as geosparql or collada do not reach that breadth in definitions**
 
 IFC has its idiosyncrasies and challenges, but is **unrivaled in terms of market adoption in a highly fragmented industry**.
+// that's very unspecific. I'd write something like "IFC aims to be all-encompassing, resulting in a very extensive and complex schema that is sometimes criticized for being difficult to maintain and use."
 
 ====== Product model
-
+//elements of the built environment instead of "construction work?
 In IFC, a construction work is decomposed into a set of products. These products can have **multiple representations**. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
 
 At the same time, such a product separates the **placement** (an hierarchical transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.
@@ -209,6 +211,7 @@ At the same time, such a product separates the **placement** (an hierarchical tr
 In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, **semantics and geometry are intertwined** such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics.
 
 IFC also allows for **decomposition**, where a whole is aggregated into multiple parts for richer semantics. This allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.
+//where does the last statement come from? (about the use of aggregation) what is possible is instantiating geometries (of the parts of the aggregate and also of the aggregate as a whole but not of the aggregation relationship itself. so elements of a window- instantiated as element type, window as product type but no instantiation of the relation, that the frame belongs to the window)
 
 ====== Evolving views on geometry
 
@@ -227,12 +230,15 @@ The most successful use case on BIM data is **coordination and visualization** w
 **Design to design** workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.
 
 **Long-term preservation** of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don't contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.
+//native software can usually re-import ifc but most of the design intelligence will be lost. maybe better: IFC models capture a static snapshot of the design outcome rather than vendor-specific parametric rules and constraints. Consequently, while most CAD tools can re-import IFC files, they cannot reconstruct the original native object behaviors or parametric intelligence, while native files themselves degrade over time across software version migrations.
 
 **BIM-GIS integration** is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.
+//actually the BIM-GIS integration problem actually goes far beyond that: ...fundamental differences in semantics (schema heterogeneity), geometric paradigms (procedural solids vs. explicit boundary surfaces) and spatial scales
 
-**Simulations** on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in nieghbouring domaisn remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
+**Simulations** on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in neighbouring domain remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
 
 ====== Implications and questions:
+//for what?
 
 - Euclidean / non-euclidean; is a CRS required?
 - Separate representation+placement -> enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate in space
@@ -245,6 +251,9 @@ The most successful use case on BIM data is **coordination and visualization** w
 
 ===== BOT (Building Topology Ontology)
 AEC - Building domain ontology for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies <<flotynski2020bot>>. |
+//i think it would be good to go a bit more into detail here, especially since the use of bot together with geosparql3D is very promising due to the possible direct alginments which would enable spatial queries across BIM-GIS domains:
+//bot:Zone, bot:Element and bot:Interface can be aligned with geo:Feature which would allow buildings and their components to carry GIS-features as well
+//bot:containsZone, bot:adjacentZone and bot:adjacentElement correspond to geo:sfContains, geo:sfTouches and geo:sfIntersects,
 
 ===== Linked Building Server 
 Over the last years, Building Information Modelling (BIM) has been increasingly adopted in building projects for its benefits to collaboration and associated risk mitigation. Recent work is trying to make this data available over the web (web-based BIM applications). Most notable in making building data web-ready is the linked building data (LBD) initiative. This group has worked on a number of vocabularies and ontologies, thereby starting from a linked data approach (RDF graphs), aiming at representing building data on the web. https://github.com/LBDserver[Linked Building Data Server]
@@ -263,7 +272,7 @@ In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF an
 ==== OntoBREP and OntoSTEP
 OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <<ontobrep>>
 
-OntoSTEP <<barbau2012ontostep>> translates STEP schemas and their instances, originally defined using EXPRESS, into OWL. This creates a semantically representation of product and CAD information. The approach enables reasoning, inference, and querying over existing CAD data and provides a way to combine information represented using different modeling languages. <<ontostep>> 
+OntoSTEP <<barbau2012ontostep>> translates STEP schemas and their instances, originally defined using EXPRESS, into OWL. This creates a semantically representation of product and CAD information. The approach enables reasoning, inference, and querying over existing CAD data and provides a way to combine information represented using different modeling languages. <<ontostep>>
 
 OntoBREP and OntoSTEP represent approaches in which geometry are brought into the Semantic Web at a relatively deep semantic level. This results in potentially large and complex knowledge graphs.
 
@@ -296,7 +305,7 @@ The https://annegoebels.github.io/reloc/[Relative Location Ontology (RELOC)] ena
 ===== InfraspatialOT 
 The InfraspatialOT ontology, described in the paper: https://www.researchgate.net/publication/394086571_infraspatialOT_An_Ontology_for_the_Representation_of_Spatial_Relationships_in_Road_Infrastructure[infraspatialOT: An Ontology for the Representation of Spatial Relationships in Road Infrastructure], provides a semantic model for representing road infrastructure elements and their spatial relationships to reference elements. It distinguishes between localisation, which describes where an infrastructure element is located along a reference element, and positioning, which captures its relative spatial position, including horizontal and vertical relationships. Positioning relations can further specify whether a distance is involved. This structure enables road infrastructure elements and their spatial relationships to be represented and queried consistently using semantic technologies such as SPARQL.
 
-==== Medicine and Chmistry
+==== Medicine and Chemistry
 ===== 3D Microscopy Metadata Standards (3D-MMS)
 The 3D Microscopy Metadata Standards (3D-MMS) was developed by the BRAIN Initiative to establish a consistent way of describing 3D microscopy datasets, particularly datasets of brain tissue. Its purpose is to provide enough information for someone who did not generate the data to understand, find, interpret, reuse, and potentially integrate the dataset with other datasets. The 3D-MMS-metadata can be used to describe how the image volume is oriented and scaled, so that a position inside the microscopy dataset has meaningful spatial coordinates.
 <<ropelewski_standard_2022>> 
@@ -305,6 +314,7 @@ The 3D Microscopy Metadata Standards (3D-MMS) was developed by the BRAIN Initiat
 
 ==== Topological Relationships and Their Use
 The book chapter https://repository.tudelft.nl/record/uuid:09075b7e-e019-45f1-becc-cf8d7992b63b[Topological Relationships and Their Use] highlights that topological relationships are well established for simple 2D objects, while 3D topological operations remain less developed. It identifies the need to support more complex 3D objects, including solids with holes and tunnels, and suggests reusing existing spatial operators as a starting point for extending topological analysis to 3D.
+//i would have expected something about why it's important to have topological relationships available for querying?
 
 ==== Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System
 The work described in the paper https://www.mdpi.com/2220-9964/13/1/25[Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System], defines semantics of 3D bodies, regions, and lines, which can support the definition and interpretation of 3D spatial relations and operations. It provides a formal topological foundation that can be interesting for GeoSPARQL 3D.
@@ -420,4 +430,3 @@ source: https://ec-3.org/wp-content/uploads/2025/10/EC32019_166.pdf
 IndoorGML (OGC) models indoor environments as cells, such as rooms, corridors and stairwells, and derives a navigation graph in which spaces are nodes and their connections, such as doors and openings, are edges. The Land Administration Domain Model (LADM, ISO 19152) describes the rights, restrictions and responsibilities attached to spaces. The combined LADM-IndoorGML model uses these legal aspects to define which indoor spaces are accessible to which users.
 
 <<alattas2018>> applied this combined model to building evacuation. They showed that access rights depend on time (normal hours, off-hours and crisis situations) and on the type of user, such as visitors, employees or students, and that these rights determine which routes users can take to the nearest emergency exit or safe zone. 
-

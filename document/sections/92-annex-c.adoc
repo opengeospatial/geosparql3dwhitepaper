@@ -1,6 +1,6 @@
 
 [appendix]
-== Annex C: Overview of IFC Geometry
+== Overview of IFC Geometry
 [#AnnexCOverviewOfIFCGeometry]
 
 [cols="1,2,1,3,3",options="header"]

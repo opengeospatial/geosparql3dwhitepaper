@@ -1,5 +1,5 @@
 [appendix]
-== Annex B: Alignment of Geometry Types
+== Alignment of Geometry Types
 
 Overview of ISO 19107 GML IFC STEP OpenCascade WKT X3D Geometries
 

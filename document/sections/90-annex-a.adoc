@@ -1,5 +1,5 @@
 [appendix]
-== Annex A: Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support .
+== Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support .
 
 Based on: 
 

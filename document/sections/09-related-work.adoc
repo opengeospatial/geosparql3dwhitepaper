@@ -251,14 +251,14 @@ Over the last years, Building Information Modelling (BIM) has been increasingly 
 
 ==== BIMSPARQL
 This initiative proposes extending SPARQL with functions for querying IFC building data to simplify queries and derive information from 3D geometry for BIM requirement checking. The functions are represented as RDF vocabularies and implemented using a combination of declarative rules and procedural programming. Evaluation with realistic requirement-checking scenarios demonstrates that the approach supports spatial and logical reasoning and can combine building and regulatory data from multiple sources.
-<<article>>
+<<zhang2018bimsparql>>
 
 [#img_BIMSPARQL, reftext='{figure-caption} {counter:figure-num}']
 .IMSPARQL.
 image::../figures/BIMSPARQL_Geometry_Functions.png[align="center"]
 
 ==== stSPARQL
-In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF and the Query Language stSPARQL <<inbook>>, Koubarakis and Kyzirakos describe the extension of SPARQL with temporal information. These paterns can also be used for GeoSPARQL.
+In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF and the Query Language stSPARQL <<koubarakis2010modeling>>, Koubarakis and Kyzirakos describe the extension of SPARQL with temporal information. These paterns can also be used for GeoSPARQL.
 
 ==== OntoBREP and OntoSTEP
 OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <<ontobrep>>

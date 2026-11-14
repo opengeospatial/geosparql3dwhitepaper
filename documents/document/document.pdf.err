@@ -1,13 +1,12 @@
 WARNING: font '/home/runner/snap/metanorma/296/.fontist/fonts/google/overpass/Overpass-Italic[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
 WARNING: font '/home/runner/snap/metanorma/296/.fontist/fonts/google/overpass/Overpass[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
-Image not found. URI: file:////home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/document//home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/_tmp_images_aae44f7b-45c1-47e9-8364-0fd2d571f276/5ab6ead3-1d8a-4797-8194-730864c8c511.png. (See position 1108:612)
+Image not found. URI: file:////home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/document//home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/_tmp_images_0b54ef18-30f7-4b5b-aaf1-8cd34bd74e65/24c3ef17-5fa8-4082-af83-3f0a72957757.png. (See position 1108:612)
 Please check the PDF and if necessary, report this issue at the following link: https://github.com/metanorma/mn-native-pdf/issues/new, and attach the XSL-FO file or fragment: '/home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/document.pdf.fo.xml'.
 Page 22: Unresolved ID reference "Boley_13" found.
 Page 23: Unresolved ID reference "_3e4260b3605459b8ce220cfb42a3525" found.
 Page 23: Unresolved ID reference "doi_10.3233_SW-200385" found.
 Page 26: Unresolved ID reference "flotynski2017ontology" found.
 Page 29: Unresolved ID reference "Sikos2017" found.
-Page 29: Unresolved ID reference "koble2005citygml" found.
 Page 29: Unresolved ID reference "_975906" found.
 Page 31: Unresolved ID reference "_0.2312_gch.20231157" found.
 Page 43: Unresolved ID reference "_0_3233_SW-200385" found.

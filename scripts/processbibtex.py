@@ -14,6 +14,6 @@ for entry in bibtexlib.entries:
     #if founddoi:
     #    bibstring+="* [[["+entry.key+", doi:"+thedoi+"]]]\n\n"
     #else:
-    bibstring+="* [[["+entry.key+",number=1,dropid=true,code=local-file("+entry.key+")]]]\n\n"
+    bibstring+="* [[["+entry.key+",number=1,dropid=true,local-file="+entry.key+"]]]\n\n"
 with open("document/sections/99-annex-bibliography.adoc","a") as bibdoc:
     bibdoc.write(bibstring)

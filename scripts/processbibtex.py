@@ -16,5 +16,6 @@ for entry in bibtexlib.entries:
     #    bibstring+="* [[["+entry.key+", doi:"+thedoi+"]]]\n\n"
     #else:
     bibstring+="* [[["+entry.key+", "+str(counter)+"]]],dropid("+entry.key+")\n\n"
+    counter+=1
 with open("document/sections/99-annex-bibliography.adoc","a") as bibdoc:
     bibdoc.write(bibstring)

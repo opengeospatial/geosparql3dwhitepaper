@@ -88,7 +88,7 @@ Application ontologies abstracting VRML <<bell1995virtual>> & Java3D node types 
 
 **CityGML and OntoCityGML**
 
-CityGML <<koble2005citygml>> is an open standardized data model for the exchange of 3D models of cities and landscapes.
+CityGML <<kolbe2005citygml>> is an open standardized data model for the exchange of 3D models of cities and landscapes.
 Since its standardization by OGC, CityGML has seen a wide variety of proposed extensions and alignments to other data standards.
 
 **CityJSON and CityRDF**

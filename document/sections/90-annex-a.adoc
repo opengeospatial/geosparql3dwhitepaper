@@ -1,4 +1,5 @@
 [appendix]
+[[annex_alignments]]
 == Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support .
 
 Based on: 

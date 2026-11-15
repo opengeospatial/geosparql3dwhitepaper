@@ -26,8 +26,10 @@ In order to support linear referencing, geometries in GeoSPARQL can have a measu
 
 The extended capabilities for GeoSPARQL discussed in this white paper concern the cases where the _spatial dimension_ (which can be expressed with property https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]) of geometry has the value 3.
 
-The table below shows the values of the three dimension properties for some Geometries (expressed as Well Known Text (WKT)).
+<<tab:dimensionoverview>> shows the values of the three dimension properties for some Geometries (expressed as Well Known Text (WKT)).
 
+[[tab:dimensionoverview]]
+.Overview of values of dimension properties for some Geometry types
 |=== 
 | Geometry (WKT) | geo:dimension | geo:coordinateDimension | geo:spatialDimension 
 
@@ -101,6 +103,8 @@ These literals are investigated for the storage of 3D data.
 image::../figures/2d-2d--2andahalfd-3d-difference.png[align="center"]
 
 
+[[tab:capabilitieslittypes]]
+.Capabilities of different literal types concerning dimensionality
 [cols="3,3,3,3,3"] 
 |=== 
 |Literal Type | Z-Coordinate Supported |Z-Coordinate Supported + height attribute | 2.5D | 3D 
@@ -112,7 +116,7 @@ image::../figures/2d-2d--2andahalfd-3d-difference.png[align="center"]
 |=== 
 *The support of 3D for DGGS is dependent on the DGGS grid definition being used.
 
-The comparison of capabilities shows limited support for 3D of some of GeoSPARQL 1.1 literal formats.
+The comparison of capabilities in <<tab:capabilitieslittypes>> shows limited support for 3D of some of GeoSPARQL 1.1 literal formats.
 While these existing capabilities are an important information, one might also take into account the option to not save the 3D model in the knowledge graph directly for performance reasons.
 GeoSPARQL 1.1 currently does not allow geometries to be defined as a external resource, so the need may arise to find a solution in GeoSPARQL 3D.
 
@@ -129,8 +133,10 @@ This should not require duplication of the tree entity — there can be one tree
 ===== Query functions with 3D support
 
 GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. 
-However, there are functions which may take into account the Z coordinate, if they are available.
+However, the functions listed in <<tab:queryfuncs3d>> are functions which may take into account the Z coordinate, if they are available.
 
+[[tab:queryfuncs3d]]
+.Query functions with 3D support
 [cols="3,3,3,3"] 
 |=== 
 |GeoSPARQL function | Z-Coordinate Supported | 2.5D | 3D 
@@ -186,7 +192,7 @@ GeoSPARQL functionality can be compared with established spatial database extens
 The comparison with existing open-source spatial technologies is intended to identify gaps between the functionality currently provided by GeoSPARQL and the capabilities available in established spatial databases. This provides an indication of the development potential of GeoSPARQL. The comparison can therefore be used to identify potential areas for further development and to assess which capabilities could add value to future versions of the standard.
 
 When focusing specifically on 3D functionality, the largest differences in the comparison are found in geometry creation and editing, spatial measurements, and operations related to triangulation and topographic geometry. Also the topological functions shows some gaps between GeoSPARQL and the functionality in the spatial databases. These areas contain functionality available in the compared spatial technologies that is not represented in GeoSPARQL. They therefore provide the clearest areas for investigating potential further development of 3D functionality in GeoSPARQL.
-See Annex A: Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support
+See <<annex_alignments>> Annex A: Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support
 
 Besides the available functions, the geometry representations used by GeoSPARQL, such as WKT and GML, can also be compared with geometry representations used in other standards and technologies, such as IFC, STEP and Open CASCADE. The comparison shows that the largest differences in 3D geometry representation occur beyond basic points, curves and surfaces. IFC, STEP and OpenCascade provide more extensive representations for solids, volumes, boolean and constructive geometry, swept and revolved geometry and 3D transformations and spatial operations. These areas therefore provide relevant starting points for investigating potential extensions of GeoSPARQL for more comprehensive 3D geometry representation and processing. See Annex B: Allignment of Geometry
 

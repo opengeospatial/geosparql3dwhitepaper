@@ -26,9 +26,9 @@ In order to support linear referencing, geometries in GeoSPARQL can have a measu
 
 The extended capabilities for GeoSPARQL discussed in this white paper concern the cases where the _spatial dimension_ (which can be expressed with property https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]) of geometry has the value 3.
 
-<<tab:dimensionoverview>> shows the values of the three dimension properties for some Geometries (expressed as Well Known Text (WKT)).
+<<tab_dimensionoverview>> shows the values of the three dimension properties for some Geometries (expressed as Well Known Text (WKT)).
 
-[[tab:dimensionoverview]]
+[[tab_dimensionoverview]]
 .Overview of values of dimension properties for some Geometry types
 |=== 
 | Geometry (WKT) | geo:dimension | geo:coordinateDimension | geo:spatialDimension 
@@ -103,7 +103,7 @@ These literals are investigated for the storage of 3D data.
 image::../figures/2d-2d--2andahalfd-3d-difference.png[align="center"]
 
 
-[[tab:capabilitieslittypes]]
+[[tab_capabilitieslittypes]]
 .Capabilities of different literal types concerning dimensionality
 [cols="3,3,3,3,3"] 
 |=== 
@@ -116,7 +116,7 @@ image::../figures/2d-2d--2andahalfd-3d-difference.png[align="center"]
 |=== 
 *The support of 3D for DGGS is dependent on the DGGS grid definition being used.
 
-The comparison of capabilities in <<tab:capabilitieslittypes>> shows limited support for 3D of some of GeoSPARQL 1.1 literal formats.
+The comparison of capabilities in <<tab_capabilitieslittypes>> shows limited support for 3D of some of GeoSPARQL 1.1 literal formats.
 While these existing capabilities are an important information, one might also take into account the option to not save the 3D model in the knowledge graph directly for performance reasons.
 GeoSPARQL 1.1 currently does not allow geometries to be defined as a external resource, so the need may arise to find a solution in GeoSPARQL 3D.
 
@@ -133,9 +133,9 @@ This should not require duplication of the tree entity — there can be one tree
 ===== Query functions with 3D support
 
 GeoSPARQL 1.1 functions currently do not offer fully-featured 3D support. 
-However, the functions listed in <<tab:queryfuncs3d>> are functions which may take into account the Z coordinate, if they are available.
+However, the functions listed in <<tab_queryfuncs3d>> are functions which may take into account the Z coordinate, if they are available.
 
-[[tab:queryfuncs3d]]
+[[tab_queryfuncs3d]]
 .Query functions with 3D support
 [cols="3,3,3,3"] 
 |=== 

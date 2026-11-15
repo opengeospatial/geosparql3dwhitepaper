@@ -1,67 +1,13 @@
 WARNING: font '/home/runner/snap/metanorma/296/.fontist/fonts/google/overpass/Overpass-Italic[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
 WARNING: font '/home/runner/snap/metanorma/296/.fontist/fonts/google/overpass/Overpass[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
-Property ID "Table" (found on "fo:block-container") previously used; ID values must be unique within a document! (See position 559:557)
-org.apache.fop.fo.ValidationException: null:559:557: Property ID "Table" (found on "fo:block-container") previously used; ID values must be unique within a document! (See position 559:557)
-javax.xml.transform.TransformerException: org.apache.fop.fo.ValidationException: null:559:557: Property ID "Table" (found on "fo:block-container") previously used; ID values must be unique within a document! (See position 559:557)
-	at org.apache.xalan.transformer.TransformerIdentityImpl.transform(TransformerIdentityImpl.java:536)
-	at org.metanorma.fop.PDFGenerator.runFOP(PDFGenerator.java:957)
-	at org.metanorma.fop.PDFGenerator.convertmn2pdf(PDFGenerator.java:753)
-	at org.metanorma.fop.PDFGenerator.process(PDFGenerator.java:414)
-	at org.metanorma.fop.mn2pdf.main(mn2pdf.java:383)
-Caused by: org.apache.fop.fo.ValidationException: null:559:557: Property ID "Table" (found on "fo:block-container") previously used; ID values must be unique within a document! (See position 559:557)
-	at org.apache.fop.event.ValidationExceptionFactory.createException(ValidationExceptionFactory.java:40)
-	at org.apache.fop.events.EventExceptionManager.throwException(EventExceptionManager.java:58)
-	at org.apache.fop.events.DefaultEventBroadcaster$1.invoke(DefaultEventBroadcaster.java:173)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.idNotUnique(Unknown Source)
-	at org.apache.fop.fo.FObj.checkId(FObj.java:240)
-	at org.apache.fop.fo.FObj.startOfNode(FObj.java:188)
-	at org.apache.fop.fo.flow.BlockContainer.startOfNode(BlockContainer.java:115)
-	at org.apache.fop.fo.FOTreeBuilder$MainFOHandler.startElement(FOTreeBuilder.java:367)
-	at org.apache.fop.fo.FOTreeBuilder$2.run(FOTreeBuilder.java:185)
-	at org.apache.fop.fo.FOTreeBuilder$2.run(FOTreeBuilder.java:182)
-	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
-	at org.apache.fop.fo.FOTreeBuilder.startElement(FOTreeBuilder.java:181)
-	at org.apache.xalan.transformer.TransformerIdentityImpl.startElement(TransformerIdentityImpl.java:1120)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
-	at org.apache.xalan.transformer.TransformerIdentityImpl.transform(TransformerIdentityImpl.java:519)
-	... 4 more
----------
-org.apache.fop.fo.ValidationException: null:559:557: Property ID "Table" (found on "fo:block-container") previously used; ID values must be unique within a document! (See position 559:557)
-	at org.apache.fop.event.ValidationExceptionFactory.createException(ValidationExceptionFactory.java:40)
-	at org.apache.fop.events.EventExceptionManager.throwException(EventExceptionManager.java:58)
-	at org.apache.fop.events.DefaultEventBroadcaster$1.invoke(DefaultEventBroadcaster.java:173)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.idNotUnique(Unknown Source)
-	at org.apache.fop.fo.FObj.checkId(FObj.java:240)
-	at org.apache.fop.fo.FObj.startOfNode(FObj.java:188)
-	at org.apache.fop.fo.flow.BlockContainer.startOfNode(BlockContainer.java:115)
-	at org.apache.fop.fo.FOTreeBuilder$MainFOHandler.startElement(FOTreeBuilder.java:367)
-	at org.apache.fop.fo.FOTreeBuilder$2.run(FOTreeBuilder.java:185)
-	at org.apache.fop.fo.FOTreeBuilder$2.run(FOTreeBuilder.java:182)
-	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
-	at org.apache.fop.fo.FOTreeBuilder.startElement(FOTreeBuilder.java:181)
-	at org.apache.xalan.transformer.TransformerIdentityImpl.startElement(TransformerIdentityImpl.java:1120)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
-	at org.apache.xalan.transformer.TransformerIdentityImpl.transform(TransformerIdentityImpl.java:519)
-	at org.metanorma.fop.PDFGenerator.runFOP(PDFGenerator.java:957)
-	at org.metanorma.fop.PDFGenerator.convertmn2pdf(PDFGenerator.java:753)
-	at org.metanorma.fop.PDFGenerator.process(PDFGenerator.java:414)
-	at org.metanorma.fop.mn2pdf.main(mn2pdf.java:383)
-
+Image not found. URI: file:////home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/document//home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/_tmp_images_777a4018-b5d9-49a0-b3cb-a50a942f444a/21e9ff22-ffc6-4cb2-9980-28a6e670c589.png. (See position 1114:612)
+Please check the PDF and if necessary, report this issue at the following link: https://github.com/metanorma/mn-native-pdf/issues/new, and attach the XSL-FO file or fragment: '/home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/document.pdf.fo.xml'.
+Page 22: Unresolved ID reference "Boley_13" found.
+Page 23: Unresolved ID reference "_3e4260b3605459b8ce220cfb42a3525" found.
+Page 23: Unresolved ID reference "doi_10.3233_SW-200385" found.
+Page 26: Unresolved ID reference "flotynski2017ontology" found.
+Page 29: Unresolved ID reference "Sikos2017" found.
+Page 29: Unresolved ID reference "_975906" found.
+Page 31: Unresolved ID reference "_0.2312_gch.20231157" found.
+Page 43: Unresolved ID reference "_0_3233_SW-200385" found.
+Page 45: Unresolved ID reference "_3e4260b3605459b8ce220cfb42a3525" found.

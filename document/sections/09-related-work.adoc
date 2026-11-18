@@ -191,57 +191,53 @@ OntPreHer3D is an extension of the CIDOC CRM ontology <<doerr2007cidoc>>. It is 
 
 ===== Industry Foundation Classes (IFC)
 
-BIM is a paradigm in which object‐model definitions - with machine‑interpretable semantics - are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC) <<van2021future>>. **IFC is unique in the sense that it allows expressing both geometrical as well as non-geometrical semantics.**
-
-**Non-geometrical: taxonomy of objects (building elements, relational constructs, scheduling information) and related properties**
-
-**Geometrical: appromximately 250 constructs related to geometry; even standards with only a geometric focus such as geosparql or collada do not reach that breadth in definitions**
-
-IFC has its idiosyncrasies and challenges, but is **unrivaled in terms of market adoption in a highly fragmented industry**.
+BIM is a paradigm in which object‐model definitions, with a machine‑interpretable structure are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC) <<van2021future>>. IFC is of particular interest in the sense that it allows expressing both geometrical as well as non-geometrical semantics in a singular schema definition. In terms of non-geometrical data, an construction-related taxonomy of objects is included with building elements, relational constructs, scheduling and actor information and extensible related property mechanism based on key-value pairs. In terms of geometrical data, appromximately 250 constructs in the schema relate to geometry: even standards with only a geometric focus such as geosparql or collada do not reach that breadth in definitions IFC has its idiosyncrasies and challenges, but is unrivaled in terms of market adoption in a highly fragmented industry.
 
 ====== Product model
 
-In IFC, a construction work is decomposed into a set of products. These products can have **multiple representations**. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
+In IFC, a construction work is decomposed into a set of products. These products can have *multiple geometric representations*. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
 
-At the same time, such a product separates the **placement** (an hierarchical transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.
+At the same time, such a product separates the *placement* (an hierarchical rigid-body transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.
 (Identifying faces in procedural geometries is also challenging (toplogical naming problem), so using geometric semantic overlays to annotate potentially procedural geometries makes sense)
 
-In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, **semantics and geometry are intertwined** such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics.
+In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, *semantics and geometry are intertwined* such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics, but can be hidden deep into the geometrical feature graph.
 
-IFC also allows for **decomposition**, where a whole is aggregated into multiple parts for richer semantics. This allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.
+IFC also allows for *decomposition* (on many levels: product, representation items, composite profiles, and more), where a whole is aggregated into multiple parts for richer semantics. Product-level decomposition allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.
 
 ====== Evolving views on geometry
 
 IFC is heavily influenced by the ISO 10303 (STEP) <<pratt2001introduction>> family of standards, but over time adopted its own geometric paradigms:
 
-- Procedural geometry and boolean operations became less prominent with the adoption of ReferenceView in IFC4. Tessellated geometry definitions were added for more compact exchange.
+- Procedural geometry and boolean operations became less prominent with the adoption of ReferenceView in IFC4. Tessellated indexed geometry definitions were added for more compact exchange. Every point as an individual entity instance constituted a signficant file-size overhead. Although this is mostly a data serialization concern, it led to introduction of new overlapping entity definitions on the conceptual level.
 - **Infrastructure definitions** were added with precise mathematical transition curves and a composition of a horizontal, vertical and cant (inclination) profile.
 - IFC5 <<wang2026ifc5>> with an **explicit** (most likely triangulated) geometry schema at the core, with semantic overlays to encode the same procedural semantics as a non-mandatory or use-case specific layer. Heavily inspired by USD with layer-based composition for collaborative exchange.
 
-Especially the handling of **tolerances** means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. NB Tolerances stand in the way of using existing approaches for SFA geometry predicates such as PostGIS+SFCGAL which is based on arbitrary precision boolean logic as implemented in CGAL without tolerances.
+Especially the notion of *tolerances* means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. Note that tolerances affect implementation heavily. For example, PostGIS+SFCGAL, based on arbitrary precision boolean logic as implemented in CGAL, does not provide boolean operations (intersection, subtraction, union) under tolerances.
 
 ====== Use cases
 
-The most successful use case on BIM data is **coordination and visualization** where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software. 
+The most successful use case on BIM data is *coordination and visualization* where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software. 
 
-**Design to design** workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.
+*Design to design* workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.
 
-**Long-term preservation** of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don't contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.
+*Long-term preservation* of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don't contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.
 
-**BIM-GIS integration** is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.
+*BIM-GIS integration* is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.
 
-**Simulations** on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in nieghbouring domaisn remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
+*Simulations* on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation for higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in neighbouring domains remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
 
 ====== Implications and questions:
 
-- Euclidean / non-euclidean; is a CRS required?
-- Separate representation+placement -> enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate in space
-- Geometry as leaf-values or object-relational model : cannot encapsulate geometry into a single literal, but allows for richer semantics
-- BRep model (topology + geometry + orientation + location) vs polyhedral model (e.g halfedge) vs explicit loops of point coordinates
-- Procedural vs implicit (e.g constraints) vs explicit (polyhedra)
-- Tolerances
-- Decomposition inside or outside of the 'geometry ontology'
-- Are infra geometries (hor + ver alignment + cant, for positioning and sweeps) in scope?
+Based on the preceeding BIM-related paragraphs the following questions could be posed as to how BIM workflows and a future GeoSPARQL could relate.
+
+- Is geometry always Euclidean or are non-euclidean use cases foreseen. Is a CRS always required (or implicitly assumed) or can geometries also exist solely in a project-specific engineering Cartesian system?
+- Is the sepataration of representation and placement beneficial for incorporation into GeoSPARQL. It enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate elements in space?
+- Would geometry be a simple literal atomic leaf-value, or would there be object-relational feature trees, which allow for richer semantics?
+- There are multiple models to represent explicit geometry, such as BRep (topology + geometry + orientation + location) or a polyhedral model (e.g halfedge or indexed face loops). In particular the difference is in support for arbitrary curved geometries, because e.g in the BRep model a topologic face comes with a geometric surface. 
+- What forms of implicit (e.g constraints) geometry would be in scope?
+- Would there be support for tolerances and would these be local or global or parameters to certain operations that depend on them.
+- Is decomposition a feature inside or outside of the 'geometry ontology'?
+- Are infra geometries (hor + ver alignment + cant, both for positioning and as the directrix in geometric sweeps) in scope?
 
 ===== BOT (Building Topology Ontology)
 AEC - Building domain ontology for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies <<flotynski2020bot>>. |
@@ -318,35 +314,33 @@ CGAL (Computational Geometry Algorithms Library) provides data structures and al
 ==== OpenCASCADE
 OpenCASCADE is an open-source software platform for 3D geometric modelling and CAD applications. It provides data structures and algorithms for representing and processing geometric and topological entities, including points, curves, surfaces, solids, and B-Rep models. The platform supports operations such as geometric transformations, Boolean operations, intersections, and shape analysis. Its explicit representation of geometry and topology makes OpenCASCADE relevant for the computational processing of 3D solids and for investigating how B-Rep-based geometry could be supported by a GeoSPARQL 3D implementation.
 
-===== OpenCASCADE-inspired BRep ontology
-
-Perzylo, A., Somani, N., Rickert, M., & Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.
-
-https://ieeexplore.ieee.org/abstract/document/7353971
-
-<<perzylo2015ontology>>
-
-===== Topologic
-
-Jabi, W., & Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.
-
-https://topologic.app/
-
-<<jabi2021topologic>>
+The OpenCASCADE BRep model has also been used as the basis of an ontology <<perzylo2015ontology>> and is the geometric support for Topologic <<jabi2021topologic>> a system that uses models Cell Complexes as OpenCASCADE BRep entities and exposes a graph-like Dual view with space-to-space adjancency through face interfaces.
 
 ==== BRep vs mesh/polyhedron
 
+The thesis of a modelling foundation as the basis for implementation has been discussed before. The items below can be seen as a quick summarization of earlier discussions.
+
 BRep
-- Curved surfaces
-- Topology: connected components as shells, solids with inner voids, etc.
-- Clean APIs due to inheritance: e.g `fn extrude(Topo) -> Topo`, for vertex -> edge; edge -> face; face -> solid; solid -> solid
-- Extra indirections: edge -> vertex[] -> point
-- Depending on implementation can be inefficient, e.g outer wire of face not explicitly marked need to be checked wrt infinite point
-- Data integrity and validation a bit harder
+
+- Supports curved surfaces and edges
+- A separate notion of topology: connected components as shells, solids with inner voids, etc.
+- Often supports clean APIs due to due to generic concepts.
+    
+    - For example considering an extrusion function() that can accept any topologic primitive and returns a higher order or same entity. 
+        
+        - Extrusion of `vertex` yields `edge`
+        - Extrusino of `edge` yield `face`
+        - Extrusion of `face` yields `solid`
+        - Extrusion of `solid` yields `solid`
+
+- Has extra indirections for example: `edge` -> `vertex[]` -> `point`
+- Therefore, depending on implementation can be inefficient, e.g outer the wire of face not explicitly marked and needs to be checked w.r.t an infinite point or edges in a loop not stored in order.
+- Data integrity and validation (e.g self-intersections) can be a harder to maintain
 
 Mesh/polyhedron
+
 - Potentially fewer indirections
-- Triangle meshes robust and well understood
+- Triangle meshes are robust, well understood, parallizable
 - Many different data models though, e.g half-edge (only manifold), indexed faceset (no adjacency info), winged/quad/radial edge
 
 B-Rep and mesh/polyhedron representations differ in how 3D geometry and topology are modelled. B-Rep explicitly represents curved surfaces and topological relationships between vertices, edges, faces, shells, and solids, making it suitable for complex solid models, but it can involve more complex data structures and validation requirements. Mesh and polyhedral representations generally use simpler discrete geometries, often based on triangles, with several possible data structures for representing adjacency and topology, such as half-edge, winged-edge, and indexed face sets. For GeoSPARQL 3D, this distinction is relevant because the underlying representation can affect the precision, robustness, and implementation of spatial operations.

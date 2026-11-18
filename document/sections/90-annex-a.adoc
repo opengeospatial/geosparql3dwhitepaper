@@ -12,11 +12,11 @@ Spatiallite: https://www.gaia-gis.it/gaia-sins/spatialite-sql-latest.html
 === Formatting functions
 |===
 | GeoSPARQL | PostGIS | H2GIS | Spatialite
-| geof:asGeoJSON | link:https://postgis.net/docs/ST_AsGeoJSON.html[st_asgeojson] | link:https://h2gis.readthedocs.io/en/latest/ST_AsGeoJson.html[ST_AsGeoJson] | asgeojson
-| geof:asGML | link:https://postgis.net/docs/ST_AsGML.html[st_asgml] | link:https://h2gis.readthedocs.io/en/latest/ST_AsGML.html[st_asgml] | asgml
-| geof:asKML | link:https://postgis.net/docs/ST_AsKML.html[st_askml] | link:https://h2gis.readthedocs.io/en/latest/ST_AsKML.html[ST_AsKML] | askml
-| geof:asWKT |  | st_aswkt | aswkt
-| geof:asEWKB | link:https://postgis.net/docs/ST_AsEWKB.html[st_asewkb] | link:https://h2gis.readthedocs.io/en/latest/ST_AsEWKB.html[AsEWKB] | asewkb
+| http://www.opengis.net/def/function/geosparql/asGeoJSON[geof:asGeoJSON] | link:https://postgis.net/docs/ST_AsGeoJSON.html[st_asgeojson] | link:https://h2gis.readthedocs.io/en/latest/ST_AsGeoJson.html[ST_AsGeoJson] | asgeojson
+| http://www.opengis.net/def/function/geosparql/asGML[geof:asGML] | link:https://postgis.net/docs/ST_AsGML.html[st_asgml] | link:https://h2gis.readthedocs.io/en/latest/ST_AsGML.html[st_asgml] | asgml
+| http://www.opengis.net/def/function/geosparql/asKML[geof:asKML] | link:https://postgis.net/docs/ST_AsKML.html[st_askml] | link:https://h2gis.readthedocs.io/en/latest/ST_AsKML.html[ST_AsKML] | askml
+| http://www.opengis.net/def/function/geosparql/asWKT[geof:asWKT] |  | st_aswkt | aswkt
+| http://www.opengis.net/def/function/geosparql/asEWKB[geof:asEWKB] | link:https://postgis.net/docs/ST_AsEWKB.html[st_asewkb] | link:https://h2gis.readthedocs.io/en/latest/ST_AsEWKB.html[AsEWKB] | asewkb
 |  | link:https://postgis.net/docs/ST_AsHEXEWKB.html[st_ashexewkb] |  |
 |  | link:https://postgis.net/docs/ST_AsX3D.html[ST_AsX3D] |  | asx3d
 |  | link:st_asewkt |  | asewkt
@@ -24,8 +24,8 @@ Spatiallite: https://www.gaia-gis.it/gaia-sins/spatialite-sql-latest.html
 |  | st_astext | st_astext | astext
 |  |  |  | astwkb
 |  | link:https://postgis.net/docs/ST_AsBinary.html[st_asbinary] | st_asbinary | asbinary
-| geof:asDGGS |  |  |
-| geof:asGeocode |  |  |
+| http://www.opengis.net/def/function/geosparql/asDGGS[geof:asDGGS] |  |  |
+| http://www.opengis.net/def/function/geosparql/asGeoCode[geof:asGeoCode] |  |  |
 |  |  |  | asfgf
 |  |  |  | asgpb
 |  |  |  | asencodedpolyline
@@ -82,20 +82,20 @@ Spatiallite: https://www.gaia-gis.it/gaia-sins/spatialite-sql-latest.html
 |  |st_extrude  | link:https://h2gis.readthedocs.io/en/latest/ST_Extrude.html[st_extrude] |
 |  |link:https://postgis.net/docs/CG_Extrude.html[CG_Extrude] |  |
 |  |  | link:https://h2gis.readthedocs.io/en/latest/ST_GeometryShadow.html[st_geometryshadow] |
-| geof:boundary | link:https://postgis.net/docs/ST_Boundary.html[st_boundary] | st_boundary | boundary
-| geof:boundingCircle |  | st_boundingcircle |
+| http://www.opengis.net/def/function/geosparql/boundary[geof:boundary] | link:https://postgis.net/docs/ST_Boundary.html[st_boundary] | st_boundary | boundary
+| http://www.opengis.net/def/function/geosparql/boundingCircle[geof:boundingCircle] |  | st_boundingcircle |
 |  | link:https://postgis.net/docs/ST_BoundingDiagonal.html[st_BoundingDiagonal]|  |
 |  | st_minimumboundingcircle |  |
-| geof:concaveHull |  |  | concavehull
-| geof:convexHull | link:https://postgis.net/docs/ST_ConvexHull.html[st_convexhull] | st_convexhull | convexhull
+| http://www.opengis.net/def/function/geosparql/concaveHull[geof:concaveHull] |  |  | concavehull
+| http://www.opengis.net/def/function/geosparql/convexHull[geof:convexHull] | link:https://postgis.net/docs/ST_ConvexHull.html[st_convexhull] | st_convexhull | convexhull
 |  |link:https://postgis.net/docs/CG_3DConvexHull.html[CG_3DConvexHull]  |  | 
-| geof:difference | link:https://postgis.net/docs/ST_Difference.html[st_difference] | st_difference | difference
+| http://www.opengis.net/def/function/geosparql/difference[geof:difference] | link:https://postgis.net/docs/ST_Difference.html[st_difference] | st_difference | difference
 |  |link:https://postgis.net/docs/CG_3DDifference.html[CG_3DDifference]  |  | 
-| geof:envelope | st_envelope | st_envelope | envelope
-| geof:symDifference | link:https://postgis.net/docs/ST_SymDifference.html[st_symdifference] | st_symdifference | symdifference
-| geof:union | link:https://postgis.net/docs/ST_Union.html[st_union] | st_union | gunion
+| http://www.opengis.net/def/function/geosparql/envelope[geof:envelope] | st_envelope | st_envelope | envelope
+| http://www.opengis.net/def/function/geosparql/symDifference[geof:symDifference] | link:https://postgis.net/docs/ST_SymDifference.html[st_symdifference] | st_symdifference | symdifference
+| http://www.opengis.net/def/function/geosparql/union[geof:union] | link:https://postgis.net/docs/ST_Union.html[st_union] | st_union | gunion
 |  |link:https://postgis.net/docs/CG_3DUnion.html[CG_3DUnion]  |  | 
-| geof:patchN | link:https://postgis.net/docs/ST_PatchN.html[st_PatchN] |  |
+| http://www.opengis.net/def/function/geosparql/patchN[geof:patchN] | link:https://postgis.net/docs/ST_PatchN.html[st_PatchN] |  |
 |  | link:https://postgis.net/docs/CG_MakeSolid.html[CG_MakeSolid] |  | 
 |  | link:https://postgis.net/docs/ST_LineSubstring.html[ST_LineSubstring] |  | 
 |  |  |  | atm_create
@@ -231,8 +231,8 @@ multipointfromwkb"
 |  | link:https://postgis.net/docs/ST_LineFromMultiPoint.html[st_linefrommultipoint] |  |
 |  | st_makebox2d |  |
 |  | st_makebox3d |  |
-|  | st_makeenvelope |  |
-|  | st_multi |  |
+|  | link:https://postgis.net/docs/ST_MakeEnvelope.html[ST_MakeEnvelope] |  |
+|  | link:https://postgis.net/docs/ST_Multi.html[ST_Multi] |  |
 |  | link:https://postgis.net/docs/ST_Polygon.html[st_polygon] |  |
 |===
 

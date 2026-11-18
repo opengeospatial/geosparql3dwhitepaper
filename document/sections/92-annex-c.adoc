@@ -15,7 +15,7 @@
 | Space boundaries (connection geometry)
 | 12.6% (1676)
 | `IfcRelSpaceBoundary`: Surfaces representing adjacencies between spaces and building elements primarily intended for thermal simulation.
-| `geof:sfTouches`
+| http://www.opengis.net/def/function/geosparql/sfTouches[`geof:sfTouches`]
 
 | Relational
 | Interferences

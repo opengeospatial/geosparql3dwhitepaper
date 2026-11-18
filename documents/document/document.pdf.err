@@ -1,6 +1,6 @@
 WARNING: font '/home/runner/snap/metanorma/296/.fontist/fonts/google/overpass/Overpass-Italic[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
 WARNING: font '/home/runner/snap/metanorma/296/.fontist/fonts/google/overpass/Overpass[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
-Image not found. URI: file:////home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/document//home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/_tmp_images_872bc9ec-56a9-4769-868a-d4c2c1a13994/ed0f3480-4d31-49b0-8474-590753f72a22.png. (See position 1124:612)
+Image not found. URI: file:////home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/document//home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/_tmp_images_d5ee0ea8-22cc-45ce-a103-27ee2f805cc9/41ff90fe-e024-40b4-8cad-4f4643b30a99.png. (See position 1124:612)
 Please check the PDF and if necessary, report this issue at the following link: https://github.com/metanorma/mn-native-pdf/issues/new, and attach the XSL-FO file or fragment: '/home/runner/work/geosparql3dwhitepaper/geosparql3dwhitepaper/site/documents/document/document.pdf.fo.xml'.
 Page 22: Unresolved ID reference "Boley_13" found.
 Page 23: Unresolved ID reference "doi_10_3233_SW_200385" found.
@@ -10,13 +10,6 @@ Page 29: Unresolved ID reference "bell1995virtual" found.
 Page 31: Unresolved ID reference "_0.2312_gch.20231157" found.
 Page 33: Unresolved ID reference "_0_24072_pcjournal_608" found.
 Page 33: Unresolved ID reference "van2021future" found.
-Page 34: Unresolved ID reference "pratt2001introduction" found.
-Page 35: Unresolved ID reference "wang2026ifc5" found.
-Page 37: Unresolved ID reference "zhang2018bimsparql" found.
-Page 37: Unresolved ID reference "koubarakis2010modeling" found.
 Page 38: Unresolved ID reference "barbau2012ontostep" found.
-Page 40: Unresolved ID reference "Zlatanova2017" found.
-Page 40: Unresolved ID reference "Heise2024infraspatialOT" found.
-Page 40: Unresolved ID reference "ijgi13010025" found.
 Page 44: Unresolved ID reference "_0_3233_SW-200385" found.
 Page 45: Unresolved ID reference "_3e4260b3605459b8ce220cfb42a3525" found.

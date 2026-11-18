@@ -1,1 +1,2 @@
-== Annex O: History
+[appendix]
+== History

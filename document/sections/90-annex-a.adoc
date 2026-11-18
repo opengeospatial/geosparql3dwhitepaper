@@ -1,4 +1,6 @@
-== Annex A: Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support .
+[appendix]
+[[annex_alignments]]
+== Alignment GeoSPARQL and Open Source Relational Databases with Geospatial Support .
 
 Based on: 
 
@@ -6,8 +8,6 @@ GeoSPARQL:
 PostGIS: https://postgis.net/docs/PostGIS_Special_Functions_Index.html#PostGIS_3D_Functions (PostGIS Functions that support 3D)
 H2GIS: https://h2gis.readthedocs.io/en/latest/index.html (paragraph Geometry 3D/4D functions)
 Spatiallite: https://www.gaia-gis.it/gaia-sins/spatialite-sql-latest.html
-
-== Alignment: GeoSPARQL and Open Source Relational Databases with Geospatial Support
 
 === Formatting functions
 |===

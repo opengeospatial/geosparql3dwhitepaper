@@ -31,7 +31,7 @@ The paper is intended as a basis for discussion within the OGC community and amo
 |de Sousa L. | Universidade de Lisboa | Yes
 |Knibbe F. | Triply | No
 |Chadzynski A. | Graphwise/Ontotext | No
-|Krijnen T. | AEC Geeks | No 
+|Krijnen T. | AECgeeks | No 
 |Pauwels P. |Eindhoven University of Technology | No 
 |Jonker R. | Geonovum | Yes 
 

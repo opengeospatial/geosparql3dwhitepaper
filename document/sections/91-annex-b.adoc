@@ -1,11 +1,16 @@
-== Annex B: Allignment of Geometry
+[appendix]
+== Alignment of Geometry Types
 
 Overview of ISO 19107 GML IFC STEP OpenCascade WKT X3D Geometries
 
-Dit overzicht van geometriën laat zien welke geometrieen dicht bij elkaar zitten. Het is geen 10% match
+This overview of geometry types shows which geometry types are similar to one another. It is not a 10% match.
 
 
-Points:
+=== Points
+
+A Point is a 0-dimensional geometric object that represents a single location in a coordinate space.
+
+.Aligment of Points
 |===
 | ISO 19107 | GML      | IFC | STEP | OpenCascade | WKT 
 |||link:https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcCartesianPoint.htm[IfcCartesianPoint] |  link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cartesian_point[cartesian_point] |link:https://dev.opencascade.org/doc/refman/html/class_geom2d___cartesian_point.html[Geom2d_CartesianPoint] +
@@ -36,7 +41,13 @@ link:https://dev.opencascade.org/doc/refman/html/class_geom___point.html[Geom_Po
 
 |===
 
-Lines and Curves:
+=== Lines and Curves
+
+A Curve is an abstract geometry base class representing a 1-dimensional geometric object stored as a sequence of points.
+
+Lines are 1-dimensional curves formed by a sequence of two or more coordinate vertices connected by straight, linearly interpolated segments.
+
+.Alignment of Lines and Curves
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 |link:http://www.opengis.net/def/geometry/iso-19107/2003/gm_curve[GM_Curve] | link:https://schemas.opengis.net/gml/3.2.1/geometryBasic0d1d.xsd[gml:Curve] |  |  | |
@@ -183,7 +194,11 @@ link:https://dev.opencascade.org/doc/refman/html/class_geom___vector_with_magnit
 
 |===
 
-Surface:
+=== Surface
+
+A surface is a 2-dimensional geometric object that sits within the core geometry type hierarchy.
+
+.Alignment of Surfaces
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 |link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_Surfac[GM_Surface] | link:https://schemas.opengis.net/gml/3.2.1/geometryPrimitives.xsd[gml:Surface] |  |  ||
@@ -256,10 +271,11 @@ link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexi
 || | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSurface.htm[IfcSectionedSurface] | ||
 |===
 
-Primitives:
+=== Primitives
 
 A primitive (like a block or ellipsoid) can be defined with just a few parameters. It is more efficient than describing the same shape with triangles (mesh) or surfaces (B-rep). It keeps files smaller and mathematically exact.  
 
+.Alignment of Primitives
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 | |  |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBlock.htm[IfcBlock] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.block[block] | link:https://dev.opencascade.org/doc/refman/html/class_topo_d_s___solid.html#a493006c38aec5e41b5e05d0aac0485d1[TopoDS_Solid] +
@@ -313,9 +329,11 @@ link:https://dev.opencascade.org/doc/refman/html/class_b_rep_prim_a_p_i___make_r
 |===
 
 
-Boolean Geometry:
+=== Boolean Geometry
+
 Defined constructively, not by its boundary. Boolean geometry is the representation of 3D shapes by combining or subtracting simpler solids using Boolean operations like union, intersection, and difference.
 
+.Alignement of Boolean Geometries
 |===
 | ISO 19107 | GML | IFC| STEP | OpenCascade | WKT 
 || | link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgSolid.htm[IfcCsgSolid] |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm#geometric_model_schema.csg_solid[Csg_solid] ||
@@ -323,9 +341,11 @@ Defined constructively, not by its boundary. Boolean geometry is the representat
 |===
 
 
-Solid/Shell:
+=== Solid/Shell
+
 A solid is a topological object that encloses a region of space and a shell is a set of connected surfaces that form a boundary. A Solid is a closed shell. 
 
+.Alignment of Solid/Shells
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 || gml:AbstractSolid |  |  | |
@@ -371,10 +391,11 @@ A solid is a topological object that encloses a region of space and a shell is a
 |===
 
 
-Swept Surface:  
+=== Swept Surface  
 
 A swept surface is a type of surface in geometric modeling created by moving a profile (curve) along a trajectory (path).
 
+.Alignment of Swept Surfaces
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 || |link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceCurveSweptAreaSolid.htm[IfcSurfaceCurveSweptAreaSolid] | ||
@@ -408,10 +429,11 @@ A swept surface is a type of surface in geometric modeling created by moving a p
 
 |===
 
-Volume:  
+=== Volume  
 
-Volume geometry is a way of representing a 3D object by directly defining the entire region of space it occupies, rather than just its boundary.
+A volume geometry is a way of representing a 3D object by directly defining the entire region of space it occupies, rather than just its boundary.
 
+.Alignment of Volumes
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 || ||link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.block_volume[block_volume]
@@ -454,10 +476,11 @@ Volume geometry is a way of representing a 3D object by directly defining the en
 || |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.b_spline_volume_with_knots[b_spline_volume_with_knots] |  |
 |===
 
-Axis/Placement: 
+=== Axis/Placement 
 
 Used to define orientation or alignment of objects, where to be placed and in what direction to extrude. 
 
+.Alignment of Axis/Placements
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 |||link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis1Placement.htm[IfcAxis1Placement] | axis1_placement  |link:https://dev.opencascade.org/doc/refman/html/class_geom___axis1_placement.html[Geom_Axis1Placement]|
@@ -467,7 +490,9 @@ link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexi
 link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.axis2_placement_3d[axis2_placement_3d] |link:https://dev.opencascade.org/doc/refman/html/class_geom___axis2_placement.html[Geom_Axis2Placement]|
 |===
 
-Grids:
+=== Grids
+
+.Alignment of Grids
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 || gml:RectifiedGrid|   |||
@@ -476,7 +501,10 @@ Grids:
 |===
 
 
-Operators:
+=== Operators
+
+
+.Alignment of Operators
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 || |  |link:https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/4_schema.htm#geometry_schema.cartesian_transformation_operator[cartesian_transformation_operator]||
@@ -485,7 +513,9 @@ Operators:
 link:https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator2DnonUniform.htm[IfcCartesianTransformationOperator2DnonUniform]|cartesian_transformation_operator_2d|gp_Trsf2d|
 |===
 
-Geometric complex/ composites:
+=== Geometric complex/composites
+
+.Alignment of Complex/Composites
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 |GM_Complex| gml:GeometricComplex |  |  | |
@@ -506,7 +536,9 @@ Geometric complex/ composites:
 
 |===
 
-Geometric Agggregates:
+=== Geometric Agggregates
+
+.Alignement of Geometric Aggregates
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 
 |link:http://www.opengis.net/def/geometry/ISO-19107/2003/GM_MultiPoint[GM_MultiPoint]| link:https://schemas.opengis.net/gml/3.2.1/geometryAggregates.xsd[gml:MultiPoint] |  ||  |MULTIPOINT
@@ -524,7 +556,7 @@ Geometric Agggregates:
 |===
 
 
-Interface Query:
+=== Interface Query
 
 |===
 | ISO 19107 | GML | IFC | STEP | OpenCascade | WKT 

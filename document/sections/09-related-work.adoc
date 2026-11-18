@@ -88,7 +88,7 @@ Application ontologies abstracting VRML <<bell1995virtual>> & Java3D node types 
 
 **CityGML and OntoCityGML**
 
-CityGML <<koble2005citygml>> is an open standardized data model for the exchange of 3D models of cities and landscapes.
+CityGML <<kolbe2005citygml>> is an open standardized data model for the exchange of 3D models of cities and landscapes.
 Since its standardization by OGC, CityGML has seen a wide variety of proposed extensions and alignments to other data standards.
 
 **CityJSON and CityRDF**
@@ -186,57 +186,53 @@ OntPreHer3D is an extension of the CIDOC CRM ontology <<10_24072_pcjournal_608>>
 
 ===== Industry Foundation Classes (IFC)
 
-BIM is a paradigm in which object‐model definitions - with machine‑interpretable semantics - are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC) <<van2021future>>. **IFC is unique in the sense that it allows expressing both geometrical as well as non-geometrical semantics.**
-
-**Non-geometrical: taxonomy of objects (building elements, relational constructs, scheduling information) and related properties**
-
-**Geometrical: appromximately 250 constructs related to geometry; even standards with only a geometric focus such as geosparql or collada do not reach that breadth in definitions**
-
-IFC has its idiosyncrasies and challenges, but is **unrivaled in terms of market adoption in a highly fragmented industry**.
+BIM is a paradigm in which object‐model definitions, with a machine‑interpretable structure are exchanged, rather than relying on CAD drawings that convey only graphical semantics. The predominant open exchange standard is Industry Foundation Classes (IFC) <<van2021future>>. IFC is of particular interest in the sense that it allows expressing both geometrical as well as non-geometrical semantics in a singular schema definition. In terms of non-geometrical data, an construction-related taxonomy of objects is included with building elements, relational constructs, scheduling and actor information and extensible related property mechanism based on key-value pairs. In terms of geometrical data, appromximately 250 constructs in the schema relate to geometry: even standards with only a geometric focus such as geosparql or collada do not reach that breadth in definitions IFC has its idiosyncrasies and challenges, but is unrivaled in terms of market adoption in a highly fragmented industry.
 
 ====== Product model
 
-In IFC, a construction work is decomposed into a set of products. These products can have **multiple representations**. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
+In IFC, a construction work is decomposed into a set of products. These products can have *multiple geometric representations*. For example, a wall can be described as a solid body as well as a two-dimensional axis. These representations facilitate different views on the same data: an editable line segment or an easily visualized volume. The Object-relational nature of the IFC EXPRESS schema allows intricate relationships such as a representation context that communicates additional intent for the representation or presentation styles that can be granularly assigned to individual faces.
 
-At the same time, such a product separates the **placement** (an hierarchical transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.
+At the same time, such a product separates the *placement* (an hierarchical rigid-body transformation) from the actual geometry definition. The consequence of this is that in spite of its object-relational nature, IFC product representations cannot be used for building-level topological relationships between solids, because even if two solids are touching in 3D, the fact the the placement is externalized out of the geometry definition (or the fact that faces are constructed procedurally and do not exist explicitly), means that the two faces cannot be opposite oriented twins. As such, relational geometric constructs such as space boundaries are provided as additional supplementary geometries.
 (Identifying faces in procedural geometries is also challenging (toplogical naming problem), so using geometric semantic overlays to annotate potentially procedural geometries makes sense)
 
-In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, **semantics and geometry are intertwined** such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics.
+In principle, the IFC schema has been designed in a modular fashion with independent modules for, for example, geometry, materials and meta-data. However in other cases, *semantics and geometry are intertwined* such as tapered extrusions (lofts) where the begin and end profile of a duct carry important semantics, but can be hidden deep into the geometrical feature graph.
 
-IFC also allows for **decomposition**, where a whole is aggregated into multiple parts for richer semantics. This allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.
+IFC also allows for *decomposition* (on many levels: product, representation items, composite profiles, and more), where a whole is aggregated into multiple parts for richer semantics. Product-level decomposition allows for example to connect materials and meta-data to the frame and the glazing separately, while still being able to identify the aggregate as a single window. This is not used as frequently, partially due to inability to efficiently instantiate such aggregates as geometry instances.
 
 ====== Evolving views on geometry
 
 IFC is heavily influenced by the ISO 10303 (STEP) <<pratt2001introduction>> family of standards, but over time adopted its own geometric paradigms:
 
-- Procedural geometry and boolean operations became less prominent with the adoption of ReferenceView in IFC4. Tessellated geometry definitions were added for more compact exchange.
+- Procedural geometry and boolean operations became less prominent with the adoption of ReferenceView in IFC4. Tessellated indexed geometry definitions were added for more compact exchange. Every point as an individual entity instance constituted a signficant file-size overhead. Although this is mostly a data serialization concern, it led to introduction of new overlapping entity definitions on the conceptual level.
 - **Infrastructure definitions** were added with precise mathematical transition curves and a composition of a horizontal, vertical and cant (inclination) profile.
 - IFC5 <<wang2026ifc5>> with an **explicit** (most likely triangulated) geometry schema at the core, with semantic overlays to encode the same procedural semantics as a non-mandatory or use-case specific layer. Heavily inspired by USD with layer-based composition for collaborative exchange.
 
-Especially the handling of **tolerances** means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. NB Tolerances stand in the way of using existing approaches for SFA geometry predicates such as PostGIS+SFCGAL which is based on arbitrary precision boolean logic as implemented in CGAL without tolerances.
+Especially the notion of *tolerances* means that the standard cannot effectively prescribe a consistent outcome in all cases. Tolerances are needed for BRep model with non-linear underlying geometry and/or fixed precision coordinate values, e.g higher degree nurbs curves are typically intersected with numerical approximation, so a vertex that connects two of such curves needs to have seen as a sphere with the local tolerance as its radius. This tolerance is also applied to boolean operations: an subtraction volume can be slightly inwards of the first operand but is still expected to pierce through the volume and increase surface genus. This contrasts with the desire of using IFC as a legal basis in contracts. Note that tolerances affect implementation heavily. For example, PostGIS+SFCGAL, based on arbitrary precision boolean logic as implemented in CGAL, does not provide boolean operations (intersection, subtraction, union) under tolerances.
 
 ====== Use cases
 
-The most successful use case on BIM data is **coordination and visualization** where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software. 
+The most successful use case on BIM data is *coordination and visualization* where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software. 
 
-**Design to design** workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.
+*Design to design* workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.
 
-**Long-term preservation** of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don't contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.
+*Long-term preservation* of building information is difficult because of the fact that IFC models are difficult to mutate, because they are so explicit and don't contain the vendor-specific design intelligence. Therefore native software cannot always re-import IFC models, but also the native models degrade over time because of the need to migrate to newer editions of the software. Software that can directly operate on IFC to make modifications is still experimental.
 
-**BIM-GIS integration** is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.
+*BIM-GIS integration* is challenging because it requires familiarity with both domains on where to draw the line between euclidean and non-euclidean geometries and acceptable error metrics.
 
-**Simulations** on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in nieghbouring domaisn remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
+*Simulations* on IFC building models are often challenging because the 'bag of individual elements' does not provide a good foundation for higher order topological representations required for flow-of-energy type of simulations. For e.g thermal simulation a topological view of space boundaries is required. They have been added as secondary set of ternary relationships, but usage of more specific-purpose and simpler schemas sees still more usage in industry. In general, IFC models are created for a specific purpose and wide-spread usage of those models in neighbouring domains remain challenging because modelling for those neighbouring purposes requires alignment on the worldviews and levels of detail that is often beyond the scope in which such models are procured.
 
 ====== Implications and questions:
 
-- Euclidean / non-euclidean; is a CRS required?
-- Separate representation+placement -> enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate in space
-- Geometry as leaf-values or object-relational model : cannot encapsulate geometry into a single literal, but allows for richer semantics
-- BRep model (topology + geometry + orientation + location) vs polyhedral model (e.g halfedge) vs explicit loops of point coordinates
-- Procedural vs implicit (e.g constraints) vs explicit (polyhedra)
-- Tolerances
-- Decomposition inside or outside of the 'geometry ontology'
-- Are infra geometries (hor + ver alignment + cant, for positioning and sweeps) in scope?
+Based on the preceeding BIM-related paragraphs the following questions could be posed as to how BIM workflows and a future GeoSPARQL could relate.
+
+- Is geometry always Euclidean or are non-euclidean use cases foreseen. Is a CRS always required (or implicitly assumed) or can geometries also exist solely in a project-specific engineering Cartesian system?
+- Is the sepataration of representation and placement beneficial for incorporation into GeoSPARQL. It enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate elements in space?
+- Would geometry be a simple literal atomic leaf-value, or would there be object-relational feature trees, which allow for richer semantics?
+- There are multiple models to represent explicit geometry, such as BRep (topology + geometry + orientation + location) or a polyhedral model (e.g halfedge or indexed face loops). In particular the difference is in support for arbitrary curved geometries, because e.g in the BRep model a topologic face comes with a geometric surface. 
+- What forms of implicit (e.g constraints) geometry would be in scope?
+- Would there be support for tolerances and would these be local or global or parameters to certain operations that depend on them.
+- Is decomposition a feature inside or outside of the 'geometry ontology'?
+- Are infra geometries (hor + ver alignment + cant, both for positioning and as the directrix in geometric sweeps) in scope?
 
 ===== BOT (Building Topology Ontology)
 AEC - Building domain ontology for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies <<flotynski2020bot>>. |
@@ -246,14 +242,14 @@ Over the last years, Building Information Modelling (BIM) has been increasingly 
 
 ==== BIMSPARQL
 This initiative proposes extending SPARQL with functions for querying IFC building data to simplify queries and derive information from 3D geometry for BIM requirement checking. The functions are represented as RDF vocabularies and implemented using a combination of declarative rules and procedural programming. Evaluation with realistic requirement-checking scenarios demonstrates that the approach supports spatial and logical reasoning and can combine building and regulatory data from multiple sources.
-<<article>>
+<<zhang2018bimsparql>>
 
 [#img_BIMSPARQL, reftext='{figure-caption} {counter:figure-num}']
 .IMSPARQL.
 image::../figures/BIMSPARQL_Geometry_Functions.png[align="center"]
 
 ==== stSPARQL
-In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF and the Query Language stSPARQL <<inbook>>, Koubarakis and Kyzirakos describe the extension of SPARQL with temporal information. These paterns can also be used for GeoSPARQL.
+In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF and the Query Language stSPARQL <<koubarakis2010modeling>>, Koubarakis and Kyzirakos describe the extension of SPARQL with temporal information. These paterns can also be used for GeoSPARQL.
 
 ==== OntoBREP and OntoSTEP
 OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <<ontobrep>>
@@ -286,10 +282,10 @@ Geometry, topology, scene structure, and domain semantics are often represented 
 ==== Location ontologies
 
 ===== Relative Location Ontology (Reloc) 
-The https://annegoebels.github.io/reloc/[Relative Location Ontology (RELOC)] enables the expression of the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.
+The https://annegoebels.github.io/reloc/[Relative Location Ontology (RELOC)] <<Goebel2024>> enables the expression of the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.
 
 ===== InfraspatialOT 
-The InfraspatialOT ontology, described in the paper: https://www.researchgate.net/publication/394086571_infraspatialOT_An_Ontology_for_the_Representation_of_Spatial_Relationships_in_Road_Infrastructure[infraspatialOT: An Ontology for the Representation of Spatial Relationships in Road Infrastructure], provides a semantic model for representing road infrastructure elements and their spatial relationships to reference elements. It distinguishes between localisation, which describes where an infrastructure element is located along a reference element, and positioning, which captures its relative spatial position, including horizontal and vertical relationships. Positioning relations can further specify whether a distance is involved. This structure enables road infrastructure elements and their spatial relationships to be represented and queried consistently using semantic technologies such as SPARQL.
+The InfraspatialOT ontology, described in the paper: https://www.researchgate.net/publication/394086571_infraspatialOT_An_Ontology_for_the_Representation_of_Spatial_Relationships_in_Road_Infrastructure[infraspatialOT: An Ontology for the Representation of Spatial Relationships in Road Infrastructure] <<Heise2024infraspatialOT>>, provides a semantic model for representing road infrastructure elements and their spatial relationships to reference elements. It distinguishes between localisation, which describes where an infrastructure element is located along a reference element, and positioning, which captures its relative spatial position, including horizontal and vertical relationships. Positioning relations can further specify whether a distance is involved. This structure enables road infrastructure elements and their spatial relationships to be represented and queried consistently using semantic technologies such as SPARQL.
 
 ==== Medicine and Chmistry
 ===== 3D Microscopy Metadata Standards (3D-MMS)
@@ -299,10 +295,10 @@ The 3D Microscopy Metadata Standards (3D-MMS) was developed by the BRAIN Initiat
 === 3D Topology
 
 ==== Topological Relationships and Their Use
-The book chapter https://repository.tudelft.nl/record/uuid:09075b7e-e019-45f1-becc-cf8d7992b63b[Topological Relationships and Their Use] highlights that topological relationships are well established for simple 2D objects, while 3D topological operations remain less developed. It identifies the need to support more complex 3D objects, including solids with holes and tunnels, and suggests reusing existing spatial operators as a starting point for extending topological analysis to 3D.
+The book chapter https://repository.tudelft.nl/record/uuid:09075b7e-e019-45f1-becc-cf8d7992b63b[Topological Relationships and Their Use] <<Zlatanova2017>> highlights that topological relationships are well established for simple 2D objects, while 3D topological operations remain less developed. It identifies the need to support more complex 3D objects, including solids with holes and tunnels, and suggests reusing existing spatial operators as a starting point for extending topological analysis to 3D.
 
 ==== Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System
-The work described in the paper https://www.mdpi.com/2220-9964/13/1/25[Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System], defines semantics of 3D bodies, regions, and lines, which can support the definition and interpretation of 3D spatial relations and operations. It provides a formal topological foundation that can be interesting for GeoSPARQL 3D.
+The work described in the paper https://www.mdpi.com/2220-9964/13/1/25[Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System] <<ijgi13010025>>, defines semantics of 3D bodies, regions, and lines, which can support the definition and interpretation of 3D spatial relations and operations. It provides a formal topological foundation that can be interesting for GeoSPARQL 3D.
 
 === Implementations
 The related work above primarily address 3D geometry semantics. A complementary aspect is the computational processing of the 3D representations. Implementations of 3D geometry processing provide the algorithms and data structures required to perform operations such as intersection, containment, distance calculation, Boolean operations, and topology analysis. This section  reviews established geometry-processing libraries and systems, including CGAL, SFCGAL, OpenCASCADE, and Topologic, and considers their relevance to the implementation of 3D spatial operations in GeoSPARQL.
@@ -313,35 +309,33 @@ CGAL (Computational Geometry Algorithms Library) provides data structures and al
 ==== OpenCASCADE
 OpenCASCADE is an open-source software platform for 3D geometric modelling and CAD applications. It provides data structures and algorithms for representing and processing geometric and topological entities, including points, curves, surfaces, solids, and B-Rep models. The platform supports operations such as geometric transformations, Boolean operations, intersections, and shape analysis. Its explicit representation of geometry and topology makes OpenCASCADE relevant for the computational processing of 3D solids and for investigating how B-Rep-based geometry could be supported by a GeoSPARQL 3D implementation.
 
-===== OpenCASCADE-inspired BRep ontology
-
-Perzylo, A., Somani, N., Rickert, M., & Knoll, A. (2015, September). An ontology for CAD data and geometric constraints as a link between product models and semantic robot task descriptions. In 2015 IEEE/RSJ international conference on intelligent robots and systems (IROS) (pp. 4197-4203). IEEE.
-
-https://ieeexplore.ieee.org/abstract/document/7353971
-
-<<perzylo2015ontology>>
-
-===== Topologic
-
-Jabi, W., & Chatzivasileiadi, A. (2021, January). Topologic: exploring spatial reasoning through geometry, topology, and semantics. In Formal Methods in Architecture: Proceedings of the 5th International Symposium on Formal Methods in Architecture (5FMA), Lisbon 2020 (pp. 277-285). Cham: Springer International Publishing.
-
-https://topologic.app/
-
-<<jabi2021topologic>>
+The OpenCASCADE BRep model has also been used as the basis of an ontology <<perzylo2015ontology>> and is the geometric support for Topologic <<jabi2021topologic>> a system that uses models Cell Complexes as OpenCASCADE BRep entities and exposes a graph-like Dual view with space-to-space adjancency through face interfaces.
 
 ==== BRep vs mesh/polyhedron
 
+The thesis of a modelling foundation as the basis for implementation has been discussed before. The items below can be seen as a quick summarization of earlier discussions.
+
 BRep
-- Curved surfaces
-- Topology: connected components as shells, solids with inner voids, etc.
-- Clean APIs due to inheritance: e.g `fn extrude(Topo) -> Topo`, for vertex -> edge; edge -> face; face -> solid; solid -> solid
-- Extra indirections: edge -> vertex[] -> point
-- Depending on implementation can be inefficient, e.g outer wire of face not explicitly marked need to be checked wrt infinite point
-- Data integrity and validation a bit harder
+
+- Supports curved surfaces and edges
+- A separate notion of topology: connected components as shells, solids with inner voids, etc.
+- Often supports clean APIs due to due to generic concepts.
+    
+    - For example considering an extrusion function() that can accept any topologic primitive and returns a higher order or same entity. 
+        
+        - Extrusion of `vertex` yields `edge`
+        - Extrusino of `edge` yield `face`
+        - Extrusion of `face` yields `solid`
+        - Extrusion of `solid` yields `solid`
+
+- Has extra indirections for example: `edge` -> `vertex[]` -> `point`
+- Therefore, depending on implementation can be inefficient, e.g outer the wire of face not explicitly marked and needs to be checked w.r.t an infinite point or edges in a loop not stored in order.
+- Data integrity and validation (e.g self-intersections) can be a harder to maintain
 
 Mesh/polyhedron
+
 - Potentially fewer indirections
-- Triangle meshes robust and well understood
+- Triangle meshes are robust, well understood, parallizable
 - Many different data models though, e.g half-edge (only manifold), indexed faceset (no adjacency info), winged/quad/radial edge
 
 B-Rep and mesh/polyhedron representations differ in how 3D geometry and topology are modelled. B-Rep explicitly represents curved surfaces and topological relationships between vertices, edges, faces, shells, and solids, making it suitable for complex solid models, but it can involve more complex data structures and validation requirements. Mesh and polyhedral representations generally use simpler discrete geometries, often based on triangles, with several possible data structures for representing adjacency and topology, such as half-edge, winged-edge, and indexed face sets. For GeoSPARQL 3D, this distinction is relevant because the underlying representation can affect the precision, robustness, and implementation of spatial operations.
@@ -367,16 +361,16 @@ The https://github.com/openPMD/openPMD-standard[openPMD standard], short for ope
 Different ontologies handle geometry in the Semantic Web in different ways. This section describes how 3D geometry is handled by different ontologies, rather than by GeoSPARQL. It compares approaches such as BOT, OMG, FOG, BIMSPARQL, GEOM, OntoBREP, and OntoSTEP, highlighting how each ontology represents, links, or manages geometric information within the Semantic Web.
 
 ==== BOT (Building Topology Ontology) 
-The Building Topology Ontology distinguishes zones and elements. It also has topological relations as bot:containsZone and bot:hasElement. Any bot:Zone or bot:Element can be assigned a 3D Model using some existing data format for 3D models. Two properties are defined for this. The bot:hasSimple3DModel datatype property links a bot:Zone or bot:Element to a 3D Model encoded as a literal. If the data format is textual, then the lexical form of the 3D Model literal SHOULD be encoded as a Unicode [UNICODE] string, which SHOULD be in Normal Form C [NFC]. If the data format is binary, then the lexical form of the 3D Model literal SHOULD be encoded using a base32 encoding [rfc4648]. The bot:has3DModel object property links a bot:Zone or bot:Element to some IRI that identifies a 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models.
+The Building Topology Ontology distinguishes zones and elements. It also has topological relations as https://w3id.org/bot#containsZone[bot:containsZone] and https://w3id.org/bot#hasElement[bot:hasElement]. Any https://w3id.org/bot#Zone[bot:Zone] or https://w3id.org/bot#Element[bot:Element] can be assigned a 3D Model using some existing data format for 3D models. Two properties are defined for this. The https://w3id.org/bot#hasSimple3DModel[bot:hasSimple3DModel] datatype property links a https://w3id.org/bot#Zone[bot:Zone] or https://w3id.org/bot#Element[bot:Element] to a 3D Model encoded as a literal. If the data format is textual, then the lexical form of the 3D Model literal SHOULD be encoded as a Unicode [UNICODE] string, which SHOULD be in Normal Form C [NFC]. If the data format is binary, then the lexical form of the 3D Model literal SHOULD be encoded using a base32 encoding [rfc4648]. The bot:has3DModel object property links a bot:Zone or bot:Element to some IRI that identifies a 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models.
 
 [#img_Building_Topology_Ontology_BOT_Example, reftext='{figure-caption} {counter:figure-num}']
 .Example of a graphical feedback from a request for all wall elements adjacent to a particular space using BOT terminology. The 3D model is described as an OBJ-formatted mesh.
 image::../figures/10_3233_sw-200385-fig6.jpg[align="center", width="50%"]
-source: https://journals.sagepub.com/doi/pdf/10.3233/SW-200385
+source: https://journals.sagepub.com/doi/pdf/10.3233/SW-200385 <<10_3233_SW-200385>>
 
 
 ==== OMG (Ontology for Managing Geometry) 
-The Ontology for Managing Geometry (OMG) is an ontology for attaching geometry descriptions to their corresponding things (e.g. building objects). The OMG is designed to provide three levels of adding the geometry descriptions which can be used and combined flexibly. The levels are designed to enable the attachment of metadata and comprise of the following functionalities:
+The Ontology for Managing Geometry (OMG) <<bonduel2019including>> is an ontology for attaching geometry descriptions to their corresponding things (e.g. building objects). The OMG is designed to provide three levels of adding the geometry descriptions which can be used and combined flexibly. The levels are designed to enable the attachment of metadata and comprise of the following functionalities:
 
 Level 1: Direct connections between things and their geometry descriptions using either an object property for RDF-based geometry descriptions or a datatype property for non-RDF-based geometry descriptions resp. links to external files.
 Level 2: Introduction of an intermediate node between the things and their geometry descriptions. By reifying the geometry description, handling of multiple geometry descriptions of the same things is empowered, metadata (as tags) can be added and dependencies between geometries can be modelled.

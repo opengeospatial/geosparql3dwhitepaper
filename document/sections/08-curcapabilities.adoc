@@ -16,12 +16,12 @@ In order to define which capabilities GeoSPARQL needs to adopt for full 3D compa
 
 In this white paper, when we discuss three dimensional data, we mean three dimensional geometries; instances of the class https://docs.ogc.org/is/22-047r1/22-047r1.html#_84414e8b-8ccc-407d-85b0-f3b474bba54d[geo:Geometry]. GeoSPARQL 1.1 defines three different properties for geometry that have to do with dimensionality:
 
-1. https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geodimension[geo:dimension], or __topological dimension__: This is the number of perpendicalar directions in which a geometry extends. A point, for example, extends in no direction, so its topological dimension is 0. A line has a length, but no width or height. Its topological dimension is 1. A cube has a topological dimension of 3.
+1. http://www.opengis.net/ont/geosparql#dimension[geo:dimension], or __topological dimension__: This is the number of perpendicalar directions in which a geometry extends. A point, for example, extends in no direction, so its topological dimension is 0. A line has a length, but no width or height. Its topological dimension is 1. A cube has a topological dimension of 3.
 
-2. https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geocoordinatedimension[geo:coordinateDimension]:
+2.  http://www.opengis.net/ont/geosparql#coordinateDimension[geo:coordinateDimension]:
 In the geometric model that GeoSPARQL uses, points are the basic building blocks of geometry. A point geometry can have a different number of coordinates, depending on the space in which it is placed. A point on a flat map, or on the surface of a sphere, needs two coordinates. The __coordinate dimension__ is the number of coordinates in the points that define a Geometry. 
 
-3. https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]:
+3.  http://www.opengis.net/ont/geosparql#spatialDimension[geo:spatialDimension]:
 In order to support linear referencing, geometries in GeoSPARQL can have a measure value. This is a relative position along a line or a curve, and does not extend the Geometry in space. The __spatial dimension__, therefore, can be used to denote the number of coordinates in a point, excluding the measurement value.
 
 The extended capabilities for GeoSPARQL discussed in this white paper concern the cases where the _spatial dimension_ (which can be expressed with property https://docs.ogc.org/is/22-047r1/22-047r1.html#_property_geospatialdimension[geo:spatialDimension]) of geometry has the value 3.
@@ -31,7 +31,7 @@ The extended capabilities for GeoSPARQL discussed in this white paper concern th
 [[tab_dimensionoverview]]
 .Overview of values of dimension properties for some Geometry types
 |=== 
-| Geometry (WKT) | geo:dimension | geo:coordinateDimension | geo:spatialDimension 
+| Geometry (WKT) |  http://www.opengis.net/ont/geosparql#dimension[geo:dimension] |  http://www.opengis.net/ont/geosparql#coordinateDimension[geo:coordinateDimension] |  http://www.opengis.net/ont/geosparql#spatialDimension[geo:spatialDimension] 
 
 | point (4 15) | 0 | 2 | 2 
 | point Z (4 15 3) | 0 | 3 | 3 
@@ -87,8 +87,8 @@ In addition, while boundary representations are supported in principle, their re
 Concerning metadata of 3D models, GeoSPARQL 1.1 provides properties which can be reused in 3D contexts.
 In particular, the properties are:
 
-- `geo:hasVolume`
-- `geo:hasMetricVolume`
+-  http://www.opengis.net/ont/geosparql#hasVolume[`geo:hasVolume`]
+-  http://www.opengis.net/ont/geosparql#hasMetricVolume[`geo:hasMetricVolume`]
 
 While these properties may describe features of a 3D solid, specific parameters of 3D models such as projection matrices, the material of a 3D model and its reflectivity which are commonplace in 3D rendering applications cannot be represented in GeoSPARQL 1.1.
 
@@ -140,9 +140,9 @@ However, the functions listed in <<tab_queryfuncs3d>> are functions which may ta
 [cols="3,3,3,3"] 
 |=== 
 |GeoSPARQL function | Z-Coordinate Supported | 2.5D | 3D 
-|geof:is3D  | Yes | Yes | Yes
-|geof:minZ  | Yes | Yes | Yes
-|geof:maxZ  | Yes | Yes | Yes 
+|http://www.opengis.net/def/function/geosparql/is3D[geof:is3D]  | Yes | Yes | Yes
+|http://www.opengis.net/def/function/geosparql/minZ[geof:minZ]  | Yes | Yes | Yes
+|http://www.opengis.net/def/function/geosparql/maxZ[geof:maxZ]  | Yes | Yes | Yes 
 |=== 
 
 These functions check for the presence of Z coordinates or filter out maximum and minimum Z coordinates of the given geometry.
@@ -183,7 +183,7 @@ The article "A GeoSPARQL Compliance Benchmark", Jovanovik, Homburg and Spasić <
 On the https://portal.ogc.org/public_ogc/compliance/implementing.php?&specid=528[OGC Implementation Database] there is no organisation compliant with the OGC GeoSPARQL standard. There are four organisations that are implementing the GeoSPARQL (v 1.0) standard. 
 
 ==== GeoSPARQL Aligments
-GeoSPARQL is aligned with a range of established ontologies and vocabularies covering different aspects of geospatial information, metadata, provenance, time, sensors, and linked data. See https://docs.ogc.org/is/22-047r1/22-047r1.html#_6f67539d-8b79-4a2b-b7b9-9b4a54e710d0[Annex E of the GeoSPARQL Standard]. Alignments with additional ontologies may be relevant for a broader 3D context. As an example, ontologies such as Reloc <<gobelsRelativeLocationOntology2024>>, BOT <<doi_10.3233_SW-200385>> and ifcOWL <<03e4260b3605459b8ce220cfb42a3525>> can be interesting.
+GeoSPARQL is aligned with a range of established ontologies and vocabularies covering different aspects of geospatial information, metadata, provenance, time, sensors, and linked data. See https://docs.ogc.org/is/22-047r1/22-047r1.html#_6f67539d-8b79-4a2b-b7b9-9b4a54e710d0[Annex E of the GeoSPARQL Standard]. Alignments with additional ontologies may be relevant for a broader 3D context. As an example, ontologies such as Reloc <<Goebel2024>>, BOT <<doi_10_3233_SW_200385>> and ifcOWL <<03e4260b3605459b8ce220cfb42a3525>> can be interesting.
 
 
 ==== GeoSPARQL functionality and geometries comparison

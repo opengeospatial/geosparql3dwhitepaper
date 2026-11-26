@@ -5,86 +5,62 @@ Various vocabularies, standards, and domain-specific approaches provide concepts
 
 A substantial body of work shows that **there is no single universal 3D web ontology**, but several reusable, often domain‑ or format‑specific vocabularies to describe geometry, topology, scenes, and domain semantics. Two principal flavours of ontologies can be identified in existing literature:i) those meant for the generic representation of 3D objects and shapes, and ii) a growing body of domain-specific ontologies <<flotynski2017ontology>>.
 
-This section starts by providing a brief overview of these two flavours of ontologies. It then dives into domain-specific initiatives, considering Geo-spatial, Cultural Heritage and BIM. This section closes by enumerating various encoding formats relevant for 3D.
+This section reviews existing work along three aspects, each tied to what GeoSPARQL 3D needs from it: (1) ontologies and vocabularies, which provide semantics (classes, properties and relations); (2) data and file schemas, which are candidates for geometry literal types; and (3) metadata vocabularies, which support the alignment and linking of geometry descriptions. Each part closes with a summary table. The section ends with an overview of implementations.
 
-=== 3D Exchange formats 
-A new GeoSPARQL standard should be compatible with existing approaches to encode 3D data.
-Semantic technologies should enable users to encode important metadata in the knowledge graph, while retaining the possibility to use already well-known 3D geometry formats either as String literals or file references.
-<<bonduel2019including>> shows how common widespread geometry formats could be included into knowledge graphs, which could be one starting point to investigate the integration within GeoSPARQL.
+=== Ontologies and vocabularies for 3D semantics
 
-==== Standard for the Exchange of Product model data (STEP) and OntoSTEP
-https://www.steptools.com/stds/step/[STEP (Standard for the Exchange of Product model data)] is an ISO standard for representing and exchanging product and engineering information, including CAD models. OntoSTEP translates STEP concepts into an ontology-based representation to support semantic integration and reasoning. OntoSTEP is a research-oriented approach that translates STEP/EXPRESS schemas and instances into OWL to enable semantic integration, querying, and reasoning. Initially developed at NIST, it has been further investigated through later implementations, but it remains a research approach rather than an established standard or widely adopted 3D ontology. 
+==== Generic 3D geometry and shape ontologies
 
-- OWL encodings of STEP AP203/AP214/AP242 and BREP/CSG concepts for CAD models <<zhao2024envon>>.  
-- Other proposals link geometric models to spatial properties or count non‑manifold features <<FlotynskiWalczak2017>> <<zhao2024envon>>.  
-
-==== STereoLithography (STL)
-http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file[STL files] describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations and was invented by the Albert Consulting Group for 3D Systems in 1987.
-Nowadays it is mainly used for 3D printing purposes, making it a plausible candidate for support in GeoSPARQL 3D settings of movable objects such as in cultural heritage.
-Since the STL format does not contain a geospatial reference, the reference needs to be provided externally if STL files were to be used in a geospatial context.
-However, STL objects could be used in local CRS contexts as well.
-
-==== Wavefront OBJ Format (OBJ)
-
-The https://paulbourke.net/dataformats/obj/[OBJ format] is a file format developed by Wavefront Technologies for the Advanced 3D Visualizer animation package.
-Its roots therefore lie in the world of 3D animation.
-The format represents vertex coordinates, texture coordinates, as well as vertex normals, parameter space vertices and faces of a 3D model.
-These are all elements which would need to be considered and supported in an upcoming GeoSPARQL 3D release.
-
-==== Polygon File Format (PLY)
-
-The https://paulbourke.net/dataformats/ply/[Polygon File Format] is a format which was designed to store 3D data from 3D scanning environments, which makes it especially widespread in the Cultural Heritage application area.
-The format consists of a vertex list and a faces list with optional parameters per vertex.
-Like the OBJ format, supporting PLY would imply including support for vertices and faces of a 3D model and their relationships in a knowledge graph.
-
-
-=== Geometry metadata and linking 
-
-The usefulness of 3D geometries in a knowledge graph will depend on the quality of the metadata which is used to describe the geometries.
-The reason is that we can expect users to select 3D geometries based on their attributes, since querying over greater 3D models is likely to be inefficient.
-Hence, we investigate already existing vocabularies for 3D geometry metadata representation.
-
-==== Geometry Metadata Ontology (GOM)
-The https://www.w3id.org/gom[Geometry Metadata Ontology (GOM)] introduces classes for surfaces which are common in the 3D world, but uncommon for 3D geometries, for instance Meshes or NURBS surfaces.
-The ontology can serve as an inspiration for extensions in GeoSPARQL 3D and may or may not be fully or partly adopted in the process of standardization.
-
-==== Ontology for Managing Geometry (OMG)
-The https://www.w3id.org/omg[Ontology for Managing Geometry (OMG)] describes states and derivation of geometries which may be useful to the description of data in GeoSPARQL 3D.
-For example. an extrusion in 3D from a 2D geometry template would have a derivation relation from the 2D geometry which one might want to see modeled in GeoSPARQL 3D.
-
-==== File Ontology for Geometry Formats (FOG)
-The https://w3id.org/fog#[File Ontology for Geometry Formats (FOG)] provides a bridge between ontology descriptions of geometries and data file descriptions of 3D contents.
-Since many 3D datasets are of considerable size, their inclusion into the knowledge graph as String literals might hinder the query performance of said knowledge graph.
-It therefore stands to reason whether to adopt the same or a similar method of geometry access that FOG provides for GeoSPARQL 3D.
-
-
-=== Generic 3D representation and semantic models 
-
-This section highlights 3D representations and in particular 3D formats which may need to be considered for a GeoSPARQL 3D extension.
-We describe the features of each format, their use cases and their potential challenges.
-
-==== X3D Ontology
-
-Extensible 3D (X3D) Graphics is an open standard to declaratively representing interactive 3D computer graphics for publishing, viewing, printing and archiving 3D models on the Web. X3D was eventually approved by ISO (ISO/IEC 19775-19777) and become a computer graphics industry standard. It was first proposed in 1997 and has since been subject to various updates. More recently it has been developed towards the Semantic Web, in order to gain interoperability and enable intelligent 3D operations and reasoning. Development has been hosted by the Web3D Consortium. 
+===== X3D Ontology
 
 Currently in its version 4, the X3D Ontology maps the full X3D standard (X3DUOM) into OWL 2, providing classes and properties for nodes, geometry, appearance, animation, and scene graph structure, enabling query and reasoning over X3D scenes <<FlotynskiWalczak2017>> <<georgieva2023transforming>> <<Sikos2017>> <<BrutzmanFlotynski2020>> <<flotynski2020recent>> <<8975906>>.  X3D version 4 is regarded as a comprehensive and formally grounded 3D ontology, adding fundamental concepts and roles of the 3D modelling industry not covered in previous versions.
 
 The X3D Ontology has also been used to transform non-semantic 3D file formats into RDF with languages such as RML or XSLT <<georgieva2023transforming>> <<BrutzmanFlotynski2020>>.
 
-The X3D format <<feichtenhofer2020x3d>>, <<brutzman2010x3d>>, X3DOM <<behr2009x3dom>> and its Ontology version <<brutzman2020x3d>> provide a data format and a blueprint for how 3D data is handled in computer vision approaches.
-X3D is an interesting format to investigate for 3D components which need to be modeled within a GeoSPARQL 3D specification. It is a likely candidate for a literal format and might be integrated using interlinking approaches to the already existing X3D vocabulary.
-However, since X3D was invented with computer vision approaches in mind it does not define any geospatial aspects that could be considered by a GeoSPARQL 3D implementation.
-
-==== VRML / Java3D spatial ontologies  
+===== VRML / Java3D spatial ontologies
 Application ontologies abstracting VRML <<bell1995virtual>> & Java3D node types plus a separate spatial ontology for topological, directional and metric relations <<pacheco2018creating>>.
 
-==== Common Shape Ontology
-– represents manifold/non‑manifold shapes, point sets, hierarchical model groups, positions, orientations, keyframe animation <<FlotynskiWalczak2017>>.  
+===== Common Shape Ontology
+– represents manifold/non‑manifold shapes, point sets, hierarchical model groups, positions, orientations, keyframe animation <<FlotynskiWalczak2017>>.
+
+===== OntoBREP and OntoSTEP
+OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <<ontobrep>>
+
+OntoSTEP <<barbau2012ontostep>> translates STEP schemas and their instances, originally defined using EXPRESS, into OWL. This creates a semantically representation of product and CAD information. The approach enables reasoning, inference, and querying over existing CAD data and provides a way to combine information represented using different modeling languages. <<ontostep>>
+
+OntoSTEP translates STEP concepts into an ontology-based representation to support semantic integration and reasoning. OntoSTEP is a research-oriented approach that translates STEP/EXPRESS schemas and instances into OWL to enable semantic integration, querying, and reasoning. Initially developed at NIST, it has been further investigated through later implementations, but it remains a research approach rather than an established standard or widely adopted 3D ontology.
+
+- OWL encodings of STEP AP203/AP214/AP242 and BREP/CSG concepts for CAD models <<zhao2024envon>>.
+- Other proposals link geometric models to spatial properties or count non‑manifold features <<FlotynskiWalczak2017>> <<zhao2024envon>>.
+
+OntoBREP and OntoSTEP represent approaches in which geometry are brought into the Semantic Web at a relatively deep semantic level. This results in potentially large and complex knowledge graphs.
+
+===== ENVON
+Robotics / manufacturing ontology that integrates contextual, topologic, geometric info for 3D environments; BFO‑based 3D shape ontology; BREP/CSG distinctions <<zhao2024envon>>.
+
+==== Spatial relations and 3D topology
+
+===== Topological Relationships and Their Use
+The book chapter https://repository.tudelft.nl/record/uuid:09075b7e-e019-45f1-becc-cf8d7992b63b[Topological Relationships and Their Use] <<Zlatanova2017>> highlights that topological relationships are well established for simple 2D objects, while 3D topological operations remain less developed. It identifies the need to support more complex 3D objects, including solids with holes and tunnels, and suggests reusing existing spatial operators as a starting point for extending topological analysis to 3D.
+
+===== Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System
+The work described in the paper https://www.mdpi.com/2220-9964/13/1/25[Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System] <<ijgi13010025>>, defines semantics of 3D bodies, regions, and lines, which can support the definition and interpretation of 3D spatial relations and operations. It provides a formal topological foundation that can be interesting for GeoSPARQL 3D.
+
+===== Relative Location Ontology (Reloc)
+The https://annegoebels.github.io/reloc/[Relative Location Ontology (RELOC)] <<Goebel2024>> enables the expression of the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.
+
+===== InfraspatialOT
+The InfraspatialOT ontology, described in the paper: https://www.researchgate.net/publication/394086571_infraspatialOT_An_Ontology_for_the_Representation_of_Spatial_Relationships_in_Road_Infrastructure[infraspatialOT: An Ontology for the Representation of Spatial Relationships in Road Infrastructure] <<Heise2024infraspatialOT>>, provides a semantic model for representing road infrastructure elements and their spatial relationships to reference elements. It distinguishes between localisation, which describes where an infrastructure element is located along a reference element, and positioning, which captures its relative spatial position, including horizontal and vertical relationships. Positioning relations can further specify whether a distance is involved. This structure enables road infrastructure elements and their spatial relationships to be represented and queried consistently using semantic technologies such as SPARQL.
 
 
-=== Domain‑specific 3D ontologies
+==== Domain ontologies with 3D aspects
 
-==== Geospatial and 3D City Model (CityGML)
+**Use of domain specific ontologies**
+Domain-specific 3D ontologies are typically expressed using **RDF/OWL**, defining concepts and relationships that capture the semantics of a particular application domain <<FlotynskiWalczak2017>> <<pittarello2006semantic>> <<walczak2019inference>>.
+
+Geometry, topology, scene structure, and domain semantics are often represented by separate but complementary ontologies that can be combined at query time for integrated queries, such as BOT with geometry and sensor (SOSA/SSN or SAREF) ontologies in building applications <<zhao2024envon>> <<flotynski2020bot>>.
+
+===== Geospatial and 3D City Model (CityGML)
 
 **CityGML and OntoCityGML**
 
@@ -100,7 +76,7 @@ The proposed CityRDF model, even though focused on CityGML and 3D building conte
 One such element is the description of the appearance of a 3D-modeled building using colors or textures, so-called surface materials.
 In addition, CityGML includes relations of 3D primitives between each other, which could serve as an inspiration for similary-named functions or properties in the GeoSPARQL 3D ontology model.
 
-<<ijgi12090351>> describes the CityGML Ontology, which is an ontology model to formalize the CityGML standard towards a representation in OWL. 
+<<ijgi12090351>> describes the CityGML Ontology, which is an ontology model to formalize the CityGML standard towards a representation in OWL.
 It shows a workflow of identification, classification and selection of the relevant data points needed to describe 3D city models in OWL as derived from building and city models.
 In addition, it introduces the concept of Level of Information Need, defining the granularity of the information on the various levels of the building and the types of information retrieval - direct/indirect,
 i.e. information which is commonly obtained directly from a dataset or using a calculation or reasoning approach.
@@ -111,27 +87,29 @@ Following on this publication <<chadzynski2023semantic>> presents a system archi
 The paper proves the viability of a transition between a SQL based system for 3D building management to a SPARQL based system using a SQL2SPARQL Transformer component.
 It therefore proves the feasibility of employing linked open data technologies for 3D building data and in particular the CityGML model in practice.
 
-<<kutzner2020citygml30>> introduces CityGML 3.0 with a newly added Core module including a new space concept and Level Of Detail concept. 
-The given publication sets the standard especially for Level of Detail in 3D buildings, which may be considered for adoption as GeoSPARQL 3D concepts too.
-In addition, CityGML 3.0 proposes the addition of 3D point clouds for the representation of 3D goemetires of physical spaces and space boundaries.
-A mapping from IFC to CityGML 3.0 is also proposed by these authors.
-
-CityGML 3.0 therefore represents many of the elements that a GeoSPARQL 3D ontology would need to implement on a more abstract level and can give ideas about future query functions to be implemented in the GeoSPARQL query language.
-
-In addition, a master thesis <<hansson2024citygml>> proved the feasibility of not only converting CityGML to a knowledge graph representation, but also its application in triple stores such as Ontop or 3DCityDB. 
-The mapping of CityGML to the knowledge graph was tested using a set of SPARQL queries retrieving different components of building parts. 
+In addition, a master thesis <<hansson2024citygml>> proved the feasibility of not only converting CityGML to a knowledge graph representation, but also its application in triple stores such as Ontop or 3DCityDB.
+The mapping of CityGML to the knowledge graph was tested using a set of SPARQL queries retrieving different components of building parts.
 While the thesis could construct a knowledge graph representation from CityGML, it points out that the incorporation of sptaial operations is left to future work and could provide a possible field for GeoSPARQL 3D adoption.
 
-Finally, <<CHADZYNSKI2021100106>> proposed OntoCityGML, an extension to the CityGML ontology. It improves on the CityGML 2.0 domain model to meet testing requirements in The World Avatar Project. Whereas such extension may be too specific to be directly regarded in generic representations of 3D objects in the Semantic Web, this work is relevant in identifying possible gaps in CityGML.   
+Finally, <<CHADZYNSKI2021100106>> proposed OntoCityGML, an extension to the CityGML ontology. It improves on the CityGML 2.0 domain model to meet testing requirements in The World Avatar Project. Whereas such extension may be too specific to be directly regarded in generic representations of 3D objects in the Semantic Web, this work is relevant in identifying possible gaps in CityGML.
 
+====== Routing using LADM and IndoorGML
+IndoorGML (OGC) models indoor environments as cells, such as rooms, corridors and stairwells, and derives a navigation graph in which spaces are nodes and their connections, such as doors and openings, are edges. The Land Administration Domain Model (LADM, ISO 19152) describes the rights, restrictions and responsibilities attached to spaces. The combined LADM-IndoorGML model uses these legal aspects to define which indoor spaces are accessible to which users.
 
-==== Cultural Heritage
+<<alattas2018>> applied this combined model to building evacuation. They showed that access rights depend on time (normal hours, off-hours and crisis situations) and on the type of user, such as visitors, employees or students, and that these rights determine which routes users can take to the nearest emergency exit or safe zone.
+
+===== BIM and Buildings
+
+====== BOT (Building Topology Ontology)
+AEC - Building domain ontology for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies <<flotynski2020bot>>. |
+
+===== Cultural Heritage
 
 In the research domain of cultural heritage, 3D models of either cultural heritage artefacts (possibly georeferenced), 3D models of archaeological sites or simply 3D models of ancient buildings are becoming increasinly common.
 
-The Building-conservation ontology for 3D annotations <<messaoudi2018heritage>> presents a pipeline that combines semantic, spatial, and morphological data into one 3D information model. The conservation and restoration of historical monuments require the integration of information from many different disciplines and techniques. The approach was tested on Saint Maurice Church in Caromb, France, allowing conservation experts to better visualize, correlate, and retrieve information about materials, damage, and other conservation observations. ; 
+The Building-conservation ontology for 3D annotations <<messaoudi2018heritage>> presents a pipeline that combines semantic, spatial, and morphological data into one 3D information model. The conservation and restoration of historical monuments require the integration of information from many different disciplines and techniques. The approach was tested on Saint Maurice Church in Caromb, France, allowing conservation experts to better visualize, correlate, and retrieve information about materials, damage, and other conservation observations. ;
 
-CIDOC CRM–based models for 3D CH objects and provenance. This paper proposes an ontology-based approach for managing and using 3D content without requiring domain experts to have programming or 3D modelling skills. The actual 3D elements can be created by graphic designers and then linked to domain-specific concepts by developers. Ontologies and automated reasoning can subsequently determine which 3D elements are relevant based on the specified domain information, while semantic queries allow the content to be explored and analysed. The focus is therefore on connecting 3D graphics with domain knowledge rather than on creating the 3D models themselves. <<walczak2019inference>> <<amico2106ontological>> <<гончар2021ontological>>. 
+CIDOC CRM–based models for 3D CH objects and provenance. This paper proposes an ontology-based approach for managing and using 3D content without requiring domain experts to have programming or 3D modelling skills. The actual 3D elements can be created by graphic designers and then linked to domain-specific concepts by developers. Ontologies and automated reasoning can subsequently determine which 3D elements are relevant based on the specified domain information, while semantic queries allow the content to be explored and analysed. The focus is therefore on connecting 3D graphics with domain knowledge rather than on creating the 3D models themselves. <<walczak2019inference>> <<amico2106ontological>> <<гончар2021ontological>>.
 
 **Use Cases**
 
@@ -153,7 +131,7 @@ Research applications making use of 3D models in Cultural Heritage
 
 This section discusses research projects with 3D contents based on the technologies they use as elaborated in the previous section.
 
-===== 3D models of cuneiform tablets
+====== 3D models of cuneiform tablets
 
 Cuneiform tablets from ancient Iran provide an interesting research area, since they combine a 3D artefact with textual imprints that are of interest to a variety of research communities including Assyriologsts, Digital Humanists, Computational Linguists and last but not least Computer Scientists.
 3D models of cuneiform tablets provide the best accessibility to the specificities of the original artefact in its absence. 3D scans have been used by computer scientists as the basis for certain machine learning application tasks, even though to this day only as a provision for 2D renderings of their surfaces.
@@ -163,26 +141,127 @@ Knowledge graphs provide machine learning approaches <<Stotzner_2023_ICCV>> <<st
 To describe 3D meshes, several vocabularies have been developed in the context of the cuneiform studies project:
 
 * https://situx.github.io/mesh-sparql/[MeshSPARQL]: A vocabulary to describe essential mesh elements.
-* https://www.gigamesh.eu/ont/[Gigamesh Metadata Vocabulary]: A vocabulary which describes metadata of a 3D model. The metadata can be generated using the Gigamesh Software Framework.
-* https://mainzed.pages.gitlab.rlp.net/homepages/mainzedmetadata/[3DCAP Vocabularies]: An ontology model to describe the creation of a 3D model. It has been applied to different scanning software.
 
-===== CARARE Metadata Schema
+====== ChgOnto
+<<yang2023knowledge>> propose the Grottoes & heritage ontology, focusing on enhancing 3D models of Chinese grottoes by adding semantic information. These authors further develop a knowledge graph that links 3D elements—such as caves, Buddha statues, walls, and decorations—to their properties and spatial relationships, making the 3D models more meaningful, understandable, and useful for cultural heritage documentation and analysis.for grotto components, spatial relations, with GeoSPARQL + CIDOC CRM .
 
-The CARARE metadata schema <<d2013carare>> is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
+====== OntPreHer3D
+OntPreHer3D is an extension of the CIDOC CRM ontology <<10_24072_pcjournal_608>>. It is designed to support the FAIR preservation and documentation of 3D cultural heritage models. The ontology captures relationships between 3D models, their components, and real-world counterparts, while also documenting the reasoning, uncertainties, and decisions behind hypothetical reconstructions. A case study of the Speyer Synagogue demonstrates how differences in modelling processes can affect final 3D models, highlighting the importance of detailed documentation for the long-term preservation, reproducibility, and reuse of digital cultural heritage.
 
-===== IIIF 3D
 
-The International Image Interoperability Framework (IIIF) standard <<snydman2015international>> is currently developing a https://iiif.io/community/groups/3d/tsg/[specification] for the standardization of 3D viewers.
-The viewer specification includes the visualization of 3D models including lighting positions, a scene graph and annotations in the form of additional 3D objects added to a 3D scene.
-A GeoSPARQL 3D standard might need to be compatible with, or include a compatibility statement of, converting 3D objects encoded in GeoSPARQL to the IIIF viewer specification. A prototype implementation might be necessary to comply with this specification.
+==== Query-language extensions
 
-===== ChgOnto
-<<yang2023knowledge>> propose the Grottoes & heritage ontology, focusing on enhancing 3D models of Chinese grottoes by adding semantic information. These authors further develop a knowledge graph that links 3D elements—such as caves, Buddha statues, walls, and decorations—to their properties and spatial relationships, making the 3D models more meaningful, understandable, and useful for cultural heritage documentation and analysis.for grotto components, spatial relations, with GeoSPARQL + CIDOC CRM . 
+===== BIMSPARQL
+This initiative proposes extending SPARQL with functions for querying IFC building data to simplify queries and derive information from 3D geometry for BIM requirement checking. The functions are represented as RDF vocabularies and implemented using a combination of declarative rules and procedural programming. Evaluation with realistic requirement-checking scenarios demonstrates that the approach supports spatial and logical reasoning and can combine building and regulatory data from multiple sources.
+<<zhang2018bimsparql>>
 
-===== OntPreHer3D
-OntPreHer3D is an extension of the CIDOC CRM ontology <<10_24072_pcjournal_608>>. It is designed to support the FAIR preservation and documentation of 3D cultural heritage models. The ontology captures relationships between 3D models, their components, and real-world counterparts, while also documenting the reasoning, uncertainties, and decisions behind hypothetical reconstructions. A case study of the Speyer Synagogue demonstrates how differences in modelling processes can affect final 3D models, highlighting the importance of detailed documentation for the long-term preservation, reproducibility, and reuse of digital cultural heritage. 
+[#img_BIMSPARQL, reftext='{figure-caption} {counter:figure-num}']
+.IMSPARQL.
+image::../figures/BIMSPARQL_Geometry_Functions.png[align="center"]
 
-==== BIM and Buildings
+===== stSPARQL
+In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF and the Query Language stSPARQL <<koubarakis2010modeling>>, Koubarakis and Kyzirakos describe the extension of SPARQL with temporal information. These paterns can also be used for GeoSPARQL.
+
+
+==== Summary of ontologies and vocabularies
+
+
+##Summary table to be added (columns: Name · Domain · Scope (geometry / topology / scene / domain) · Formalism · Status (standard / research) · Reuse potential for GeoSPARQL 3D).##
+
+
+
+=== Data and file schemas for geometry literals
+
+A new GeoSPARQL standard should be compatible with existing approaches to encode 3D data.
+Semantic technologies should enable users to encode important metadata in the knowledge graph, while retaining the possibility to use already well-known 3D geometry formats either as String literals or file references.
+<<bonduel2019including>> shows how common widespread geometry formats could be included into knowledge graphs, which could be one starting point to investigate the integration within GeoSPARQL.
+
+This section highlights 3D representations and in particular 3D formats which may need to be considered for a GeoSPARQL 3D extension.
+We describe the features of each format, their use cases and their potential challenges.
+
+
+==== Representation paradigms: B-Rep vs. mesh/polyhedron
+
+The thesis of a modelling foundation as the basis for implementation has been discussed before. The items below can be seen as a quick summarization of earlier discussions.
+
+BRep
+
+- Supports curved surfaces and edges
+- A separate notion of topology: connected components as shells, solids with inner voids, etc.
+- Often supports clean APIs due to due to generic concepts.
+
+    - For example considering an extrusion function() that can accept any topologic primitive and returns a higher order or same entity.
+
+        - Extrusion of `vertex` yields `edge`
+        - Extrusino of `edge` yield `face`
+        - Extrusion of `face` yields `solid`
+        - Extrusion of `solid` yields `solid`
+
+- Has extra indirections for example: `edge` -> `vertex[]` -> `point`
+- Therefore, depending on implementation can be inefficient, e.g outer the wire of face not explicitly marked and needs to be checked w.r.t an infinite point or edges in a loop not stored in order.
+- Data integrity and validation (e.g self-intersections) can be a harder to maintain
+
+Mesh/polyhedron
+
+- Potentially fewer indirections
+- Triangle meshes are robust, well understood, parallizable
+- Many different data models though, e.g half-edge (only manifold), indexed faceset (no adjacency info), winged/quad/radial edge
+
+B-Rep and mesh/polyhedron representations differ in how 3D geometry and topology are modelled. B-Rep explicitly represents curved surfaces and topological relationships between vertices, edges, faces, shells, and solids, making it suitable for complex solid models, but it can involve more complex data structures and validation requirements. Mesh and polyhedral representations generally use simpler discrete geometries, often based on triangles, with several possible data structures for representing adjacency and topology, such as half-edge, winged-edge, and indexed face sets. For GeoSPARQL 3D, this distinction is relevant because the underlying representation can affect the precision, robustness, and implementation of spatial operations.
+
+
+==== Mesh and point formats
+
+===== STereoLithography (STL)
+http://www.3dsystems.com/quickparts/learning-center/what-is-stl-file[STL files] describe only the surface geometry of a three-dimensional object without any representation of color, texture or other common CAD model attributes. The STL format specifies both ASCII and binary representations and was invented by the Albert Consulting Group for 3D Systems in 1987.
+Nowadays it is mainly used for 3D printing purposes, making it a plausible candidate for support in GeoSPARQL 3D settings of movable objects such as in cultural heritage.
+Since the STL format does not contain a geospatial reference, the reference needs to be provided externally if STL files were to be used in a geospatial context.
+However, STL objects could be used in local CRS contexts as well.
+
+===== Wavefront OBJ Format (OBJ)
+
+The https://paulbourke.net/dataformats/obj/[OBJ format] is a file format developed by Wavefront Technologies for the Advanced 3D Visualizer animation package.
+Its roots therefore lie in the world of 3D animation.
+The format represents vertex coordinates, texture coordinates, as well as vertex normals, parameter space vertices and faces of a 3D model.
+These are all elements which would need to be considered and supported in an upcoming GeoSPARQL 3D release.
+
+===== Polygon File Format (PLY)
+
+The https://paulbourke.net/dataformats/ply/[Polygon File Format] is a format which was designed to store 3D data from 3D scanning environments, which makes it especially widespread in the Cultural Heritage application area.
+The format consists of a vertex list and a faces list with optional parameters per vertex.
+Like the OBJ format, supporting PLY would imply including support for vertices and faces of a 3D model and their relationships in a knowledge graph.
+
+
+==== CAD/B-Rep formats
+
+// CHANGED HEADING (was: Standard for the Exchange of Product model data (STEP) and OntoSTEP; OntoSTEP text moved to "OntoBREP and OntoSTEP")
+===== Standard for the Exchange of Product model data (STEP)
+https://www.steptools.com/stds/step/[STEP (Standard for the Exchange of Product model data)] is an ISO standard for representing and exchanging product and engineering information, including CAD models.
+
+// NEW
+==== Scene/graphics formats
+
+// NEW
+===== Extensible 3D (X3D)
+
+Extensible 3D (X3D) Graphics is an open standard to declaratively representing interactive 3D computer graphics for publishing, viewing, printing and archiving 3D models on the Web. X3D was eventually approved by ISO (ISO/IEC 19775-19777) and become a computer graphics industry standard. It was first proposed in 1997 and has since been subject to various updates. More recently it has been developed towards the Semantic Web, in order to gain interoperability and enable intelligent 3D operations and reasoning. Development has been hosted by the Web3D Consortium.
+
+The X3D format <<feichtenhofer2020x3d>>, <<brutzman2010x3d>>, X3DOM <<behr2009x3dom>> and its Ontology version <<brutzman2020x3d>> provide a data format and a blueprint for how 3D data is handled in computer vision approaches.
+X3D is an interesting format to investigate for 3D components which need to be modeled within a GeoSPARQL 3D specification. It is a likely candidate for a literal format and might be integrated using interlinking approaches to the already existing X3D vocabulary.
+However, since X3D was invented with computer vision approaches in mind it does not define any geospatial aspects that could be considered by a GeoSPARQL 3D implementation.
+
+// NEW
+==== Domain exchange schemas
+
+// NEW
+===== CityGML 3.0
+
+<<kutzner2020citygml30>> introduces CityGML 3.0 with a newly added Core module including a new space concept and Level Of Detail concept.
+The given publication sets the standard especially for Level of Detail in 3D buildings, which may be considered for adoption as GeoSPARQL 3D concepts too.
+In addition, CityGML 3.0 proposes the addition of 3D point clouds for the representation of 3D goemetires of physical spaces and space boundaries.
+A mapping from IFC to CityGML 3.0 is also proposed by these authors.
+
+CityGML 3.0 therefore represents many of the elements that a GeoSPARQL 3D ontology would need to implement on a more abstract level and can give ideas about future query functions to be implemented in the GeoSPARQL query language.
 
 ===== Industry Foundation Classes (IFC)
 
@@ -211,7 +290,7 @@ Especially the notion of *tolerances* means that the standard cannot effectively
 
 ====== Use cases
 
-The most successful use case on BIM data is *coordination and visualization* where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software. 
+The most successful use case on BIM data is *coordination and visualization* where multiple aspect models are geometrically overlaid in order to find issues, which are then communicated to the authoring software where they are addressed. This approach works, because it respects that individual disciplines all have their own specialistic software.
 
 *Design to design* workflows are much harder to realize, although some Model View Definitions have been developed on top of IFC that enable the transfer of design intent in specific and constrained scenarios, such as precast concrete and structural steel.
 
@@ -228,35 +307,23 @@ Based on the preceeding BIM-related paragraphs the following questions could be 
 - Is geometry always Euclidean or are non-euclidean use cases foreseen. Is a CRS always required (or implicitly assumed) or can geometries also exist solely in a project-specific engineering Cartesian system?
 - Is the sepataration of representation and placement beneficial for incorporation into GeoSPARQL. It enables efficient reinstantiation, but hinders topological relationships because you require the pair of placement+geometry to locate elements in space?
 - Would geometry be a simple literal atomic leaf-value, or would there be object-relational feature trees, which allow for richer semantics?
-- There are multiple models to represent explicit geometry, such as BRep (topology + geometry + orientation + location) or a polyhedral model (e.g halfedge or indexed face loops). In particular the difference is in support for arbitrary curved geometries, because e.g in the BRep model a topologic face comes with a geometric surface. 
+- There are multiple models to represent explicit geometry, such as BRep (topology + geometry + orientation + location) or a polyhedral model (e.g halfedge or indexed face loops). In particular the difference is in support for arbitrary curved geometries, because e.g in the BRep model a topologic face comes with a geometric surface.
 - What forms of implicit (e.g constraints) geometry would be in scope?
 - Would there be support for tolerances and would these be local or global or parameters to certain operations that depend on them.
 - Is decomposition a feature inside or outside of the 'geometry ontology'?
 - Are infra geometries (hor + ver alignment + cant, both for positioning and as the directrix in geometric sweeps) in scope?
 
-===== BOT (Building Topology Ontology)
-AEC - Building domain ontology for storeys, spaces, elements + 3D mesh links; used with separate geometry vocabularies <<flotynski2020bot>>. |
 
-===== Linked Building Server 
-Over the last years, Building Information Modelling (BIM) has been increasingly adopted in building projects for its benefits to collaboration and associated risk mitigation. Recent work is trying to make this data available over the web (web-based BIM applications). Most notable in making building data web-ready is the linked building data (LBD) initiative. This group has worked on a number of vocabularies and ontologies, thereby starting from a linked data approach (RDF graphs), aiming at representing building data on the web. https://github.com/LBDserver[Linked Building Data Server]
+==== Summary of data and file schemas
 
-==== BIMSPARQL
-This initiative proposes extending SPARQL with functions for querying IFC building data to simplify queries and derive information from 3D geometry for BIM requirement checking. The functions are represented as RDF vocabularies and implemented using a combination of declarative rules and procedural programming. Evaluation with realistic requirement-checking scenarios demonstrates that the approach supports spatial and logical reasoning and can combine building and regulatory data from multiple sources.
-<<zhang2018bimsparql>>
 
-[#img_BIMSPARQL, reftext='{figure-caption} {counter:figure-num}']
-.IMSPARQL.
-image::../figures/BIMSPARQL_Geometry_Functions.png[align="center"]
+##Summary table to be added (columns: Format · Representation (mesh / B-Rep / point / scene) · Encoding (text / binary) · CRS support · Curved geometry · Topology · Candidate literal type?).##
 
-==== stSPARQL
-In Modeling and Querying Metadata in the Semantic Sensor Web: the Model stRDF and the Query Language stSPARQL <<koubarakis2010modeling>>, Koubarakis and Kyzirakos describe the extension of SPARQL with temporal information. These paterns can also be used for GeoSPARQL.
+=== Metadata vocabularies for linking and alignment
 
-==== OntoBREP and OntoSTEP
-OntoBREP is an ontology that can be used to describe CAD by representing boundary representations (B-Rep) using OWL. Geometric entities are represented semantically. For example, a circle is described by its coordinate frame and radius instead of a set of polygons. The ontology represents geometric constraints between objects and their individual faces or edges, enabling CAD geometry to be linked with additional knowledge and used for applications such as shape recognition and robot task planning. <<ontobrep>>
+==== Geometry linking patterns
 
-OntoSTEP <<barbau2012ontostep>> translates STEP schemas and their instances, originally defined using EXPRESS, into OWL. This creates a semantically representation of product and CAD information. The approach enables reasoning, inference, and querying over existing CAD data and provides a way to combine information represented using different modeling languages. <<ontostep>> 
-
-OntoBREP and OntoSTEP represent approaches in which geometry are brought into the Semantic Web at a relatively deep semantic level. This results in potentially large and complex knowledge graphs.
+Different ontologies handle geometry in the Semantic Web in different ways. This section describes how 3D geometry is handled by different ontologies, rather than by GeoSPARQL. It compares approaches such as BOT, OMG, FOG, BIMSPARQL, GEOM, OntoBREP, and OntoSTEP, highlighting how each ontology represents, links, or manages geometric information within the Semantic Web.
 
 Different approaches for representing geometry in the Semantic Web have been investigated <<c63f82e83d7249f18ab6e4b7afe049cb>> ranging from integrating geometric structures into the knowledge graph to linking semantic resources to external geometry representations or files
 
@@ -269,98 +336,7 @@ image::../figures/Approaches_of_Geometry_in_Linked_Data.png[align="center"]
 .Implementation_of_approach_1.
 image::../figures/Implementation_of_approach_1.png[align="center"]
 
-==== ENVON
-Robotics / manufacturing ontology that integrates contextual, topologic, geometric info for 3D environments; BFO‑based 3D shape ontology; BREP/CSG distinctions <<zhao2024envon>>. 
-
-
-**Use of domain specific ontologies** 
-Domain-specific 3D ontologies are typically expressed using **RDF/OWL**, defining concepts and relationships that capture the semantics of a particular application domain <<FlotynskiWalczak2017>> <<pittarello2006semantic>> <<walczak2019inference>>.  
-
-Geometry, topology, scene structure, and domain semantics are often represented by separate but complementary ontologies that can be combined at query time for integrated queries, such as BOT with geometry and sensor (SOSA/SSN or SAREF) ontologies in building applications <<zhao2024envon>> <<flotynski2020bot>>.  
-
-
-==== Location ontologies
-
-===== Relative Location Ontology (Reloc) 
-The https://annegoebels.github.io/reloc/[Relative Location Ontology (RELOC)] <<Goebel2024>> enables the expression of the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.
-
-===== InfraspatialOT 
-The InfraspatialOT ontology, described in the paper: https://www.researchgate.net/publication/394086571_infraspatialOT_An_Ontology_for_the_Representation_of_Spatial_Relationships_in_Road_Infrastructure[infraspatialOT: An Ontology for the Representation of Spatial Relationships in Road Infrastructure] <<Heise2024infraspatialOT>>, provides a semantic model for representing road infrastructure elements and their spatial relationships to reference elements. It distinguishes between localisation, which describes where an infrastructure element is located along a reference element, and positioning, which captures its relative spatial position, including horizontal and vertical relationships. Positioning relations can further specify whether a distance is involved. This structure enables road infrastructure elements and their spatial relationships to be represented and queried consistently using semantic technologies such as SPARQL.
-
-==== Medicine and Chmistry
-===== 3D Microscopy Metadata Standards (3D-MMS)
-The 3D Microscopy Metadata Standards (3D-MMS) was developed by the BRAIN Initiative to establish a consistent way of describing 3D microscopy datasets, particularly datasets of brain tissue. Its purpose is to provide enough information for someone who did not generate the data to understand, find, interpret, reuse, and potentially integrate the dataset with other datasets. The 3D-MMS-metadata can be used to describe how the image volume is oriented and scaled, so that a position inside the microscopy dataset has meaningful spatial coordinates.
-<<ropelewski_standard_2022>> 
-
-=== 3D Topology
-
-==== Topological Relationships and Their Use
-The book chapter https://repository.tudelft.nl/record/uuid:09075b7e-e019-45f1-becc-cf8d7992b63b[Topological Relationships and Their Use] <<Zlatanova2017>> highlights that topological relationships are well established for simple 2D objects, while 3D topological operations remain less developed. It identifies the need to support more complex 3D objects, including solids with holes and tunnels, and suggests reusing existing spatial operators as a starting point for extending topological analysis to 3D.
-
-==== Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System
-The work described in the paper https://www.mdpi.com/2220-9964/13/1/25[Extension of RCC*-9 to Complex and Three-Dimensional Features and Its Reasoning System] <<ijgi13010025>>, defines semantics of 3D bodies, regions, and lines, which can support the definition and interpretation of 3D spatial relations and operations. It provides a formal topological foundation that can be interesting for GeoSPARQL 3D.
-
-=== Implementations
-The related work above primarily address 3D geometry semantics. A complementary aspect is the computational processing of the 3D representations. Implementations of 3D geometry processing provide the algorithms and data structures required to perform operations such as intersection, containment, distance calculation, Boolean operations, and topology analysis. This section  reviews established geometry-processing libraries and systems, including CGAL, SFCGAL, OpenCASCADE, and Topologic, and considers their relevance to the implementation of 3D spatial operations in GeoSPARQL.
-
-==== CGAL &#8594; SFCGAL &#8594; PostGIS
-CGAL (Computational Geometry Algorithms Library) provides data structures and algorithms for computational geometry, including operations on geometric objects that can serve as a computational foundation for spatial processing. SFCGAL builds on CGAL to provide additional support for 3D and volumetric geometries and operations, including Boolean operations and geometric predicates. SFCGAL is integrated with PostGIS, a spatial database extension for PostgreSQL, allowing such geometry-processing capabilities to be used within a database environment. Together, these technologies illustrate how 3D geometric representations can be connected to computational geometry algorithms and exposed through a spatial database system, providing a relevant implementation perspective for 3D spatial operations in GeoSPARQL.
-
-==== OpenCASCADE
-OpenCASCADE is an open-source software platform for 3D geometric modelling and CAD applications. It provides data structures and algorithms for representing and processing geometric and topological entities, including points, curves, surfaces, solids, and B-Rep models. The platform supports operations such as geometric transformations, Boolean operations, intersections, and shape analysis. Its explicit representation of geometry and topology makes OpenCASCADE relevant for the computational processing of 3D solids and for investigating how B-Rep-based geometry could be supported by a GeoSPARQL 3D implementation.
-
-The OpenCASCADE BRep model has also been used as the basis of an ontology <<perzylo2015ontology>> and is the geometric support for Topologic <<jabi2021topologic>> a system that uses models Cell Complexes as OpenCASCADE BRep entities and exposes a graph-like Dual view with space-to-space adjancency through face interfaces.
-
-==== BRep vs mesh/polyhedron
-
-The thesis of a modelling foundation as the basis for implementation has been discussed before. The items below can be seen as a quick summarization of earlier discussions.
-
-BRep
-
-- Supports curved surfaces and edges
-- A separate notion of topology: connected components as shells, solids with inner voids, etc.
-- Often supports clean APIs due to due to generic concepts.
-    
-    - For example considering an extrusion function() that can accept any topologic primitive and returns a higher order or same entity. 
-        
-        - Extrusion of `vertex` yields `edge`
-        - Extrusino of `edge` yield `face`
-        - Extrusion of `face` yields `solid`
-        - Extrusion of `solid` yields `solid`
-
-- Has extra indirections for example: `edge` -> `vertex[]` -> `point`
-- Therefore, depending on implementation can be inefficient, e.g outer the wire of face not explicitly marked and needs to be checked w.r.t an infinite point or edges in a loop not stored in order.
-- Data integrity and validation (e.g self-intersections) can be a harder to maintain
-
-Mesh/polyhedron
-
-- Potentially fewer indirections
-- Triangle meshes are robust, well understood, parallizable
-- Many different data models though, e.g half-edge (only manifold), indexed faceset (no adjacency info), winged/quad/radial edge
-
-B-Rep and mesh/polyhedron representations differ in how 3D geometry and topology are modelled. B-Rep explicitly represents curved surfaces and topological relationships between vertices, edges, faces, shells, and solids, making it suitable for complex solid models, but it can involve more complex data structures and validation requirements. Mesh and polyhedral representations generally use simpler discrete geometries, often based on triangles, with several possible data structures for representing adjacency and topology, such as half-edge, winged-edge, and indexed face sets. For GeoSPARQL 3D, this distinction is relevant because the underlying representation can affect the precision, robustness, and implementation of spatial operations.
-
-=== To consider
-
-https://link.springer.com/article/10.1007/s10845-023-02246-6
-Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
-
-<<yuchen2025ontology>>
-
-To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes & roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools. 
-
-Open standard for particle-mesh data (openPMD)
-
-
-The https://github.com/openPMD/openPMD-standard[openPMD standard], short for open standard for particle-mesh data files is not a file format per se. It provides guidance for meta-data and naming schemes. openPMD provides naming and attribute conventions that allow the exchange of particle and mesh based data from scientific simulations and experiments. Its primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and different algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If outputs from programs, devices (such as cameras), simulations or post-processed data-sets, contain a minimal set of meta information as provided by openPMD, data can be exchanged between those with minimal effort, with the same tools used for visualization.
-
-<<huebl_2018_1167843>>
-
-
-=== Vanilla 3D geometry handling in the Semantic Web
-Different ontologies handle geometry in the Semantic Web in different ways. This section describes how 3D geometry is handled by different ontologies, rather than by GeoSPARQL. It compares approaches such as BOT, OMG, FOG, BIMSPARQL, GEOM, OntoBREP, and OntoSTEP, highlighting how each ontology represents, links, or manages geometric information within the Semantic Web.
-
-==== BOT (Building Topology Ontology) 
+===== BOT (Building Topology Ontology)
 The Building Topology Ontology distinguishes zones and elements. It also has topological relations as https://w3id.org/bot#containsZone[bot:containsZone] and https://w3id.org/bot#hasElement[bot:hasElement]. Any https://w3id.org/bot#Zone[bot:Zone] or https://w3id.org/bot#Element[bot:Element] can be assigned a 3D Model using some existing data format for 3D models. Two properties are defined for this. The https://w3id.org/bot#hasSimple3DModel[bot:hasSimple3DModel] datatype property links a https://w3id.org/bot#Zone[bot:Zone] or https://w3id.org/bot#Element[bot:Element] to a 3D Model encoded as a literal. If the data format is textual, then the lexical form of the 3D Model literal SHOULD be encoded as a Unicode [UNICODE] string, which SHOULD be in Normal Form C [NFC]. If the data format is binary, then the lexical form of the 3D Model literal SHOULD be encoded using a base32 encoding [rfc4648]. The bot:has3DModel object property links a bot:Zone or bot:Element to some IRI that identifies a 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models.
 
 [#img_Building_Topology_Ontology_BOT_Example, reftext='{figure-caption} {counter:figure-num}']
@@ -369,21 +345,82 @@ image::../figures/10_3233_sw-200385-fig6.jpg[align="center", width="50%"]
 source: https://journals.sagepub.com/doi/pdf/10.3233/SW-200385 <<10_3233_SW-200385>>
 
 
-==== OMG (Ontology for Managing Geometry) 
+==== Geometry metadata ontologies
+
+The usefulness of 3D geometries in a knowledge graph will depend on the quality of the metadata which is used to describe the geometries.
+The reason is that we can expect users to select 3D geometries based on their attributes, since querying over greater 3D models is likely to be inefficient.
+Hence, we investigate already existing vocabularies for 3D geometry metadata representation.
+
+===== Geometry Metadata Ontology (GOM)
+The https://www.w3id.org/gom[Geometry Metadata Ontology (GOM)] introduces classes for surfaces which are common in the 3D world, but uncommon for 3D geometries, for instance Meshes or NURBS surfaces.
+The ontology can serve as an inspiration for extensions in GeoSPARQL 3D and may or may not be fully or partly adopted in the process of standardization.
+
+===== Ontology for Managing Geometry (OMG)
+The https://www.w3id.org/omg[Ontology for Managing Geometry (OMG)] describes states and derivation of geometries which may be useful to the description of data in GeoSPARQL 3D.
+For example. an extrusion in 3D from a 2D geometry template would have a derivation relation from the 2D geometry which one might want to see modeled in GeoSPARQL 3D.
+
 The Ontology for Managing Geometry (OMG) <<bonduel2019including>> is an ontology for attaching geometry descriptions to their corresponding things (e.g. building objects). The OMG is designed to provide three levels of adding the geometry descriptions which can be used and combined flexibly. The levels are designed to enable the attachment of metadata and comprise of the following functionalities:
 
 Level 1: Direct connections between things and their geometry descriptions using either an object property for RDF-based geometry descriptions or a datatype property for non-RDF-based geometry descriptions resp. links to external files.
 Level 2: Introduction of an intermediate node between the things and their geometry descriptions. By reifying the geometry description, handling of multiple geometry descriptions of the same things is empowered, metadata (as tags) can be added and dependencies between geometries can be modelled.
 Level 3: Introduction of an intermediate node between the reified geometry and the geometry description to add geometry states. Thus, the version history of a geometry description can be described and stored.
 
-==== FOG (File Ontology for Geometry formats) 
+===== File Ontology for Geometry Formats (FOG)
+The https://w3id.org/fog#[File Ontology for Geometry Formats (FOG)] provides a bridge between ontology descriptions of geometries and data file descriptions of 3D contents.
+Since many 3D datasets are of considerable size, their inclusion into the knowledge graph as String literals might hinder the query performance of said knowledge graph.
+It therefore stands to reason whether to adopt the same or a similar method of geometry access that FOG provides for GeoSPARQL 3D.
+
 The File Ontology for Geometry formats (FOG) provides geometry schema specific relations between things (e.g. building objects) and their geometry descriptions. These geometry descriptions can be (1) RDF-based (e.g. using specific ontologies such as GEOM, OntoBREP, etc.), (2) RDF literals containing embedded geometry of existing geometry formats and (3) RDF literals containing a reference to an external geometry file.
 
 such as OBJ, glTF and STEP, to be embedded in RDF or referenced as external files. Thus, while GeoSPARQL primarily describes geospatial geometry, BOT, OMG and FOG provide approaches that are more focused on building and construction geometry and the use of existing geometry formats.
 
-the File Ontology for Geometry formats (FOG), a method for embedding and exchanging different 2D and 3D geometry formats within RDF graphs. FOG allows geometry data to be stored, referenced, and automatically identified, making it easier to exchange building geometry between different software and stakeholders. 
+the File Ontology for Geometry formats (FOG), a method for embedding and exchanging different 2D and 3D geometry formats within RDF graphs. FOG allows geometry data to be stored, referenced, and automatically identified, making it easier to exchange building geometry between different software and stakeholders.
 
-==== LBD Server, IFC2LBD and IFC2LBD-NEO
+[#img_File_Ontology_for_Geometry_Formats_FOG, reftext='{figure-caption} {counter:figure-num}']
+.Demo Application with use of File Ontology for Geometry Formats FOG
+image::../figures/Screenshot_of_demo_web_application_FOG.png[align="center", width="50%"]
+source: https://ec-3.org/wp-content/uploads/2025/10/EC32019_166.pdf
+
+
+==== Provenance and acquisition metadata
+
+
+##The following vocabularies have been developed in the context of the cuneiform studies project (see <<_3d_models_of_cuneiform_tablets>>):##
+
+* https://www.gigamesh.eu/ont/[Gigamesh Metadata Vocabulary]: A vocabulary which describes metadata of a 3D model. The metadata can be generated using the Gigamesh Software Framework.
+* https://mainzed.pages.gitlab.rlp.net/homepages/mainzedmetadata/[3DCAP Vocabularies]: An ontology model to describe the creation of a 3D model. It has been applied to different scanning software.
+
+===== 3D Microscopy Metadata Standards (3D-MMS)
+The 3D Microscopy Metadata Standards (3D-MMS) was developed by the BRAIN Initiative to establish a consistent way of describing 3D microscopy datasets, particularly datasets of brain tissue. Its purpose is to provide enough information for someone who did not generate the data to understand, find, interpret, reuse, and potentially integrate the dataset with other datasets. The 3D-MMS-metadata can be used to describe how the image volume is oriented and scaled, so that a position inside the microscopy dataset has meaningful spatial coordinates.
+<<ropelewski_standard_2022>>
+
+
+===== Open standard for particle-mesh data (openPMD)
+
+The https://github.com/openPMD/openPMD-standard[openPMD standard], short for open standard for particle-mesh data files is not a file format per se. It provides guidance for meta-data and naming schemes. openPMD provides naming and attribute conventions that allow the exchange of particle and mesh based data from scientific simulations and experiments. Its primary goal is to define a minimal set/kernel of meta information that allows to share and exchange data to achieve portability between various applications and different algorithms, a unified open-access description for scientific data (publishing and archiving), and a unified description for post-processing, visualization and analysis. If outputs from programs, devices (such as cameras), simulations or post-processed data-sets, contain a minimal set of meta information as provided by openPMD, data can be exchanged between those with minimal effort, with the same tools used for visualization.
+
+<<huebl_2018_1167843>>
+
+
+==== Collection and presentation metadata
+
+===== CARARE Metadata Schema
+
+The CARARE metadata schema <<d2013carare>> is a harvesting schema intended for delivering metadata about an organisation’s online collections, heritage assets and their digital resources. The strength of the schema lies with its ability to support the full range of descriptive information about monuments, building, landscape areas and their representations. The CARARE metadata schema builds on existing standards and best practice from a number of different countries in Europe and the rest of the world.
+
+===== IIIF 3D
+
+The International Image Interoperability Framework (IIIF) standard <<snydman2015international>> is currently developing a https://iiif.io/community/groups/3d/tsg/[specification] for the standardization of 3D viewers.
+The viewer specification includes the visualization of 3D models including lighting positions, a scene graph and annotations in the form of additional 3D objects added to a 3D scene.
+A GeoSPARQL 3D standard might need to be compatible with, or include a compatibility statement of, converting 3D objects encoded in GeoSPARQL to the IIIF viewer specification. A prototype implementation might be necessary to comply with this specification.
+
+
+==== Example pipelines
+
+===== Linked Building Server
+Over the last years, Building Information Modelling (BIM) has been increasingly adopted in building projects for its benefits to collaboration and associated risk mitigation. Recent work is trying to make this data available over the web (web-based BIM applications). Most notable in making building data web-ready is the linked building data (LBD) initiative. This group has worked on a number of vocabularies and ontologies, thereby starting from a linked data approach (RDF graphs), aiming at representing building data on the web. https://github.com/LBDserver[Linked Building Data Server]
+
+===== LBD Server, IFC2LBD and IFC2LBD-NEO
 To make BIM data accessible on the web, the Linked Building Data (LBD) initiative applies Linked Data principles, using RDF, vocabularies, and ontologies to represent building information. <<#img_LBD_Server_connectivity_GLTF_LD>> illustrates the conversion pipeline. To make this information practically accessible, a platform is needed that combines semantic building data with 3D visualisation. The LBD Server addresses this need by allowing users to upload building data, visualise its 3D geometry, and link geometric objects to their underlying semantic information. This enables users to explore both the physical and semantic aspects of a building within a web-based environment.
 
 [#img_LBD_Server_connectivity_GLTF_LD, reftext='{figure-caption} {counter:figure-num}']
@@ -399,14 +436,28 @@ image::../figures/IFC2LBD-NEO.png[align="center"]
 source: https://github.com/ISBE-TUe/IFC2LBD-Neo
 
 
-[#img_File_Ontology_for_Geometry_Formats_FOG, reftext='{figure-caption} {counter:figure-num}']
-.Demo Application with use of File Ontology for Geometry Formats FOG
-image::../figures/Screenshot_of_demo_web_application_FOG.png[align="center", width="50%"]
-source: https://ec-3.org/wp-content/uploads/2025/10/EC32019_166.pdf
+==== Summary of metadata vocabularies
 
 
-==== Routing using LADM and IndoorGML
-IndoorGML (OGC) models indoor environments as cells, such as rooms, corridors and stairwells, and derives a navigation graph in which spaces are nodes and their connections, such as doors and openings, are edges. The Land Administration Domain Model (LADM, ISO 19152) describes the rights, restrictions and responsibilities attached to spaces. The combined LADM-IndoorGML model uses these legal aspects to define which indoor spaces are accessible to which users.
+##Summary table to be added (columns: Vocabulary · What it describes (link / state / provenance / file / presentation) · Embedded vs. referenced geometry · Overlap with GeoSPARQL · Alignment option).##
 
-<<alattas2018>> applied this combined model to building evacuation. They showed that access rights depend on time (normal hours, off-hours and crisis situations) and on the type of user, such as visitors, employees or students, and that these rights determine which routes users can take to the nearest emergency exit or safe zone. 
 
+=== Implementations
+The related work above primarily address 3D geometry semantics. A complementary aspect is the computational processing of the 3D representations. Implementations of 3D geometry processing provide the algorithms and data structures required to perform operations such as intersection, containment, distance calculation, Boolean operations, and topology analysis. This section  reviews established geometry-processing libraries and systems, including CGAL, SFCGAL, OpenCASCADE, and Topologic, and considers their relevance to the implementation of 3D spatial operations in GeoSPARQL.
+
+==== CGAL &#8594; SFCGAL &#8594; PostGIS
+CGAL (Computational Geometry Algorithms Library) provides data structures and algorithms for computational geometry, including operations on geometric objects that can serve as a computational foundation for spatial processing. SFCGAL builds on CGAL to provide additional support for 3D and volumetric geometries and operations, including Boolean operations and geometric predicates. SFCGAL is integrated with PostGIS, a spatial database extension for PostgreSQL, allowing such geometry-processing capabilities to be used within a database environment. Together, these technologies illustrate how 3D geometric representations can be connected to computational geometry algorithms and exposed through a spatial database system, providing a relevant implementation perspective for 3D spatial operations in GeoSPARQL.
+
+==== OpenCASCADE
+OpenCASCADE is an open-source software platform for 3D geometric modelling and CAD applications. It provides data structures and algorithms for representing and processing geometric and topological entities, including points, curves, surfaces, solids, and B-Rep models. The platform supports operations such as geometric transformations, Boolean operations, intersections, and shape analysis. Its explicit representation of geometry and topology makes OpenCASCADE relevant for the computational processing of 3D solids and for investigating how B-Rep-based geometry could be supported by a GeoSPARQL 3D implementation.
+
+The OpenCASCADE BRep model has also been used as the basis of an ontology <<perzylo2015ontology>> and is the geometric support for Topologic <<jabi2021topologic>> a system that uses models Cell Complexes as OpenCASCADE BRep entities and exposes a graph-like Dual view with space-to-space adjancency through face interfaces.
+
+=== To consider
+
+https://link.springer.com/article/10.1007/s10845-023-02246-6
+Ontology of 3D virtual modeling in digital twin: a review, analysis and thinking
+
+<<yuchen2025ontology>>
+
+To help novice engineers understand and scheme 3D virtual modeling in digital twin for future research and applications, this paper reviews 106 digital twin 3D modeling cases with their characteristics, including deployment targets, purposes & roles, collaborative models, data flows, the autonomy of 3D modeling, fidelity, twinning rates, enabling technologies, and enabling tools.
